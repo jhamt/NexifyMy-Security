@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+>
+	<testsuites>
+		<testsuite name="NexifyMy Security Test Suite">
+			<directory prefix="test-" suffix=".php">./tests/</directory>
+		</testsuite>
+	</testsuites>
+
+	<coverage>
+		<include>
+			<directory suffix=".php">./includes/</directory>
+			<directory suffix=".php">./modules/</directory>
+		</include>
+		<exclude>
+			<directory suffix=".php">./tests/</directory>
+			<directory suffix=".php">./vendor/</directory>
+		</exclude>
+	</coverage>
+</phpunit>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ruleset name="NexifyMy Security Coding Standards">
+	<description>WordPress Coding Standards for NexifyMy Security plugin.</description>
+
+	<!-- What to scan -->
+	<file>.</file>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/assets/css/*</exclude-pattern>
+	<exclude-pattern>/assets/js/admin.min.js</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+
+	<!-- How to scan -->
+	<arg value="sp"/>
+	<arg name="basepath" value="."/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<!-- Rules: WordPress Coding Standards -->
+	<rule ref="WordPress">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<!-- Allow file includes in specific contexts -->
+		<exclude name="PEAR.Files.IncludingFile.UseRequire"/>
+	</rule>
+
+	<!-- WordPress-Extra for additional best practices -->
+	<rule ref="WordPress-Extra"/>
+
+	<!-- WordPress Docs for documentation standards -->
+	<rule ref="WordPress-Docs">
+		<!-- Allow @return void -->
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+	</rule>
+
+	<!-- Minimum PHP version -->
+	<config name="minimum_supported_wp_version" value="5.0"/>
+	<config name="testVersion" value="7.4-"/>
+
+	<!-- Text domain -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="nexifymy-security"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Prefixes -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="nexifymy"/>
+				<element value="NexifyMy"/>
+				<element value="NEXIFYMY"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- File name conventions -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false"/>
+		</properties>
+	</rule>
+</ruleset>
