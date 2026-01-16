@@ -800,4 +800,78 @@ class NexifyMy_Security_Admin {
 		</div>
 		<?php
 	}
+
+	/**
+	 * Render the database page.
+	 */
+	public function render_database() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-database"></span> <?php _e( 'Database Security', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Backup, optimize, and secure your database.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- Database Info Card -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Database Information', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="database-info">
+						<p><?php _e( 'Loading database information...', 'nexifymy-security' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Backup Card -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Database Backup', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p><?php _e( 'Create a backup of your WordPress database. Backups are stored securely and can be downloaded.', 'nexifymy-security' ); ?></p>
+					<button class="button button-primary" id="create-backup">
+						<span class="dashicons dashicons-download"></span> <?php _e( 'Create Backup Now', 'nexifymy-security' ); ?>
+					</button>
+					<span id="backup-status"></span>
+
+					<h3><?php _e( 'Existing Backups', 'nexifymy-security' ); ?></h3>
+					<table class="widefat striped" id="backups-table">
+						<thead>
+							<tr>
+								<th><?php _e( 'Filename', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Size', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Created', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
+							</tr>
+						</thead>
+						<tbody id="backups-tbody">
+							<tr><td colspan="4"><?php _e( 'Loading backups...', 'nexifymy-security' ); ?></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Optimization Card -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Database Optimization', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p><?php _e( 'Clean up unnecessary data to improve database performance.', 'nexifymy-security' ); ?></p>
+					
+					<div id="optimization-stats">
+						<p><?php _e( 'Loading optimization stats...', 'nexifymy-security' ); ?></p>
+					</div>
+
+					<button class="button button-secondary" id="optimize-database">
+						<span class="dashicons dashicons-performance"></span> <?php _e( 'Optimize Database', 'nexifymy-security' ); ?>
+					</button>
+					<span id="optimize-status"></span>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
 }
