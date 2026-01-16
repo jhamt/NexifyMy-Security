@@ -12,6 +12,9 @@
       this.loadLogs();
       this.loadBlockedIPs();
       this.loadQuarantinedFiles();
+      this.loadDatabaseInfo();
+      this.loadBackups();
+      this.loadOptimizationStats();
     },
 
     bindEvents: function () {
@@ -583,6 +586,198 @@
             $button.prop("disabled", false).text("Reset to Defaults");
           }
         },
+      });
+    },
+
+
+    // Database Functions
+    loadDatabaseInfo: function () {
+      var $container = $('#database-info');
+      if (!$container.length) return;
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_get_database_info',
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          if (response.success) {
+            var info = response.data.info;
+            var html = '<table class="widefat">';
+            html += '<tr><th>Database Name</th><td>' + info.database_name + '</td></tr>';
+            html += '<tr><th>Table Prefix</th><td>' + info.prefix;
+            if (info.is_default_prefix) {
+              html += ' <span class="notice notice-warning" style="margin-left:10px;display:inline-block;padding:2px 8px;">Using default prefix - consider changing for security</span>';
+            }
+            html += '</td></tr>';
+            html += '<tr><th>Database Size</th><td>' + info.database_size_formatted + '</td></tr>';
+            html += '<tr><th>Table Count</th><td>' + info.table_count + '</td></tr>';
+            html += '</table>';
+            $container.html(html);
+          }
+        }
+      });
+    },
+
+    loadBackups: function () {
+      var $tbody = $('#backups-tbody');
+      if (!$tbody.length) return;
+
+      $tbody.html('<tr><td colspan="4">Loading backups...</td></tr>');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_get_backups',
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          if (response.success) {
+            var html = '';
+            if (response.data.backups.length === 0) {
+              html = '<tr><td colspan="4">No backups found. Create your first backup above.</td></tr>';
+            } else {
+              response.data.backups.forEach(function (backup) {
+                html += '<tr>';
+                html += '<td>' + backup.filename + '</td>';
+                html += '<td>' + backup.size_formatted + '</td>';
+                html += '<td>' + backup.created_at_formatted + '</td>';
+                html += '<td>';
+                html += '<a href="' + nexifymySecurity.ajaxUrl + '?action=nexifymy_download_backup&filename=' + encodeURIComponent(backup.filename) + '&nonce=' + nexifymySecurity.nonce + '" class="button button-small">Download</a> ';
+                html += '<button class="button button-small button-link-delete delete-backup" data-filename="' + backup.filename + '">Delete</button>';
+                html += '</td>';
+                html += '</tr>';
+              });
+            }
+            $tbody.html(html);
+
+            // Bind delete button
+            $('.delete-backup').on('click', function () {
+              var filename = $(this).data('filename');
+              if (confirm('Delete this backup?')) {
+                NexifymySecurity.deleteBackup(filename, $(this));
+              }
+            });
+          }
+        }
+      });
+    },
+
+    createBackup: function () {
+      var $button = $('#create-backup');
+      var $status = $('#backup-status');
+
+      $button.prop('disabled', true);
+      $status.text('Creating backup...').css('color', '#666');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_create_backup',
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          $button.prop('disabled', false);
+          if (response.success) {
+            $status.text('Backup created successfully!').css('color', 'green');
+            NexifymySecurity.loadBackups();
+          } else {
+            $status.text('Error: ' + response.data).css('color', 'red');
+          }
+        },
+        error: function () {
+          $button.prop('disabled', false);
+          $status.text('Failed to create backup').css('color', 'red');
+        }
+      });
+    },
+
+    deleteBackup: function (filename, $button) {
+      $button.prop('disabled', true).text('Deleting...');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_delete_backup',
+          filename: filename,
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          if (response.success) {
+            $button.closest('tr').fadeOut();
+          } else {
+            alert('Error: ' + response.data);
+            $button.prop('disabled', false).text('Delete');
+          }
+        }
+      });
+    },
+
+    loadOptimizationStats: function () {
+      var $container = $('#optimization-stats');
+      if (!$container.length) return;
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_get_optimization_stats',
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          if (response.success) {
+            var stats = response.data.stats;
+            var html = '<table class="widefat">';
+            html += '<tr><th>Transients</th><td>' + stats.transients + '</td></tr>';
+            html += '<tr><th>Post Revisions</th><td>' + stats.revisions + '</td></tr>';
+            html += '<tr><th>Spam Comments</th><td>' + stats.spam_comments + '</td></tr>';
+            html += '<tr><th>Trashed Comments</th><td>' + stats.trash_comments + '</td></tr>';
+            html += '<tr><th>Trashed Posts</th><td>' + stats.trash_posts + '</td></tr>';
+            html += '<tr><th>Orphaned Meta</th><td>' + stats.orphan_meta + '</td></tr>';
+            html += '<tr><th><strong>Total Cleanable Items</strong></th><td><strong>' + stats.total + '</strong></td></tr>';
+            html += '</table>';
+            $container.html(html);
+          }
+        }
+      });
+    },
+
+    optimizeDatabase: function () {
+      var $button = $('#optimize-database');
+      var $status = $('#optimize-status');
+
+      if (!confirm('This will permanently delete transients, revisions, spam, and trashed items. Continue?')) {
+        return;
+      }
+
+      $button.prop('disabled', true);
+      $status.text('Optimizing...').css('color', '#666');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: 'POST',
+        data: {
+          action: 'nexifymy_optimize_database',
+          nonce: nexifymySecurity.nonce
+        },
+        success: function (response) {
+          $button.prop('disabled', false);
+          if (response.success) {
+            $status.text(response.data.message).css('color', 'green');
+            NexifymySecurity.loadOptimizationStats();
+          } else {
+            $status.text('Error: ' + response.data).css('color', 'red');
+          }
+        },
+        error: function () {
+          $button.prop('disabled', false);
+          $status.text('Failed to optimize database').css('color', 'red');
+        }
       });
     },
 
