@@ -70,6 +70,15 @@ class NexifyMy_Security_Settings {
 			'schedule'           => 'daily',
 			'scan_mode'          => 'standard',
 		),
+
+		// Database Security Settings.
+		'database' => array(
+			'backup_enabled'     => true,
+			'backup_schedule'    => 'weekly',   // daily, weekly, none.
+			'max_backups'        => 5,          // Auto-delete old backups.
+			'include_transients' => false,      // Skip transients in backup.
+			'auto_optimize'      => false,      // Auto-optimize on backup.
+		),
 	);
 
 	/**
@@ -247,6 +256,17 @@ class NexifyMy_Security_Settings {
 			$sanitized['background_scan'] = array(
 				'schedule'  => sanitize_key( $input['background_scan']['schedule'] ?? 'daily' ) ?: 'daily',
 				'scan_mode' => sanitize_key( $input['background_scan']['scan_mode'] ?? 'standard' ) ?: 'standard',
+			);
+		}
+
+		// Database.
+		if ( isset( $input['database'] ) ) {
+			$sanitized['database'] = array(
+				'backup_enabled'     => ! empty( $input['database']['backup_enabled'] ),
+				'backup_schedule'    => sanitize_key( $input['database']['backup_schedule'] ?? 'weekly' ) ?: 'weekly',
+				'max_backups'        => max( 1, absint( $input['database']['max_backups'] ?? 5 ) ?: 5 ),
+				'include_transients' => ! empty( $input['database']['include_transients'] ),
+				'auto_optimize'      => ! empty( $input['database']['auto_optimize'] ),
 			);
 		}
 
