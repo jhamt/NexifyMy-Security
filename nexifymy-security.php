@@ -88,6 +88,7 @@ function nexifymy_security_deactivate() {
 	wp_clear_scheduled_hook( 'nexifymy_scheduled_scan' );
 	wp_clear_scheduled_hook( 'nexifymy_daily_summary' );
 	wp_clear_scheduled_hook( 'nexifymy_log_cleanup' );
+	wp_clear_scheduled_hook( 'nexifymy_scheduled_backup' );
 
 	// Flush rewrite rules.
 	flush_rewrite_rules();
@@ -159,6 +160,11 @@ function nexifymy_security_init() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/cleanup.php';
 	$GLOBALS['nexifymy_cleanup'] = new NexifyMy_Security_Cleanup();
 	$GLOBALS['nexifymy_cleanup']->init();
+
+	// Load Database Security.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/database-security.php';
+	$GLOBALS['nexifymy_database'] = new NexifyMy_Security_Database();
+	$GLOBALS['nexifymy_database']->init();
 
 	// Load Background Scanner.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
