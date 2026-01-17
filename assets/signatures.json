@@ -1,0 +1,247 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-01-17",
+  "source": "NexifyMy Security Built-in",
+  "signatures": [
+    {
+      "id": "eval_base64",
+      "severity": "critical",
+      "title": "Obfuscated eval() with base64",
+      "description": "eval(base64_decode()) - Common malware obfuscation technique",
+      "pattern": "/eval\\s*\\(\\s*base64_decode\\s*\\(/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "shell_exec",
+      "severity": "critical",
+      "title": "Shell Command Execution",
+      "description": "shell_exec() allows running system commands",
+      "pattern": "/shell_exec\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "exec_function",
+      "severity": "critical",
+      "title": "Command Execution",
+      "description": "exec() function for running commands",
+      "pattern": "/\\bexec\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "passthru",
+      "severity": "critical",
+      "title": "Passthru Command Execution",
+      "description": "passthru() for command execution",
+      "pattern": "/passthru\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "system_function",
+      "severity": "critical",
+      "title": "System Command Execution",
+      "description": "system() for running system commands",
+      "pattern": "/\\bsystem\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "proc_open",
+      "severity": "critical",
+      "title": "Process Control",
+      "description": "proc_open() for process manipulation",
+      "pattern": "/proc_open\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "webshell_c99",
+      "severity": "critical",
+      "title": "C99 Webshell Indicator",
+      "description": "C99 shell signature detected",
+      "pattern": "/c99shell|r57shell|wso\\s*shell/i",
+      "category": "webshell"
+    },
+    {
+      "id": "webshell_filesman",
+      "severity": "critical",
+      "title": "FilesMan Webshell",
+      "description": "FilesMan shell signature",
+      "pattern": "/FilesMan|WSO_VERSION/i",
+      "category": "webshell"
+    },
+    {
+      "id": "gzinflate_base64",
+      "severity": "high",
+      "title": "Compressed Obfuscation",
+      "description": "gzinflate(base64_decode()) - Compressed malware payload",
+      "pattern": "/gzinflate\\s*\\(\\s*base64_decode\\s*\\(/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "str_rot13",
+      "severity": "high",
+      "title": "ROT13 Obfuscation",
+      "description": "str_rot13() text obfuscation",
+      "pattern": "/str_rot13\\s*\\(/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "create_function",
+      "severity": "high",
+      "title": "Dynamic Code Creation",
+      "description": "create_function() for dynamic code",
+      "pattern": "/create_function\\s*\\(/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "assert_function",
+      "severity": "high",
+      "title": "Assert Code Execution",
+      "description": "assert() can execute arbitrary code",
+      "pattern": "/\\bassert\\s*\\(/i",
+      "category": "command_execution"
+    },
+    {
+      "id": "preg_replace_e",
+      "severity": "high",
+      "title": "Deprecated eval in preg_replace",
+      "description": "preg_replace with /e modifier (deprecated, dangerous)",
+      "pattern": "/preg_replace\\s*\\(\\s*['\"].*\\/e['\"]/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "backdoor_post",
+      "severity": "high",
+      "title": "Backdoor via POST",
+      "description": "Executing code from POST data",
+      "pattern": "/\\$_(POST|GET|REQUEST)\\s*\\[\\s*['\"][^'\"]+['\"]\\s*\\]\\s*\\(/i",
+      "category": "backdoor"
+    },
+    {
+      "id": "eval_post",
+      "severity": "critical",
+      "title": "Eval POST Data",
+      "description": "eval($_POST) - Direct code execution from user input",
+      "pattern": "/eval\\s*\\(\\s*\\$_(POST|GET|REQUEST)/i",
+      "category": "backdoor"
+    },
+    {
+      "id": "base64_post",
+      "severity": "high",
+      "title": "Base64 Decode POST",
+      "description": "base64_decode($_POST) - Decoding user input",
+      "pattern": "/base64_decode\\s*\\(\\s*\\$_(POST|GET|REQUEST)/i",
+      "category": "backdoor"
+    },
+    {
+      "id": "file_put_contents",
+      "severity": "medium",
+      "title": "File Write Operation",
+      "description": "file_put_contents() can create/modify files",
+      "pattern": "/file_put_contents\\s*\\(/i",
+      "category": "file_operation"
+    },
+    {
+      "id": "hex_encoded",
+      "severity": "medium",
+      "title": "Heavy Hex Encoding",
+      "description": "Long hex-encoded strings (obfuscation)",
+      "pattern": "/(\\\\x[0-9a-f]{2}){10,}/i",
+      "category": "obfuscation"
+    },
+    {
+      "id": "long_base64",
+      "severity": "medium",
+      "title": "Long Base64 String",
+      "description": "Unusually long base64 encoded payload",
+      "pattern": "/[a-zA-Z0-9+\\/=]{500,}/",
+      "category": "obfuscation"
+    },
+    {
+      "id": "php_uname",
+      "severity": "medium",
+      "title": "System Information Gathering",
+      "description": "php_uname() gathers system info",
+      "pattern": "/php_uname\\s*\\(/i",
+      "category": "reconnaissance"
+    },
+    {
+      "id": "curl_exec",
+      "severity": "medium",
+      "title": "External Request",
+      "description": "curl_exec() for external connections",
+      "pattern": "/curl_exec\\s*\\(/i",
+      "category": "network"
+    },
+    {
+      "id": "fopen_url",
+      "severity": "medium",
+      "title": "Remote File Include",
+      "description": "fopen() with URL - Potential RFI",
+      "pattern": "/fopen\\s*\\(\\s*['\"]https?:/i",
+      "category": "network"
+    },
+    {
+      "id": "include_url",
+      "severity": "critical",
+      "title": "Remote File Include",
+      "description": "include/require with URL - RFI attack",
+      "pattern": "/(include|require)(_once)?\\s*\\(\\s*['\"]https?:/i",
+      "category": "rfi"
+    },
+    {
+      "id": "chmod_777",
+      "severity": "high",
+      "title": "Insecure File Permissions",
+      "description": "chmod with 0777 - World-writable files",
+      "pattern": "/chmod\\s*\\([^,]+,\\s*0?777\\s*\\)/i",
+      "category": "file_operation"
+    },
+    {
+      "id": "disable_functions",
+      "severity": "high",
+      "title": "Disable Functions Bypass",
+      "description": "Attempts to bypass disabled functions",
+      "pattern": "/ini_set\\s*\\(\\s*['\"]disable_functions['\"]/i",
+      "category": "bypass"
+    },
+    {
+      "id": "mail_injection",
+      "severity": "medium",
+      "title": "Mail Header Injection",
+      "description": "Potential mail header injection",
+      "pattern": "/mail\\s*\\([^)]*\\$_(POST|GET|REQUEST)/i",
+      "category": "injection"
+    },
+    {
+      "id": "mysql_query_user",
+      "severity": "high",
+      "title": "SQL Injection Risk",
+      "description": "Direct user input in SQL query",
+      "pattern": "/(mysql_query|mysqli_query)\\s*\\([^)]*\\$_(POST|GET|REQUEST)/i",
+      "category": "sqli"
+    },
+    {
+      "id": "hidden_iframe",
+      "severity": "high",
+      "title": "Hidden IFrame",
+      "description": "Hidden iframe injection (SEO spam/malware)",
+      "pattern": "/<iframe[^>]+style\\s*=\\s*['\"][^'\"]*display\\s*:\\s*none/i",
+      "category": "injection"
+    },
+    {
+      "id": "wordpress_admin_inject",
+      "severity": "critical",
+      "title": "WordPress Admin Injection",
+      "description": "Attempts to inject admin user",
+      "pattern": "/wp_insert_user|wp_create_user/i",
+      "category": "wordpress"
+    },
+    {
+      "id": "wordpress_option_modify",
+      "severity": "high",
+      "title": "WordPress Options Modification",
+      "description": "Direct options manipulation",
+      "pattern": "/update_option\\s*\\(\\s*['\"](?:siteurl|home|admin_email)['\"]/i",
+      "category": "wordpress"
+    }
+  ]
+}
