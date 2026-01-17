@@ -77,7 +77,7 @@ class NexifyMy_Security_Scanner {
 	 * Initialize the scanner.
 	 */
 	public function init() {
-		$this->define_heuristics();
+		$this->load_signatures();
 
 		// Only register admin/AJAX endpoints when the module is enabled.
 		if ( ! $this->is_scanner_enabled() ) {
@@ -86,6 +86,21 @@ class NexifyMy_Security_Scanner {
 
 		add_action( 'wp_ajax_nexifymy_scan', array( $this, 'ajax_scan' ) );
 		add_action( 'wp_ajax_nexifymy_core_integrity', array( $this, 'ajax_core_integrity_check' ) );
+	}
+
+	/**
+	 * Load signatures from Signature Updater module or fallback to built-in.
+	 */
+	private function load_signatures() {
+		// Try to get dynamic signatures from Signature Updater.
+		if ( isset( $GLOBALS['nexifymy_signatures'] ) && method_exists( $GLOBALS['nexifymy_signatures'], 'get_scan_patterns' ) ) {
+			$this->heuristics = $GLOBALS['nexifymy_signatures']->get_scan_patterns();
+		}
+
+		// Fallback to built-in if empty.
+		if ( empty( $this->heuristics ) ) {
+			$this->define_heuristics();
+		}
 	}
 
 	/**
