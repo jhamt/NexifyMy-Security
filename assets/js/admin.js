@@ -15,6 +15,11 @@
       this.loadDatabaseInfo();
       this.loadBackups();
       this.loadOptimizationStats();
+      this.loadLiveTraffic();
+      this.loadTrafficStats();
+      this.loadCountryList();
+      this.loadHardeningStatus();
+      this.loadCdnStatus();
     },
 
     bindEvents: function () {
