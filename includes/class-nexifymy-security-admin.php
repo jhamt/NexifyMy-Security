@@ -874,4 +874,730 @@ class NexifyMy_Security_Admin {
 		</div>
 		<?php
 	}
+
+	/**
+	 * Render the Live Traffic page.
+	 */
+	public function render_live_traffic() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-chart-area"></span> <?php _e( 'Live Traffic', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Monitor real-time HTTP requests to your site.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- Traffic Stats Card -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Traffic Statistics (Last 24 Hours)', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="traffic-stats">
+						<p><?php _e( 'Loading statistics...', 'nexifymy-security' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Live Traffic Table -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Recent Requests', 'nexifymy-security' ); ?></h2>
+					<button class="button" id="refresh-traffic">
+						<span class="dashicons dashicons-update"></span> <?php _e( 'Refresh', 'nexifymy-security' ); ?>
+					</button>
+				</div>
+				<div class="card-body">
+					<table class="widefat striped" id="traffic-table">
+						<thead>
+							<tr>
+								<th><?php _e( 'Time', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'IP', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Method', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'URL', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
+							</tr>
+						</thead>
+						<tbody id="traffic-tbody">
+							<tr><td colspan="5"><?php _e( 'Loading traffic...', 'nexifymy-security' ); ?></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Geo Blocking page.
+	 */
+	public function render_geo_blocking() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-admin-site-alt3"></span> <?php _e( 'Geo Blocking', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Block or allow traffic based on country.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Country Blocking Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'Enable Geo Blocking', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="geo-enabled" /> <?php _e( 'Enable country-based blocking', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Mode', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="geo-mode">
+									<option value="blacklist"><?php _e( 'Blacklist (block selected)', 'nexifymy-security' ); ?></option>
+									<option value="whitelist"><?php _e( 'Whitelist (allow only selected)', 'nexifymy-security' ); ?></option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Countries', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="geo-countries" multiple style="width: 100%; height: 200px;">
+									<?php _e( 'Loading countries...', 'nexifymy-security' ); ?>
+								</select>
+								<p class="description"><?php _e( 'Hold Ctrl/Cmd to select multiple countries.', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Block Message', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="text" id="geo-message" class="regular-text" value="Access denied from your region." />
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-geo-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="geo-status"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Hardening page.
+	 */
+	public function render_hardening() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-lock"></span> <?php _e( 'Security Hardening', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Apply security hardening measures to WordPress.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Hardening Options', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table" id="hardening-options">
+						<tr>
+							<th><?php _e( 'Disable XML-RPC', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="disable_xmlrpc" checked /> <?php _e( 'Block XML-RPC access (prevents brute force)', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Hide WP Version', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="hide_wp_version" checked /> <?php _e( 'Remove WordPress version from source code', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Disable File Editor', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="disable_file_editor" checked /> <?php _e( 'Disable theme/plugin editor in admin', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Security Headers', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="security_headers" checked /> <?php _e( 'Add X-Frame-Options, X-XSS-Protection headers', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Restrict REST API', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="disable_rest_api" /> <?php _e( 'Require login for REST API access', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Disable Pingback', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="disable_pingback" checked /> <?php _e( 'Disable pingback/trackback functionality', 'nexifymy-security' ); ?></label></td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="apply-hardening"><?php _e( 'Apply Settings', 'nexifymy-security' ); ?></button>
+						<span id="hardening-status"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Password Policy page.
+	 */
+	public function render_password() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-privacy"></span> <?php _e( 'Password Policy', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Enforce strong password requirements for all users.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Password Requirements', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table" id="password-options">
+						<tr>
+							<th><?php _e( 'Minimum Length', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="number" id="pass-min-length" value="12" min="8" max="32" />
+								<p class="description"><?php _e( 'Minimum password length (8-32 characters)', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Character Requirements', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" name="require_upper" checked /> <?php _e( 'Uppercase letter (A-Z)', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="require_lower" checked /> <?php _e( 'Lowercase letter (a-z)', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="require_number" checked /> <?php _e( 'Number (0-9)', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="require_special" checked /> <?php _e( 'Special character (!@#$...)', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Block Common Passwords', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" name="block_common" checked /> <?php _e( 'Prevent use of commonly breached passwords', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Password Expiry', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="pass-expiry">
+									<option value="0"><?php _e( 'Never expires', 'nexifymy-security' ); ?></option>
+									<option value="30"><?php _e( '30 days', 'nexifymy-security' ); ?></option>
+									<option value="60"><?php _e( '60 days', 'nexifymy-security' ); ?></option>
+									<option value="90"><?php _e( '90 days', 'nexifymy-security' ); ?></option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-password-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="password-status"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the CDN page.
+	 */
+	public function render_cdn() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-cloud"></span> <?php _e( 'CDN Integration', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Configure CDN integration and cache management.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- CDN Status -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'CDN Status', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="cdn-status">
+						<p><?php _e( 'Loading CDN status...', 'nexifymy-security' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cloudflare Settings -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Cloudflare API Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'Enable CDN Integration', 'nexifymy-security' ); ?></th>
+							<td><label><input type="checkbox" id="cdn-enabled" /> <?php _e( 'Enable CDN features', 'nexifymy-security' ); ?></label></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'API Token', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="password" id="cf-api-key" class="regular-text" />
+								<p class="description"><?php _e( 'Cloudflare API Token (with Zone permissions)', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Zone ID', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="text" id="cf-zone-id" class="regular-text" />
+								<p class="description"><?php _e( 'Found in Cloudflare dashboard under Overview', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+					</table>
+						</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Vulnerabilities page.
+	 */
+	public function render_vulnerabilities() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-warning"></span> <?php _e( 'Vulnerability Scanner', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Scan plugins, themes, and WordPress core for known vulnerabilities.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- Scan Controls -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Scan Controls', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p>
+						<button class="button button-primary button-hero" id="run-vuln-scan">
+							<span class="dashicons dashicons-search"></span> <?php _e( 'Run Vulnerability Scan', 'nexifymy-security' ); ?>
+						</button>
+					</p>
+					<div id="vuln-scan-status"></div>
+				</div>
+			</div>
+
+			<!-- Scan Results -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Scan Results', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="vuln-results">
+						<p><?php _e( 'No scan results available. Run a scan to check for vulnerabilities.', 'nexifymy-security' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Settings -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Scanner Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'WPScan API Token', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="password" id="wpscan-api-token" class="regular-text" />
+								<p class="description"><?php _e( 'Get a free API token from wpscan.com for detailed vulnerability data.', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Automatic Scans', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="vuln-auto-scan" /> <?php _e( 'Enable scheduled scans', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Email Alerts', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="vuln-email-alerts" checked /> <?php _e( 'Send email when vulnerabilities are found', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-vuln-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="vuln-settings-status"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Captcha page.
+	 */
+	public function render_captcha() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-shield"></span> <?php _e( 'Login Captcha', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Protect login and registration forms with math-based captcha.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Captcha Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table" id="captcha-settings">
+						<tr>
+							<th><?php _e( 'Enable Captcha', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" name="captcha_enabled" checked /> <?php _e( 'Enable captcha protection', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Protected Forms', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" name="enable_login" checked /> <?php _e( 'Login form', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="enable_registration" checked /> <?php _e( 'Registration form', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="enable_reset" checked /> <?php _e( 'Password reset form', 'nexifymy-security' ); ?></label><br>
+								<label><input type="checkbox" name="enable_comment" /> <?php _e( 'Comment form', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Difficulty', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="captcha-difficulty">
+									<option value="easy"><?php _e( 'Easy (addition only)', 'nexifymy-security' ); ?></option>
+									<option value="medium"><?php _e( 'Medium (addition/subtraction)', 'nexifymy-security' ); ?></option>
+									<option value="hard"><?php _e( 'Hard (includes multiplication)', 'nexifymy-security' ); ?></option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-captcha-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="captcha-status"></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- Preview -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Captcha Preview', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p><?php _e( 'This is how the captcha will appear on login forms:', 'nexifymy-security' ); ?></p>
+					<div style="max-width: 300px; padding: 20px; background: #f1f1f1; border-radius: 5px;">
+						<label style="font-weight: 600;">5 + 3 = ?</label><br>
+						<input type="number" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="<?php _e( 'Enter answer', 'nexifymy-security' ); ?>" />
+					</div>
+					</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the 2FA page.
+	 */
+	public function render_2fa() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-lock"></span> <?php _e( 'Two-Factor Authentication', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Add an extra layer of security with TOTP-based 2FA.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( '2FA Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'Enable 2FA', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="2fa-enabled" checked /> <?php _e( 'Allow users to enable 2FA', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Force for Admins', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="2fa-force-admin" /> <?php _e( 'Require 2FA for all administrators', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Email Backup', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="2fa-email-backup" checked /> <?php _e( 'Allow email code as backup method', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Remember Device', 'nexifymy-security' ); ?></th>
+							<td>
+								<input type="number" id="2fa-remember-days" value="30" min="1" max="365" style="width: 80px;" />
+								<span><?php _e( 'days', 'nexifymy-security' ); ?></span>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-2fa-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="2fa-status"></span>
+					</p>
+				</div>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'How 2FA Works', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<ol>
+						<li><?php _e( 'Users enable 2FA in their profile settings', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Scan QR code with authenticator app (Google/Microsoft Authenticator)', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Enter 6-digit code to verify setup', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'On next login, enter password + 6-digit code', 'nexifymy-security' ); ?></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Hide Login page.
+	 */
+	public function render_hide_login() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-hidden"></span> <?php _e( 'Hide Login URL', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Hide wp-admin and wp-login.php from attackers.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Login URL Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'Enable', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="hide-login-enabled" /> <?php _e( 'Hide default login URLs', 'nexifymy-security' ); ?></label>
+								<p class="description" style="color: orange;">
+									<strong><?php _e( 'Warning:', 'nexifymy-security' ); ?></strong>
+									<?php _e( 'Make sure to remember your custom login URL!', 'nexifymy-security' ); ?>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Login Slug', 'nexifymy-security' ); ?></th>
+							<td>
+								<code><?php echo esc_html( home_url( '/' ) ); ?></code>
+								<input type="text" id="login-slug" value="secure-login" style="width: 200px;" />
+								<p class="description"><?php _e( 'Choose a unique, hard-to-guess slug.', 'nexifymy-security' ); ?></p>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Redirect Blocked Access', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="hide-login-redirect">
+									<option value="404"><?php _e( 'Show 404 page', 'nexifymy-security' ); ?></option>
+									<option value="home"><?php _e( 'Redirect to homepage', 'nexifymy-security' ); ?></option>
+									<option value="custom"><?php _e( 'Custom URL', 'nexifymy-security' ); ?></option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<button class="button button-primary" id="save-hide-login-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						<span id="hide-login-status"></span>
+					</p>
+				</div>
+			</div>
+
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Current Login URL', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p id="current-login-url">
+						<code><?php echo esc_html( wp_login_url() ); ?></code>
+					</p>
+					<p class="description"><?php _e( 'Bookmark this URL so you can always access your login page.', 'nexifymy-security' ); ?></p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Self-Protection page.
+	 */
+	public function render_self_protection() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-shield-alt"></span> <?php _e( 'Plugin Self-Protection', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Protect the security plugin from tampering and unauthorized modifications.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- Protection Status -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Integrity Status', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="protection-status">
+						<p><?php _e( 'Loading protection status...', 'nexifymy-security' ); ?></p>
+					</div>
+					<p>
+						<button class="button button-primary" id="run-integrity-check">
+							<span class="dashicons dashicons-search"></span> <?php _e( 'Run Integrity Check', 'nexifymy-security' ); ?>
+						</button>
+						<button class="button" id="regenerate-hashes">
+							<span class="dashicons dashicons-update"></span> <?php _e( 'Regenerate Baseline', 'nexifymy-security' ); ?>
+						</button>
+						<span id="integrity-status"></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- Settings -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Protection Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'File Integrity Monitoring', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="monitor-files" checked /> <?php _e( 'Monitor plugin files for changes', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Block File Editor', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="block-editor" checked /> <?php _e( 'Prevent editing plugin files via WordPress editor', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Email Alerts', 'nexifymy-security' ); ?></th>
+							<td>
+								<label><input type="checkbox" id="tampering-alerts" checked /> <?php _e( 'Send email when tampering is detected', 'nexifymy-security' ); ?></label>
+							</td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Check Interval', 'nexifymy-security' ); ?></th>
+							<td>
+								<select id="check-interval">
+									<option value="hourly"><?php _e( 'Hourly', 'nexifymy-security' ); ?></option>
+									<option value="daily"><?php _e( 'Daily', 'nexifymy-security' ); ?></option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<!-- How It Works -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'How Self-Protection Works', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<ul>
+						<li><strong><?php _e( 'File Hashing:', 'nexifymy-security' ); ?></strong> <?php _e( 'SHA-256 hashes of all plugin files are stored as a baseline.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Integrity Checks:', 'nexifymy-security' ); ?></strong> <?php _e( 'Files are periodically compared against the baseline.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Tamper Detection:', 'nexifymy-security' ); ?></strong> <?php _e( 'Any modifications trigger immediate email alerts.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Editor Blocking:', 'nexifymy-security' ); ?></strong> <?php _e( 'Plugin files cannot be edited via WordPress.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Deactivation Monitoring:', 'nexifymy-security' ); ?></strong> <?php _e( 'Alerts sent if plugin is deactivated.', 'nexifymy-security' ); ?></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the Core Repair page.
+	 */
+	public function render_core_repair() {
+		global $wp_version;
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-hammer"></span> <?php _e( 'Core File Repair', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Check and repair corrupted WordPress core files using official sources.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<!-- WordPress Version Info -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'WordPress Core Status', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<table class="form-table">
+						<tr>
+							<th><?php _e( 'WordPress Version', 'nexifymy-security' ); ?></th>
+							<td><strong><?php echo esc_html( $wp_version ); ?></strong></td>
+						</tr>
+						<tr>
+							<th><?php _e( 'Integrity Status', 'nexifymy-security' ); ?></th>
+							<td id="core-status"><?php _e( 'Not checked yet', 'nexifymy-security' ); ?></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<!-- Action Buttons -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'Actions', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p>
+						<button class="button button-primary" id="check-core-integrity">
+							<span class="dashicons dashicons-search"></span> <?php _e( 'Check Core Integrity', 'nexifymy-security' ); ?>
+						</button>
+						<button class="button button-secondary" id="repair-all-core" style="display: none;">
+							<span class="dashicons dashicons-hammer"></span> <?php _e( 'Repair All Modified Files', 'nexifymy-security' ); ?>
+						</button>
+						<span id="repair-status"></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- Results -->
+			<div class="nexifymy-card" id="integrity-results" style="display: none;">
+				<div class="card-header">
+					<h2><?php _e( 'Integrity Check Results', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<div id="results-content"></div>
+				</div>
+			</div>
+
+			<!-- How It Works -->
+			<div class="nexifymy-card">
+				<div class="card-header">
+					<h2><?php _e( 'How Core Repair Works', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<ol>
+						<li><?php _e( 'Fetches official file checksums from WordPress.org API', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Compares each core file against the expected hash', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Identifies modified or missing files', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Downloads fresh WordPress package from official source', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Backs up corrupted files before replacement', 'nexifymy-security' ); ?></li>
+						<li><?php _e( 'Replaces corrupted files with clean versions', 'nexifymy-security' ); ?></li>
+					</ol>
+					<p class="description">
+						<strong><?php _e( 'Note:', 'nexifymy-security' ); ?></strong>
+						<?php _e( 'Backups are stored in wp-content/nexifymy-backups/core/', 'nexifymy-security' ); ?>
+					</p>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
 }
