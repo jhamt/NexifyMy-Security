@@ -166,10 +166,90 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_database'] = new NexifyMy_Security_Database();
 	$GLOBALS['nexifymy_database']->init();
 
+	// Load Live Traffic Monitoring.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/live-traffic.php';
+	$GLOBALS['nexifymy_live_traffic'] = new NexifyMy_Security_Live_Traffic();
+	$GLOBALS['nexifymy_live_traffic']->init();
+
+	// Load Geo Blocking.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/geo-blocking.php';
+	$GLOBALS['nexifymy_geo_blocking'] = new NexifyMy_Security_Geo_Blocking();
+	$GLOBALS['nexifymy_geo_blocking']->init();
+
+	// Load Security Hardening.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/hardening.php';
+	$GLOBALS['nexifymy_hardening'] = new NexifyMy_Security_Hardening();
+	$GLOBALS['nexifymy_hardening']->init();
+
+	// Load Password Security.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/password-security.php';
+	$GLOBALS['nexifymy_password'] = new NexifyMy_Security_Password();
+	$GLOBALS['nexifymy_password']->init();
+
+	// Load CDN Integration.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/cdn-integration.php';
+	$GLOBALS['nexifymy_cdn'] = new NexifyMy_Security_CDN();
+	$GLOBALS['nexifymy_cdn']->init();
+
+	// Load Core Repair.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
+	$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
+	$GLOBALS['nexifymy_core_repair']->init();
+
+	// Load Signature Updater (before scanner).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
+	$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
+	$GLOBALS['nexifymy_signatures']->init();
+
+	// Load Performance Optimizer (for caching and throttling).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/performance-optimizer.php';
+	$GLOBALS['nexifymy_performance'] = new NexifyMy_Security_Performance();
+	$GLOBALS['nexifymy_performance']->init();
+
+	// Load Core Repair.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
+	$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
+	$GLOBALS['nexifymy_core_repair']->init();
+
+	// Load Self-Protection (must load early).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/self-protection.php';
+	$GLOBALS['nexifymy_self_protection'] = new NexifyMy_Security_Self_Protection();
+	$GLOBALS['nexifymy_self_protection']->init();
+
+	// Load Two-Factor Authentication.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/two-factor-auth.php';
+	$GLOBALS['nexifymy_2fa'] = new NexifyMy_Security_Two_Factor();
+	$GLOBALS['nexifymy_2fa']->init();
+
+	// Load Hide Login URL.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/hide-login.php';
+	$GLOBALS['nexifymy_hide_login'] = new NexifyMy_Security_Hide_Login();
+	$GLOBALS['nexifymy_hide_login']->init();
+
+	// Load Vulnerability Scanner.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/vulnerability-scanner.php';
+	$GLOBALS['nexifymy_vuln_scanner'] = new NexifyMy_Security_Vulnerability_Scanner();
+	$GLOBALS['nexifymy_vuln_scanner']->init();
+
+	// Load Login Captcha.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/login-captcha.php';
+	$GLOBALS['nexifymy_captcha'] = new NexifyMy_Security_Login_Captcha();
+	$GLOBALS['nexifymy_captcha']->init();
+
 	// Load Background Scanner.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$GLOBALS['nexifymy_bg_scanner'] = new NexifyMy_Security_Background_Scanner();
 	$GLOBALS['nexifymy_bg_scanner']->init();
+
+	// Load Supply Chain Security.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/supply-chain-security.php';
+	$GLOBALS['nexifymy_supply_chain'] = new NexifyMy_Security_Supply_Chain();
+	$GLOBALS['nexifymy_supply_chain']->init();
+
+	// Load Proactive Security.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/proactive-security.php';
+	$GLOBALS['nexifymy_proactive'] = new NexifyMy_Security_Proactive();
+	$GLOBALS['nexifymy_proactive']->init();
 
 	// Load Email Alerts.
 	if ( ! isset( $GLOBALS['nexifymy_alerts'] ) || ! ( $GLOBALS['nexifymy_alerts'] instanceof NexifyMy_Security_Alerts ) ) {
