@@ -74,12 +74,61 @@ class NexifyMy_Security_Settings {
 		// Database Security Settings.
 		'database' => array(
 			'backup_enabled'     => true,
-			'backup_schedule'    => 'weekly',   // daily, weekly, none.
-			'max_backups'        => 5,          // Auto-delete old backups.
-			'include_transients' => false,      // Skip transients in backup.
-			'auto_optimize'      => false,      // Auto-optimize on backup.
+			'backup_schedule'    => 'weekly',
+			'max_backups'        => 5,
+			'include_transients' => false,
+			'auto_optimize'      => false,
+		),
+
+		// Performance Optimizer Settings.
+		'performance' => array(
+			'enabled'            => true,
+			'smart_caching'      => true,
+			'cache_ttl'          => 3600,
+			'throttle_scans'     => true,
+			'max_scan_time'      => 30,
+			'max_memory_percent' => 50,
+			'defer_heavy_tasks'  => true,
+			'off_peak_start'     => 2,
+			'off_peak_end'       => 6,
+			'lazy_load_modules'  => true,
+			'optimize_db_queries'=> true,
+		),
+
+		// Core Repair Settings.
+		'core_repair' => array(
+			'enabled'       => true,
+			'backup_before' => true,
+			'notify_admin'  => true,
+		),
+
+		// Supply Chain Security Settings.
+		'supply_chain' => array(
+			'enabled'                => true,
+			'scan_plugins'           => true,
+			'scan_themes'            => true,
+			'scan_composer'          => true,
+			'scan_npm'               => true,
+			'monitor_external_scripts' => true,
+			'verify_cdn_integrity'   => true,
+			'auto_scan_schedule'     => 'weekly',
+			'notify_on_issues'       => true,
+		),
+
+		// Proactive Security Settings.
+		'proactive' => array(
+			'enabled'                => true,
+			'auto_recommendations'   => true,
+			'auto_patch_plugins'     => false,
+			'auto_patch_themes'      => false,
+			'auto_patch_core'        => false,
+			'patch_schedule'         => 'daily',
+			'notify_before_patch'    => true,
+			'keep_backups'           => 5,
+			'benchmark_schedule'     => 'weekly',
 		),
 	);
+
 
 	/**
 	 * Initialize the settings module.
