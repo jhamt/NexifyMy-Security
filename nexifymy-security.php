@@ -156,6 +156,11 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_scanner'] = new NexifyMy_Security_Scanner();
 	$GLOBALS['nexifymy_scanner']->init();
 
+	// Load Quarantine.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/quarantine.php';
+	$GLOBALS['nexifymy_quarantine'] = new NexifyMy_Security_Quarantine();
+	$GLOBALS['nexifymy_quarantine']->init();
+
 	// Load Cleanup.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/cleanup.php';
 	$GLOBALS['nexifymy_cleanup'] = new NexifyMy_Security_Cleanup();
@@ -206,11 +211,6 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_performance'] = new NexifyMy_Security_Performance();
 	$GLOBALS['nexifymy_performance']->init();
 
-	// Load Core Repair.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
-	$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
-	$GLOBALS['nexifymy_core_repair']->init();
-
 	// Load Self-Protection (must load early).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/self-protection.php';
 	$GLOBALS['nexifymy_self_protection'] = new NexifyMy_Security_Self_Protection();
@@ -250,6 +250,31 @@ function nexifymy_security_init() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/proactive-security.php';
 	$GLOBALS['nexifymy_proactive'] = new NexifyMy_Security_Proactive();
 	$GLOBALS['nexifymy_proactive']->init();
+
+	// Load AI Threat Detection.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/ai-threat-detection.php';
+	$GLOBALS['nexifymy_ai_detection'] = new NexifyMy_Security_AI_Threat_Detection();
+	$GLOBALS['nexifymy_ai_detection']->init();
+
+	// Load Passkey/WebAuthn Authentication.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/passkey-auth.php';
+	$GLOBALS['nexifymy_passkey'] = new NexifyMy_Security_Passkey();
+	$GLOBALS['nexifymy_passkey']->init();
+
+	// Load Compliance & Reporting.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/compliance-reporting.php';
+	$GLOBALS['nexifymy_compliance'] = new NexifyMy_Security_Compliance();
+	$GLOBALS['nexifymy_compliance']->init();
+
+	// Load Developer API.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/developer-api.php';
+	$GLOBALS['nexifymy_dev_api'] = new NexifyMy_Security_Developer_API();
+	$GLOBALS['nexifymy_dev_api']->init();
+
+	// Load Integrations (Slack, Discord, Teams, SIEM, Jira).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/integrations.php';
+	$GLOBALS['nexifymy_integrations'] = new NexifyMy_Security_Integrations();
+	$GLOBALS['nexifymy_integrations']->init();
 
 	// Load Email Alerts.
 	if ( ! isset( $GLOBALS['nexifymy_alerts'] ) || ! ( $GLOBALS['nexifymy_alerts'] instanceof NexifyMy_Security_Alerts ) ) {
