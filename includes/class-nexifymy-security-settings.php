@@ -127,6 +127,58 @@ class NexifyMy_Security_Settings {
 			'keep_backups'           => 5,
 			'benchmark_schedule'     => 'weekly',
 		),
+
+		// AI Threat Detection Settings.
+		'ai_detection' => array(
+			'enabled'                => true,
+			'learning_mode'          => true,
+			'learning_period_days'   => 7,
+			'anomaly_threshold'      => 75,
+			'auto_block_threshold'   => 90,
+			'track_login_behavior'   => true,
+			'track_request_patterns' => true,
+			'track_user_agents'      => true,
+			'track_geo_patterns'     => true,
+			'notify_on_anomaly'      => true,
+		),
+
+		// Passkey/WebAuthn Settings.
+		'passkey' => array(
+			'enabled'              => true,
+			'allow_passwordless'   => true,
+			'require_for_admins'   => false,
+			'auto_prompt_register' => true,
+			'credential_timeout'   => 60000,
+			'authenticator_type'   => 'platform',
+			'user_verification'    => 'preferred',
+		),
+
+		// Compliance & Reporting Settings.
+		'compliance' => array(
+			'enabled'              => true,
+			'auto_generate'        => true,
+			'schedule'             => 'weekly',
+			'email_reports'        => true,
+			'include_gdpr'         => true,
+			'include_security'     => true,
+			'include_performance'  => true,
+			'include_threats'      => true,
+			'report_format'        => 'html',
+			'retention_days'       => 90,
+		),
+
+		// Developer API Settings.
+		'developer_api' => array(
+			'enabled'                  => true,
+			'rest_api_enabled'         => true,
+			'graphql_protection'       => true,
+			'webhooks_enabled'         => true,
+			'require_api_key'          => true,
+			'rate_limit_api'           => 100,
+			'log_api_requests'         => true,
+			'graphql_depth_limit'      => 10,
+			'graphql_complexity_limit' => 500,
+		),
 	);
 
 
