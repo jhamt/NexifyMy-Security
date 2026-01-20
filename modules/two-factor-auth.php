@@ -478,9 +478,21 @@ class NexifyMy_Security_Two_Factor {
 
 	/**
 	 * Send email backup code.
+	 * Rate limited to one email per 60 seconds per token.
 	 */
 	public function ajax_send_email_code() {
 		$token = isset( $_POST['token'] ) ? sanitize_text_field( wp_unslash( $_POST['token'] ) ) : '';
+
+		if ( empty( $token ) ) {
+			wp_send_json_error( 'Missing token.' );
+		}
+
+		// Rate limit check - only allow one email per 60 seconds per token.
+		$rate_key = 'nexifymy_2fa_email_rate_' . md5( $token );
+		if ( get_transient( $rate_key ) ) {
+			wp_send_json_error( 'Please wait before requesting another code.' );
+		}
+
 		$user_id = get_transient( 'nexifymy_2fa_' . $token );
 
 		if ( ! $user_id ) {
@@ -491,6 +503,7 @@ class NexifyMy_Security_Two_Factor {
 		$code = wp_rand( 100000, 999999 );
 
 		set_transient( 'nexifymy_2fa_email_' . $user_id, $code, 10 * MINUTE_IN_SECONDS );
+		set_transient( $rate_key, true, 60 ); // Rate limit for 60 seconds.
 
 		$subject = sprintf( '[%s] Your login verification code', get_bloginfo( 'name' ) );
 		$message = sprintf( __( 'Your verification code is: %s', 'nexifymy-security' ), $code );
