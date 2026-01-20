@@ -620,7 +620,12 @@ class NexifyMy_Security_Passkey {
 	private function find_user_by_credential( $credential_id ) {
 		global $wpdb;
 
-		$users = $wpdb->get_col( "SELECT user_id FROM {$wpdb->usermeta} WHERE meta_key = '" . self::CREDENTIALS_META_KEY . "'" );
+		$users = $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT user_id FROM {$wpdb->usermeta} WHERE meta_key = %s",
+				self::CREDENTIALS_META_KEY
+			)
+		);
 
 		foreach ( $users as $user_id ) {
 			$credentials = $this->get_user_credentials( $user_id );
