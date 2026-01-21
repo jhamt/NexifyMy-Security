@@ -151,6 +151,11 @@ function nexifymy_security_init() {
 	}
 	$GLOBALS['nexifymy_logger']->init();
 
+	// Load Notifications (admin alerts sourced from logs).
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-notifications.php';
+	$GLOBALS['nexifymy_notifications'] = new NexifyMy_Security_Notifications();
+	$GLOBALS['nexifymy_notifications']->init();
+
 	// Load Scanner.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/scanner.php';
 	$GLOBALS['nexifymy_scanner'] = new NexifyMy_Security_Scanner();
