@@ -77,6 +77,26 @@ class NexifyMy_Security_Admin {
 			array( $this, 'render_logs' )
 		);
 
+		$notifications_title = __( 'Notifications', 'nexifymy-security' );
+		if ( class_exists( 'NexifyMy_Security_Notifications' ) && function_exists( 'get_current_user_id' ) ) {
+			$unread = NexifyMy_Security_Notifications::get_unread_count( get_current_user_id() );
+			if ( $unread > 0 ) {
+				$notifications_title .= sprintf(
+					' <span class="update-plugins count-%1$d"><span class="plugin-count">%1$d</span></span>',
+					(int) $unread
+				);
+			}
+		}
+
+		add_submenu_page(
+			'nexifymy-security',
+			__( 'Notifications', 'nexifymy-security' ),
+			$notifications_title,
+			'manage_options',
+			'nexifymy-security-notifications',
+			array( $this, 'render_notifications' )
+		);
+
 		add_submenu_page(
 			'nexifymy-security',
 			__( 'Settings', 'nexifymy-security' ),
@@ -463,6 +483,44 @@ class NexifyMy_Security_Admin {
 						</tbody>
 					</table>
 					<div class="log-pagination" id="log-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the notifications page.
+	 */
+	public function render_notifications() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nexifymy-header">
+				<h1><span class="dashicons dashicons-bell"></span> <?php _e( 'Notifications', 'nexifymy-security' ); ?></h1>
+				<p class="description"><?php _e( 'Unread security alerts from your logs.', 'nexifymy-security' ); ?></p>
+			</div>
+
+			<div class="nexifymy-card nexifymy-card-full">
+				<div class="card-header">
+					<h2><?php _e( 'Unread Alerts', 'nexifymy-security' ); ?> <span id="notifications-unread-count"></span></h2>
+					<button type="button" class="button" id="mark-all-notifications-read"><?php _e( 'Mark All as Read', 'nexifymy-security' ); ?></button>
+				</div>
+				<div class="card-body">
+					<table class="widefat striped">
+						<thead>
+							<tr>
+								<th><?php _e( 'Date', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Event', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Severity', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Message', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'IP', 'nexifymy-security' ); ?></th>
+							</tr>
+						</thead>
+						<tbody id="notifications-tbody">
+							<tr><td colspan="5"><?php _e( 'Loading alerts...', 'nexifymy-security' ); ?></td></tr>
+						</tbody>
+					</table>
+					<p class="description"><?php _e( 'Shows unread Critical/Warning events. Use Logs for full history.', 'nexifymy-security' ); ?></p>
 				</div>
 			</div>
 		</div>
