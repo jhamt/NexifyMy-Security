@@ -10,6 +10,7 @@
       this.bindEvents();
       this.loadDashboardData();
       this.loadLogs();
+      this.loadNotifications();
       this.loadBlockedIPs();
       this.loadQuarantinedFiles();
       this.loadDatabaseInfo();
@@ -72,6 +73,11 @@
       // Test Alert
       $("#test-alert").on("click", function () {
         NexifymySecurity.sendTestAlert();
+      });
+
+      // Notifications
+      $("#mark-all-notifications-read").on("click", function () {
+        NexifymySecurity.markAllNotificationsRead();
       });
     },
 
@@ -280,6 +286,88 @@
 
             $tbody.html(html);
           }
+        },
+      });
+    },
+
+    loadNotifications: function () {
+      var $tbody = $("#notifications-tbody");
+      if (!$tbody.length) return;
+
+      $tbody.html('<tr><td colspan="5">Loading alerts...</td></tr>');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        data: {
+          action: "nexifymy_get_notifications",
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          if (!response.success) {
+            $tbody.html('<tr><td colspan="5">Failed to load alerts.</td></tr>');
+            return;
+          }
+
+          var data = response.data || {};
+          var alerts = data.alerts || [];
+          var count = data.unread_count || 0;
+
+          var $count = $("#notifications-unread-count");
+          if ($count.length) {
+            $count.text(count > 0 ? "(" + count + ")" : "");
+          }
+
+          if (alerts.length === 0) {
+            $tbody.html('<tr><td colspan="5">No unread alerts.</td></tr>');
+            return;
+          }
+
+          var html = "";
+          alerts.forEach(function (alert) {
+            html += "<tr>";
+            html += "<td>" + (alert.created_at || "-") + "</td>";
+            html += "<td>" + (alert.event_type || "-") + "</td>";
+            html +=
+              '<td><span class="severity-' +
+              (alert.severity || "info") +
+              '">' +
+              (alert.severity || "info") +
+              "</span></td>";
+            html += "<td>" + (alert.message || "-") + "</td>";
+            html += "<td>" + (alert.ip_address || "-") + "</td>";
+            html += "</tr>";
+          });
+
+          $tbody.html(html);
+        },
+      });
+    },
+
+    markAllNotificationsRead: function () {
+      var $button = $("#mark-all-notifications-read");
+      if (!$button.length) return;
+
+      $button.prop("disabled", true).text("Marking...");
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        data: {
+          action: "nexifymy_mark_all_notifications_read",
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          $button.prop("disabled", false).text("Mark All as Read");
+          if (response.success) {
+            NexifymySecurity.loadNotifications();
+          } else {
+            alert("Error: " + response.data);
+          }
+        },
+        error: function () {
+          $button.prop("disabled", false).text("Mark All as Read");
+          alert("Failed to mark alerts as read.");
         },
       });
     },
