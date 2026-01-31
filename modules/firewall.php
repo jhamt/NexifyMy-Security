@@ -84,9 +84,14 @@ class NexifyMy_Security_Firewall {
 					'/\.\.\\\\/', // Path Traversal Win
 					'/etc\/passwd/i',
 					'/proc\/self\/environ/i',
-					'/(?:http|https|ftp):\/\//i', // RFI in params
+					// Context-aware RFI patterns (avoid blocking normal URLs)
+					'/\b(?:include|require)(?:_once)?\s*\(\s*[\'"]?(?:https?|ftp):\/\//i',  // RFI via include/require
+					'/\b(?:file_get_contents|fopen|readfile|curl_exec)\s*\(\s*[\'"]?(?:https?|ftp):\/\//i',  // RFI via file functions
+					'/=\s*(?:https?|ftp|php):\/\/[^\s&]*(?:\.php|\.phtml|\.inc)/i',  // URL params pointing to PHP files
 					'/php:\/\/input/i',
 					'/php:\/\/filter/i',
+					'/data:\s*(?:text\/html|application)/i',  // Data URI attacks
+					'/expect:\/\//i',  // expect:// wrapper attacks
 				),
 			),
 
