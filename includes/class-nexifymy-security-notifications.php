@@ -164,6 +164,7 @@ class NexifyMy_Security_Notifications {
 
 	/**
 	 * Show a lightweight admin notice if there are unread critical/warning alerts.
+	 * Shows in the standard WordPress admin notice area on all admin pages.
 	 */
 	public function maybe_show_admin_notice() {
 		if ( ! current_user_can( 'manage_options' ) ) {
@@ -171,7 +172,9 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-		if ( $screen && isset( $screen->id ) && strpos( $screen->id, 'nexifymy-security_page_nexifymy-security-notifications' ) !== false ) {
+		
+		// Don't show on notifications page itself (user is already viewing them).
+		if ( $screen && isset( $screen->id ) && strpos( $screen->id, 'nexifymy-security-notifications' ) !== false ) {
 			return;
 		}
 
