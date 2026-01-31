@@ -3,7 +3,7 @@
  * Plugin Name: NexifyMy Security
  * Plugin URI:  https://nexifymy.com/
  * Description: A modern, lightweight, and powerful security plugin for WordPress.
- * Version:     1.0.9
+ * Version:     2.0.2
  * Author:      NexifyMy
  * Author URI:  https://nexifymy.com
  * License:     GPL2
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Once activation succeeds, we will re-enable features one by one.
 
 // Define constants.
-define( 'NEXIFYMY_SECURITY_VERSION', '2.0.0' ); // Bumped for dashboard redesign
+define( 'NEXIFYMY_SECURITY_VERSION', '2.0.2' ); // Production release with security enhancements
 define( 'NEXIFYMY_SECURITY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_URL', plugin_dir_url( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
