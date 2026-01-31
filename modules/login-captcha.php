@@ -16,6 +16,11 @@ class NexifyMy_Security_Login_Captcha {
 	const SESSION_KEY = 'nexifymy_captcha_answer';
 
 	/**
+	 * Transient prefix for captcha answer (fallback when sessions fail).
+	 */
+	const TRANSIENT_PREFIX = 'nexifymy_captcha_';
+
+	/**
 	 * Default settings.
 	 */
 	private static $defaults = array(
@@ -38,8 +43,10 @@ class NexifyMy_Security_Login_Captcha {
 			return;
 		}
 
-		// Start session if not already started.
-		add_action( 'init', array( $this, 'start_session' ), 1 );
+		// Start session as early as possible - before any output.
+		$this->start_session();
+		add_action( 'init', array( $this, 'start_session' ), -1 );
+		add_action( 'login_init', array( $this, 'start_session' ), -1 );
 
 		// Login form.
 		if ( ! empty( $settings['enable_login'] ) ) {
@@ -80,9 +87,27 @@ class NexifyMy_Security_Login_Captcha {
 	 * Start PHP session.
 	 */
 	public function start_session() {
-		if ( ! session_id() && ! headers_sent() ) {
-			session_start();
+		if ( defined( 'DOING_CRON' ) || defined( 'WP_CLI' ) || defined( 'REST_REQUEST' ) ) {
+			return;
 		}
+
+		if ( ! session_id() && ! headers_sent() ) {
+			// Prevent session issues with some hosts
+			if ( ! defined( 'PHP_SESSION_NONE' ) || session_status() === PHP_SESSION_NONE ) {
+				@session_start();
+			}
+		}
+	}
+
+	/**
+	 * Get unique client identifier for transient fallback.
+	 *
+	 * @return string
+	 */
+	private function get_client_id() {
+		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( $_SERVER['REMOTE_ADDR'] ) : 'unknown';
+		$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( $_SERVER['HTTP_USER_AGENT'] ) : '';
+		return md5( $ip . $ua );
 	}
 
 	/**
@@ -155,8 +180,14 @@ class NexifyMy_Security_Login_Captcha {
 				$symbol = '+';
 		}
 
-		// Store answer in session.
-		$_SESSION[ self::SESSION_KEY ] = $answer;
+		// Store answer in session (primary).
+		if ( isset( $_SESSION ) ) {
+			$_SESSION[ self::SESSION_KEY ] = $answer;
+		}
+
+		// Store answer in transient (fallback) - 5 minute expiry.
+		$client_id = $this->get_client_id();
+		set_transient( self::TRANSIENT_PREFIX . $client_id, $answer, 5 * MINUTE_IN_SECONDS );
 
 		return array(
 			'question' => sprintf( '%d %s %d = ?', $num1, $symbol, $num2 ),
@@ -189,15 +220,29 @@ class NexifyMy_Security_Login_Captcha {
 	 * @return bool
 	 */
 	private function validate_captcha( $submitted ) {
-		if ( ! isset( $_SESSION[ self::SESSION_KEY ] ) ) {
-			return false;
+		$submitted = (int) $submitted;
+		$expected = null;
+
+		// Try session first (primary).
+		if ( isset( $_SESSION[ self::SESSION_KEY ] ) ) {
+			$expected = (int) $_SESSION[ self::SESSION_KEY ];
+			unset( $_SESSION[ self::SESSION_KEY ] );
 		}
 
-		$expected = (int) $_SESSION[ self::SESSION_KEY ];
-		$submitted = (int) $submitted;
+		// Try transient (fallback) if session failed.
+		if ( null === $expected ) {
+			$client_id = $this->get_client_id();
+			$transient_answer = get_transient( self::TRANSIENT_PREFIX . $client_id );
+			if ( false !== $transient_answer ) {
+				$expected = (int) $transient_answer;
+				delete_transient( self::TRANSIENT_PREFIX . $client_id );
+			}
+		}
 
-		// Clear the session value after validation.
-		unset( $_SESSION[ self::SESSION_KEY ] );
+		// No stored answer found.
+		if ( null === $expected ) {
+			return false;
+		}
 
 		return $submitted === $expected;
 	}
