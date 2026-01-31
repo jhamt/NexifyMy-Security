@@ -11,11 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class NexifyMy_Security_Integrations {
 
 	/**
-	 * Option key for integration settings.
-	 */
-	const INTEGRATIONS_OPTION = 'nexifymy_integrations';
-
-	/**
 	 * Default settings.
 	 */
 	private static $defaults = array(
@@ -102,8 +97,13 @@ class NexifyMy_Security_Integrations {
 	 * @return array
 	 */
 	public function get_settings() {
-		$settings = get_option( self::INTEGRATIONS_OPTION, array() );
-		return wp_parse_args( $settings, self::$defaults );
+		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
+			$all_settings = NexifyMy_Security_Settings::get_all();
+			if ( isset( $all_settings['integrations'] ) ) {
+				return wp_parse_args( $all_settings['integrations'], self::$defaults );
+			}
+		}
+		return self::$defaults;
 	}
 
 	/**
@@ -112,7 +112,11 @@ class NexifyMy_Security_Integrations {
 	 * @param array $settings Settings to save.
 	 */
 	public function save_settings( $settings ) {
-		update_option( self::INTEGRATIONS_OPTION, $settings, false );
+		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
+			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings['integrations'] = $settings;
+			update_option( 'nexifymy_security_settings', $all_settings );
+		}
 	}
 
 	/**
