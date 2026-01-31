@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: NexifyMy Security
- * Plugin URI:  https://nexifymy.com/security
+ * Plugin URI:  https://nexifymy.com/
  * Description: A modern, lightweight, and powerful security plugin for WordPress.
- * Version:     1.0.0
+ * Version:     1.0.9
  * Author:      NexifyMy
  * Author URI:  https://nexifymy.com
  * License:     GPL2
@@ -16,8 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// MINIMAL TEST VERSION - All features temporarily disabled for activation testing.
+// Once activation succeeds, we will re-enable features one by one.
+
 // Define constants.
-define( 'NEXIFYMY_SECURITY_VERSION', '1.0.0' );
+define( 'NEXIFYMY_SECURITY_VERSION', '2.0.0' ); // Bumped for dashboard redesign
 define( 'NEXIFYMY_SECURITY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_URL', plugin_dir_url( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
@@ -28,41 +31,54 @@ define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
  * =============================================================================
  */
 
-// Load Logger early so WAF/Rate Limiter can log immediately.
-require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
-$GLOBALS['nexifymy_logger'] = new NexifyMy_Security_Logger();
+// Safety check: Skip early WAF execution during plugin activation/deactivation.
+// WordPress may not be fully loaded yet when uploading/activating via ZIP.
+// Also check if core WordPress functions are available.
+// Skip in admin area entirely - WAF/Rate Limiter are for frontend protection.
+$nexifymy_skip_early_waf = (
+	defined( 'WP_INSTALLING' ) ||
+	! function_exists( 'get_option' ) ||
+	( function_exists( 'is_admin' ) && is_admin() ) ||  // Skip all admin requests
+	( isset( $_REQUEST['action'] ) && in_array( $_REQUEST['action'], array( 'activate', 'deactivate', 'upload-plugin', 'install-plugin' ), true ) ) ||
+	( isset( $_REQUEST['plugin'] ) && strpos( $_REQUEST['plugin'], 'nexifymy-security' ) !== false && isset( $_REQUEST['action'] ) )
+);
 
-// Load Email Alerts early so WAF events can trigger alerts.
-require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
-$GLOBALS['nexifymy_alerts'] = new NexifyMy_Security_Alerts();
-if ( empty( $GLOBALS['nexifymy_alerts_initialized'] ) ) {
-	$GLOBALS['nexifymy_alerts']->init();
-	$GLOBALS['nexifymy_alerts_initialized'] = true;
+if ( ! $nexifymy_skip_early_waf ) {
+	// Load Logger early so WAF/Rate Limiter can log immediately.
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
+	$GLOBALS['nexifymy_logger'] = new NexifyMy_Security_Logger();
+
+	// Load Email Alerts early so WAF events can trigger alerts.
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
+	$GLOBALS['nexifymy_alerts'] = new NexifyMy_Security_Alerts();
+	if ( empty( $GLOBALS['nexifymy_alerts_initialized'] ) ) {
+		$GLOBALS['nexifymy_alerts']->init();
+		$GLOBALS['nexifymy_alerts_initialized'] = true;
+	}
+
+	// Load WAF immediately (runs at PHP execution, not waiting for hooks).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/firewall.php';
+	$GLOBALS['nexifymy_waf'] = new NexifyMy_Security_Firewall();
+	$GLOBALS['nexifymy_waf']->run_firewall(); // Execute immediately!
+
+	// Load Rate Limiter for login protection (hooks into authenticate).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
+	$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
+	$GLOBALS['nexifymy_rate_limiter']->init();
 }
-
-// Load WAF immediately (runs at PHP execution, not waiting for hooks).
-require_once NEXIFYMY_SECURITY_PATH . 'modules/firewall.php';
-$GLOBALS['nexifymy_waf'] = new NexifyMy_Security_Firewall();
-$GLOBALS['nexifymy_waf']->run_firewall(); // Execute immediately!
-
-// Load Rate Limiter for login protection (hooks into authenticate).
-require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
-$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
-$GLOBALS['nexifymy_rate_limiter']->init();
 
 /*
  * =============================================================================
  * ACTIVATION / DEACTIVATION HOOKS (must be in main file)
  * =============================================================================
  */
-
-register_activation_hook( __FILE__, 'nexifymy_security_activate' );
-register_deactivation_hook( __FILE__, 'nexifymy_security_deactivate' );
-
-/**
- * Plugin activation.
- */
 function nexifymy_security_activate() {
+	// Store activation time first (minimal operation).
+	update_option( 'nexifymy_security_activated', time() );
+
+	// Flush rewrite rules.
+	flush_rewrite_rules();
+
 	// Create database tables.
 	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
 	$logger = new NexifyMy_Security_Logger();
@@ -72,27 +88,21 @@ function nexifymy_security_activate() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
 	$bg_scanner->schedule_scan( 'daily' );
-
-	// Store activation time.
-	update_option( 'nexifymy_security_activated', time() );
-
-	// Flush rewrite rules.
-	flush_rewrite_rules();
 }
 
 /**
  * Plugin deactivation.
  */
 function nexifymy_security_deactivate() {
-	// Clear scheduled cron.
+	// Clear scheduled cron events if any exist.
 	wp_clear_scheduled_hook( 'nexifymy_scheduled_scan' );
 	wp_clear_scheduled_hook( 'nexifymy_daily_summary' );
 	wp_clear_scheduled_hook( 'nexifymy_log_cleanup' );
 	wp_clear_scheduled_hook( 'nexifymy_scheduled_backup' );
-
-	// Flush rewrite rules.
-	flush_rewrite_rules();
 }
+
+register_activation_hook( __FILE__, 'nexifymy_security_activate' );
+register_deactivation_hook( __FILE__, 'nexifymy_security_deactivate' );
 
 /*
  * =============================================================================
@@ -138,6 +148,7 @@ function nexifymy_security_load_textdomain() {
  * =============================================================================
  */
 
+// Hook into plugins_loaded to initialize core functionality.
 add_action( 'plugins_loaded', 'nexifymy_security_init' );
 
 /**
