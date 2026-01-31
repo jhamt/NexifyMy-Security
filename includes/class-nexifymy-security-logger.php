@@ -273,6 +273,58 @@ class NexifyMy_Security_Logger {
 	}
 
 	/**
+	 * Get recent security events for dashboard.
+	 *
+	 * @param int $limit Number of events to return.
+	 * @return array Recent events.
+	 */
+	public static function get_recent_events( $limit = 5 ) {
+		global $wpdb;
+
+		$table_name = self::get_table_name();
+
+		// Check if table exists.
+		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) !== $table_name ) {
+			return array();
+		}
+
+		$limit = max( 1, min( 50, absint( $limit ) ) );
+
+		$events = $wpdb->get_results( $wpdb->prepare(
+			"SELECT id, event_type, severity, message, ip_address, created_at 
+			 FROM {$table_name} 
+			 ORDER BY created_at DESC 
+			 LIMIT %d",
+			$limit
+		), ARRAY_A );
+
+		// Format events for dashboard display.
+		$formatted = array();
+		foreach ( $events as $event ) {
+			$icon = 'info';
+			switch ( $event['severity'] ) {
+				case 'critical':
+					$icon = 'warning';
+					break;
+				case 'warning':
+					$icon = 'flag';
+					break;
+			}
+
+			$formatted[] = array(
+				'id'       => $event['id'],
+				'message'  => $event['message'],
+				'severity' => $event['severity'],
+				'ip'       => $event['ip_address'],
+				'icon'     => $icon,
+				'time'     => strtotime( $event['created_at'] ),
+			);
+		}
+
+		return $formatted;
+	}
+
+	/**
 	 * Get statistics for the dashboard.
 	 *
 	 * @param int $days Number of days to look back.
