@@ -40,7 +40,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		$this->assertTrue( $settings['modules']['rate_limiter_enabled'] );
 
 		// Check rate limiter defaults.
-		$this->assertEquals( 10, $settings['rate_limiter']['max_attempts'] );
+		$this->assertEquals( 5, $settings['rate_limiter']['max_attempts'] );
 		$this->assertEquals( 900, $settings['rate_limiter']['lockout_duration'] );
 
 		// Check logging defaults.
@@ -52,7 +52,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_get_nested_value() {
 		$max_attempts = NexifyMy_Security_Settings::get( 'rate_limiter', 'max_attempts', 0 );
-		$this->assertEquals( 10, $max_attempts );
+		$this->assertEquals( 5, $max_attempts );
 	}
 
 	/**
@@ -100,6 +100,6 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		
 		// Check it's back to default.
 		$max_attempts = NexifyMy_Security_Settings::get( 'rate_limiter', 'max_attempts', 0 );
-		$this->assertEquals( 10, $max_attempts );
+		$this->assertEquals( 5, $max_attempts );
 	}
 }
