@@ -48,14 +48,72 @@ class NexifyMy_Security_Signature_Updater {
 		// Schedule automatic updates.
 		add_action( 'nexifymy_update_signatures', array( $this, 'update_signatures' ) );
 
+		// Auto-update scheduling
 		$settings = $this->get_settings();
-		if ( ! empty( $settings['auto_update'] ) && ! wp_next_scheduled( 'nexifymy_update_signatures' ) ) {
-			wp_schedule_event( time(), 'daily', 'nexifymy_update_signatures' );
+		$auto_update = isset( $settings['auto_update'] ) ? $settings['auto_update'] : true;
+
+		if ( $auto_update ) {
+			// Schedule if not already scheduled
+			if ( ! wp_next_scheduled( 'nexifymy_update_signatures' ) ) {
+				wp_schedule_event( time() + 60, 'daily', 'nexifymy_update_signatures' );
+			}
+		} else {
+			// Clear schedule if auto-update is disabled
+			wp_clear_scheduled_hook( 'nexifymy_update_signatures' );
+		}
+
+		// Check if we should update on first load (if never updated before)
+		$last_update = get_option( self::LAST_UPDATE_OPTION );
+		if ( empty( $last_update ) && is_admin() ) {
+			// First time - trigger an update
+			add_action( 'admin_init', array( $this, 'maybe_initial_update' ), 100 );
 		}
 
 		// AJAX handlers.
 		add_action( 'wp_ajax_nexifymy_update_signatures', array( $this, 'ajax_update_signatures' ) );
 		add_action( 'wp_ajax_nexifymy_get_signature_status', array( $this, 'ajax_get_status' ) );
+		add_action( 'wp_ajax_nexifymy_toggle_auto_update', array( $this, 'ajax_toggle_auto_update' ) );
+	}
+
+	/**
+	 * Maybe perform initial update if never updated.
+	 */
+	public function maybe_initial_update() {
+		$last_update = get_option( self::LAST_UPDATE_OPTION );
+		if ( empty( $last_update ) ) {
+			// Perform initial update in background
+			$this->update_signatures();
+		}
+	}
+
+	/**
+	 * Toggle auto-update setting via AJAX.
+	 */
+	public function ajax_toggle_auto_update() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$enabled = isset( $_POST['enabled'] ) ? absint( $_POST['enabled'] ) : 0;
+
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		if ( ! isset( $settings['signatures'] ) ) {
+			$settings['signatures'] = array();
+		}
+		$settings['signatures']['auto_update'] = (bool) $enabled;
+		update_option( 'nexifymy_security_settings', $settings );
+
+		if ( $enabled ) {
+			if ( ! wp_next_scheduled( 'nexifymy_update_signatures' ) ) {
+				wp_schedule_event( time() + 60, 'daily', 'nexifymy_update_signatures' );
+			}
+		} else {
+			wp_clear_scheduled_hook( 'nexifymy_update_signatures' );
+		}
+
+		wp_send_json_success( array( 'auto_update' => $enabled ) );
 	}
 
 	/**
@@ -312,6 +370,11 @@ class NexifyMy_Security_Signature_Updater {
 
 		// Update timestamp.
 		update_option( self::LAST_UPDATE_OPTION, $result, false );
+		
+		// Update Dashboard Stats Options
+		update_option( 'nexifymy_signature_version', '1.0.' . date('ymd') );
+		update_option( 'nexifymy_signature_last_update', current_time( 'mysql' ) );
+		update_option( 'nexifymy_signature_count', $result['total_count'] );
 
 		// Log the update.
 		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {

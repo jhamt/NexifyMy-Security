@@ -40,6 +40,53 @@ class NexifyMy_Security_Scanner {
 	private $excluded_extensions = array();
 
 	/**
+	 * Known safe plugin/theme slugs (from WordPress.org).
+	 * These will have reduced confidence scoring.
+	 * @var array
+	 */
+	private $known_safe_plugins = array(
+		'woocommerce',
+		'yoast-seo',
+		'wordpress-seo',
+		'elementor',
+		'contact-form-7',
+		'akismet',
+		'jetpack',
+		'wordfence',
+		'wp-super-cache',
+		'w3-total-cache',
+		'wpforms-lite',
+		'classic-editor',
+		'gutenberg',
+		'advanced-custom-fields',
+		'duplicate-post',
+		'updraftplus',
+		'all-in-one-seo-pack',
+		'google-analytics-for-wordpress',
+		'really-simple-ssl',
+		'redirection',
+		'query-monitor',
+	);
+
+	/**
+	 * Safe context patterns - these are legitimate uses of potentially dangerous functions.
+	 * @var array
+	 */
+	private $safe_contexts = array(
+		// WordPress core patterns
+		'/wp-includes/',
+		'/wp-admin/',
+		'wp-config.php',
+		// Common legitimate uses
+		'vendor/',
+		'node_modules/',
+		// Development/testing
+		'phpunit',
+		'tests/',
+		'test-',
+	);
+
+	/**
 	 * Scan mode configurations.
 	 * @var array
 	 */
@@ -60,7 +107,7 @@ class NexifyMy_Security_Scanner {
 			'severity_levels' => array( 'critical', 'high' ),
 			'max_file_size' => 2097152, // 2MB
 			'check_core' => false,
-			'incremental' => true, // Standard uses incremental for performance
+			'incremental' => false, // Full scan by default for reliable results
 		),
 		'deep' => array(
 			'name'        => 'Deep Scan',
@@ -74,18 +121,68 @@ class NexifyMy_Security_Scanner {
 	);
 
 	/**
+	 * Transient key for scan progress.
+	 */
+	const SCAN_PROGRESS_KEY = 'nexifymy_scan_progress';
+
+	/**
 	 * Initialize the scanner.
 	 */
 	public function init() {
 		$this->load_signatures();
 
-		// Only register admin/AJAX endpoints when the module is enabled.
-		if ( ! $this->is_scanner_enabled() ) {
-			return;
+		// Always register AJAX endpoints so the UI gets a JSON error (instead of admin-ajax.php returning "0").
+		add_action( 'wp_ajax_nexifymy_scan', array( $this, 'ajax_scan' ) );
+		add_action( 'wp_ajax_nexifymy_scan_progress', array( $this, 'ajax_get_progress' ) );
+		add_action( 'wp_ajax_nexifymy_scan_results', array( $this, 'ajax_get_results' ) );
+		add_action( 'wp_ajax_nexifymy_core_integrity', array( $this, 'ajax_core_integrity_check' ) );
+	}
+
+	/**
+	 * Update scan progress transient.
+	 *
+	 * @param array $progress Progress data.
+	 */
+	private function update_progress( $progress ) {
+		set_transient( self::SCAN_PROGRESS_KEY, $progress, 300 ); // 5 min expiry
+	}
+
+	/**
+	 * Get current scan progress.
+	 *
+	 * @return array Progress data.
+	 */
+	public function get_progress() {
+		return get_transient( self::SCAN_PROGRESS_KEY ) ?: array(
+			'phase'          => 'idle',
+			'status'         => 'Not scanning',
+			'current_file'   => '',
+			'files_scanned'  => 0,
+			'total_files'    => 0,
+			'percent'        => 0,
+			'threats_found'  => 0,
+			'critical'       => 0,
+			'high'           => 0,
+			'medium'         => 0,
+			'low'            => 0,
+		);
+	}
+
+	/**
+	 * AJAX handler to get scan progress.
+	 */
+	public function ajax_get_progress() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
 		}
 
-		add_action( 'wp_ajax_nexifymy_scan', array( $this, 'ajax_scan' ) );
-		add_action( 'wp_ajax_nexifymy_core_integrity', array( $this, 'ajax_core_integrity_check' ) );
+		if ( ! $this->is_scanner_enabled() ) {
+			wp_send_json_error( 'Scanner module is disabled in settings.' );
+		}
+
+		wp_send_json_success( $this->get_progress() );
 	}
 
 	/**
@@ -110,7 +207,19 @@ class NexifyMy_Security_Scanner {
 	 */
 	private function is_scanner_enabled() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
-		return ! isset( $settings['modules']['scanner_enabled'] ) || (bool) $settings['modules']['scanner_enabled'];
+
+		// If modules array doesn't exist yet, scanner is enabled by default
+		if ( ! isset( $settings['modules'] ) ) {
+			return true;
+		}
+
+		// If scanner_enabled is not set, enable by default
+		if ( ! isset( $settings['modules']['scanner_enabled'] ) ) {
+			return true;
+		}
+
+		// Otherwise, return the actual setting value
+		return (bool) $settings['modules']['scanner_enabled'];
 	}
 
 	/**
@@ -223,6 +332,22 @@ class NexifyMy_Security_Scanner {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Check whether a file extension is excluded.
+	 *
+	 * @param string $extension File extension (lowercase, no dot).
+	 * @return bool
+	 */
+	private function is_extension_excluded( $extension ) {
+		if ( empty( $this->excluded_extensions ) ) {
+			return false;
+		}
+
+		$extension = strtolower( ltrim( (string) $extension, '.' ) );
+
+		return in_array( $extension, $this->excluded_extensions, true );
 	}
 
 	/**
@@ -343,11 +468,11 @@ class NexifyMy_Security_Scanner {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( 'Unauthorized' );
+			wp_send_json_error( 'Unauthorized: You do not have permission to run scans.' );
 		}
 
 		if ( ! $this->is_scanner_enabled() ) {
-			wp_send_json_error( 'Scanner module is disabled in settings.' );
+			wp_send_json_error( 'Scanner module is disabled. Please enable it in Settings > Modules.' );
 		}
 
 		$this->load_scanner_settings();
@@ -356,8 +481,38 @@ class NexifyMy_Security_Scanner {
 		if ( $mode === '' ) {
 			$mode = $this->scanner_settings['default_mode'] ?? 'standard';
 		}
-		$results = $this->perform_scan( $mode );
-		
+
+		// Validate mode
+		if ( ! isset( $this->scan_modes[ $mode ] ) ) {
+			wp_send_json_error( 'Invalid scan mode: ' . esc_html( $mode ) );
+		}
+
+		try {
+			$results = $this->perform_scan( $mode );
+			wp_send_json_success( $results );
+		} catch ( \Exception $e ) {
+			wp_send_json_error( 'Scan failed: ' . esc_html( $e->getMessage() ) );
+		} catch ( \Error $e ) {
+			wp_send_json_error( 'Critical error: ' . esc_html( $e->getMessage() ) );
+		}
+	}
+
+	/**
+	 * AJAX handler to get stored scan results.
+	 * Used to recover results if the main scan AJAX times out.
+	 */
+	public function ajax_get_results() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$results = get_option( 'nexifymy_last_scan_results', array() );
+		if ( empty( $results ) ) {
+			wp_send_json_error( 'No scan results available' );
+		}
+
 		wp_send_json_success( $results );
 	}
 
@@ -386,6 +541,14 @@ class NexifyMy_Security_Scanner {
 			);
 		}
 
+		// Increase limits for large scans
+		if ( function_exists( 'set_time_limit' ) ) {
+			@set_time_limit( 3600 ); // 1 hour for deep scans
+		}
+		if ( function_exists( 'ini_set' ) ) {
+			@ini_set( 'memory_limit', '512M' );
+		}
+
 		$this->load_scanner_settings();
 
 		$suspicious_files = array();
@@ -393,6 +556,7 @@ class NexifyMy_Security_Scanner {
 		$last_scan = get_option( self::SCAN_STATE_OPTION, 0 );
 		$files_scanned = 0;
 		$core_results = null;
+		$threat_counts = array( 'critical' => 0, 'high' => 0, 'medium' => 0, 'low' => 0 );
 
 		// Validate mode.
 		if ( ! isset( $this->scan_modes[ $mode ] ) ) {
@@ -405,6 +569,23 @@ class NexifyMy_Security_Scanner {
 		if ( ! empty( $this->scanner_settings['max_file_size'] ) ) {
 			$mode_config['max_file_size'] = (int) $this->scanner_settings['max_file_size'];
 		}
+
+		// Initialize progress - Phase 1: Initialization
+		$this->update_progress( array(
+			'phase'          => 'initializing',
+			'status'         => 'Initializing ' . $mode_config['name'] . '...',
+			'current_file'   => '',
+			'files_scanned'  => 0,
+			'total_files'    => 0,
+			'percent'        => 5,
+			'threats_found'  => 0,
+			'critical'       => 0,
+			'high'           => 0,
+			'medium'         => 0,
+			'low'            => 0,
+			'mode'           => $mode,
+			'start_time'     => time(),
+		) );
 
 		// Build directories list based on mode.
 		$directories_to_scan = array();
@@ -425,7 +606,49 @@ class NexifyMy_Security_Scanner {
 			}
 		}
 
-		// Perform file scan.
+		// Phase 2: Discovery - Count total files first
+		$this->update_progress( array(
+			'phase'          => 'discovery',
+			'status'         => 'Discovering files to scan...',
+			'current_file'   => '',
+			'files_scanned'  => 0,
+			'total_files'    => 0,
+			'percent'        => 10,
+			'threats_found'  => 0,
+			'critical'       => 0,
+			'high'           => 0,
+			'medium'         => 0,
+			'low'            => 0,
+			'mode'           => $mode,
+			'start_time'     => time(),
+		) );
+
+		// Count total files for progress calculation
+		$total_files = 0;
+		foreach ( $directories_to_scan as $dir ) {
+			if ( is_dir( $dir ) && ! $this->is_path_excluded( $dir ) ) {
+				$total_files += $this->count_files_in_directory( $dir, $mode_config );
+			}
+		}
+
+		// Phase 3: Scanning
+		$this->update_progress( array(
+			'phase'          => 'scanning',
+			'status'         => 'Scanning files for threats...',
+			'current_file'   => '',
+			'files_scanned'  => 0,
+			'total_files'    => $total_files,
+			'percent'        => 15,
+			'threats_found'  => 0,
+			'critical'       => 0,
+			'high'           => 0,
+			'medium'         => 0,
+			'low'            => 0,
+			'mode'           => $mode,
+			'start_time'     => time(),
+		) );
+
+		// Perform file scan with progress updates.
 		foreach ( $directories_to_scan as $dir ) {
 			if ( ! is_dir( $dir ) ) {
 				continue;
@@ -433,27 +656,221 @@ class NexifyMy_Security_Scanner {
 			if ( $this->is_path_excluded( $dir ) ) {
 				continue;
 			}
-			$scan_result = $this->scan_directory( $dir, $mode_config, $last_scan );
-			$suspicious_files = array_merge( $suspicious_files, $scan_result['threats'] );
-			$files_scanned += $scan_result['files_scanned'];
+			$scan_result = $this->scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $suspicious_files, $threat_counts );
+			$suspicious_files = $scan_result['threats'];
+			$files_scanned = $scan_result['files_scanned'];
+			$threat_counts = $scan_result['threat_counts'];
 		}
 
-		// Perform core integrity check if mode requires it.
+		// Phase 4: Core Integrity (if deep scan)
 		if ( $mode_config['check_core'] ) {
+			$this->update_progress( array(
+				'phase'          => 'core_check',
+				'status'         => 'Verifying WordPress core integrity...',
+				'current_file'   => 'wp-includes/',
+				'files_scanned'  => $files_scanned,
+				'total_files'    => $total_files,
+				'percent'        => 90,
+				'threats_found'  => array_sum( $threat_counts ),
+				'critical'       => $threat_counts['critical'],
+				'high'           => $threat_counts['high'],
+				'medium'         => $threat_counts['medium'],
+				'low'            => $threat_counts['low'],
+				'mode'           => $mode,
+			) );
 			$core_results = $this->check_core_integrity();
 		}
+
+		// Phase 5: Complete
+		$this->update_progress( array(
+			'phase'          => 'complete',
+			'status'         => 'Scan complete!',
+			'current_file'   => '',
+			'files_scanned'  => $files_scanned,
+			'total_files'    => $total_files,
+			'percent'        => 100,
+			'threats_found'  => array_sum( $threat_counts ),
+			'critical'       => $threat_counts['critical'],
+			'high'           => $threat_counts['high'],
+			'medium'         => $threat_counts['medium'],
+			'low'            => $threat_counts['low'],
+			'mode'           => $mode,
+			'end_time'       => time(),
+		) );
 
 		// Update last scan time.
 		update_option( self::SCAN_STATE_OPTION, time() );
 
-		return array(
+		// Store results for later retrieval
+		$results = array(
 			'scanned_at'     => current_time( 'mysql' ),
 			'mode'           => $mode,
 			'mode_name'      => $mode_config['name'],
 			'files_scanned'  => $files_scanned,
-			'threats_found'  => count( $suspicious_files ),
+			'threats_found'  => array_sum( $threat_counts ),
 			'threats'        => $suspicious_files,
+			'threat_counts'  => $threat_counts,
 			'core_integrity' => $core_results,
+		);
+
+		// Save for API access
+		update_option( 'nexifymy_last_scan_results', $results );
+		
+		// Save for dashboard display (with structure admin.php expects)
+		update_option( 'nexifymy_last_scan', array(
+			'files_scanned' => $files_scanned,
+			'time'          => current_time( 'mysql' ),
+			'mode'          => $mode,
+			'mode_name'     => $mode_config['name'],
+		) );
+		
+		update_option( 'nexifymy_scan_results', array(
+			'threats' => array_sum( $threat_counts ),
+			'items'   => $suspicious_files,
+			'counts'  => $threat_counts,
+		) );
+
+		return $results;
+	}
+
+
+	/**
+	 * Count files in a directory for progress tracking.
+	 *
+	 * @param string $dir Directory path.
+	 * @param array $mode_config Mode configuration.
+	 * @return int File count.
+	 */
+	private function count_files_in_directory( $dir, $mode_config ) {
+		$count = 0;
+		$max_file_size = $mode_config['max_file_size'] ?? 2097152;
+
+		try {
+			$iterator = new RecursiveIteratorIterator(
+				new RecursiveDirectoryIterator( $dir, RecursiveDirectoryIterator::SKIP_DOTS ),
+				RecursiveIteratorIterator::SELF_FIRST
+			);
+
+			foreach ( $iterator as $file ) {
+				if ( $file->isFile() ) {
+					$ext = strtolower( pathinfo( $file->getFilename(), PATHINFO_EXTENSION ) );
+					if ( in_array( $ext, array( 'php', 'js', 'html', 'htm' ), true ) ) {
+						if ( $file->getSize() <= $max_file_size ) {
+							$count++;
+						}
+					}
+				}
+			}
+		} catch ( Exception $e ) {
+			// Silently handle permission errors
+		}
+
+		return max( 1, $count ); // Ensure at least 1 to avoid division by zero
+	}
+
+	/**
+	 * Scan a directory with progress updates.
+	 *
+	 * @param string $dir Directory path.
+	 * @param array $mode_config Mode configuration.
+	 * @param int $last_scan Timestamp of last scan.
+	 * @param int $files_scanned Current files scanned count.
+	 * @param int $total_files Total files to scan.
+	 * @param array $existing_threats Already found threats.
+	 * @param array $threat_counts Threat counts by severity.
+	 * @return array Results with threats, files_scanned, threat_counts.
+	 */
+	private function scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $existing_threats, $threat_counts ) {
+		$results = $existing_threats;
+		$update_interval = 10; // Update progress every 10 files
+
+		try {
+			$iterator = new RecursiveIteratorIterator(
+				new RecursiveDirectoryIterator( $dir, RecursiveDirectoryIterator::SKIP_DOTS ),
+				RecursiveIteratorIterator::SELF_FIRST
+			);
+
+			foreach ( $iterator as $file ) {
+				if ( ! $file->isFile() ) {
+					continue;
+				}
+
+				$filepath = $file->getPathname();
+
+				// Skip excluded paths
+				if ( $this->is_path_excluded( $filepath ) ) {
+					continue;
+				}
+
+				// Skip excluded extensions
+				$ext = strtolower( pathinfo( $filepath, PATHINFO_EXTENSION ) );
+				if ( $this->is_extension_excluded( $ext ) ) {
+					continue;
+				}
+
+				// Only scan PHP, JS, HTML files
+				if ( ! in_array( $ext, array( 'php', 'js', 'html', 'htm' ), true ) ) {
+					continue;
+				}
+
+				// Skip files larger than max size
+				if ( $file->getSize() > ( $mode_config['max_file_size'] ?? 2097152 ) ) {
+					continue;
+				}
+
+				// Incremental scanning - skip unmodified files
+				if ( ! empty( $mode_config['incremental'] ) && $file->getMTime() < $last_scan ) {
+					continue;
+				}
+
+				$files_scanned++;
+
+				// Update progress periodically
+				if ( $files_scanned % $update_interval === 0 ) {
+					$percent = min( 85, 15 + ( ( $files_scanned / max( 1, $total_files ) ) * 70 ) );
+					$relative_path = str_replace( ABSPATH, '', $filepath );
+
+					$this->update_progress( array(
+						'phase'          => 'scanning',
+						'status'         => 'Scanning: ' . basename( $filepath ),
+						'current_file'   => $relative_path,
+						'files_scanned'  => $files_scanned,
+						'total_files'    => $total_files,
+						'percent'        => round( $percent ),
+						'threats_found'  => array_sum( $threat_counts ),
+						'critical'       => $threat_counts['critical'],
+						'high'           => $threat_counts['high'],
+						'medium'         => $threat_counts['medium'],
+						'low'            => $threat_counts['low'],
+						'mode'           => $mode_config['name'] ?? 'standard',
+					) );
+				}
+
+				// Scan the file
+				$threats = $this->scan_file( $filepath, $mode_config );
+
+				if ( ! empty( $threats ) ) {
+					$results[] = array(
+						'file'    => str_replace( ABSPATH, '', $filepath ),
+						'threats' => $threats,
+					);
+
+					foreach ( $threats as $threat ) {
+						$severity = strtolower( $threat['severity'] ?? 'medium' );
+						if ( isset( $threat_counts[ $severity ] ) ) {
+							$threat_counts[ $severity ]++;
+						}
+					}
+				}
+			}
+		} catch ( Exception $e ) {
+			// Silently handle permission errors
+		}
+
+		return array(
+			'threats'       => $results,
+			'files_scanned' => $files_scanned,
+			'threat_counts' => $threat_counts,
 		);
 	}
 
@@ -589,6 +1006,210 @@ class NexifyMy_Security_Scanner {
 	}
 
 	/**
+	 * Scan a single file with false positive prevention and confidence scoring.
+	 *
+	 * @param string $filepath Full path to the file.
+	 * @param array $mode_config Mode configuration.
+	 * @return array Found threats with confidence scores.
+	 */
+	private function scan_file( $filepath, $mode_config ) {
+		$threats = array();
+		$content = @file_get_contents( $filepath );
+
+		if ( $content === false ) {
+			return $threats;
+		}
+
+		$relative_path = str_replace( ABSPATH, '', $filepath );
+		$severity_levels = $mode_config['severity_levels'] ?? array( 'critical', 'high', 'medium', 'low' );
+
+		// Check if file is in a known safe plugin/theme
+		$is_known_safe = $this->is_known_safe_plugin( $relative_path );
+
+		// Check if file is in a safe context (WordPress core, vendor, etc.)
+		$is_safe_context = $this->is_safe_context( $relative_path );
+
+		foreach ( $this->heuristics as $key => $rule ) {
+			// Skip rules not matching our severity filter.
+			if ( ! in_array( $rule['severity'], $severity_levels, true ) ) {
+				continue;
+			}
+
+			// Handle line length check separately.
+			if ( isset( $rule['check_type'] ) && $rule['check_type'] === 'line_length' ) {
+				$lines = explode( "\n", $content );
+				foreach ( $lines as $line_num => $line ) {
+					if ( strlen( $line ) > $rule['threshold'] ) {
+						$confidence = $this->calculate_confidence( $rule, $relative_path, $is_known_safe, $is_safe_context, $line );
+						if ( $confidence >= 40 ) { // Only report if confidence is high enough
+							$threats[] = array(
+								'file'         => $relative_path,
+								'rule'         => $key,
+								'severity'     => $rule['severity'],
+								'description'  => $rule['description'],
+								'line'         => $line_num + 1,
+								'confidence'   => $confidence,
+								'context'      => $this->get_threat_context( $rule, $is_known_safe, $is_safe_context ),
+							);
+						}
+						break;
+					}
+				}
+				continue;
+			}
+
+			// Standard regex pattern matching.
+			if ( isset( $rule['pattern'] ) && preg_match( $rule['pattern'], $content, $matches ) ) {
+				$confidence = $this->calculate_confidence( $rule, $relative_path, $is_known_safe, $is_safe_context, $matches[0] ?? '' );
+
+				// Only report if confidence is above threshold
+				// For known safe plugins, require higher confidence
+				$threshold = $is_known_safe ? 60 : 40;
+
+				if ( $confidence >= $threshold ) {
+					$threats[] = array(
+						'file'         => $relative_path,
+						'rule'         => $key,
+						'severity'     => $rule['severity'],
+						'description'  => $rule['description'],
+						'confidence'   => $confidence,
+						'context'      => $this->get_threat_context( $rule, $is_known_safe, $is_safe_context ),
+						'recommendation' => $this->get_recommendation( $confidence, $rule['severity'] ),
+					);
+				}
+			}
+		}
+
+		return $threats;
+	}
+
+	/**
+	 * Check if file is in a known safe plugin directory.
+	 *
+	 * @param string $relative_path Relative file path.
+	 * @return bool
+	 */
+	private function is_known_safe_plugin( $relative_path ) {
+		foreach ( $this->known_safe_plugins as $plugin_slug ) {
+			if ( strpos( $relative_path, 'wp-content/plugins/' . $plugin_slug . '/' ) !== false ) {
+				return true;
+			}
+			if ( strpos( $relative_path, 'wp-content/themes/' . $plugin_slug . '/' ) !== false ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Check if file is in a safe context.
+	 *
+	 * @param string $relative_path Relative file path.
+	 * @return bool
+	 */
+	private function is_safe_context( $relative_path ) {
+		foreach ( $this->safe_contexts as $context ) {
+			if ( strpos( $relative_path, $context ) !== false ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Calculate confidence score for a threat detection.
+	 *
+	 * @param array $rule The detection rule.
+	 * @param string $path File path.
+	 * @param bool $is_known_safe Is in known safe plugin.
+	 * @param bool $is_safe_context Is in safe context.
+	 * @param string $matched_content The matched content.
+	 * @return int Confidence score (0-100).
+	 */
+	private function calculate_confidence( $rule, $path, $is_known_safe, $is_safe_context, $matched_content = '' ) {
+		$confidence = 70; // Base confidence
+
+		// Increase confidence based on severity
+		switch ( $rule['severity'] ) {
+			case 'critical':
+				$confidence += 20;
+				break;
+			case 'high':
+				$confidence += 10;
+				break;
+			case 'medium':
+				$confidence += 0;
+				break;
+			case 'low':
+				$confidence -= 10;
+				break;
+		}
+
+		// Decrease confidence for known safe plugins
+		if ( $is_known_safe ) {
+			$confidence -= 30;
+		}
+
+		// Decrease confidence for safe contexts (WordPress core, etc.)
+		if ( $is_safe_context ) {
+			$confidence -= 25;
+		}
+
+		// Increase confidence if file is in uploads directory (higher risk area)
+		if ( strpos( $path, 'wp-content/uploads/' ) !== false ) {
+			$confidence += 15;
+		}
+
+		// Increase confidence for obfuscation patterns in non-standard locations
+		if ( isset( $rule['category'] ) && $rule['category'] === 'obfuscation' ) {
+			if ( strpos( $path, 'wp-content/uploads/' ) !== false ) {
+				$confidence += 20; // Obfuscated code in uploads is very suspicious
+			}
+		}
+
+		// Cap confidence between 0 and 100
+		return max( 0, min( 100, $confidence ) );
+	}
+
+	/**
+	 * Get human-readable context for a threat.
+	 *
+	 * @param array $rule Detection rule.
+	 * @param bool $is_known_safe Is in known safe plugin.
+	 * @param bool $is_safe_context Is in safe context.
+	 * @return string Context description.
+	 */
+	private function get_threat_context( $rule, $is_known_safe, $is_safe_context ) {
+		if ( $is_known_safe ) {
+			return __( 'Found in known safe plugin - likely legitimate use', 'nexifymy-security' );
+		}
+		if ( $is_safe_context ) {
+			return __( 'Found in system directory - may be legitimate', 'nexifymy-security' );
+		}
+		return $rule['description'] ?? __( 'Potential security threat detected', 'nexifymy-security' );
+	}
+
+	/**
+	 * Get recommendation based on confidence and severity.
+	 *
+	 * @param int $confidence Confidence score.
+	 * @param string $severity Threat severity.
+	 * @return string Recommendation.
+	 */
+	private function get_recommendation( $confidence, $severity ) {
+		if ( $confidence >= 80 ) {
+			if ( $severity === 'critical' || $severity === 'high' ) {
+				return __( 'Quarantine recommended', 'nexifymy-security' );
+			}
+			return __( 'Review immediately', 'nexifymy-security' );
+		}
+		if ( $confidence >= 60 ) {
+			return __( 'Manual review recommended', 'nexifymy-security' );
+		}
+		return __( 'Likely safe - verify if needed', 'nexifymy-security' );
+	}
+
+	/**
 	 * Check WordPress core file integrity via AJAX.
 	 */
 	public function ajax_core_integrity_check() {
@@ -596,6 +1217,10 @@ class NexifyMy_Security_Scanner {
 
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
+		}
+
+		if ( ! $this->is_scanner_enabled() ) {
+			wp_send_json_error( 'Scanner module is disabled in settings.' );
 		}
 
 		$results = $this->check_core_integrity();

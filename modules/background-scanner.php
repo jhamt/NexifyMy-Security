@@ -25,6 +25,11 @@ class NexifyMy_Security_Background_Scanner {
 	 * NOTE: Activation/deactivation hooks are in main plugin file.
 	 */
 	public function init() {
+		// AJAX handlers must always be available so the UI can show a JSON error instead of admin-ajax.php returning "0".
+		add_action( 'wp_ajax_nexifymy_set_scan_schedule', array( $this, 'ajax_set_schedule' ) );
+		add_action( 'wp_ajax_nexifymy_run_background_scan', array( $this, 'ajax_run_now' ) );
+		add_action( 'wp_ajax_nexifymy_get_scan_status', array( $this, 'ajax_get_status' ) );
+
 		if ( ! $this->is_enabled() ) {
 			// Ensure nothing keeps running if disabled.
 			$this->unschedule_scan();
@@ -36,11 +41,6 @@ class NexifyMy_Security_Background_Scanner {
 
 		// Ensure schedule exists (for manual installs/updates).
 		add_action( 'init', array( $this, 'maybe_schedule_scan' ) );
-
-		// AJAX handlers.
-		add_action( 'wp_ajax_nexifymy_set_scan_schedule', array( $this, 'ajax_set_schedule' ) );
-		add_action( 'wp_ajax_nexifymy_run_background_scan', array( $this, 'ajax_run_now' ) );
-		add_action( 'wp_ajax_nexifymy_get_scan_status', array( $this, 'ajax_get_status' ) );
 	}
 
 	/**
@@ -74,14 +74,11 @@ class NexifyMy_Security_Background_Scanner {
 	 * @param string $frequency Cron schedule frequency.
 	 */
 	public function schedule_scan( $frequency = 'daily' ) {
-		if ( ! $this->is_enabled() ) {
-			$this->unschedule_scan();
-			return;
-		}
-
 		$this->unschedule_scan();
 
-		if ( $frequency === 'disabled' ) {
+		update_option( self::SCHEDULE_OPTION, $frequency );
+
+		if ( ! $this->is_enabled() || $frequency === 'disabled' ) {
 			return;
 		}
 
@@ -89,8 +86,6 @@ class NexifyMy_Security_Background_Scanner {
 		if ( ! wp_next_scheduled( self::CRON_HOOK ) ) {
 			wp_schedule_event( time(), $frequency, self::CRON_HOOK );
 		}
-
-		update_option( self::SCHEDULE_OPTION, $frequency );
 	}
 
 	/**
