@@ -3,7 +3,7 @@
  * Plugin Name: NexifyMy Security
  * Plugin URI:  https://nexifymy.com/
  * Description: A modern, lightweight, and powerful security plugin for WordPress.
- * Version:     2.0.2
+ * Version:     2.0.5
  * Author:      NexifyMy
  * Author URI:  https://nexifymy.com
  * License:     GPL2
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Once activation succeeds, we will re-enable features one by one.
 
 // Define constants.
-define( 'NEXIFYMY_SECURITY_VERSION', '2.0.2' ); // Production release with security enhancements
+define( 'NEXIFYMY_SECURITY_VERSION', '2.0.5' ); // Production release with security enhancements
 define( 'NEXIFYMY_SECURITY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_URL', plugin_dir_url( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
@@ -46,7 +46,12 @@ $nexifymy_skip_early_waf = (
 if ( ! $nexifymy_skip_early_waf ) {
 	// Load Logger early so WAF/Rate Limiter can log immediately.
 	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
-	$GLOBALS['nexifymy_logger'] = new NexifyMy_Security_Logger();
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/modules/class-nexifymy-security-analytics.php';
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/modules/class-nexifymy-security-traffic.php';
+
+	// Initialize Modules
+	$GLOBALS['nexifymy_logger']     = new NexifyMy_Security_Logger();
+	$GLOBALS['nexifymy_analytics']  = new NexifyMy_Security_Analytics();
 
 	// Load Email Alerts early so WAF events can trigger alerts.
 	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
