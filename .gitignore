@@ -18,3 +18,22 @@ node_modules/
 
 # Composer
 vendor/
+composer.lock
+
+# Tests & Binaries
+phpunit.phar
+.phpunit.result.cache
+tests/_output/
+tests/_support/_generated/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+error_log
+
+# PHP
+.phpunit.result.cache
+.php-cs-fixer.cache
+.phpcs-cache
