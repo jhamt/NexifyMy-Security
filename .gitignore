@@ -1,0 +1,20 @@
+# Claude Code files
+.claude/
+
+# WordPress
+wp-config-local.php
+.htaccess
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Composer
+vendor/
