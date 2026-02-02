@@ -102,9 +102,16 @@ class NexifyMy_Security_AI_Threat_Detection {
 	public function get_settings() {
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$all_settings = NexifyMy_Security_Settings::get_all();
-			if ( isset( $all_settings['ai_detection'] ) ) {
-				return wp_parse_args( $all_settings['ai_detection'], self::$defaults );
+			$settings = isset( $all_settings['ai_detection'] )
+				? wp_parse_args( $all_settings['ai_detection'], self::$defaults )
+				: self::$defaults;
+
+			// Respect the global module toggle, if present.
+			if ( isset( $all_settings['modules']['ai_detection_enabled'] ) && empty( $all_settings['modules']['ai_detection_enabled'] ) ) {
+				$settings['enabled'] = false;
 			}
+
+			return $settings;
 		}
 		return self::$defaults;
 	}

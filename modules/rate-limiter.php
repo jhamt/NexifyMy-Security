@@ -48,6 +48,11 @@ class NexifyMy_Security_RateLimiter {
 	 */
 	public function init() {
 		$this->load_settings();
+
+		// Admin AJAX to check/unblock IPs (must be available even if module is disabled).
+		add_action( 'wp_ajax_nexifymy_get_blocked_ips', array( $this, 'ajax_get_blocked_ips' ) );
+		add_action( 'wp_ajax_nexifymy_unblock_ip', array( $this, 'ajax_unblock_ip' ) );
+
 		if ( ! $this->enabled ) {
 			return;
 		}
@@ -59,10 +64,6 @@ class NexifyMy_Security_RateLimiter {
 
 		// Check if IP is locked out on every request (runs immediately).
 		$this->check_request_rate();
-
-		// Admin AJAX to check/unblock IPs.
-		add_action( 'wp_ajax_nexifymy_get_blocked_ips', array( $this, 'ajax_get_blocked_ips' ) );
-		add_action( 'wp_ajax_nexifymy_unblock_ip', array( $this, 'ajax_unblock_ip' ) );
 	}
 
 	/**

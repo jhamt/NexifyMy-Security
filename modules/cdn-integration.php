@@ -31,6 +31,12 @@ class NexifyMy_Security_CDN {
 	 * Initialize the module.
 	 */
 	public function init() {
+		// AJAX handlers.
+		add_action( 'wp_ajax_nexifymy_get_cdn_status', array( $this, 'ajax_get_status' ) );
+		add_action( 'wp_ajax_nexifymy_purge_cdn_cache', array( $this, 'ajax_purge_cache' ) );
+		add_action( 'wp_ajax_nexifymy_test_cdn_connection', array( $this, 'ajax_test_connection' ) );
+		add_action( 'wp_ajax_nexifymy_save_cdn_settings', array( $this, 'ajax_save_settings' ) );
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
@@ -40,12 +46,6 @@ class NexifyMy_Security_CDN {
 		// Detect CDN and extract real IP early.
 		add_action( 'muplugins_loaded', array( $this, 'detect_and_fix_ip' ), 1 );
 		add_action( 'plugins_loaded', array( $this, 'detect_and_fix_ip' ), 1 );
-
-		// AJAX handlers.
-		add_action( 'wp_ajax_nexifymy_get_cdn_status', array( $this, 'ajax_get_status' ) );
-		add_action( 'wp_ajax_nexifymy_purge_cdn_cache', array( $this, 'ajax_purge_cache' ) );
-		add_action( 'wp_ajax_nexifymy_test_cdn_connection', array( $this, 'ajax_test_connection' ) );
-		add_action( 'wp_ajax_nexifymy_save_cdn_settings', array( $this, 'ajax_save_settings' ) );
 	}
 
 	/**
