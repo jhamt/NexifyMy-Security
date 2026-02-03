@@ -31,6 +31,11 @@ class NexifyMy_Security_Hardening {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['hardening_enabled'] ) && ! $all_settings['modules']['hardening_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		// Disable XML-RPC.
