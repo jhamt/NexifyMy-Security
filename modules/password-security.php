@@ -43,6 +43,11 @@ class NexifyMy_Security_Password {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['password_enabled'] ) && ! $all_settings['modules']['password_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
