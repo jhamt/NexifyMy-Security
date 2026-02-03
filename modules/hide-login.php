@@ -24,6 +24,11 @@ class NexifyMy_Security_Hide_Login {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['hide_login_enabled'] ) && ! $all_settings['modules']['hide_login_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) || empty( $settings['login_slug'] ) ) {
