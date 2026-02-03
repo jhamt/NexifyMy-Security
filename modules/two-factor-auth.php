@@ -35,6 +35,11 @@ class NexifyMy_Security_Two_Factor {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['two_factor_enabled'] ) && ! $all_settings['modules']['two_factor_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
