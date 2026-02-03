@@ -38,38 +38,59 @@ define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
 $nexifymy_skip_early_waf = (
 	defined( 'WP_INSTALLING' ) ||
 	! function_exists( 'get_option' ) ||
-	( function_exists( 'is_admin' ) && is_admin() ) ||  // Skip all admin requests
+	! function_exists( 'is_admin' ) ||  // WordPress not loaded yet
+	is_admin() ||  // Skip all admin requests
+	( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], '/wp-admin' ) !== false ) ||  // Fallback admin check
+	( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) !== false ) ||  // Skip login page
 	( isset( $_REQUEST['action'] ) && in_array( $_REQUEST['action'], array( 'activate', 'deactivate', 'upload-plugin', 'install-plugin' ), true ) ) ||
 	( isset( $_REQUEST['plugin'] ) && strpos( $_REQUEST['plugin'], 'nexifymy-security' ) !== false && isset( $_REQUEST['action'] ) )
 );
 
 if ( ! $nexifymy_skip_early_waf ) {
-	// Load Logger early so WAF/Rate Limiter can log immediately.
-	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
-	require_once NEXIFYMY_SECURITY_PATH . 'includes/modules/class-nexifymy-security-analytics.php';
-	require_once NEXIFYMY_SECURITY_PATH . 'includes/modules/class-nexifymy-security-traffic.php';
+	// Verify all required files exist before loading
+	$required_files = array(
+		NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php',
+		NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-analytics.php',
+		NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php',
+		NEXIFYMY_SECURITY_PATH . 'modules/firewall.php',
+		NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php',
+	);
 
-	// Initialize Modules
-	$GLOBALS['nexifymy_logger']     = new NexifyMy_Security_Logger();
-	$GLOBALS['nexifymy_analytics']  = new NexifyMy_Security_Analytics();
-
-	// Load Email Alerts early so WAF events can trigger alerts.
-	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
-	$GLOBALS['nexifymy_alerts'] = new NexifyMy_Security_Alerts();
-	if ( empty( $GLOBALS['nexifymy_alerts_initialized'] ) ) {
-		$GLOBALS['nexifymy_alerts']->init();
-		$GLOBALS['nexifymy_alerts_initialized'] = true;
+	$all_files_exist = true;
+	foreach ( $required_files as $file ) {
+		if ( ! file_exists( $file ) ) {
+			$all_files_exist = false;
+			break;
+		}
 	}
 
-	// Load WAF immediately (runs at PHP execution, not waiting for hooks).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/firewall.php';
-	$GLOBALS['nexifymy_waf'] = new NexifyMy_Security_Firewall();
-	$GLOBALS['nexifymy_waf']->run_firewall(); // Execute immediately!
+	if ( $all_files_exist ) {
+		// Load Logger early so WAF/Rate Limiter can log immediately.
+		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
+		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-analytics.php';
 
-	// Load Rate Limiter for login protection (hooks into authenticate).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
-	$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
-	$GLOBALS['nexifymy_rate_limiter']->init();
+		// Initialize Modules
+		$GLOBALS['nexifymy_logger']     = new NexifyMy_Security_Logger();
+		$GLOBALS['nexifymy_analytics']  = new NexifyMy_Security_Analytics();
+
+		// Load Email Alerts early so WAF events can trigger alerts.
+		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
+		$GLOBALS['nexifymy_alerts'] = new NexifyMy_Security_Alerts();
+		if ( empty( $GLOBALS['nexifymy_alerts_initialized'] ) ) {
+			$GLOBALS['nexifymy_alerts']->init();
+			$GLOBALS['nexifymy_alerts_initialized'] = true;
+		}
+
+		// Load WAF immediately (runs at PHP execution, not waiting for hooks).
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/firewall.php';
+		$GLOBALS['nexifymy_waf'] = new NexifyMy_Security_Firewall();
+		$GLOBALS['nexifymy_waf']->run_firewall(); // Execute immediately!
+
+		// Load Rate Limiter for login protection (hooks into authenticate).
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
+		$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
+		$GLOBALS['nexifymy_rate_limiter']->init();
+	}
 }
 
 /*
@@ -88,6 +109,9 @@ function nexifymy_security_activate() {
 	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
 	$logger = new NexifyMy_Security_Logger();
 	$logger->create_table();
+
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/live-traffic.php';
+	NexifyMy_Security_Live_Traffic::create_table();
 
 	// Schedule background scans (default: daily).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
@@ -296,6 +320,21 @@ function nexifymy_security_init() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/integrations.php';
 	$GLOBALS['nexifymy_integrations'] = new NexifyMy_Security_Integrations();
 	$GLOBALS['nexifymy_integrations']->init();
+
+	// Load Advanced API Security (REST API, JWT, headless WordPress).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/api-security.php';
+	$GLOBALS['nexifymy_api_security'] = new NexifyMy_Security_API_Security();
+	$GLOBALS['nexifymy_api_security']->init();
+
+	// Load GraphQL Security (WPGraphQL protection).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/graphql-security.php';
+	$GLOBALS['nexifymy_graphql_security'] = new NexifyMy_Security_GraphQL_Security();
+	$GLOBALS['nexifymy_graphql_security']->init();
+
+	// Load WP-CLI Commands (DevOps integration).
+	if ( defined( 'WP_CLI' ) && WP_CLI ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-cli.php';
+	}
 
 	// Load Email Alerts.
 	if ( ! isset( $GLOBALS['nexifymy_alerts'] ) || ! ( $GLOBALS['nexifymy_alerts'] instanceof NexifyMy_Security_Alerts ) ) {
