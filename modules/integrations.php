@@ -56,6 +56,17 @@ class NexifyMy_Security_Integrations {
 		'servicenow_username' => '',
 		'servicenow_password' => '',
 		'servicenow_table'    => 'incident',
+
+		// Custom Webhooks.
+		'custom_webhooks_enabled' => false,
+		'custom_webhooks' => array(),  // Array of webhook configs.
+
+		// CI/CD Pipeline Integration.
+		'cicd_enabled'                => false,
+		'cicd_webhook_url'            => '',
+		'cicd_fail_on_malware'        => true,
+		'cicd_fail_on_vulnerabilities' => true,
+		'cicd_min_severity'           => 'high',  // critical, high, medium, low.
 	);
 
 	/**
