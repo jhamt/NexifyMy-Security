@@ -25,8 +25,8 @@ class NexifyMy_Security_Live_Traffic {
 	 */
 	private static $defaults = array(
 		'enabled'        => true,
-		'log_admin'      => false,
-		'log_ajax'       => false,
+		'log_admin'      => true,
+		'log_ajax'       => true,
 		'log_cron'       => false,
 		'retention_hours' => 24,
 		'exclude_ips'    => array(),
@@ -37,12 +37,16 @@ class NexifyMy_Security_Live_Traffic {
 	 * Initialize the module.
 	 */
 	public function init() {
+		// Ensure table exists.
+		$this->maybe_create_table();
+
 		// Log requests early.
 		add_action( 'init', array( $this, 'log_request' ), 1 );
 
 		// AJAX handlers.
 		add_action( 'wp_ajax_nexifymy_get_live_traffic', array( $this, 'ajax_get_live_traffic' ) );
 		add_action( 'wp_ajax_nexifymy_get_traffic_stats', array( $this, 'ajax_get_traffic_stats' ) );
+		add_action( 'wp_ajax_nexifymy_get_traffic_analytics', array( $this, 'ajax_get_traffic_analytics' ) );
 		add_action( 'wp_ajax_nexifymy_clear_traffic', array( $this, 'ajax_clear_traffic' ) );
 
 		// Cleanup old entries.
@@ -51,6 +55,18 @@ class NexifyMy_Security_Live_Traffic {
 		// Schedule cleanup if not scheduled.
 		if ( ! wp_next_scheduled( 'nexifymy_traffic_cleanup' ) ) {
 			wp_schedule_event( time(), 'hourly', 'nexifymy_traffic_cleanup' );
+		}
+	}
+
+	/**
+	 * Check if table exists and create if needed.
+	 */
+	private function maybe_create_table() {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) !== $table_name ) {
+			self::create_table();
 		}
 	}
 
@@ -104,6 +120,11 @@ class NexifyMy_Security_Live_Traffic {
 	 * Log the current request.
 	 */
 	public function log_request() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['live_traffic_enabled'] ) && ! $all_settings['modules']['live_traffic_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
@@ -445,5 +466,211 @@ class NexifyMy_Security_Live_Traffic {
 		$wpdb->query( "TRUNCATE TABLE {$table_name}" );
 
 		wp_send_json_success( array( 'message' => 'Traffic log cleared.' ) );
+	}
+
+	/**
+	 * Get analytics overview stats.
+	 *
+	 * @return array
+	 */
+	public function get_analytics() {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$today = gmdate( 'Y-m-d' );
+		$week_ago = gmdate( 'Y-m-d', strtotime( '-7 days' ) );
+		$month_ago = gmdate( 'Y-m-d', strtotime( '-30 days' ) );
+
+		$stats = array(
+			'today' => $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
+				$today
+			) ),
+			'week' => $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
+				$week_ago
+			) ),
+			'month' => $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
+				$month_ago
+			) ),
+			'unique_ips' => $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE request_time >= %s",
+				$month_ago
+			) ),
+		);
+
+		return $stats;
+	}
+
+	/**
+	 * Get traffic analytics data via AJAX.
+	 */
+	public function ajax_get_traffic_analytics() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$days = isset( $_POST['days'] ) ? absint( $_POST['days'] ) : 30;
+
+		$data = array(
+			'chart_data' => $this->get_chart_data( $days ),
+			'top_pages' => $this->get_top_pages( 10 ),
+			'top_referrers' => $this->get_top_referrers( 10 ),
+			'geo_distribution' => $this->get_geo_distribution( 10 ),
+		);
+
+		wp_send_json_success( $data );
+	}
+
+	/**
+	 * Get chart data for visitor trends.
+	 *
+	 * @param int $days Number of days.
+	 * @return array
+	 */
+	private function get_chart_data( $days = 30 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$labels = array();
+		$page_views = array();
+		$unique_visitors = array();
+
+		for ( $i = $days - 1; $i >= 0; $i-- ) {
+			$date = gmdate( 'Y-m-d', strtotime( "-$i days" ) );
+			$labels[] = gmdate( 'M j', strtotime( $date ) );
+
+			$page_views[] = (int) $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
+				$date
+			) );
+
+			$unique_visitors[] = (int) $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE DATE(request_time) = %s",
+				$date
+			) );
+		}
+
+		return array(
+			'labels' => $labels,
+			'page_views' => $page_views,
+			'unique_visitors' => $unique_visitors,
+		);
+	}
+
+	/**
+	 * Get top visited pages.
+	 *
+	 * @param int $limit Number of results.
+	 * @return array
+	 */
+	private function get_top_pages( $limit = 10 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT request_uri as url, COUNT(*) as count
+			FROM {$table_name}
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			AND request_uri NOT LIKE '%%/wp-admin%%'
+			AND request_uri NOT LIKE '%%/wp-json%%'
+			GROUP BY request_uri
+			ORDER BY count DESC
+			LIMIT %d",
+			$limit
+		), ARRAY_A );
+
+		return $results ? $results : array();
+	}
+
+	/**
+	 * Get top referrers.
+	 *
+	 * @param int $limit Number of results.
+	 * @return array
+	 */
+	private function get_top_referrers( $limit = 10 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT
+				CASE
+					WHEN referrer = '' THEN 'Direct'
+					ELSE referrer
+				END as referrer,
+				COUNT(*) as count
+			FROM {$table_name}
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			GROUP BY referrer
+			ORDER BY count DESC
+			LIMIT %d",
+			$limit
+		), ARRAY_A );
+
+		return $results ? $results : array();
+	}
+
+	/**
+	 * Get geographic distribution.
+	 *
+	 * @param int $limit Number of results.
+	 * @return array
+	 */
+	private function get_geo_distribution( $limit = 10 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT
+				CASE
+					WHEN country_code = '' THEN 'Unknown'
+					ELSE country_code
+				END as country_code,
+				COUNT(*) as count
+			FROM {$table_name}
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			GROUP BY country_code
+			ORDER BY count DESC
+			LIMIT %d",
+			$limit
+		), ARRAY_A );
+
+		// Add country names
+		$country_names = $this->get_country_names();
+		foreach ( $results as &$row ) {
+			$row['country_name'] = isset( $country_names[ $row['country_code'] ] ) ? $country_names[ $row['country_code'] ] : $row['country_code'];
+		}
+
+		return $results ? $results : array();
+	}
+
+	/**
+	 * Get country name mapping.
+	 *
+	 * @return array
+	 */
+	private function get_country_names() {
+		return array(
+			'US' => 'United States',
+			'GB' => 'United Kingdom',
+			'CA' => 'Canada',
+			'AU' => 'Australia',
+			'DE' => 'Germany',
+			'FR' => 'France',
+			'IT' => 'Italy',
+			'ES' => 'Spain',
+			'NL' => 'Netherlands',
+			'IN' => 'India',
+			'CN' => 'China',
+			'JP' => 'Japan',
+			'BR' => 'Brazil',
+			'MX' => 'Mexico',
+			'RU' => 'Russia',
+			'Unknown' => 'Unknown',
+		);
 	}
 }
