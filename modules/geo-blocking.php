@@ -69,6 +69,11 @@ class NexifyMy_Security_Geo_Blocking {
 	 * Check if current request should be blocked by geo.
 	 */
 	public function check_geo_block() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['geo_blocking_enabled'] ) && ! $all_settings['modules']['geo_blocking_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
