@@ -115,6 +115,11 @@
         );
       });
 
+      // Core File Verification
+      $("#verify-core").on("click", function () {
+        NexifymySecurity.verifyCoreFiles($(this));
+      });
+
       // Test Alert
       $("#test-alert").on("click", function () {
         NexifymySecurity.sendTestAlert();
@@ -132,64 +137,70 @@
         function (e) {
           e.preventDefault();
           var tabId = $(this).data("tab");
+          var $wrapper = $(this).closest(".nexifymy-security-wrap");
 
-          // Update active tab/sidebar link
-          $(".nms-tabs .nms-tab, .nms-sidebar-link").removeClass("active");
-          $(
-            '.nms-tab[data-tab="' +
-              tabId +
-              '"], .nms-sidebar-link[data-tab="' +
-              tabId +
-              '"]',
-          ).addClass("active");
+          // Update active tab/sidebar link within this page
+          $wrapper.find(".nms-tabs .nms-tab").removeClass("active");
+          $wrapper.find(".nms-sidebar-link").removeClass("active");
+          $(this).addClass("active");
+          $wrapper
+            .find('.nms-sidebar-link[data-tab="' + tabId + '"]')
+            .addClass("active");
 
-          // Show corresponding content
-          $(".nms-tab-content").removeClass("active");
-          $("#nms-tab-" + tabId).addClass("active");
+          // Show corresponding content within this page wrapper
+          $wrapper.find(".nms-tab-content").removeClass("active");
+          $wrapper.find("#nms-tab-" + tabId).addClass("active");
         },
       );
 
       // Module toggle switches
-      $(".nms-toggle input[data-module]").on("change", function () {
-        var $this = $(this);
-        var module = $this.data("module");
-        var enabled = $this.is(":checked");
+      $(".nms-toggle input[data-module], .module-toggle[data-module]").on(
+        "change",
+        function () {
+          var $this = $(this);
+          var module = $this.data("module");
+          var enabled = $this.is(":checked");
 
-        $.ajax({
-          url: nexifymySecurity.ajaxUrl,
-          type: "POST",
-          data: {
-            action: "nexifymy_toggle_module",
-            module: module,
-            enabled: enabled ? 1 : 0,
-            nonce: nexifymySecurity.nonce,
-          },
-          success: function (response) {
-            if (response && typeof response === "object" && response.success) {
-              // Update card visual state
-              var $card = $this.closest(".nms-module-card");
-              if ($card.length) {
-                if (enabled) {
-                  $card.addClass("active");
-                } else {
-                  $card.removeClass("active");
+          $.ajax({
+            url: nexifymySecurity.ajaxUrl,
+            type: "POST",
+            data: {
+              action: "nexifymy_toggle_module",
+              module: module,
+              enabled: enabled ? 1 : 0,
+              nonce: nexifymySecurity.nonce,
+            },
+            success: function (response) {
+              if (
+                response &&
+                typeof response === "object" &&
+                response.success
+              ) {
+                // Update card visual state
+                var $card = $this.closest(".nms-module-card");
+                if ($card.length) {
+                  if (enabled) {
+                    $card.addClass("active");
+                  } else {
+                    $card.removeClass("active");
+                  }
                 }
+                console.log(
+                  "Module " + module + " " + (enabled ? "enabled" : "disabled"),
+                );
+              } else {
+                // Revert toggle on error
+                $this.prop("checked", !enabled);
+                alert("Error: " + (response.data || "Unknown error"));
               }
-              console.log(
-                "Module " + module + " " + (enabled ? "enabled" : "disabled"),
-              );
-            } else {
-              // Revert toggle on error
+            },
+            error: function (jqXHR) {
               $this.prop("checked", !enabled);
-              alert("Error: " + (response.data || "Unknown error"));
-            }
-          },
-          error: function (jqXHR) {
-            $this.prop("checked", !enabled);
-            alert("Failed to update module settings");
-          },
-        });
-      });
+              alert("Failed to update module settings");
+            },
+          });
+        },
+      );
 
       // Auto-update signatures toggle
       $("#auto-update-signatures").on("change", function () {
@@ -263,7 +274,7 @@
                 msg += " Total signatures: " + data.total_count;
               }
               $status.html(
-                '<span style="color: var(--nms-success);">✓ ' + msg + "</span>",
+                '<span style="color: var(--nms-success);">' + msg + "</span>",
               );
               // Reload page to show new version
               setTimeout(function () {
@@ -299,7 +310,7 @@
               return;
             }
             $status.html(
-              '<span style="color: var(--nms-danger);">✗ Connection error</span>',
+              '<span style="color: var(--nms-danger);">Connection error</span>',
             );
           },
         });
@@ -323,14 +334,14 @@
             $btn.prop("disabled", false);
             if (response.success) {
               $status.html(
-                '<span style="color: var(--nms-success);">✓ Saved!</span>',
+                '<span style="color: var(--nms-success);">Saved!</span>',
               );
               setTimeout(function () {
                 $status.html("");
               }, 3000);
             } else {
               $status.html(
-                '<span style="color: var(--nms-danger);">✗ ' +
+                '<span style="color: var(--nms-danger);">' +
                   (response.data || "Failed") +
                   "</span>",
               );
@@ -339,7 +350,7 @@
           error: function () {
             $btn.prop("disabled", false);
             $status.html(
-              '<span style="color: var(--nms-danger);">✗ Connection error</span>',
+              '<span style="color: var(--nms-danger);">Connection error</span>',
             );
           },
         });
@@ -2387,6 +2398,72 @@
           $button.prop("disabled", false);
           if ($status && $status.length)
             $status.text("Scan failed").css("color", "red");
+        },
+      });
+    },
+
+    verifyCoreFiles: function ($button) {
+      if (!$button || !$button.length) return;
+
+      var $resultsDiv = $("#verify-core-results");
+      if (!$resultsDiv.length) {
+        $button.after(
+          '<div id="verify-core-results" style="margin-top: 15px;"></div>',
+        );
+        $resultsDiv = $("#verify-core-results");
+      }
+
+      $button.prop("disabled", true).text("Verifying...");
+      $resultsDiv.html(
+        '<p style="color: #666;">Checking core file integrity...</p>',
+      );
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        dataType: "json",
+        data: {
+          action: "nexifymy_check_core_integrity",
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          $button.prop("disabled", false).text("Verify Core Files");
+          if (response && response.success) {
+            var data = response.data;
+            var hasIssues = data.modified_count > 0 || data.missing_count > 0;
+            var html =
+              '<div class="nms-alert nms-alert-' +
+              (hasIssues ? "warning" : "success") +
+              '">';
+            html += "<p><strong>Verification Complete:</strong></p>";
+            html += '<ul style="margin: 10px 0; padding-left: 20px;">';
+            html += "<li>Total files checked: " + data.total_files + "</li>";
+            html += "<li>Verified files: " + data.verified + "</li>";
+            html += "<li>Modified files: " + data.modified_count + "</li>";
+            html += "<li>Missing files: " + data.missing_count + "</li>";
+            html += "</ul>";
+            if (hasIssues) {
+              html +=
+                '<p style="margin-top: 10px;"><em>Some core files have been modified or are missing. This could indicate a security issue or customization.</em></p>';
+            } else {
+              html +=
+                '<p style="margin-top: 10px;"><em>All WordPress core files are intact and match official checksums.</em></p>';
+            }
+            html += "</div>";
+            $resultsDiv.html(html);
+          } else {
+            $resultsDiv.html(
+              '<div class="nms-alert nms-alert-error"><p>Error: ' +
+                (response.data || "Verification failed") +
+                "</p></div>",
+            );
+          }
+        },
+        error: function () {
+          $button.prop("disabled", false).text("Verify Core Files");
+          $resultsDiv.html(
+            '<div class="nms-alert nms-alert-error"><p>Verification failed. Please try again.</p></div>',
+          );
         },
       });
     },

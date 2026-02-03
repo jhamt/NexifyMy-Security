@@ -9,9 +9,8 @@
  * @since      2.0.0
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 class NexifyMy_Security_Analytics {
