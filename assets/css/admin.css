@@ -85,8 +85,7 @@
 
 .nexifymy-security-wrap {
   margin: 0;
-  padding: var(--nms-space-6);
-  padding-left: 0;
+  padding: 20px 20px 20px 0;
   max-width: 1400px;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
@@ -115,66 +114,7 @@ body[class*="nexifymy-security"] #wpfooter {
    HORIZONTAL NAVIGATION TABS - Purple Pill Style
    ========================================================================== */
 
-.nms-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-  padding: 16px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #4f46e5 100%);
-  border-radius: var(--nms-radius-lg);
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
-}
-
-.nms-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: all var(--nms-transition);
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-
-.nms-tab:hover {
-  background: rgba(255, 255, 255, 0.25);
-  color: white;
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.nms-tab.active {
-  background: white;
-  color: #4f46e5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nms-tab .dashicons {
-  font-size: 16px;
-  width: 16px;
-  height: 16px;
-  line-height: 1;
-}
-
-.nms-tab-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
-  font-size: 10px;
-  font-weight: 700;
-  background: #ef4444;
-  color: white;
-  border-radius: 9px;
-  margin-left: 4px;
+/* Tabs styling moved to unified section below (line ~954) */
 }
 
 /* Tab Content */
@@ -737,6 +677,7 @@ body[class*="nexifymy-security"] #wpfooter {
   width: 46px;
   height: 26px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .nms-toggle input {
@@ -783,14 +724,43 @@ body[class*="nexifymy-security"] #wpfooter {
 }
 
 /* Form table within tabs */
-.nms-tab-content .form-table th {
-  padding: 15px 10px 15px 0;
-  font-weight: 500;
-  color: var(--nms-gray-700);
+/* Standard vertical alignment for all form rows */
+.nms-tab-content .form-table th,
+.nms-tab-content .form-table td {
+  vertical-align: top !important;
+  padding: 15px 10px !important;
 }
 
-.nms-tab-content .form-table td {
-  padding: 15px 10px;
+/* Baseline/Center alignment for labels:
+   - td padding-top is 15px
+   - input[type="text"] height is ~39px (center at 15 + 19.5 = 34.5)
+   - label height is ~21px (center at padding_th + 10.5)
+   - To match centers: padding_th = 34.5 - 10.5 = 24px
+*/
+.nms-tab-content .form-table th {
+  padding-top: 24px !important;
+  font-weight: 500;
+  color: var(--nms-gray-700);
+  width: 240px;
+}
+
+/* Offset for Toggle centers (toggle height is 24px)
+   - toggle center at 15 + 12 = 27
+   - padding_th = 27 - 10.5 = 16.5px (rounded to 17px)
+*/
+.nms-tab-content .form-table tr:has(.nms-toggle) th {
+  padding-top: 17px !important;
+}
+
+/* Mobile Alignment: If stacked, ensure horizontal centering if requested */
+@media screen and (max-width: 782px) {
+  .nms-tab-content .form-table th,
+  .nms-tab-content .form-table td {
+    display: block;
+    width: 100% !important;
+    text-align: left;
+    padding: 10px 0 !important;
+  }
 }
 
 .nms-tab-content select,
@@ -811,6 +781,40 @@ body[class*="nexifymy-security"] #wpfooter {
   border-color: var(--nms-primary);
   box-shadow: 0 0 0 3px var(--nms-primary-light);
   outline: none;
+}
+
+/* Form Section Headers (Subheadings) */
+.nms-form-section-header {
+  padding: 30px 0 10px 0 !important;
+  border: none !important;
+}
+
+.nms-form-section-header h4 {
+  margin: 0;
+  padding: var(--nms-space-3) var(--nms-space-4);
+  background: var(--nms-gray-50);
+  border-left: 4px solid var(--nms-primary);
+  border-radius: 0 var(--nms-radius-md) var(--nms-radius-md) 0;
+  color: var(--nms-gray-800);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.nms-form-section-header h4 .dashicons {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: var(--nms-primary);
+}
+
+/* Section Spacing Fix */
+.nms-tab-content .form-table tr + tr.nms-form-section-header th {
+  padding-top: 40px !important;
 }
 
 /* ==========================================================================
@@ -858,7 +862,8 @@ body[class*="nexifymy-security"] #wpfooter {
   height: 22px;
 }
 
-.nms-header-title h1 {
+.nms-header-title h1,
+.nms-header-title h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 700;
@@ -1021,6 +1026,252 @@ body[class*="nexifymy-security"] #wpfooter {
 
   .nms-tab {
     justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   4.5 MODULE PAGE TABS (Matching Dashboard Style)
+   ========================================================================== */
+
+/* Module page header */
+.nms-page-header {
+  margin-bottom: var(--nms-space-6);
+}
+
+.nms-page-header h1 {
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-2);
+  margin: 0 0 var(--nms-space-2) 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--nms-gray-900);
+}
+
+.nms-page-header h1 .dashicons {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  color: var(--nms-primary);
+}
+
+.nms-page-header p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--nms-gray-500);
+}
+
+/* Module page tabs - matches Dashboard .nms-tabs styling */
+.nms-page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nms-space-2);
+  background: var(--nms-bg-card);
+  border: 1px solid var(--nms-border);
+  border-radius: var(--nms-radius-lg);
+  padding: var(--nms-space-2);
+  margin-bottom: var(--nms-space-6);
+  box-shadow: var(--nms-shadow-xs);
+}
+
+.nms-page-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-2);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nms-gray-600);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--nms-transition);
+  text-decoration: none !important;
+}
+
+.nms-page-tab:hover {
+  color: var(--nms-gray-900);
+  background: var(--nms-gray-100);
+}
+
+.nms-page-tab.active {
+  background: #6366f1 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.nms-page-tab .dashicons {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}
+
+/* Tab panels */
+.nms-tab-panel {
+  display: none;
+}
+
+.nms-tab-panel.active {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .nms-page-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nms-page-tab {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   4.6 MODULE CATEGORY CARDS
+   ========================================================================== */
+
+/* Module section container */
+.nms-modules-section {
+  margin-bottom: var(--nms-space-8);
+}
+
+.nms-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--nms-space-4);
+}
+
+.nms-section-title h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-2);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nms-gray-800);
+}
+
+.nms-section-title h3 .dashicons {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--nms-primary);
+}
+
+.nms-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nms-gray-500);
+  background: var(--nms-gray-100);
+  padding: 4px 12px;
+  border-radius: var(--nms-radius-full);
+}
+
+/* Module grid */
+.nms-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--nms-space-4);
+}
+
+/* Individual module card */
+.nms-module-card {
+  position: relative;
+  background: var(--nms-bg-card);
+  border: 2px solid var(--nms-border);
+  border-radius: var(--nms-radius-lg);
+  padding: var(--nms-space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--nms-transition);
+  overflow: hidden;
+}
+
+.nms-module-card:hover {
+  border-color: var(--nms-primary);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+  transform: translateY(-2px);
+}
+
+.nms-module-card.active {
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);
+  border-color: var(--nms-primary);
+}
+
+/* Clickable area */
+.nms-module-clickable {
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-3);
+  flex: 1;
+  cursor: pointer;
+  min-width: 0; /* Allows text to truncate */
+  text-decoration: none;
+  color: inherit;
+}
+
+.nms-module-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--nms-primary), var(--nms-primary-dark));
+  border-radius: var(--nms-radius-md);
+  color: white;
+}
+
+.nms-module-card:not(.active) .nms-module-icon {
+  background: var(--nms-gray-100);
+  color: var(--nms-gray-600);
+}
+
+.nms-module-icon .dashicons {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.nms-module-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.nms-module-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nms-gray-900);
+  line-height: 1.4;
+}
+
+.nms-module-desc {
+  font-size: 12px;
+  color: var(--nms-gray-500);
+  line-height: 1.4;
+}
+
+/* Toggle within module card */
+.nms-module-card .nms-toggle {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .nms-modules-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .nms-modules-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1303,8 +1554,15 @@ body[class*="nexifymy-security"] #wpfooter {
   background: var(--nms-bg-card);
   border: 1px solid var(--nms-border);
   border-radius: var(--nms-radius-md);
-  cursor: pointer;
   transition: all var(--nms-transition);
+}
+
+.nms-module-clickable {
+  display: flex;
+  align-items: center;
+  gap: var(--nms-space-3);
+  flex: 1;
+  cursor: pointer;
 }
 
 .nms-module-card:hover {
@@ -1797,12 +2055,14 @@ body[class*="nexifymy-security"] #wpfooter {
 /* Legacy Header */
 .nexifymy-header {
   display: flex;
-  align-items: center;
-  gap: var(--nms-space-4);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--nms-space-1);
   margin-bottom: var(--nms-space-6);
 }
 
-.nexifymy-header h1 {
+.nexifymy-header h1,
+.nexifymy-header h2 {
   display: flex;
   align-items: center;
   gap: var(--nms-space-2);
@@ -3207,6 +3467,7 @@ body[class*="nexifymy-security"] #wpfooter {
     box-shadow 0.2s ease !important;
   min-height: 320px !important;
   position: relative !important;
+  overflow: visible !important;
 }
 
 .nms-scan-mode-card:hover {
