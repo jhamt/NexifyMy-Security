@@ -154,6 +154,9 @@
       );
 
       // Module toggle switches
+      // Dashboard Module Toggles - Track changes
+      var moduleChanges = {};
+
       $(".nms-toggle input[data-module], .module-toggle[data-module]").on(
         "change",
         function () {
@@ -161,6 +164,27 @@
           var module = $this.data("module");
           var enabled = $this.is(":checked");
 
+          // Check if we're on dashboard page (has save button)
+          if ($("#save-module-toggles").length > 0) {
+            // Dashboard mode - just track changes
+            moduleChanges[module] = enabled ? 1 : 0;
+            $("#module-toggles-status").html(
+              '<span style="color: #d63638;">●</span> Unsaved changes',
+            );
+
+            // Update card visual state
+            var $card = $this.closest(".nms-module-card");
+            if ($card.length) {
+              if (enabled) {
+                $card.addClass("active");
+              } else {
+                $card.removeClass("active");
+              }
+            }
+            return;
+          }
+
+          // Other pages - auto-save immediately
           $.ajax({
             url: nexifymySecurity.ajaxUrl,
             type: "POST",
@@ -252,12 +276,15 @@
         var $status = $("#definition-status, #update-status");
 
         $btn.prop("disabled", true).find(".dashicons").addClass("spin");
-        $status.html('<span style="color: #666;">Updating...</span>');
+        $status.html(
+          '<span style="color: #666;"><i class="fa-solid fa-spinner fa-spin"></i> Fetching signatures from Wordfence Intelligence & PHP-Malware-Finder...</span>',
+        );
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
           type: "POST",
           dataType: "json",
+          timeout: 120000, // 2 minute timeout for large fetches
           data: {
             action: "nexifymy_update_signatures",
             nonce: nexifymySecurity.nonce,
@@ -267,34 +294,68 @@
 
             if (response && typeof response === "object" && response.success) {
               var data = response.data || {};
-              var msg = "Updated successfully!";
-              if (data.remote_count && data.remote_count > 0) {
-                msg += " Added " + data.remote_count + " new signatures.";
-              } else if (data.total_count) {
-                msg += " Total signatures: " + data.total_count;
+
+              // Build detailed success message
+              var msg = '<i class="fa-solid fa-check-circle"></i> ';
+              if (data.message) {
+                msg += data.message;
+              } else {
+                msg +=
+                  "Updated! Total: " + (data.total_count || 0) + " signatures";
               }
+
+              // Show sources
+              if (data.sources && data.sources.length > 0) {
+                msg +=
+                  '<br><small style="opacity: 0.8;">Sources: ' +
+                  data.sources.join(", ") +
+                  "</small>";
+              }
+
+              // Show any errors (partial success)
+              if (data.errors && Object.keys(data.errors).length > 0) {
+                msg +=
+                  '<br><small style="color: #d63638;">Some sources failed: ' +
+                  Object.keys(data.errors).join(", ") +
+                  "</small>";
+              }
+
               $status.html(
                 '<span style="color: var(--nms-success);">' + msg + "</span>",
               );
-              // Reload page to show new version
+
+              // Reload page to show new counts
               setTimeout(function () {
                 location.reload();
-              }, 2500);
+              }, 3500);
             } else {
+              var errMsg = "Update failed";
+              if (response && response.data && response.data.errors) {
+                errMsg = Object.values(response.data.errors).join("; ");
+              } else if (response && response.data) {
+                errMsg = response.data;
+              }
               $status.html(
-                '<span style="color: var(--nms-danger);">✗ ' +
-                  ((response && response.data) || "Update failed") +
+                '<span style="color: var(--nms-danger);"><i class="fa-solid fa-times-circle"></i> ' +
+                  errMsg +
                   "</span>",
               );
             }
           },
-          error: function (jqXHR) {
+          error: function (jqXHR, textStatus) {
             $btn.prop("disabled", false).find(".dashicons").removeClass("spin");
 
             var raw =
               jqXHR && typeof jqXHR.responseText === "string"
                 ? jqXHR.responseText.trim()
                 : "";
+
+            if (textStatus === "timeout") {
+              $status.html(
+                '<span style="color: var(--nms-danger);"><i class="fa-solid fa-clock"></i> Request timed out. The signature database is large (~100MB). Try again.</span>',
+              );
+              return;
+            }
 
             if (raw === "-1") {
               $status.html(
@@ -310,7 +371,7 @@
               return;
             }
             $status.html(
-              '<span style="color: var(--nms-danger);">Connection error</span>',
+              '<span style="color: var(--nms-danger);"><i class="fa-solid fa-exclamation-triangle"></i> Connection error</span>',
             );
           },
         });
@@ -382,18 +443,241 @@
       });
 
       // Geo Blocking Settings Save
+      // Geo Blocking: Add Countries to List
+      $("#geo-add-countries").on("click", function () {
+        var checkedBoxes = $(".geo-country-check:checked");
+        if (checkedBoxes.length === 0) {
+          alert("Please select at least one country to add.");
+          return;
+        }
+
+        checkedBoxes.each(function () {
+          var code = $(this).val();
+          var label = $(this).parent().text().trim();
+          // Add to selected list
+          $("#geo-selected-list").append(
+            '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-selected-check" value="' +
+              code +
+              '"> ' +
+              label +
+              "</label>",
+          );
+          // Remove from available list
+          $(this).parent().remove();
+        });
+
+        // Remove "no countries" message if present
+        $("#geo-selected-list p.description").remove();
+      });
+
+      // Geo Blocking: Remove Countries from List
+      $("#geo-remove-countries").on("click", function () {
+        var checkedBoxes = $(".geo-selected-check:checked");
+        if (checkedBoxes.length === 0) {
+          alert("Please select at least one country to remove.");
+          return;
+        }
+
+        checkedBoxes.each(function () {
+          var code = $(this).val();
+          var label = $(this).parent().text().trim();
+          // Add back to available list (alphabetically - simplified by just prepending)
+          $(".geo-country-check")
+            .first()
+            .parent()
+            .parent()
+            .append(
+              '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-country-check" value="' +
+                code +
+                '"> ' +
+                label +
+                "</label>",
+            );
+          // Remove from selected list
+          $(this).parent().remove();
+        });
+
+        // Add "no countries" message if list is empty
+        if ($(".geo-selected-check").length === 0) {
+          $("#geo-selected-list").html(
+            '<p class="description" style="margin: 0;">No countries selected yet.</p>',
+          );
+        }
+      });
+
       $("#save-geo-settings").on("click", function () {
         var countries = [];
-        $("#geo-countries option:selected").each(function () {
+        $(".geo-selected-check").each(function () {
           countries.push($(this).val());
         });
         var settings = {
           enabled: $("#geo-enabled").is(":checked") ? 1 : 0,
           mode: $("#geo-mode").val(),
           countries: countries,
-          message: $("#geo-message").val(),
         };
         saveModuleSettings("geo_blocking", settings, $(this), $("#geo-status"));
+      });
+
+      // Save Module Hub Toggles (Modules Page)
+      $("#save-module-hub-toggles").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#module-hub-status");
+        var changes = {};
+
+        $(".module-toggle").each(function () {
+          var module = $(this).data("module");
+          var enabled = $(this).is(":checked") ? 1 : 0;
+          changes[module] = enabled;
+        });
+
+        if (Object.keys(changes).length === 0) {
+          $status.html(
+            '<span style="color: #00a32a;">✓ No modules to save</span>',
+          );
+          setTimeout(function () {
+            $status.html("");
+          }, 3000);
+          return;
+        }
+
+        $btn.prop("disabled", true).text("Saving...");
+        $status.html('<span style="color: #999;">Saving modules...</span>');
+
+        var promises = [];
+        $.each(changes, function (module, enabled) {
+          promises.push(
+            $.ajax({
+              url: nexifymySecurity.ajaxUrl,
+              type: "POST",
+              data: {
+                action: "nexifymy_toggle_module",
+                module: module,
+                enabled: enabled,
+                nonce: nexifymySecurity.nonce,
+              },
+            }),
+          );
+        });
+
+        $.when
+          .apply($, promises)
+          .done(function () {
+            $status.html(
+              '<span style="color: #00a32a;">✓ All modules saved!</span>',
+            );
+            // Update badges and icons
+            $(".module-toggle").each(function () {
+              var $cardBody = $(this).closest(".nms-card-body");
+              var $badge = $cardBody.find(".nms-badge");
+              var $icon = $cardBody.find(".nms-stat-icon");
+              if ($(this).is(":checked")) {
+                $badge
+                  .removeClass("nms-badge-secondary")
+                  .addClass("nms-badge-success")
+                  .text("Active");
+                $icon.removeClass("blue").addClass("green");
+              } else {
+                $badge
+                  .removeClass("nms-badge-success")
+                  .addClass("nms-badge-secondary")
+                  .text("Inactive");
+                $icon.removeClass("green").addClass("blue");
+              }
+            });
+            setTimeout(function () {
+              $status.html("");
+            }, 3000);
+          })
+          .fail(function () {
+            $status.html(
+              '<span style="color: #d63638;">✗ Error saving modules</span>',
+            );
+          })
+          .always(function () {
+            $btn
+              .prop("disabled", false)
+              .html(
+                '<span class="dashicons dashicons-saved"></span> Save Module Settings',
+              );
+          });
+      });
+
+      // Save Module Toggles (Dashboard)
+      $("#save-module-toggles").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#module-toggles-status");
+
+        if (Object.keys(moduleChanges).length === 0) {
+          $status.html(
+            '<span style="color: #00a32a;">✓ No changes to save</span>',
+          );
+          setTimeout(function () {
+            $status.html("");
+          }, 3000);
+          return;
+        }
+
+        $btn.prop("disabled", true).text("Saving...");
+        $status.html(
+          '<span style="color: #999;">Saving ' +
+            Object.keys(moduleChanges).length +
+            " module(s)...</span>",
+        );
+
+        // Save each module toggle
+        var promises = [];
+        $.each(moduleChanges, function (module, enabled) {
+          promises.push(
+            $.ajax({
+              url: nexifymySecurity.ajaxUrl,
+              type: "POST",
+              data: {
+                action: "nexifymy_toggle_module",
+                module: module,
+                enabled: enabled,
+                nonce: nexifymySecurity.nonce,
+              },
+            }),
+          );
+        });
+
+        $.when
+          .apply($, promises)
+          .done(function () {
+            $status.html(
+              '<span style="color: #00a32a;">✓ All changes saved successfully!</span>',
+            );
+            moduleChanges = {}; // Clear changes
+
+            // Update dashboard module cards visual state
+            $(".nms-module-card").each(function () {
+              var $card = $(this);
+              var $toggle = $card.find("input[data-module]");
+              if ($toggle.length) {
+                if ($toggle.is(":checked")) {
+                  $card.addClass("active");
+                } else {
+                  $card.removeClass("active");
+                }
+              }
+            });
+
+            setTimeout(function () {
+              $status.html("");
+            }, 3000);
+          })
+          .fail(function () {
+            $status.html(
+              '<span style="color: #d63638;">✗ Error saving some modules</span>',
+            );
+          })
+          .always(function () {
+            $btn
+              .prop("disabled", false)
+              .html(
+                '<span class="dashicons dashicons-saved"></span> Save Module Settings',
+              );
+          });
       });
 
       // Hide Login Settings Save
@@ -414,28 +698,18 @@
       // Captcha Settings Save
       $("#save-captcha-settings").on("click", function () {
         var settings = {
-          enabled: $("#captcha-settings input[name=captcha_enabled]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
-          login: $("#captcha-settings input[name=enable_login]").is(":checked")
-            ? 1
-            : 0,
-          registration: $(
-            "#captcha-settings input[name=enable_registration]",
-          ).is(":checked")
-            ? 1
-            : 0,
-          reset: $("#captcha-settings input[name=enable_reset]").is(":checked")
-            ? 1
-            : 0,
-          comment: $("#captcha-settings input[name=enable_comment]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
+          enabled: $("#captcha-enabled").is(":checked") ? 1 : 0,
+          provider: $("#captcha-provider").val(),
+          nexifymy_type: $("#captcha-nexifymy-type").val(),
           difficulty: $("#captcha-difficulty").val(),
+          site_key: $("#captcha-site-key").val(),
+          secret_key: $("#captcha-secret-key").val(),
+          enable_login: $("#captcha-enable-login").is(":checked") ? 1 : 0,
+          enable_registration: $("#captcha-enable-registration").is(":checked")
+            ? 1
+            : 0,
+          enable_reset: $("#captcha-enable-reset").is(":checked") ? 1 : 0,
+          enable_comment: $("#captcha-enable-comment").is(":checked") ? 1 : 0,
         };
         saveModuleSettings("captcha", settings, $(this), $("#captcha-status"));
       });
@@ -1126,42 +1400,157 @@
       }, 1500); // Poll every 1.5 seconds
     },
 
+    // Store scan results globally for filtering
+    scanResultsData: null,
+
     displayScanResults: function (data) {
+      // Store data for filtering
+      this.scanResultsData = data;
+
       var html = '<div class="scan-results-summary">';
-      html += "<p><strong>Mode:</strong> " + data.mode_name + "</p>";
       html +=
-        "<p><strong>Files Scanned:</strong> " + data.files_scanned + "</p>";
+        "<p><strong>Mode:</strong> " +
+        (data.mode_name || data.mode || "Unknown") +
+        "</p>";
+      html +=
+        "<p><strong>Files Scanned:</strong> " +
+        (data.files_scanned || 0) +
+        "</p>";
       html +=
         '<p><strong>Threats Found:</strong> <span class="' +
         (data.threats_found > 0 ? "threat-count" : "clean-count") +
         '">' +
-        data.threats_found +
+        (data.threats_found || 0) +
         "</span></p>";
       html += "</div>";
 
       if (data.threats && data.threats.length > 0) {
-        html += '<table class="widefat striped">';
+        // Collect unique severities and categories for filters
+        var severities = {};
+        var categories = {};
+        data.threats.forEach(function (threat) {
+          if (threat.threats) {
+            threat.threats.forEach(function (t) {
+              severities[t.severity || "unknown"] = true;
+              categories[t.category || "malware"] = true;
+            });
+          }
+        });
+
+        // Build filter bar
         html +=
-          "<thead><tr><th>File</th><th>Threat</th><th>Severity</th><th>Action</th></tr></thead>";
+          '<div class="nms-scan-filters" style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">';
+        html +=
+          '<strong style="margin-right: 10px;"><i class="fa-solid fa-filter"></i> Filter Results:</strong>';
+
+        // Severity filter
+        html += '<select id="scan-filter-severity" style="min-width: 130px;">';
+        html += '<option value="all">All Severities</option>';
+        if (severities["critical"])
+          html += '<option value="critical">Critical</option>';
+        if (severities["high"]) html += '<option value="high">High</option>';
+        if (severities["medium"])
+          html += '<option value="medium">Medium</option>';
+        if (severities["low"]) html += '<option value="low">Low</option>';
+        html += "</select>";
+
+        // Category filter
+        html += '<select id="scan-filter-category" style="min-width: 150px;">';
+        html += '<option value="all">All Categories</option>';
+        var categoryLabels = {
+          command_execution: "Command Execution",
+          obfuscation: "Obfuscation",
+          file_operation: "File Operation",
+          file_inclusion: "File Inclusion",
+          sql_injection: "SQL Injection",
+          webshell: "Webshell",
+          backdoor: "Backdoor",
+          network: "Network",
+          spam: "Spam/SEO",
+          cryptominer: "Crypto Miner",
+          injection: "Code Injection",
+          redirect: "Redirect",
+          reconnaissance: "Reconnaissance",
+          evasion: "Evasion",
+          vulnerability: "Vulnerability",
+          community_malware: "Community Pattern",
+          malware: "Malware",
+        };
+        Object.keys(categories)
+          .sort()
+          .forEach(function (cat) {
+            html +=
+              '<option value="' +
+              cat +
+              '">' +
+              (categoryLabels[cat] || cat) +
+              "</option>";
+          });
+        html += "</select>";
+
+        // Search box
+        html +=
+          '<input type="text" id="scan-filter-search" placeholder="Search file or threat..." style="min-width: 200px; padding: 5px 10px;">';
+
+        // Count display
+        html +=
+          '<span id="scan-filter-count" style="margin-left: auto; color: #666;"></span>';
+        html += "</div>";
+
+        // Results table
+        html += '<table class="widefat striped" id="scan-results-table">';
+        html +=
+          "<thead><tr><th>File</th><th>Threat</th><th>Category</th><th>Severity</th><th>Confidence</th><th>Action</th></tr></thead>";
         html += "<tbody>";
 
         data.threats.forEach(function (threat) {
-          threat.threats.forEach(function (t) {
-            html += "<tr>";
-            html += "<td><code>" + threat.file + "</code></td>";
-            html += "<td>" + t.description + "</td>";
-            html +=
-              '<td><span class="severity-' +
-              t.severity +
-              '">' +
-              t.severity +
-              "</span></td>";
-            html +=
-              '<td><button class="button button-small delete-file" data-file="' +
-              threat.file +
-              '">Quarantine</button></td>';
-            html += "</tr>";
-          });
+          if (threat.threats) {
+            threat.threats.forEach(function (t) {
+              var category = t.category || "malware";
+              var confidence = threat.confidence || t.confidence || 70;
+              html +=
+                '<tr data-severity="' +
+                (t.severity || "unknown") +
+                '" data-category="' +
+                category +
+                '">';
+              html +=
+                '<td><code title="' +
+                (threat.file || "") +
+                '">' +
+                NexifymySecurity.truncatePath(threat.file || "", 50) +
+                "</code></td>";
+              html +=
+                "<td>" +
+                (t.description || t.title || "Unknown threat") +
+                "</td>";
+              html +=
+                '<td><span class="nms-badge nms-badge-info" style="font-size: 11px;">' +
+                (categoryLabels[category] || category) +
+                "</span></td>";
+              html +=
+                '<td><span class="severity-' +
+                (t.severity || "medium") +
+                '">' +
+                (t.severity || "medium") +
+                "</span></td>";
+              html +=
+                '<td><span class="confidence-' +
+                (confidence >= 70
+                  ? "high"
+                  : confidence >= 50
+                    ? "medium"
+                    : "low") +
+                '">' +
+                confidence +
+                "%</span></td>";
+              html +=
+                '<td><button class="button button-small delete-file" data-file="' +
+                (threat.file || "") +
+                '">Quarantine</button></td>';
+              html += "</tr>";
+            });
+          }
         });
 
         html += "</tbody></table>";
@@ -1170,7 +1559,21 @@
           '<p class="all-good"><span class="dashicons dashicons-yes-alt"></span> No threats detected!</p>';
       }
 
-      $("#results-content, #scan-results").html(html);
+      $("#results-content, #scan-results").html(html).show();
+
+      // Bind filter events
+      $("#scan-filter-severity, #scan-filter-category").on(
+        "change",
+        function () {
+          NexifymySecurity.filterScanResults();
+        },
+      );
+      $("#scan-filter-search").on("keyup", function () {
+        NexifymySecurity.filterScanResults();
+      });
+
+      // Update initial count
+      this.filterScanResults();
 
       // Bind delete button
       $(".delete-file").on("click", function () {
@@ -1179,6 +1582,55 @@
           NexifymySecurity.deleteFile(file, $(this));
         }
       });
+    },
+
+    truncatePath: function (path, maxLen) {
+      if (!path || path.length <= maxLen) return path;
+      var filename = path.split(/[/\\]/).pop();
+      if (filename.length >= maxLen - 3) {
+        return "..." + filename.substring(filename.length - maxLen + 3);
+      }
+      return "..." + path.substring(path.length - maxLen + 3);
+    },
+
+    filterScanResults: function () {
+      var severity = $("#scan-filter-severity").val();
+      var category = $("#scan-filter-category").val();
+      var search = $("#scan-filter-search").val().toLowerCase();
+
+      var visible = 0;
+      var total = 0;
+
+      $("#scan-results-table tbody tr").each(function () {
+        var $row = $(this);
+        var rowSeverity = $row.data("severity");
+        var rowCategory = $row.data("category");
+        var rowText = $row.text().toLowerCase();
+
+        total++;
+        var show = true;
+
+        if (severity !== "all" && rowSeverity !== severity) {
+          show = false;
+        }
+        if (category !== "all" && rowCategory !== category) {
+          show = false;
+        }
+        if (search && rowText.indexOf(search) === -1) {
+          show = false;
+        }
+
+        if (show) {
+          $row.show();
+          visible++;
+        } else {
+          $row.hide();
+        }
+      });
+
+      $("#scan-filter-count").text(
+        "Showing " + visible + " of " + total + " threats",
+      );
     },
 
     deleteFile: function (filePath, $button) {
