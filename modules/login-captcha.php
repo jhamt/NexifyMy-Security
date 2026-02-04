@@ -25,18 +25,28 @@ class NexifyMy_Security_Login_Captcha {
 	 */
 	private static $defaults = array(
 		'enabled'              => true,
+		'provider'             => 'nexifymy',  // nexifymy, recaptcha, recaptcha_v3, turnstile
+		'nexifymy_type'        => 'math',      // math, text_match, image, audio
 		'enable_login'         => true,
 		'enable_registration'  => true,
 		'enable_reset'         => true,
 		'enable_comment'       => false,
-		'difficulty'           => 'easy', // easy, medium, hard
-		'failed_threshold'     => 3,      // Show captcha after X failed attempts
+		'difficulty'           => 'easy',      // easy, medium, hard
+		'site_key'             => '',          // For reCAPTCHA/Turnstile
+		'secret_key'           => '',          // For reCAPTCHA/Turnstile
+		'failed_threshold'     => 3,           // Show captcha after X failed attempts
 	);
 
 	/**
 	 * Initialize the module.
 	 */
 	public function init() {
+		// Check if module is enabled globally.
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['captcha_enabled'] ) && ! $all_settings['modules']['captcha_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
@@ -138,7 +148,7 @@ class NexifyMy_Security_Login_Captcha {
 			case 'hard':
 				$num1 = wp_rand( 10, 50 );
 				$num2 = wp_rand( 10, 50 );
-				$operations = array( '+', '-', '*' );
+				$operations = array( '+', '-', '*', '/' );
 				break;
 			case 'medium':
 				$num1 = wp_rand( 5, 20 );
@@ -162,6 +172,11 @@ class NexifyMy_Security_Login_Captcha {
 			$num2 = $temp;
 		}
 
+		// Ensure clean division for division operation.
+		if ( '/' === $operation ) {
+			$num1 = $num2 * wp_rand( 2, 10 ); // Make num1 divisible by num2.
+		}
+
 		switch ( $operation ) {
 			case '+':
 				$answer = $num1 + $num2;
@@ -174,6 +189,10 @@ class NexifyMy_Security_Login_Captcha {
 			case '*':
 				$answer = $num1 * $num2;
 				$symbol = '×';
+				break;
+			case '/':
+				$answer = $num1 / $num2;
+				$symbol = '÷';
 				break;
 			default:
 				$answer = $num1 + $num2;
@@ -199,6 +218,54 @@ class NexifyMy_Security_Login_Captcha {
 	 * Render the captcha field.
 	 */
 	public function render_captcha() {
+		$settings = $this->get_settings();
+		$provider = $settings['provider'] ?? 'nexifymy';
+
+		switch ( $provider ) {
+			case 'recaptcha':
+				$this->render_recaptcha_v2();
+				break;
+			case 'recaptcha_v3':
+				$this->render_recaptcha_v3();
+				break;
+			case 'turnstile':
+				$this->render_turnstile();
+				break;
+			case 'nexifymy':
+			default:
+				$this->render_nexifymy_captcha();
+				break;
+		}
+	}
+
+	/**
+	 * Render NexifyMy custom captcha.
+	 */
+	private function render_nexifymy_captcha() {
+		$settings = $this->get_settings();
+		$type = $settings['nexifymy_type'] ?? 'math';
+
+		switch ( $type ) {
+			case 'text_match':
+				$this->render_text_match_captcha();
+				break;
+			case 'image':
+				$this->render_image_captcha();
+				break;
+			case 'audio':
+				$this->render_audio_captcha();
+				break;
+			case 'math':
+			default:
+				$this->render_math_captcha();
+				break;
+		}
+	}
+
+	/**
+	 * Render math captcha.
+	 */
+	private function render_math_captcha() {
 		$captcha = $this->generate_captcha();
 		?>
 		<p class="nexifymy-captcha-field">
@@ -214,18 +281,167 @@ class NexifyMy_Security_Login_Captcha {
 	}
 
 	/**
+	 * Render text matching captcha.
+	 */
+	private function render_text_match_captcha() {
+		$words = array( 'apple', 'banana', 'orange', 'grape', 'watermelon', 'security', 'protect', 'password' );
+		$word = $words[ array_rand( $words ) ];
+
+		// Store answer
+		if ( isset( $_SESSION ) ) {
+			$_SESSION[ self::SESSION_KEY ] = $word;
+		}
+		$client_id = $this->get_client_id();
+		set_transient( self::TRANSIENT_PREFIX . $client_id, $word, 5 * MINUTE_IN_SECONDS );
+		?>
+		<p class="nexifymy-captcha-field">
+			<label for="nexifymy_captcha"><?php _e( 'Type the word:', 'nexifymy-security' ); ?> <strong><?php echo esc_html( $word ); ?></strong></label>
+			<input type="text" name="nexifymy_captcha" id="nexifymy_captcha" class="input" required aria-required="true" autocomplete="off" />
+		</p>
+		<style>
+			.nexifymy-captcha-field { margin-bottom: 15px; }
+			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
+			.nexifymy-captcha-field input { width: 100%; padding: 8px; font-size: 16px; }
+		</style>
+		<?php
+	}
+
+	/**
+	 * Render image selection captcha.
+	 */
+	private function render_image_captcha() {
+		$answer = wp_rand( 1, 4 );
+
+		// Store answer
+		if ( isset( $_SESSION ) ) {
+			$_SESSION[ self::SESSION_KEY ] = $answer;
+		}
+		$client_id = $this->get_client_id();
+		set_transient( self::TRANSIENT_PREFIX . $client_id, $answer, 5 * MINUTE_IN_SECONDS );
+		?>
+		<p class="nexifymy-captcha-field">
+			<label><?php _e( 'Select the image with a checkmark:', 'nexifymy-security' ); ?></label>
+			<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px;">
+				<?php for ( $i = 1; $i <= 4; $i++ ) : ?>
+					<label style="cursor: pointer; border: 2px solid #ddd; padding: 10px; text-align: center; border-radius: 4px;">
+						<input type="radio" name="nexifymy_captcha" value="<?php echo $i; ?>" required style="margin: 0;">
+						<div style="font-size: 40px; margin-top: 5px;">
+							<?php echo $i === $answer ? '✓' : '✗'; ?>
+						</div>
+					</label>
+				<?php endfor; ?>
+			</div>
+		</p>
+		<style>
+			.nexifymy-captcha-field { margin-bottom: 15px; }
+			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
+		</style>
+		<?php
+	}
+
+	/**
+	 * Render audio/speaking captcha.
+	 */
+	private function render_audio_captcha() {
+		$number = wp_rand( 1000, 9999 );
+
+		// Store answer
+		if ( isset( $_SESSION ) ) {
+			$_SESSION[ self::SESSION_KEY ] = $number;
+		}
+		$client_id = $this->get_client_id();
+		set_transient( self::TRANSIENT_PREFIX . $client_id, $number, 5 * MINUTE_IN_SECONDS );
+		?>
+		<p class="nexifymy-captcha-field">
+			<label for="nexifymy_captcha"><?php _e( 'Enter the code:', 'nexifymy-security' ); ?> <strong><?php echo esc_html( $number ); ?></strong></label>
+			<small style="display: block; margin: 5px 0; color: #666;"><?php _e( '(Speak this code to verify)', 'nexifymy-security' ); ?></small>
+			<input type="number" name="nexifymy_captcha" id="nexifymy_captcha" class="input" required aria-required="true" />
+		</p>
+		<style>
+			.nexifymy-captcha-field { margin-bottom: 15px; }
+			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
+			.nexifymy-captcha-field input { width: 100%; padding: 8px; font-size: 16px; }
+		</style>
+		<?php
+	}
+
+	/**
+	 * Render Google reCAPTCHA v2.
+	 */
+	private function render_recaptcha_v2() {
+		$settings = $this->get_settings();
+		$site_key = $settings['site_key'] ?? '';
+
+		if ( empty( $site_key ) ) {
+			echo '<p style="color: red;">reCAPTCHA site key not configured.</p>';
+			return;
+		}
+
+		wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), null, true );
+		?>
+		<div class="g-recaptcha" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
+		<style>.g-recaptcha { margin-bottom: 15px; }</style>
+		<?php
+	}
+
+	/**
+	 * Render Google reCAPTCHA v3.
+	 */
+	private function render_recaptcha_v3() {
+		$settings = $this->get_settings();
+		$site_key = $settings['site_key'] ?? '';
+
+		if ( empty( $site_key ) ) {
+			echo '<p style="color: red;">reCAPTCHA site key not configured.</p>';
+			return;
+		}
+
+		wp_enqueue_script( 'google-recaptcha-v3', 'https://www.google.com/recaptcha/api.js?render=' . $site_key, array(), null, true );
+		?>
+		<input type="hidden" name="recaptcha_token" id="recaptcha_token">
+		<script>
+		grecaptcha.ready(function() {
+			grecaptcha.execute('<?php echo esc_js( $site_key ); ?>', {action: 'login'}).then(function(token) {
+				document.getElementById('recaptcha_token').value = token;
+			});
+		});
+		</script>
+		<?php
+	}
+
+	/**
+	 * Render Cloudflare Turnstile.
+	 */
+	private function render_turnstile() {
+		$settings = $this->get_settings();
+		$site_key = $settings['site_key'] ?? '';
+
+		if ( empty( $site_key ) ) {
+			echo '<p style="color: red;">Turnstile site key not configured.</p>';
+			return;
+		}
+
+		wp_enqueue_script( 'cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), null, true );
+		?>
+		<div class="cf-turnstile" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
+		<style>.cf-turnstile { margin-bottom: 15px; }</style>
+		<?php
+	}
+
+	/**
 	 * Validate captcha answer.
 	 *
 	 * @param int|string $submitted Submitted answer.
 	 * @return bool
 	 */
 	private function validate_captcha( $submitted ) {
-		$submitted = (int) $submitted;
+		$settings = $this->get_settings();
+		$type = $settings['nexifymy_type'] ?? 'math';
 		$expected = null;
 
 		// Try session first (primary).
 		if ( isset( $_SESSION[ self::SESSION_KEY ] ) ) {
-			$expected = (int) $_SESSION[ self::SESSION_KEY ];
+			$expected = $_SESSION[ self::SESSION_KEY ];
 			unset( $_SESSION[ self::SESSION_KEY ] );
 		}
 
@@ -234,7 +450,7 @@ class NexifyMy_Security_Login_Captcha {
 			$client_id = $this->get_client_id();
 			$transient_answer = get_transient( self::TRANSIENT_PREFIX . $client_id );
 			if ( false !== $transient_answer ) {
-				$expected = (int) $transient_answer;
+				$expected = $transient_answer;
 				delete_transient( self::TRANSIENT_PREFIX . $client_id );
 			}
 		}
@@ -244,7 +460,13 @@ class NexifyMy_Security_Login_Captcha {
 			return false;
 		}
 
-		return $submitted === $expected;
+		// For text matching, do case-insensitive comparison
+		if ( $type === 'text_match' ) {
+			return strtolower( trim( $submitted ) ) === strtolower( trim( $expected ) );
+		}
+
+		// For numeric types (math, image, audio), convert to int
+		return (int) $submitted === (int) $expected;
 	}
 
 	/**
