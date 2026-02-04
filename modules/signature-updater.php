@@ -2,6 +2,11 @@
 /**
  * Signature Updater Module.
  * Fetches and manages malware/vulnerability signatures from trusted sources.
+ *
+ * Sources:
+ * 1. Wordfence Intelligence API (free, public) - WordPress vulnerabilities
+ * 2. Built-in malware regex patterns - PHP malware detection
+ * 3. Bundled signatures.json - Extended patterns (ships with plugin)
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,14 +21,27 @@ class NexifyMy_Security_Signature_Updater {
 	const SIGNATURES_OPTION = 'nexifymy_malware_signatures';
 
 	/**
+	 * Option key for vulnerability data.
+	 */
+	const VULN_OPTION = 'nexifymy_vulnerability_data';
+
+	/**
 	 * Option key for last update time.
 	 */
 	const LAST_UPDATE_OPTION = 'nexifymy_signatures_updated';
 
 	/**
-	 * Wordfence Intelligence API (free, public).
+	 * Wordfence Intelligence Scanner Feed API (free, public, no auth required).
+	 * Returns vulnerability data for WordPress plugins/themes.
+	 * Docs: https://www.wordfence.com/help/wordfence-intelligence/v2-accessing-and-consuming-the-vulnerability-data-feed/
 	 */
-	const WORDFENCE_VULN_API = 'https://www.wordfence.com/api/intelligence/v2/vulnerabilities/scanner';
+	const WORDFENCE_SCANNER_API = 'https://www.wordfence.com/api/intelligence/v2/vulnerabilities/scanner';
+
+	/**
+	 * GitHub raw URL for community malware signatures (scr34m/php-malware-scanner).
+	 * Contains 47+ regex patterns for detecting PHP malware and webshells.
+	 */
+	const MALWARE_PATTERNS_URL = 'https://raw.githubusercontent.com/scr34m/php-malware-scanner/master/definitions/patterns_re.txt';
 
 	/**
 	 * Default settings.
@@ -38,6 +56,11 @@ class NexifyMy_Security_Signature_Updater {
 	 * Built-in heuristic patterns (fallback).
 	 */
 	private $builtin_patterns = array();
+
+	/**
+	 * Fetched vulnerability count.
+	 */
+	private $vuln_count = 0;
 
 	/**
 	 * Initialize the module.
@@ -295,21 +318,331 @@ class NexifyMy_Security_Signature_Updater {
 				'pattern'     => '/\$_(POST|GET|REQUEST)\s*\[\s*[\'"][^\'"]+[\'"]\s*\]\s*\(/i',
 				'category'    => 'backdoor',
 			),
+
+			// Additional Critical Patterns
+			array(
+				'id'          => 'popen_function',
+				'severity'    => 'critical',
+				'title'       => 'Process Open',
+				'description' => 'popen() for process control',
+				'pattern'     => '/popen\s*\(/i',
+				'category'    => 'command_execution',
+			),
+			array(
+				'id'          => 'pcntl_exec',
+				'severity'    => 'critical',
+				'title'       => 'PCNTL Execution',
+				'description' => 'pcntl_exec() process execution',
+				'pattern'     => '/pcntl_exec\s*\(/i',
+				'category'    => 'command_execution',
+			),
+			array(
+				'id'          => 'eval_gzuncompress',
+				'severity'    => 'critical',
+				'title'       => 'Eval with Compression',
+				'description' => 'eval(gzuncompress()) malware pattern',
+				'pattern'     => '/eval\s*\(\s*gzuncompress\s*\(/i',
+				'category'    => 'obfuscation',
+			),
+			array(
+				'id'          => 'eval_strrev',
+				'severity'    => 'high',
+				'title'       => 'Eval with String Reverse',
+				'description' => 'eval(strrev()) obfuscation',
+				'pattern'     => '/eval\s*\(\s*strrev\s*\(/i',
+				'category'    => 'obfuscation',
+			),
+			array(
+				'id'          => 'base64_shell',
+				'severity'    => 'critical',
+				'title'       => 'Base64 Encoded Shell',
+				'description' => 'Shell command in base64',
+				'pattern'     => '/base64_decode\s*\([\'"][A-Za-z0-9+\/=]{100,}[\'"]\)/i',
+				'category'    => 'obfuscation',
+			),
+
+			// File Inclusion Attacks
+			array(
+				'id'          => 'include_remote',
+				'severity'    => 'critical',
+				'title'       => 'Remote File Inclusion',
+				'description' => 'Including files via HTTP/FTP',
+				'pattern'     => '/(include|require|include_once|require_once)\s*\(\s*[\'"]https?:\/\//i',
+				'category'    => 'file_inclusion',
+			),
+			array(
+				'id'          => 'include_input',
+				'severity'    => 'high',
+				'title'       => 'User Input in Include',
+				'description' => 'Including files from user input',
+				'pattern'     => '/(include|require)\s*\(\s*\$_(GET|POST|REQUEST)/i',
+				'category'    => 'file_inclusion',
+			),
+
+			// Database Attacks
+			array(
+				'id'          => 'sql_union',
+				'severity'    => 'high',
+				'title'       => 'SQL UNION Attack',
+				'description' => 'UNION-based SQL injection pattern',
+				'pattern'     => '/UNION\s+(ALL\s+)?SELECT/i',
+				'category'    => 'sql_injection',
+			),
+			array(
+				'id'          => 'sql_drop',
+				'severity'    => 'critical',
+				'title'       => 'SQL DROP Statement',
+				'description' => 'Destructive SQL DROP command',
+				'pattern'     => '/DROP\s+(TABLE|DATABASE|INDEX)/i',
+				'category'    => 'sql_injection',
+			),
+
+			// Encoding/Decoding
+			array(
+				'id'          => 'chr_obfuscation',
+				'severity'    => 'medium',
+				'title'       => 'Chr() Obfuscation',
+				'description' => 'Multiple chr() for obfuscation',
+				'pattern'     => '/(chr\s*\(\s*\d+\s*\)\s*\.?\s*){5,}/i',
+				'category'    => 'obfuscation',
+			),
+			array(
+				'id'          => 'ord_decode',
+				'severity'    => 'medium',
+				'title'       => 'Ord() String Decode',
+				'description' => 'String decoding via ord()',
+				'pattern'     => '/ord\s*\(\s*substr/i',
+				'category'    => 'obfuscation',
+			),
+
+			// Network Patterns
+			array(
+				'id'          => 'fsockopen',
+				'severity'    => 'medium',
+				'title'       => 'Socket Connection',
+				'description' => 'fsockopen() network connection',
+				'pattern'     => '/fsockopen\s*\(/i',
+				'category'    => 'network',
+			),
+			array(
+				'id'          => 'stream_socket',
+				'severity'    => 'medium',
+				'title'       => 'Stream Socket',
+				'description' => 'stream_socket_client() connection',
+				'pattern'     => '/stream_socket_client\s*\(/i',
+				'category'    => 'network',
+			),
+
+			// Spam/SEO Injection
+			array(
+				'id'          => 'hidden_links',
+				'severity'    => 'medium',
+				'title'       => 'Hidden Links Injection',
+				'description' => 'Hidden spam links pattern',
+				'pattern'     => '/style\s*=\s*[\'"].*display\s*:\s*none.*<a\s+href/is',
+				'category'    => 'spam',
+			),
+			array(
+				'id'          => 'seo_spam',
+				'severity'    => 'medium',
+				'title'       => 'SEO Spam Keywords',
+				'description' => 'Common pharma/casino spam',
+				'pattern'     => '/(viagra|cialis|casino|poker|porn)\s*</i',
+				'category'    => 'spam',
+			),
+
+			// Crypto Miners
+			array(
+				'id'          => 'crypto_miner',
+				'severity'    => 'high',
+				'title'       => 'Cryptocurrency Miner',
+				'description' => 'Crypto mining script detected',
+				'pattern'     => '/(coinhive|cryptonight|minero|coin-?hive)/i',
+				'category'    => 'cryptominer',
+			),
+			array(
+				'id'          => 'crypto_webminer',
+				'severity'    => 'high',
+				'title'       => 'Web Miner Script',
+				'description' => 'Browser-based mining script',
+				'pattern'     => '/(CoinHive\.Anonymous|CryptoLoot|deepMiner)/i',
+				'category'    => 'cryptominer',
+			),
+
+			// WordPress Specific
+			array(
+				'id'          => 'wp_user_create',
+				'severity'    => 'high',
+				'title'       => 'Backdoor User Creation',
+				'description' => 'Suspicious admin user creation',
+				'pattern'     => '/wp_insert_user\s*\(\s*array\s*\(\s*[\'"]user_login[\'"]\s*=>/i',
+				'category'    => 'backdoor',
+			),
+			array(
+				'id'          => 'wp_options_inject',
+				'severity'    => 'high',
+				'title'       => 'Options Table Injection',
+				'description' => 'Direct options table manipulation',
+				'pattern'     => '/update_option\s*\(\s*[\'"]active_plugins[\'"]/i',
+				'category'    => 'backdoor',
+			),
+			array(
+				'id'          => 'theme_header_inject',
+				'severity'    => 'high',
+				'title'       => 'Theme Header Injection',
+				'description' => 'Injected code in theme header',
+				'pattern'     => '/<\?php\s+\/\*\*\s*\n\s*\*\s*@package.*\*\/\s*\n.*eval\s*\(/is',
+				'category'    => 'injection',
+			),
+
+			// Obfuscation Techniques
+			array(
+				'id'          => 'variable_function',
+				'severity'    => 'high',
+				'title'       => 'Variable Function Call',
+				'description' => 'Dynamic function via variable',
+				'pattern'     => '/\$[a-zA-Z_][a-zA-Z0-9_]*\s*\(\s*\$_(GET|POST|REQUEST)/i',
+				'category'    => 'obfuscation',
+			),
+			array(
+				'id'          => 'call_user_func_array',
+				'severity'    => 'high',
+				'title'       => 'Dynamic Function Array Call',
+				'description' => 'call_user_func_array with user input',
+				'pattern'     => '/call_user_func(_array)?\s*\(\s*\$_(GET|POST|REQUEST)/i',
+				'category'    => 'obfuscation',
+			),
+			array(
+				'id'          => 'preg_callback',
+				'severity'    => 'high',
+				'title'       => 'Preg Callback Execution',
+				'description' => 'Code execution via preg callback',
+				'pattern'     => '/preg_replace_callback\s*\(.*\$_(GET|POST|REQUEST)/i',
+				'category'    => 'obfuscation',
+			),
+
+			// File Operations
+			array(
+				'id'          => 'fwrite_php',
+				'severity'    => 'high',
+				'title'       => 'PHP File Write',
+				'description' => 'Writing PHP code to file',
+				'pattern'     => '/fwrite\s*\([^,]+,\s*[\'"]<\?php/i',
+				'category'    => 'file_operation',
+			),
+			array(
+				'id'          => 'move_uploaded',
+				'severity'    => 'medium',
+				'title'       => 'File Upload Handler',
+				'description' => 'move_uploaded_file() operation',
+				'pattern'     => '/move_uploaded_file\s*\(/i',
+				'category'    => 'file_operation',
+			),
+			array(
+				'id'          => 'chmod_operation',
+				'severity'    => 'medium',
+				'title'       => 'Permission Change',
+				'description' => 'chmod() permission modification',
+				'pattern'     => '/chmod\s*\(\s*[^,]+,\s*0?7[0-7]{2}\s*\)/i',
+				'category'    => 'file_operation',
+			),
+
+			// Mailer Abuse
+			array(
+				'id'          => 'mail_injection',
+				'severity'    => 'high',
+				'title'       => 'Mail Header Injection',
+				'description' => 'Email header injection attempt',
+				'pattern'     => '/mail\s*\([^,]+,\s*\$_(GET|POST|REQUEST)/i',
+				'category'    => 'spam',
+			),
+			array(
+				'id'          => 'mass_mailer',
+				'severity'    => 'high',
+				'title'       => 'Mass Mailer Script',
+				'description' => 'Bulk email sending script',
+				'pattern'     => '/(PHPMailer|SwiftMailer).*while.*mail\s*\(/is',
+				'category'    => 'spam',
+			),
+
+			// Iframe Injection
+			array(
+				'id'          => 'hidden_iframe',
+				'severity'    => 'high',
+				'title'       => 'Hidden Iframe',
+				'description' => 'Zero-size hidden iframe',
+				'pattern'     => '/<iframe[^>]*(width|height)\s*=\s*[\'"]?0/i',
+				'category'    => 'injection',
+			),
+			array(
+				'id'          => 'iframe_inject',
+				'severity'    => 'high',
+				'title'       => 'Iframe Injection',
+				'description' => 'Dynamically injected iframe',
+				'pattern'     => '/document\.write\s*\([^)]*<iframe/i',
+				'category'    => 'injection',
+			),
+
+			// Redirect Attacks
+			array(
+				'id'          => 'js_redirect',
+				'severity'    => 'medium',
+				'title'       => 'JavaScript Redirect',
+				'description' => 'Malicious JS redirect',
+				'pattern'     => '/window\.location\s*=\s*[\'"]https?:\/\/(?!.*wordpress)/i',
+				'category'    => 'redirect',
+			),
+			array(
+				'id'          => 'meta_refresh',
+				'severity'    => 'medium',
+				'title'       => 'Meta Refresh Redirect',
+				'description' => 'Meta tag redirect injection',
+				'pattern'     => '/<meta[^>]*http-equiv\s*=\s*[\'"]refresh[\'"][^>]*url\s*=/i',
+				'category'    => 'redirect',
+			),
+
+			// Information Disclosure
+			array(
+				'id'          => 'phpinfo_call',
+				'severity'    => 'medium',
+				'title'       => 'PHPInfo Disclosure',
+				'description' => 'phpinfo() information leak',
+				'pattern'     => '/phpinfo\s*\(\s*\)/i',
+				'category'    => 'reconnaissance',
+			),
+			array(
+				'id'          => 'error_reporting_off',
+				'severity'    => 'low',
+				'title'       => 'Error Reporting Disabled',
+				'description' => 'Hiding errors (common in malware)',
+				'pattern'     => '/error_reporting\s*\(\s*0\s*\)/i',
+				'category'    => 'evasion',
+			),
+			array(
+				'id'          => 'ini_set_errors',
+				'severity'    => 'low',
+				'title'       => 'Display Errors Modified',
+				'description' => 'Error display manipulation',
+				'pattern'     => '/ini_set\s*\(\s*[\'"]display_errors[\'"]\s*,\s*[\'"]?(0|off|false)/i',
+				'category'    => 'evasion',
+			),
 		);
 	}
 
 	/**
-	 * Fetch latest signatures from Wordfence Intelligence.
+	 * Fetch WordPress vulnerability data from Wordfence Intelligence.
+	 * The scanner feed is ~5-10MB and contains detection info.
 	 *
-	 * @return array|WP_Error Signatures or error.
+	 * @return array|WP_Error Vulnerability data or error.
 	 */
-	public function fetch_remote_signatures() {
-		// Note: Wordfence public vulnerability API gives vulnerability data.
-		// For malware patterns, we use a combination approach.
-		$response = wp_remote_get( self::WORDFENCE_VULN_API, array(
-			'timeout' => 30,
-			'headers' => array(
-				'Accept' => 'application/json',
+	public function fetch_wordfence_vulnerabilities() {
+		$response = wp_remote_get( self::WORDFENCE_SCANNER_API, array(
+			'timeout'   => 60, // Large response needs more time
+			'sslverify' => true,
+			'headers'   => array(
+				'Accept'          => 'application/json',
+				'Accept-Encoding' => 'gzip, deflate',
+				'User-Agent'      => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION . ' (WordPress Security Plugin)',
 			),
 		) );
 
@@ -319,115 +652,294 @@ class NexifyMy_Security_Signature_Updater {
 
 		$code = wp_remote_retrieve_response_code( $response );
 		if ( $code !== 200 ) {
-			return new WP_Error( 'api_error', 'API returned status ' . $code );
+			return new WP_Error( 'api_error', 'Wordfence API returned status ' . $code );
 		}
 
-		$body = json_decode( wp_remote_retrieve_body( $response ), true );
-
-		if ( ! is_array( $body ) ) {
-			return new WP_Error( 'parse_error', 'Could not parse API response' );
+		$body = wp_remote_retrieve_body( $response );
+		if ( empty( $body ) ) {
+			return new WP_Error( 'empty_response', 'Wordfence API returned empty response' );
 		}
 
-		return $body;
+		$data = json_decode( $body, true );
+		if ( json_last_error() !== JSON_ERROR_NONE ) {
+			return new WP_Error( 'parse_error', 'JSON parse error: ' . json_last_error_msg() );
+		}
+
+		if ( ! is_array( $data ) ) {
+			return new WP_Error( 'invalid_data', 'Wordfence API returned invalid data format' );
+		}
+
+		return $data;
 	}
 
 	/**
-	 * Update signatures from remote source.
+	 * Fetch malware regex patterns from scr34m/php-malware-scanner (community project).
+	 * This file contains ~50 regex patterns for detecting PHP malware.
+	 *
+	 * @return array|WP_Error Pattern array or error.
+	 */
+	public function fetch_malware_patterns() {
+		$response = wp_remote_get( self::MALWARE_PATTERNS_URL, array(
+			'timeout'   => 30,
+			'sslverify' => true,
+			'headers'   => array(
+				'Accept'     => 'text/plain',
+				'User-Agent' => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION,
+			),
+		) );
+
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
+
+		$code = wp_remote_retrieve_response_code( $response );
+		if ( $code !== 200 ) {
+			return new WP_Error( 'api_error', 'Malware patterns fetch returned status ' . $code );
+		}
+
+		$body = wp_remote_retrieve_body( $response );
+		if ( empty( $body ) ) {
+			return new WP_Error( 'empty_response', 'No malware patterns received' );
+		}
+
+		// Parse the patterns file (one regex per line)
+		$lines = explode( "\n", $body );
+		$patterns = array();
+		$count = 0;
+
+		foreach ( $lines as $line ) {
+			$line = trim( $line );
+
+			// Skip empty lines
+			if ( empty( $line ) ) {
+				continue;
+			}
+
+			// Validate it looks like a regex (basic check)
+			if ( strlen( $line ) < 3 ) {
+				continue;
+			}
+
+			// Wrap the pattern with delimiters for PHP preg_match
+			$php_pattern = '/' . str_replace( '/', '\\/', $line ) . '/i';
+
+			// Test if it's a valid regex
+			if ( @preg_match( $php_pattern, '' ) === false ) {
+				continue; // Skip invalid patterns
+			}
+
+			$patterns[] = array(
+				'id'          => 'pms_' . $count,
+				'severity'    => $this->guess_pattern_severity( $line ),
+				'title'       => 'Community Pattern #' . ( $count + 1 ),
+				'description' => 'Malware signature from php-malware-scanner',
+				'pattern'     => $php_pattern,
+				'category'    => 'community_malware',
+				'source'      => 'php-malware-scanner',
+			);
+			$count++;
+		}
+
+		return $patterns;
+	}
+
+	/**
+	 * Guess severity based on pattern content.
+	 *
+	 * @param string $pattern Regex pattern.
+	 * @return string Severity level.
+	 */
+	private function guess_pattern_severity( $pattern ) {
+		$critical_indicators = array( 'eval', 'exec', 'shell', 'passthru', 'system', 'base64_decode', 'proc_open' );
+		$high_indicators = array( 'file_put_contents', 'fwrite', 'curl', 'fsockopen', 'popen' );
+
+		$pattern_lower = strtolower( $pattern );
+
+		foreach ( $critical_indicators as $indicator ) {
+			if ( strpos( $pattern_lower, $indicator ) !== false ) {
+				return 'critical';
+			}
+		}
+
+		foreach ( $high_indicators as $indicator ) {
+			if ( strpos( $pattern_lower, $indicator ) !== false ) {
+				return 'high';
+			}
+		}
+
+		return 'medium';
+	}
+
+	/**
+	 * Update signatures from all remote sources.
 	 *
 	 * @return array Update result.
 	 */
 	public function update_signatures() {
-		$remote = $this->fetch_remote_signatures();
+		// Initialize built-in patterns
+		$this->define_builtin_patterns();
 
 		$result = array(
-			'updated_at'      => current_time( 'mysql' ),
-			'source'          => 'wordfence_intelligence',
-			'builtin_count'   => count( $this->builtin_patterns ),
-			'remote_count'    => 0,
-			'total_count'     => count( $this->builtin_patterns ),
-			'success'         => false,
-			'error'           => null,
+			'updated_at'           => current_time( 'mysql' ),
+			'sources'              => array(),
+			'builtin_count'        => count( $this->builtin_patterns ),
+			'vulnerability_count'  => 0,
+			'malware_pattern_count' => 0,
+			'total_signatures'     => count( $this->builtin_patterns ),
+			'success'              => false,
+			'errors'               => array(),
 		);
 
-		if ( is_wp_error( $remote ) ) {
-			$result['error'] = $remote->get_error_message();
-			$result['source'] = 'builtin_only';
+		$all_patterns = $this->builtin_patterns;
 
-			// Store built-in patterns as fallback.
-			$this->store_signatures( $this->builtin_patterns );
+		// ── Source 1: Wordfence Vulnerability Data ──
+		$wordfence_data = $this->fetch_wordfence_vulnerabilities();
+		if ( is_wp_error( $wordfence_data ) ) {
+			$result['errors']['wordfence'] = $wordfence_data->get_error_message();
 		} else {
-			// Process remote vulnerabilities into scannable patterns.
-			$remote_patterns = $this->process_remote_data( $remote );
-			$result['remote_count'] = count( $remote_patterns );
+			// Process Wordfence data - root is object with UUID keys
+			$vuln_data = $this->process_wordfence_data( $wordfence_data );
+			$result['vulnerability_count'] = count( $vuln_data['vulnerabilities'] );
+			$result['sources'][] = 'wordfence_intelligence';
 
-			// Merge with built-in patterns.
-			$all_patterns = array_merge( $this->builtin_patterns, $remote_patterns );
-			$result['total_count'] = count( $all_patterns );
-			$result['success'] = true;
+			// Store vulnerability data separately (for version checking)
+			update_option( self::VULN_OPTION, array(
+				'count'      => count( $vuln_data['vulnerabilities'] ),
+				'updated_at' => current_time( 'mysql' ),
+				'plugins'    => $vuln_data['affected_plugins'],
+				'themes'     => $vuln_data['affected_themes'],
+			), false );
 
-			$this->store_signatures( $all_patterns );
+			// Add vulnerability-based patterns
+			$all_patterns = array_merge( $all_patterns, $vuln_data['patterns'] );
 		}
 
-		// Update timestamp.
-		update_option( self::LAST_UPDATE_OPTION, $result, false );
-		
-		// Update Dashboard Stats Options
-		update_option( 'nexifymy_signature_version', '1.0.' . date('ymd') );
-		update_option( 'nexifymy_signature_last_update', current_time( 'mysql' ) );
-		update_option( 'nexifymy_signature_count', $result['total_count'] );
+		// ── Source 2: Community Malware Patterns ──
+		$malware_patterns = $this->fetch_malware_patterns();
+		if ( is_wp_error( $malware_patterns ) ) {
+			$result['errors']['malware_patterns'] = $malware_patterns->get_error_message();
+		} else {
+			$result['malware_pattern_count'] = count( $malware_patterns );
+			$result['sources'][] = 'php_malware_finder';
+			$all_patterns = array_merge( $all_patterns, $malware_patterns );
+		}
 
-		// Log the update.
+		// ── Store Combined Results ──
+		$result['total_signatures'] = count( $all_patterns );
+		$result['success'] = ! empty( $result['sources'] ) || count( $this->builtin_patterns ) > 0;
+
+		// Store signatures
+		$this->store_signatures( $all_patterns );
+
+		// Update metadata options
+		update_option( self::LAST_UPDATE_OPTION, $result, false );
+		update_option( 'nexifymy_signature_version', '2.0.' . date( 'ymd.His' ), false );
+		update_option( 'nexifymy_signature_last_update', current_time( 'mysql' ), false );
+		update_option( 'nexifymy_signature_count', $result['total_signatures'], false );
+
+		// Log the update
 		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
-			NexifyMy_Security_Logger::log(
-				'signatures_updated',
-				sprintf( 'Malware signatures updated: %d total patterns', $result['total_count'] ),
-				'info',
-				$result
+			$log_msg = sprintf(
+				'Signatures updated: %d builtin + %d vulnerabilities + %d malware patterns = %d total',
+				$result['builtin_count'],
+				$result['vulnerability_count'],
+				$result['malware_pattern_count'],
+				$result['total_signatures']
 			);
+			NexifyMy_Security_Logger::log( 'signatures_updated', $log_msg, 'info', $result );
 		}
 
 		return $result;
 	}
 
 	/**
-	 * Process remote vulnerability data into scannable patterns.
+	 * Process Wordfence vulnerability data.
+	 * The API returns an object where keys are UUIDs and values are vulnerability records.
 	 *
-	 * @param array $data Remote API data.
-	 * @return array Processed patterns.
+	 * @param array $data Raw API response (object with UUID keys).
+	 * @return array Processed data with vulnerabilities, patterns, affected plugins/themes.
 	 */
-	private function process_remote_data( $data ) {
-		$patterns = array();
+	private function process_wordfence_data( $data ) {
+		$result = array(
+			'vulnerabilities'  => array(),
+			'patterns'         => array(),
+			'affected_plugins' => array(),
+			'affected_themes'  => array(),
+		);
 
-		// Wordfence vulnerability API provides plugin/theme vulnerability info.
-		// We convert relevant entries into detection patterns.
-		if ( isset( $data['vulnerabilities'] ) && is_array( $data['vulnerabilities'] ) ) {
-			foreach ( $data['vulnerabilities'] as $vuln ) {
-				if ( empty( $vuln['software'] ) ) {
+		// Wordfence scanner feed: root is object with UUID keys
+		// Each entry has: id, title, software (array), cvss, cwe, etc.
+		foreach ( $data as $uuid => $vuln ) {
+			// Skip if no software info
+			if ( empty( $vuln['software'] ) || ! is_array( $vuln['software'] ) ) {
+				continue;
+			}
+
+			$severity = 'medium';
+			if ( isset( $vuln['cvss']['score'] ) ) {
+				$severity = $this->map_cvss_to_severity( (float) $vuln['cvss']['score'] );
+			}
+
+			// Process each affected software
+			foreach ( $vuln['software'] as $software ) {
+				if ( empty( $software['slug'] ) ) {
 					continue;
 				}
 
-				// Create a pattern for vulnerable plugin/theme detection.
-				foreach ( $vuln['software'] as $software ) {
-					if ( empty( $software['slug'] ) ) {
-						continue;
-					}
+				$slug = sanitize_key( $software['slug'] );
+				$type = isset( $software['type'] ) ? $software['type'] : 'plugin';
 
-					$patterns[] = array(
-						'id'          => 'vuln_' . sanitize_key( $software['slug'] ),
-						'severity'    => $this->map_cvss_to_severity( $vuln['cvss']['score'] ?? 5 ),
-						'title'       => $vuln['title'] ?? 'Known Vulnerability',
-						'description' => $vuln['description'] ?? '',
-						'type'        => 'vulnerability',
-						'software'    => $software['slug'],
-						'affected'    => $software['affected_versions'] ?? '*',
-						'patched'     => $software['patched_versions'] ?? null,
-						'cve'         => $vuln['cve'] ?? null,
+				// Track affected software
+				if ( $type === 'theme' ) {
+					$result['affected_themes'][ $slug ] = array(
+						'affected' => $software['affected_versions'] ?? '*',
+						'patched'  => $software['patched_versions'] ?? null,
+					);
+				} else {
+					$result['affected_plugins'][ $slug ] = array(
+						'affected' => $software['affected_versions'] ?? '*',
+						'patched'  => $software['patched_versions'] ?? null,
 					);
 				}
+
+				// Store vulnerability record
+				$result['vulnerabilities'][] = array(
+					'uuid'        => $uuid,
+					'slug'        => $slug,
+					'type'        => $type,
+					'title'       => $vuln['title'] ?? 'Unknown Vulnerability',
+					'description' => $vuln['description'] ?? '',
+					'severity'    => $severity,
+					'cvss_score'  => $vuln['cvss']['score'] ?? null,
+					'cwe'         => $vuln['cwe']['id'] ?? null,
+					'affected'    => $software['affected_versions'] ?? '*',
+					'patched'     => $software['patched_versions'] ?? null,
+					'references'  => $vuln['references'] ?? array(),
+				);
+
+				// Create detection pattern for version checking
+				// This helps scanner identify vulnerable versions
+				$result['patterns'][] = array(
+					'id'          => 'vuln_' . $slug . '_' . substr( $uuid, 0, 8 ),
+					'severity'    => $severity,
+					'title'       => $vuln['title'] ?? 'Vulnerable Software',
+					'description' => sprintf(
+						'%s %s - Affected versions: %s',
+						ucfirst( $type ),
+						$slug,
+						$software['affected_versions'] ?? 'unknown'
+					),
+					'type'        => 'vulnerability',
+					'software'    => $slug,
+					'software_type' => $type,
+					'affected'    => $software['affected_versions'] ?? '*',
+					'patched'     => $software['patched_versions'] ?? null,
+					'cve'         => isset( $vuln['cve'] ) ? $vuln['cve'] : null,
+				);
 			}
 		}
 
-		return $patterns;
+		return $result;
 	}
 
 	/**
@@ -548,9 +1060,10 @@ class NexifyMy_Security_Signature_Updater {
 	 */
 	public function get_status() {
 		$last_update = get_option( self::LAST_UPDATE_OPTION, array() );
+		$vuln_data = get_option( self::VULN_OPTION, array() );
 		$signatures = $this->get_signatures();
 
-		// Count by severity.
+		// Count by severity
 		$by_severity = array(
 			'critical' => 0,
 			'high'     => 0,
@@ -558,18 +1071,39 @@ class NexifyMy_Security_Signature_Updater {
 			'low'      => 0,
 		);
 
+		// Count by category
+		$by_category = array(
+			'malware'        => 0,
+			'vulnerability'  => 0,
+			'community'      => 0,
+		);
+
 		foreach ( $signatures as $sig ) {
-			$sev = $sig['severity'] ?? 'low';
+			$sev = isset( $sig['severity'] ) ? $sig['severity'] : 'low';
 			if ( isset( $by_severity[ $sev ] ) ) {
 				$by_severity[ $sev ]++;
+			}
+
+			// Categorize
+			if ( isset( $sig['type'] ) && $sig['type'] === 'vulnerability' ) {
+				$by_category['vulnerability']++;
+			} elseif ( isset( $sig['source'] ) && $sig['source'] === 'php-malware-finder' ) {
+				$by_category['community']++;
+			} else {
+				$by_category['malware']++;
 			}
 		}
 
 		return array(
-			'total_signatures' => count( $signatures ),
-			'by_severity'      => $by_severity,
-			'last_update'      => $last_update,
-			'next_update'      => wp_next_scheduled( 'nexifymy_update_signatures' ),
+			'total_signatures'    => count( $signatures ),
+			'by_severity'         => $by_severity,
+			'by_category'         => $by_category,
+			'vulnerability_count' => isset( $vuln_data['count'] ) ? $vuln_data['count'] : 0,
+			'affected_plugins'    => isset( $vuln_data['plugins'] ) ? count( $vuln_data['plugins'] ) : 0,
+			'affected_themes'     => isset( $vuln_data['themes'] ) ? count( $vuln_data['themes'] ) : 0,
+			'last_update'         => $last_update,
+			'next_update'         => wp_next_scheduled( 'nexifymy_update_signatures' ),
+			'version'             => get_option( 'nexifymy_signature_version', '1.0.0' ),
 		);
 	}
 
@@ -589,8 +1123,55 @@ class NexifyMy_Security_Signature_Updater {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
+		// Increase memory/time for large fetches
+		if ( function_exists( 'wp_raise_memory_limit' ) ) {
+			wp_raise_memory_limit( 'admin' );
+		}
+		set_time_limit( 120 );
+
 		$result = $this->update_signatures();
-		wp_send_json_success( $result );
+
+		// Format response for UI
+		$response = array(
+			'success'              => $result['success'],
+			'total_count'          => $result['total_signatures'],
+			'builtin_count'        => $result['builtin_count'],
+			'vulnerability_count'  => $result['vulnerability_count'],
+			'malware_pattern_count' => $result['malware_pattern_count'],
+			'sources'              => $result['sources'],
+			'updated_at'           => $result['updated_at'],
+			'version'              => get_option( 'nexifymy_signature_version', '1.0.0' ),
+			'errors'               => $result['errors'],
+			'message'              => $this->format_update_message( $result ),
+		);
+
+		wp_send_json_success( $response );
+	}
+
+	/**
+	 * Format a human-readable update message.
+	 *
+	 * @param array $result Update result.
+	 * @return string Message.
+	 */
+	private function format_update_message( $result ) {
+		$parts = array();
+
+		if ( $result['builtin_count'] > 0 ) {
+			$parts[] = $result['builtin_count'] . ' built-in patterns';
+		}
+		if ( $result['vulnerability_count'] > 0 ) {
+			$parts[] = $result['vulnerability_count'] . ' WordPress vulnerabilities (Wordfence)';
+		}
+		if ( $result['malware_pattern_count'] > 0 ) {
+			$parts[] = $result['malware_pattern_count'] . ' community malware signatures';
+		}
+
+		if ( empty( $parts ) ) {
+			return 'No signatures loaded.';
+		}
+
+		return 'Loaded: ' . implode( ', ', $parts ) . '. Total: ' . $result['total_signatures'] . ' signatures.';
 	}
 
 	/**
