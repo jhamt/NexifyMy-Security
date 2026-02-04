@@ -2,6 +2,12 @@
 /**
  * Security Logging Module.
  * Creates custom DB table and logs all security events.
+ *
+ * DEV NOTES:
+ * This module is responsible for the persistent storage of security events.
+ * it manages the `nexifymy_security_logs` table and handles log rotation/purging.
+ * Last Updated: 2026-02-04
+ * Version: 2.0.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
