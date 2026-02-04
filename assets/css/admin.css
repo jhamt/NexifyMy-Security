@@ -1,8 +1,14 @@
 /**
  * NexifyMy Security Admin Styles
- * Enterprise Security Dashboard - v2.0
+ * Enterprise Security Dashboard - v2.0.6
  * Professional design inspired by Wordfence, Sucuri, iThemes
+ *
+ * DEV NOTES:
+ * This stylesheet handles all UI components, layouts, and animations.
+ * It uses a custom design system with CSS variables for white-labeling.
+ * Version: 2.0.6
  */
+
 
 /* ==========================================================================
    1. DESIGN TOKENS & VARIABLES
@@ -100,6 +106,7 @@
 }
 
 /* Hide WordPress Admin Footer in our plugin pages */
+/* Hide WordPress Admin Footer in our plugin pages */
 .nexifymy-security-wrap ~ #wpfooter,
 .nexifymy-security-wrap ~ .update-nag,
 body.toplevel_page_nexifymy-security #wpfooter,
@@ -109,6 +116,103 @@ body.nexifymy-security_page_nexifymy-security-settings #wpfooter,
 body[class*="nexifymy-security"] #wpfooter {
   display: none !important;
 }
+
+/* ==========================================================================
+   NMS BRANDED NOTICES
+   ========================================================================== */
+/* ==========================================================================
+   NMS BRANDED NOTICES
+   ========================================================================== */
+.nms-admin-notice {
+  background: white !important;
+  border: none !important;
+  border-left: 4px solid var(--nms-primary) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  margin: 20px 0 15px 0 !important;
+  padding: 12px 20px 12px 12px !important; /* Right padding handles dismiss btn */
+  display: flex !important;
+  align-items: center;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.nms-admin-notice.notice-warning {
+  border-left-color: var(--nms-warning) !important;
+}
+
+.nms-admin-notice.notice-error {
+  border-left-color: var(--nms-danger) !important;
+}
+
+.nms-admin-notice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  background: rgba(225, 29, 72, 0.1); 
+  color: var(--nms-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: none;
+}
+
+.nms-admin-notice.notice-warning .nms-admin-notice-icon {
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+}
+
+.nms-admin-notice-icon .dashicons {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.nms-admin-notice-content {
+  flex-grow: 1;
+}
+
+.nms-admin-notice-content p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.nms-admin-notice-content a {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 12px;
+  background: var(--nms-surface);
+  border: 1px solid var(--nms-border);
+  color: var(--nms-primary);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.nms-admin-notice-content a:hover {
+  background: var(--nms-primary);
+  border-color: var(--nms-primary);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(225, 29, 72, 0.2);
+}
+
+/* Ensure dismiss button is positioned correctly */
+.nms-admin-notice .notice-dismiss {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
 
 /* ==========================================================================
    HORIZONTAL NAVIGATION TABS - Purple Pill Style
@@ -124,6 +228,13 @@ body[class*="nexifymy-security"] #wpfooter {
 
 .nms-tab-content {
   display: none;
+  background: var(--nms-bg-card);
+  border: 1px solid var(--nms-border);
+  border-radius: var(--nms-radius-lg);
+  box-shadow: var(--nms-shadow-sm);
+  padding: var(--nms-space-6);
+  margin-top: var(--nms-space-4);
+  overflow: hidden;
 }
 
 .nms-tab-content.active {
@@ -989,6 +1100,11 @@ body[class*="nexifymy-security"] #wpfooter {
   background: var(--nms-gray-100);
 }
 
+.nms-tab:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .nms-tab.active {
   background: #6366f1 !important; /* Premium Purple Pill */
   color: white !important;
@@ -1095,6 +1211,11 @@ body[class*="nexifymy-security"] #wpfooter {
   background: var(--nms-gray-100);
 }
 
+.nms-page-tab:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .nms-page-tab.active {
   background: #6366f1 !important;
   color: white !important;
@@ -1115,6 +1236,8 @@ body[class*="nexifymy-security"] #wpfooter {
 
 .nms-tab-panel.active {
   display: block;
+  border-radius: 0 0 var(--nms-radius-lg) var(--nms-radius-lg);
+  margin-bottom: 2px; /* Prevent bottom border cut-off */
 }
 
 @media (max-width: 600px) {
@@ -1212,6 +1335,11 @@ body[class*="nexifymy-security"] #wpfooter {
   min-width: 0; /* Allows text to truncate */
   text-decoration: none;
   color: inherit;
+}
+
+.nms-module-clickable:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .nms-module-icon {
@@ -1778,6 +1906,11 @@ body[class*="nexifymy-security"] #wpfooter {
   color: inherit;
 }
 
+.nms-action-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .nms-action-btn:hover {
   border-color: var(--nms-primary);
   box-shadow: var(--nms-shadow-sm);
@@ -2133,6 +2266,11 @@ body[class*="nexifymy-security"] #wpfooter {
   cursor: pointer;
 }
 
+.nms-tool-card:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .scan-mode:hover {
   border-color: var(--nms-primary);
   box-shadow: var(--nms-shadow-md);
@@ -2209,6 +2347,63 @@ body[class*="nexifymy-security"] #wpfooter {
   text-transform: uppercase;
   background: var(--nms-info-light);
   color: var(--nms-info);
+}
+
+/* Confidence Level Badges */
+.confidence-high {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--nms-radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--nms-danger-light);
+  color: var(--nms-danger);
+}
+
+.confidence-medium {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--nms-radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--nms-warning-light);
+  color: var(--nms-warning);
+}
+
+.confidence-low {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--nms-radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--nms-gray-200);
+  color: var(--nms-gray-600);
+}
+
+/* Scan Filter Bar */
+.nms-scan-filters select,
+.nms-scan-filters input[type="text"] {
+  padding: 6px 12px;
+  border: 1px solid var(--nms-gray-300);
+  border-radius: var(--nms-radius);
+  font-size: 13px;
+  background: #fff;
+}
+
+.nms-scan-filters select:focus,
+.nms-scan-filters input[type="text"]:focus {
+  outline: none;
+  border-color: var(--nms-primary);
+  box-shadow: 0 0 0 2px var(--nms-primary-light);
+}
+
+#scan-results-table code {
+  font-size: 12px;
+  word-break: break-all;
+}
+
+#scan-results-table td {
+  vertical-align: middle;
 }
 
 /* Status Badges */
@@ -3833,4 +4028,198 @@ body[class*="nexifymy-security"] #wpfooter {
 .nms-progress-status {
   font-size: 13px;
   color: var(--nms-gray-600);
+}
+
+/* Supply Chain Security UI */
+.nms-info-box {
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.nms-info-box strong {
+  display: block;
+  font-size: 24px;
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+.nms-info-box.success strong {
+  color: #10b981;
+}
+
+.nms-info-box.danger strong {
+  color: #ef4444;
+}
+
+.nms-info-box.warning strong {
+  color: #f59e0b;
+}
+
+.nms-section {
+  margin-bottom: 30px;
+}
+
+.nms-section h4 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.nms-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nms-badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.nms-badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.nms-badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.nms-badge-secondary {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.dashicons.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Compliance & Reporting UI */
+.nms-grade-badge {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.nms-grade-badge.nms-grade-a {
+  background: #22c55e;
+}
+
+.nms-grade-badge.nms-grade-b {
+  background: #84cc16;
+}
+
+.nms-grade-badge.nms-grade-c {
+  background: #eab308;
+}
+
+.nms-grade-badge.nms-grade-d {
+  background: #f97316;
+}
+
+.nms-grade-badge.nms-grade-f {
+  background: #ef4444;
+}
+
+.nms-compliance-summary {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.nms-grade-circle {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.nms-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.nms-empty-state .dashicons {
+  font-size: 64px;
+  color: #cbd5e1;
+  width: auto;
+  height: auto;
+}
+
+/* Large Button Style */
+.nms-btn-lg {
+  font-size: 16px;
+  padding: 12px 32px;
+  height: auto;
+}
+
+/* ==========================================================================
+   FINAL POLISH FIXES - v2.0.7
+   ========================================================================== */
+
+/* 1. Ensure main containers have proper rounded corners */
+.nms-card, 
+.nms-tab-panel.active,
+.nms-tab-content {
+  border-radius: var(--nms-radius-lg) !important;
+  /* overflow: hidden; Removed to avoid cutting off dropdowns/tooltips */
+}
+
+/* 2. Fix for cut-off bottom borders in tables 
+   Ensure the container has enough padding at the bottom */
+.nms-card-body,
+.nms-tab-content {
+  padding-bottom: var(--nms-space-5) !important; 
+}
+
+/* 3. Ensure tables have a nice bottom border and don't look cut off */
+.nms-card table.widefat,
+.nms-tab-content table.widefat,
+.nms-tab-content .form-table {
+  border: 1px solid var(--nms-border);
+  border-radius: var(--nms-radius-md);
+  box-shadow: none;
+  border-spacing: 0;
+  overflow: hidden; /* Rounds the corners of the table itself */
+  margin-bottom: 0 !important; /* Let container padding handle spacing */
+}
+
+/* 4. Enhancement: Table Header Styles */
+.nms-card table.widefat thead th,
+.nms-tab-content table.widefat thead th,
+.nms-tab-content .form-table th {
+  color: var(--nms-gray-700);
+  font-weight: 600;
+}
+
+/* 5. Fix form-table alignment and spacing */
+.form-table th {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  vertical-align: top;
+}
+
+.form-table td {
+  padding-bottom: 20px !important;
+  vertical-align: top;
+}
+
+/* 6. Main wrap styling to fix overall corners if needed */
+.wrap.nexifymy-security-wrap {
+    border-radius: var(--nms-radius-lg);
 }
