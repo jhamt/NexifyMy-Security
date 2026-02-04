@@ -2,6 +2,12 @@
 /**
  * Admin Notifications Module.
  * Surfaces high-severity security log events as unread "alerts" in the WP admin.
+ *
+ * DEV NOTES:
+ * This module queries the security logs for unread critical/warning events.
+ * It provides an admin bar icon and a custom branded notice for alerts.
+ * Last Updated: 2026-02-04
+ * Version: 2.0.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -164,7 +170,7 @@ class NexifyMy_Security_Notifications {
 
 	/**
 	 * Show a lightweight admin notice if there are unread critical/warning alerts.
-	 * Shows in the standard WordPress admin notice area on all admin pages.
+	 * Redesigned with custom branding and separate look.
 	 */
 	public function maybe_show_admin_notice() {
 		if ( ! current_user_can( 'manage_options' ) ) {
@@ -173,7 +179,7 @@ class NexifyMy_Security_Notifications {
 
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 		
-		// Don't show on notifications page itself (user is already viewing them).
+		// Don't show on notifications page itself.
 		if ( $screen && isset( $screen->id ) && strpos( $screen->id, 'nexifymy-security-notifications' ) !== false ) {
 			return;
 		}
@@ -184,16 +190,24 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$url = admin_url( 'admin.php?page=nexifymy-security-notifications' );
-		printf(
-			'<div class="notice notice-warning"><p>%s</p></div>',
-			wp_kses_post(
-				sprintf(
-					__( 'NexifyMy Security: You have %1$d unread security alert(s). <a href="%2$s">View notifications</a>.', 'nexifymy-security' ),
-					(int) $count,
-					esc_url( $url )
-				)
-			)
-		);
+		?>
+		<div class="notice notice-warning nms-admin-notice is-dismissible">
+			<div class="nms-admin-notice-icon">
+				<span class="dashicons dashicons-shield-alt"></span>
+			</div>
+			<div class="nms-admin-notice-content">
+				<p>
+					<?php 
+					printf(
+						__( 'NexifyMy Security: You have %d unread security alert(s).', 'nexifymy-security' ),
+						(int) $count
+					); 
+					?>
+					<a href="<?php echo esc_url( $url ); ?>"><?php _e( 'Review Alerts &rsaquo;', 'nexifymy-security' ); ?></a>
+				</p>
+			</div>
+		</div>
+		<?php
 	}
 
 	/**
