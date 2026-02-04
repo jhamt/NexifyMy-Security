@@ -475,6 +475,8 @@ class NexifyMy_Security_Scanner {
 			wp_send_json_error( 'Scanner module is disabled. Please enable it in Settings > Modules.' );
 		}
 
+		// Reload signatures to ensure we have the latest definitions
+		$this->load_signatures();
 		$this->load_scanner_settings();
 
 		$mode = isset( $_POST['mode'] ) ? sanitize_key( $_POST['mode'] ) : '';
@@ -983,6 +985,8 @@ class NexifyMy_Security_Scanner {
 						$threats[] = array(
 							'rule'        => $key,
 							'severity'    => $rule['severity'],
+							'category'    => isset( $rule['category'] ) ? $rule['category'] : 'malware',
+							'title'       => isset( $rule['title'] ) ? $rule['title'] : $key,
 							'description' => $rule['description'],
 							'line'        => $line_num + 1,
 						);
@@ -997,6 +1001,8 @@ class NexifyMy_Security_Scanner {
 				$threats[] = array(
 					'rule'        => $key,
 					'severity'    => $rule['severity'],
+					'category'    => isset( $rule['category'] ) ? $rule['category'] : 'malware',
+					'title'       => isset( $rule['title'] ) ? $rule['title'] : $key,
 					'description' => $rule['description'],
 				);
 			}
@@ -1046,6 +1052,8 @@ class NexifyMy_Security_Scanner {
 								'file'         => $relative_path,
 								'rule'         => $key,
 								'severity'     => $rule['severity'],
+								'category'     => isset( $rule['category'] ) ? $rule['category'] : 'malware',
+								'title'        => isset( $rule['title'] ) ? $rule['title'] : $key,
 								'description'  => $rule['description'],
 								'line'         => $line_num + 1,
 								'confidence'   => $confidence,
@@ -1071,6 +1079,8 @@ class NexifyMy_Security_Scanner {
 						'file'         => $relative_path,
 						'rule'         => $key,
 						'severity'     => $rule['severity'],
+						'category'     => isset( $rule['category'] ) ? $rule['category'] : 'malware',
+						'title'        => isset( $rule['title'] ) ? $rule['title'] : $key,
 						'description'  => $rule['description'],
 						'confidence'   => $confidence,
 						'context'      => $this->get_threat_context( $rule, $is_known_safe, $is_safe_context ),
