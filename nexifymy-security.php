@@ -3,12 +3,18 @@
  * Plugin Name: NexifyMy Security
  * Plugin URI:  https://nexifymy.com/
  * Description: A modern, lightweight, and powerful security plugin for WordPress.
- * Version:     2.0.5
+ * Version:     2.0.6
  * Author:      NexifyMy
  * Author URI:  https://nexifymy.com
  * License:     GPL2
  * Text Domain: nexifymy-security
  * Domain Path: /languages
+ *
+ * DEV NOTES:
+ * This is the main plugin file that initializes all modules and handles activation/deactivation.
+ * It ensures the WAF and Rate Limiter run as early as possible.
+ * Last Updated: 2026-02-04
+ * Version: 2.0.6
  */
 
 // Exit if accessed directly.
@@ -20,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Once activation succeeds, we will re-enable features one by one.
 
 // Define constants.
-define( 'NEXIFYMY_SECURITY_VERSION', '2.0.5' ); // Production release with security enhancements
+define( 'NEXIFYMY_SECURITY_VERSION', '2.0.6' ); // Production release with security enhancements
 define( 'NEXIFYMY_SECURITY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_URL', plugin_dir_url( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
@@ -102,6 +108,37 @@ function nexifymy_security_activate() {
 	// Store activation time first (minimal operation).
 	update_option( 'nexifymy_security_activated', time() );
 
+	// Set up default settings if they don't exist.
+	$existing = get_option( 'nexifymy_security_settings' );
+	if ( false === $existing ) {
+		$defaults = array(
+			'modules' => array(
+				'waf_enabled'             => 1,
+				'scanner_enabled'         => 1,
+				'rate_limiter_enabled'    => 1,
+				'background_scan_enabled' => 1,
+				'live_traffic_enabled'    => 1,
+				'self_protection_enabled' => 1,
+			),
+			'firewall' => array(
+				'enabled'        => true,
+				'block_bad_bots' => true,
+				'block_fake_bots' => true,
+			),
+			'rate_limiter' => array(
+				'enabled'            => true,
+				'max_login_attempts' => 5,
+				'login_window'       => 15,
+				'login_lockout'      => 1800,
+			),
+			'notifications' => array(
+				'enabled' => true,
+				'email'   => get_option( 'admin_email' ),
+			),
+		);
+		update_option( 'nexifymy_security_settings', $defaults, false );
+	}
+
 	// Flush rewrite rules.
 	flush_rewrite_rules();
 
@@ -118,6 +155,7 @@ function nexifymy_security_activate() {
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
 	$bg_scanner->schedule_scan( 'daily' );
 }
+
 
 /**
  * Plugin deactivation.
@@ -196,7 +234,12 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_notifications'] = new NexifyMy_Security_Notifications();
 	$GLOBALS['nexifymy_notifications']->init();
 
-	// Load Scanner.
+	// Load Signature Updater BEFORE scanner (scanner depends on signatures).
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
+	$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
+	$GLOBALS['nexifymy_signatures']->init();
+
+	// Load Scanner (uses signatures from above).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/scanner.php';
 	$GLOBALS['nexifymy_scanner'] = new NexifyMy_Security_Scanner();
 	$GLOBALS['nexifymy_scanner']->init();
@@ -245,11 +288,6 @@ function nexifymy_security_init() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
 	$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
 	$GLOBALS['nexifymy_core_repair']->init();
-
-	// Load Signature Updater (before scanner).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
-	$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
-	$GLOBALS['nexifymy_signatures']->init();
 
 	// Load Performance Optimizer (for caching and throttling).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/performance-optimizer.php';
@@ -358,3 +396,5 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_settings']->init();
 	}
 }
+
+
