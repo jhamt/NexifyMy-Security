@@ -379,7 +379,8 @@ class NexifyMy_Security_Settings {
 	public static function set( $group, $key, $value ) {
 		$settings = self::get_all();
 		$settings[ $group ][ $key ] = $value;
-		return update_option( self::OPTION_KEY, $settings );
+		// Use autoload=false for security (like Sucuri/WP Defender)
+		return update_option( self::OPTION_KEY, $settings, false );
 	}
 
 	/**
@@ -391,7 +392,8 @@ class NexifyMy_Security_Settings {
 	public static function update( $new_settings ) {
 		$settings = self::get_all();
 		$settings = self::array_merge_recursive_distinct( $settings, $new_settings );
-		return update_option( self::OPTION_KEY, $settings );
+		// Use autoload=false for security (like Sucuri/WP Defender)
+		return update_option( self::OPTION_KEY, $settings, false );
 	}
 
 	/**
@@ -400,7 +402,22 @@ class NexifyMy_Security_Settings {
 	 * @return bool
 	 */
 	public static function reset() {
-		return update_option( self::OPTION_KEY, self::$defaults );
+		return update_option( self::OPTION_KEY, self::$defaults, false );
+	}
+
+	/**
+	 * Save settings securely (alias for update with sanitization).
+	 *
+	 * @param array $settings Settings to save.
+	 * @return bool
+	 */
+	public static function save( $settings ) {
+		// Sanitize before saving
+		$instance = new self();
+		$sanitized = $instance->sanitize_settings( $settings );
+		$current = self::get_all();
+		$merged = self::array_merge_recursive_distinct( $current, $sanitized );
+		return update_option( self::OPTION_KEY, $merged, false );
 	}
 
 	/**
