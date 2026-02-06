@@ -597,6 +597,7 @@ class NexifyMy_Security_Compliance {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Security Audit Report - <?php echo esc_html( $report['site_name'] ); ?></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<style>
 		* { margin: 0; padding: 0; box-sizing: border-box; }
 		body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
@@ -638,7 +639,7 @@ class NexifyMy_Security_Compliance {
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>🛡️ Security Audit Report</h1>
+			<h1><i class="fas fa-shield-alt"></i> Security Audit Report</h1>
 			<p><?php echo esc_html( $report['site_name'] ); ?> — <?php echo esc_html( $report['site_url'] ); ?></p>
 			<p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Generated: <?php echo esc_html( $report['generated_at'] ); ?></p>
 		</div>
@@ -673,7 +674,7 @@ class NexifyMy_Security_Compliance {
 					<?php foreach ( $section['checks'] as $check ) : ?>
 					<li class="check-item">
 						<div class="check-status <?php echo $check['passed'] ? 'pass' : 'fail'; ?>">
-							<?php echo $check['passed'] ? '✓' : '✗'; ?>
+							<?php echo $check['passed'] ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'; ?>
 						</div>
 						<div class="check-info">
 							<h4>
