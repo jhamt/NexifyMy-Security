@@ -230,6 +230,8 @@ class NexifyMy_Security_Alerts {
 		}
 	}
 
+
+
 	/**
 	 * Send daily summary email.
 	 */
@@ -270,9 +272,9 @@ class NexifyMy_Security_Alerts {
 		$body .= "  Files Quarantined: {$stats['quarantined']}\n\n";
 
 		if ( $stats['critical'] > 0 || $stats['warning'] > 0 ) {
-			$body .= "⚠️ Action may be required. Review your security logs.\n\n";
+			$body .= "[!] Action may be required. Review your security logs.\n\n";
 		} else {
-			$body .= "✅ Your site appears secure.\n\n";
+			$body .= "[OK] Your site appears secure.\n\n";
 		}
 
 		// Clean up any unexpected leading/binary characters in these status lines.
