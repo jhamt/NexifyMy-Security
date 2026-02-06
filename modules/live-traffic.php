@@ -522,7 +522,177 @@ class NexifyMy_Security_Live_Traffic {
 			'geo_distribution' => $this->get_geo_distribution( 10 ),
 		);
 
+		$data = array(
+			'chart_data' => $this->get_chart_data( $days ),
+			'top_pages' => $this->get_top_pages( 10 ),
+			'top_referrers' => $this->get_top_referrers( 10 ),
+			'geo_distribution' => $this->get_geo_distribution( 10 ),
+			'browser_distribution' => $this->get_browser_distribution( $days ),
+			'os_distribution' => $this->get_os_distribution( $days ),
+			'device_distribution' => $this->get_device_distribution( $days ),
+			'totals' => $this->get_totals( $days ),
+		);
+
 		wp_send_json_success( $data );
+	}
+
+	/**
+	 * Get total stats for the period.
+	 *
+	 * @param int $days Number of days.
+	 * @return array
+	 */
+	private function get_totals( $days = 30 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		$date_limit = gmdate( 'Y-m-d H:i:s', strtotime( "-$days days" ) );
+
+		return array(
+			'total_views' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s", $date_limit ) ),
+			'unique_visitors' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE request_time >= %s", $date_limit ) ),
+			'blocked' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s AND is_blocked = 1", $date_limit ) ),
+		);
+	}
+
+	/**
+	 * Get browser distribution.
+	 *
+	 * @param int $days Number of days.
+	 * @return array
+	 */
+	private function get_browser_distribution( $days = 30 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		
+		// Get all user agents for processing
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
+			GROUP BY user_agent",
+			$days
+		) );
+
+		$browsers = array(
+			'Chrome' => 0,
+			'Firefox' => 0,
+			'Safari' => 0,
+			'Edge' => 0,
+			'Opera' => 0,
+			'Other' => 0,
+		);
+
+		foreach ( $results as $row ) {
+			$ua = $row->user_agent;
+			$count = (int) $row->count;
+
+			if ( stripos( $ua, 'Edg' ) !== false ) {
+				$browsers['Edge'] += $count;
+			} elseif ( stripos( $ua, 'Chrome' ) !== false ) {
+				$browsers['Chrome'] += $count;
+			} elseif ( stripos( $ua, 'Firefox' ) !== false ) {
+				$browsers['Firefox'] += $count;
+			} elseif ( stripos( $ua, 'Safari' ) !== false ) {
+				$browsers['Safari'] += $count;
+			} elseif ( stripos( $ua, 'Opera' ) !== false || stripos( $ua, 'OPR' ) !== false ) {
+				$browsers['Opera'] += $count;
+			} else {
+				$browsers['Other'] += $count;
+			}
+		}
+
+		arsort( $browsers );
+		return $browsers;
+	}
+
+	/**
+	 * Get OS distribution.
+	 *
+	 * @param int $days Number of days.
+	 * @return array
+	 */
+	private function get_os_distribution( $days = 30 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
+			GROUP BY user_agent",
+			$days
+		) );
+
+		$os = array(
+			'Windows' => 0,
+			'Mac OS' => 0,
+			'Linux' => 0,
+			'iOS' => 0,
+			'Android' => 0,
+			'Other' => 0,
+		);
+
+		foreach ( $results as $row ) {
+			$ua = $row->user_agent;
+			$count = (int) $row->count;
+
+			if ( stripos( $ua, 'Windows' ) !== false ) {
+				$os['Windows'] += $count;
+			} elseif ( stripos( $ua, 'Android' ) !== false ) {
+				$os['Android'] += $count;
+			} elseif ( stripos( $ua, 'iPhone' ) !== false || stripos( $ua, 'iPad' ) !== false ) {
+				$os['iOS'] += $count;
+			} elseif ( stripos( $ua, 'Macintosh' ) !== false || stripos( $ua, 'Mac OS' ) !== false ) {
+				$os['Mac OS'] += $count;
+			} elseif ( stripos( $ua, 'Linux' ) !== false ) {
+				$os['Linux'] += $count;
+			} else {
+				$os['Other'] += $count;
+			}
+		}
+
+		arsort( $os );
+		return $os;
+	}
+
+	/**
+	 * Get device distribution.
+	 *
+	 * @param int $days Number of days.
+	 * @return array
+	 */
+	private function get_device_distribution( $days = 30 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		
+		$results = $wpdb->get_results( $wpdb->prepare(
+			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
+			GROUP BY user_agent",
+			$days
+		) );
+
+		$devices = array(
+			'Desktop' => 0,
+			'Mobile' => 0,
+			'Tablet' => 0,
+			'Bot' => 0,
+		);
+
+		foreach ( $results as $row ) {
+			$ua = $row->user_agent;
+			$count = (int) $row->count;
+
+			if ( stripos( $ua, 'bot' ) !== false || stripos( $ua, 'crawl' ) !== false || stripos( $ua, 'slurp' ) !== false || stripos( $ua, 'spider' ) !== false ) {
+				$devices['Bot'] += $count;
+			} elseif ( stripos( $ua, 'mobile' ) !== false || stripos( $ua, 'android' ) !== false || stripos( $ua, 'iphone' ) !== false ) {
+				$devices['Mobile'] += $count;
+			} elseif ( stripos( $ua, 'tablet' ) !== false || stripos( $ua, 'ipad' ) !== false ) {
+				$devices['Tablet'] += $count;
+			} else {
+				$devices['Desktop'] += $count;
+			}
+		}
+
+		return $devices;
 	}
 
 	/**
