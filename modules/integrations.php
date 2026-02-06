@@ -161,7 +161,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_threat_detected( $data ) {
 		$this->dispatch_to_all( 'threat_detected', array(
-			'title'       => '🚨 Threat Detected',
+			'title'       => '[URGENT] Threat Detected',
 			'description' => sprintf( 'AI detected threat from IP: %s (Score: %d)', $data['ip'] ?? 'Unknown', $data['score'] ?? 0 ),
 			'severity'    => 'critical',
 			'data'        => $data,
@@ -170,7 +170,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_login_failed( $username ) {
 		$this->dispatch_to_all( 'login_failed', array(
-			'title'       => '⚠️ Failed Login Attempt',
+			'title'       => '[WARN] Failed Login Attempt',
 			'description' => sprintf( 'Failed login for user: %s from IP: %s', $username, $this->get_client_ip() ),
 			'severity'    => 'warning',
 			'data'        => array( 'username' => $username, 'ip' => $this->get_client_ip() ),
@@ -179,7 +179,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_user_locked( $data ) {
 		$this->dispatch_to_all( 'user_locked', array(
-			'title'       => '🔒 User/IP Locked',
+			'title'       => '[LOCKED] User/IP Locked',
 			'description' => sprintf( 'IP %s has been locked: %s', $data['ip'] ?? 'Unknown', $data['reason'] ?? '' ),
 			'severity'    => 'high',
 			'data'        => $data,
@@ -188,7 +188,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_malware_found( $data ) {
 		$this->dispatch_to_all( 'malware_found', array(
-			'title'       => '🦠 Malware Detected',
+			'title'       => '[MALWARE] Malware Detected',
 			'description' => sprintf( 'Malware found in %d file(s)', count( $data['files'] ?? array() ) ),
 			'severity'    => 'critical',
 			'data'        => $data,
@@ -197,7 +197,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_scan_completed( $data ) {
 		$this->dispatch_to_all( 'scan_completed', array(
-			'title'       => '✅ Scan Completed',
+			'title'       => '[COMPLETED] Scan Completed',
 			'description' => sprintf( 'Security scan finished. Issues: %d', $data['issues'] ?? 0 ),
 			'severity'    => ( $data['issues'] ?? 0 ) > 0 ? 'warning' : 'info',
 			'data'        => $data,
@@ -206,7 +206,7 @@ class NexifyMy_Security_Integrations {
 
 	public function handle_vulnerability_found( $data ) {
 		$this->dispatch_to_all( 'plugin_vulnerability', array(
-			'title'       => '🔓 Vulnerability Found',
+			'title'       => '[VULNERABILITY] Vulnerability Found',
 			'description' => sprintf( 'Vulnerable plugin: %s', $data['plugin'] ?? 'Unknown' ),
 			'severity'    => 'high',
 			'data'        => $data,
