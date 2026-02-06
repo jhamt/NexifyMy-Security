@@ -48,6 +48,11 @@ class NexifyMy_Security_Self_Protection {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		if ( isset( $all_settings['modules']['self_protection_enabled'] ) && ! $all_settings['modules']['self_protection_enabled'] ) {
+			return;
+		}
+
 		$settings = $this->get_settings();
 
 		if ( empty( $settings['enabled'] ) ) {
