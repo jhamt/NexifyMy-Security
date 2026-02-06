@@ -3,7 +3,7 @@
  * Plugin Name: NexifyMy Security
  * Plugin URI:  https://nexifymy.com/
  * Description: A modern, lightweight, and powerful security plugin for WordPress.
- * Version:     2.0.6
+ * Version:     2.1.0
  * Author:      NexifyMy
  * Author URI:  https://nexifymy.com
  * License:     GPL2
@@ -13,8 +13,7 @@
  * DEV NOTES:
  * This is the main plugin file that initializes all modules and handles activation/deactivation.
  * It ensures the WAF and Rate Limiter run as early as possible.
- * Last Updated: 2026-02-04
- * Version: 2.0.6
+ * Last Updated: 2026-02-06
  */
 
 // Exit if accessed directly.
@@ -26,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Once activation succeeds, we will re-enable features one by one.
 
 // Define constants.
-define( 'NEXIFYMY_SECURITY_VERSION', '2.0.6' ); // Production release with security enhancements
+define( 'NEXIFYMY_SECURITY_VERSION', '2.1.0' ); // Production release with security enhancements
 define( 'NEXIFYMY_SECURITY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_URL', plugin_dir_url( __FILE__ ) );
 define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
@@ -150,6 +149,11 @@ function nexifymy_security_activate() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/live-traffic.php';
 	NexifyMy_Security_Live_Traffic::create_table();
 
+	// Create Activity Log table.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/user-activity-log.php';
+	$activity_log = new NexifyMy_Security_Activity_Log();
+	$activity_log->maybe_create_table();
+
 	// Schedule background scans (default: daily).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
@@ -202,11 +206,40 @@ add_action( 'init', 'nexifymy_security_load_textdomain' );
  * Load plugin text domain for translations.
  */
 function nexifymy_security_load_textdomain() {
+	// Allow user to override plugin language via settings.
+	add_filter( 'plugin_locale', 'nexifymy_security_plugin_locale', 10, 2 );
+
 	load_plugin_textdomain(
 		'nexifymy-security',
 		false,
 		dirname( plugin_basename( __FILE__ ) ) . '/languages'
 	);
+}
+
+/**
+ * Filter the plugin locale.
+ *
+ * @param string $locale The plugin's current locale.
+ * @param string $domain Text domain.
+ * @return string Modified locale.
+ */
+function nexifymy_security_plugin_locale( $locale, $domain ) {
+	if ( 'nexifymy-security' === $domain ) {
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		if ( ! empty( $settings['general']['language'] ) && 'site_default' !== $settings['general']['language'] ) {
+			$selected = sanitize_text_field( $settings['general']['language'] );
+
+			if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
+				$allowed = array_keys( NexifyMy_Security_Settings::get_available_languages() );
+				if ( in_array( $selected, $allowed, true ) ) {
+					return $selected;
+				}
+			} else {
+				return $selected;
+			}
+		}
+	}
+	return $locale;
 }
 
 /*
@@ -263,6 +296,12 @@ function nexifymy_security_init() {
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/live-traffic.php';
 	$GLOBALS['nexifymy_live_traffic'] = new NexifyMy_Security_Live_Traffic();
 	$GLOBALS['nexifymy_live_traffic']->init();
+
+	// Load User Activity Log.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/user-activity-log.php';
+	$GLOBALS['nexifymy_activity_log'] = new NexifyMy_Security_Activity_Log();
+	$GLOBALS['nexifymy_activity_log']->init();
+
 
 	// Load Geo Blocking.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/geo-blocking.php';
@@ -396,5 +435,3 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_settings']->init();
 	}
 }
-
-
