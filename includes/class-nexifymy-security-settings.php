@@ -32,6 +32,8 @@ class NexifyMy_Security_Settings {
 			'live_traffic_enabled'     => true,
 			'captcha_enabled'          => true,
 			'two_factor_enabled'       => true,
+			'password_enabled'         => true,
+			'self_protection_enabled'  => true,
 			'integrations_enabled'     => true,
 			'quarantine_enabled'       => true,
 			'database_enabled'         => true,
@@ -43,6 +45,14 @@ class NexifyMy_Security_Settings {
 			'passkey_enabled'          => true,
 			'compliance_enabled'       => true,
 			'developer_api_enabled'    => true,
+		),
+
+		// General Settings.
+		'general' => array(
+			'language'            => 'site_default',
+			'email_notifications' => true,
+			'email_address'       => '', // Defaults to admin_email if empty
+			'auto_updates'        => true,
 		),
 
 		// WAF Settings.
@@ -303,6 +313,51 @@ class NexifyMy_Security_Settings {
 		),
 	);
 
+	/**
+	 * Get available languages.
+	 *
+	 * @return array Key is locale, Value is label.
+	 */
+	public static function get_available_languages() {
+		return array(
+			'site_default' => __( 'Site Default', 'nexifymy-security' ),
+			'en_US'        => 'English (US)',
+			'en_GB'        => 'English (UK)',
+			'es_ES'        => 'Español (Spanish)',
+			'fr_FR'        => 'Français (French)',
+			'de_DE'        => 'Deutsch (German)',
+			'it_IT'        => 'Italiano (Italian)',
+			'pt_BR'        => 'Português (Brazilian)',
+			'nl_NL'        => 'Nederlands (Dutch)',
+			'ru_RU'        => 'Русский (Russian)',
+			'ja'           => '日本語 (Japanese)',
+			'zh_CN'        => '简体中文 (Chinese Simplified)',
+			'ar'           => 'العربية (Arabic)',
+			'hi_IN'        => 'हिन्दी (Hindi)',
+			'ko_KR'        => '한국어 (Korean)',
+			'tr_TR'        => 'Türkçe (Turkish)',
+			'pl_PL'        => 'Polski (Polish)',
+			'id_ID'        => 'Bahasa Indonesia (Indonesian)',
+			'uk'           => 'Українська (Ukrainian)',
+			'vi'           => 'Tiếng Việt (Vietnamese)',
+			'th'           => 'ไทย (Thai)',
+			'sv_SE'        => 'Svenska (Swedish)',
+			'da_DK'        => 'Dansk (Danish)',
+			'fi'           => 'Suomi (Finnish)',
+			'no'           => 'Norsk Bokmål (Norwegian)',
+			'cs_CZ'        => 'Čeština (Czech)',
+			'el'           => 'Ελληνικά (Greek)',
+			'hu_HU'        => 'Magyar (Hungarian)',
+			'ro_RO'        => 'Română (Romanian)',
+			'sk_SK'        => 'Slovenčina (Slovak)',
+			'bg_BG'        => 'Български (Bulgarian)',
+			'hr'           => 'Hrvatski (Croatian)',
+			'sr_RS'        => 'Српски (Serbian)',
+			'he_IL'        => 'עִבְרִית (Hebrew)',
+			'fa_IR'        => 'فارسی (Persian)',
+		);
+	}
+
 
 	/**
 	 * Initialize the settings module.
@@ -429,6 +484,22 @@ class NexifyMy_Security_Settings {
 	public function sanitize_settings( $input ) {
 		$sanitized = array();
 
+		// General Settings.
+		if ( isset( $input['general'] ) ) {
+			$language = sanitize_text_field( $input['general']['language'] ?? 'site_default' );
+			$allowed_languages = array_keys( self::get_available_languages() );
+			if ( ! in_array( $language, $allowed_languages, true ) ) {
+				$language = 'site_default';
+			}
+
+			$sanitized['general'] = array(
+				'language'            => $language,
+				'email_notifications' => ! empty( $input['general']['email_notifications'] ),
+				'email_address'       => sanitize_email( $input['general']['email_address'] ?? '' ),
+				'auto_updates'        => ! empty( $input['general']['auto_updates'] ),
+			);
+		}
+
 		// Modules.
 		if ( isset( $input['modules'] ) ) {
 			$sanitized['modules'] = array(
@@ -443,6 +514,8 @@ class NexifyMy_Security_Settings {
 				'live_traffic_enabled'     => ! empty( $input['modules']['live_traffic_enabled'] ),
 				'captcha_enabled'          => ! empty( $input['modules']['captcha_enabled'] ),
 				'two_factor_enabled'       => ! empty( $input['modules']['two_factor_enabled'] ),
+				'password_enabled'         => ! empty( $input['modules']['password_enabled'] ),
+				'self_protection_enabled'  => ! empty( $input['modules']['self_protection_enabled'] ),
 				'integrations_enabled'     => ! empty( $input['modules']['integrations_enabled'] ),
 				'quarantine_enabled'       => ! empty( $input['modules']['quarantine_enabled'] ),
 				'database_enabled'         => ! empty( $input['modules']['database_enabled'] ),
