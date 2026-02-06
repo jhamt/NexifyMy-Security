@@ -24,6 +24,7 @@
       this.loadVulnerabilityResults();
       this.loadVulnerabilitySettings();
       this.loadPasswordSettings();
+      this.loadAnalyticsDashboard();
     },
 
     bindEvents: function () {
@@ -56,6 +57,70 @@
       // Settings
       $("#save-schedule").on("click", function () {
         NexifymySecurity.saveSchedule();
+      });
+
+      // General Settings Save
+      $("#save-general-settings").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#general-status");
+        var originalText = $btn.text();
+
+        var settings = {
+          general: {
+            language: $("#settings-language").val(),
+            email_notifications: $("#settings-email").is(":checked") ? 1 : 0,
+            email_address: $("#settings-email-address").val(),
+            auto_updates: $("#settings-auto-update").is(":checked") ? 1 : 0,
+          },
+        };
+
+        $btn.prop("disabled", true).text("Saving...");
+        $status.html('<span style="color: #666;">Saving...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_save_settings",
+            settings: settings,
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text(originalText);
+            if (response.success) {
+              $status.html(
+                '<span style="color: var(--nms-success);">Saved! Reloading...</span>',
+              );
+              // Reload to apply language changes
+              setTimeout(function () {
+                location.reload();
+              }, 1000);
+            } else {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  (response.data || "Failed") +
+                  "</span>",
+              );
+            }
+          },
+          error: function (jqXHR) {
+            $btn.prop("disabled", false).text(originalText);
+            var raw =
+              jqXHR && typeof jqXHR.responseText === "string"
+                ? jqXHR.responseText.trim()
+                : "";
+            $status.html(
+              '<span style="color: var(--nms-danger);">' +
+                (raw === "-1"
+                  ? "Security check failed. Refresh and try again."
+                  : raw === "0"
+                    ? "Settings handler not available."
+                    : "Connection error") +
+                "</span>",
+            );
+          },
+        });
       });
 
       // New Settings Form
@@ -163,9 +228,13 @@
           var $this = $(this);
           var module = $this.data("module");
           var enabled = $this.is(":checked");
+          var isModulesHubToggle = $this.hasClass("module-toggle");
 
-          // Check if we're on dashboard page (has save button)
-          if ($("#save-module-toggles").length > 0) {
+          // Check if we're on modules hub page (immediate save) or dashboard page (track changes)
+          var isModulesHub = $(".nms-modules-grid").length > 0;
+
+          // Check if we're on dashboard page (has save button) and NOT on modules hub
+          if ($("#save-module-toggles").length > 0 && !isModulesHub) {
             // Dashboard mode - just track changes
             moduleChanges[module] = enabled ? 1 : 0;
             $("#module-toggles-status").html(
@@ -184,10 +253,11 @@
             return;
           }
 
-          // Other pages - auto-save immediately
+          // Modules hub page or other pages - auto-save immediately
           $.ajax({
             url: nexifymySecurity.ajaxUrl,
             type: "POST",
+            dataType: "json",
             data: {
               action: "nexifymy_toggle_module",
               module: module,
@@ -201,26 +271,85 @@
                 response.success
               ) {
                 // Update card visual state
-                var $card = $this.closest(".nms-module-card");
+                var $card = $this.closest(".nms-card, .nms-module-card");
                 if ($card.length) {
                   if (enabled) {
                     $card.addClass("active");
                   } else {
                     $card.removeClass("active");
                   }
+
+                  // Update badge text and color
+                  var $badge = $card.find(".nms-badge");
+                  if ($badge.length) {
+                    if (enabled) {
+                      $badge
+                        .removeClass("nms-badge-secondary")
+                        .addClass("nms-badge-success")
+                        .text("Active");
+                    } else {
+                      $badge
+                        .removeClass("nms-badge-success")
+                        .addClass("nms-badge-secondary")
+                        .text("Inactive");
+                    }
+                  }
+
+                  // Update icon color (modules hub page)
+                  var $icon = $card.find(".nms-stat-icon");
+                  if ($icon.length) {
+                    if (enabled) {
+                      $icon.removeClass("blue").addClass("green");
+                    } else {
+                      $icon.removeClass("green").addClass("blue");
+                    }
+                  }
                 }
+
+                // Show success notification for modules hub
+                if (isModulesHub && typeof NexifymySecurity !== "undefined") {
+                  NexifymySecurity.showNotice(
+                    "success",
+                    "Module " +
+                      module +
+                      " " +
+                      (enabled ? "enabled" : "disabled"),
+                  );
+                }
+
                 console.log(
                   "Module " + module + " " + (enabled ? "enabled" : "disabled"),
                 );
+
+                // Modules hub cards need a refresh so runtime module init/deinit is applied consistently.
+                if (isModulesHubToggle) {
+                  setTimeout(function () {
+                    location.reload();
+                  }, 350);
+                }
               } else {
                 // Revert toggle on error
                 $this.prop("checked", !enabled);
-                alert("Error: " + (response.data || "Unknown error"));
+                if (typeof NexifymySecurity !== "undefined") {
+                  NexifymySecurity.showNotice(
+                    "error",
+                    "Error: " + (response.data || "Unknown error"),
+                  );
+                } else {
+                  alert("Error: " + (response.data || "Unknown error"));
+                }
               }
             },
             error: function (jqXHR) {
               $this.prop("checked", !enabled);
-              alert("Failed to update module settings");
+              if (typeof NexifymySecurity !== "undefined") {
+                NexifymySecurity.showNotice(
+                  "error",
+                  "Failed to update module settings",
+                );
+              } else {
+                alert("Failed to update module settings");
+              }
             },
           });
         },
@@ -1749,6 +1878,12 @@
 
           $tbody.html(html);
         },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error("Notifications AJAX error:", textStatus, errorThrown);
+          $tbody.html(
+            '<tr><td colspan="5">Error loading alerts. Please try refreshing the page.</td></tr>',
+          );
+        },
       });
     },
 
@@ -3054,6 +3189,348 @@
           }
         },
       });
+    },
+    /**
+     * Load Analytics Dashboard.
+     */
+    loadAnalyticsDashboard: function () {
+      var $container = $("#analytics-dashboard");
+      if ($container.length === 0) {
+        return;
+      }
+
+      var self = this;
+      var $loading = $("#analytics-loading");
+      var $rangeSelect = $("#analytics-range");
+      var $refreshBtn = $("#refresh-analytics");
+
+      // Charts instances
+      var charts = {};
+
+      // Load data function
+      function fetchAnalytics(days) {
+        $container.css("opacity", "0.5");
+        $loading.show();
+        $refreshBtn.prop("disabled", true).find(".dashicons").addClass("spin");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_get_traffic_analytics",
+            days: days,
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $container.css("opacity", "1");
+            $loading.hide();
+            $refreshBtn
+              .prop("disabled", false)
+              .find(".dashicons")
+              .removeClass("spin");
+
+            if (response.success && response.data) {
+              updateDashboard(response.data);
+            }
+          },
+          error: function () {
+            $container.css("opacity", "1");
+            $loading.hide();
+            $refreshBtn
+              .prop("disabled", false)
+              .find(".dashicons")
+              .removeClass("spin");
+            alert("Failed to load analytics data.");
+          },
+        });
+      }
+
+      // Update dashboard UI
+      function updateDashboard(data) {
+        // Update summary cards
+        if (data.totals) {
+          $("#stats-total-views").text(formatNumber(data.totals.total_views));
+          $("#stats-unique-visitors").text(
+            formatNumber(data.totals.unique_visitors),
+          );
+          $("#stats-blocked-requests").text(formatNumber(data.totals.blocked));
+        }
+
+        // Top Country
+        if (data.geo_distribution && data.geo_distribution.length > 0) {
+          $("#stats-top-country").text(data.geo_distribution[0].country_name);
+        } else {
+          $("#stats-top-country").text("-");
+        }
+
+        // 1. Traffic Overview Chart
+        renderChart(
+          "chart-traffic-overview",
+          "line",
+          {
+            labels: data.chart_data.labels,
+            datasets: [
+              {
+                label: "Page Views",
+                data: data.chart_data.page_views,
+                borderColor: "#4f46e5",
+                backgroundColor: "rgba(79, 70, 229, 0.1)",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+              },
+              {
+                label: "Unique Visitors",
+                data: data.chart_data.unique_visitors,
+                borderColor: "#06b6d4",
+                backgroundColor: "rgba(6, 182, 212, 0.1)",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+              },
+            ],
+          },
+          {
+            scales: {
+              y: { beginAtZero: true, grid: { color: "#f1f5f9" } },
+              x: { grid: { display: false } },
+            },
+            interaction: { mode: "index", intersect: false },
+          },
+        );
+
+        // 2. Browser Distribution (Doughnut)
+        var browserLabels = Object.keys(data.browser_distribution);
+        var browserData = Object.values(data.browser_distribution);
+        renderChart(
+          "chart-browsers",
+          "doughnut",
+          {
+            labels: browserLabels,
+            datasets: [
+              {
+                data: browserData,
+                backgroundColor: [
+                  "#4f46e5",
+                  "#ec4899",
+                  "#f59e0b",
+                  "#10b981",
+                  "#ef4444",
+                  "#cbd5e1",
+                ],
+                borderWidth: 0,
+              },
+            ],
+          },
+          { cutout: "60%", plugins: { legend: { position: "right" } } },
+        );
+
+        // 3. OS Distribution (Pie)
+        var osLabels = Object.keys(data.os_distribution);
+        var osData = Object.values(data.os_distribution);
+        renderChart(
+          "chart-os",
+          "pie",
+          {
+            labels: osLabels,
+            datasets: [
+              {
+                data: osData,
+                backgroundColor: [
+                  "#3b82f6",
+                  "#8b5cf6",
+                  "#6366f1",
+                  "#14b8a6",
+                  "#f97316",
+                  "#cbd5e1",
+                ],
+                borderWidth: 0,
+              },
+            ],
+          },
+          { plugins: { legend: { position: "right" } } },
+        );
+
+        // 4. Device Distribution (Bar)
+        var deviceLabels = Object.keys(data.device_distribution);
+        var deviceData = Object.values(data.device_distribution);
+        renderChart(
+          "chart-devices",
+          "bar",
+          {
+            labels: deviceLabels,
+            datasets: [
+              {
+                label: "Devices",
+                data: deviceData,
+                backgroundColor: ["#6366f1", "#10b981", "#f59e0b", "#ef4444"],
+                borderRadius: 4,
+              },
+            ],
+          },
+          {
+            indexAxis: "y",
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { display: false, grid: { display: false } },
+              y: { grid: { display: false } },
+            },
+          },
+        );
+
+        // 5. Geo Chart (Doughnut for now, effectively same data as map list)
+        var geoLabels = data.geo_distribution
+          .map(function (item) {
+            return item.country_name;
+          })
+          .slice(0, 5);
+        var geoData = data.geo_distribution
+          .map(function (item) {
+            return item.count;
+          })
+          .slice(0, 5);
+        renderChart(
+          "chart-geo",
+          "doughnut",
+          {
+            labels: geoLabels,
+            datasets: [
+              {
+                data: geoData,
+                backgroundColor: [
+                  "#0ea5e9",
+                  "#22c55e",
+                  "#eab308",
+                  "#f43f5e",
+                  "#a855f7",
+                ],
+                borderWidth: 0,
+              },
+            ],
+          },
+          { cutout: "50%", plugins: { legend: { position: "right" } } },
+        );
+
+        // Update Tables
+        updateTable("#table-top-pages", data.top_pages, ["url", "count"]);
+        updateTable("#table-top-referrers", data.top_referrers, [
+          "referrer",
+          "count",
+        ]);
+        updateGeoTable("#table-geo", data.geo_distribution);
+      }
+
+      // Helper: Render Chart
+      function renderChart(id, type, data, options) {
+        var ctx = document.getElementById(id);
+        if (!ctx) return;
+
+        if (charts[id]) {
+          charts[id].destroy();
+        }
+
+        charts[id] = new Chart(ctx, {
+          type: type,
+          data: data,
+          options: $.extend(
+            true,
+            {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { labels: { usePointStyle: true, boxWidth: 8 } },
+              },
+            },
+            options,
+          ),
+        });
+      }
+
+      // Helper: Update Table
+      function updateTable(selector, data, columns) {
+        var $body = $(selector).find("tbody");
+        $body.empty();
+
+        if (!data || data.length === 0) {
+          $body.append(
+            '<tr><td colspan="' +
+              columns.length +
+              '" style="text-align:center; color: #999;">No data available</td></tr>',
+          );
+          return;
+        }
+
+        data.forEach(function (row) {
+          var html = "<tr>";
+          columns.forEach(function (col, index) {
+            var val = row[col];
+            if (col === "url")
+              val =
+                '<a href="' +
+                val +
+                '" target="_blank">' +
+                val.substring(0, 50) +
+                (val.length > 50 ? "..." : "") +
+                "</a>";
+            var style =
+              index === columns.length - 1
+                ? "text-align: right; font-weight: 600;"
+                : "";
+            html +=
+              '<td style="' +
+              style +
+              '">' +
+              (index === columns.length - 1 ? formatNumber(val) : val) +
+              "</td>";
+          });
+          html += "</tr>";
+          $body.append(html);
+        });
+      }
+
+      // Helper: Update Geo Table
+      function updateGeoTable(selector, data) {
+        var $body = $(selector).find("tbody");
+        $body.empty();
+
+        if (!data || data.length === 0) {
+          $body.append(
+            '<tr><td colspan="3" style="text-align:center; color: #999;">No data available</td></tr>',
+          );
+          return;
+        }
+
+        data.slice(0, 10).forEach(function (row) {
+          var html = "<tr>";
+          html += "<td>" + row.country_name + "</td>";
+          html += "<td><code>" + row.country_code + "</code></td>";
+          html +=
+            '<td style="text-align: right; font-weight: 600;">' +
+            formatNumber(row.count) +
+            "</td>";
+          html += "</tr>";
+          $body.append(html);
+        });
+      }
+
+      // Helper: Format Number
+      function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+      }
+
+      // Handle Range Change
+      $rangeSelect.on("change", function () {
+        fetchAnalytics($(this).val());
+      });
+
+      // Handle Refresh
+      $refreshBtn.on("click", function () {
+        fetchAnalytics($rangeSelect.val());
+      });
+
+      // Initial Load
+      fetchAnalytics(30);
     },
   };
 
