@@ -1,7 +1,7 @@
 {
-  "version": "2.0.2",
-  "generated": "2026-01-17",
-  "source": "NexifyMy Security Built-in",
+  "version": "2.1.0",
+  "generated": "2026-02-06",
+  "source": "NexifyMy Security Built-in - Enhanced Context-Aware Classification",
   "signatures": [
     {
       "id": "eval_base64",
@@ -9,7 +9,15 @@
       "title": "Obfuscated eval() with base64",
       "description": "eval(base64_decode()) - Common malware obfuscation technique",
       "pattern": "/eval\\s*\\(\\s*base64_decode\\s*\\(/i",
-      "category": "obfuscation"
+      "category": "obfuscation",
+      "classification": "CONFIRMED_MALWARE",
+      "base_confidence": 85,
+      "context_rules": {
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 15,
+          "/uploads\\\\/": 10
+        }
+      }
     },
     {
       "id": "shell_exec",
@@ -17,7 +25,21 @@
       "title": "Shell Command Execution",
       "description": "shell_exec() allows running system commands",
       "pattern": "/shell_exec\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 50,
+      "context_rules": {
+        "safe_contexts": {
+          "/wp-cli/": -40,
+          "/WP_CLI::/": -100,
+          "/vendor/": -30,
+          "/escapeshellarg|escapeshellcmd/": -25
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35,
+          "/uploads\\\\/": 40
+        }
+      }
     },
     {
       "id": "exec_function",
@@ -25,7 +47,21 @@
       "title": "Command Execution",
       "description": "exec() function for running commands",
       "pattern": "/\\bexec\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 50,
+      "context_rules": {
+        "safe_contexts": {
+          "/wp-cli/": -40,
+          "/WP_CLI::/": -100,
+          "/vendor/": -30,
+          "/escapeshellarg|escapeshellcmd/": -25
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35,
+          "/uploads\\\\/": 40
+        }
+      }
     },
     {
       "id": "passthru",
@@ -33,7 +69,20 @@
       "title": "Passthru Command Execution",
       "description": "passthru() for command execution",
       "pattern": "/passthru\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 50,
+      "context_rules": {
+        "safe_contexts": {
+          "/wp-cli/": -40,
+          "/vendor/": -30,
+          "/escapeshellarg|escapeshellcmd/": -25
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35,
+          "/uploads\\\\/": 40
+        }
+      }
     },
     {
       "id": "system_function",
@@ -41,7 +90,20 @@
       "title": "System Command Execution",
       "description": "system() for running system commands",
       "pattern": "/\\bsystem\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 50,
+      "context_rules": {
+        "safe_contexts": {
+          "/wp-cli/": -40,
+          "/vendor/": -30,
+          "/escapeshellarg|escapeshellcmd/": -25
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35,
+          "/uploads\\\\/": 40
+        }
+      }
     },
     {
       "id": "proc_open",
@@ -49,7 +111,19 @@
       "title": "Process Control",
       "description": "proc_open() for process manipulation",
       "pattern": "/proc_open\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 50,
+      "context_rules": {
+        "safe_contexts": {
+          "/wp-cli/": -40,
+          "/vendor/": -30
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35,
+          "/uploads\\\\/": 40
+        }
+      }
     },
     {
       "id": "webshell_c99",
@@ -57,7 +131,14 @@
       "title": "C99 Webshell Indicator",
       "description": "C99 shell signature detected",
       "pattern": "/c99shell|r57shell|wso\\s*shell/i",
-      "category": "webshell"
+      "category": "webshell",
+      "classification": "CONFIRMED_MALWARE",
+      "base_confidence": 95,
+      "context_rules": {
+        "dangerous_contexts": {
+          "/uploads\\\\/": 5
+        }
+      }
     },
     {
       "id": "webshell_filesman",
@@ -65,7 +146,14 @@
       "title": "FilesMan Webshell",
       "description": "FilesMan shell signature",
       "pattern": "/FilesMan|WSO_VERSION/i",
-      "category": "webshell"
+      "category": "webshell",
+      "classification": "CONFIRMED_MALWARE",
+      "base_confidence": 95,
+      "context_rules": {
+        "dangerous_contexts": {
+          "/uploads\\\\/": 5
+        }
+      }
     },
     {
       "id": "gzinflate_base64",
@@ -73,7 +161,14 @@
       "title": "Compressed Obfuscation",
       "description": "gzinflate(base64_decode()) - Compressed malware payload",
       "pattern": "/gzinflate\\s*\\(\\s*base64_decode\\s*\\(/i",
-      "category": "obfuscation"
+      "category": "obfuscation",
+      "classification": "CONFIRMED_MALWARE",
+      "base_confidence": 85,
+      "context_rules": {
+        "dangerous_contexts": {
+          "/uploads\\\\/": 15
+        }
+      }
     },
     {
       "id": "str_rot13",
@@ -81,7 +176,17 @@
       "title": "ROT13 Obfuscation",
       "description": "str_rot13() text obfuscation",
       "pattern": "/str_rot13\\s*\\(/i",
-      "category": "obfuscation"
+      "category": "obfuscation",
+      "classification": "SUSPICIOUS_CODE",
+      "base_confidence": 60,
+      "context_rules": {
+        "safe_contexts": {
+          "/vendor/": -30
+        },
+        "dangerous_contexts": {
+          "/uploads\\\\/": 25
+        }
+      }
     },
     {
       "id": "create_function",
@@ -89,7 +194,15 @@
       "title": "Dynamic Code Creation",
       "description": "create_function() for dynamic code",
       "pattern": "/create_function\\s*\\(/i",
-      "category": "obfuscation"
+      "category": "obfuscation",
+      "classification": "SUSPICIOUS_CODE",
+      "base_confidence": 60,
+      "context_rules": {
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 30,
+          "/uploads\\\\/": 25
+        }
+      }
     },
     {
       "id": "assert_function",
@@ -97,7 +210,18 @@
       "title": "Assert Code Execution",
       "description": "assert() can execute arbitrary code",
       "pattern": "/\\bassert\\s*\\(/i",
-      "category": "command_execution"
+      "category": "command_execution",
+      "classification": "dynamic",
+      "base_confidence": 45,
+      "context_rules": {
+        "safe_contexts": {
+          "/vendor/": -30,
+          "/tests?\\\\/": -40
+        },
+        "dangerous_contexts": {
+          "/\\$_(GET|POST|REQUEST)/": 35
+        }
+      }
     },
     {
       "id": "preg_replace_e",
