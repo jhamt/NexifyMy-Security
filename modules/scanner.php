@@ -16,6 +16,15 @@ class NexifyMy_Security_Scanner {
 	const SCAN_STATE_OPTION = 'nexifymy_security_last_scan';
 
 	/**
+	 * Threat classification constants - 5-tier system.
+	 */
+	const CLASSIFICATION_CONFIRMED_MALWARE = 'CONFIRMED_MALWARE';
+	const CLASSIFICATION_SUSPICIOUS_CODE = 'SUSPICIOUS_CODE';
+	const CLASSIFICATION_SECURITY_VULNERABILITY = 'SECURITY_VULNERABILITY';
+	const CLASSIFICATION_CODE_SMELL = 'CODE_SMELL';
+	const CLASSIFICATION_CLEAN = 'CLEAN';
+
+	/**
 	 * Heuristic rules for malware detection.
 	 * @var array
 	 */
@@ -38,6 +47,18 @@ class NexifyMy_Security_Scanner {
 	 * @var string[]
 	 */
 	private $excluded_extensions = array();
+
+	/**
+	 * Context analyzer instance.
+	 * @var NexifyMy_Security_Context_Analyzer
+	 */
+	private $context_analyzer = null;
+
+	/**
+	 * Reputation checker instance.
+	 * @var NexifyMy_Security_Reputation_Checker
+	 */
+	private $reputation_checker = null;
 
 	/**
 	 * Known safe plugin/theme slugs (from WordPress.org).
@@ -352,111 +373,304 @@ class NexifyMy_Security_Scanner {
 
 	/**
 	 * Define heuristic rules (Inspired by YARA/PHP Malware Finder).
+	 * Enhanced with classification, base_confidence, and context_rules.
 	 */
 	private function define_heuristics() {
 		$this->heuristics = array(
 			// Category: Obfuscation
 			'eval_base64' => array(
-				'severity'    => 'critical',
-				'description' => 'eval(base64_decode()) - Common obfuscation',
-				'pattern'     => '/eval\s*\(\s*base64_decode\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'eval(base64_decode()) - Common obfuscation',
+				'pattern'         => '/eval\s*\(\s*base64_decode\s*\(/i',
+				'classification'  => self::CLASSIFICATION_CONFIRMED_MALWARE,
+				'base_confidence' => 85,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 15,
+						'/uploads\//' => 10,
+					),
+				),
 			),
 			'gzinflate_base64' => array(
-				'severity'    => 'critical',
-				'description' => 'gzinflate(base64_decode()) - Compressed obfuscation',
-				'pattern'     => '/gzinflate\s*\(\s*base64_decode\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'gzinflate(base64_decode()) - Compressed obfuscation',
+				'pattern'         => '/gzinflate\s*\(\s*base64_decode\s*\(/i',
+				'classification'  => self::CLASSIFICATION_CONFIRMED_MALWARE,
+				'base_confidence' => 85,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 15,
+					),
+				),
 			),
 			'str_rot13' => array(
-				'severity'    => 'high',
-				'description' => 'str_rot13() obfuscation',
-				'pattern'     => '/str_rot13\s*\(/i',
+				'severity'        => 'high',
+				'description'     => 'str_rot13() obfuscation',
+				'pattern'         => '/str_rot13\s*\(/i',
+				'classification'  => self::CLASSIFICATION_SUSPICIOUS_CODE,
+				'base_confidence' => 60,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/vendor/' => -30,
+					),
+					'dangerous_contexts' => array(
+						'/uploads\//' => 25,
+					),
+				),
 			),
 			'hex_encoding' => array(
-				'severity'    => 'medium',
-				'description' => 'Heavy hex encoding (\\x usage)',
-				'pattern'     => '/(\\\\x[0-9a-f]{2}){10,}/i', // 10+ consecutive hex chars
+				'severity'        => 'medium',
+				'description'     => 'Heavy hex encoding (\\x usage)',
+				'pattern'         => '/(\\\\x[0-9a-f]{2}){10,}/i', // 10+ consecutive hex chars
+				'classification'  => self::CLASSIFICATION_SUSPICIOUS_CODE,
+				'base_confidence' => 55,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 30,
+					),
+				),
 			),
 			'long_base64' => array(
-				'severity'    => 'medium',
-				'description' => 'Long base64 string (possible encoded payload)',
-				'pattern'     => '/[a-zA-Z0-9+\/=]{500,}/',
+				'severity'        => 'medium',
+				'description'     => 'Long base64 string (possible encoded payload)',
+				'pattern'         => '/[a-zA-Z0-9+\/=]{500,}/',
+				'classification'  => self::CLASSIFICATION_CODE_SMELL,
+				'base_confidence' => 45,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 25,
+					),
+				),
 			),
 
-			// Category: Dangerous Functions
+			// Category: Dangerous Functions (context-aware classification)
 			'shell_exec' => array(
-				'severity'    => 'critical',
-				'description' => 'shell_exec() - Command execution',
-				'pattern'     => '/shell_exec\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'shell_exec() - Command execution',
+				'pattern'         => '/shell_exec\s*\(/i',
+				'classification'  => 'dynamic', // Context determines tier
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/wp-cli/' => -40,
+						'/WP_CLI::/' => -100,
+						'/vendor/' => -30,
+						'/escapeshellarg|escapeshellcmd/' => -25,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/uploads\//' => 40,
+					),
+				),
 			),
 			'exec' => array(
-				'severity'    => 'critical',
-				'description' => 'exec() - Command execution',
-				'pattern'     => '/\bexec\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'exec() - Command execution',
+				'pattern'         => '/\bexec\s*\(/i',
+				'classification'  => 'dynamic', // Context determines tier
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/wp-cli/' => -40,
+						'/WP_CLI::/' => -100,
+						'/vendor/' => -30,
+						'/escapeshellarg|escapeshellcmd/' => -25,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/uploads\//' => 40,
+					),
+				),
 			),
 			'passthru' => array(
-				'severity'    => 'critical',
-				'description' => 'passthru() - Command execution',
-				'pattern'     => '/passthru\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'passthru() - Command execution',
+				'pattern'         => '/passthru\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/wp-cli/' => -40,
+						'/vendor/' => -30,
+						'/escapeshellarg|escapeshellcmd/' => -25,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/uploads\//' => 40,
+					),
+				),
 			),
 			'system' => array(
-				'severity'    => 'critical',
-				'description' => 'system() - Command execution',
-				'pattern'     => '/\bsystem\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'system() - Command execution',
+				'pattern'         => '/\bsystem\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/wp-cli/' => -40,
+						'/vendor/' => -30,
+						'/escapeshellarg|escapeshellcmd/' => -25,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/uploads\//' => 40,
+					),
+				),
 			),
 			'proc_open' => array(
-				'severity'    => 'critical',
-				'description' => 'proc_open() - Process control',
-				'pattern'     => '/proc_open\s*\(/i',
+				'severity'        => 'critical',
+				'description'     => 'proc_open() - Process control',
+				'pattern'         => '/proc_open\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/wp-cli/' => -40,
+						'/vendor/' => -30,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/uploads\//' => 40,
+					),
+				),
 			),
 			'popen' => array(
-				'severity'    => 'high',
-				'description' => 'popen() - Process control',
-				'pattern'     => '/\bpopen\s*\(/i',
+				'severity'        => 'high',
+				'description'     => 'popen() - Process control',
+				'pattern'         => '/\bpopen\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 50,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/vendor/' => -30,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 30,
+						'/uploads\//' => 35,
+					),
+				),
 			),
 			'assert' => array(
-				'severity'    => 'high',
-				'description' => 'assert() - Possible code execution',
-				'pattern'     => '/\bassert\s*\(/i',
+				'severity'        => 'high',
+				'description'     => 'assert() - Possible code execution',
+				'pattern'         => '/\bassert\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 45,
+				'category'        => 'command_execution',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/vendor/' => -30,
+						'/tests?\//' => -40,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+					),
+				),
 			),
 			'create_function' => array(
-				'severity'    => 'high',
-				'description' => 'create_function() - Dynamic code creation',
-				'pattern'     => '/create_function\s*\(/i',
+				'severity'        => 'high',
+				'description'     => 'create_function() - Dynamic code creation',
+				'pattern'         => '/create_function\s*\(/i',
+				'classification'  => self::CLASSIFICATION_SUSPICIOUS_CODE,
+				'base_confidence' => 60,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 30,
+						'/uploads\//' => 25,
+					),
+				),
 			),
 
 			// Category: Webshell Indicators
 			'globals_obfuscation' => array(
-				'severity'    => 'high',
-				'description' => '$GLOBALS obfuscation pattern',
-				'pattern'     => '/\$GLOBALS\s*\[\s*[\'"][a-z0-9_]+[\'"]\s*\]\s*\(/i',
+				'severity'        => 'high',
+				'description'     => '$GLOBALS obfuscation pattern',
+				'pattern'         => '/\$GLOBALS\s*\[\s*[\'"][a-z0-9_]+[\'"]\s*\]\s*\(/i',
+				'classification'  => self::CLASSIFICATION_SUSPICIOUS_CODE,
+				'base_confidence' => 65,
+				'category'        => 'obfuscation',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 25,
+					),
+				),
 			),
 			'php_uname' => array(
-				'severity'    => 'medium',
-				'description' => 'php_uname() - System info gathering',
-				'pattern'     => '/php_uname\s*\(/i',
+				'severity'        => 'medium',
+				'description'     => 'php_uname() - System info gathering',
+				'pattern'         => '/php_uname\s*\(/i',
+				'classification'  => self::CLASSIFICATION_CODE_SMELL,
+				'base_confidence' => 40,
+				'category'        => 'reconnaissance',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 30,
+					),
+				),
 			),
 			'getcwd' => array(
-				'severity'    => 'low',
-				'description' => 'getcwd() - Path discovery',
-				'pattern'     => '/getcwd\s*\(/i',
+				'severity'        => 'low',
+				'description'     => 'getcwd() - Path discovery',
+				'pattern'         => '/getcwd\s*\(/i',
+				'classification'  => self::CLASSIFICATION_CODE_SMELL,
+				'base_confidence' => 25,
+				'category'        => 'reconnaissance',
 			),
 			'file_put_contents' => array(
-				'severity'    => 'medium',
-				'description' => 'file_put_contents() - File write capability',
-				'pattern'     => '/file_put_contents\s*\(/i',
+				'severity'        => 'medium',
+				'description'     => 'file_put_contents() - File write capability',
+				'pattern'         => '/file_put_contents\s*\(/i',
+				'classification'  => 'dynamic',
+				'base_confidence' => 40,
+				'category'        => 'file_operation',
+				'context_rules'   => array(
+					'safe_contexts' => array(
+						'/vendor/' => -25,
+						'/WP_Filesystem/' => -35,
+					),
+					'dangerous_contexts' => array(
+						'/\$_(GET|POST|REQUEST)/' => 35,
+						'/\.php[\'"]/' => 30, // Writing PHP files
+						'/uploads\//' => 25,
+					),
+				),
 			),
 
 			// Category: Suspicious Patterns
 			'hidden_input' => array(
-				'severity'    => 'medium',
-				'description' => 'Hidden input with suspicious name',
-				'pattern'     => '/<input[^>]+type\s*=\s*["\']hidden["\'][^>]+name\s*=\s*["\'](?:cmd|c|pass|password)["\'][^>]*>/i',
+				'severity'        => 'medium',
+				'description'     => 'Hidden input with suspicious name',
+				'pattern'         => '/<input[^>]+type\s*=\s*["\']hidden["\'][^>]+name\s*=\s*["\'](?:cmd|c|pass|password)["\'][^>]*>/i',
+				'classification'  => self::CLASSIFICATION_SUSPICIOUS_CODE,
+				'base_confidence' => 55,
+				'category'        => 'webshell',
+				'context_rules'   => array(
+					'dangerous_contexts' => array(
+						'/uploads\//' => 30,
+					),
+				),
 			),
 			'suspicious_long_line' => array(
-				'severity'    => 'medium',
-				'description' => 'Suspiciously long single line (obfuscation)',
-				'check_type'  => 'line_length',
-				'threshold'   => 5000,
+				'severity'        => 'medium',
+				'description'     => 'Suspiciously long single line (obfuscation)',
+				'check_type'      => 'line_length',
+				'threshold'       => 5000,
+				'classification'  => self::CLASSIFICATION_CODE_SMELL,
+				'base_confidence' => 45,
+				'category'        => 'obfuscation',
 			),
 		);
 	}
@@ -703,7 +917,67 @@ class NexifyMy_Security_Scanner {
 		// Update last scan time.
 		update_option( self::SCAN_STATE_OPTION, time() );
 
-		// Store results for later retrieval
+		// Calculate site health metrics
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/site-health-calculator.php';
+		$health_calculator = new NexifyMy_Security_Site_Health_Calculator();
+
+		$health_metrics = $health_calculator->calculate_health_metrics( array(
+			'files_scanned' => $files_scanned,
+			'threats'       => $suspicious_files,
+		) );
+
+		// Count threats by classification for enhanced results
+		$classification_counts = array(
+			'CONFIRMED_MALWARE'        => 0,
+			'SUSPICIOUS_CODE'          => 0,
+			'SECURITY_VULNERABILITY'   => 0,
+			'CODE_SMELL'               => 0,
+		);
+
+		$classification_percentages = array(
+			'CONFIRMED_MALWARE'        => 0,
+			'SUSPICIOUS_CODE'          => 0,
+			'SECURITY_VULNERABILITY'   => 0,
+			'CODE_SMELL'               => 0,
+		);
+
+		foreach ( $suspicious_files as $threat_file ) {
+			// Each file may have multiple threats, count by highest classification
+			$file_classification = 'CODE_SMELL';
+			$classification_priority = array(
+				'CONFIRMED_MALWARE'      => 4,
+				'SUSPICIOUS_CODE'        => 3,
+				'SECURITY_VULNERABILITY' => 2,
+				'CODE_SMELL'             => 1,
+			);
+
+			$highest_priority = 0;
+
+			if ( isset( $threat_file['threats'] ) && is_array( $threat_file['threats'] ) ) {
+				foreach ( $threat_file['threats'] as $threat ) {
+					$classification = isset( $threat['classification'] ) ? $threat['classification'] : 'CODE_SMELL';
+					$priority = isset( $classification_priority[ $classification ] ) ? $classification_priority[ $classification ] : 0;
+
+					if ( $priority > $highest_priority ) {
+						$highest_priority = $priority;
+						$file_classification = $classification;
+					}
+				}
+			}
+
+			if ( isset( $classification_counts[ $file_classification ] ) ) {
+				$classification_counts[ $file_classification ]++;
+			}
+		}
+
+		// Calculate classification percentages
+		if ( $files_scanned > 0 ) {
+			foreach ( $classification_counts as $classification => $count ) {
+				$classification_percentages[ $classification ] = round( ( $count / $files_scanned ) * 100, 2 );
+			}
+		}
+
+		// Store results for later retrieval (enhanced structure)
 		$results = array(
 			'scanned_at'     => current_time( 'mysql' ),
 			'mode'           => $mode,
@@ -713,11 +987,23 @@ class NexifyMy_Security_Scanner {
 			'threats'        => $suspicious_files,
 			'threat_counts'  => $threat_counts,
 			'core_integrity' => $core_results,
+			'scan_summary'   => array(
+				'total_files_scanned'       => $files_scanned,
+				'files_with_threats'        => $health_metrics['affected_files'],
+				'clean_files'               => $health_metrics['clean_files'],
+				'clean_percentage'          => $health_metrics['clean_percentage'],
+				'affected_percentage'       => $health_metrics['affected_percentage'],
+				'health_score'              => $health_metrics['health_score'],
+				'health_status'             => $health_metrics['health_status'],
+				'recommendation'            => $health_metrics['recommendation'],
+			),
+			'classification_counts' => $classification_counts,
+			'classification_percentages' => $classification_percentages,
 		);
 
 		// Save for API access
 		update_option( 'nexifymy_last_scan_results', $results );
-		
+
 		// Save for dashboard display (with structure admin.php expects)
 		update_option( 'nexifymy_last_scan', array(
 			'files_scanned' => $files_scanned,
@@ -725,11 +1011,13 @@ class NexifyMy_Security_Scanner {
 			'mode'          => $mode,
 			'mode_name'     => $mode_config['name'],
 		) );
-		
+
 		update_option( 'nexifymy_scan_results', array(
 			'threats' => array_sum( $threat_counts ),
 			'items'   => $suspicious_files,
 			'counts'  => $threat_counts,
+			'classification_counts' => $classification_counts,
+			'scan_summary' => $results['scan_summary'],
 		) );
 
 		return $results;
@@ -1012,11 +1300,11 @@ class NexifyMy_Security_Scanner {
 	}
 
 	/**
-	 * Scan a single file with false positive prevention and confidence scoring.
+	 * Scan a single file with context-aware classification and smart confidence scoring.
 	 *
 	 * @param string $filepath Full path to the file.
 	 * @param array $mode_config Mode configuration.
-	 * @return array Found threats with confidence scores.
+	 * @return array Found threats with confidence scores and classifications.
 	 */
 	private function scan_file( $filepath, $mode_config ) {
 		$threats = array();
@@ -1029,64 +1317,190 @@ class NexifyMy_Security_Scanner {
 		$relative_path = str_replace( ABSPATH, '', $filepath );
 		$severity_levels = $mode_config['severity_levels'] ?? array( 'critical', 'high', 'medium', 'low' );
 
-		// Check if file is in a known safe plugin/theme
-		$is_known_safe = $this->is_known_safe_plugin( $relative_path );
+		// Initialize modules (lazy loading)
+		if ( ! isset( $this->context_analyzer ) ) {
+			require_once NEXIFYMY_SECURITY_PATH . 'modules/context-analyzer.php';
+			$this->context_analyzer = new NexifyMy_Security_Context_Analyzer();
+		}
 
-		// Check if file is in a safe context (WordPress core, vendor, etc.)
+		if ( ! isset( $this->reputation_checker ) ) {
+			require_once NEXIFYMY_SECURITY_PATH . 'modules/reputation-checker.php';
+			$this->reputation_checker = new NexifyMy_Security_Reputation_Checker();
+		}
+
+		// Check allowlist first (skip scanning entirely if allowlisted)
+		if ( $this->reputation_checker->is_allowlisted( $filepath ) ) {
+			return array(); // Skip this file
+		}
+
+		// Check blocklist (force CONFIRMED_MALWARE if blocklisted)
+		if ( $this->reputation_checker->is_blocklisted( $filepath ) ) {
+			return array(
+				array(
+					'file'           => $relative_path,
+					'rule'           => 'blocklist',
+					'severity'       => 'critical',
+					'category'       => 'blocklist',
+					'title'          => 'Blocklisted File',
+					'description'    => 'File is in user blocklist',
+					'classification' => self::CLASSIFICATION_CONFIRMED_MALWARE,
+					'confidence'     => 100,
+					'context'        => 'File matches user-defined blocklist pattern',
+					'recommendation' => __( 'Quarantine immediately', 'nexifymy-security' ),
+				),
+			);
+		}
+
+		// Check reputation (plugin, hash, core verification)
+		$reputation_data = array();
+
+		// Check plugin reputation
+		$plugin_reputation = $this->reputation_checker->check_plugin_reputation( $filepath );
+		if ( $plugin_reputation['has_reputation'] ) {
+			$reputation_data = $plugin_reputation;
+		}
+
+		// Check file hash against malware databases
+		$hash_check = $this->reputation_checker->check_file_hash( $filepath );
+		if ( $hash_check['is_malware'] ) {
+			// Known malware hash - return immediately with max confidence
+			return array(
+				array(
+					'file'           => $relative_path,
+					'rule'           => 'malware_hash',
+					'severity'       => 'critical',
+					'category'       => 'malware',
+					'title'          => 'Known Malware Hash',
+					'description'    => $hash_check['reason'],
+					'classification' => self::CLASSIFICATION_CONFIRMED_MALWARE,
+					'confidence'     => 100,
+					'context'        => sprintf( 'Known malware: %s', $hash_check['malware_name'] ),
+					'recommendation' => __( 'Quarantine immediately', 'nexifymy-security' ),
+				),
+			);
+		}
+
+		// Check WordPress core file verification
+		$core_check = $this->reputation_checker->verify_wp_core_file( $filepath );
+		if ( isset( $core_check['is_core_file'] ) && $core_check['is_core_file'] ) {
+			if ( $core_check['verified'] ) {
+				// Verified core file - skip scanning
+				return array();
+			} else {
+				// Modified core file - add to reputation data
+				$reputation_data = $core_check;
+			}
+		}
+
+		// Legacy compatibility
+		$is_known_safe = $this->is_known_safe_plugin( $relative_path );
 		$is_safe_context = $this->is_safe_context( $relative_path );
 
+		// Scan for patterns
+		$detected_patterns = array();
+
 		foreach ( $this->heuristics as $key => $rule ) {
-			// Skip rules not matching our severity filter.
+			// Skip rules not matching our severity filter
 			if ( ! in_array( $rule['severity'], $severity_levels, true ) ) {
 				continue;
 			}
 
-			// Handle line length check separately.
+			// Handle line length check separately
 			if ( isset( $rule['check_type'] ) && $rule['check_type'] === 'line_length' ) {
 				$lines = explode( "\n", $content );
 				foreach ( $lines as $line_num => $line ) {
 					if ( strlen( $line ) > $rule['threshold'] ) {
-						$confidence = $this->calculate_confidence( $rule, $relative_path, $is_known_safe, $is_safe_context, $line );
-						if ( $confidence >= 40 ) { // Only report if confidence is high enough
-							$threats[] = array(
-								'file'         => $relative_path,
-								'rule'         => $key,
-								'severity'     => $rule['severity'],
-								'category'     => isset( $rule['category'] ) ? $rule['category'] : 'malware',
-								'title'        => isset( $rule['title'] ) ? $rule['title'] : $key,
-								'description'  => $rule['description'],
-								'line'         => $line_num + 1,
-								'confidence'   => $confidence,
-								'context'      => $this->get_threat_context( $rule, $is_known_safe, $is_safe_context ),
-							);
-						}
+						$detected_patterns[] = array(
+							'rule'            => $key,
+							'rule_data'       => $rule,
+							'matched_content' => substr( $line, 0, 100 ) . '...',
+							'line'            => $line_num + 1,
+						);
 						break;
 					}
 				}
 				continue;
 			}
 
-			// Standard regex pattern matching.
+			// Standard regex pattern matching
 			if ( isset( $rule['pattern'] ) && preg_match( $rule['pattern'], $content, $matches ) ) {
-				$confidence = $this->calculate_confidence( $rule, $relative_path, $is_known_safe, $is_safe_context, $matches[0] ?? '' );
+				$detected_patterns[] = array(
+					'rule'            => $key,
+					'rule_data'       => $rule,
+					'matched_content' => $matches[0] ?? '',
+				);
+			}
+		}
 
-				// Only report if confidence is above threshold
-				// For known safe plugins, require higher confidence
-				$threshold = $is_known_safe ? 60 : 40;
+		// Process each detected pattern with context analysis
+		foreach ( $detected_patterns as $pattern ) {
+			$rule = $pattern['rule_data'];
+			$matched_content = $pattern['matched_content'];
 
-				if ( $confidence >= $threshold ) {
-					$threats[] = array(
-						'file'         => $relative_path,
-						'rule'         => $key,
-						'severity'     => $rule['severity'],
-						'category'     => isset( $rule['category'] ) ? $rule['category'] : 'malware',
-						'title'        => isset( $rule['title'] ) ? $rule['title'] : $key,
-						'description'  => $rule['description'],
-						'confidence'   => $confidence,
-						'context'      => $this->get_threat_context( $rule, $is_known_safe, $is_safe_context ),
-						'recommendation' => $this->get_recommendation( $confidence, $rule['severity'] ),
-					);
-				}
+			// Analyze code context
+			$context_data = $this->context_analyzer->analyze_code_context( $rule, $filepath, $content, $matched_content );
+
+			// Calculate confidence with all factors
+			$confidence = $this->calculate_confidence(
+				$rule,
+				$relative_path,
+				$is_known_safe,
+				$is_safe_context,
+				$matched_content,
+				$context_data,
+				$reputation_data
+			);
+
+			// Determine classification
+			$classification = $this->determine_classification( $confidence, $rule, $context_data );
+
+			// Skip CLEAN files (don't show in results)
+			if ( $classification === self::CLASSIFICATION_CLEAN ) {
+				continue;
+			}
+
+			// Check if confidence meets threshold for this classification
+			$threshold = $this->get_threshold_for_classification( $classification );
+			if ( $confidence < $threshold ) {
+				continue; // Skip this threat
+			}
+
+			// Build context summary
+			$context_summary = '';
+			if ( ! empty( $context_data['context_summary'] ) ) {
+				$context_summary = implode( '; ', $context_data['context_summary'] );
+			} else {
+				$context_summary = $this->get_threat_context( $rule, $is_known_safe, $is_safe_context );
+			}
+
+			// Add threat to results
+			$threat = array(
+				'file'           => $relative_path,
+				'rule'           => $pattern['rule'],
+				'severity'       => $rule['severity'],
+				'category'       => isset( $rule['category'] ) ? $rule['category'] : 'malware',
+				'title'          => isset( $rule['title'] ) ? $rule['title'] : $pattern['rule'],
+				'description'    => $rule['description'],
+				'classification' => $classification,
+				'confidence'     => $confidence,
+				'context'        => $context_summary,
+				'recommendation' => $this->get_recommendation( $confidence, $rule['severity'] ),
+			);
+
+			// Add line number if available
+			if ( isset( $pattern['line'] ) ) {
+				$threat['line'] = $pattern['line'];
+			}
+
+			$threats[] = $threat;
+		}
+
+		// Multi-pattern correlation bonus
+		if ( count( $threats ) >= 3 ) {
+			// Multiple patterns detected - increase confidence for all
+			foreach ( $threats as &$threat ) {
+				$threat['confidence'] = min( 100, $threat['confidence'] + 15 );
+				$threat['context'] .= ' [Multiple threat patterns detected]';
 			}
 		}
 
@@ -1127,19 +1541,22 @@ class NexifyMy_Security_Scanner {
 	}
 
 	/**
-	 * Calculate confidence score for a threat detection.
+	 * Calculate confidence score for a threat detection (Enhanced Multi-Factor Algorithm).
 	 *
-	 * @param array $rule The detection rule.
-	 * @param string $path File path.
-	 * @param bool $is_known_safe Is in known safe plugin.
-	 * @param bool $is_safe_context Is in safe context.
+	 * @param array  $rule            The detection rule.
+	 * @param string $path            File path.
+	 * @param bool   $is_known_safe   Is in known safe plugin (deprecated - use reputation).
+	 * @param bool   $is_safe_context Is in safe context (deprecated - use context_data).
 	 * @param string $matched_content The matched content.
+	 * @param array  $context_data    Context analysis data (optional).
+	 * @param array  $reputation_data Reputation data (optional).
 	 * @return int Confidence score (0-100).
 	 */
-	private function calculate_confidence( $rule, $path, $is_known_safe, $is_safe_context, $matched_content = '' ) {
-		$confidence = 70; // Base confidence
+	private function calculate_confidence( $rule, $path, $is_known_safe, $is_safe_context, $matched_content = '', $context_data = null, $reputation_data = null ) {
+		// Start with rule's base confidence (default 50 if not set)
+		$confidence = isset( $rule['base_confidence'] ) ? (int) $rule['base_confidence'] : 50;
 
-		// Increase confidence based on severity
+		// Factor 1: Severity modifier
 		switch ( $rule['severity'] ) {
 			case 'critical':
 				$confidence += 20;
@@ -1155,25 +1572,67 @@ class NexifyMy_Security_Scanner {
 				break;
 		}
 
-		// Decrease confidence for known safe plugins
-		if ( $is_known_safe ) {
-			$confidence -= 30;
-		}
+		// Factor 2: Context analysis (highest priority)
+		if ( $context_data !== null && isset( $context_data['confidence_modifier'] ) ) {
+			$confidence += $context_data['confidence_modifier'];
 
-		// Decrease confidence for safe contexts (WordPress core, etc.)
-		if ( $is_safe_context ) {
-			$confidence -= 25;
-		}
+			// If context suggests CLEAN, force low confidence
+			if ( isset( $context_data['suggested_classification'] ) &&
+			     $context_data['suggested_classification'] === self::CLASSIFICATION_CLEAN ) {
+				$confidence = min( $confidence, 20 ); // Cap at 20 for clean files
+			}
+		} else {
+			// Fallback to legacy behavior for backward compatibility
+			if ( $is_known_safe ) {
+				$confidence -= 30;
+			}
+			if ( $is_safe_context ) {
+				$confidence -= 25;
+			}
 
-		// Increase confidence if file is in uploads directory (higher risk area)
-		if ( strpos( $path, 'wp-content/uploads/' ) !== false ) {
-			$confidence += 15;
-		}
-
-		// Increase confidence for obfuscation patterns in non-standard locations
-		if ( isset( $rule['category'] ) && $rule['category'] === 'obfuscation' ) {
+			// Legacy location risk
 			if ( strpos( $path, 'wp-content/uploads/' ) !== false ) {
-				$confidence += 20; // Obfuscated code in uploads is very suspicious
+				$confidence += 15;
+			}
+		}
+
+		// Factor 3: Reputation data
+		if ( $reputation_data !== null ) {
+			if ( isset( $reputation_data['modifier'] ) ) {
+				$confidence += $reputation_data['modifier'];
+			}
+
+			// If known malware hash, force maximum confidence
+			if ( isset( $reputation_data['is_malware'] ) && $reputation_data['is_malware'] === true ) {
+				return 100; // Absolute certainty
+			}
+
+			// If WordPress core verified, force minimum confidence
+			if ( isset( $reputation_data['verified'] ) && $reputation_data['verified'] === true ) {
+				return 0; // Verified clean
+			}
+		}
+
+		// Factor 4: Multi-pattern correlation bonus
+		// (This will be applied at file level in scan_file)
+
+		// Factor 5: Category-specific adjustments
+		if ( isset( $rule['category'] ) ) {
+			switch ( $rule['category'] ) {
+				case 'obfuscation':
+					// Obfuscation in uploads is highly suspicious
+					if ( strpos( $path, 'wp-content/uploads/' ) !== false ) {
+						$confidence += 20;
+					}
+					break;
+				case 'webshell':
+					// Webshell indicators are high confidence
+					$confidence += 15;
+					break;
+				case 'backdoor':
+					// Backdoor patterns are high confidence
+					$confidence += 15;
+					break;
 			}
 		}
 
@@ -1217,6 +1676,55 @@ class NexifyMy_Security_Scanner {
 			return __( 'Manual review recommended', 'nexifymy-security' );
 		}
 		return __( 'Likely safe - verify if needed', 'nexifymy-security' );
+	}
+
+	/**
+	 * Determine classification tier based on confidence and context.
+	 *
+	 * @param int    $confidence   Confidence score (0-100).
+	 * @param array  $rule         Detection rule.
+	 * @param array  $context_data Context analysis data.
+	 * @return string Classification tier constant.
+	 */
+	private function determine_classification( $confidence, $rule, $context_data ) {
+		// If context suggests a classification, use it
+		if ( isset( $context_data['suggested_classification'] ) && ! empty( $context_data['suggested_classification'] ) ) {
+			return $context_data['suggested_classification'];
+		}
+
+		// If rule has fixed classification, use it
+		if ( isset( $rule['classification'] ) && $rule['classification'] !== 'dynamic' ) {
+			return $rule['classification'];
+		}
+
+		// Dynamic classification based on confidence thresholds
+		if ( $confidence >= 75 ) {
+			return self::CLASSIFICATION_CONFIRMED_MALWARE;
+		} elseif ( $confidence >= 60 ) {
+			return self::CLASSIFICATION_SUSPICIOUS_CODE;
+		} elseif ( $confidence >= 40 ) {
+			return self::CLASSIFICATION_CODE_SMELL;
+		}
+
+		return self::CLASSIFICATION_CLEAN;
+	}
+
+	/**
+	 * Get minimum confidence threshold for a classification tier.
+	 *
+	 * @param string $classification Classification tier.
+	 * @return int Minimum confidence threshold.
+	 */
+	private function get_threshold_for_classification( $classification ) {
+		$thresholds = array(
+			self::CLASSIFICATION_CONFIRMED_MALWARE        => 75,
+			self::CLASSIFICATION_SUSPICIOUS_CODE          => 60,
+			self::CLASSIFICATION_SECURITY_VULNERABILITY   => 70,
+			self::CLASSIFICATION_CODE_SMELL               => 40,
+			self::CLASSIFICATION_CLEAN                    => 0,
+		);
+
+		return isset( $thresholds[ $classification ] ) ? $thresholds[ $classification ] : 40;
 	}
 
 	/**
