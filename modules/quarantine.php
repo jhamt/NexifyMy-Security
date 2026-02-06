@@ -119,13 +119,26 @@ class NexifyMy_Security_Quarantine {
 	}
 
 	/**
+	 * Check if auto-quarantine is enabled.
+	 *
+	 * @return bool
+	 */
+	public function is_auto_quarantine_enabled() {
+		$settings = get_option( 'nexifymy_security_settings', array() );
+
+		// Default to FALSE for safety - auto-quarantine disabled by default
+		return isset( $settings['scanner']['auto_quarantine_enabled'] ) && $settings['scanner']['auto_quarantine_enabled'] === true;
+	}
+
+	/**
 	 * Move a file to quarantine.
 	 *
 	 * @param string $file_path Full path to the file.
 	 * @param string $reason Reason for quarantine.
+	 * @param bool   $manual    Whether this is a manual quarantine (bypasses auto-quarantine check).
 	 * @return array|WP_Error Quarantine info or error.
 	 */
-	public function quarantine_file( $file_path, $reason = '' ) {
+	public function quarantine_file( $file_path, $reason = '', $manual = false ) {
 		// Validate.
 		$valid = $this->validate_file_path( $file_path );
 		if ( is_wp_error( $valid ) ) {
@@ -338,6 +351,7 @@ class NexifyMy_Security_Quarantine {
 
 		$file_path = isset( $_POST['file_path'] ) ? sanitize_text_field( $_POST['file_path'] ) : '';
 		$reason = isset( $_POST['reason'] ) ? sanitize_text_field( $_POST['reason'] ) : 'Threat detected';
+		$manual = isset( $_POST['manual'] ) ? (bool) $_POST['manual'] : true; // Default to manual
 
 		if ( empty( $file_path ) ) {
 			wp_send_json_error( 'No file path provided.' );
@@ -348,7 +362,7 @@ class NexifyMy_Security_Quarantine {
 			$file_path = ABSPATH . ltrim( $file_path, '/' );
 		}
 
-		$result = $this->quarantine_file( $file_path, $reason );
+		$result = $this->quarantine_file( $file_path, $reason, $manual );
 
 		if ( is_wp_error( $result ) ) {
 			wp_send_json_error( $result->get_error_message() );
