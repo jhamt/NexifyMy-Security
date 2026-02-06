@@ -1,6 +1,3 @@
-# Claude Code files
-.claude/
-
 # WordPress
 wp-config-local.php
 .htaccess
