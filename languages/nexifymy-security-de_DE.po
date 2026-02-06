@@ -1,0 +1,4386 @@
+# Copyright (C) 2026 NexifyMy
+msgid ""
+msgstr ""
+"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"POT-Creation-Date: 2026-02-06 13:43+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "%d threats detected in last scan"
+msgstr ""
+
+msgid "(Speak this code to verify)"
+msgstr ""
+
+msgid "1 - High"
+msgstr ""
+
+msgid "1 Day"
+msgstr ""
+
+msgid "1 Hour"
+msgstr ""
+
+msgid "14 Days"
+msgstr ""
+
+msgid "15 Minutes"
+msgstr ""
+
+msgid "2 - Medium"
+msgstr ""
+
+msgid "24 Hours"
+msgstr ""
+
+msgid "2FA"
+msgstr ""
+
+msgid "2FA Methods"
+msgstr ""
+
+msgid "2FA Settings"
+msgstr ""
+
+msgid "3 - Low"
+msgstr ""
+
+msgid "3 Days"
+msgstr ""
+
+msgid "30 Days"
+msgstr ""
+
+msgid "30 Minutes"
+msgstr ""
+
+msgid "30 days"
+msgstr ""
+
+msgid "403 Forbidden"
+msgstr ""
+
+msgid "404 Not Found"
+msgstr ""
+
+msgid "429 Too Many Requests (Recommended)"
+msgstr ""
+
+msgid "5 Minutes"
+msgstr ""
+
+msgid "503 Service Unavailable"
+msgstr ""
+
+msgid "6 Hours"
+msgstr ""
+
+msgid "60 days"
+msgstr ""
+
+msgid "7 Days"
+msgstr ""
+
+msgid "7 days (continuous)"
+msgstr ""
+
+msgid "90 Days"
+msgstr ""
+
+msgid "90 days"
+msgstr ""
+
+msgid "AI Learning Status"
+msgstr ""
+
+msgid "AI Status"
+msgstr ""
+
+msgid "AI Threat Detection"
+msgstr ""
+
+msgid "AI learning data reset successfully."
+msgstr ""
+
+msgid "AJAX Requests per Minute"
+msgstr ""
+
+msgid "API & Headless Security"
+msgstr ""
+
+msgid "API & Services"
+msgstr ""
+
+msgid "API Burst Allowance"
+msgstr ""
+
+msgid "API Endpoints"
+msgstr ""
+
+msgid "API Key"
+msgstr ""
+
+msgid "API Rate Limiting"
+msgstr ""
+
+msgid "API Requests per Minute"
+msgstr ""
+
+msgid "API Security"
+msgstr ""
+
+msgid "API Token"
+msgstr ""
+
+msgid "API rate limit exceeded. Limit: %d requests per minute."
+msgstr ""
+
+msgid "API restrictions"
+msgstr ""
+
+msgid "API token, HEC token, or authentication key."
+msgstr ""
+
+msgid "Abandoned"
+msgstr ""
+
+msgid "About Quarantine"
+msgstr ""
+
+msgid "Access Denied"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Activity Dashboard"
+msgstr ""
+
+msgid "Activity Log"
+msgstr ""
+
+msgid "Activity Log Settings"
+msgstr ""
+
+msgid "Activity from these users will not be logged."
+msgstr ""
+
+msgid "Activity logs older than this will be automatically deleted."
+msgstr ""
+
+msgid "Activity tracking"
+msgstr ""
+
+msgid "Add %d more characters."
+msgstr ""
+
+msgid "Add 2FA to user accounts for extra security."
+msgstr ""
+
+msgid "Add CAPTCHA to login and forms."
+msgstr ""
+
+msgid "Add CAPTCHA verification to login forms"
+msgstr ""
+
+msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr ""
+
+msgid "Add New Passkey"
+msgstr ""
+
+msgid "Add Security Headers"
+msgstr ""
+
+msgid "Add Webhook"
+msgstr ""
+
+msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr ""
+
+msgid "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr ""
+
+msgid "Add an extra layer of security by requiring a second form of authentication."
+msgstr ""
+
+msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr ""
+
+msgid "Add an extra layer of security with TOTP-based 2FA."
+msgstr ""
+
+msgid "Add lowercase letters."
+msgstr ""
+
+msgid "Add numbers."
+msgstr ""
+
+msgid "Add special characters."
+msgstr ""
+
+msgid "Add to List"
+msgstr ""
+
+msgid "Add uppercase letters."
+msgstr ""
+
+msgid "Additional login security measures. Works with rate limiter."
+msgstr ""
+
+msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr ""
+
+msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr ""
+
+msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr ""
+
+msgid "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr ""
+
+msgid "Admin Logins (successful admin logins)"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Advanced Firewall Settings"
+msgstr ""
+
+msgid "Advanced Hardening"
+msgstr ""
+
+msgid "Advanced Hardening Options"
+msgstr ""
+
+msgid "Advanced Login Settings"
+msgstr ""
+
+msgid "Advanced Options"
+msgstr ""
+
+msgid "Advanced Scanner Options"
+msgstr ""
+
+msgid "Advanced heuristics"
+msgstr ""
+
+msgid "Affected Files:"
+msgstr ""
+
+msgid "Alert Threshold"
+msgstr ""
+
+msgid "Alert Types"
+msgstr ""
+
+msgid "Alerts"
+msgstr ""
+
+msgid "Alerts sent if plugin is deactivated."
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "All Clear!"
+msgstr ""
+
+msgid "All Events"
+msgstr ""
+
+msgid "All Severities"
+msgstr ""
+
+msgid "Allow all users to enable 2FA voluntarily."
+msgstr ""
+
+msgid "Allow email code as backup method"
+msgstr ""
+
+msgid "Allow short bursts above the rate limit."
+msgstr ""
+
+msgid "Allow users time to set up 2FA before enforcement."
+msgstr ""
+
+msgid "Allow users to enable 2FA"
+msgstr ""
+
+msgid "Allow users to generate emergency backup codes."
+msgstr ""
+
+msgid "Allow users to skip 2FA on trusted devices."
+msgstr ""
+
+msgid "Allowed User Agents"
+msgstr ""
+
+msgid "Analytics"
+msgstr ""
+
+msgid "Anomalies"
+msgstr ""
+
+msgid "Any Severity"
+msgstr ""
+
+msgid "Any modifications trigger immediate email alerts."
+msgstr ""
+
+msgid "Apply Settings"
+msgstr ""
+
+msgid "Apply WordPress security best practices."
+msgstr ""
+
+msgid "Apply security fixes"
+msgstr ""
+
+msgid "Apply security hardening measures to WordPress."
+msgstr ""
+
+msgid "Apply security hardening measures to protect your WordPress installation."
+msgstr ""
+
+msgid "ArcSight"
+msgstr ""
+
+msgid "Are you sure you want to delete this passkey?"
+msgstr ""
+
+msgid "Are you sure you want to proceed?"
+msgstr ""
+
+msgid "Attack Protection"
+msgstr ""
+
+msgid "Attempt Window"
+msgstr ""
+
+msgid "Audio (Speaking)"
+msgstr ""
+
+msgid "Authenticating..."
+msgstr ""
+
+msgid "Authentication Code"
+msgstr ""
+
+msgid "Authentication Events"
+msgstr ""
+
+msgid "Authentication Token"
+msgstr ""
+
+msgid "Authentication failed. Please try again."
+msgstr ""
+
+msgid "Authentication required for API access."
+msgstr ""
+
+msgid "Authentication required for GraphQL access."
+msgstr ""
+
+msgid "Author Scans"
+msgstr ""
+
+msgid "Auto-Block Duration"
+msgstr ""
+
+msgid "Auto-Block Repeated Offenders"
+msgstr ""
+
+msgid "Auto-Block Threshold"
+msgstr ""
+
+msgid "Auto-Fix"
+msgstr ""
+
+msgid "Auto-Generate Reports"
+msgstr ""
+
+msgid "Auto-Quarantine Threats"
+msgstr ""
+
+msgid "Auto-Scan Schedule"
+msgstr ""
+
+msgid "Auto-Update"
+msgstr ""
+
+msgid "Auto-Update Settings"
+msgstr ""
+
+msgid "Auto-Updates"
+msgstr "Automatische Updates"
+
+msgid "Auto-detect"
+msgstr ""
+
+msgid "Automated scanning"
+msgstr ""
+
+msgid "Automatic Scans"
+msgstr ""
+
+msgid "Automatically blacklist IPs that trigger rules multiple times."
+msgstr ""
+
+msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr ""
+
+msgid "Automatically create tickets for security incidents in your project management systems."
+msgstr ""
+
+msgid "Automatically generate reports on schedule"
+msgstr ""
+
+msgid "Automatically move detected malware to quarantine."
+msgstr ""
+
+msgid "Automatically run scans in the background."
+msgstr ""
+
+msgid "Automatically update malware signatures daily."
+msgstr ""
+
+msgid "Available Countries"
+msgstr ""
+
+msgid "Available Events"
+msgstr ""
+
+msgid "Avg/Day"
+msgstr ""
+
+msgid "Background Scans"
+msgstr ""
+
+msgid "Backs up corrupted files before replacement"
+msgstr ""
+
+msgid "Backup Codes"
+msgstr ""
+
+msgid "Backup, optimize, and secure your database."
+msgstr ""
+
+msgid "Backups & cleanup"
+msgstr ""
+
+msgid "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr ""
+
+msgid "Bad Bots"
+msgstr ""
+
+msgid "Bad Requests"
+msgstr ""
+
+msgid "Balanced (recommended)"
+msgstr ""
+
+msgid "Behavior Records"
+msgstr ""
+
+msgid "Behavioral analysis"
+msgstr ""
+
+msgid "Blacklist (Block Listed)"
+msgstr ""
+
+msgid "Blacklist (block selected)"
+msgstr ""
+
+msgid "Blacklist IPs"
+msgstr ""
+
+msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr ""
+
+msgid "Blacklisted IPs"
+msgstr ""
+
+msgid "Block Bad Bots"
+msgstr ""
+
+msgid "Block CSRF Attacks"
+msgstr ""
+
+msgid "Block Common Passwords"
+msgstr ""
+
+msgid "Block Directory Traversal"
+msgstr ""
+
+msgid "Block Duration"
+msgstr ""
+
+msgid "Block Empty User Agents"
+msgstr ""
+
+msgid "Block Excessive API Users"
+msgstr ""
+
+msgid "Block File Editor"
+msgstr ""
+
+msgid "Block Local File Inclusion"
+msgstr ""
+
+msgid "Block Message"
+msgstr ""
+
+msgid "Block Mode"
+msgstr ""
+
+msgid "Block Mode (Recommended)"
+msgstr ""
+
+msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr ""
+
+msgid "Block Remote Code Execution"
+msgstr ""
+
+msgid "Block Remote File Inclusion"
+msgstr ""
+
+msgid "Block SQL Injection"
+msgstr ""
+
+msgid "Block Suspicious File Uploads"
+msgstr ""
+
+msgid "Block XML-RPC access (prevents brute force)"
+msgstr ""
+
+msgid "Block XSS Attacks"
+msgstr ""
+
+msgid "Block access from specific countries."
+msgstr ""
+
+msgid "Block aggressive crawlers (high request rate)"
+msgstr ""
+
+msgid "Block author enumeration scans (?author=1)"
+msgstr ""
+
+msgid "Block excessively long query strings."
+msgstr ""
+
+msgid "Block known bad bots and scrapers"
+msgstr ""
+
+msgid "Block known malicious bots and scrapers."
+msgstr ""
+
+msgid "Block malformed requests and suspicious query strings"
+msgstr ""
+
+msgid "Block malicious requests"
+msgstr ""
+
+msgid "Block malicious requests and attacks"
+msgstr ""
+
+msgid "Block or allow traffic based on country."
+msgstr ""
+
+msgid "Block requests larger than this size to prevent DoS attacks."
+msgstr ""
+
+msgid "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr ""
+
+msgid "Block requests without a User-Agent header."
+msgstr ""
+
+msgid "Block suspicious IPs"
+msgstr ""
+
+msgid "Block suspicious User-Agents"
+msgstr ""
+
+msgid "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr ""
+
+msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr ""
+
+msgid "Blocked Attacks"
+msgstr ""
+
+msgid "Blocked File Extensions"
+msgstr ""
+
+msgid "Blocked Requests"
+msgstr ""
+
+msgid "Blocked User Agents"
+msgstr ""
+
+msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr ""
+
+msgid "Bookmark this URL so you can always access your login page."
+msgstr ""
+
+msgid "Bot & Crawler Protection"
+msgstr ""
+
+msgid "Bot & User Agent Protection"
+msgstr ""
+
+msgid "Bot prevention"
+msgstr ""
+
+msgid "Bot protection"
+msgstr ""
+
+msgid "Browsers"
+msgstr ""
+
+msgid "Brute Force"
+msgstr ""
+
+msgid "Brute Force Protection"
+msgstr ""
+
+msgid "Brute force protection and login attempt limits."
+msgstr ""
+
+msgid "Bug"
+msgstr ""
+
+msgid "Busiest Day"
+msgstr ""
+
+msgid "CAPTCHA"
+msgstr ""
+
+msgid "CAPTCHA Protection"
+msgstr ""
+
+msgid "CDN Integration"
+msgstr ""
+
+msgid "CDN Status"
+msgstr ""
+
+msgid "CEF (Common Event Format)"
+msgstr ""
+
+msgid "CI/CD"
+msgstr ""
+
+msgid "CI/CD Pipeline"
+msgstr ""
+
+msgid "CI/CD Pipeline Integration"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Captcha"
+msgstr ""
+
+msgid "Captcha Preview"
+msgstr ""
+
+msgid "Captcha Provider"
+msgstr ""
+
+msgid "Captcha Settings"
+msgstr ""
+
+msgid "Change Database Prefix"
+msgstr ""
+
+msgid "Change database table prefix (requires manual database update)."
+msgstr ""
+
+msgid "Change the default login URL to prevent attacks."
+msgstr ""
+
+msgid "Change the default wp-admin login URL to prevent automated attacks."
+msgstr ""
+
+msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Character Requirements"
+msgstr ""
+
+msgid "Check Core Integrity"
+msgstr ""
+
+msgid "Check Interval"
+msgstr ""
+
+msgid "Check and repair corrupted WordPress core files using official sources."
+msgstr ""
+
+msgid "Check core files for modifications and malware."
+msgstr ""
+
+msgid "Check for Backdoors"
+msgstr ""
+
+msgid "Check for Obfuscation"
+msgstr ""
+
+msgid "Check for known vulnerabilities."
+msgstr ""
+
+msgid "Check uploaded files for malicious content."
+msgstr ""
+
+msgid "Checks for web shells"
+msgstr ""
+
+msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr ""
+
+msgid "Choose a unique, hard-to-guess slug."
+msgstr ""
+
+msgid "Choose the type of challenge for NexifyMy captcha."
+msgstr ""
+
+msgid "Clean Files"
+msgstr ""
+
+msgid "Clean Files:"
+msgstr ""
+
+msgid "Clean and optimize database"
+msgstr ""
+
+msgid "Clean up unnecessary data to improve database performance."
+msgstr ""
+
+msgid "Clear Logs"
+msgstr ""
+
+msgid "Cloudflare"
+msgstr ""
+
+msgid "Cloudflare & more"
+msgstr ""
+
+msgid "Cloudflare API Settings"
+msgstr ""
+
+msgid "Cloudflare API Token (with Zone permissions)"
+msgstr ""
+
+msgid "Cloudflare Turnstile"
+msgstr ""
+
+msgid "Code"
+msgstr ""
+
+msgid "Code Expiration"
+msgstr ""
+
+msgid "Code Quality Issues"
+msgstr ""
+
+msgid "Comma-separated list of file extensions to block in uploads."
+msgstr ""
+
+msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr ""
+
+msgid "Comment Blocked"
+msgstr ""
+
+msgid "Comment Form"
+msgstr ""
+
+msgid "Comment Posting Rate"
+msgstr ""
+
+msgid "Comment form"
+msgstr ""
+
+msgid "Communication"
+msgstr ""
+
+msgid "Communication Platforms"
+msgstr ""
+
+msgid "Compare core files with official WordPress checksums."
+msgstr ""
+
+msgid "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr ""
+
+msgid "Compares each core file against the expected hash"
+msgstr ""
+
+msgid "Completely disable all RSS and Atom feeds."
+msgstr ""
+
+msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr ""
+
+msgid "Compliance"
+msgstr ""
+
+msgid "Compliance & Reporting"
+msgstr ""
+
+msgid "Compliance & Security Reporting"
+msgstr ""
+
+msgid "Compliance Settings"
+msgstr ""
+
+msgid "Composer Dependencies"
+msgstr ""
+
+msgid "Comprehensive analysis"
+msgstr ""
+
+msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr ""
+
+msgid "Configure"
+msgstr ""
+
+msgid "Configure 2FA for enhanced login security"
+msgstr ""
+
+msgid "Configure CDN for security and performance."
+msgstr ""
+
+msgid "Configure CDN integration and cache management."
+msgstr ""
+
+msgid "Configure Web Application Firewall (WAF) to protect your site."
+msgstr ""
+
+msgid "Configure email alerts and notifications."
+msgstr ""
+
+msgid "Configure firewall rules and protection settings."
+msgstr ""
+
+msgid "Configure malware scanner behavior and scheduled scanning options."
+msgstr ""
+
+msgid "Configure plugin settings and preferences."
+msgstr ""
+
+msgid "Configure plugin settings."
+msgstr ""
+
+msgid "Configure your security settings."
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Confirm Action"
+msgstr ""
+
+msgid "Confirmed Malware"
+msgstr ""
+
+msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr ""
+
+msgid "Contact our support team for assistance with NexifyMy Security."
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Content Activity"
+msgstr ""
+
+msgid "Content Changes"
+msgstr ""
+
+msgid "Content Events"
+msgstr ""
+
+msgid "Content Security"
+msgstr ""
+
+msgid "Core File Modifications"
+msgstr ""
+
+msgid "Core File Repair"
+msgstr ""
+
+msgid "Core Repair"
+msgstr ""
+
+msgid "Core WordPress integrity"
+msgstr ""
+
+msgid "Core file integrity"
+msgstr ""
+
+msgid "Count"
+msgstr ""
+
+msgid "Countries"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Country Blocking Settings"
+msgstr ""
+
+msgid "Country restrictions"
+msgstr ""
+
+msgid "Create Backup Now"
+msgstr ""
+
+msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr ""
+
+msgid "Create incidents in ServiceNow for critical security events."
+msgstr ""
+
+msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr ""
+
+msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr ""
+
+msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Created: %s"
+msgstr ""
+
+msgid "Critical"
+msgstr ""
+
+msgid "Critical Only"
+msgstr ""
+
+msgid "Current Login URL"
+msgstr ""
+
+msgid "Current Version"
+msgstr ""
+
+msgid "Current:"
+msgstr ""
+
+msgid "Custom Login URL"
+msgstr ""
+
+msgid "Custom URL"
+msgstr ""
+
+msgid "Custom Webhooks"
+msgstr ""
+
+msgid "Daily"
+msgstr ""
+
+msgid "Daily (Recommended)"
+msgstr ""
+
+msgid "Daily Status Summary"
+msgstr ""
+
+msgid "Daily Summary"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Data Retention"
+msgstr ""
+
+msgid "Database"
+msgstr ""
+
+msgid "Database Actions"
+msgstr ""
+
+msgid "Database Backup"
+msgstr ""
+
+msgid "Database Information"
+msgstr ""
+
+msgid "Database Optimization"
+msgstr ""
+
+msgid "Database Optimizer"
+msgstr ""
+
+msgid "Database Security"
+msgstr ""
+
+msgid "Database Size"
+msgstr ""
+
+msgid "Database backup and optimization. Configure backup schedule before enabling."
+msgstr ""
+
+msgid "Database security check"
+msgstr ""
+
+msgid "Datadog"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Date/Time"
+msgstr ""
+
+msgid "Deactivation Monitoring:"
+msgstr ""
+
+msgid "Debug Mode"
+msgstr ""
+
+msgid "Deep"
+msgstr ""
+
+msgid "Deep Scan"
+msgstr ""
+
+msgid "Default Scan Mode"
+msgstr ""
+
+msgid "Default scan mode used when none is specified."
+msgstr ""
+
+msgid "Definitions"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete all plugin data when uninstalling"
+msgstr ""
+
+msgid "Delete:"
+msgstr ""
+
+msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Detailed insights into your site traffic and security events"
+msgstr ""
+
+msgid "Detailed insights into your website security performance."
+msgstr ""
+
+msgid "Detect and block code execution attempts."
+msgstr ""
+
+msgid "Detect hidden backdoor scripts and shells."
+msgstr ""
+
+msgid "Detect malware, backdoors, and suspicious code"
+msgstr ""
+
+msgid "Detect threats"
+msgstr ""
+
+msgid "Detect unknown threats using behavioral analysis."
+msgstr ""
+
+msgid "Detection Methods"
+msgstr ""
+
+msgid "Device Types"
+msgstr ""
+
+msgid "Difficulty"
+msgstr ""
+
+msgid "Difficulty Level"
+msgstr ""
+
+msgid "Difficulty level for NexifyMy captcha challenges."
+msgstr ""
+
+msgid "Direct"
+msgstr ""
+
+msgid "Directory Traversal"
+msgstr ""
+
+msgid "Directory Traversal Protection"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Disable Application Passwords"
+msgstr ""
+
+msgid "Disable Author Archives"
+msgstr ""
+
+msgid "Disable Directory Browsing"
+msgstr ""
+
+msgid "Disable Embeds"
+msgstr ""
+
+msgid "Disable File Editor"
+msgstr ""
+
+msgid "Disable File Modifications"
+msgstr ""
+
+msgid "Disable Login Error Messages"
+msgstr ""
+
+msgid "Disable Pingback"
+msgstr ""
+
+msgid "Disable Pingbacks"
+msgstr ""
+
+msgid "Disable Plugin/Theme Installation"
+msgstr ""
+
+msgid "Disable REST API User Enumeration"
+msgstr ""
+
+msgid "Disable RSS/Atom Feeds"
+msgstr ""
+
+msgid "Disable Right-Click"
+msgstr ""
+
+msgid "Disable Text Selection"
+msgstr ""
+
+msgid "Disable Trackbacks"
+msgstr ""
+
+msgid "Disable WP editor"
+msgstr ""
+
+msgid "Disable XML-RPC"
+msgstr ""
+
+msgid "Disable XML-RPC (prevents common brute force vector)"
+msgstr ""
+
+msgid "Disable XML-RPC (prevents pingback attacks)"
+msgstr ""
+
+msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr ""
+
+msgid "Disable author archive pages to prevent username enumeration."
+msgstr ""
+
+msgid "Disable oEmbed functionality and REST API endpoints."
+msgstr ""
+
+msgid "Disable pingback functionality to prevent DDoS."
+msgstr ""
+
+msgid "Disable pingback/trackback functionality"
+msgstr ""
+
+msgid "Disable plugin/theme file editor in WordPress admin."
+msgstr ""
+
+msgid "Disable public user enumeration via REST API"
+msgstr ""
+
+msgid "Disable right-click context menu on frontend."
+msgstr ""
+
+msgid "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr ""
+
+msgid "Disable theme and plugin editor"
+msgstr ""
+
+msgid "Disable theme/plugin editor in admin"
+msgstr ""
+
+msgid "Disable trackback functionality."
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr ""
+
+msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr ""
+
+msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr ""
+
+msgid "Discord Integration"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Downloads fresh WordPress package from official source"
+msgstr ""
+
+msgid "Easy"
+msgstr ""
+
+msgid "Easy (addition only)"
+msgstr ""
+
+msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr ""
+
+msgid "Editor & File Access"
+msgstr ""
+
+msgid "Editor Blocking:"
+msgstr ""
+
+msgid "Elasticsearch"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Email Alert Settings"
+msgstr ""
+
+msgid "Email Alerts"
+msgstr ""
+
+msgid "Email Backup"
+msgstr ""
+
+msgid "Email Notifications"
+msgstr "E-Mail-Benachrichtigungen"
+
+msgid "Email Reports"
+msgstr ""
+
+msgid "Email Scan Reports"
+msgstr ""
+
+msgid "Email Verification"
+msgstr ""
+
+msgid "Empty User Agent"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enable 2FA"
+msgstr ""
+
+msgid "Enable 2FA Module"
+msgstr ""
+
+msgid "Enable Activity Logging"
+msgstr ""
+
+msgid "Enable Alerts"
+msgstr ""
+
+msgid "Enable CAPTCHA Protection"
+msgstr ""
+
+msgid "Enable CDN Integration"
+msgstr ""
+
+msgid "Enable CDN features"
+msgstr ""
+
+msgid "Enable CI/CD Integration"
+msgstr ""
+
+msgid "Enable Captcha"
+msgstr ""
+
+msgid "Enable Custom Webhooks"
+msgstr ""
+
+msgid "Enable Discord"
+msgstr ""
+
+msgid "Enable Email Alerts"
+msgstr ""
+
+msgid "Enable Firewall"
+msgstr ""
+
+msgid "Enable Geo Blocking"
+msgstr ""
+
+msgid "Enable Hide Login"
+msgstr ""
+
+msgid "Enable Jira"
+msgstr ""
+
+msgid "Enable Protection"
+msgstr ""
+
+msgid "Enable Rate Limiting"
+msgstr ""
+
+msgid "Enable SIEM Integration"
+msgstr ""
+
+msgid "Enable SSL/HTTPS"
+msgstr ""
+
+msgid "Enable Scanner"
+msgstr ""
+
+msgid "Enable Scanner Module"
+msgstr ""
+
+msgid "Enable Scheduled Scans"
+msgstr ""
+
+msgid "Enable ServiceNow"
+msgstr ""
+
+msgid "Enable Slack"
+msgstr ""
+
+msgid "Enable Teams"
+msgstr ""
+
+msgid "Enable Two-Factor Authentication"
+msgstr ""
+
+msgid "Enable WAF"
+msgstr ""
+
+msgid "Enable WAF Module"
+msgstr ""
+
+msgid "Enable WAF protection"
+msgstr ""
+
+msgid "Enable Web Application Firewall"
+msgstr ""
+
+msgid "Enable Web Application Firewall protection."
+msgstr ""
+
+msgid "Enable and configure security modules for your site."
+msgstr ""
+
+msgid "Enable and configure security modules."
+msgstr ""
+
+msgid "Enable captcha protection"
+msgstr ""
+
+msgid "Enable country-based blocking"
+msgstr ""
+
+msgid "Enable debug logging (for troubleshooting only)"
+msgstr ""
+
+msgid "Enable firewall protection to block attacks"
+msgstr ""
+
+msgid "Enable login rate limiting"
+msgstr ""
+
+msgid "Enable malware scanner"
+msgstr ""
+
+msgid "Enable or disable security modules."
+msgstr ""
+
+msgid "Enable or disable the entire WAF module."
+msgstr ""
+
+msgid "Enable or disable the malware scanner."
+msgstr ""
+
+msgid "Enable or disable the rate limiting module."
+msgstr ""
+
+msgid "Enable or disable two-factor authentication."
+msgstr ""
+
+msgid "Enable scheduled scans"
+msgstr ""
+
+msgid "Enable vulnerability scanner features"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Endpoint URL"
+msgstr ""
+
+msgid "Enforce Strong Passwords"
+msgstr ""
+
+msgid "Enforce strong password requirements"
+msgstr ""
+
+msgid "Enforce strong password requirements for all users."
+msgstr ""
+
+msgid "Enforce strong password requirements."
+msgstr ""
+
+msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr ""
+
+msgid "Enforces strong passwords with minimum length, complexity rules"
+msgstr ""
+
+msgid "Enter 6-digit code to verify setup"
+msgstr ""
+
+msgid "Enter IPs, one per line"
+msgstr ""
+
+msgid "Enter answer"
+msgstr ""
+
+msgid "Enter the code:"
+msgstr ""
+
+msgid "Enterprise-Grade WordPress Security"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Event"
+msgstr ""
+
+msgid "Event Format"
+msgstr ""
+
+msgid "Event Logs"
+msgstr ""
+
+msgid "Event Severity"
+msgstr ""
+
+msgid "Event Type"
+msgstr ""
+
+msgid "Events"
+msgstr ""
+
+msgid "Events (7 days)"
+msgstr ""
+
+msgid "Events to Create Tickets"
+msgstr ""
+
+msgid "Events to Forward"
+msgstr ""
+
+msgid "Events to Notify"
+msgstr ""
+
+msgid "Example: GitHub Actions"
+msgstr ""
+
+msgid "Example: GitLab CI"
+msgstr ""
+
+msgid "Example: Jenkins Pipeline"
+msgstr ""
+
+msgid "Excluded Extensions"
+msgstr ""
+
+msgid "Excluded File Patterns"
+msgstr ""
+
+msgid "Excluded Paths"
+msgstr ""
+
+msgid "Excluded Users"
+msgstr ""
+
+msgid "Exclusions"
+msgstr ""
+
+msgid "Exhaustive file scan"
+msgstr ""
+
+msgid "Existing Backups"
+msgstr ""
+
+msgid "Export CSV"
+msgstr ""
+
+msgid "Export Settings"
+msgstr ""
+
+msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr ""
+
+msgid "External Scripts & CDN Resources"
+msgstr ""
+
+msgid "Extra login security"
+msgstr ""
+
+msgid "Fail Build on Malware"
+msgstr ""
+
+msgid "Fail Build on Vulnerabilities"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Failed 2FA attempts before temporary lockout."
+msgstr ""
+
+msgid "Failed Login"
+msgstr ""
+
+msgid "Failed Logins"
+msgstr ""
+
+msgid "Failed login attempt detected"
+msgstr ""
+
+msgid "Failed to register passkey."
+msgstr ""
+
+msgid "Fast execution"
+msgstr ""
+
+msgid "Fast security check"
+msgstr ""
+
+msgid "Fetches official file checksums from WordPress.org API"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "File Editor"
+msgstr ""
+
+msgid "File Hashing:"
+msgstr ""
+
+msgid "File Inclusion"
+msgstr ""
+
+msgid "File Inclusion Protection"
+msgstr ""
+
+msgid "File Integrity Check"
+msgstr ""
+
+msgid "File Integrity Monitoring"
+msgstr ""
+
+msgid "File Permissions"
+msgstr ""
+
+msgid "File Quarantined"
+msgstr ""
+
+msgid "File extensions to exclude from scanning (one per line, without dots)."
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Files Scanned"
+msgstr ""
+
+msgid "Files Scanned:"
+msgstr ""
+
+msgid "Files are periodically compared against the baseline."
+msgstr ""
+
+msgid "Files in quarantine are safely stored and cannot execute."
+msgstr ""
+
+msgid "Files larger than this will be skipped during scanning."
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Firewall"
+msgstr ""
+
+msgid "Firewall & Protection"
+msgstr ""
+
+msgid "Firewall Configuration"
+msgstr ""
+
+msgid "Firewall Rules"
+msgstr ""
+
+msgid "Firewall Settings"
+msgstr ""
+
+msgid "Fix modified files"
+msgstr ""
+
+msgid "Flag heavily obfuscated or encoded code."
+msgstr ""
+
+msgid "Force SSL for Admin"
+msgstr ""
+
+msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr ""
+
+msgid "Force for Admins"
+msgstr ""
+
+msgid "Format:"
+msgstr ""
+
+msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr ""
+
+msgid "Found in Cloudflare dashboard under Overview"
+msgstr ""
+
+msgid "Found in known safe plugin - likely legitimate use"
+msgstr ""
+
+msgid "Found in system directory - may be legitimate"
+msgstr ""
+
+msgid "From Date"
+msgstr ""
+
+msgid "From Email"
+msgstr ""
+
+msgid "From Name"
+msgstr ""
+
+msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr ""
+
+msgid "Full malware analysis"
+msgstr ""
+
+msgid "Full malware scan"
+msgstr ""
+
+msgid "Full malware signatures"
+msgstr ""
+
+msgid "Full site analysis"
+msgstr ""
+
+msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "General Request Limiting"
+msgstr ""
+
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+msgid "Generate Report"
+msgstr ""
+
+msgid "Generate SRI"
+msgstr ""
+
+msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr ""
+
+msgid "Generated"
+msgstr ""
+
+msgid "Generic HTTP Endpoint"
+msgstr ""
+
+msgid "Generic Proxy"
+msgstr ""
+
+msgid "Geo Block"
+msgstr ""
+
+msgid "Geo Blocking"
+msgstr ""
+
+msgid "Geographic Distribution"
+msgstr ""
+
+msgid "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr ""
+
+msgid "Get instant notifications in your team communication channels when security events occur."
+msgstr ""
+
+msgid "Get latest scan status"
+msgstr ""
+
+msgid "Get scan results (JSON)"
+msgstr ""
+
+msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr ""
+
+msgid "Getting Started"
+msgstr ""
+
+msgid "Google reCAPTCHA v2"
+msgstr ""
+
+msgid "Google reCAPTCHA v3"
+msgstr ""
+
+msgid "Grace Period"
+msgstr ""
+
+msgid "Grade"
+msgstr ""
+
+msgid "GraphQL Security"
+msgstr ""
+
+msgid "GraphQL introspection is disabled."
+msgstr ""
+
+msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr ""
+
+msgid "HTTP Security Headers"
+msgstr ""
+
+msgid "HTTP Strict Transport Security (HSTS)"
+msgstr ""
+
+msgid "HTTP headers"
+msgstr ""
+
+msgid "Handle"
+msgstr ""
+
+msgid "Hard"
+msgstr ""
+
+msgid "Hard (includes multiplication)"
+msgstr ""
+
+msgid "Harden Site"
+msgstr ""
+
+msgid "Hardening"
+msgstr ""
+
+msgid "Hardening Options"
+msgstr ""
+
+msgid "Headers"
+msgstr ""
+
+msgid "Help & Documentation"
+msgstr ""
+
+msgid "Heuristic Analysis"
+msgstr ""
+
+msgid "Heuristic pattern detection"
+msgstr ""
+
+msgid "Hide Login"
+msgstr ""
+
+msgid "Hide Login Page"
+msgstr ""
+
+msgid "Hide Login URL"
+msgstr ""
+
+msgid "Hide Login URL:"
+msgstr ""
+
+msgid "Hide WP Version"
+msgstr ""
+
+msgid "Hide WordPress Login URL"
+msgstr ""
+
+msgid "Hide WordPress Version"
+msgstr ""
+
+msgid "Hide WordPress version from source code"
+msgstr ""
+
+msgid "Hide default login URLs"
+msgstr ""
+
+msgid "Hide wp-admin"
+msgstr ""
+
+msgid "Hide wp-admin and wp-login.php from attackers."
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "High (Maximum detection)"
+msgstr ""
+
+msgid "High Security (more checks, slower)"
+msgstr ""
+
+msgid "High number of blocked attacks recently"
+msgstr ""
+
+msgid "High or Above"
+msgstr ""
+
+msgid "High-Severity Threats"
+msgstr ""
+
+msgid "High-risk areas only"
+msgstr ""
+
+msgid "High-scoring threat detected by AI analysis"
+msgstr ""
+
+msgid "Higher sensitivity may produce more false positives."
+msgstr ""
+
+msgid "Highest"
+msgstr ""
+
+msgid "Hold Ctrl/Cmd to select multiple countries."
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Hourly"
+msgstr ""
+
+msgid "How 2FA Works"
+msgstr ""
+
+msgid "How Core Repair Works"
+msgstr ""
+
+msgid "How Self-Protection Works"
+msgstr ""
+
+msgid "How long to block an IP after exceeding attempts."
+msgstr ""
+
+msgid "How long to block an IP after rate limit exceeded."
+msgstr ""
+
+msgid "How long to keep old reports (30-365 days)"
+msgstr ""
+
+msgid "IBM QRadar"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "IP Access Control"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "IP Blocking"
+msgstr ""
+
+msgid "IP Configuration"
+msgstr ""
+
+msgid "IP Lockout"
+msgstr ""
+
+msgid "IP Lockouts (brute force attempts)"
+msgstr ""
+
+msgid "IP Management"
+msgstr ""
+
+msgid "IP Whitelist"
+msgstr ""
+
+msgid "IPs that bypass rate limiting."
+msgstr ""
+
+msgid "IPs that will always be blocked."
+msgstr ""
+
+msgid "IPs that will never be blocked."
+msgstr ""
+
+msgid "Identifies modified or missing files"
+msgstr ""
+
+msgid "Image Selection"
+msgstr ""
+
+msgid "Immediate action required"
+msgstr ""
+
+msgid "Impact Level"
+msgstr ""
+
+msgid "Import Settings"
+msgstr ""
+
+msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr ""
+
+msgid "Import/Export"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Incident"
+msgstr ""
+
+msgid "Include GDPR Checks"
+msgstr ""
+
+msgid "Include IP whitelist/blacklist"
+msgstr ""
+
+msgid "Include Performance Metrics"
+msgstr ""
+
+msgid "Include Security Checks"
+msgstr ""
+
+msgid "Include Threat Summary"
+msgstr ""
+
+msgid "Include last scan results"
+msgstr ""
+
+msgid "Include security logs (last 30 days)"
+msgstr ""
+
+msgid "Incorrect captcha answer. Please go back and try again."
+msgstr ""
+
+msgid "Incorrect captcha answer. Please try again."
+msgstr ""
+
+msgid "Index name or source identifier for event categorization."
+msgstr ""
+
+msgid "Index/Source"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Information Disclosure"
+msgstr ""
+
+msgid "Initializing..."
+msgstr ""
+
+msgid "Instance Name"
+msgstr ""
+
+msgid "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr ""
+
+msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr ""
+
+msgid "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr ""
+
+msgid "Integrations"
+msgstr ""
+
+msgid "Integrity Check Results"
+msgstr ""
+
+msgid "Integrity Checks:"
+msgstr ""
+
+msgid "Integrity Status"
+msgstr ""
+
+msgid "Invalid JWT token."
+msgstr ""
+
+msgid "Invalid credentials."
+msgstr ""
+
+msgid "Invalid verification code."
+msgstr ""
+
+msgid "Isolate threats"
+msgstr ""
+
+msgid "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr ""
+
+msgid "Issue Type"
+msgstr ""
+
+msgid "Issues Found"
+msgstr ""
+
+msgid "JSON"
+msgstr ""
+
+msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr ""
+
+msgid "Jira Cloud URL"
+msgstr ""
+
+msgid "Jira Integration"
+msgstr ""
+
+msgid "KB"
+msgstr ""
+
+msgid "Keep logs of all blocked requests for analysis."
+msgstr ""
+
+msgid "Keep logs of all rate limit violations for analysis."
+msgstr ""
+
+msgid "Keep your malware signatures up to date for best protection."
+msgstr ""
+
+msgid "Known Countries"
+msgstr ""
+
+msgid "Known vulnerability found in installed plugin"
+msgstr ""
+
+msgid "LEEF (Log Event Extended Format)"
+msgstr ""
+
+msgid "Last 30 Days"
+msgstr ""
+
+msgid "Last 30 days"
+msgstr ""
+
+msgid "Last 7 Days"
+msgstr ""
+
+msgid "Last 90 Days"
+msgstr ""
+
+msgid "Last Learned"
+msgstr ""
+
+msgid "Last Scan"
+msgstr ""
+
+msgid "Last Scan:"
+msgstr ""
+
+msgid "Last Updated"
+msgstr ""
+
+msgid "Last used: %s"
+msgstr ""
+
+msgid "Latest Version"
+msgstr ""
+
+msgid "Learning - Log only, no blocking"
+msgstr ""
+
+msgid "Learning Period"
+msgstr ""
+
+msgid "Learning..."
+msgstr ""
+
+msgid "Leave blank to use admin email."
+msgstr ""
+
+msgid "Likely safe - verify if needed"
+msgstr ""
+
+msgid "Limit REST API access to authenticated users"
+msgstr ""
+
+msgid "Limit comment submissions to prevent spam."
+msgstr ""
+
+msgid "Limit excessive requests from a single IP address."
+msgstr ""
+
+msgid "Limit login attempts"
+msgstr ""
+
+msgid "Limit login attempts to prevent brute force attacks"
+msgstr ""
+
+msgid "Limit request rates to prevent abuse and DDoS attacks."
+msgstr ""
+
+msgid "Limit request rates to prevent abuse."
+msgstr ""
+
+msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr ""
+
+msgid "List known vulnerabilities"
+msgstr ""
+
+msgid "Live Traffic"
+msgstr ""
+
+msgid "Live Traffic Monitor"
+msgstr ""
+
+msgid "Loading CDN status..."
+msgstr ""
+
+msgid "Loading alerts..."
+msgstr ""
+
+msgid "Loading analytics data..."
+msgstr ""
+
+msgid "Loading backups..."
+msgstr ""
+
+msgid "Loading blocked IPs..."
+msgstr ""
+
+msgid "Loading countries..."
+msgstr ""
+
+msgid "Loading database information..."
+msgstr ""
+
+msgid "Loading geographic data..."
+msgstr ""
+
+msgid "Loading logs..."
+msgstr ""
+
+msgid "Loading notifications..."
+msgstr ""
+
+msgid "Loading optimization stats..."
+msgstr ""
+
+msgid "Loading protection status..."
+msgstr ""
+
+msgid "Loading quarantined files..."
+msgstr ""
+
+msgid "Loading referrers..."
+msgstr ""
+
+msgid "Loading threat detections..."
+msgstr ""
+
+msgid "Loading top pages..."
+msgstr ""
+
+msgid "Loading traffic data..."
+msgstr ""
+
+msgid "Lock out after this many failed attempts."
+msgstr ""
+
+msgid "Lockout Duration"
+msgstr ""
+
+msgid "Lockout period after max failed 2FA attempts."
+msgstr ""
+
+msgid "Log Allowed Requests"
+msgstr ""
+
+msgid "Log Blocked Requests"
+msgstr ""
+
+msgid "Log Failed Login Attempts"
+msgstr ""
+
+msgid "Log Logouts"
+msgstr ""
+
+msgid "Log Media Uploads"
+msgstr ""
+
+msgid "Log Option Changes"
+msgstr ""
+
+msgid "Log Plugin Changes"
+msgstr ""
+
+msgid "Log Post/Page Changes"
+msgstr ""
+
+msgid "Log Profile Changes"
+msgstr ""
+
+msgid "Log Rate Limit Violations"
+msgstr ""
+
+msgid "Log Retention"
+msgstr ""
+
+msgid "Log Role Changes"
+msgstr ""
+
+msgid "Log Successful Logins"
+msgstr ""
+
+msgid "Log Theme Changes"
+msgstr ""
+
+msgid "Log User Creation/Deletion"
+msgstr ""
+
+msgid "Log all requests that pass WAF checks (high disk usage)."
+msgstr ""
+
+msgid "Logging"
+msgstr ""
+
+msgid "Logging & Monitoring"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Login & Authentication"
+msgstr ""
+
+msgid "Login Activity"
+msgstr ""
+
+msgid "Login Attempt Window"
+msgstr ""
+
+msgid "Login Attempts"
+msgstr ""
+
+msgid "Login CAPTCHA"
+msgstr ""
+
+msgid "Login Captcha"
+msgstr ""
+
+msgid "Login Form"
+msgstr ""
+
+msgid "Login Lockout Duration"
+msgstr ""
+
+msgid "Login Protection"
+msgstr ""
+
+msgid "Login Rate Limiting"
+msgstr ""
+
+msgid "Login Security"
+msgstr ""
+
+msgid "Login Slug"
+msgstr ""
+
+msgid "Login URL Settings"
+msgstr ""
+
+msgid "Login form"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Logouts"
+msgstr ""
+
+msgid "Logs"
+msgstr ""
+
+msgid "Logs older than this are automatically purged daily."
+msgstr ""
+
+msgid "Logs security events for review. Safe - only records activity."
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "Low (Less false positives)"
+msgstr ""
+
+msgid "Low Impact (fewer checks, faster)"
+msgstr ""
+
+msgid "Lowercase letter (a-z)"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "Maintenance and diagnostic tools for your site."
+msgstr ""
+
+msgid "Make sure to remember your custom login URL!"
+msgstr ""
+
+msgid "Malware & Scanning"
+msgstr ""
+
+msgid "Malware Definitions"
+msgstr ""
+
+msgid "Malware Found"
+msgstr ""
+
+msgid "Malware Scanner"
+msgstr ""
+
+msgid "Malware detected during file scanning"
+msgstr ""
+
+msgid "Manage Notifications"
+msgstr ""
+
+msgid "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr ""
+
+msgid "Mandatory for Roles"
+msgstr ""
+
+msgid "Manual review recommended"
+msgstr ""
+
+msgid "Mark All Read"
+msgstr ""
+
+msgid "Mark All as Read"
+msgstr ""
+
+msgid "Master switch to enable or disable all activity logging."
+msgstr ""
+
+msgid "Math Question"
+msgstr ""
+
+msgid "Max Attempts"
+msgstr ""
+
+msgid "Max Failed Attempts"
+msgstr ""
+
+msgid "Max File Size"
+msgstr ""
+
+msgid "Max Login Attempts"
+msgstr ""
+
+msgid "Max Query String Length"
+msgstr ""
+
+msgid "Max Request Size"
+msgstr ""
+
+msgid "Max Requests"
+msgstr ""
+
+msgid "Maximum AJAX requests per minute per IP."
+msgstr ""
+
+msgid "Maximum API requests per minute per IP."
+msgstr ""
+
+msgid "Maximum failed login attempts before lockout."
+msgstr ""
+
+msgid "Maximum page requests per minute per IP."
+msgstr ""
+
+msgid "Maximum request body size to scan. Larger requests will be skipped."
+msgstr ""
+
+msgid "Maximum requests allowed per minute per IP."
+msgstr ""
+
+msgid "Maximum search requests per minute to prevent database exhaustion."
+msgstr ""
+
+msgid "Maximum time for a single scan operation."
+msgstr ""
+
+msgid "Maximum time for malware scans before timeout."
+msgstr ""
+
+msgid "Media Uploads"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Medium (Balanced)"
+msgstr ""
+
+msgid "Medium (addition/subtraction)"
+msgstr ""
+
+msgid "Medium or Above"
+msgstr ""
+
+msgid "Memory Limit"
+msgstr ""
+
+msgid "Memory allocated for scanning operations."
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Method"
+msgstr ""
+
+msgid "Microsoft Teams Integration"
+msgstr ""
+
+msgid "Minimum %d characters"
+msgstr ""
+
+msgid "Minimum Length"
+msgstr ""
+
+msgid "Minimum Severity to Fail"
+msgstr ""
+
+msgid "Minimum password length (8-32 characters)"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Module Controls"
+msgstr ""
+
+msgid "Modules"
+msgstr ""
+
+msgid "Monitor External Scripts"
+msgstr ""
+
+msgid "Monitor Mode (Log Only)"
+msgstr ""
+
+msgid "Monitor plugin files for changes"
+msgstr ""
+
+msgid "Monitor real-time site traffic."
+msgstr ""
+
+msgid "Monitor real-time traffic"
+msgstr ""
+
+msgid "Monitor real-time traffic and visitor activity."
+msgstr ""
+
+msgid "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr ""
+
+msgid "Monitoring & Alerts"
+msgstr ""
+
+msgid "Monitors real-time traffic. Safe - only tracks visits."
+msgstr ""
+
+msgid "Monthly"
+msgstr ""
+
+msgid "Most Active Users"
+msgstr ""
+
+msgid "Moves suspicious files to a protected directory."
+msgstr ""
+
+msgid "NPM Dependencies"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Need Support?"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Never expires"
+msgstr ""
+
+msgid "Nexify Security"
+msgstr ""
+
+msgid "NexifyMy Captcha (Built-in)"
+msgstr ""
+
+msgid "NexifyMy Captcha Type"
+msgstr ""
+
+msgid "NexifyMy Security"
+msgstr ""
+
+msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr ""
+
+msgid "NexifyMy Security: You have %d unread security alert(s)."
+msgstr ""
+
+msgid "Next Update"
+msgstr ""
+
+msgid "No Grace Period"
+msgstr ""
+
+msgid "No Recent Activity"
+msgstr ""
+
+msgid "No SRI"
+msgstr ""
+
+msgid "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr ""
+
+msgid "No content changes recorded yet."
+msgstr ""
+
+msgid "No countries selected yet."
+msgstr ""
+
+msgid "No data available"
+msgstr ""
+
+msgid "No event data available yet."
+msgstr ""
+
+msgid "No files in quarantine."
+msgstr ""
+
+msgid "No geographic data available"
+msgstr ""
+
+msgid "No login activity recorded yet."
+msgstr ""
+
+msgid "No passkeys registered yet."
+msgstr ""
+
+msgid "No reports available."
+msgstr ""
+
+msgid "No scan has been run yet"
+msgstr ""
+
+msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr ""
+
+msgid "No scan results available. Run a scan to check for vulnerabilities."
+msgstr ""
+
+msgid "No security recommendations at this time. Your site is well protected."
+msgstr ""
+
+msgid "No severity data available."
+msgstr ""
+
+msgid "No suspicious IPs detected."
+msgstr ""
+
+msgid "No system events recorded yet."
+msgstr ""
+
+msgid "No threats detected yet."
+msgstr ""
+
+msgid "No user activity recorded yet."
+msgstr ""
+
+msgid "No user activity yet."
+msgstr ""
+
+msgid "Not Active"
+msgstr ""
+
+msgid "Not Enabled"
+msgstr ""
+
+msgid "Not checked yet"
+msgstr ""
+
+msgid "Not scheduled"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Notification Email"
+msgstr ""
+
+msgid "Notification Settings"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Notify on Lockout"
+msgstr ""
+
+msgid "Notify users when 2FA is enabled/disabled on their account."
+msgstr ""
+
+msgid "Number (0-9)"
+msgstr ""
+
+msgid "Number of Backup Codes"
+msgstr ""
+
+msgid "Number of backup codes to generate per user."
+msgstr ""
+
+msgid "Number of failed login attempts before lockout."
+msgstr ""
+
+msgid "Number of lockouts before permanent ban."
+msgstr ""
+
+msgid "Number of rule violations before automatic blocking."
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "On next login, enter password + 6-digit code"
+msgstr ""
+
+msgid "Once Weekly"
+msgstr ""
+
+msgid "One IP per line"
+msgstr ""
+
+msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr ""
+
+msgid "One IP per line. These IPs bypass all rate limits."
+msgstr ""
+
+msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr ""
+
+msgid "One IP per line. These IPs will bypass WAF checks."
+msgstr ""
+
+msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr ""
+
+msgid "One path per line. Absolute paths to additional directories to scan."
+msgstr ""
+
+msgid "One path per line. Directories to skip during scans."
+msgstr ""
+
+msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
+msgstr ""
+
+msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr ""
+
+msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr ""
+
+msgid "One username per line"
+msgstr ""
+
+msgid "Open Settings"
+msgstr ""
+
+msgid "Operating Systems"
+msgstr ""
+
+msgid "Operation Mode"
+msgstr ""
+
+msgid "Optimize Database"
+msgstr ""
+
+msgid "Optimize and secure your database."
+msgstr ""
+
+msgid "Option Changes"
+msgstr ""
+
+msgid "Optional for All Users"
+msgstr ""
+
+msgid "Optional: Send scan results to your CI/CD platform."
+msgstr ""
+
+msgid "Original Path"
+msgstr ""
+
+msgid "Outdated"
+msgstr ""
+
+msgid "Overhead"
+msgstr ""
+
+msgid "Override the language for the plugin interface. Supported languages: %d"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "PHP Version"
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid "Page Requests per Minute"
+msgstr ""
+
+msgid "Page Views"
+msgstr ""
+
+msgid "Page not found."
+msgstr ""
+
+msgid "Passkey Authentication"
+msgstr ""
+
+msgid "Passkey name (e.g., MacBook Touch ID)"
+msgstr ""
+
+msgid "Passkey registered successfully!"
+msgstr ""
+
+msgid "Passkeys are not supported in this browser."
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Password Expiry"
+msgstr ""
+
+msgid "Password Policies"
+msgstr ""
+
+msgid "Password Policy"
+msgstr ""
+
+msgid "Password Requirements"
+msgstr ""
+
+msgid "Password Requirements:"
+msgstr ""
+
+msgid "Password Reset Form"
+msgstr ""
+
+msgid "Password Resets"
+msgstr ""
+
+msgid "Password must be at least %d characters long."
+msgstr ""
+
+msgid "Password must contain at least one lowercase letter."
+msgstr ""
+
+msgid "Password must contain at least one number."
+msgstr ""
+
+msgid "Password must contain at least one special character."
+msgstr ""
+
+msgid "Password must contain at least one uppercase letter."
+msgstr ""
+
+msgid "Password policy"
+msgstr ""
+
+msgid "Password reset form"
+msgstr ""
+
+msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr ""
+
+msgid "Peak Activity Insights"
+msgstr ""
+
+msgid "Peak Hour"
+msgstr ""
+
+msgid "Peak Traffic Hours"
+msgstr ""
+
+msgid "Performance Mode"
+msgstr ""
+
+msgid "Performance Settings"
+msgstr ""
+
+msgid "Periodic Reports"
+msgstr ""
+
+msgid "Permanent"
+msgstr ""
+
+msgid "Permanent Ban Threshold"
+msgstr ""
+
+msgid "Permanently removes the file."
+msgstr ""
+
+msgid "Please solve the math captcha."
+msgstr ""
+
+msgid "Plugin"
+msgstr ""
+
+msgid "Plugin & Theme analysis"
+msgstr ""
+
+msgid "Plugin Language"
+msgstr "Plugin-Sprache"
+
+msgid "Plugin Last Updated"
+msgstr ""
+
+msgid "Plugin Options"
+msgstr ""
+
+msgid "Plugin Self-Protection"
+msgstr ""
+
+msgid "Plugin Version"
+msgstr ""
+
+msgid "Plugin Vulnerabilities"
+msgstr ""
+
+msgid "Plugin files cannot be edited via WordPress."
+msgstr ""
+
+msgid "Plugin integrity"
+msgstr ""
+
+msgid "Plugin protection"
+msgstr ""
+
+msgid "Plugin/theme CVEs"
+msgstr ""
+
+msgid "Plugin/theme activations, updates, option changes, and exports."
+msgstr ""
+
+msgid "Plugins"
+msgstr ""
+
+msgid "Plugins Activated"
+msgstr ""
+
+msgid "Plugins Deactivated"
+msgstr ""
+
+msgid "Plugins Updated"
+msgstr ""
+
+msgid "Post/page edits, publishing, media uploads, and content deletion."
+msgstr ""
+
+msgid "Posts Created"
+msgstr ""
+
+msgid "Posts Published"
+msgstr ""
+
+msgid "Posts Updated"
+msgstr ""
+
+msgid "Potential security threat detected"
+msgstr ""
+
+msgid "Prevent XML-RPC attacks and brute force attempts"
+msgstr ""
+
+msgid "Prevent access to directories outside the web root."
+msgstr ""
+
+msgid "Prevent attackers from including local server files."
+msgstr ""
+
+msgid "Prevent brute force"
+msgstr ""
+
+msgid "Prevent code editing in WordPress admin"
+msgstr ""
+
+msgid "Prevent directory listing via .htaccess"
+msgstr ""
+
+msgid "Prevent duplicate alerts within this period."
+msgstr ""
+
+msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr ""
+
+msgid "Prevent editing plugin files via WordPress editor"
+msgstr ""
+
+msgid "Prevent inclusion of remote files via URL parameters."
+msgstr ""
+
+msgid "Prevent listing directory contents via .htaccess."
+msgstr ""
+
+msgid "Prevent plugin/theme installation from admin panel."
+msgstr ""
+
+msgid "Prevent text selection and copying on frontend."
+msgstr ""
+
+msgid "Prevent use of commonly breached passwords"
+msgstr ""
+
+msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr ""
+
+msgid "Prevents unauthorized modification of security plugin files"
+msgstr ""
+
+msgid "Primary email address for security alerts."
+msgstr ""
+
+msgid "Priority"
+msgstr ""
+
+msgid "Proactive security suggestions and automated hardening recommendations."
+msgstr ""
+
+msgid "Problem"
+msgstr ""
+
+msgid "Profile Updates"
+msgstr ""
+
+msgid "Profile changes, role changes, user creation, and deletion events."
+msgstr ""
+
+msgid "Project Key"
+msgstr ""
+
+msgid "Protect against Cross-Site Request Forgery."
+msgstr ""
+
+msgid "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr ""
+
+msgid "Protect against SQL injection attacks in GET/POST parameters."
+msgstr ""
+
+msgid "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr ""
+
+msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr ""
+
+msgid "Protect login and registration forms from automated bot attacks."
+msgstr ""
+
+msgid "Protect login and registration forms with math-based captcha."
+msgstr ""
+
+msgid "Protect plugin files from tampering."
+msgstr ""
+
+msgid "Protect the security plugin from tampering and unauthorized modifications."
+msgstr ""
+
+msgid "Protect your login page from brute force attacks."
+msgstr ""
+
+msgid "Protect your site from malicious traffic and attacks."
+msgstr ""
+
+msgid "Protected Forms"
+msgstr ""
+
+msgid "Protection Level"
+msgstr ""
+
+msgid "Protection Mode"
+msgstr ""
+
+msgid "Protection Rules"
+msgstr ""
+
+msgid "Protection Settings"
+msgstr ""
+
+msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr ""
+
+msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr ""
+
+msgid "Protects plugin files from modification. Safe - prevents tampering."
+msgstr ""
+
+msgid "Provider"
+msgstr ""
+
+msgid "Purge All Logs"
+msgstr ""
+
+msgid "Purge Cache"
+msgstr ""
+
+msgid "Quarantine"
+msgstr ""
+
+msgid "Quarantine immediately"
+msgstr ""
+
+msgid "Quarantine recommended"
+msgstr ""
+
+msgid "Quarantine:"
+msgstr ""
+
+msgid "Quarantined"
+msgstr ""
+
+msgid "Quarantined Files"
+msgstr ""
+
+msgid "Query complexity exceeds maximum of %d"
+msgstr ""
+
+msgid "Query depth exceeds maximum allowed depth of %d"
+msgstr ""
+
+msgid "Quick"
+msgstr ""
+
+msgid "Quick Actions"
+msgstr ""
+
+msgid "Quick Scan"
+msgstr ""
+
+msgid "Quick Scan Actions"
+msgstr ""
+
+msgid "Quick access to security maintenance tools."
+msgstr ""
+
+msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr ""
+
+msgid "REST API Security"
+msgstr ""
+
+msgid "REST API Users"
+msgstr ""
+
+msgid "REST API protection"
+msgstr ""
+
+msgid "RSS feeds are disabled on this site."
+msgstr ""
+
+msgid "Rate Limit"
+msgstr ""
+
+msgid "Rate Limiter"
+msgstr ""
+
+msgid "Rate Limiting"
+msgstr ""
+
+msgid "Rate Limiting Settings"
+msgstr ""
+
+msgid "Real-time monitoring"
+msgstr ""
+
+msgid "Reason"
+msgstr ""
+
+msgid "Receive email alerts when vulnerabilities are detected"
+msgstr ""
+
+msgid "Recent Activity"
+msgstr ""
+
+msgid "Recent Threat Detections"
+msgstr ""
+
+msgid "Recently Blocked IPs"
+msgstr ""
+
+msgid "Recipient Email"
+msgstr ""
+
+msgid "Recommendations"
+msgstr ""
+
+msgid "Recommended"
+msgstr ""
+
+msgid "Recommended Actions"
+msgstr ""
+
+msgid "Redirect Blocked Access"
+msgstr ""
+
+msgid "Redirect to homepage"
+msgstr ""
+
+msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Regenerate"
+msgstr ""
+
+msgid "Regenerate Baseline"
+msgstr ""
+
+msgid "Register Passkey"
+msgstr ""
+
+msgid "Registered Passkeys"
+msgstr ""
+
+msgid "Registering passkey..."
+msgstr ""
+
+msgid "Registration Form"
+msgstr ""
+
+msgid "Registration form"
+msgstr ""
+
+msgid "Remember Device"
+msgstr ""
+
+msgid "Remember Duration"
+msgstr ""
+
+msgid "Remember this device"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Remove Generator Tags"
+msgstr ""
+
+msgid "Remove Login Hints"
+msgstr ""
+
+msgid "Remove WordPress version from source code"
+msgstr ""
+
+msgid "Remove generator meta tags from all pages."
+msgstr ""
+
+msgid "Remove password reset hints and suggestions."
+msgstr ""
+
+msgid "Remove version information from HTML and feeds."
+msgstr ""
+
+msgid "Repair All Modified Files"
+msgstr ""
+
+msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr ""
+
+msgid "Replaces corrupted files with clean versions"
+msgstr ""
+
+msgid "Report History"
+msgstr ""
+
+msgid "Report Retention (days)"
+msgstr ""
+
+msgid "Report Schedule"
+msgstr ""
+
+msgid "Request Limits & Filtering"
+msgstr ""
+
+msgid "Request Size Limit"
+msgstr ""
+
+msgid "Requests Per Minute"
+msgstr ""
+
+msgid "Require 2FA for all administrators"
+msgstr ""
+
+msgid "Require 2FA for selected user roles."
+msgstr ""
+
+msgid "Require a second factor for login verification"
+msgstr ""
+
+msgid "Require login for REST API access"
+msgstr ""
+
+msgid "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Reset All Settings"
+msgstr ""
+
+msgid "Reset Learning"
+msgstr ""
+
+msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr ""
+
+msgid "Reset to Defaults"
+msgstr ""
+
+msgid "Resetting..."
+msgstr ""
+
+msgid "Response Code on Block"
+msgstr ""
+
+msgid "Restore"
+msgstr ""
+
+msgid "Restore:"
+msgstr ""
+
+msgid "Restrict REST API"
+msgstr ""
+
+msgid "Restricts REST API access. May affect plugins that use REST API."
+msgstr ""
+
+msgid "Retention Period"
+msgstr ""
+
+msgid "Return error code if malware is detected (fails CI/CD build)."
+msgstr ""
+
+msgid "Return error code if vulnerabilities are found."
+msgstr ""
+
+msgid "Returns the file to its original location."
+msgstr ""
+
+msgid "Review Alerts &rsaquo;"
+msgstr ""
+
+msgid "Review immediately"
+msgstr ""
+
+msgid "Review security logs regularly"
+msgstr ""
+
+msgid "Role Changes"
+msgstr ""
+
+msgid "Run Full Security Scan"
+msgstr ""
+
+msgid "Run Integrity Check"
+msgstr ""
+
+msgid "Run Quick Check"
+msgstr ""
+
+msgid "Run Scan"
+msgstr ""
+
+msgid "Run Vulnerability Scan"
+msgstr ""
+
+msgid "Run a security scan to identify vulnerabilities"
+msgstr ""
+
+msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr ""
+
+msgid "SECURITY ALERT:"
+msgstr ""
+
+msgid "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr ""
+
+msgid "SIEM"
+msgstr ""
+
+msgid "SIEM Integration"
+msgstr ""
+
+msgid "SIEM Platform"
+msgstr ""
+
+msgid "SQL Injection"
+msgstr ""
+
+msgid "SQL Injection Protection"
+msgstr ""
+
+msgid "SSL Status"
+msgstr ""
+
+msgid "SSL Verification"
+msgstr ""
+
+msgid "Save Advanced Settings"
+msgstr ""
+
+msgid "Save CI/CD Settings"
+msgstr ""
+
+msgid "Save Discord Settings"
+msgstr ""
+
+msgid "Save Email Settings"
+msgstr ""
+
+msgid "Save Jira Settings"
+msgstr ""
+
+msgid "Save SIEM Settings"
+msgstr ""
+
+msgid "Save Scanner Settings"
+msgstr ""
+
+msgid "Save ServiceNow Settings"
+msgstr ""
+
+msgid "Save Settings"
+msgstr "Einstellungen Speichern"
+
+msgid "Save Slack Settings"
+msgstr ""
+
+msgid "Save Teams Settings"
+msgstr ""
+
+msgid "Save WAF Settings"
+msgstr ""
+
+msgid "Save Webhook Settings"
+msgstr ""
+
+msgid "Scan"
+msgstr ""
+
+msgid "Scan Complete"
+msgstr ""
+
+msgid "Scan Completed"
+msgstr ""
+
+msgid "Scan Composer Dependencies"
+msgstr ""
+
+msgid "Scan Configuration"
+msgstr ""
+
+msgid "Scan Controls"
+msgstr ""
+
+msgid "Scan Custom Directories"
+msgstr ""
+
+msgid "Scan NPM Dependencies"
+msgstr ""
+
+msgid "Scan Plugins"
+msgstr ""
+
+msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr ""
+
+msgid "Scan Results"
+msgstr ""
+
+msgid "Scan Schedule"
+msgstr ""
+
+msgid "Scan Sensitivity"
+msgstr ""
+
+msgid "Scan Targets"
+msgstr ""
+
+msgid "Scan Themes"
+msgstr ""
+
+msgid "Scan Timeout"
+msgstr ""
+
+msgid "Scan Uploads Directory"
+msgstr ""
+
+msgid "Scan WordPress Core"
+msgstr ""
+
+msgid "Scan all installed plugins for malware."
+msgstr ""
+
+msgid "Scan all installed themes for malware."
+msgstr ""
+
+msgid "Scan critical areas only"
+msgstr ""
+
+msgid "Scan files for malware and suspicious code."
+msgstr ""
+
+msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr ""
+
+msgid "Scan your site for malware, vulnerabilities, and security issues."
+msgstr ""
+
+msgid "Scan your website for malware and security vulnerabilities."
+msgstr ""
+
+msgid "Scanner"
+msgstr ""
+
+msgid "Scanner Settings"
+msgstr ""
+
+msgid "Scanning..."
+msgstr ""
+
+msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr ""
+
+msgid "Scheduled Scan Mode"
+msgstr ""
+
+msgid "Scheduled Scans"
+msgstr ""
+
+msgid "Score"
+msgstr ""
+
+msgid "Search Requests per Minute"
+msgstr ""
+
+msgid "Search username..."
+msgstr ""
+
+msgid "Secret Key"
+msgstr ""
+
+msgid "Secure file access"
+msgstr ""
+
+msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr ""
+
+msgid "Security Alerts"
+msgstr ""
+
+msgid "Security Analytics"
+msgstr ""
+
+msgid "Security Hardening"
+msgstr ""
+
+msgid "Security Headers"
+msgstr ""
+
+msgid "Security Incident"
+msgstr ""
+
+msgid "Security Logs"
+msgstr ""
+
+msgid "Security Modules"
+msgstr ""
+
+msgid "Security Notifications"
+msgstr ""
+
+msgid "Security Options"
+msgstr ""
+
+msgid "Security Recommendations"
+msgstr ""
+
+msgid "Security Score"
+msgstr ""
+
+msgid "Security Status"
+msgstr ""
+
+msgid "Security Tools"
+msgstr ""
+
+msgid "Security Vulnerabilities"
+msgstr ""
+
+msgid "Security alerts"
+msgstr ""
+
+msgid "Security events will appear here."
+msgstr ""
+
+msgid "Security hardening"
+msgstr ""
+
+msgid "Security scan has finished execution"
+msgstr ""
+
+msgid "Security settings have been modified"
+msgstr ""
+
+msgid "Select Countries:"
+msgstr ""
+
+msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr ""
+
+msgid "Select the image with a checkmark:"
+msgstr ""
+
+msgid "Select which captcha service to use."
+msgstr ""
+
+msgid "Selected Countries:"
+msgstr ""
+
+msgid "Self Protection"
+msgstr ""
+
+msgid "Self-Protection"
+msgstr ""
+
+msgid "Send Test Alert"
+msgstr ""
+
+msgid "Send Test Email"
+msgstr ""
+
+msgid "Send alert after this many attacks in one hour."
+msgstr ""
+
+msgid "Send daily email digest"
+msgstr ""
+
+msgid "Send email notification when an IP is locked out."
+msgstr ""
+
+msgid "Send email notifications for security events"
+msgstr ""
+
+msgid "Send email notifications when critical attacks are detected."
+msgstr ""
+
+msgid "Send email when tampering is detected"
+msgstr ""
+
+msgid "Send email when vulnerabilities are found"
+msgstr ""
+
+msgid "Send reports to admin email"
+msgstr ""
+
+msgid "Send scan results via email after each scan."
+msgstr ""
+
+msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr ""
+
+msgid "Send security events to any HTTP endpoint with custom configuration."
+msgstr ""
+
+msgid "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr ""
+
+msgid "Send verification codes via email."
+msgstr ""
+
+msgid "Sends email alerts for security events. Safe - configure email settings first."
+msgstr ""
+
+msgid "ServiceNow Integration"
+msgstr ""
+
+msgid "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings saved successfully"
+msgstr ""
+
+msgid "Severity"
+msgstr ""
+
+msgid "Show 404 page"
+msgstr ""
+
+msgid "Show generic error message on login failure."
+msgstr ""
+
+msgid "Show on Forms"
+msgstr ""
+
+msgid "Showing %d of %d entries"
+msgstr ""
+
+msgid "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr ""
+
+msgid "Sign in with Passkey"
+msgstr ""
+
+msgid "Signature Status"
+msgstr ""
+
+msgid "Signature-Based Detection"
+msgstr ""
+
+msgid "Signatures"
+msgstr ""
+
+msgid "Site Default"
+msgstr ""
+
+msgid "Site Key"
+msgstr ""
+
+msgid "Site Security Health"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Skip files larger than this size."
+msgstr ""
+
+msgid "Slack Integration"
+msgstr ""
+
+msgid "Some improvements recommended"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Special character (!@#$...)"
+msgstr ""
+
+msgid "Splunk (HTTP Event Collector)"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Standard - Balanced protection"
+msgstr ""
+
+msgid "Standard Scan"
+msgstr ""
+
+msgid "Start Scan"
+msgstr ""
+
+msgid "Start a New Scan"
+msgstr ""
+
+msgid "Start a Scan"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Story"
+msgstr ""
+
+msgid "Strict - Maximum security"
+msgstr ""
+
+msgid "Strong Passwords"
+msgstr ""
+
+msgid "Strong passwords"
+msgstr ""
+
+msgid "Success Rate"
+msgstr ""
+
+msgid "Successful Login"
+msgstr ""
+
+msgid "Successful Logins"
+msgstr ""
+
+msgid "Sucuri"
+msgstr ""
+
+msgid "Sumo Logic"
+msgstr ""
+
+msgid "Supply Chain"
+msgstr ""
+
+msgid "Supply Chain Security"
+msgstr ""
+
+msgid "Supply Chain Settings"
+msgstr ""
+
+msgid "Support Google Authenticator, Authy, etc."
+msgstr ""
+
+msgid "Supported:"
+msgstr ""
+
+msgid "Suspicious Code"
+msgstr ""
+
+msgid "Suspicious IPs"
+msgstr ""
+
+msgid "System Activity"
+msgstr ""
+
+msgid "System Events"
+msgstr ""
+
+msgid "System Status"
+msgstr ""
+
+msgid "TOTP Authenticator Apps"
+msgstr ""
+
+msgid "Table Name"
+msgstr ""
+
+msgid "Tables"
+msgstr ""
+
+msgid "Tamper Detection:"
+msgstr ""
+
+msgid "Task"
+msgstr ""
+
+msgid "Temporarily block IPs that exceed API rate limits."
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Test Notification"
+msgstr ""
+
+msgid "Text Matching"
+msgstr ""
+
+msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr ""
+
+msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr ""
+
+msgid "Theme Switches"
+msgstr ""
+
+msgid "This Hour"
+msgstr ""
+
+msgid "This Month"
+msgstr ""
+
+msgid "This Week"
+msgstr ""
+
+msgid "This is a common password."
+msgstr ""
+
+msgid "This is how the captcha will appear on login forms:"
+msgstr ""
+
+msgid "This password is too common. Please choose a more unique password."
+msgstr ""
+
+msgid "This query is not allowed."
+msgstr ""
+
+msgid "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr ""
+
+msgid "Threat"
+msgstr ""
+
+msgid "Threat Breakdown:"
+msgstr ""
+
+msgid "Threat Detected"
+msgstr ""
+
+msgid "Threat Detected (malware, suspicious files)"
+msgstr ""
+
+msgid "Threat Detection & Blocking - Last 7 Days"
+msgstr ""
+
+msgid "Threat Score"
+msgstr ""
+
+msgid "Threats Blocked"
+msgstr ""
+
+msgid "Threats Found"
+msgstr ""
+
+msgid "Threats Today"
+msgstr ""
+
+msgid "Throttle Period"
+msgstr ""
+
+msgid "Ticketing"
+msgstr ""
+
+msgid "Ticketing Systems"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Time Window (sec)"
+msgstr ""
+
+msgid "Time before email verification codes expire."
+msgstr ""
+
+msgid "Time window for counting failed login attempts."
+msgstr ""
+
+msgid "Time window used to count failed login attempts."
+msgstr ""
+
+msgid "To Date"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "Tools & Utilities"
+msgstr ""
+
+msgid "Top Country"
+msgstr ""
+
+msgid "Top Detection Reasons"
+msgstr ""
+
+msgid "Top Event Types"
+msgstr ""
+
+msgid "Top Pages"
+msgstr ""
+
+msgid "Top Referrers"
+msgstr ""
+
+msgid "Total Events"
+msgstr ""
+
+msgid "Total Page Views"
+msgstr ""
+
+msgid "Total Signatures"
+msgstr ""
+
+msgid "Total Size"
+msgstr ""
+
+msgid "Traffic Analytics"
+msgstr ""
+
+msgid "Traffic Overview"
+msgstr ""
+
+msgid "Trigger a security scan"
+msgstr ""
+
+msgid "Trust Proxy Headers"
+msgstr ""
+
+msgid "Trusted Proxies"
+msgstr ""
+
+msgid "Twice Daily"
+msgstr ""
+
+msgid "Two-Factor Auth (2FA)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid "Two-factor authentication"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Type the word:"
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "Uninstall Behavior"
+msgstr ""
+
+msgid "Unique IPs"
+msgstr ""
+
+msgid "Unique Users"
+msgstr ""
+
+msgid "Unique Visitors"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unread Alerts"
+msgstr ""
+
+msgid "Unread security alerts from your logs."
+msgstr ""
+
+msgid "Update Definitions"
+msgstr ""
+
+msgid "Update Definitions Now"
+msgstr ""
+
+msgid "Update Malware Definitons"
+msgstr ""
+
+msgid "Update Now"
+msgstr ""
+
+msgid "Update malware detection signatures."
+msgstr ""
+
+msgid "Uppercase letter (A-Z)"
+msgstr ""
+
+msgid "Urgency Level"
+msgstr ""
+
+msgid "Use CDN/proxy headers to determine real client IP"
+msgstr ""
+
+msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr ""
+
+msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr ""
+
+msgid "Use malware signature database for detection."
+msgstr ""
+
+msgid "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "User Activity"
+msgstr ""
+
+msgid "User Agent"
+msgstr ""
+
+msgid "User Events"
+msgstr ""
+
+msgid "User Lockouts"
+msgstr ""
+
+msgid "User Management"
+msgstr ""
+
+msgid "User Requirements"
+msgstr ""
+
+msgid "User or IP address locked out due to suspicious activity"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Username and password required."
+msgstr ""
+
+msgid "Users Created"
+msgstr ""
+
+msgid "Users Deleted"
+msgstr ""
+
+msgid "Users enable 2FA in their profile settings"
+msgstr ""
+
+msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr ""
+
+msgid "Verification session expired. Please log in again."
+msgstr ""
+
+msgid "Verify"
+msgstr ""
+
+msgid "Verify Core Files"
+msgstr ""
+
+msgid "Verify SSL certificates (recommended for production)."
+msgstr ""
+
+msgid "Verify and repair WordPress core files."
+msgstr ""
+
+msgid "Verify and repair core files"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "View All"
+msgstr ""
+
+msgid "View Live Traffic"
+msgstr ""
+
+msgid "View all security events."
+msgstr ""
+
+msgid "View and manage quarantined threats."
+msgstr ""
+
+msgid "View and manage security alerts and notifications."
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "Visitor Trends - Last 30 Days"
+msgstr ""
+
+msgid "Visitors"
+msgstr ""
+
+msgid "Visits Today"
+msgstr ""
+
+msgid "Vulnerability Check"
+msgstr ""
+
+msgid "Vulnerability Scanner"
+msgstr ""
+
+msgid "Vulnerable"
+msgstr ""
+
+msgid "WAF"
+msgstr ""
+
+msgid "WAF Attack Blocked"
+msgstr ""
+
+msgid "WAF Blocks (attacked blocked by firewall)"
+msgstr ""
+
+msgid "WAF Firewall"
+msgstr ""
+
+msgid "WAF Status"
+msgstr ""
+
+msgid "WP Version"
+msgstr ""
+
+msgid "WPGraphQL protection"
+msgstr ""
+
+msgid "WPScan API Token"
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr ""
+
+msgid "Web Application Firewall"
+msgstr ""
+
+msgid "Web Application Firewall (WAF)"
+msgstr ""
+
+msgid "Webhook URL"
+msgstr ""
+
+msgid "Webhook URL for Results"
+msgstr ""
+
+msgid "Webhooks"
+msgstr ""
+
+msgid "Weekly"
+msgstr ""
+
+msgid "Weekly Security Report"
+msgstr ""
+
+msgid "Whitelist (Allow Only)"
+msgstr ""
+
+msgid "Whitelist (allow only selected)"
+msgstr ""
+
+msgid "Whitelist IPs"
+msgstr ""
+
+msgid "Whitelisted IPs"
+msgstr ""
+
+msgid "WordPress"
+msgstr ""
+
+msgid "WordPress Core File Verification"
+msgstr ""
+
+msgid "WordPress Core Status"
+msgstr ""
+
+msgid "WordPress Hardening"
+msgstr ""
+
+msgid "WordPress Version"
+msgstr ""
+
+msgid "WordPress core file has been modified"
+msgstr ""
+
+msgid "WordPress is not up to date"
+msgstr ""
+
+msgid "X-Content-Type-Options (No Sniff)"
+msgstr ""
+
+msgid "X-Frame-Options (Prevent Clickjacking)"
+msgstr ""
+
+msgid "X-XSS-Protection"
+msgstr ""
+
+msgid "XML-RPC"
+msgstr ""
+
+msgid "XML-RPC Control"
+msgstr ""
+
+msgid "XSS Attack"
+msgstr ""
+
+msgid "XSS Protection"
+msgstr ""
+
+msgid "You are using the default login slug. Consider changing it to something unique."
+msgstr ""
+
+msgid "You must be logged in to access the REST API."
+msgstr ""
+
+msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr ""
+
+msgid "Your site is well protected"
+msgstr ""
+
+msgid "Your verification code is: %s"
+msgstr ""
+
+msgid "Your virus definitions are out of date. Update now for best protection."
+msgstr ""
+
+msgid "Zone ID"
+msgstr ""
+
+msgid "ago"
+msgstr ""
+
+msgid "attacks per hour"
+msgstr ""
+
+msgid "attempts"
+msgstr ""
+
+msgid "blocked"
+msgstr ""
+
+msgid "characters"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "events"
+msgstr ""
+
+msgid "fails"
+msgstr ""
+
+msgid "files"
+msgstr ""
+
+msgid "from now"
+msgstr ""
+
+msgid "including:"
+msgstr ""
+
+msgid "lowercase letter"
+msgstr ""
+
+msgid "minutes"
+msgstr ""
+
+msgid "modules"
+msgstr ""
+
+msgid "number"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "per minute"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "special character"
+msgstr ""
+
+msgid "threats found"
+msgstr ""
+
+msgid "total records"
+msgstr ""
+
+msgid "uppercase letter"
+msgstr ""
+
+msgid "views"
+msgstr ""
+
+msgid "violations"
+msgstr ""
+
+msgid "visits"
+msgstr ""
+
