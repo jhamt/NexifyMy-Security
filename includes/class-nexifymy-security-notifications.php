@@ -6,8 +6,8 @@
  * DEV NOTES:
  * This module queries the security logs for unread critical/warning events.
  * It provides an admin bar icon and a custom branded notice for alerts.
- * Last Updated: 2026-02-04
- * Version: 2.0.6
+ * Last Updated: 2026-02-06
+ * Version: 2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
