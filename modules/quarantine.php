@@ -17,9 +17,19 @@ class NexifyMy_Security_Quarantine {
 	const QUARANTINE_DIR = 'nexifymy-quarantine';
 
 	/**
+	 * Recoverable deleted-files directory relative to wp-content.
+	 */
+	const DELETED_DIR = 'nexifymy-quarantine-deleted';
+
+	/**
 	 * Option key for quarantine log.
 	 */
 	const QUARANTINE_LOG_OPTION = 'nexifymy_quarantine_log';
+
+	/**
+	 * Option key for recoverable deleted-files log.
+	 */
+	const DELETED_LOG_OPTION = 'nexifymy_quarantine_deleted_log';
 
 	/**
 	 * Initialize the quarantine module.
@@ -27,12 +37,17 @@ class NexifyMy_Security_Quarantine {
 	public function init() {
 		// AJAX handlers.
 		add_action( 'wp_ajax_nexifymy_quarantine_file', array( $this, 'ajax_quarantine_file' ) );
+		add_action( 'wp_ajax_nexifymy_delete_file', array( $this, 'ajax_delete_file' ) );
 		add_action( 'wp_ajax_nexifymy_restore_file', array( $this, 'ajax_restore_file' ) );
 		add_action( 'wp_ajax_nexifymy_delete_quarantined', array( $this, 'ajax_delete_quarantined' ) );
 		add_action( 'wp_ajax_nexifymy_get_quarantined_files', array( $this, 'ajax_get_quarantined' ) );
+		add_action( 'wp_ajax_nexifymy_get_deleted_quarantined_files', array( $this, 'ajax_get_deleted_quarantined' ) );
+		add_action( 'wp_ajax_nexifymy_restore_deleted_quarantined', array( $this, 'ajax_restore_deleted_quarantined' ) );
+		add_action( 'wp_ajax_nexifymy_delete_quarantined_permanently', array( $this, 'ajax_delete_quarantined_permanently' ) );
 
 		// Ensure quarantine directory exists.
 		$this->ensure_quarantine_dir();
+		$this->ensure_deleted_dir();
 	}
 
 	/**
@@ -45,25 +60,65 @@ class NexifyMy_Security_Quarantine {
 	}
 
 	/**
-	 * Ensure the quarantine directory exists and is protected.
+	 * Get the full path to the recoverable deleted-files directory.
+	 *
+	 * @return string
 	 */
-	private function ensure_quarantine_dir() {
-		$quarantine_path = $this->get_quarantine_path();
+	public function get_deleted_path() {
+		return WP_CONTENT_DIR . '/' . self::DELETED_DIR;
+	}
 
-		if ( ! is_dir( $quarantine_path ) ) {
-			wp_mkdir_p( $quarantine_path );
+	/**
+	 * Whether quarantine module is enabled.
+	 *
+	 * @return bool
+	 */
+	private function is_enabled() {
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+			return true;
 		}
 
-		// Protect directory with .htaccess and index.php.
-		$htaccess_path = $quarantine_path . '/.htaccess';
+		if ( ! array_key_exists( 'quarantine_enabled', $settings['modules'] ) ) {
+			return true;
+		}
+
+		return (bool) $settings['modules']['quarantine_enabled'];
+	}
+
+	/**
+	 * Ensure a storage directory exists and is protected.
+	 *
+	 * @param string $storage_path Absolute path.
+	 */
+	private function ensure_storage_dir( $storage_path ) {
+		if ( ! is_dir( $storage_path ) ) {
+			wp_mkdir_p( $storage_path );
+		}
+
+		$htaccess_path = $storage_path . '/.htaccess';
 		if ( ! file_exists( $htaccess_path ) ) {
 			file_put_contents( $htaccess_path, "Order Deny,Allow\nDeny from all\n" );
 		}
 
-		$index_path = $quarantine_path . '/index.php';
+		$index_path = $storage_path . '/index.php';
 		if ( ! file_exists( $index_path ) ) {
 			file_put_contents( $index_path, "<?php\n// Silence is golden.\n" );
 		}
+	}
+
+	/**
+	 * Ensure the quarantine directory exists and is protected.
+	 */
+	private function ensure_quarantine_dir() {
+		$this->ensure_storage_dir( $this->get_quarantine_path() );
+	}
+
+	/**
+	 * Ensure deleted-files directory exists and is protected.
+	 */
+	private function ensure_deleted_dir() {
+		$this->ensure_storage_dir( $this->get_deleted_path() );
 	}
 
 	/**
@@ -125,9 +180,14 @@ class NexifyMy_Security_Quarantine {
 	 */
 	public function is_auto_quarantine_enabled() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$scanner_settings = isset( $settings['scanner'] ) && is_array( $settings['scanner'] ) ? $settings['scanner'] : array();
+		$mode = sanitize_key( $scanner_settings['quarantine_mode'] ?? '' );
+		if ( $mode === 'auto' ) {
+			return true;
+		}
 
-		// Default to FALSE for safety - auto-quarantine disabled by default
-		return isset( $settings['scanner']['auto_quarantine_enabled'] ) && $settings['scanner']['auto_quarantine_enabled'] === true;
+		// Backward compatibility.
+		return ! empty( $scanner_settings['auto_quarantine_enabled'] );
 	}
 
 	/**
@@ -139,6 +199,10 @@ class NexifyMy_Security_Quarantine {
 	 * @return array|WP_Error Quarantine info or error.
 	 */
 	public function quarantine_file( $file_path, $reason = '', $manual = false ) {
+		if ( ! $this->is_enabled() ) {
+			return new WP_Error( 'module_disabled', 'Quarantine module is disabled in settings.' );
+		}
+
 		// Validate.
 		$valid = $this->validate_file_path( $file_path );
 		if ( is_wp_error( $valid ) ) {
@@ -245,26 +309,23 @@ class NexifyMy_Security_Quarantine {
 	}
 
 	/**
-	 * Permanently delete a quarantined file.
+	 * Move a quarantined file to recoverable deleted storage.
 	 *
 	 * @param string $quarantine_filename The quarantine filename.
-	 * @return bool|WP_Error True on success, WP_Error on failure.
+	 * @return array|WP_Error Deleted file info or error.
 	 */
 	public function delete_quarantined( $quarantine_filename ) {
 		$quarantine_full_path = $this->get_quarantine_path() . '/' . $quarantine_filename;
 
-		// Validate the filename format.
 		if ( ! preg_match( '/^[a-f0-9]{32}_\d+\.\w+\.quarantine$/', $quarantine_filename ) ) {
 			return new WP_Error( 'invalid_filename', 'Invalid quarantine filename.' );
 		}
 
 		if ( ! file_exists( $quarantine_full_path ) ) {
-			// Still remove from log.
 			$this->remove_from_quarantine_log( $quarantine_filename );
 			return new WP_Error( 'file_missing', 'File already deleted.' );
 		}
 
-		// Get log entry for logging.
 		$log = $this->get_quarantine_log();
 		$file_info = null;
 		foreach ( $log as $entry ) {
@@ -274,21 +335,117 @@ class NexifyMy_Security_Quarantine {
 			}
 		}
 
-		// Delete the file.
-		if ( ! unlink( $quarantine_full_path ) ) {
-			return new WP_Error( 'delete_failed', 'Failed to delete file. Check permissions.' );
+		$deleted_name = $quarantine_filename . '.deleted';
+		$deleted_full_path = $this->get_deleted_path() . '/' . $deleted_name;
+		if ( ! rename( $quarantine_full_path, $deleted_full_path ) ) {
+			return new WP_Error( 'delete_failed', 'Failed to move file to recoverable deleted storage. Check permissions.' );
 		}
 
-		// Remove from log.
 		$this->remove_from_quarantine_log( $quarantine_filename );
 
-		// Log the deletion.
+		$deleted_entry = $file_info ?: array(
+			'quarantine_name' => $quarantine_filename,
+			'original_path'   => $quarantine_filename,
+			'size'            => 0,
+		);
+		$deleted_entry['deleted_name'] = $deleted_name;
+		$deleted_entry['deleted_path'] = $deleted_full_path;
+		$deleted_entry['deleted_at']   = current_time( 'mysql' );
+		$deleted_entry['deleted_by']   = get_current_user_id();
+		$this->add_to_deleted_log( $deleted_entry );
+
 		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
 			NexifyMy_Security_Logger::log(
 				'file_deleted',
-				sprintf( 'Quarantined file permanently deleted: %s', $file_info ? $file_info['original_path'] : $quarantine_filename ),
+				sprintf( 'Quarantined file moved to recoverable deleted storage: %s', $deleted_entry['original_path'] ),
+				'warning',
+				$deleted_entry
+			);
+		}
+
+		return $deleted_entry;
+	}
+
+	/**
+	 * Restore a recoverable deleted file back to quarantine.
+	 *
+	 * @param string $deleted_name Deleted file name.
+	 * @return bool|WP_Error
+	 */
+	public function restore_deleted_quarantined( $deleted_name ) {
+		$deleted_log = $this->get_deleted_log();
+		$deleted_entry = null;
+		foreach ( $deleted_log as $entry ) {
+			if ( isset( $entry['deleted_name'] ) && $entry['deleted_name'] === $deleted_name ) {
+				$deleted_entry = $entry;
+				break;
+			}
+		}
+
+		if ( ! $deleted_entry ) {
+			return new WP_Error( 'not_found', 'Deleted-file entry not found.' );
+		}
+
+		$deleted_full_path = $this->get_deleted_path() . '/' . $deleted_name;
+		if ( ! file_exists( $deleted_full_path ) ) {
+			$this->remove_from_deleted_log( $deleted_name );
+			return new WP_Error( 'file_missing', 'Deleted file no longer exists.' );
+		}
+
+		$quarantine_name = $deleted_entry['quarantine_name'] ?? preg_replace( '/\.deleted$/', '', $deleted_name );
+		if ( ! preg_match( '/^[a-f0-9]{32}_\d+\.\w+\.quarantine$/', $quarantine_name ) ) {
+			$quarantine_name = md5( $deleted_name . time() ) . '_' . time() . '.php.quarantine';
+		}
+
+		$restored_quarantine_path = $this->get_quarantine_path() . '/' . $quarantine_name;
+		if ( ! rename( $deleted_full_path, $restored_quarantine_path ) ) {
+			return new WP_Error( 'restore_failed', 'Failed to restore deleted file back to quarantine.' );
+		}
+
+		$deleted_entry['quarantine_name'] = $quarantine_name;
+		$deleted_entry['quarantine_path'] = $restored_quarantine_path;
+		unset( $deleted_entry['deleted_name'], $deleted_entry['deleted_path'], $deleted_entry['deleted_at'], $deleted_entry['deleted_by'] );
+
+		$this->remove_from_deleted_log( $deleted_name );
+		$this->add_to_quarantine_log( $deleted_entry );
+
+		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+			NexifyMy_Security_Logger::log(
+				'file_restored',
+				sprintf( 'Deleted file restored to quarantine: %s', $deleted_entry['original_path'] ?? $deleted_name ),
 				'info',
-				$file_info ?: array( 'quarantine_name' => $quarantine_filename )
+				$deleted_entry
+			);
+		}
+
+		return true;
+	}
+
+	/**
+	 * Permanently delete a recoverable deleted file.
+	 *
+	 * @param string $deleted_name Deleted file name.
+	 * @return bool|WP_Error
+	 */
+	public function permanently_delete_deleted_quarantined( $deleted_name ) {
+		$deleted_full_path = $this->get_deleted_path() . '/' . $deleted_name;
+		if ( ! file_exists( $deleted_full_path ) ) {
+			$this->remove_from_deleted_log( $deleted_name );
+			return new WP_Error( 'file_missing', 'File already permanently deleted.' );
+		}
+
+		if ( ! unlink( $deleted_full_path ) ) {
+			return new WP_Error( 'delete_failed', 'Failed to permanently delete file. Check permissions.' );
+		}
+
+		$this->remove_from_deleted_log( $deleted_name );
+
+		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+			NexifyMy_Security_Logger::log(
+				'file_deleted',
+				sprintf( 'Deleted file permanently removed: %s', $deleted_name ),
+				'info',
+				array( 'deleted_name' => $deleted_name )
 			);
 		}
 
@@ -302,6 +459,15 @@ class NexifyMy_Security_Quarantine {
 	 */
 	public function get_quarantine_log() {
 		return get_option( self::QUARANTINE_LOG_OPTION, array() );
+	}
+
+	/**
+	 * Get recoverable deleted-files log.
+	 *
+	 * @return array
+	 */
+	public function get_deleted_log() {
+		return get_option( self::DELETED_LOG_OPTION, array() );
 	}
 
 	/**
@@ -333,6 +499,35 @@ class NexifyMy_Security_Quarantine {
 		update_option( self::QUARANTINE_LOG_OPTION, $new_log );
 	}
 
+	/**
+	 * Add entry to deleted-files log.
+	 *
+	 * @param array $file_info File info.
+	 */
+	private function add_to_deleted_log( $file_info ) {
+		$log = $this->get_deleted_log();
+		$log[] = $file_info;
+		update_option( self::DELETED_LOG_OPTION, $log );
+	}
+
+	/**
+	 * Remove entry from deleted-files log.
+	 *
+	 * @param string $deleted_name Deleted filename.
+	 */
+	private function remove_from_deleted_log( $deleted_name ) {
+		$log = $this->get_deleted_log();
+		$new_log = array();
+
+		foreach ( $log as $entry ) {
+			if ( ( $entry['deleted_name'] ?? '' ) !== $deleted_name ) {
+				$new_log[] = $entry;
+			}
+		}
+
+		update_option( self::DELETED_LOG_OPTION, $new_log );
+	}
+
 	/*
 	 * =========================================================================
 	 * AJAX HANDLERS
@@ -359,7 +554,7 @@ class NexifyMy_Security_Quarantine {
 
 		// Convert relative path to absolute.
 		if ( strpos( $file_path, ABSPATH ) !== 0 ) {
-			$file_path = ABSPATH . ltrim( $file_path, '/' );
+			$file_path = ABSPATH . ltrim( $file_path, "/\\" );
 		}
 
 		$result = $this->quarantine_file( $file_path, $reason, $manual );
@@ -372,6 +567,13 @@ class NexifyMy_Security_Quarantine {
 			'message' => 'File quarantined successfully.',
 			'info'    => $result,
 		) );
+	}
+
+	/**
+	 * Backward-compatible alias used by scanner "Quarantine" action.
+	 */
+	public function ajax_delete_file() {
+		$this->ajax_quarantine_file();
 	}
 
 	/**
@@ -400,7 +602,7 @@ class NexifyMy_Security_Quarantine {
 	}
 
 	/**
-	 * Permanently delete a quarantined file via AJAX.
+	 * Move a quarantined file to recoverable deleted storage via AJAX.
 	 */
 	public function ajax_delete_quarantined() {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
@@ -421,7 +623,10 @@ class NexifyMy_Security_Quarantine {
 			wp_send_json_error( $result->get_error_message() );
 		}
 
-		wp_send_json_success( 'File permanently deleted.' );
+		wp_send_json_success( array(
+			'message' => 'File moved to recoverable deleted storage.',
+			'info'    => $result,
+		) );
 	}
 
 	/**
@@ -449,5 +654,76 @@ class NexifyMy_Security_Quarantine {
 			'count' => count( $files ),
 			'files' => $files,
 		) );
+	}
+
+	/**
+	 * Get list of recoverable deleted files via AJAX.
+	 */
+	public function ajax_get_deleted_quarantined() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$log = $this->get_deleted_log();
+		$files = array();
+		foreach ( $log as $entry ) {
+			$deleted_path = $this->get_deleted_path() . '/' . ( $entry['deleted_name'] ?? '' );
+			$entry['exists'] = file_exists( $deleted_path );
+			$entry['size_formatted'] = size_format( (int) ( $entry['size'] ?? 0 ) );
+			$files[] = $entry;
+		}
+
+		wp_send_json_success( array(
+			'count' => count( $files ),
+			'files' => $files,
+		) );
+	}
+
+	/**
+	 * Restore a deleted file back to quarantine via AJAX.
+	 */
+	public function ajax_restore_deleted_quarantined() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$deleted_name = isset( $_POST['deleted_name'] ) ? sanitize_file_name( $_POST['deleted_name'] ) : '';
+		if ( empty( $deleted_name ) ) {
+			wp_send_json_error( 'No deleted filename provided.' );
+		}
+
+		$result = $this->restore_deleted_quarantined( $deleted_name );
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( $result->get_error_message() );
+		}
+
+		wp_send_json_success( 'File restored to quarantine successfully.' );
+	}
+
+	/**
+	 * Permanently delete a file from recoverable deleted storage via AJAX.
+	 */
+	public function ajax_delete_quarantined_permanently() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$deleted_name = isset( $_POST['deleted_name'] ) ? sanitize_file_name( $_POST['deleted_name'] ) : '';
+		if ( empty( $deleted_name ) ) {
+			wp_send_json_error( 'No deleted filename provided.' );
+		}
+
+		$result = $this->permanently_delete_deleted_quarantined( $deleted_name );
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( $result->get_error_message() );
+		}
+
+		wp_send_json_success( 'File permanently deleted.' );
 	}
 }
