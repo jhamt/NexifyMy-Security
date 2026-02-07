@@ -30,6 +30,7 @@ class NexifyMy_Security_Settings {
 			'geo_blocking_enabled'     => false,
 			'hide_login_enabled'       => false,
 			'live_traffic_enabled'     => true,
+			'activity_log_enabled'     => true,
 			'captcha_enabled'          => true,
 			'two_factor_enabled'       => true,
 			'password_enabled'         => true,
@@ -37,11 +38,15 @@ class NexifyMy_Security_Settings {
 			'integrations_enabled'     => true,
 			'quarantine_enabled'       => true,
 			'database_enabled'         => true,
+			'cdn_enabled'              => true,
 			'performance_enabled'      => true,
 			'core_repair_enabled'      => true,
+			'vulnerability_scanner_enabled' => true,
 			'supply_chain_enabled'     => true,
 			'proactive_enabled'        => true,
 			'ai_detection_enabled'     => true,
+			'api_security_enabled'     => true,
+			'graphql_security_enabled' => true,
 			'passkey_enabled'          => true,
 			'compliance_enabled'       => true,
 			'developer_api_enabled'    => true,
@@ -77,6 +82,8 @@ class NexifyMy_Security_Settings {
 			'max_file_size_kb'   => 2048,  // 2MB.
 			'excluded_paths'     => array(),
 			'excluded_extensions' => array( 'jpg', 'jpeg', 'png', 'gif', 'pdf', 'zip' ),
+			'quarantine_mode'    => 'manual',
+			'auto_quarantine_enabled' => false,
 		),
 
 		// IP Settings.
@@ -168,6 +175,7 @@ class NexifyMy_Security_Settings {
 			'track_user_agents'      => true,
 			'track_geo_patterns'     => true,
 			'notify_on_anomaly'      => true,
+			'session_risk_threshold' => 60,
 		),
 
 		// Passkey/WebAuthn Settings.
@@ -296,6 +304,8 @@ class NexifyMy_Security_Settings {
 			'siem_endpoint'       => '',
 			'siem_token'          => '',
 			'siem_index'          => 'wordpress_security',
+			'siem_format'         => 'json',
+			'siem_ssl_verify'     => false,
 			'siem_events'         => array( 'all' ),
 			'jira_enabled'        => false,
 			'jira_url'            => '',
@@ -310,6 +320,15 @@ class NexifyMy_Security_Settings {
 			'servicenow_username' => '',
 			'servicenow_password' => '',
 			'servicenow_table'    => 'incident',
+			'servicenow_impact'   => '2',
+			'servicenow_urgency'  => '2',
+			'custom_webhooks_enabled' => false,
+			'custom_webhooks'     => array(),
+			'cicd_enabled'        => false,
+			'cicd_webhook_url'    => '',
+			'cicd_fail_on_malware' => true,
+			'cicd_fail_on_vulnerabilities' => true,
+			'cicd_min_severity'   => 'high',
 		),
 	);
 
@@ -323,38 +342,38 @@ class NexifyMy_Security_Settings {
 			'site_default' => __( 'Site Default', 'nexifymy-security' ),
 			'en_US'        => 'English (US)',
 			'en_GB'        => 'English (UK)',
-			'es_ES'        => 'Español (Spanish)',
-			'fr_FR'        => 'Français (French)',
+			'es_ES'        => 'Espanol (Spanish)',
+			'fr_FR'        => 'Francais (French)',
 			'de_DE'        => 'Deutsch (German)',
 			'it_IT'        => 'Italiano (Italian)',
-			'pt_BR'        => 'Português (Brazilian)',
+			'pt_BR'        => 'Portugues (Brazilian)',
 			'nl_NL'        => 'Nederlands (Dutch)',
-			'ru_RU'        => 'Русский (Russian)',
-			'ja'           => '日本語 (Japanese)',
-			'zh_CN'        => '简体中文 (Chinese Simplified)',
-			'ar'           => 'العربية (Arabic)',
-			'hi_IN'        => 'हिन्दी (Hindi)',
-			'ko_KR'        => '한국어 (Korean)',
-			'tr_TR'        => 'Türkçe (Turkish)',
+			'ru_RU'        => 'Russian',
+			'ja'           => 'Japanese',
+			'zh_CN'        => 'Chinese (Simplified)',
+			'ar'           => 'Arabic',
+			'hi_IN'        => 'Hindi',
+			'ko_KR'        => 'Korean',
+			'tr_TR'        => 'Turkish',
 			'pl_PL'        => 'Polski (Polish)',
 			'id_ID'        => 'Bahasa Indonesia (Indonesian)',
-			'uk'           => 'Українська (Ukrainian)',
-			'vi'           => 'Tiếng Việt (Vietnamese)',
-			'th'           => 'ไทย (Thai)',
+			'uk'           => 'Ukrainian',
+			'vi'           => 'Vietnamese',
+			'th'           => 'Thai',
 			'sv_SE'        => 'Svenska (Swedish)',
 			'da_DK'        => 'Dansk (Danish)',
 			'fi'           => 'Suomi (Finnish)',
-			'no'           => 'Norsk Bokmål (Norwegian)',
-			'cs_CZ'        => 'Čeština (Czech)',
-			'el'           => 'Ελληνικά (Greek)',
+			'no'           => 'Norsk Bokmal (Norwegian)',
+			'cs_CZ'        => 'Cestina (Czech)',
+			'el'           => 'Greek',
 			'hu_HU'        => 'Magyar (Hungarian)',
-			'ro_RO'        => 'Română (Romanian)',
-			'sk_SK'        => 'Slovenčina (Slovak)',
-			'bg_BG'        => 'Български (Bulgarian)',
+			'ro_RO'        => 'Romana (Romanian)',
+			'sk_SK'        => 'Slovencina (Slovak)',
+			'bg_BG'        => 'Bulgarian',
 			'hr'           => 'Hrvatski (Croatian)',
-			'sr_RS'        => 'Српски (Serbian)',
-			'he_IL'        => 'עִבְרִית (Hebrew)',
-			'fa_IR'        => 'فارسی (Persian)',
+			'sr_RS'        => 'Serbian',
+			'he_IL'        => 'Hebrew',
+			'fa_IR'        => 'Persian',
 		);
 	}
 
@@ -502,31 +521,37 @@ class NexifyMy_Security_Settings {
 
 		// Modules.
 		if ( isset( $input['modules'] ) ) {
+			$current_modules = self::get_all()['modules'] ?? self::$defaults['modules'];
 			$sanitized['modules'] = array(
-				'waf_enabled'              => ! empty( $input['modules']['waf_enabled'] ),
-				'scanner_enabled'          => ! empty( $input['modules']['scanner_enabled'] ),
-				'rate_limiter_enabled'     => ! empty( $input['modules']['rate_limiter_enabled'] ),
-				'background_scan_enabled'  => ! empty( $input['modules']['background_scan_enabled'] ),
-				'signatures_enabled'       => ! empty( $input['modules']['signatures_enabled'] ),
-				'hardening_enabled'        => ! empty( $input['modules']['hardening_enabled'] ),
-				'geo_blocking_enabled'     => ! empty( $input['modules']['geo_blocking_enabled'] ),
-				'hide_login_enabled'       => ! empty( $input['modules']['hide_login_enabled'] ),
-				'live_traffic_enabled'     => ! empty( $input['modules']['live_traffic_enabled'] ),
-				'captcha_enabled'          => ! empty( $input['modules']['captcha_enabled'] ),
-				'two_factor_enabled'       => ! empty( $input['modules']['two_factor_enabled'] ),
-				'password_enabled'         => ! empty( $input['modules']['password_enabled'] ),
-				'self_protection_enabled'  => ! empty( $input['modules']['self_protection_enabled'] ),
-				'integrations_enabled'     => ! empty( $input['modules']['integrations_enabled'] ),
-				'quarantine_enabled'       => ! empty( $input['modules']['quarantine_enabled'] ),
-				'database_enabled'         => ! empty( $input['modules']['database_enabled'] ),
-				'performance_enabled'      => ! empty( $input['modules']['performance_enabled'] ),
-				'core_repair_enabled'      => ! empty( $input['modules']['core_repair_enabled'] ),
-				'supply_chain_enabled'     => ! empty( $input['modules']['supply_chain_enabled'] ),
-				'proactive_enabled'        => ! empty( $input['modules']['proactive_enabled'] ),
-				'ai_detection_enabled'     => ! empty( $input['modules']['ai_detection_enabled'] ),
-				'passkey_enabled'          => ! empty( $input['modules']['passkey_enabled'] ),
-				'compliance_enabled'       => ! empty( $input['modules']['compliance_enabled'] ),
-				'developer_api_enabled'    => ! empty( $input['modules']['developer_api_enabled'] ),
+				'waf_enabled'              => array_key_exists( 'waf_enabled', $input['modules'] ) ? ! empty( $input['modules']['waf_enabled'] ) : ! empty( $current_modules['waf_enabled'] ),
+				'scanner_enabled'          => array_key_exists( 'scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['scanner_enabled'] ) : ! empty( $current_modules['scanner_enabled'] ),
+				'rate_limiter_enabled'     => array_key_exists( 'rate_limiter_enabled', $input['modules'] ) ? ! empty( $input['modules']['rate_limiter_enabled'] ) : ! empty( $current_modules['rate_limiter_enabled'] ),
+				'background_scan_enabled'  => array_key_exists( 'background_scan_enabled', $input['modules'] ) ? ! empty( $input['modules']['background_scan_enabled'] ) : ! empty( $current_modules['background_scan_enabled'] ),
+				'signatures_enabled'       => array_key_exists( 'signatures_enabled', $input['modules'] ) ? ! empty( $input['modules']['signatures_enabled'] ) : ! empty( $current_modules['signatures_enabled'] ),
+				'hardening_enabled'        => array_key_exists( 'hardening_enabled', $input['modules'] ) ? ! empty( $input['modules']['hardening_enabled'] ) : ! empty( $current_modules['hardening_enabled'] ),
+				'geo_blocking_enabled'     => array_key_exists( 'geo_blocking_enabled', $input['modules'] ) ? ! empty( $input['modules']['geo_blocking_enabled'] ) : ! empty( $current_modules['geo_blocking_enabled'] ),
+				'hide_login_enabled'       => array_key_exists( 'hide_login_enabled', $input['modules'] ) ? ! empty( $input['modules']['hide_login_enabled'] ) : ! empty( $current_modules['hide_login_enabled'] ),
+				'live_traffic_enabled'     => array_key_exists( 'live_traffic_enabled', $input['modules'] ) ? ! empty( $input['modules']['live_traffic_enabled'] ) : ! empty( $current_modules['live_traffic_enabled'] ),
+				'activity_log_enabled'     => array_key_exists( 'activity_log_enabled', $input['modules'] ) ? ! empty( $input['modules']['activity_log_enabled'] ) : ! empty( $current_modules['activity_log_enabled'] ),
+				'captcha_enabled'          => array_key_exists( 'captcha_enabled', $input['modules'] ) ? ! empty( $input['modules']['captcha_enabled'] ) : ! empty( $current_modules['captcha_enabled'] ),
+				'two_factor_enabled'       => array_key_exists( 'two_factor_enabled', $input['modules'] ) ? ! empty( $input['modules']['two_factor_enabled'] ) : ! empty( $current_modules['two_factor_enabled'] ),
+				'password_enabled'         => array_key_exists( 'password_enabled', $input['modules'] ) ? ! empty( $input['modules']['password_enabled'] ) : ! empty( $current_modules['password_enabled'] ),
+				'self_protection_enabled'  => array_key_exists( 'self_protection_enabled', $input['modules'] ) ? ! empty( $input['modules']['self_protection_enabled'] ) : ! empty( $current_modules['self_protection_enabled'] ),
+				'integrations_enabled'     => array_key_exists( 'integrations_enabled', $input['modules'] ) ? ! empty( $input['modules']['integrations_enabled'] ) : ! empty( $current_modules['integrations_enabled'] ),
+				'quarantine_enabled'       => array_key_exists( 'quarantine_enabled', $input['modules'] ) ? ! empty( $input['modules']['quarantine_enabled'] ) : ! empty( $current_modules['quarantine_enabled'] ),
+				'database_enabled'         => array_key_exists( 'database_enabled', $input['modules'] ) ? ! empty( $input['modules']['database_enabled'] ) : ! empty( $current_modules['database_enabled'] ),
+				'cdn_enabled'              => array_key_exists( 'cdn_enabled', $input['modules'] ) ? ! empty( $input['modules']['cdn_enabled'] ) : ! empty( $current_modules['cdn_enabled'] ),
+				'performance_enabled'      => array_key_exists( 'performance_enabled', $input['modules'] ) ? ! empty( $input['modules']['performance_enabled'] ) : ! empty( $current_modules['performance_enabled'] ),
+				'core_repair_enabled'      => array_key_exists( 'core_repair_enabled', $input['modules'] ) ? ! empty( $input['modules']['core_repair_enabled'] ) : ! empty( $current_modules['core_repair_enabled'] ),
+				'vulnerability_scanner_enabled' => array_key_exists( 'vulnerability_scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['vulnerability_scanner_enabled'] ) : ! empty( $current_modules['vulnerability_scanner_enabled'] ),
+				'supply_chain_enabled'     => array_key_exists( 'supply_chain_enabled', $input['modules'] ) ? ! empty( $input['modules']['supply_chain_enabled'] ) : ! empty( $current_modules['supply_chain_enabled'] ),
+				'proactive_enabled'        => array_key_exists( 'proactive_enabled', $input['modules'] ) ? ! empty( $input['modules']['proactive_enabled'] ) : ! empty( $current_modules['proactive_enabled'] ),
+				'ai_detection_enabled'     => array_key_exists( 'ai_detection_enabled', $input['modules'] ) ? ! empty( $input['modules']['ai_detection_enabled'] ) : ! empty( $current_modules['ai_detection_enabled'] ),
+				'api_security_enabled'     => array_key_exists( 'api_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['api_security_enabled'] ) : ! empty( $current_modules['api_security_enabled'] ),
+				'graphql_security_enabled' => array_key_exists( 'graphql_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['graphql_security_enabled'] ) : ! empty( $current_modules['graphql_security_enabled'] ),
+				'passkey_enabled'          => array_key_exists( 'passkey_enabled', $input['modules'] ) ? ! empty( $input['modules']['passkey_enabled'] ) : ! empty( $current_modules['passkey_enabled'] ),
+				'compliance_enabled'       => array_key_exists( 'compliance_enabled', $input['modules'] ) ? ! empty( $input['modules']['compliance_enabled'] ) : ! empty( $current_modules['compliance_enabled'] ),
+				'developer_api_enabled'    => array_key_exists( 'developer_api_enabled', $input['modules'] ) ? ! empty( $input['modules']['developer_api_enabled'] ) : ! empty( $current_modules['developer_api_enabled'] ),
 			);
 		}
 
@@ -558,12 +583,19 @@ class NexifyMy_Security_Settings {
 		if ( isset( $input['scanner'] ) ) {
 			$default_mode = sanitize_key( $input['scanner']['default_mode'] ?? 'standard' );
 			$max_file_size_kb_raw = absint( $input['scanner']['max_file_size_kb'] ?? 2048 );
+			$quarantine_mode = sanitize_key( $input['scanner']['quarantine_mode'] ?? 'manual' );
+			if ( ! in_array( $quarantine_mode, array( 'manual', 'auto' ), true ) ) {
+				$quarantine_mode = 'manual';
+			}
+			$auto_quarantine = ! empty( $input['scanner']['auto_quarantine_enabled'] ) || ! empty( $input['scanner']['auto_quarantine'] ) || $quarantine_mode === 'auto';
 
 			$sanitized['scanner'] = array(
 				'default_mode'     => $default_mode ?: 'standard',
 				'max_file_size_kb' => max( 100, $max_file_size_kb_raw ?: 2048 ),
 				'excluded_paths'   => $this->sanitize_list( $input['scanner']['excluded_paths'] ?? '' ),
 				'excluded_extensions' => $this->sanitize_list( $input['scanner']['excluded_extensions'] ?? '' ),
+				'quarantine_mode'  => $quarantine_mode,
+				'auto_quarantine_enabled' => (bool) $auto_quarantine,
 			);
 		}
 
@@ -673,6 +705,7 @@ class NexifyMy_Security_Settings {
 				'track_user_agents'      => ! empty( $input['ai_detection']['track_user_agents'] ),
 				'track_geo_patterns'     => ! empty( $input['ai_detection']['track_geo_patterns'] ),
 				'notify_on_anomaly'      => ! empty( $input['ai_detection']['notify_on_anomaly'] ),
+				'session_risk_threshold' => max( 1, min( 100, absint( $input['ai_detection']['session_risk_threshold'] ?? 60 ) ) ),
 			);
 		}
 
@@ -818,7 +851,9 @@ class NexifyMy_Security_Settings {
 
 		// Integrations.
 		if ( isset( $input['integrations'] ) ) {
-			$siem_types       = array( 'splunk', 'elasticsearch', 'generic' );
+			$siem_types       = array( 'splunk', 'elasticsearch', 'qradar', 'arcsight', 'sumo', 'datadog', 'generic' );
+			$siem_formats     = array( 'json', 'cef', 'leef' );
+			$severity_levels  = array( 'critical', 'high', 'medium', 'low' );
 			$available_events = array( 'all', 'threat_detected', 'login_failed', 'user_locked', 'malware_found', 'scan_completed', 'plugin_vulnerability', 'settings_changed', 'core_file_modified' );
 
 			$sanitized['integrations'] = array(
@@ -846,6 +881,8 @@ class NexifyMy_Security_Settings {
 				'siem_endpoint' => esc_url_raw( $input['integrations']['siem_endpoint'] ?? '' ),
 				'siem_token'    => sanitize_text_field( $input['integrations']['siem_token'] ?? '' ),
 				'siem_index'    => sanitize_text_field( $input['integrations']['siem_index'] ?? 'wordpress_security' ),
+				'siem_format'   => in_array( $input['integrations']['siem_format'] ?? 'json', $siem_formats, true ) ? $input['integrations']['siem_format'] : 'json',
+				'siem_ssl_verify' => ! empty( $input['integrations']['siem_ssl_verify'] ),
 				'siem_events'   => array_values( array_intersect( (array) ( $input['integrations']['siem_events'] ?? array() ), $available_events ) ),
 
 				// Jira.
@@ -864,6 +901,19 @@ class NexifyMy_Security_Settings {
 				'servicenow_username' => sanitize_text_field( $input['integrations']['servicenow_username'] ?? '' ),
 				'servicenow_password' => sanitize_text_field( $input['integrations']['servicenow_password'] ?? '' ),
 				'servicenow_table'    => sanitize_text_field( $input['integrations']['servicenow_table'] ?? 'incident' ),
+				'servicenow_impact'   => in_array( (string) ( $input['integrations']['servicenow_impact'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_impact'] : '2',
+				'servicenow_urgency'  => in_array( (string) ( $input['integrations']['servicenow_urgency'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_urgency'] : '2',
+
+				// Custom webhooks.
+				'custom_webhooks_enabled' => ! empty( $input['integrations']['custom_webhooks_enabled'] ),
+				'custom_webhooks' => $this->sanitize_custom_webhooks( $input['integrations']['custom_webhooks'] ?? array(), $available_events ),
+
+				// CI/CD integration.
+				'cicd_enabled' => ! empty( $input['integrations']['cicd_enabled'] ),
+				'cicd_webhook_url' => esc_url_raw( $input['integrations']['cicd_webhook_url'] ?? '' ),
+				'cicd_fail_on_malware' => ! empty( $input['integrations']['cicd_fail_on_malware'] ),
+				'cicd_fail_on_vulnerabilities' => ! empty( $input['integrations']['cicd_fail_on_vulnerabilities'] ),
+				'cicd_min_severity' => in_array( $input['integrations']['cicd_min_severity'] ?? 'high', $severity_levels, true ) ? $input['integrations']['cicd_min_severity'] : 'high',
 			);
 		}
 
@@ -885,7 +935,7 @@ class NexifyMy_Security_Settings {
 			return array();
 		}
 
-		$items = explode( "\n", $input );
+		$items = preg_split( '/[\r\n,]+/', (string) $input );
 		$items = array_map( 'trim', $items );
 		$items = array_map( 'sanitize_text_field', $items );
 		$items = array_filter( $items );
@@ -905,6 +955,80 @@ class NexifyMy_Security_Settings {
 		return array_filter( $items, function( $ip ) {
 			return filter_var( $ip, FILTER_VALIDATE_IP );
 		} );
+	}
+
+	/**
+	 * Sanitize custom webhook configurations.
+	 *
+	 * @param mixed $input Webhook input.
+	 * @param array $available_events Allowed event keys.
+	 * @return array
+	 */
+	private function sanitize_custom_webhooks( $input, $available_events ) {
+		if ( ! is_array( $input ) ) {
+			return array();
+		}
+
+		$sanitized = array();
+		$allowed_methods = array( 'POST', 'PUT', 'PATCH' );
+
+		foreach ( $input as $webhook ) {
+			if ( ! is_array( $webhook ) ) {
+				continue;
+			}
+
+			$name = sanitize_text_field( $webhook['name'] ?? '' );
+			$url = esc_url_raw( $webhook['url'] ?? '' );
+			if ( empty( $url ) ) {
+				continue;
+			}
+
+			$method = strtoupper( sanitize_text_field( $webhook['method'] ?? 'POST' ) );
+			if ( ! in_array( $method, $allowed_methods, true ) ) {
+				$method = 'POST';
+			}
+
+			$headers = array();
+			if ( isset( $webhook['headers'] ) ) {
+				if ( is_string( $webhook['headers'] ) ) {
+					$decoded = json_decode( wp_unslash( $webhook['headers'] ), true );
+					if ( is_array( $decoded ) ) {
+						$headers = $decoded;
+					}
+				} elseif ( is_array( $webhook['headers'] ) ) {
+					$headers = $webhook['headers'];
+				}
+			}
+
+			$clean_headers = array();
+			foreach ( $headers as $header_key => $header_value ) {
+				$clean_key = sanitize_text_field( (string) $header_key );
+				if ( '' === $clean_key ) {
+					continue;
+				}
+				$clean_headers[ $clean_key ] = sanitize_text_field( (string) $header_value );
+			}
+
+			$events = array_values(
+				array_intersect(
+					(array) ( $webhook['events'] ?? array() ),
+					$available_events
+				)
+			);
+			if ( empty( $events ) ) {
+				$events = array( 'all' );
+			}
+
+			$sanitized[] = array(
+				'name'    => $name,
+				'url'     => $url,
+				'method'  => $method,
+				'headers' => $clean_headers,
+				'events'  => $events,
+			);
+		}
+
+		return $sanitized;
 	}
 
 	/**
@@ -1015,6 +1139,24 @@ class NexifyMy_Security_Settings {
 	 * @param array $settings The settings.
 	 */
 	private function apply_settings( $settings ) {
+		// Reload plugin textdomain immediately when language setting changes.
+		if ( isset( $settings['general']['language'] ) ) {
+			if ( function_exists( 'unload_textdomain' ) ) {
+				unload_textdomain( 'nexifymy-security' );
+			}
+			$domain_path = 'languages';
+			if ( function_exists( 'plugin_basename' ) && defined( 'NEXIFYMY_SECURITY_FILE' ) ) {
+				$domain_path = dirname( plugin_basename( NEXIFYMY_SECURITY_FILE ) ) . '/languages';
+			}
+			if ( function_exists( 'load_plugin_textdomain' ) ) {
+				load_plugin_textdomain(
+					'nexifymy-security',
+					false,
+					$domain_path
+				);
+			}
+		}
+
 		// Update IP whitelist option for WAF.
 		if ( isset( $settings['ip']['whitelist'] ) ) {
 			update_option( 'nexifymy_security_ip_whitelist', $settings['ip']['whitelist'] );
@@ -1052,3 +1194,4 @@ class NexifyMy_Security_Settings {
 		}
 	}
 }
+
