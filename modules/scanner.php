@@ -771,6 +771,7 @@ class NexifyMy_Security_Scanner {
 		$upload_dir = wp_upload_dir();
 		$last_scan = get_option( self::SCAN_STATE_OPTION, 0 );
 		$files_scanned = 0;
+		$quarantined_count = 0;
 		$core_results = null;
 		$threat_counts = array( 'critical' => 0, 'high' => 0, 'medium' => 0, 'low' => 0 );
 
@@ -872,10 +873,11 @@ class NexifyMy_Security_Scanner {
 			if ( $this->is_path_excluded( $dir ) ) {
 				continue;
 			}
-			$scan_result = $this->scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $suspicious_files, $threat_counts );
+			$scan_result = $this->scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $suspicious_files, $threat_counts, $quarantined_count );
 			$suspicious_files = $scan_result['threats'];
 			$files_scanned = $scan_result['files_scanned'];
 			$threat_counts = $scan_result['threat_counts'];
+			$quarantined_count = $scan_result['quarantined_count'];
 		}
 
 		// Phase 4: Core Integrity (if deep scan)
@@ -999,6 +1001,7 @@ class NexifyMy_Security_Scanner {
 			),
 			'classification_counts' => $classification_counts,
 			'classification_percentages' => $classification_percentages,
+			'quarantined'   => $quarantined_count,
 		);
 
 		// Save for API access
@@ -1018,6 +1021,7 @@ class NexifyMy_Security_Scanner {
 			'counts'  => $threat_counts,
 			'classification_counts' => $classification_counts,
 			'scan_summary' => $results['scan_summary'],
+			'quarantined' => $quarantined_count,
 		) );
 
 		return $results;
@@ -1070,7 +1074,7 @@ class NexifyMy_Security_Scanner {
 	 * @param array $threat_counts Threat counts by severity.
 	 * @return array Results with threats, files_scanned, threat_counts.
 	 */
-	private function scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $existing_threats, $threat_counts ) {
+	private function scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $existing_threats, $threat_counts, $quarantined_count = 0 ) {
 		$results = $existing_threats;
 		$update_interval = 10; // Update progress every 10 files
 
@@ -1086,6 +1090,11 @@ class NexifyMy_Security_Scanner {
 				}
 
 				$filepath = $file->getPathname();
+
+				// Never scan this plugin's own files to avoid accidental self-quarantine.
+				if ( strpos( $filepath, NEXIFYMY_SECURITY_PATH ) !== false ) {
+					continue;
+				}
 
 				// Skip excluded paths
 				if ( $this->is_path_excluded( $filepath ) ) {
@@ -1140,9 +1149,19 @@ class NexifyMy_Security_Scanner {
 				$threats = $this->scan_file( $filepath, $mode_config );
 
 				if ( ! empty( $threats ) ) {
+					$auto_quarantined = false;
+					if ( $this->should_auto_quarantine( $threats ) && isset( $GLOBALS['nexifymy_quarantine'] ) && $GLOBALS['nexifymy_quarantine'] instanceof NexifyMy_Security_Quarantine ) {
+						$quarantine_result = $GLOBALS['nexifymy_quarantine']->quarantine_file( $filepath, 'Auto quarantine from scanner', false );
+						if ( ! is_wp_error( $quarantine_result ) ) {
+							$auto_quarantined = true;
+							$quarantined_count++;
+						}
+					}
+
 					$results[] = array(
 						'file'    => str_replace( ABSPATH, '', $filepath ),
 						'threats' => $threats,
+						'auto_quarantined' => $auto_quarantined,
 					);
 
 					foreach ( $threats as $threat ) {
@@ -1161,7 +1180,34 @@ class NexifyMy_Security_Scanner {
 			'threats'       => $results,
 			'files_scanned' => $files_scanned,
 			'threat_counts' => $threat_counts,
+			'quarantined_count' => $quarantined_count,
 		);
+	}
+
+	/**
+	 * Determine whether a threat set should be auto-quarantined.
+	 *
+	 * @param array $threats Detected threats for a file.
+	 * @return bool
+	 */
+	private function should_auto_quarantine( $threats ) {
+		if ( ! isset( $GLOBALS['nexifymy_quarantine'] ) || ! ( $GLOBALS['nexifymy_quarantine'] instanceof NexifyMy_Security_Quarantine ) ) {
+			return false;
+		}
+
+		if ( ! $GLOBALS['nexifymy_quarantine']->is_auto_quarantine_enabled() ) {
+			return false;
+		}
+
+		foreach ( (array) $threats as $threat ) {
+			$classification = $threat['classification'] ?? '';
+			$confidence = (int) ( $threat['confidence'] ?? 0 );
+			if ( $classification === self::CLASSIFICATION_CONFIRMED_MALWARE && $confidence >= 85 ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -1695,6 +1741,20 @@ class NexifyMy_Security_Scanner {
 		// If rule has fixed classification, use it
 		if ( isset( $rule['classification'] ) && $rule['classification'] !== 'dynamic' ) {
 			return $rule['classification'];
+		}
+
+		$category = $rule['category'] ?? '';
+		if ( in_array( $category, array( 'command_execution', 'file_operation', 'injection' ), true ) ) {
+			if ( $confidence >= 85 ) {
+				return self::CLASSIFICATION_CONFIRMED_MALWARE;
+			}
+			if ( $confidence >= 60 ) {
+				return self::CLASSIFICATION_SECURITY_VULNERABILITY;
+			}
+			if ( $confidence >= 40 ) {
+				return self::CLASSIFICATION_CODE_SMELL;
+			}
+			return self::CLASSIFICATION_CLEAN;
 		}
 
 		// Dynamic classification based on confidence thresholds
