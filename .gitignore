@@ -34,3 +34,6 @@ error_log
 .phpunit.result.cache
 .php-cs-fixer.cache
 .phpcs-cache
+
+#Files
+CLAUDE.md
