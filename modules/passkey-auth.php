@@ -508,6 +508,11 @@ class NexifyMy_Security_Passkey {
 		$verified = $this->verify_signature( $signed_data, $signature, $public_key );
 
 		if ( ! $verified ) {
+			// Record passkey failure in AI risk scoring.
+			$ai_module = isset( $GLOBALS['nexifymy_ai_detection'] ) ? $GLOBALS['nexifymy_ai_detection'] : ( $GLOBALS['nexifymy_ai_threat'] ?? null );
+			if ( $ai_module && method_exists( $ai_module, 'record_passkey_event' ) ) {
+				$ai_module->record_passkey_event( 'failure', $user->ID );
+			}
 			wp_send_json_error( 'Signature verification failed.' );
 		}
 
@@ -534,6 +539,17 @@ class NexifyMy_Security_Passkey {
 				sprintf( 'User %s logged in with passkey', $user->user_login ),
 				'info'
 			);
+		}
+
+		// Record passkey success in AI risk scoring (reduces risk).
+		$ai_module = isset( $GLOBALS['nexifymy_ai_detection'] ) ? $GLOBALS['nexifymy_ai_detection'] : ( $GLOBALS['nexifymy_ai_threat'] ?? null );
+		if ( $ai_module && method_exists( $ai_module, 'record_passkey_event' ) ) {
+			$ai_module->record_passkey_event( 'success', $user->ID );
+		}
+
+		// Passkey is a strong re-auth signal; trust this session immediately.
+		if ( $ai_module && method_exists( $ai_module, 'mark_session_verified' ) ) {
+			$ai_module->mark_session_verified( $user->ID );
 		}
 
 		wp_send_json_success( array(
