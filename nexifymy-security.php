@@ -116,8 +116,31 @@ function nexifymy_security_activate() {
 				'scanner_enabled'         => 1,
 				'rate_limiter_enabled'    => 1,
 				'background_scan_enabled' => 1,
+				'signatures_enabled'      => 1,
+				'quarantine_enabled'      => 1,
+				'database_enabled'        => 1,
+				'cdn_enabled'             => 1,
+				'core_repair_enabled'     => 1,
+				'vulnerability_scanner_enabled' => 1,
 				'live_traffic_enabled'    => 1,
+				'activity_log_enabled'    => 1,
+				'hardening_enabled'       => 1,
+				'geo_blocking_enabled'    => 0,
+				'hide_login_enabled'      => 0,
+				'captcha_enabled'         => 1,
+				'two_factor_enabled'      => 1,
+				'password_enabled'        => 1,
 				'self_protection_enabled' => 1,
+				'performance_enabled'     => 1,
+				'supply_chain_enabled'    => 1,
+				'proactive_enabled'       => 1,
+				'ai_detection_enabled'    => 1,
+				'api_security_enabled'    => 1,
+				'graphql_security_enabled' => 1,
+				'passkey_enabled'         => 1,
+				'compliance_enabled'      => 1,
+				'developer_api_enabled'   => 1,
+				'integrations_enabled'    => 1,
 			),
 			'firewall' => array(
 				'enabled'        => true,
@@ -200,7 +223,7 @@ function nexifymy_security_add_cron_schedules( $schedules ) {
  * =============================================================================
  */
 
-add_action( 'init', 'nexifymy_security_load_textdomain' );
+add_action( 'plugins_loaded', 'nexifymy_security_load_textdomain', 1 );
 
 /**
  * Load plugin text domain for translations.
@@ -228,18 +251,39 @@ function nexifymy_security_plugin_locale( $locale, $domain ) {
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		if ( ! empty( $settings['general']['language'] ) && 'site_default' !== $settings['general']['language'] ) {
 			$selected = sanitize_text_field( $settings['general']['language'] );
+			$mo_file  = NEXIFYMY_SECURITY_PATH . 'languages/nexifymy-security-' . $selected . '.mo';
 
 			if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 				$allowed = array_keys( NexifyMy_Security_Settings::get_available_languages() );
-				if ( in_array( $selected, $allowed, true ) ) {
+				if ( in_array( $selected, $allowed, true ) && file_exists( $mo_file ) ) {
 					return $selected;
 				}
-			} else {
+			} elseif ( file_exists( $mo_file ) ) {
 				return $selected;
 			}
 		}
 	}
 	return $locale;
+}
+
+/**
+ * Check whether a module is enabled in settings.
+ *
+ * @param array  $settings Full settings array.
+ * @param string $module_option Option key inside settings['modules'].
+ * @param bool   $default Default value if key is missing.
+ * @return bool
+ */
+function nexifymy_security_is_module_enabled( $settings, $module_option, $default = true ) {
+	if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+		return (bool) $default;
+	}
+
+	if ( ! array_key_exists( $module_option, $settings['modules'] ) ) {
+		return (bool) $default;
+	}
+
+	return (bool) $settings['modules'][ $module_option ];
 }
 
 /*
@@ -255,6 +299,8 @@ add_action( 'plugins_loaded', 'nexifymy_security_init' );
  * Initialize the plugin (admin, scanner, logger, background tasks).
  */
 function nexifymy_security_init() {
+	$settings = get_option( 'nexifymy_security_settings', array() );
+
 	// Load Logger.
 	if ( ! isset( $GLOBALS['nexifymy_logger'] ) || ! ( $GLOBALS['nexifymy_logger'] instanceof NexifyMy_Security_Logger ) ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-logger.php';
@@ -268,9 +314,11 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_notifications']->init();
 
 	// Load Signature Updater BEFORE scanner (scanner depends on signatures).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
-	$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
-	$GLOBALS['nexifymy_signatures']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'signatures_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
+		$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
+		$GLOBALS['nexifymy_signatures']->init();
+	}
 
 	// Load Scanner (uses signatures from above).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/scanner.php';
@@ -288,9 +336,11 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_cleanup']->init();
 
 	// Load Database Security.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/database-security.php';
-	$GLOBALS['nexifymy_database'] = new NexifyMy_Security_Database();
-	$GLOBALS['nexifymy_database']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'database_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/database-security.php';
+		$GLOBALS['nexifymy_database'] = new NexifyMy_Security_Database();
+		$GLOBALS['nexifymy_database']->init();
+	}
 
 	// Load Live Traffic Monitoring.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/live-traffic.php';
@@ -298,9 +348,11 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_live_traffic']->init();
 
 	// Load User Activity Log.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/user-activity-log.php';
-	$GLOBALS['nexifymy_activity_log'] = new NexifyMy_Security_Activity_Log();
-	$GLOBALS['nexifymy_activity_log']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'activity_log_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/user-activity-log.php';
+		$GLOBALS['nexifymy_activity_log'] = new NexifyMy_Security_Activity_Log();
+		$GLOBALS['nexifymy_activity_log']->init();
+	}
 
 
 	// Load Geo Blocking.
@@ -319,19 +371,25 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_password']->init();
 
 	// Load CDN Integration.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/cdn-integration.php';
-	$GLOBALS['nexifymy_cdn'] = new NexifyMy_Security_CDN();
-	$GLOBALS['nexifymy_cdn']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'cdn_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/cdn-integration.php';
+		$GLOBALS['nexifymy_cdn'] = new NexifyMy_Security_CDN();
+		$GLOBALS['nexifymy_cdn']->init();
+	}
 
 	// Load Core Repair.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
-	$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
-	$GLOBALS['nexifymy_core_repair']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'core_repair_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/core-repair.php';
+		$GLOBALS['nexifymy_core_repair'] = new NexifyMy_Security_Core_Repair();
+		$GLOBALS['nexifymy_core_repair']->init();
+	}
 
 	// Load Performance Optimizer (for caching and throttling).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/performance-optimizer.php';
-	$GLOBALS['nexifymy_performance'] = new NexifyMy_Security_Performance();
-	$GLOBALS['nexifymy_performance']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'performance_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/performance-optimizer.php';
+		$GLOBALS['nexifymy_performance'] = new NexifyMy_Security_Performance();
+		$GLOBALS['nexifymy_performance']->init();
+	}
 
 	// Load Self-Protection (must load early).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/self-protection.php';
@@ -349,9 +407,11 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_hide_login']->init();
 
 	// Load Vulnerability Scanner.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/vulnerability-scanner.php';
-	$GLOBALS['nexifymy_vuln_scanner'] = new NexifyMy_Security_Vulnerability_Scanner();
-	$GLOBALS['nexifymy_vuln_scanner']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'vulnerability_scanner_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/vulnerability-scanner.php';
+		$GLOBALS['nexifymy_vuln_scanner'] = new NexifyMy_Security_Vulnerability_Scanner();
+		$GLOBALS['nexifymy_vuln_scanner']->init();
+	}
 
 	// Load Login Captcha.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/login-captcha.php';
@@ -364,49 +424,67 @@ function nexifymy_security_init() {
 	$GLOBALS['nexifymy_bg_scanner']->init();
 
 	// Load Supply Chain Security.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/supply-chain-security.php';
-	$GLOBALS['nexifymy_supply_chain'] = new NexifyMy_Security_Supply_Chain();
-	$GLOBALS['nexifymy_supply_chain']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'supply_chain_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/supply-chain-security.php';
+		$GLOBALS['nexifymy_supply_chain'] = new NexifyMy_Security_Supply_Chain();
+		$GLOBALS['nexifymy_supply_chain']->init();
+	}
 
 	// Load Proactive Security.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/proactive-security.php';
-	$GLOBALS['nexifymy_proactive'] = new NexifyMy_Security_Proactive();
-	$GLOBALS['nexifymy_proactive']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'proactive_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/proactive-security.php';
+		$GLOBALS['nexifymy_proactive'] = new NexifyMy_Security_Proactive();
+		$GLOBALS['nexifymy_proactive']->init();
+	}
 
 	// Load AI Threat Detection.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/ai-threat-detection.php';
 	$GLOBALS['nexifymy_ai_detection'] = new NexifyMy_Security_AI_Threat_Detection();
 	$GLOBALS['nexifymy_ai_detection']->init();
+	// Back-compat alias for older references.
+	$GLOBALS['nexifymy_ai_threat'] = $GLOBALS['nexifymy_ai_detection'];
 
 	// Load Passkey/WebAuthn Authentication.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/passkey-auth.php';
-	$GLOBALS['nexifymy_passkey'] = new NexifyMy_Security_Passkey();
-	$GLOBALS['nexifymy_passkey']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'passkey_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/passkey-auth.php';
+		$GLOBALS['nexifymy_passkey'] = new NexifyMy_Security_Passkey();
+		$GLOBALS['nexifymy_passkey']->init();
+	}
 
 	// Load Compliance & Reporting.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/compliance-reporting.php';
-	$GLOBALS['nexifymy_compliance'] = new NexifyMy_Security_Compliance();
-	$GLOBALS['nexifymy_compliance']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'compliance_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/compliance-reporting.php';
+		$GLOBALS['nexifymy_compliance'] = new NexifyMy_Security_Compliance();
+		$GLOBALS['nexifymy_compliance']->init();
+	}
 
 	// Load Developer API.
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/developer-api.php';
-	$GLOBALS['nexifymy_dev_api'] = new NexifyMy_Security_Developer_API();
-	$GLOBALS['nexifymy_dev_api']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'developer_api_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/developer-api.php';
+		$GLOBALS['nexifymy_dev_api'] = new NexifyMy_Security_Developer_API();
+		$GLOBALS['nexifymy_dev_api']->init();
+	}
 
 	// Load Integrations (Slack, Discord, Teams, SIEM, Jira).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/integrations.php';
-	$GLOBALS['nexifymy_integrations'] = new NexifyMy_Security_Integrations();
-	$GLOBALS['nexifymy_integrations']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'integrations_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/integrations.php';
+		$GLOBALS['nexifymy_integrations'] = new NexifyMy_Security_Integrations();
+		$GLOBALS['nexifymy_integrations']->init();
+	}
 
 	// Load Advanced API Security (REST API, JWT, headless WordPress).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/api-security.php';
-	$GLOBALS['nexifymy_api_security'] = new NexifyMy_Security_API_Security();
-	$GLOBALS['nexifymy_api_security']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'api_security_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/api-security.php';
+		$GLOBALS['nexifymy_api_security'] = new NexifyMy_Security_API_Security();
+		$GLOBALS['nexifymy_api_security']->init();
+	}
 
 	// Load GraphQL Security (WPGraphQL protection).
-	require_once NEXIFYMY_SECURITY_PATH . 'modules/graphql-security.php';
-	$GLOBALS['nexifymy_graphql_security'] = new NexifyMy_Security_GraphQL_Security();
-	$GLOBALS['nexifymy_graphql_security']->init();
+	if ( nexifymy_security_is_module_enabled( $settings, 'graphql_security_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/graphql-security.php';
+		$GLOBALS['nexifymy_graphql_security'] = new NexifyMy_Security_GraphQL_Security();
+		$GLOBALS['nexifymy_graphql_security']->init();
+	}
 
 	// Load WP-CLI Commands (DevOps integration).
 	if ( defined( 'WP_CLI' ) && WP_CLI ) {
