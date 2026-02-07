@@ -350,15 +350,15 @@ class NexifyMy_Security_Settings {
 			'nl_NL'        => 'Nederlands (Dutch)',
 			'ru_RU'        => 'Russian',
 			'ja'           => 'Japanese',
-			'zh_CN'        => 'Chinese (Simplified)',
+			'zh_Hans'      => 'Chinese (Simplified)',
 			'ar'           => 'Arabic',
 			'hi_IN'        => 'Hindi',
 			'ko_KR'        => 'Korean',
-			'tr_TR'        => 'Turkish',
+			'tr'           => 'Turkish',
 			'pl_PL'        => 'Polski (Polish)',
 			'id_ID'        => 'Bahasa Indonesia (Indonesian)',
-			'uk'           => 'Ukrainian',
-			'vi'           => 'Vietnamese',
+			'uk_UA'        => 'Ukrainian',
+			'vi_VN'        => 'Vietnamese',
 			'th'           => 'Thai',
 			'sv_SE'        => 'Svenska (Swedish)',
 			'da_DK'        => 'Dansk (Danish)',
@@ -506,6 +506,15 @@ class NexifyMy_Security_Settings {
 		// General Settings.
 		if ( isset( $input['general'] ) ) {
 			$language = sanitize_text_field( $input['general']['language'] ?? 'site_default' );
+			$legacy_locale_map = array(
+				'tr_TR' => 'tr',
+				'uk'    => 'uk_UA',
+				'vi'    => 'vi_VN',
+				'zh_CN' => 'zh_Hans',
+			);
+			if ( isset( $legacy_locale_map[ $language ] ) ) {
+				$language = $legacy_locale_map[ $language ];
+			}
 			$allowed_languages = array_keys( self::get_available_languages() );
 			if ( ! in_array( $language, $allowed_languages, true ) ) {
 				$language = 'site_default';

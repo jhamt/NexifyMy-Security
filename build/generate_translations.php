@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Batch Translation Generator
  * Generates PO files for all supported languages and compiles them to MO.
@@ -14,15 +14,15 @@ $languages = array(
     'nl_NL' => 'Dutch',
     'ru_RU' => 'Russian',
     'ja'    => 'Japanese',
-    'zh_CN' => 'Chinese (Simplified)',
+    'zh_Hans' => 'Chinese (Simplified)',
     'ar'    => 'Arabic',
     'hi_IN' => 'Hindi',
     'ko_KR' => 'Korean',
-    'tr_TR' => 'Turkish',
+    'tr'    => 'Turkish',
     'pl_PL' => 'Polish',
     'id_ID' => 'Indonesian',
-    'uk'    => 'Ukrainian',
-    'vi'    => 'Vietnamese',
+    'uk_UA' => 'Ukrainian',
+    'vi_VN' => 'Vietnamese',
     'th'    => 'Thai',
     'sv_SE' => 'Swedish',
     'da_DK' => 'Danish',
@@ -43,34 +43,34 @@ $languages = array(
 // Dictionary of key UI terms
 $dictionary = array(
     'General Settings' => array(
-        'es_ES' => 'Configuración General', 'fr_FR' => 'Réglages Généraux', 'de_DE' => 'Allgemeine Einstellungen', 'it_IT' => 'Impostazioni Generali', 'pt_BR' => 'Configurações Gerais',
-        'nl_NL' => 'Algemene Instellingen', 'ru_RU' => 'Общие Настройки', 'ja' => '一般設定', 'zh_CN' => '常规设置', 'ar' => 'الإعدادات العامة',
-        'hi_IN' => 'सामान्य सेटिंग्स', 'ko_KR' => '일반 설정', 'tr_TR' => 'Genel Ayarlar', 'pl_PL' => 'Ustawienia Ogólne', 'id_ID' => 'Pengaturan Umum',
-        'uk' => 'Загальні налаштування', 'vi' => 'Cài đặt chung', 'th' => 'การตั้งค่าทั่วไป', 'sv_SE' => 'Allmänna Inställningar', 'da_DK' => 'Generelle Indstillinger',
+        'es_ES' => 'ConfiguraciÃ³n General', 'fr_FR' => 'RÃ©glages GÃ©nÃ©raux', 'de_DE' => 'Allgemeine Einstellungen', 'it_IT' => 'Impostazioni Generali', 'pt_BR' => 'ConfiguraÃ§Ãµes Gerais',
+        'nl_NL' => 'Algemene Instellingen', 'ru_RU' => 'ÐžÐ±Ñ‰Ð¸Ðµ ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸', 'ja' => 'ä¸€èˆ¬è¨­å®š', 'zh_Hans' => 'å¸¸è§„è®¾ç½®', 'ar' => 'Ø§Ù„Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ø¹Ø§Ù…Ø©',
+        'hi_IN' => 'à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸', 'ko_KR' => 'ì¼ë°˜ ì„¤ì •', 'tr' => 'Genel Ayarlar', 'pl_PL' => 'Ustawienia OgÃ³lne', 'id_ID' => 'Pengaturan Umum',
+        'uk_UA' => 'Ð—Ð°Ð³Ð°Ð»ÑŒÐ½Ñ– Ð½Ð°Ð»Ð°ÑˆÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ', 'vi_VN' => 'CÃ i Ä‘áº·t chung', 'th' => 'à¸à¸²à¸£à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸²à¸—à¸±à¹ˆà¸§à¹„à¸›', 'sv_SE' => 'AllmÃ¤nna InstÃ¤llningar', 'da_DK' => 'Generelle Indstillinger',
     ),
     'Save Settings' => array(
-        'es_ES' => 'Guardar Configuración', 'fr_FR' => 'Enregistrer', 'de_DE' => 'Einstellungen Speichern', 'it_IT' => 'Salva Impostazioni', 'pt_BR' => 'Salvar Configurações',
-        'nl_NL' => 'Instellingen Opslaan', 'ru_RU' => 'Сохранить Настройки', 'ja' => '設定を保存', 'zh_CN' => '保存设置', 'ar' => 'حفظ الإعدادات',
-        'hi_IN' => 'सेटिंग्स सहेजें', 'ko_KR' => '설정 저장', 'tr_TR' => 'Ayarları Kaydet', 'pl_PL' => 'Zapisz Ustawienia', 'id_ID' => 'Simpan Pengaturan',
-        'uk' => 'Зберегти налаштування', 'vi' => 'Lưu cài đặt', 'th' => 'บันทึกการตั้งค่า', 'sv_SE' => 'Spara Inställningar', 'da_DK' => 'Gem Indstillinger',
+        'es_ES' => 'Guardar ConfiguraciÃ³n', 'fr_FR' => 'Enregistrer', 'de_DE' => 'Einstellungen Speichern', 'it_IT' => 'Salva Impostazioni', 'pt_BR' => 'Salvar ConfiguraÃ§Ãµes',
+        'nl_NL' => 'Instellingen Opslaan', 'ru_RU' => 'Ð¡Ð¾Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÑŒ ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸', 'ja' => 'è¨­å®šã‚’ä¿å­˜', 'zh_Hans' => 'ä¿å­˜è®¾ç½®', 'ar' => 'Ø­ÙØ¸ Ø§Ù„Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª',
+        'hi_IN' => 'à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸ à¤¸à¤¹à¥‡à¤œà¥‡à¤‚', 'ko_KR' => 'ì„¤ì • ì €ìž¥', 'tr' => 'AyarlarÄ± Kaydet', 'pl_PL' => 'Zapisz Ustawienia', 'id_ID' => 'Simpan Pengaturan',
+        'uk_UA' => 'Ð—Ð±ÐµÑ€ÐµÐ³Ñ‚Ð¸ Ð½Ð°Ð»Ð°ÑˆÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ', 'vi_VN' => 'LÆ°u cÃ i Ä‘áº·t', 'th' => 'à¸šà¸±à¸™à¸—à¸¶à¸à¸à¸²à¸£à¸•à¸±à¹‰à¸‡à¸„à¹ˆà¸²', 'sv_SE' => 'Spara InstÃ¤llningar', 'da_DK' => 'Gem Indstillinger',
     ),
     'Plugin Language' => array(
         'es_ES' => 'Idioma del Plugin', 'fr_FR' => 'Langue du Plugin', 'de_DE' => 'Plugin-Sprache', 'it_IT' => 'Lingua del Plugin', 'pt_BR' => 'Idioma do Plugin',
-        'nl_NL' => 'Plugin Taal', 'ru_RU' => 'Язык Плагина', 'ja' => 'プラグイン言語', 'zh_CN' => '插件语言', 'ar' => 'لغة الإضافة',
-        'hi_IN' => 'प्लगइन भाषा', 'ko_KR' => '플러그인 언어', 'tr_TR' => 'Eklenti Dili', 'pl_PL' => 'Język Wtyczki', 'id_ID' => 'Bahasa Plugin',
-        'uk' => 'Мова плагіна', 'vi' => 'Ngôn ngữ Plugin', 'th' => 'ภาษาปลั๊กอิน', 'sv_SE' => 'Dinsticksprogram Språk', 'da_DK' => 'Plugin Sprog',
+        'nl_NL' => 'Plugin Taal', 'ru_RU' => 'Ð¯Ð·Ñ‹Ðº ÐŸÐ»Ð°Ð³Ð¸Ð½Ð°', 'ja' => 'ãƒ—ãƒ©ã‚°ã‚¤ãƒ³è¨€èªž', 'zh_Hans' => 'æ’ä»¶è¯­è¨€', 'ar' => 'Ù„ØºØ© Ø§Ù„Ø¥Ø¶Ø§ÙØ©',
+        'hi_IN' => 'à¤ªà¥à¤²à¤—à¤‡à¤¨ à¤­à¤¾à¤·à¤¾', 'ko_KR' => 'í”ŒëŸ¬ê·¸ì¸ ì–¸ì–´', 'tr' => 'Eklenti Dili', 'pl_PL' => 'JÄ™zyk Wtyczki', 'id_ID' => 'Bahasa Plugin',
+        'uk_UA' => 'ÐœÐ¾Ð²Ð° Ð¿Ð»Ð°Ð³Ñ–Ð½Ð°', 'vi_VN' => 'NgÃ´n ngá»¯ Plugin', 'th' => 'à¸ à¸²à¸©à¸²à¸›à¸¥à¸±à¹Šà¸à¸­à¸´à¸™', 'sv_SE' => 'Dinsticksprogram SprÃ¥k', 'da_DK' => 'Plugin Sprog',
     ),
     'Email Notifications' => array(
-        'es_ES' => 'Notificaciones por Email', 'fr_FR' => 'Notifications par Email', 'de_DE' => 'E-Mail-Benachrichtigungen', 'it_IT' => 'Notifiche Email', 'pt_BR' => 'Notificações por E-mail',
-        'nl_NL' => 'E-mail Meldingen', 'ru_RU' => 'Email Уведомления', 'ja' => 'メール通知', 'zh_CN' => '邮件通知', 'ar' => 'إشعارات البريد الإلكتروني',
-        'hi_IN' => 'ईमेल सूचनाएं', 'ko_KR' => '이메일 알림', 'tr_TR' => 'E-posta Bildirimleri', 'pl_PL' => 'Powiadomienia Email', 'id_ID' => 'Notifikasi Email',
-        'uk' => 'Email сповіщення', 'vi' => 'Thông báo qua Email', 'th' => 'การแจ้งเตือนอีเมล', 'sv_SE' => 'E-postaviseringar', 'da_DK' => 'E-mail Notifikationer',
+        'es_ES' => 'Notificaciones por Email', 'fr_FR' => 'Notifications par Email', 'de_DE' => 'E-Mail-Benachrichtigungen', 'it_IT' => 'Notifiche Email', 'pt_BR' => 'NotificaÃ§Ãµes por E-mail',
+        'nl_NL' => 'E-mail Meldingen', 'ru_RU' => 'Email Ð£Ð²ÐµÐ´Ð¾Ð¼Ð»ÐµÐ½Ð¸Ñ', 'ja' => 'ãƒ¡ãƒ¼ãƒ«é€šçŸ¥', 'zh_Hans' => 'é‚®ä»¶é€šçŸ¥', 'ar' => 'Ø¥Ø´Ø¹Ø§Ø±Ø§Øª Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ',
+        'hi_IN' => 'à¤ˆà¤®à¥‡à¤² à¤¸à¥‚à¤šà¤¨à¤¾à¤à¤‚', 'ko_KR' => 'ì´ë©”ì¼ ì•Œë¦¼', 'tr' => 'E-posta Bildirimleri', 'pl_PL' => 'Powiadomienia Email', 'id_ID' => 'Notifikasi Email',
+        'uk_UA' => 'Email ÑÐ¿Ð¾Ð²Ñ–Ñ‰ÐµÐ½Ð½Ñ', 'vi_VN' => 'ThÃ´ng bÃ¡o qua Email', 'th' => 'à¸à¸²à¸£à¹à¸ˆà¹‰à¸‡à¹€à¸•à¸·à¸­à¸™à¸­à¸µà¹€à¸¡à¸¥', 'sv_SE' => 'E-postaviseringar', 'da_DK' => 'E-mail Notifikationer',
     ),
     'Auto-Updates' => array(
-        'es_ES' => 'Actualizaciones Automáticas', 'fr_FR' => 'Mises à jour auto', 'de_DE' => 'Automatische Updates', 'it_IT' => 'Aggiornamenti Auto', 'pt_BR' => 'Atualizações Automáticas',
-        'nl_NL' => 'Automatische Updates', 'ru_RU' => 'Автообновления', 'ja' => '自動更新', 'zh_CN' => '自动更新', 'ar' => 'التحديثات التلقائية',
-        'hi_IN' => 'स्वचालित अपडेट', 'ko_KR' => '자동 업데이트', 'tr_TR' => 'Otomatik Güncellemeler', 'pl_PL' => 'Automatyczne Aktualizacje', 'id_ID' => 'Pembaruan Otomatis',
-        'uk' => 'Автооновлення', 'vi' => 'Cập nhật tự động', 'th' => 'อัปเดตอัตโนมัติ', 'sv_SE' => 'Automatiska Uppdateringar', 'da_DK' => 'Automatiske Opdateringer',
+        'es_ES' => 'Actualizaciones AutomÃ¡ticas', 'fr_FR' => 'Mises Ã  jour auto', 'de_DE' => 'Automatische Updates', 'it_IT' => 'Aggiornamenti Auto', 'pt_BR' => 'AtualizaÃ§Ãµes AutomÃ¡ticas',
+        'nl_NL' => 'Automatische Updates', 'ru_RU' => 'ÐÐ²Ñ‚Ð¾Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ', 'ja' => 'è‡ªå‹•æ›´æ–°', 'zh_Hans' => 'è‡ªåŠ¨æ›´æ–°', 'ar' => 'Ø§Ù„ØªØ­Ø¯ÙŠØ«Ø§Øª Ø§Ù„ØªÙ„Ù‚Ø§Ø¦ÙŠØ©',
+        'hi_IN' => 'à¤¸à¥à¤µà¤šà¤¾à¤²à¤¿à¤¤ à¤…à¤ªà¤¡à¥‡à¤Ÿ', 'ko_KR' => 'ìžë™ ì—…ë°ì´íŠ¸', 'tr' => 'Otomatik GÃ¼ncellemeler', 'pl_PL' => 'Automatyczne Aktualizacje', 'id_ID' => 'Pembaruan Otomatis',
+        'uk_UA' => 'ÐÐ²Ñ‚Ð¾Ð¾Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ñ', 'vi_VN' => 'Cáº­p nháº­t tá»± Ä‘á»™ng', 'th' => 'à¸­à¸±à¸›à¹€à¸”à¸•à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´', 'sv_SE' => 'Automatiska Uppdateringar', 'da_DK' => 'Automatiske Opdateringer',
     ),
 );
 
@@ -109,3 +109,4 @@ foreach ( $languages as $code => $name ) {
     echo "\n";
 }
 echo "All languages processed.\n";
+

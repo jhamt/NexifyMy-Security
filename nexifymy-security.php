@@ -251,6 +251,15 @@ function nexifymy_security_plugin_locale( $locale, $domain ) {
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		if ( ! empty( $settings['general']['language'] ) && 'site_default' !== $settings['general']['language'] ) {
 			$selected = sanitize_text_field( $settings['general']['language'] );
+			$legacy_locale_map = array(
+				'tr_TR' => 'tr',
+				'uk'    => 'uk_UA',
+				'vi'    => 'vi_VN',
+				'zh_CN' => 'zh_Hans',
+			);
+			if ( isset( $legacy_locale_map[ $selected ] ) ) {
+				$selected = $legacy_locale_map[ $selected ];
+			}
 			$mo_file  = NEXIFYMY_SECURITY_PATH . 'languages/nexifymy-security-' . $selected . '.mo';
 
 			if ( class_exists( 'NexifyMy_Security_Settings' ) ) {

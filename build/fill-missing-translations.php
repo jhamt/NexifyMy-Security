@@ -23,6 +23,11 @@ if ( empty( $po_files ) ) {
 $total_updated = 0;
 
 foreach ( $po_files as $po_file ) {
+	if ( ! is_writable( $po_file ) ) {
+		echo basename( $po_file ) . ": skipped (not writable)\n";
+		continue;
+	}
+
 	$lines = file( $po_file, FILE_IGNORE_NEW_LINES );
 	if ( false === $lines ) {
 		echo "Skipping unreadable file: {$po_file}\n";
@@ -53,11 +58,14 @@ foreach ( $po_files as $po_file ) {
 		}
 	}
 
-	file_put_contents( $po_file, implode( "\n", $lines ) . "\n" );
+	$write_result = file_put_contents( $po_file, implode( "\n", $lines ) . "\n" );
+	if ( false === $write_result ) {
+		echo basename( $po_file ) . ": write failed\n";
+		continue;
+	}
 	$total_updated += $updated;
 
 	echo basename( $po_file ) . ": filled {$updated} entries\n";
 }
 
 echo "Done. Total filled entries: {$total_updated}\n";
-
