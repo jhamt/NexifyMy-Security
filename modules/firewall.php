@@ -29,6 +29,25 @@ class NexifyMy_Security_Firewall {
 	private $enabled_rules = array();
 
 	/**
+	 * Identity-aware protected endpoints (Zero-Trust).
+	 * @var array
+	 */
+	private $identity_aware_endpoints = array(
+		'/wp-json/wp/v2/users',
+		'/wp-json/wp/v2/settings',
+		'/wp-json/wp/v2/plugins',
+		'/wp-json/wp/v2/themes',
+		'/wp-json/wp/v2/block-types',
+		'/wp-json/wp/v2/global-styles',
+	);
+
+	/**
+	 * Risk threshold for identity-aware blocking.
+	 * @var int
+	 */
+	const IDENTITY_RISK_THRESHOLD = 50;
+
+	/**
 	 * Initialize the firewall rules.
 	 * NOTE: run_firewall() is called directly from main plugin file for early execution.
 	 */
@@ -114,11 +133,19 @@ class NexifyMy_Security_Firewall {
 		// Apply settings (if present) and define rules.
 		$this->apply_settings();
 		$this->define_rules();
+		if ( function_exists( 'add_action' ) ) {
+			// Re-evaluate identity-aware access once WordPress auth context is available.
+			add_action( 'init', array( $this, 'apply_identity_aware_rules' ), 0 );
+		}
 
 		// Skip for whitelisted IPs (configurable in settings).
 		if ( $this->is_ip_whitelisted() ) {
 			return;
 		}
+
+		// Apply identity-aware rules (Zero-Trust) before URL allowlist checks.
+		// This ensures protected REST endpoints are still enforced.
+		$this->apply_identity_aware_rules();
 
 		// Skip for allowlisted URLs (admin AJAX, REST API, etc).
 		if ( $this->is_url_allowlisted() ) {
@@ -192,6 +219,88 @@ class NexifyMy_Security_Firewall {
 			'fi'     => ! isset( $waf['block_lfi'] ) || (bool) $waf['block_lfi'],
 			'bad_ua' => ! isset( $waf['block_bad_bots'] ) || (bool) $waf['block_bad_bots'],
 		);
+	}
+
+	/**
+	 * Apply identity-aware rules based on user risk scores (Zero-Trust).
+	 * Blocks non-admin users with high risk from sensitive endpoints.
+	 */
+	public function apply_identity_aware_rules() {
+		if ( ! function_exists( 'get_current_user_id' ) || ! function_exists( 'current_user_can' ) ) {
+			return;
+		}
+
+		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+
+		// Check if this is a protected endpoint.
+		$is_protected = false;
+		foreach ( $this->identity_aware_endpoints as $endpoint ) {
+			if ( strpos( $request_uri, $endpoint ) !== false ) {
+				$is_protected = true;
+				break;
+			}
+		}
+
+		if ( ! $is_protected ) {
+			return;
+		}
+
+		// Get current user.
+		$user_id = function_exists( 'get_current_user_id' ) ? get_current_user_id() : 0;
+
+		// Anonymous users on protected endpoints = high risk.
+		if ( ! $user_id ) {
+			// Allow reading users endpoint for login discovery (common).
+			if ( strpos( $request_uri, '/wp-json/wp/v2/users' ) !== false && isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'GET' ) {
+				return; // Allow GET for user enumeration protection elsewhere.
+			}
+			$this->block_request( 'Identity-Aware: Unauthenticated access to protected endpoint' );
+		}
+
+		// Skip admins.
+		if ( function_exists( 'current_user_can' ) && current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		// Get user risk score from AI threat detection.
+		$risk_score = $this->get_user_risk_score( $user_id );
+
+		// Block if risk score exceeds threshold.
+		if ( $risk_score >= self::IDENTITY_RISK_THRESHOLD ) {
+			if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+				NexifyMy_Security_Logger::log(
+					'identity_aware_block',
+					sprintf( 'Blocked high-risk user %d (score: %d) from %s', $user_id, $risk_score, $request_uri ),
+					'warning',
+					array(
+						'user_id'    => $user_id,
+						'risk_score' => $risk_score,
+						'endpoint'   => $request_uri,
+					)
+				);
+			}
+			$this->block_request( sprintf( 'Identity-Aware: High risk score (%d) for protected endpoint', $risk_score ) );
+		}
+	}
+
+	/**
+	 * Get user risk score from AI threat detection module.
+	 *
+	 * @param int $user_id User ID.
+	 * @return int Risk score (0-100).
+	 */
+	private function get_user_risk_score( $user_id ) {
+		$ai_module = null;
+		if ( isset( $GLOBALS['nexifymy_ai_detection'] ) ) {
+			$ai_module = $GLOBALS['nexifymy_ai_detection'];
+		} elseif ( isset( $GLOBALS['nexifymy_ai_threat'] ) ) {
+			$ai_module = $GLOBALS['nexifymy_ai_threat'];
+		}
+
+		if ( $ai_module && method_exists( $ai_module, 'get_user_last_risk_score' ) ) {
+			return (int) $ai_module->get_user_last_risk_score( $user_id );
+		}
+		return 0;
 	}
 
 	/**
