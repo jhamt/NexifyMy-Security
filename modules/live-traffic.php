@@ -166,6 +166,7 @@ class NexifyMy_Security_Live_Traffic {
 			'user_agent'     => substr( $user_agent, 0, 512 ),
 			'referrer'       => substr( $referrer, 0, 512 ),
 			'user_id'        => get_current_user_id(),
+			'country_code'   => $this->resolve_country_code( $ip ),
 			'request_time'   => current_time( 'mysql' ),
 		) );
 	}
@@ -183,8 +184,109 @@ class NexifyMy_Security_Live_Traffic {
 		$wpdb->insert(
 			$table_name,
 			$data,
-			array( '%s', '%s', '%s', '%s', '%s', '%d', '%s' )
+			array( '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s' )
 		);
+	}
+
+	/**
+	 * Resolve country code for a visitor IP.
+	 *
+	 * @param string $ip Client IP.
+	 * @return string
+	 */
+	private function resolve_country_code( $ip, $allow_remote_lookup = false ) {
+		// Prefer edge-provided country when available.
+		if ( ! empty( $_SERVER['HTTP_CF_IPCOUNTRY'] ) ) {
+			$country = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_IPCOUNTRY'] ) );
+			return $this->sanitize_country_code( $country );
+		}
+
+		// Reuse cached geo-blocking lookups when available (no network).
+		if ( class_exists( 'NexifyMy_Security_Geo_Blocking' ) ) {
+			$cache_key = NexifyMy_Security_Geo_Blocking::CACHE_PREFIX . md5( $ip );
+			$cached = get_transient( $cache_key );
+			if ( false !== $cached ) {
+				return $this->sanitize_country_code( $cached );
+			}
+		}
+
+		if ( ! $allow_remote_lookup ) {
+			return '';
+		}
+
+		// Reuse geo-blocking resolver for cached API lookups.
+		if ( isset( $GLOBALS['nexifymy_geo_blocking'] ) && method_exists( $GLOBALS['nexifymy_geo_blocking'], 'get_country' ) ) {
+			$country = $GLOBALS['nexifymy_geo_blocking']->get_country( $ip );
+			return $this->sanitize_country_code( $country );
+		}
+
+		return '';
+	}
+
+	/**
+	 * Normalize country code to ISO-2 format.
+	 *
+	 * @param string $country Country value.
+	 * @return string
+	 */
+	private function sanitize_country_code( $country ) {
+		$country = strtoupper( sanitize_text_field( (string) $country ) );
+		return preg_match( '/^[A-Z]{2}$/', $country ) ? $country : '';
+	}
+
+	/**
+	 * Backfill missing country codes for recent entries.
+	 *
+	 * @param int $days Number of days to look back.
+	 * @param int $batch Number of unique IPs to process.
+	 * @return int
+	 */
+	private function backfill_country_codes( $days = 30, $batch = 25 ) {
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TABLE_NAME;
+
+		$days = max( 1, absint( $days ) );
+		$batch = max( 1, absint( $batch ) );
+		$date_limit = gmdate( 'Y-m-d H:i:s', strtotime( "-$days days" ) );
+
+		$ips = $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT DISTINCT ip_address
+				FROM {$table_name}
+				WHERE request_time >= %s
+				AND (country_code = '' OR country_code IS NULL)
+				LIMIT %d",
+				$date_limit,
+				$batch
+			)
+		);
+
+		if ( empty( $ips ) || ! is_array( $ips ) ) {
+			return 0;
+		}
+
+		$updated_rows = 0;
+		foreach ( $ips as $ip ) {
+			$country_code = $this->resolve_country_code( $ip, true );
+			if ( empty( $country_code ) ) {
+				continue;
+			}
+
+			$updated_rows += (int) $wpdb->query(
+				$wpdb->prepare(
+					"UPDATE {$table_name}
+					SET country_code = %s
+					WHERE ip_address = %s
+					AND request_time >= %s
+					AND (country_code = '' OR country_code IS NULL)",
+					$country_code,
+					$ip,
+					$date_limit
+				)
+			);
+		}
+
+		return $updated_rows;
 	}
 
 	/**
@@ -514,19 +616,13 @@ class NexifyMy_Security_Live_Traffic {
 		}
 
 		$days = isset( $_POST['days'] ) ? absint( $_POST['days'] ) : 30;
+		$this->backfill_country_codes( $days, 25 );
 
 		$data = array(
 			'chart_data' => $this->get_chart_data( $days ),
-			'top_pages' => $this->get_top_pages( 10 ),
-			'top_referrers' => $this->get_top_referrers( 10 ),
-			'geo_distribution' => $this->get_geo_distribution( 10 ),
-		);
-
-		$data = array(
-			'chart_data' => $this->get_chart_data( $days ),
-			'top_pages' => $this->get_top_pages( 10 ),
-			'top_referrers' => $this->get_top_referrers( 10 ),
-			'geo_distribution' => $this->get_geo_distribution( 10 ),
+			'top_pages' => $this->get_top_pages( 10, $days ),
+			'top_referrers' => $this->get_top_referrers( 10, $days ),
+			'geo_distribution' => $this->get_geo_distribution( 10, $days ),
 			'browser_distribution' => $this->get_browser_distribution( $days ),
 			'os_distribution' => $this->get_os_distribution( $days ),
 			'device_distribution' => $this->get_device_distribution( $days ),
@@ -737,19 +833,21 @@ class NexifyMy_Security_Live_Traffic {
 	 * @param int $limit Number of results.
 	 * @return array
 	 */
-	private function get_top_pages( $limit = 10 ) {
+	private function get_top_pages( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		$days = max( 1, absint( $days ) );
 
 		$results = $wpdb->get_results( $wpdb->prepare(
 			"SELECT request_uri as url, COUNT(*) as count
 			FROM {$table_name}
-			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY)
 			AND request_uri NOT LIKE '%%/wp-admin%%'
 			AND request_uri NOT LIKE '%%/wp-json%%'
 			GROUP BY request_uri
 			ORDER BY count DESC
 			LIMIT %d",
+			$days,
 			$limit
 		), ARRAY_A );
 
@@ -762,9 +860,10 @@ class NexifyMy_Security_Live_Traffic {
 	 * @param int $limit Number of results.
 	 * @return array
 	 */
-	private function get_top_referrers( $limit = 10 ) {
+	private function get_top_referrers( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		$days = max( 1, absint( $days ) );
 
 		$results = $wpdb->get_results( $wpdb->prepare(
 			"SELECT
@@ -774,10 +873,11 @@ class NexifyMy_Security_Live_Traffic {
 				END as referrer,
 				COUNT(*) as count
 			FROM {$table_name}
-			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY)
 			GROUP BY referrer
 			ORDER BY count DESC
 			LIMIT %d",
+			$days,
 			$limit
 		), ARRAY_A );
 
@@ -790,9 +890,10 @@ class NexifyMy_Security_Live_Traffic {
 	 * @param int $limit Number of results.
 	 * @return array
 	 */
-	private function get_geo_distribution( $limit = 10 ) {
+	private function get_geo_distribution( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		$days = max( 1, absint( $days ) );
 
 		$results = $wpdb->get_results( $wpdb->prepare(
 			"SELECT
@@ -802,12 +903,17 @@ class NexifyMy_Security_Live_Traffic {
 				END as country_code,
 				COUNT(*) as count
 			FROM {$table_name}
-			WHERE request_time >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY)
 			GROUP BY country_code
 			ORDER BY count DESC
 			LIMIT %d",
+			$days,
 			$limit
 		), ARRAY_A );
+
+		if ( empty( $results ) || ! is_array( $results ) ) {
+			return array();
+		}
 
 		// Add country names
 		$country_names = $this->get_country_names();
@@ -815,7 +921,7 @@ class NexifyMy_Security_Live_Traffic {
 			$row['country_name'] = isset( $country_names[ $row['country_code'] ] ) ? $country_names[ $row['country_code'] ] : $row['country_code'];
 		}
 
-		return $results ? $results : array();
+		return $results;
 	}
 
 	/**
@@ -824,6 +930,12 @@ class NexifyMy_Security_Live_Traffic {
 	 * @return array
 	 */
 	private function get_country_names() {
+		if ( class_exists( 'NexifyMy_Security_Geo_Blocking' ) && method_exists( 'NexifyMy_Security_Geo_Blocking', 'get_country_list' ) ) {
+			$full_list = NexifyMy_Security_Geo_Blocking::get_country_list();
+			$full_list['Unknown'] = 'Unknown';
+			return $full_list;
+		}
+
 		return array(
 			'US' => 'United States',
 			'GB' => 'United Kingdom',
