@@ -26,6 +26,16 @@ class NexifyMy_Security_AI_Threat_Detection {
 	private $behavior_table;
 
 	/**
+	 * Table name for user behavioral profiles (Zero-Trust).
+	 */
+	private $user_profiles_table;
+
+	/**
+	 * Session risk threshold for forced re-authentication.
+	 */
+	const SESSION_RISK_THRESHOLD = 60;
+
+	/**
 	 * Default settings.
 	 */
 	private static $defaults = array(
@@ -39,6 +49,7 @@ class NexifyMy_Security_AI_Threat_Detection {
 		'track_user_agents'      => true,
 		'track_geo_patterns'     => true,
 		'notify_on_anomaly'      => true,
+		'session_risk_threshold' => 60,      // Force re-auth if risk > this.
 	);
 
 	/**
@@ -55,6 +66,11 @@ class NexifyMy_Security_AI_Threat_Detection {
 		'bot_signature'          => 25,
 		'credential_stuffing'    => 30,
 		'enumeration_attempt'    => 20,
+		'unknown_ip_for_user'    => 25,
+		'unusual_time_for_user'  => 15,
+		'unknown_device'         => 20,
+		'passkey_failure'        => 15,
+		'passkey_success_bonus'  => -20,  // Reduces risk score.
 	);
 
 	/**
@@ -63,6 +79,7 @@ class NexifyMy_Security_AI_Threat_Detection {
 	public function init() {
 		global $wpdb;
 		$this->behavior_table = $wpdb->prefix . 'nexifymy_behavior_log';
+		$this->user_profiles_table = $wpdb->prefix . 'sentinel_user_profiles';
 
 		$settings = $this->get_settings();
 
@@ -92,6 +109,9 @@ class NexifyMy_Security_AI_Threat_Detection {
 		add_action( 'wp_ajax_nexifymy_get_ai_threats', array( $this, 'ajax_get_threats' ) );
 		add_action( 'wp_ajax_nexifymy_get_ai_status', array( $this, 'ajax_get_status' ) );
 		add_action( 'wp_ajax_nexifymy_reset_ai_learning', array( $this, 'ajax_reset_learning' ) );
+
+		// Risk-based session control (Zero-Trust).
+		add_action( 'admin_init', array( $this, 'monitor_session_risk' ) );
 	}
 
 	/**
@@ -124,6 +144,7 @@ class NexifyMy_Security_AI_Threat_Detection {
 
 		$charset_collate = $wpdb->get_charset_collate();
 
+		// Behavior log table.
 		$sql = "CREATE TABLE IF NOT EXISTS {$this->behavior_table} (
 			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 			ip_address VARCHAR(45) NOT NULL,
@@ -150,6 +171,29 @@ class NexifyMy_Security_AI_Threat_Detection {
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		dbDelta( $sql );
+
+		// User behavioral profiles table (Zero-Trust).
+		$sql_profiles = "CREATE TABLE IF NOT EXISTS {$this->user_profiles_table} (
+			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			user_id BIGINT(20) UNSIGNED NOT NULL,
+			known_ips TEXT DEFAULT NULL,
+			work_hours TEXT DEFAULT NULL,
+			device_fingerprints TEXT DEFAULT NULL,
+			typical_countries TEXT DEFAULT NULL,
+			last_passkey_success DATETIME DEFAULT NULL,
+			last_passkey_failure DATETIME DEFAULT NULL,
+			passkey_failure_count INT(11) DEFAULT 0,
+			avg_session_duration INT(11) DEFAULT 0,
+			total_logins INT(11) DEFAULT 0,
+			last_risk_score TINYINT(3) DEFAULT 0,
+			created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+			updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+			PRIMARY KEY (id),
+			UNIQUE KEY user_id (user_id),
+			KEY last_risk_score (last_risk_score)
+		) $charset_collate;";
+
+		dbDelta( $sql_profiles );
 	}
 
 	/**
@@ -566,21 +610,50 @@ class NexifyMy_Security_AI_Threat_Detection {
 	public function record_successful_login( $user_login, $user ) {
 		global $wpdb;
 
+		$ip = $this->get_client_ip();
+		$user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '';
+		$country = $this->get_country_code( $ip );
+
+		// Calculate user-specific risk score BEFORE updating profile.
+		$risk_analysis = $this->calculate_user_risk_score( $user->ID, $ip, $user_agent, $country );
+
+		// Record in behavior log.
 		$wpdb->insert(
 			$this->behavior_table,
 			array(
-				'ip_address'      => $this->get_client_ip(),
+				'ip_address'      => $ip,
 				'user_id'         => $user->ID,
 				'request_uri'     => '/wp-login.php',
 				'request_method'  => 'POST',
-				'user_agent'      => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
+				'user_agent'      => $user_agent,
+				'country_code'    => $country,
 				'hour_of_day'     => (int) current_time( 'G' ),
 				'day_of_week'     => (int) current_time( 'w' ),
 				'is_login_attempt'=> 1,
 				'is_successful'   => 1,
+				'threat_score'    => $risk_analysis['score'],
+				'anomalies'       => wp_json_encode( $risk_analysis['factors'] ),
 			),
-			array( '%s', '%d', '%s', '%s', '%s', '%d', '%d', '%d', '%d' )
+			array( '%s', '%d', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%d', '%s' )
 		);
+
+		// Update user profile with this login (learn from successful logins).
+		$this->update_user_profile( $user->ID, $ip, $user_agent, $country );
+
+		$settings = $this->get_settings();
+		$threshold = isset( $settings['session_risk_threshold'] ) ? absint( $settings['session_risk_threshold'] ) : self::SESSION_RISK_THRESHOLD;
+		$forced_reauth = isset( $_REQUEST['nexifymy_risk'] ) && '1' === sanitize_text_field( wp_unslash( $_REQUEST['nexifymy_risk'] ) );
+
+		// Mark as verified after explicit re-auth flow to prevent redirect loops.
+		if ( $forced_reauth ) {
+			$this->mark_session_verified( $user->ID );
+			return;
+		}
+
+		// Mark session as verified if risk is acceptable.
+		if ( $risk_analysis['score'] < $threshold ) {
+			$this->mark_session_verified( $user->ID );
+		}
 	}
 
 	/**
@@ -878,5 +951,373 @@ class NexifyMy_Security_AI_Threat_Detection {
 		$wpdb->query( "TRUNCATE TABLE {$this->behavior_table}" );
 
 		wp_send_json_success( array( 'message' => 'AI learning reset successfully.' ) );
+	}
+
+	/*
+	 * =========================================================================
+	 * USER-SPECIFIC BEHAVIORAL PROFILING (ZERO-TRUST)
+	 * =========================================================================
+	 */
+
+	/**
+	 * Get user behavioral profile.
+	 *
+	 * @param int $user_id User ID.
+	 * @return array|null Profile data or null if not found.
+	 */
+	public function get_user_profile( $user_id ) {
+		global $wpdb;
+
+		$profile = $wpdb->get_row( $wpdb->prepare(
+			"SELECT * FROM {$this->user_profiles_table} WHERE user_id = %d",
+			$user_id
+		), ARRAY_A );
+
+		if ( $profile ) {
+			$profile['known_ips'] = json_decode( $profile['known_ips'], true ) ?: array();
+			$profile['work_hours'] = json_decode( $profile['work_hours'], true ) ?: array();
+			$profile['device_fingerprints'] = json_decode( $profile['device_fingerprints'], true ) ?: array();
+			$profile['typical_countries'] = json_decode( $profile['typical_countries'], true ) ?: array();
+		}
+
+		return $profile;
+	}
+
+	/**
+	 * Update user behavioral profile after successful login.
+	 *
+	 * @param int    $user_id User ID.
+	 * @param string $ip IP address.
+	 * @param string $user_agent User agent string.
+	 * @param string $country Country code.
+	 */
+	public function update_user_profile( $user_id, $ip, $user_agent, $country = '' ) {
+		global $wpdb;
+
+		$profile = $this->get_user_profile( $user_id );
+		$current_hour = (int) current_time( 'G' );
+		$fingerprint = $this->generate_device_fingerprint( $user_agent );
+
+		if ( ! $profile ) {
+			// Create new profile.
+			$wpdb->insert(
+				$this->user_profiles_table,
+				array(
+					'user_id'             => $user_id,
+					'known_ips'           => wp_json_encode( array( $ip => 1 ) ),
+					'work_hours'          => wp_json_encode( array( $current_hour => 1 ) ),
+					'device_fingerprints' => wp_json_encode( array( $fingerprint => 1 ) ),
+					'typical_countries'   => $country ? wp_json_encode( array( $country => 1 ) ) : '[]',
+					'total_logins'        => 1,
+				),
+				array( '%d', '%s', '%s', '%s', '%s', '%d' )
+			);
+		} else {
+			// Update existing profile.
+			$known_ips = $profile['known_ips'];
+			$known_ips[ $ip ] = ( $known_ips[ $ip ] ?? 0 ) + 1;
+			// Keep only top 20 IPs.
+			arsort( $known_ips );
+			$known_ips = array_slice( $known_ips, 0, 20, true );
+
+			$work_hours = $profile['work_hours'];
+			$work_hours[ $current_hour ] = ( $work_hours[ $current_hour ] ?? 0 ) + 1;
+
+			$fingerprints = $profile['device_fingerprints'];
+			$fingerprints[ $fingerprint ] = ( $fingerprints[ $fingerprint ] ?? 0 ) + 1;
+			arsort( $fingerprints );
+			$fingerprints = array_slice( $fingerprints, 0, 10, true );
+
+			$countries = $profile['typical_countries'];
+			if ( $country ) {
+				$countries[ $country ] = ( $countries[ $country ] ?? 0 ) + 1;
+			}
+
+			$wpdb->update(
+				$this->user_profiles_table,
+				array(
+					'known_ips'           => wp_json_encode( $known_ips ),
+					'work_hours'          => wp_json_encode( $work_hours ),
+					'device_fingerprints' => wp_json_encode( $fingerprints ),
+					'typical_countries'   => wp_json_encode( $countries ),
+					'total_logins'        => $profile['total_logins'] + 1,
+				),
+				array( 'user_id' => $user_id ),
+				array( '%s', '%s', '%s', '%s', '%d' ),
+				array( '%d' )
+			);
+		}
+	}
+
+	/**
+	 * Calculate user-specific risk score for login.
+	 *
+	 * @param int    $user_id User ID.
+	 * @param string $ip IP address.
+	 * @param string $user_agent User agent string.
+	 * @param string $country Country code.
+	 * @return array Risk analysis with score and factors.
+	 */
+	public function calculate_user_risk_score( $user_id, $ip, $user_agent, $country = '' ) {
+		$profile = $this->get_user_profile( $user_id );
+		$score = 0;
+		$factors = array();
+		$current_hour = (int) current_time( 'G' );
+		$fingerprint = $this->generate_device_fingerprint( $user_agent );
+
+		// No profile = new user, minimal risk adjustment.
+		if ( ! $profile || $profile['total_logins'] < 3 ) {
+			return array(
+				'score'   => 0,
+				'factors' => array( 'new_user_profile' ),
+				'risk_level' => 'minimal',
+			);
+		}
+
+		// 1. Check if IP is known for this user.
+		if ( ! isset( $profile['known_ips'][ $ip ] ) ) {
+			$score += $this->weights['unknown_ip_for_user'];
+			$factors[] = 'unknown_ip_for_user';
+		}
+
+		// 2. Check if current hour is typical for this user.
+		$total_hour_logins = array_sum( $profile['work_hours'] );
+		$hour_frequency = ( $profile['work_hours'][ $current_hour ] ?? 0 ) / max( 1, $total_hour_logins );
+		if ( $hour_frequency < 0.05 ) { // Less than 5% of logins at this hour.
+			$score += $this->weights['unusual_time_for_user'];
+			$factors[] = 'unusual_time_for_user';
+		}
+
+		// 3. Check device fingerprint.
+		if ( ! isset( $profile['device_fingerprints'][ $fingerprint ] ) ) {
+			$score += $this->weights['unknown_device'];
+			$factors[] = 'unknown_device';
+		}
+
+		// 4. Apply passkey bonus/penalty.
+		if ( $profile['last_passkey_success'] && strtotime( $profile['last_passkey_success'] ) > strtotime( '-30 minutes' ) ) {
+			$score += $this->weights['passkey_success_bonus']; // Negative = reduces score.
+			$factors[] = 'recent_passkey_success';
+		}
+		if ( $profile['passkey_failure_count'] > 3 ) {
+			$score += $this->weights['passkey_failure'] * min( 3, $profile['passkey_failure_count'] - 3 );
+			$factors[] = 'multiple_passkey_failures';
+		}
+
+		// Cap score at 100, floor at 0.
+		$score = max( 0, min( 100, $score ) );
+
+		// Store last risk score.
+		global $wpdb;
+		$wpdb->update(
+			$this->user_profiles_table,
+			array( 'last_risk_score' => $score ),
+			array( 'user_id' => $user_id ),
+			array( '%d' ),
+			array( '%d' )
+		);
+
+		return array(
+			'score'      => $score,
+			'factors'    => $factors,
+			'risk_level' => $this->score_to_risk_level( $score ),
+		);
+	}
+
+	/**
+	 * Get user's last calculated risk score.
+	 *
+	 * @param int $user_id User ID.
+	 * @return int Risk score (0-100).
+	 */
+	public function get_user_last_risk_score( $user_id ) {
+		$profile = $this->get_user_profile( $user_id );
+		return $profile ? (int) $profile['last_risk_score'] : 0;
+	}
+
+	/**
+	 * Generate device fingerprint from user agent.
+	 *
+	 * @param string $user_agent User agent string.
+	 * @return string Device fingerprint hash.
+	 */
+	private function generate_device_fingerprint( $user_agent ) {
+		// Extract key identifiers from user agent.
+		$ua = strtolower( $user_agent );
+		$parts = array();
+
+		// Browser family.
+		if ( strpos( $ua, 'firefox' ) !== false ) {
+			$parts[] = 'firefox';
+		} elseif ( strpos( $ua, 'edg' ) !== false ) {
+			$parts[] = 'edge';
+		} elseif ( strpos( $ua, 'chrome' ) !== false ) {
+			$parts[] = 'chrome';
+		} elseif ( strpos( $ua, 'safari' ) !== false ) {
+			$parts[] = 'safari';
+		} else {
+			$parts[] = 'other';
+		}
+
+		// OS family.
+		if ( strpos( $ua, 'windows' ) !== false ) {
+			$parts[] = 'windows';
+		} elseif ( strpos( $ua, 'mac' ) !== false ) {
+			$parts[] = 'mac';
+		} elseif ( strpos( $ua, 'linux' ) !== false ) {
+			$parts[] = 'linux';
+		} elseif ( strpos( $ua, 'android' ) !== false ) {
+			$parts[] = 'android';
+		} elseif ( strpos( $ua, 'iphone' ) !== false || strpos( $ua, 'ipad' ) !== false ) {
+			$parts[] = 'ios';
+		} else {
+			$parts[] = 'unknown';
+		}
+
+		return md5( implode( '|', $parts ) );
+	}
+
+	/*
+	 * =========================================================================
+	 * PASSKEY INTEGRATION
+	 * =========================================================================
+	 */
+
+	/**
+	 * Record passkey authentication event.
+	 *
+	 * @param string $event 'success' or 'failure'.
+	 * @param int    $user_id User ID.
+	 */
+	public function record_passkey_event( $event, $user_id ) {
+		global $wpdb;
+
+		$profile = $this->get_user_profile( $user_id );
+
+		if ( ! $profile ) {
+			// Create minimal profile.
+			$wpdb->insert(
+				$this->user_profiles_table,
+				array(
+					'user_id'              => $user_id,
+					'last_passkey_success' => $event === 'success' ? current_time( 'mysql' ) : null,
+					'last_passkey_failure' => $event === 'failure' ? current_time( 'mysql' ) : null,
+					'passkey_failure_count'=> $event === 'failure' ? 1 : 0,
+				),
+				array( '%d', '%s', '%s', '%d' )
+			);
+			return;
+		}
+
+		if ( $event === 'success' ) {
+			$wpdb->update(
+				$this->user_profiles_table,
+				array(
+					'last_passkey_success'  => current_time( 'mysql' ),
+					'passkey_failure_count' => 0, // Reset failures on success.
+				),
+				array( 'user_id' => $user_id ),
+				array( '%s', '%d' ),
+				array( '%d' )
+			);
+		} else {
+			$wpdb->update(
+				$this->user_profiles_table,
+				array(
+					'last_passkey_failure'  => current_time( 'mysql' ),
+					'passkey_failure_count' => $profile['passkey_failure_count'] + 1,
+				),
+				array( 'user_id' => $user_id ),
+				array( '%s', '%d' ),
+				array( '%d' )
+			);
+		}
+
+		// Log the event.
+		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+			NexifyMy_Security_Logger::log(
+				'passkey_' . $event,
+				sprintf( 'Passkey %s for user ID %d', $event, $user_id ),
+				$event === 'failure' ? 'warning' : 'info'
+			);
+		}
+	}
+
+	/*
+	 * =========================================================================
+	 * RISK-BASED SESSION CONTROL
+	 * =========================================================================
+	 */
+
+	/**
+	 * Monitor session risk and force re-auth if needed.
+	 */
+	public function monitor_session_risk() {
+		if ( ! is_user_logged_in() ) {
+			return;
+		}
+
+		$user_id = get_current_user_id();
+		$settings = $this->get_settings();
+		$threshold = isset( $settings['session_risk_threshold'] ) ? absint( $settings['session_risk_threshold'] ) : self::SESSION_RISK_THRESHOLD;
+		$threshold = max( 1, min( 100, $threshold ) );
+
+		// Get last risk score.
+		$risk_score = $this->get_user_last_risk_score( $user_id );
+
+		// Check if user has already re-authenticated this session.
+		$reauth_token = get_user_meta( $user_id, '_nexifymy_reauth_token', true );
+		$session_token = wp_get_session_token();
+
+		if ( $reauth_token === $session_token ) {
+			return; // Already re-authenticated for this session.
+		}
+
+		// Force re-auth if risk is high.
+		if ( $risk_score >= $threshold ) {
+			$this->force_reauth( $user_id, $risk_score );
+		}
+	}
+
+	/**
+	 * Force user to re-authenticate.
+	 *
+	 * @param int $user_id User ID.
+	 * @param int $risk_score Current risk score.
+	 */
+	private function force_reauth( $user_id, $risk_score ) {
+		// Skip for AJAX requests.
+		if ( wp_doing_ajax() ) {
+			return;
+		}
+
+		// Log the forced re-auth.
+		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+			NexifyMy_Security_Logger::log(
+				'forced_reauth',
+				sprintf( 'Forced re-authentication for user %d (risk score: %d)', $user_id, $risk_score ),
+				'warning'
+			);
+		}
+
+		// Redirect to login with reauth flag.
+		$redirect_to = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : admin_url();
+
+		wp_redirect( add_query_arg( array(
+			'reauth'       => '1',
+			'nexifymy_risk'=> '1',
+			'redirect_to'  => urlencode( $redirect_to ),
+		), wp_login_url() ) );
+		exit;
+	}
+
+	/**
+	 * Mark session as verified after successful re-auth.
+	 *
+	 * @param int $user_id User ID.
+	 */
+	public function mark_session_verified( $user_id ) {
+		$session_token = wp_get_session_token();
+		update_user_meta( $user_id, '_nexifymy_reauth_token', $session_token );
 	}
 }
