@@ -288,6 +288,8 @@ class NexifyMy_Security_Admin {
 		$module_aliases = array(
 			'2fa'             => 'two_factor',
 			'password_policy' => 'password',
+			'vulnerabilities' => 'vulnerability_scanner',
+			'audit_log'       => 'activity_log',
 		);
 		if ( isset( $module_aliases[ $module ] ) ) {
 			$module = $module_aliases[ $module ];
@@ -299,7 +301,7 @@ class NexifyMy_Security_Admin {
 			$settings['modules'] = array();
 		}
 
-		$settings['modules'][ $module . '_enabled' ] = $enabled;
+		$settings['modules'][ $module . '_enabled' ] = (bool) $enabled;
 		// Use autoload=false for security (like Sucuri/WP Defender)
 		update_option( 'nexifymy_security_settings', $settings, false );
 
@@ -327,6 +329,103 @@ class NexifyMy_Security_Admin {
 		}
 
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+			$settings['modules'] = array();
+		}
+
+		// Scanner settings require module-aware mapping (scanner + background scan + quarantine mode).
+		if ( 'scanner' === $module ) {
+			$current_scanner = isset( $settings['scanner'] ) && is_array( $settings['scanner'] ) ? $settings['scanner'] : array();
+			$current_bg = isset( $settings['background_scan'] ) && is_array( $settings['background_scan'] ) ? $settings['background_scan'] : array();
+
+			$default_mode = sanitize_key( $module_settings['default_mode'] ?? ( $current_scanner['default_mode'] ?? 'standard' ) );
+			if ( ! in_array( $default_mode, array( 'quick', 'standard', 'deep' ), true ) ) {
+				$default_mode = 'standard';
+			}
+
+			$quarantine_mode = sanitize_key( $module_settings['quarantine_mode'] ?? ( $current_scanner['quarantine_mode'] ?? 'manual' ) );
+			if ( ! in_array( $quarantine_mode, array( 'manual', 'auto' ), true ) ) {
+				$quarantine_mode = 'manual';
+			}
+
+			$excluded_paths_raw = (string) ( $module_settings['excluded_paths'] ?? ( is_array( $current_scanner['excluded_paths'] ?? null ) ? implode( "\n", $current_scanner['excluded_paths'] ) : ( $current_scanner['excluded_paths'] ?? '' ) ) );
+			$excluded_extensions_raw = (string) ( $module_settings['excluded_extensions'] ?? ( is_array( $current_scanner['excluded_extensions'] ?? null ) ? implode( ',', $current_scanner['excluded_extensions'] ) : ( $current_scanner['excluded_extensions'] ?? '' ) ) );
+			$excluded_paths = preg_split( '/[\r\n,]+/', $excluded_paths_raw );
+			$excluded_extensions = preg_split( '/[\r\n,]+/', $excluded_extensions_raw );
+			$excluded_paths = array_values( array_filter( array_map( 'sanitize_text_field', array_map( 'trim', (array) $excluded_paths ) ) ) );
+			$excluded_extensions = array_values( array_filter( array_map( 'sanitize_text_field', array_map( 'trim', (array) $excluded_extensions ) ) ) );
+
+			$settings['scanner'] = wp_parse_args(
+				array(
+					'default_mode'            => $default_mode,
+					'max_file_size_kb'        => max( 100, absint( $module_settings['max_file_size_kb'] ?? ( $current_scanner['max_file_size_kb'] ?? 2048 ) ) ),
+					'excluded_paths'          => $excluded_paths,
+					'excluded_extensions'     => $excluded_extensions,
+					'quarantine_mode'         => $quarantine_mode,
+					'auto_quarantine_enabled' => $quarantine_mode === 'auto',
+				),
+				$current_scanner
+			);
+
+			$settings['modules']['scanner_enabled'] = isset( $module_settings['enabled'] ) ? ! empty( $module_settings['enabled'] ) : ( $settings['modules']['scanner_enabled'] ?? true );
+
+			if ( isset( $module_settings['schedule'] ) ) {
+				$schedule = sanitize_key( $module_settings['schedule'] );
+				if ( ! in_array( $schedule, array( 'hourly', 'twicedaily', 'daily', 'weekly', 'disabled' ), true ) ) {
+					$schedule = $current_bg['schedule'] ?? 'daily';
+				}
+
+				$settings['background_scan'] = wp_parse_args(
+					array( 'schedule' => $schedule ),
+					$current_bg
+				);
+
+				update_option( 'nexifymy_scan_schedule', $schedule, false );
+
+				if ( class_exists( 'NexifyMy_Security_Background_Scanner' ) ) {
+					$bg_scanner = new NexifyMy_Security_Background_Scanner();
+					$bg_scanner->schedule_scan( $schedule );
+				}
+			}
+
+			if ( isset( $module_settings['background_enabled'] ) ) {
+				$settings['modules']['background_scan_enabled'] = ! empty( $module_settings['background_enabled'] );
+			}
+
+			update_option( 'nexifymy_security_settings', $settings, false );
+
+			wp_send_json_success( array(
+				'module' => $module,
+				'message' => __( 'Settings saved successfully', 'nexifymy-security' ),
+			) );
+		}
+
+		// Normalize rate limiter values to keys used by the runtime module.
+		if ( 'rate_limiter' === $module ) {
+			$max_attempts = absint( $module_settings['max_attempts'] ?? $module_settings['login_attempts'] ?? 5 );
+			$attempt_window_minutes = absint( $module_settings['attempt_window_minutes'] ?? $module_settings['login_window'] ?? 15 );
+			$lockout_duration = absint( $module_settings['lockout_duration'] ?? $module_settings['login_lockout'] ?? $module_settings['block_duration'] ?? 900 );
+
+			$settings['rate_limiter'] = wp_parse_args(
+				array(
+					'max_attempts'     => max( 1, $max_attempts ),
+					'attempt_window'   => max( 60, $attempt_window_minutes * 60 ),
+					'lockout_duration' => max( 60, $lockout_duration ),
+				),
+				isset( $settings['rate_limiter'] ) && is_array( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array()
+			);
+
+			if ( isset( $module_settings['enabled'] ) ) {
+				$settings['modules']['rate_limiter_enabled'] = ! empty( $module_settings['enabled'] );
+			}
+
+			update_option( 'nexifymy_security_settings', $settings, false );
+
+			wp_send_json_success( array(
+				'module' => $module,
+				'message' => __( 'Settings saved successfully', 'nexifymy-security' ),
+			) );
+		}
 		
 		// Sanitize based on module type
 		$sanitized = array();
@@ -342,7 +441,7 @@ class NexifyMy_Security_Admin {
 		}
 
 		$settings[ $module ] = $sanitized;
-		update_option( 'nexifymy_security_settings', $settings );
+		update_option( 'nexifymy_security_settings', $settings, false );
 
 		wp_send_json_success( array(
 			'module' => $module,
@@ -2037,7 +2136,7 @@ class NexifyMy_Security_Admin {
 			<hr class="wp-header-end">
 			<div class="nexifymy-header">
 				<h2><span class="dashicons dashicons-archive"></span> <?php _e( 'Quarantine', 'nexifymy-security' ); ?></h2>
-				<p class="description"><?php _e( 'Manage quarantined threats. Review, restore, or permanently delete files.', 'nexifymy-security' ); ?></p>
+				<p class="description"><?php _e( 'Manage quarantined threats and recoverable deleted files.', 'nexifymy-security' ); ?></p>
 			</div>
 
 			<div class="nexifymy-card nexifymy-card-full">
@@ -2065,6 +2164,29 @@ class NexifyMy_Security_Admin {
 				</div>
 			</div>
 
+			<div class="nexifymy-card nexifymy-card-full">
+				<div class="card-header">
+					<h2><?php _e( 'Deleted Files (Recoverable)', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="card-body">
+					<p class="description"><?php _e( 'Files moved here can be restored back to quarantine or deleted permanently.', 'nexifymy-security' ); ?></p>
+					
+					<table class="widefat striped" id="deleted-quarantine-table">
+						<thead>
+							<tr>
+								<th><?php _e( 'Original Path', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Size', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Deleted', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
+							</tr>
+						</thead>
+						<tbody id="deleted-quarantine-tbody">
+							<tr><td colspan="4"><?php _e( 'Loading deleted files...', 'nexifymy-security' ); ?></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 			<div class="nexifymy-card">
 				<div class="card-header">
 					<h2><?php _e( 'About Quarantine', 'nexifymy-security' ); ?></h2>
@@ -2073,7 +2195,8 @@ class NexifyMy_Security_Admin {
 					<ul>
 						<li><strong><?php _e( 'Quarantine:', 'nexifymy-security' ); ?></strong> <?php _e( 'Moves suspicious files to a protected directory.', 'nexifymy-security' ); ?></li>
 						<li><strong><?php _e( 'Restore:', 'nexifymy-security' ); ?></strong> <?php _e( 'Returns the file to its original location.', 'nexifymy-security' ); ?></li>
-						<li><strong><?php _e( 'Delete:', 'nexifymy-security' ); ?></strong> <?php _e( 'Permanently removes the file.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Delete:', 'nexifymy-security' ); ?></strong> <?php _e( 'Moves quarantined files to recoverable deleted storage.', 'nexifymy-security' ); ?></li>
+						<li><strong><?php _e( 'Delete Permanently:', 'nexifymy-security' ); ?></strong> <?php _e( 'Permanently removes a file from deleted storage.', 'nexifymy-security' ); ?></li>
 					</ul>
 				</div>
 			</div>
@@ -5708,41 +5831,68 @@ class NexifyMy_Security_Admin {
 	 * Render quarantine content for tab panel.
 	 */
 	private function render_quarantine_content() {
-		$quarantine = get_option( 'nexifymy_quarantine', array() );
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		$scanner_settings = isset( $settings['scanner'] ) && is_array( $settings['scanner'] ) ? $settings['scanner'] : array();
+		$quarantine_mode = $scanner_settings['quarantine_mode'] ?? ( ! empty( $scanner_settings['auto_quarantine_enabled'] ) ? 'auto' : 'manual' );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
-				<h3><?php _e( 'Quarantined Files', 'nexifymy-security' ); ?></h3>
-				<span class="nms-badge nms-badge-warning"><?php echo count( $quarantine ); ?> <?php _e( 'files', 'nexifymy-security' ); ?></span>
+				<h3><?php _e( 'Quarantine Policy', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<?php if ( empty( $quarantine ) ) : ?>
-					<p style="text-align: center; color: var(--nms-gray-500);"><?php _e( 'No files in quarantine.', 'nexifymy-security' ); ?></p>
-				<?php else : ?>
-					<table class="widefat striped">
-						<thead>
-							<tr>
-								<th><?php _e( 'File', 'nexifymy-security' ); ?></th>
-								<th><?php _e( 'Threat', 'nexifymy-security' ); ?></th>
-								<th><?php _e( 'Date', 'nexifymy-security' ); ?></th>
-								<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ( $quarantine as $item ) : ?>
-							<tr>
-								<td><code><?php echo esc_html( basename( $item['file'] ?? '' ) ); ?></code></td>
-								<td><span class="nms-badge nms-badge-danger"><?php echo esc_html( $item['threat'] ?? 'Unknown' ); ?></span></td>
-								<td><?php echo esc_html( $item['date'] ?? '' ); ?></td>
-								<td>
-									<button class="nms-btn nms-btn-sm nms-btn-secondary restore-file" data-id="<?php echo esc_attr( $item['id'] ?? '' ); ?>"><?php _e( 'Restore', 'nexifymy-security' ); ?></button>
-									<button class="nms-btn nms-btn-sm nms-btn-danger delete-file" data-id="<?php echo esc_attr( $item['id'] ?? '' ); ?>"><?php _e( 'Delete', 'nexifymy-security' ); ?></button>
-								</td>
-							</tr>
-							<?php endforeach; ?>
-						</tbody>
-					</table>
-				<?php endif; ?>
+				<p class="description"><?php _e( 'Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware.', 'nexifymy-security' ); ?></p>
+				<div style="display: flex; gap: 12px; align-items: center;">
+					<select id="scanner-quarantine-mode" class="regular-text" style="max-width: 260px;">
+						<option value="manual" <?php selected( $quarantine_mode, 'manual' ); ?>><?php _e( 'Manual (Recommended)', 'nexifymy-security' ); ?></option>
+						<option value="auto" <?php selected( $quarantine_mode, 'auto' ); ?>><?php _e( 'Auto Quarantine', 'nexifymy-security' ); ?></option>
+					</select>
+					<button type="button" id="save-quarantine-policy" class="nms-btn nms-btn-primary"><?php _e( 'Save Quarantine Policy', 'nexifymy-security' ); ?></button>
+					<span id="quarantine-policy-status"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="nms-card">
+			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+				<h3><?php _e( 'Quarantined Files', 'nexifymy-security' ); ?></h3>
+				<button class="nms-btn nms-btn-secondary" id="refresh-quarantine"><?php _e( 'Refresh', 'nexifymy-security' ); ?></button>
+			</div>
+			<div class="nms-card-body">
+				<table class="widefat striped" id="quarantine-table">
+					<thead>
+						<tr>
+							<th><?php _e( 'Original Path', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Size', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Reason', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Quarantined', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
+						</tr>
+					</thead>
+					<tbody id="quarantine-tbody">
+						<tr><td colspan="5"><?php _e( 'Loading quarantined files...', 'nexifymy-security' ); ?></td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="nms-card">
+			<div class="nms-card-header">
+				<h3><?php _e( 'Deleted Files (Recoverable)', 'nexifymy-security' ); ?></h3>
+			</div>
+			<div class="nms-card-body">
+				<table class="widefat striped" id="deleted-quarantine-table">
+					<thead>
+						<tr>
+							<th><?php _e( 'Original Path', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Size', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Deleted', 'nexifymy-security' ); ?></th>
+							<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
+						</tr>
+					</thead>
+					<tbody id="deleted-quarantine-tbody">
+						<tr><td colspan="4"><?php _e( 'Loading deleted files...', 'nexifymy-security' ); ?></td></tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<?php
@@ -6327,6 +6477,9 @@ class NexifyMy_Security_Admin {
 		$scanner_settings = isset( $settings['scanner'] ) ? $settings['scanner'] : array();
 		$modules = isset( $settings['modules'] ) ? $settings['modules'] : array();
 		$bg_settings = isset( $settings['background_scan'] ) ? $settings['background_scan'] : array();
+		$excluded_paths = $scanner_settings['excluded_paths'] ?? array();
+		$excluded_paths_text = is_array( $excluded_paths ) ? implode( "\n", $excluded_paths ) : (string) $excluded_paths;
+		$quarantine_mode = $scanner_settings['quarantine_mode'] ?? ( ! empty( $scanner_settings['auto_quarantine_enabled'] ) ? 'auto' : 'manual' );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header">
@@ -6519,13 +6672,13 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 					<tr>
-						<th><?php _e( 'Auto-Quarantine Threats', 'nexifymy-security' ); ?></th>
+						<th><?php _e( 'Quarantine Mode', 'nexifymy-security' ); ?></th>
 						<td>
-							<label class="nms-toggle">
-								<input type="checkbox" id="scanner-auto-quarantine" <?php checked( ! empty( $scanner_settings['auto_quarantine'] ) ); ?>>
-								<span class="nms-toggle-slider"></span>
-							</label>
-							<p class="description"><?php _e( 'Automatically move detected malware to quarantine.', 'nexifymy-security' ); ?></p>
+							<select id="scanner-quarantine-mode" class="regular-text">
+								<option value="manual" <?php selected( $quarantine_mode, 'manual' ); ?>><?php _e( 'Manual (Recommended)', 'nexifymy-security' ); ?></option>
+								<option value="auto" <?php selected( $quarantine_mode, 'auto' ); ?>><?php _e( 'Auto Quarantine', 'nexifymy-security' ); ?></option>
+							</select>
+							<p class="description"><?php _e( 'Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
 					<tr>
@@ -6544,7 +6697,7 @@ class NexifyMy_Security_Admin {
 					<tr>
 						<th><?php _e( 'Excluded Paths', 'nexifymy-security' ); ?></th>
 						<td>
-							<textarea id="scanner-excluded-paths" rows="3" class="large-text code"><?php echo esc_textarea( $scanner_settings['excluded_paths'] ?? '' ); ?></textarea>
+							<textarea id="scanner-excluded-paths" rows="3" class="large-text code"><?php echo esc_textarea( $excluded_paths_text ); ?></textarea>
 							<p class="description"><?php _e( 'One path per line. Directories to skip during scans.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
