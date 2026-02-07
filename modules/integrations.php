@@ -688,8 +688,12 @@ class NexifyMy_Security_Integrations {
 		$incident_data = array(
 			'short_description' => '[Security] ' . $payload['title'],
 			'description'       => $payload['description'] . "\n\nSite: " . home_url() . "\nTime: " . current_time( 'Y-m-d H:i:s' ),
-			'urgency'           => $this->severity_to_servicenow_urgency( $payload['severity'] ),
-			'impact'            => $this->severity_to_servicenow_impact( $payload['severity'] ),
+			'urgency'           => isset( $settings['servicenow_urgency'] ) && in_array( (string) $settings['servicenow_urgency'], array( '1', '2', '3' ), true )
+				? (string) $settings['servicenow_urgency']
+				: $this->severity_to_servicenow_urgency( $payload['severity'] ),
+			'impact'            => isset( $settings['servicenow_impact'] ) && in_array( (string) $settings['servicenow_impact'], array( '1', '2', '3' ), true )
+				? (string) $settings['servicenow_impact']
+				: $this->severity_to_servicenow_impact( $payload['severity'] ),
 			'category'          => 'Security',
 			'subcategory'       => 'Threat Detection',
 		);
@@ -837,7 +841,7 @@ class NexifyMy_Security_Integrations {
 		$settings = $this->get_settings();
 
 		$test_payload = array(
-			'title'       => '🧪 Test Notification',
+			'title'       => 'Test Notification',
 			'description' => 'This is a test notification from NexifyMy Security.',
 			'severity'    => 'info',
 			'data'        => array( 'test' => true ),
@@ -860,6 +864,9 @@ class NexifyMy_Security_Integrations {
 				break;
 			case 'jira':
 				$result = $this->create_jira_ticket( $test_payload, $settings );
+				break;
+			case 'servicenow':
+				$result = $this->create_servicenow_incident( $test_payload, $settings );
 				break;
 		}
 
@@ -922,7 +929,7 @@ class NexifyMy_Security_Integrations {
 
 		foreach ( $masked_fields as $field ) {
 			if ( ! empty( $settings[ $field ] ) ) {
-				$settings[ $field ] = str_repeat( '•', 8 ) . substr( $settings[ $field ], -4 );
+				$settings[ $field ] = str_repeat( '*', 8 ) . substr( $settings[ $field ], -4 );
 			}
 		}
 
@@ -932,3 +939,4 @@ class NexifyMy_Security_Integrations {
 		) );
 	}
 }
+
