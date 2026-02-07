@@ -13,6 +13,7 @@
       this.loadNotifications();
       this.loadBlockedIPs();
       this.loadQuarantinedFiles();
+      this.loadDeletedQuarantineFiles();
       this.loadDatabaseInfo();
       this.loadBackups();
       this.loadOptimizationStats();
@@ -138,6 +139,7 @@
       // Quarantine
       $("#refresh-quarantine").on("click", function () {
         NexifymySecurity.loadQuarantinedFiles();
+        NexifymySecurity.loadDeletedQuarantineFiles();
       });
 
       // Live Traffic
@@ -941,9 +943,9 @@
       $("#save-rate-settings").on("click", function () {
         var settings = {
           enabled: $("#rate-enabled").is(":checked") ? 1 : 0,
-          requests_per_minute: $("#rate-requests").val(),
-          block_duration: $("#rate-duration").val(),
-          whitelist: $("#rate-whitelist").val(),
+          max_attempts: $("#rate-login-attempts").val() || 5,
+          login_window: $("#rate-login-window").val() || 15,
+          lockout_duration: $("#rate-login-lockout").val() || 1800,
         };
         saveModuleSettings(
           "rate_limiter",
@@ -968,9 +970,14 @@
       // Scanner Module Settings Save (from Modules page)
       $("#save-scanner-module-settings").on("click", function () {
         var settings = {
+          enabled: $("#scanner-module-enabled").is(":checked") ? 1 : 0,
           default_mode: $("#scanner-default-mode").val(),
           max_file_size_kb: $("#scanner-max-size").val(),
+          excluded_paths: $("#scanner-excluded-paths").val(),
           excluded_extensions: $("#scanner-excluded-ext").val(),
+          quarantine_mode:
+            $("#scanner-quarantine-mode").val() ||
+            ($("#scanner-auto-quarantine").is(":checked") ? "auto" : "manual"),
           schedule: $("#scanner-schedule").val(),
           background_enabled: $("#scanner-background-enabled").is(":checked")
             ? 1
@@ -982,6 +989,332 @@
           $(this),
           $("#scanner-module-status"),
         );
+      });
+
+      // Quarantine policy save button on scanner > quarantine tab
+      $("#save-quarantine-policy").on("click", function () {
+        var settings = {
+          quarantine_mode: $("#scanner-quarantine-mode").val() || "manual",
+        };
+        saveModuleSettings(
+          "scanner",
+          settings,
+          $(this),
+          $("#quarantine-policy-status"),
+        );
+      });
+
+      // =========================================================================
+      // INTEGRATIONS PAGE HANDLERS
+      // =========================================================================
+
+      function getCheckedValues(selector) {
+        var values = [];
+        $(selector + ":checked").each(function () {
+          values.push($(this).val());
+        });
+        return values;
+      }
+
+      function collectCustomWebhooks() {
+        var webhooks = [];
+        var parseError = "";
+
+        $("#webhooks-list .nms-webhook-item").each(function () {
+          var $item = $(this);
+          var name = $.trim($item.find('input[name="webhook_name[]"]').val());
+          var url = $.trim($item.find('input[name="webhook_url[]"]').val());
+          var method =
+            $item.find('select[name="webhook_method[]"]').val() || "POST";
+          var headersRaw = $.trim(
+            $item.find('textarea[name="webhook_headers[]"]').val() || "",
+          );
+          var headers = {};
+
+          if (!url) {
+            return;
+          }
+
+          if (headersRaw) {
+            try {
+              var parsedHeaders = JSON.parse(headersRaw);
+              if (parsedHeaders && typeof parsedHeaders === "object") {
+                headers = parsedHeaders;
+              } else {
+                parseError = "Webhook headers must be a valid JSON object.";
+                return false;
+              }
+            } catch (e) {
+              parseError = "Webhook headers must be valid JSON.";
+              return false;
+            }
+          }
+
+          var events = [];
+          $item
+            .find('input[type="checkbox"][name^="webhook_events_"]:checked')
+            .each(function () {
+              events.push($(this).val());
+            });
+
+          if (!events.length) {
+            events = ["all"];
+          }
+
+          webhooks.push({
+            name: name,
+            url: url,
+            method: method,
+            headers: headers,
+            events: events,
+          });
+        });
+
+        if (parseError) {
+          return { error: parseError, webhooks: [] };
+        }
+
+        return { error: "", webhooks: webhooks };
+      }
+
+      function buildIntegrationsPayload() {
+        var webhookResult = collectCustomWebhooks();
+        if (webhookResult.error) {
+          return { error: webhookResult.error };
+        }
+
+        return {
+          enabled: 1,
+          slack_enabled: $("#slack-enabled").is(":checked") ? 1 : 0,
+          slack_webhook_url: $("#slack-webhook").val() || "",
+          slack_channel: $("#slack-channel").val() || "#security",
+          slack_events: getCheckedValues('input[name="slack-events[]"]'),
+
+          discord_enabled: $("#discord-enabled").is(":checked") ? 1 : 0,
+          discord_webhook_url: $("#discord-webhook").val() || "",
+          discord_events: getCheckedValues('input[name="discord-events[]"]'),
+
+          teams_enabled: $("#teams-enabled").is(":checked") ? 1 : 0,
+          teams_webhook_url: $("#teams-webhook").val() || "",
+          teams_events: getCheckedValues('input[name="teams-events[]"]'),
+
+          siem_enabled: $("#siem-enabled").is(":checked") ? 1 : 0,
+          siem_type: $("#siem-type").val() || "splunk",
+          siem_endpoint: $("#siem-endpoint").val() || "",
+          siem_token: $("#siem-token").val() || "",
+          siem_index: $("#siem-index").val() || "wordpress_security",
+          siem_format: $("#siem-format").val() || "json",
+          siem_ssl_verify: $("#siem-ssl-verify").is(":checked") ? 1 : 0,
+          siem_events: getCheckedValues('input[name="siem-events[]"]'),
+
+          jira_enabled: $("#jira-enabled").is(":checked") ? 1 : 0,
+          jira_url: $("#jira-url").val() || "",
+          jira_email: $("#jira-email").val() || "",
+          jira_api_token: $("#jira-token").val() || "",
+          jira_project_key: $("#jira-project").val() || "",
+          jira_issue_type: $("#jira-issue-type").val() || "Bug",
+          jira_priority: $("#jira-priority").val() || "High",
+          jira_events: getCheckedValues('input[name="jira-events[]"]'),
+
+          servicenow_enabled: $("#servicenow-enabled").is(":checked") ? 1 : 0,
+          servicenow_instance: $("#servicenow-instance").val() || "",
+          servicenow_username: $("#servicenow-username").val() || "",
+          servicenow_password: $("#servicenow-password").val() || "",
+          servicenow_table: $("#servicenow-table").val() || "incident",
+          servicenow_impact: $("#servicenow-impact").val() || "2",
+          servicenow_urgency: $("#servicenow-urgency").val() || "2",
+
+          cicd_enabled: $("#cicd-enabled").is(":checked") ? 1 : 0,
+          cicd_webhook_url: $("#cicd-webhook-url").val() || "",
+          cicd_fail_on_malware: $("#cicd-fail-on-malware").is(":checked")
+            ? 1
+            : 0,
+          cicd_fail_on_vulnerabilities: $("#cicd-fail-on-vuln").is(":checked")
+            ? 1
+            : 0,
+          cicd_min_severity: $("#cicd-min-severity").val() || "high",
+
+          custom_webhooks_enabled: $("#webhooks-enabled").is(":checked")
+            ? 1
+            : 0,
+          custom_webhooks: webhookResult.webhooks,
+        };
+      }
+
+      function saveIntegrations($btn, $status) {
+        var payload = buildIntegrationsPayload();
+        var originalText = $btn.text();
+
+        if (payload.error) {
+          $status.html(
+            '<span style="color: var(--nms-danger);">' +
+              payload.error +
+              "</span>",
+          );
+          return;
+        }
+
+        $btn.prop("disabled", true).text("Saving...");
+        $status.html('<span style="color: #666;">Saving...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_save_settings",
+            settings: { integrations: payload },
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text(originalText);
+            if (response.success) {
+              $status.html(
+                '<span style="color: var(--nms-success);">Saved!</span>',
+              );
+            } else {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  (response.data || "Failed") +
+                  "</span>",
+              );
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false).text(originalText);
+            $status.html(
+              '<span style="color: var(--nms-danger);">Connection error</span>',
+            );
+          },
+        });
+      }
+
+      function testIntegration(type, $btn, $status) {
+        var originalText = $btn.text();
+        $btn.prop("disabled", true).text("Testing...");
+        $status.html('<span style="color: #666;">Testing...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_test_integration",
+            type: type,
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text(originalText);
+            if (response.success) {
+              $status.html(
+                '<span style="color: var(--nms-success);">' +
+                  (response.data && response.data.message
+                    ? response.data.message
+                    : "Test successful") +
+                  "</span>",
+              );
+            } else {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  (response.data || "Test failed") +
+                  "</span>",
+              );
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false).text(originalText);
+            $status.html(
+              '<span style="color: var(--nms-danger);">Connection error</span>',
+            );
+          },
+        });
+      }
+
+      $("#save-siem-settings").on("click", function () {
+        saveIntegrations($(this), $("#siem-status"));
+      });
+      $("#save-jira-settings").on("click", function () {
+        saveIntegrations($(this), $("#jira-status"));
+      });
+      $("#save-servicenow-settings").on("click", function () {
+        saveIntegrations($(this), $("#servicenow-status"));
+      });
+      $("#save-slack-settings").on("click", function () {
+        saveIntegrations($(this), $("#slack-status"));
+      });
+      $("#save-discord-settings").on("click", function () {
+        saveIntegrations($(this), $("#discord-status"));
+      });
+      $("#save-teams-settings").on("click", function () {
+        saveIntegrations($(this), $("#teams-status"));
+      });
+      $("#save-cicd-settings").on("click", function () {
+        saveIntegrations($(this), $("#cicd-status"));
+      });
+      $("#save-webhooks-settings").on("click", function () {
+        saveIntegrations($(this), $("#webhooks-status"));
+      });
+
+      $("#test-siem").on("click", function () {
+        testIntegration("siem", $(this), $("#siem-status"));
+      });
+      $("#test-jira").on("click", function () {
+        testIntegration("jira", $(this), $("#jira-status"));
+      });
+      $("#test-servicenow").on("click", function () {
+        testIntegration("servicenow", $(this), $("#servicenow-status"));
+      });
+      $("#test-slack").on("click", function () {
+        testIntegration("slack", $(this), $("#slack-status"));
+      });
+      $("#test-discord").on("click", function () {
+        testIntegration("discord", $(this), $("#discord-status"));
+      });
+      $("#test-teams").on("click", function () {
+        testIntegration("teams", $(this), $("#teams-status"));
+      });
+
+      $("#add-webhook").on("click", function () {
+        var index = $("#webhooks-list .nms-webhook-item").length;
+        var eventsName = "webhook_events_new_" + index + "[]";
+        var html = "";
+        html +=
+          '<div class="nms-webhook-item nms-card" style="margin-top: 20px; background: #f5f5f5;">';
+        html +=
+          '<div class="nms-card-header" style="display: flex; justify-content: space-between;">';
+        html += "<h4>Webhook " + (index + 1) + "</h4>";
+        html +=
+          '<button type="button" class="button remove-webhook">Remove</button>';
+        html += "</div>";
+        html += '<div class="nms-card-body"><table class="form-table">';
+        html +=
+          '<tr><th>Name</th><td><input type="text" name="webhook_name[]" class="regular-text"></td></tr>';
+        html +=
+          '<tr><th>URL</th><td><input type="url" name="webhook_url[]" class="large-text"></td></tr>';
+        html +=
+          '<tr><th>Method</th><td><select name="webhook_method[]" class="regular-text"><option value="POST">POST</option><option value="PUT">PUT</option><option value="PATCH">PATCH</option></select></td></tr>';
+        html +=
+          '<tr><th>Headers</th><td><textarea name="webhook_headers[]" rows="3" class="large-text code">{}</textarea></td></tr>';
+        html += "<tr><th>Events</th><td>";
+        html +=
+          '<label><input type="checkbox" name="' +
+          eventsName +
+          '" value="all" checked> All Events</label><br>';
+        html +=
+          '<label><input type="checkbox" name="' +
+          eventsName +
+          '" value="threat_detected"> Threat Detected</label><br>';
+        html +=
+          '<label><input type="checkbox" name="' +
+          eventsName +
+          '" value="malware_found"> Malware Found</label>';
+        html += "</td></tr>";
+        html += "</table></div></div>";
+        $("#webhooks-list").append(html);
+      });
+
+      $(document).on("click", ".remove-webhook", function () {
+        $(this).closest(".nms-webhook-item").remove();
       });
 
       // =========================================================================
@@ -996,6 +1329,7 @@
       // Refresh quarantine list
       $("#refresh-quarantine").on("click", function () {
         NexifymySecurity.loadQuarantineFiles();
+        NexifymySecurity.loadDeletedQuarantineFiles();
       });
 
       // Modal cancel button
@@ -1029,9 +1363,9 @@
         var filename = $(this).data("filename");
         var path = $(this).data("path");
         NexifymySecurity.showModal(
-          "danger",
-          "Permanently Delete",
-          "This action cannot be undone. The file will be permanently deleted.",
+          "warning",
+          "Move To Deleted Files",
+          "The file will be moved to recoverable deleted storage. You can still restore it later.",
           path,
           function () {
             NexifymySecurity.deleteQuarantined(filename);
@@ -1133,6 +1467,7 @@
               $tbody.html(
                 '<tr><td colspan="5" style="text-align: center; color: #64748b;">No files in quarantine. Your site is clean!</td></tr>',
               );
+              NexifymySecurity.loadDeletedQuarantineFiles();
               return;
             }
 
@@ -1170,6 +1505,7 @@
                 "</td></tr>",
             );
           }
+          NexifymySecurity.loadDeletedQuarantineFiles();
         },
         error: function () {
           $tbody.html(
@@ -1629,14 +1965,21 @@
         // Results table
         html += '<table class="widefat striped" id="scan-results-table">';
         html +=
-          "<thead><tr><th>File</th><th>Threat</th><th>Category</th><th>Severity</th><th>Confidence</th><th>Action</th></tr></thead>";
+          "<thead><tr><th>File</th><th>Threat</th><th>Category</th><th>Classification</th><th>Severity</th><th>Confidence</th><th>Action</th></tr></thead>";
         html += "<tbody>";
 
         data.threats.forEach(function (threat) {
           if (threat.threats) {
             threat.threats.forEach(function (t) {
               var category = t.category || "malware";
-              var confidence = threat.confidence || t.confidence || 70;
+              var confidence = t.confidence || threat.confidence || 70;
+              var classification = t.classification || "SUSPICIOUS_CODE";
+              var classificationLabel = {
+                CONFIRMED_MALWARE: "Confirmed Malware",
+                SUSPICIOUS_CODE: "Suspicious Code",
+                SECURITY_VULNERABILITY: "Security Vulnerability",
+                CODE_SMELL: "Code Smell",
+              }[classification] || classification;
               html +=
                 '<tr data-severity="' +
                 (t.severity || "unknown") +
@@ -1656,6 +1999,10 @@
               html +=
                 '<td><span class="nms-badge nms-badge-info" style="font-size: 11px;">' +
                 (categoryLabels[category] || category) +
+                "</span></td>";
+              html +=
+                '<td><span class="nms-badge nms-badge-secondary" style="font-size: 11px;">' +
+                classificationLabel +
                 "</span></td>";
               html +=
                 '<td><span class="severity-' +
@@ -2026,58 +2373,123 @@
           nonce: nexifymySecurity.nonce,
         },
         success: function (response) {
-          if (response.success) {
-            var html = "";
+          if (!response.success) return;
 
-            if (response.data.count === 0) {
-              html =
-                '<tr><td colspan="5">No files in quarantine. Your site is clean!</td></tr>';
-            } else {
-              response.data.files.forEach(function (file) {
-                html += "<tr>";
-                html += "<td><code>" + file.original_path + "</code></td>";
-                html += "<td>" + file.size_formatted + "</td>";
-                html += "<td>" + (file.reason || "-") + "</td>";
-                html += "<td>" + file.quarantined_at + "</td>";
-                html += '<td class="quarantine-actions">';
-                html +=
-                  '<button class="button button-small restore-file" data-filename="' +
-                  file.quarantine_name +
-                  '">Restore</button> ';
-                html +=
-                  '<button class="button button-small button-link-delete delete-quarantined" data-filename="' +
-                  file.quarantine_name +
-                  '">Delete</button>';
-                html += "</td>";
-                html += "</tr>";
-              });
-            }
-
-            $tbody.html(html);
-
-            // Bind action buttons
-            $(".restore-file").on("click", function () {
-              var filename = $(this).data("filename");
-              if (confirm("Restore this file to its original location?")) {
-                NexifymySecurity.restoreFile(filename, $(this));
-              }
-            });
-
-            $(".delete-quarantined").on("click", function () {
-              var filename = $(this).data("filename");
-              if (
-                confirm("PERMANENTLY delete this file? This cannot be undone.")
-              ) {
-                NexifymySecurity.deleteQuarantined(filename, $(this));
-              }
+          var html = "";
+          if (response.data.count === 0) {
+            html =
+              '<tr><td colspan="5">No files in quarantine. Your site is clean!</td></tr>';
+          } else {
+            response.data.files.forEach(function (file) {
+              html += "<tr>";
+              html += "<td><code>" + file.original_path + "</code></td>";
+              html += "<td>" + file.size_formatted + "</td>";
+              html += "<td>" + (file.reason || "-") + "</td>";
+              html += "<td>" + file.quarantined_at + "</td>";
+              html += '<td class="quarantine-actions">';
+              html +=
+                '<button class="button button-small restore-file" data-filename="' +
+                file.quarantine_name +
+                '">Restore</button> ';
+              html +=
+                '<button class="button button-small button-link-delete delete-quarantined" data-filename="' +
+                file.quarantine_name +
+                '">Delete</button>';
+              html += "</td>";
+              html += "</tr>";
             });
           }
+
+          $tbody.html(html);
+
+          $(".restore-file").on("click", function () {
+            var filename = $(this).data("filename");
+            if (confirm("Restore this file to its original location?")) {
+              NexifymySecurity.restoreFile(filename, $(this));
+            }
+          });
+
+          $(".delete-quarantined").on("click", function () {
+            var filename = $(this).data("filename");
+            if (
+              confirm(
+                "Move this file to recoverable deleted storage? You can restore it later.",
+              )
+            ) {
+              NexifymySecurity.deleteQuarantined(filename, $(this));
+            }
+          });
+        },
+      });
+    },
+
+    loadDeletedQuarantineFiles: function () {
+      var $tbody = $("#deleted-quarantine-tbody");
+      if (!$tbody.length) return;
+
+      $tbody.html('<tr><td colspan="4">Loading deleted files...</td></tr>');
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        data: {
+          action: "nexifymy_get_deleted_quarantined_files",
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          if (!response.success) return;
+
+          var html = "";
+          if (response.data.count === 0) {
+            html =
+              '<tr><td colspan="4">No deleted files. Nothing pending permanent deletion.</td></tr>';
+          } else {
+            response.data.files.forEach(function (file) {
+              html += "<tr>";
+              html += "<td><code>" + (file.original_path || "-") + "</code></td>";
+              html += "<td>" + (file.size_formatted || "-") + "</td>";
+              html += "<td>" + (file.deleted_at || "-") + "</td>";
+              html += '<td class="quarantine-actions">';
+              html +=
+                '<button class="button button-small restore-deleted-quarantined" data-deleted-name="' +
+                (file.deleted_name || "") +
+                '">Restore to Quarantine</button> ';
+              html +=
+                '<button class="button button-small button-link-delete permanent-delete-quarantined" data-deleted-name="' +
+                (file.deleted_name || "") +
+                '">Delete Permanently</button>';
+              html += "</td>";
+              html += "</tr>";
+            });
+          }
+
+          $tbody.html(html);
+
+          $(".restore-deleted-quarantined").on("click", function () {
+            var deletedName = $(this).data("deleted-name");
+            NexifymySecurity.restoreDeletedQuarantined(deletedName, $(this));
+          });
+
+          $(".permanent-delete-quarantined").on("click", function () {
+            var deletedName = $(this).data("deleted-name");
+            if (
+              confirm(
+                "Permanently delete this file? This cannot be undone.",
+              )
+            ) {
+              NexifymySecurity.deleteQuarantinedPermanently(
+                deletedName,
+                $(this),
+              );
+            }
+          });
         },
       });
     },
 
     restoreFile: function (filename, $button) {
-      $button.prop("disabled", true).text("Restoring...");
+      var hasButton = !!($button && $button.length);
+      if (hasButton) $button.prop("disabled", true).text("Restoring...");
 
       $.ajax({
         url: nexifymySecurity.ajaxUrl,
@@ -2089,20 +2501,24 @@
         },
         success: function (response) {
           if (response.success) {
-            $button.closest("tr").fadeOut(function () {
-              $(this).remove();
-            });
-            alert("File restored successfully.");
+            if (hasButton) {
+              $button.closest("tr").fadeOut(function () {
+                $(this).remove();
+              });
+            }
+            NexifymySecurity.showNotice("success", "File restored successfully.");
+            NexifymySecurity.loadQuarantinedFiles();
           } else {
-            alert("Error: " + response.data);
-            $button.prop("disabled", false).text("Restore");
+            NexifymySecurity.showNotice("error", "Restore failed: " + response.data);
+            if (hasButton) $button.prop("disabled", false).text("Restore");
           }
         },
       });
     },
 
     deleteQuarantined: function (filename, $button) {
-      $button.prop("disabled", true).text("Deleting...");
+      var hasButton = !!($button && $button.length);
+      if (hasButton) $button.prop("disabled", true).text("Deleting...");
 
       $.ajax({
         url: nexifymySecurity.ajaxUrl,
@@ -2114,12 +2530,87 @@
         },
         success: function (response) {
           if (response.success) {
-            $button.closest("tr").fadeOut(function () {
-              $(this).remove();
-            });
+            if (hasButton) {
+              $button.closest("tr").fadeOut(function () {
+                $(this).remove();
+              });
+            }
+            NexifymySecurity.showNotice(
+              "success",
+              "File moved to recoverable deleted storage.",
+            );
+            NexifymySecurity.loadQuarantinedFiles();
+            NexifymySecurity.loadDeletedQuarantineFiles();
           } else {
-            alert("Error: " + response.data);
-            $button.prop("disabled", false).text("Delete");
+            NexifymySecurity.showNotice("error", "Delete failed: " + response.data);
+            if (hasButton) $button.prop("disabled", false).text("Delete");
+          }
+        },
+      });
+    },
+
+    restoreDeletedQuarantined: function (deletedName, $button) {
+      if ($button && $button.length) {
+        $button.prop("disabled", true).text("Restoring...");
+      }
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        data: {
+          action: "nexifymy_restore_deleted_quarantined",
+          deleted_name: deletedName,
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          if (response.success) {
+            NexifymySecurity.showNotice(
+              "success",
+              "File restored to quarantine.",
+            );
+            NexifymySecurity.loadDeletedQuarantineFiles();
+            NexifymySecurity.loadQuarantinedFiles();
+          } else {
+            NexifymySecurity.showNotice(
+              "error",
+              "Restore failed: " + response.data,
+            );
+            if ($button && $button.length) {
+              $button.prop("disabled", false).text("Restore to Quarantine");
+            }
+          }
+        },
+      });
+    },
+
+    deleteQuarantinedPermanently: function (deletedName, $button) {
+      if ($button && $button.length) {
+        $button.prop("disabled", true).text("Deleting...");
+      }
+
+      $.ajax({
+        url: nexifymySecurity.ajaxUrl,
+        type: "POST",
+        data: {
+          action: "nexifymy_delete_quarantined_permanently",
+          deleted_name: deletedName,
+          nonce: nexifymySecurity.nonce,
+        },
+        success: function (response) {
+          if (response.success) {
+            NexifymySecurity.showNotice(
+              "success",
+              "File permanently deleted.",
+            );
+            NexifymySecurity.loadDeletedQuarantineFiles();
+          } else {
+            NexifymySecurity.showNotice(
+              "error",
+              "Permanent delete failed: " + response.data,
+            );
+            if ($button && $button.length) {
+              $button.prop("disabled", false).text("Delete Permanently");
+            }
           }
         },
       });
