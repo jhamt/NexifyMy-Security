@@ -24,6 +24,11 @@ class NexifyMy_Security_Admin {
 		add_action( 'wp_ajax_nexifymy_get_dashboard_data', array( $this, 'ajax_get_dashboard_data' ) );
 		add_action( 'wp_ajax_nexifymy_toggle_module', array( $this, 'ajax_toggle_module' ) );
 		add_action( 'wp_ajax_nexifymy_save_module_settings', array( $this, 'ajax_save_module_settings' ) );
+		add_action( 'wp_ajax_nexifymy_save_deception_settings', array( $this, 'ajax_save_deception_settings' ) );
+		add_action( 'wp_ajax_nexifymy_save_p2p_settings', array( $this, 'ajax_save_p2p_settings' ) );
+		add_action( 'wp_ajax_nexifymy_add_peer', array( $this, 'ajax_add_peer' ) );
+		add_action( 'wp_ajax_nexifymy_remove_peer', array( $this, 'ajax_remove_peer' ) );
+		add_action( 'wp_ajax_nexifymy_sandbox_execute', array( $this, 'ajax_sandbox_execute' ) );
 	}
 
 	/**
@@ -161,6 +166,26 @@ class NexifyMy_Security_Admin {
 			array( $this, 'render_compliance_page' )
 		);
 
+		// Deception Technology
+		add_submenu_page(
+			'nexifymy-security',
+			__( 'Deception', 'nexifymy-security' ),
+			__( 'Deception', 'nexifymy-security' ),
+			'manage_options',
+			'nexifymy-security-deception',
+			array( $this, 'render_deception_page' )
+		);
+
+		// P2P Threat Intelligence
+		add_submenu_page(
+			'nexifymy-security',
+			__( 'P2P Intelligence', 'nexifymy-security' ),
+			__( 'P2P Intelligence', 'nexifymy-security' ),
+			'manage_options',
+			'nexifymy-security-p2p',
+			array( $this, 'render_p2p_page' )
+		);
+
 		// Proactive Security & Recommendations
 		add_submenu_page(
 			'nexifymy-security',
@@ -169,6 +194,16 @@ class NexifyMy_Security_Admin {
 			'manage_options',
 			'nexifymy-security-recommendations',
 			array( $this, 'render_recommendations_page' )
+		);
+
+		// Sandbox Console
+		add_submenu_page(
+			'nexifymy-security',
+			__( 'Sandbox Console', 'nexifymy-security' ),
+			__( 'Sandbox Console', 'nexifymy-security' ),
+			'manage_options',
+			'nexifymy-security-sandbox',
+			array( $this, 'render_sandbox_page' )
 		);
 	}
 
@@ -184,8 +219,10 @@ class NexifyMy_Security_Admin {
 
 		wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1' );
 		wp_enqueue_style( 'nexifymy-security-admin', NEXIFYMY_SECURITY_URL . 'assets/css/admin.css', array(), NEXIFYMY_SECURITY_VERSION );
+		wp_enqueue_style( 'nexifymy-security-admin-pages', NEXIFYMY_SECURITY_URL . 'assets/css/admin-pages.css', array( 'nexifymy-security-admin' ), NEXIFYMY_SECURITY_VERSION );
 		wp_enqueue_script( 'chartjs', 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js', array(), '4.4.0', false );
 		wp_enqueue_script( 'nexifymy-security-admin', NEXIFYMY_SECURITY_URL . 'assets/js/admin.js', array( 'jquery', 'chartjs' ), NEXIFYMY_SECURITY_VERSION . '.' . time(), true );
+		wp_enqueue_script( 'nexifymy-security-admin-pages', NEXIFYMY_SECURITY_URL . 'assets/js/admin-pages.js', array( 'nexifymy-security-admin' ), NEXIFYMY_SECURITY_VERSION . '.' . time(), true );
 
 		wp_localize_script( 'nexifymy-security-admin', 'nexifymySecurity', array(
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
@@ -295,13 +332,51 @@ class NexifyMy_Security_Admin {
 			$module = $module_aliases[ $module ];
 		}
 
+		$allowed_modules = array(
+			'waf',
+			'firewall',
+			'scanner',
+			'background_scan',
+			'rate_limiter',
+			'login_protection',
+			'two_factor',
+			'captcha',
+			'password',
+			'hide_login',
+			'hardening',
+			'self_protection',
+			'geo_blocking',
+			'live_traffic',
+			'activity_log',
+			'vulnerability_scanner',
+			'core_repair',
+			'database',
+			'cdn',
+			'api_security',
+			'graphql_security',
+			'ai_detection',
+			'supply_chain',
+			'proactive',
+			'passkey',
+			'compliance',
+			'developer_api',
+			'integrations',
+			'deception',
+			'p2p',
+			'sandbox',
+		);
+
+		if ( ! in_array( $module, $allowed_modules, true ) ) {
+			wp_send_json_error( 'Unsupported module' );
+		}
+
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		
 		if ( ! isset( $settings['modules'] ) ) {
 			$settings['modules'] = array();
 		}
 
-		$settings['modules'][ $module . '_enabled' ] = (bool) $enabled;
+		$this->sync_module_enabled_state( $settings, $module, (bool) $enabled );
 		// Use autoload=false for security (like Sucuri/WP Defender)
 		update_option( 'nexifymy_security_settings', $settings, false );
 
@@ -368,6 +443,7 @@ class NexifyMy_Security_Admin {
 			);
 
 			$settings['modules']['scanner_enabled'] = isset( $module_settings['enabled'] ) ? ! empty( $module_settings['enabled'] ) : ( $settings['modules']['scanner_enabled'] ?? true );
+			$this->sync_module_enabled_state( $settings, 'scanner', ! empty( $settings['modules']['scanner_enabled'] ) );
 
 			if ( isset( $module_settings['schedule'] ) ) {
 				$schedule = sanitize_key( $module_settings['schedule'] );
@@ -417,8 +493,35 @@ class NexifyMy_Security_Admin {
 
 			if ( isset( $module_settings['enabled'] ) ) {
 				$settings['modules']['rate_limiter_enabled'] = ! empty( $module_settings['enabled'] );
+				$this->sync_module_enabled_state( $settings, 'rate_limiter', ! empty( $settings['modules']['rate_limiter_enabled'] ) );
 			}
 
+			update_option( 'nexifymy_security_settings', $settings, false );
+
+			wp_send_json_success( array(
+				'module' => $module,
+				'message' => __( 'Settings saved successfully', 'nexifymy-security' ),
+			) );
+		}
+
+		if ( 'hide_login' === $module ) {
+			$current_hide_login = isset( $settings['hide_login'] ) && is_array( $settings['hide_login'] ) ? $settings['hide_login'] : array();
+			$enabled = isset( $module_settings['enabled'] ) ? ! empty( $module_settings['enabled'] ) : ( $current_hide_login['enabled'] ?? false );
+			$login_slug = sanitize_title( (string) ( $module_settings['login_slug'] ?? $module_settings['slug'] ?? $module_settings['login_url'] ?? ( $current_hide_login['login_slug'] ?? 'secure-login' ) ) );
+			$redirect_slug = sanitize_key( (string) ( $module_settings['redirect_slug'] ?? $module_settings['redirect'] ?? ( $current_hide_login['redirect_slug'] ?? '404' ) ) );
+			$redirect_url = isset( $module_settings['redirect_url'] ) ? esc_url_raw( wp_unslash( $module_settings['redirect_url'] ) ) : ( $current_hide_login['redirect_url'] ?? '' );
+
+			$settings['hide_login'] = wp_parse_args(
+				array(
+					'enabled'       => $enabled,
+					'login_slug'    => $login_slug,
+					'redirect_slug' => $redirect_slug,
+					'redirect_url'  => $redirect_url,
+				),
+				$current_hide_login
+			);
+
+			$this->sync_module_enabled_state( $settings, 'hide_login', $enabled );
 			update_option( 'nexifymy_security_settings', $settings, false );
 
 			wp_send_json_success( array(
@@ -441,12 +544,69 @@ class NexifyMy_Security_Admin {
 		}
 
 		$settings[ $module ] = $sanitized;
+		if ( array_key_exists( 'enabled', $sanitized ) ) {
+			$this->sync_module_enabled_state( $settings, $module, ! empty( $sanitized['enabled'] ) );
+		}
 		update_option( 'nexifymy_security_settings', $settings, false );
 
 		wp_send_json_success( array(
 			'module' => $module,
 			'message' => __( 'Settings saved successfully', 'nexifymy-security' ),
 		) );
+	}
+
+	/**
+	 * Keep module state synchronized across modules[] and module-specific settings.
+	 *
+	 * @param array  $settings Settings array (passed by reference).
+	 * @param string $module   Module key.
+	 * @param bool   $enabled  Enabled state.
+	 * @return void
+	 */
+	private function sync_module_enabled_state( &$settings, $module, $enabled ) {
+		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+			$settings['modules'] = array();
+		}
+
+		$settings['modules'][ $module . '_enabled' ] = (bool) $enabled;
+
+		$nested_module_map = array(
+			'two_factor'      => 'two_factor',
+			'captcha'         => 'captcha',
+			'rate_limiter'    => 'rate_limiter',
+			'hide_login'      => 'hide_login',
+			'login_protection'=> 'login_protection',
+			'self_protection' => 'self_protection',
+			'activity_log'    => 'activity_log',
+			'firewall'        => 'firewall',
+			'waf'             => 'waf',
+			'scanner'         => 'scanner',
+		);
+
+		if ( isset( $nested_module_map[ $module ] ) ) {
+			$settings_key = $nested_module_map[ $module ];
+			if ( ! isset( $settings[ $settings_key ] ) || ! is_array( $settings[ $settings_key ] ) ) {
+				$settings[ $settings_key ] = array();
+			}
+			$settings[ $settings_key ]['enabled'] = (bool) $enabled;
+		}
+
+		// Backward compatibility aliases used by parts of the UI.
+		if ( 'waf' === $module ) {
+			$settings['modules']['firewall_enabled'] = (bool) $enabled;
+		}
+		if ( 'firewall' === $module ) {
+			$settings['modules']['waf_enabled'] = (bool) $enabled;
+		}
+		if ( 'deception' === $module ) {
+			$settings['deception_enabled'] = (bool) $enabled;
+		}
+		if ( 'p2p' === $module ) {
+			$settings['p2p_enabled'] = (bool) $enabled;
+		}
+		if ( 'sandbox' === $module ) {
+			$settings['sandbox_enabled'] = (bool) $enabled;
+		}
 	}
 
 	/**
@@ -457,6 +617,16 @@ class NexifyMy_Security_Admin {
 		$score = $security_data['score'];
 		$score_class = $score >= 80 ? 'good' : ( $score >= 50 ? 'warning' : 'critical' );
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$module_settings = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+		$module_enabled = static function ( $key, $default = true ) use ( $settings, $module_settings ) {
+			if ( array_key_exists( $key, $module_settings ) ) {
+				return (bool) $module_settings[ $key ];
+			}
+			if ( array_key_exists( $key, $settings ) ) {
+				return (bool) $settings[ $key ];
+			}
+			return (bool) $default;
+		};
 		
 		// All security modules organized by category
 		$module_categories = array(
@@ -464,69 +634,69 @@ class NexifyMy_Security_Admin {
 				'title' => __( 'Firewall & Protection', 'nexifymy-security' ),
 				'icon' => 'shield-alt',
 				'modules' => array(
-					'waf' => array( 'name' => __( 'Web Application Firewall', 'nexifymy-security' ), 'desc' => __( 'Block malicious requests', 'nexifymy-security' ), 'icon' => 'shield', 'enabled' => true, 'tooltip' => __( 'Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic.', 'nexifymy-security' ) ),
-					'rate_limiter' => array( 'name' => __( 'Rate Limiting', 'nexifymy-security' ), 'desc' => __( 'Prevent brute force', 'nexifymy-security' ), 'icon' => 'clock', 'enabled' => true, 'tooltip' => __( 'Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts.', 'nexifymy-security' ) ),
-					'ip_blocking' => array( 'name' => __( 'IP Blocking', 'nexifymy-security' ), 'desc' => __( 'Block suspicious IPs', 'nexifymy-security' ), 'icon' => 'dismiss', 'enabled' => ! empty( $settings['modules']['ip_blocking_enabled'] ), 'tooltip' => __( 'Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP.', 'nexifymy-security' ) ),
-					'geo_blocking' => array( 'name' => __( 'Geo Blocking', 'nexifymy-security' ), 'desc' => __( 'Country restrictions', 'nexifymy-security' ), 'icon' => 'location-alt', 'enabled' => ! empty( $settings['modules']['geo_blocking_enabled'] ), 'tooltip' => __( 'Block traffic from specific countries. Configure countries in settings before enabling.', 'nexifymy-security' ) ),
+					'waf' => array( 'name' => __( 'Web Application Firewall', 'nexifymy-security' ), 'desc' => __( 'Block malicious requests', 'nexifymy-security' ), 'icon' => 'shield', 'enabled' => $module_enabled( 'firewall_enabled', true ), 'tooltip' => __( 'Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic.', 'nexifymy-security' ) ),
+					'rate_limiter' => array( 'name' => __( 'Rate Limiting', 'nexifymy-security' ), 'desc' => __( 'Prevent brute force', 'nexifymy-security' ), 'icon' => 'clock', 'enabled' => $module_enabled( 'rate_limiter_enabled', true ), 'tooltip' => __( 'Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts.', 'nexifymy-security' ) ),
+					'ip_blocking' => array( 'name' => __( 'IP Blocking', 'nexifymy-security' ), 'desc' => __( 'Block suspicious IPs', 'nexifymy-security' ), 'icon' => 'dismiss', 'enabled' => $module_enabled( 'ip_blocking_enabled', false ), 'tooltip' => __( 'Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP.', 'nexifymy-security' ) ),
+					'geo_blocking' => array( 'name' => __( 'Geo Blocking', 'nexifymy-security' ), 'desc' => __( 'Country restrictions', 'nexifymy-security' ), 'icon' => 'location-alt', 'enabled' => $module_enabled( 'geo_blocking_enabled', false ), 'tooltip' => __( 'Block traffic from specific countries. Configure countries in settings before enabling.', 'nexifymy-security' ) ),
 				),
 			),
 			'scanner' => array(
 				'title' => __( 'Malware & Scanning', 'nexifymy-security' ),
 				'icon' => 'search',
 				'modules' => array(
-					'scanner' => array( 'name' => __( 'Malware Scanner', 'nexifymy-security' ), 'desc' => __( 'Detect threats', 'nexifymy-security' ), 'icon' => 'warning', 'enabled' => true, 'tooltip' => __( 'Scans files for malware and suspicious code. Safe - only scans, does not modify files.', 'nexifymy-security' ) ),
-					'ai_detection' => array( 'name' => __( 'AI Threat Detection', 'nexifymy-security' ), 'desc' => __( 'Behavioral analysis', 'nexifymy-security' ), 'icon' => 'superhero-alt', 'enabled' => true, 'tooltip' => __( 'Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior.', 'nexifymy-security' ) ),
-					'core_repair' => array( 'name' => __( 'Core File Repair', 'nexifymy-security' ), 'desc' => __( 'Fix modified files', 'nexifymy-security' ), 'icon' => 'update', 'enabled' => ! empty( $settings['modules']['core_repair_enabled'] ), 'tooltip' => __( 'Repairs modified WordPress core files. Use carefully - backs up before repairing.', 'nexifymy-security' ) ),
-					'background_scan' => array( 'name' => __( 'Scheduled Scans', 'nexifymy-security' ), 'desc' => __( 'Automated scanning', 'nexifymy-security' ), 'icon' => 'calendar-alt', 'enabled' => true, 'tooltip' => __( 'Runs automatic malware scans daily. Safe - only scanning, no file changes.', 'nexifymy-security' ) ),
-					'vulnerabilities' => array( 'name' => __( 'Vulnerability Check', 'nexifymy-security' ), 'desc' => __( 'Plugin/theme CVEs', 'nexifymy-security' ), 'icon' => 'flag', 'enabled' => true, 'tooltip' => __( 'Checks plugins/themes for known vulnerabilities. Safe - only checks versions.', 'nexifymy-security' ) ),
+					'scanner' => array( 'name' => __( 'Malware Scanner', 'nexifymy-security' ), 'desc' => __( 'Detect threats', 'nexifymy-security' ), 'icon' => 'warning', 'enabled' => $module_enabled( 'scanner_enabled', true ), 'tooltip' => __( 'Scans files for malware and suspicious code. Safe - only scans, does not modify files.', 'nexifymy-security' ) ),
+					'ai_detection' => array( 'name' => __( 'AI Threat Detection', 'nexifymy-security' ), 'desc' => __( 'Behavioral analysis', 'nexifymy-security' ), 'icon' => 'superhero-alt', 'enabled' => $module_enabled( 'ai_detection_enabled', true ), 'tooltip' => __( 'Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior.', 'nexifymy-security' ) ),
+					'core_repair' => array( 'name' => __( 'Core File Repair', 'nexifymy-security' ), 'desc' => __( 'Fix modified files', 'nexifymy-security' ), 'icon' => 'update', 'enabled' => $module_enabled( 'core_repair_enabled', true ), 'tooltip' => __( 'Repairs modified WordPress core files. Use carefully - backs up before repairing.', 'nexifymy-security' ) ),
+					'background_scan' => array( 'name' => __( 'Scheduled Scans', 'nexifymy-security' ), 'desc' => __( 'Automated scanning', 'nexifymy-security' ), 'icon' => 'calendar-alt', 'enabled' => $module_enabled( 'background_scan_enabled', true ), 'tooltip' => __( 'Runs automatic malware scans daily. Safe - only scanning, no file changes.', 'nexifymy-security' ) ),
+					'vulnerabilities' => array( 'name' => __( 'Vulnerability Check', 'nexifymy-security' ), 'desc' => __( 'Plugin/theme CVEs', 'nexifymy-security' ), 'icon' => 'flag', 'enabled' => $module_enabled( 'vulnerability_scanner_enabled', true ), 'tooltip' => __( 'Checks plugins/themes for known vulnerabilities. Safe - only checks versions.', 'nexifymy-security' ) ),
 				),
 			),
 			'login' => array(
 				'title' => __( 'Login & Authentication', 'nexifymy-security' ),
 				'icon' => 'lock',
 				'modules' => array(
-					'two_factor' => array( 'name' => __( 'Two-Factor Auth (2FA)', 'nexifymy-security' ), 'desc' => __( 'Extra login security', 'nexifymy-security' ), 'icon' => 'smartphone', 'enabled' => ! empty( $settings['modules']['two_factor_enabled'] ), 'tooltip' => __( 'Requires second factor for login. Configure your 2FA method before enabling.', 'nexifymy-security' ) ),
-					'captcha' => array( 'name' => __( 'CAPTCHA Protection', 'nexifymy-security' ), 'desc' => __( 'Bot prevention', 'nexifymy-security' ), 'icon' => 'forms', 'enabled' => ! empty( $settings['modules']['captcha_enabled'] ), 'tooltip' => __( 'Adds CAPTCHA to login forms. Safe but may affect user experience.', 'nexifymy-security' ) ),
-					'password' => array( 'name' => __( 'Password Policies', 'nexifymy-security' ), 'desc' => __( 'Strong passwords', 'nexifymy-security' ), 'icon' => 'admin-network', 'enabled' => true, 'tooltip' => __( 'Enforces strong password requirements for users. Safe - only affects new passwords.', 'nexifymy-security' ) ),
-					'login_protection' => array( 'name' => __( 'Login Protection', 'nexifymy-security' ), 'desc' => __( 'Limit login attempts', 'nexifymy-security' ), 'icon' => 'admin-users', 'enabled' => ! empty( $settings['modules']['login_protection_enabled'] ), 'tooltip' => __( 'Additional login security measures. Works with rate limiter.', 'nexifymy-security' ) ),
+					'two_factor' => array( 'name' => __( 'Two-Factor Auth (2FA)', 'nexifymy-security' ), 'desc' => __( 'Extra login security', 'nexifymy-security' ), 'icon' => 'smartphone', 'enabled' => $module_enabled( 'two_factor_enabled', true ), 'tooltip' => __( 'Requires second factor for login. Configure your 2FA method before enabling.', 'nexifymy-security' ) ),
+					'captcha' => array( 'name' => __( 'CAPTCHA Protection', 'nexifymy-security' ), 'desc' => __( 'Bot prevention', 'nexifymy-security' ), 'icon' => 'forms', 'enabled' => $module_enabled( 'captcha_enabled', true ), 'tooltip' => __( 'Adds CAPTCHA to login forms. Safe but may affect user experience.', 'nexifymy-security' ) ),
+					'password' => array( 'name' => __( 'Password Policies', 'nexifymy-security' ), 'desc' => __( 'Strong passwords', 'nexifymy-security' ), 'icon' => 'admin-network', 'enabled' => $module_enabled( 'password_enabled', true ), 'tooltip' => __( 'Enforces strong password requirements for users. Safe - only affects new passwords.', 'nexifymy-security' ) ),
+					'login_protection' => array( 'name' => __( 'Login Protection', 'nexifymy-security' ), 'desc' => __( 'Limit login attempts', 'nexifymy-security' ), 'icon' => 'admin-users', 'enabled' => $module_enabled( 'login_protection_enabled', false ), 'tooltip' => __( 'Additional login security measures. Works with rate limiter.', 'nexifymy-security' ) ),
 				),
 			),
 			'hardening' => array(
 				'title' => __( 'WordPress Hardening', 'nexifymy-security' ),
 				'icon' => 'admin-tools',
 				'modules' => array(
-					'file_permissions' => array( 'name' => __( 'File Permissions', 'nexifymy-security' ), 'desc' => __( 'Secure file access', 'nexifymy-security' ), 'icon' => 'media-document', 'enabled' => ! empty( $settings['modules']['file_permissions_enabled'] ), 'tooltip' => __( 'Sets secure file permissions. May require manual adjustment if server has issues.', 'nexifymy-security' ) ),
-					'security_headers' => array( 'name' => __( 'Security Headers', 'nexifymy-security' ), 'desc' => __( 'HTTP headers', 'nexifymy-security' ), 'icon' => 'admin-settings', 'enabled' => true, 'tooltip' => __( 'Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security.', 'nexifymy-security' ) ),
-					'xmlrpc' => array( 'name' => __( 'XML-RPC Control', 'nexifymy-security' ), 'desc' => __( 'Disable XML-RPC', 'nexifymy-security' ), 'icon' => 'editor-code', 'enabled' => true, 'tooltip' => __( 'Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps.', 'nexifymy-security' ) ),
-					'rest_api' => array( 'name' => __( 'REST API Security', 'nexifymy-security' ), 'desc' => __( 'API restrictions', 'nexifymy-security' ), 'icon' => 'rest-api', 'enabled' => ! empty( $settings['modules']['rest_api_enabled'] ), 'tooltip' => __( 'Restricts REST API access. May affect plugins that use REST API.', 'nexifymy-security' ) ),
-					'file_editor' => array( 'name' => __( 'File Editor', 'nexifymy-security' ), 'desc' => __( 'Disable WP editor', 'nexifymy-security' ), 'icon' => 'edit', 'enabled' => ! empty( $settings['modules']['file_editor_disabled'] ), 'tooltip' => __( 'Disables built-in theme/plugin editor. Safe - prevents code editing in admin.', 'nexifymy-security' ) ),
+					'file_permissions' => array( 'name' => __( 'File Permissions', 'nexifymy-security' ), 'desc' => __( 'Secure file access', 'nexifymy-security' ), 'icon' => 'media-document', 'enabled' => $module_enabled( 'file_permissions_enabled', false ), 'tooltip' => __( 'Sets secure file permissions. May require manual adjustment if server has issues.', 'nexifymy-security' ) ),
+					'security_headers' => array( 'name' => __( 'Security Headers', 'nexifymy-security' ), 'desc' => __( 'HTTP headers', 'nexifymy-security' ), 'icon' => 'admin-settings', 'enabled' => $module_enabled( 'security_headers_enabled', true ), 'tooltip' => __( 'Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security.', 'nexifymy-security' ) ),
+					'xmlrpc' => array( 'name' => __( 'XML-RPC Control', 'nexifymy-security' ), 'desc' => __( 'Disable XML-RPC', 'nexifymy-security' ), 'icon' => 'editor-code', 'enabled' => $module_enabled( 'xmlrpc_enabled', true ), 'tooltip' => __( 'Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps.', 'nexifymy-security' ) ),
+					'rest_api' => array( 'name' => __( 'REST API Security', 'nexifymy-security' ), 'desc' => __( 'API restrictions', 'nexifymy-security' ), 'icon' => 'rest-api', 'enabled' => $module_enabled( 'rest_api_enabled', false ), 'tooltip' => __( 'Restricts REST API access. May affect plugins that use REST API.', 'nexifymy-security' ) ),
+					'file_editor' => array( 'name' => __( 'File Editor', 'nexifymy-security' ), 'desc' => __( 'Disable WP editor', 'nexifymy-security' ), 'icon' => 'edit', 'enabled' => $module_enabled( 'file_editor_disabled', false ), 'tooltip' => __( 'Disables built-in theme/plugin editor. Safe - prevents code editing in admin.', 'nexifymy-security' ) ),
 				),
 			),
 			'api' => array(
 				'title' => __( 'API & Headless Security', 'nexifymy-security' ),
 				'icon' => 'cloud',
 				'modules' => array(
-					'api_security' => array( 'name' => __( 'API Security', 'nexifymy-security' ), 'desc' => __( 'REST API protection', 'nexifymy-security' ), 'icon' => 'admin-network', 'enabled' => true, 'tooltip' => __( 'Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress.', 'nexifymy-security' ) ),
-					'graphql_security' => array( 'name' => __( 'GraphQL Security', 'nexifymy-security' ), 'desc' => __( 'WPGraphQL protection', 'nexifymy-security' ), 'icon' => 'networking', 'enabled' => true, 'tooltip' => __( 'Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups.', 'nexifymy-security' ) ),
+					'api_security' => array( 'name' => __( 'API Security', 'nexifymy-security' ), 'desc' => __( 'REST API protection', 'nexifymy-security' ), 'icon' => 'admin-network', 'enabled' => $module_enabled( 'api_security_enabled', true ), 'tooltip' => __( 'Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress.', 'nexifymy-security' ) ),
+					'graphql_security' => array( 'name' => __( 'GraphQL Security', 'nexifymy-security' ), 'desc' => __( 'WPGraphQL protection', 'nexifymy-security' ), 'icon' => 'networking', 'enabled' => $module_enabled( 'graphql_security_enabled', true ), 'tooltip' => __( 'Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups.', 'nexifymy-security' ) ),
 				),
 			),
 			'monitoring' => array(
 				'title' => __( 'Monitoring & Alerts', 'nexifymy-security' ),
 				'icon' => 'chart-line',
 				'modules' => array(
-					'live_traffic' => array( 'name' => __( 'Live Traffic', 'nexifymy-security' ), 'desc' => __( 'Real-time monitoring', 'nexifymy-security' ), 'icon' => 'visibility', 'enabled' => true, 'tooltip' => __( 'Monitors real-time traffic. Safe - only tracks visits.', 'nexifymy-security' ) ),
-					'notifications' => array( 'name' => __( 'Email Notifications', 'nexifymy-security' ), 'desc' => __( 'Security alerts', 'nexifymy-security' ), 'icon' => 'email', 'enabled' => true, 'tooltip' => __( 'Sends email alerts for security events. Safe - configure email settings first.', 'nexifymy-security' ) ),
-					'audit_log' => array( 'name' => __( 'Security Logs', 'nexifymy-security' ), 'desc' => __( 'Activity tracking', 'nexifymy-security' ), 'icon' => 'list-view', 'enabled' => true, 'tooltip' => __( 'Logs security events for review. Safe - only records activity.', 'nexifymy-security' ) ),
-					'self_protection' => array( 'name' => __( 'Self Protection', 'nexifymy-security' ), 'desc' => __( 'Plugin integrity', 'nexifymy-security' ), 'icon' => 'shield', 'enabled' => true, 'tooltip' => __( 'Protects plugin files from modification. Safe - prevents tampering.', 'nexifymy-security' ) ),
+					'live_traffic' => array( 'name' => __( 'Live Traffic', 'nexifymy-security' ), 'desc' => __( 'Real-time monitoring', 'nexifymy-security' ), 'icon' => 'visibility', 'enabled' => $module_enabled( 'live_traffic_enabled', true ), 'tooltip' => __( 'Monitors real-time traffic. Safe - only tracks visits.', 'nexifymy-security' ) ),
+					'notifications' => array( 'name' => __( 'Email Notifications', 'nexifymy-security' ), 'desc' => __( 'Security alerts', 'nexifymy-security' ), 'icon' => 'email', 'enabled' => $module_enabled( 'notifications_enabled', true ), 'tooltip' => __( 'Sends email alerts for security events. Safe - configure email settings first.', 'nexifymy-security' ) ),
+					'audit_log' => array( 'name' => __( 'Security Logs', 'nexifymy-security' ), 'desc' => __( 'Activity tracking', 'nexifymy-security' ), 'icon' => 'list-view', 'enabled' => $module_enabled( 'activity_log_enabled', true ), 'tooltip' => __( 'Logs security events for review. Safe - only records activity.', 'nexifymy-security' ) ),
+					'self_protection' => array( 'name' => __( 'Self Protection', 'nexifymy-security' ), 'desc' => __( 'Plugin integrity', 'nexifymy-security' ), 'icon' => 'shield', 'enabled' => $module_enabled( 'self_protection_enabled', true ), 'tooltip' => __( 'Protects plugin files from modification. Safe - prevents tampering.', 'nexifymy-security' ) ),
 				),
 			),
 			'tools' => array(
 				'title' => __( 'Tools & Utilities', 'nexifymy-security' ),
 				'icon' => 'admin-generic',
 				'modules' => array(
-					'quarantine' => array( 'name' => __( 'Quarantine', 'nexifymy-security' ), 'desc' => __( 'Isolate threats', 'nexifymy-security' ), 'icon' => 'vault', 'enabled' => true, 'tooltip' => __( 'Isolates suspicious files without deleting. Safe - files can be restored.', 'nexifymy-security' ) ),
-					'database' => array( 'name' => __( 'Database Security', 'nexifymy-security' ), 'desc' => __( 'Backups & cleanup', 'nexifymy-security' ), 'icon' => 'database', 'enabled' => ! empty( $settings['modules']['database_enabled'] ), 'tooltip' => __( 'Database backup and optimization. Configure backup schedule before enabling.', 'nexifymy-security' ) ),
-					'cdn' => array( 'name' => __( 'CDN Integration', 'nexifymy-security' ), 'desc' => __( 'Cloudflare & more', 'nexifymy-security' ), 'icon' => 'cloud', 'enabled' => ! empty( $settings['modules']['cdn_enabled'] ), 'tooltip' => __( 'Integrates with CDN services. Configure CDN credentials before enabling.', 'nexifymy-security' ) ),
+					'quarantine' => array( 'name' => __( 'Quarantine', 'nexifymy-security' ), 'desc' => __( 'Isolate threats', 'nexifymy-security' ), 'icon' => 'vault', 'enabled' => $module_enabled( 'quarantine_enabled', true ), 'tooltip' => __( 'Isolates suspicious files without deleting. Safe - files can be restored.', 'nexifymy-security' ) ),
+					'database' => array( 'name' => __( 'Database Security', 'nexifymy-security' ), 'desc' => __( 'Backups & cleanup', 'nexifymy-security' ), 'icon' => 'database', 'enabled' => $module_enabled( 'database_enabled', true ), 'tooltip' => __( 'Database backup and optimization. Configure backup schedule before enabling.', 'nexifymy-security' ) ),
+					'cdn' => array( 'name' => __( 'CDN Integration', 'nexifymy-security' ), 'desc' => __( 'Cloudflare & more', 'nexifymy-security' ), 'icon' => 'cloud', 'enabled' => $module_enabled( 'cdn_enabled', true ), 'tooltip' => __( 'Integrates with CDN services. Configure CDN credentials before enabling.', 'nexifymy-security' ) ),
 				),
 			),
 		);
@@ -572,8 +742,7 @@ class NexifyMy_Security_Admin {
 					</a>
 					<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings' ) ); ?>" class="nms-btn nms-btn-secondary">
 						<span class="dashicons dashicons-admin-generic"></span>
-						<?php _e( 'Settings', 'nexifymy-security' ); ?>
-					</a>
+						<?php _e( 'Settings', 'nexifymy-security' ); ?> ></a>
 				</div>
 			</div>
 
@@ -740,10 +909,48 @@ class NexifyMy_Security_Admin {
 									'tools' => 'nexifymy-security-tools',
 									'api_security' => 'nexifymy-security-modules',
 								);
+								$dashboard_toggle_map = array(
+									'waf'               => 'waf',
+									'scanner'           => 'scanner',
+									'background_scan'   => 'background_scan',
+									'rate_limiter'      => 'rate_limiter',
+									'login_protection'  => 'login_protection',
+									'geo_blocking'      => 'geo_blocking',
+									'ai_detection'      => 'ai_detection',
+									'core_repair'       => 'core_repair',
+									'vulnerabilities'   => 'vulnerability_scanner',
+									'two_factor'        => 'two_factor',
+									'captcha'           => 'captcha',
+									'password'          => 'password',
+									'hardening'         => 'hardening',
+									'hide_login'        => 'hide_login',
+									'self_protection'   => 'self_protection',
+									'live_traffic'      => 'live_traffic',
+									'api_security'      => 'api_security',
+									'graphql_security'  => 'graphql_security',
+									'supply_chain'      => 'supply_chain',
+									'proactive'         => 'proactive',
+									'passkey'           => 'passkey',
+									'compliance'        => 'compliance',
+									'developer_api'     => 'developer_api',
+									'integrations'      => 'integrations',
+									'deception'         => 'deception',
+									'p2p'               => 'p2p',
+									'sandbox'           => 'sandbox',
+									'audit_log'         => 'activity_log',
+									'database'          => 'database',
+									'cdn'               => 'cdn',
+								);
 								
 								foreach ( $category['modules'] as $mod_key => $module ) : 
 									$target_page = isset( $page_map[ $cat_key ] ) ? $page_map[ $cat_key ] : 'nexifymy-security-modules';
 									$url = admin_url( 'admin.php?page=' . $target_page );
+									$toggle_target = isset( $dashboard_toggle_map[ $mod_key ] ) ? $dashboard_toggle_map[ $mod_key ] : '';
+									$is_toggleable = '' !== $toggle_target;
+									$is_enabled = $module['enabled'];
+									if ( $is_toggleable ) {
+										$is_enabled = nexifymy_security_is_module_enabled( $settings, $toggle_target . '_enabled', (bool) $module['enabled'] );
+									}
 									
 									// Add specific tabs/pages for known module mappings
 									if ($mod_key === 'rate_limiter') {
@@ -756,7 +963,7 @@ class NexifyMy_Security_Admin {
 										$url = admin_url( 'admin.php?page=nexifymy-security-tools&tab=traffic' );
 									}
 								?>
-									<div class="nms-module-card <?php echo $module['enabled'] ? 'active' : ''; ?>" title="<?php echo esc_attr( $module['tooltip'] ); ?>">
+									<div class="nms-module-card <?php echo $is_enabled ? 'active' : ''; ?>" title="<?php echo esc_attr( $module['tooltip'] ); ?>">
 										<a href="<?php echo esc_url( $url ); ?>" class="nms-module-clickable">
 											<div class="nms-module-icon">
 												<span class="dashicons dashicons-<?php echo esc_attr( $module['icon'] ); ?>"></span>
@@ -766,8 +973,8 @@ class NexifyMy_Security_Admin {
 												<span class="nms-module-desc"><?php echo esc_html( $module['desc'] ); ?></span>
 											</div>
 										</a>
-										<label class="nms-toggle" onclick="event.stopPropagation();">
-											<input type="checkbox" <?php checked( $module['enabled'] ); ?> data-module="<?php echo esc_attr( $mod_key ); ?>">
+								<label class="nms-toggle nms-stop-propagation">
+											<input type="checkbox" <?php checked( $is_enabled ); ?> <?php echo $is_toggleable ? 'data-module="' . esc_attr( $toggle_target ) . '"' : 'disabled="disabled"'; ?>>
 											<span class="nms-toggle-slider"></span>
 										</label>
 									</div>
@@ -829,8 +1036,7 @@ class NexifyMy_Security_Admin {
 								<?php _e( 'Recent Activity', 'nexifymy-security' ); ?>
 							</h2>
 							<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-logs' ) ); ?>" class="nms-card-header-action">
-								<?php _e( 'View All', 'nexifymy-security' ); ?>
-							</a>
+								<?php _e( 'View All', 'nexifymy-security' ); ?> ></a>
 						</div>
 						<div class="nms-card-body no-padding">
 							<?php if ( ! empty( $recent_events ) ) : ?>
@@ -923,7 +1129,7 @@ class NexifyMy_Security_Admin {
 							</div>
 						</div>
 						
-						<h4 style="margin: 20px 0 15px; font-size: 14px;"><?php _e( 'Protection Rules', 'nexifymy-security' ); ?></h4>
+						<h4 class="nms-auto-s133"><?php _e( 'Protection Rules', 'nexifymy-security' ); ?></h4>
 						<div class="nms-quick-settings-grid">
 							<div class="nms-quick-setting">
 								<span class="dashicons dashicons-database"></span>
@@ -959,7 +1165,7 @@ class NexifyMy_Security_Admin {
 							</div>
 						</div>
 						
-						<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--nms-border);">
+						<div class="nms-auto-s154">
 							<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-firewall' ) ); ?>" class="nms-btn nms-btn-secondary">
 								<span class="dashicons dashicons-admin-generic"></span>
 								<?php _e( 'Advanced Firewall Settings', 'nexifymy-security' ); ?>
@@ -996,7 +1202,7 @@ class NexifyMy_Security_Admin {
 							</div>
 						</div>
 						
-						<h4 style="margin: 20px 0 15px; font-size: 14px;"><?php _e( 'Quick Scan Actions', 'nexifymy-security' ); ?></h4>
+						<h4 class="nms-auto-s133"><?php _e( 'Quick Scan Actions', 'nexifymy-security' ); ?></h4>
 						<div class="nms-scan-buttons">
 							<button type="button" class="nms-btn nms-btn-primary scan-btn" data-mode="quick">
 								<span class="dashicons dashicons-search"></span>
@@ -1013,10 +1219,10 @@ class NexifyMy_Security_Admin {
 						</div>
 						
 						<!-- Scan Progress (hidden until scan starts) -->
-						<div id="scanner-progress" class="nms-scan-progress" style="display: none; margin-top: 20px;">
+						<div id="scanner-progress" class="nms-scan-progress nms-hidden-mt20">
 							<div class="nms-progress-container">
 								<div class="nms-progress-bar">
-									<div class="nms-progress-fill" style="width: 0%"></div>
+									<div class="nms-progress-fill nms-auto-s192"></div>
 								</div>
 								<div class="nms-progress-info">
 									<span class="nms-progress-percent">0%</span>
@@ -1026,21 +1232,25 @@ class NexifyMy_Security_Admin {
 						</div>
 						
 						<!-- Scan Results (hidden until scan completes) -->
-						<div id="scanner-results" style="display: none; margin-top: 20px;"></div>
+						<div id="scanner-results" class="nms-auto-s067"></div>
 						
 						<?php if ( $last_scan && isset( $last_scan['time'] ) ) : ?>
-						<div style="margin-top: 20px; padding: 15px; background: var(--nms-gray-50); border-radius: var(--nms-radius-md);">
+						<div class="nms-auto-s152">
 							<strong><?php _e( 'Last Scan:', 'nexifymy-security' ); ?></strong>
 							<?php echo esc_html( human_time_diff( strtotime( $last_scan['time'] ), current_time( 'timestamp' ) ) ); ?> <?php _e( 'ago', 'nexifymy-security' ); ?>
 							<?php if ( isset( $last_scan['results']['threats_found'] ) ) : ?>
-								&mdash; <span style="color: <?php echo $last_scan['results']['threats_found'] > 0 ? 'var(--nms-danger)' : 'var(--nms-success)'; ?>;">
-									<?php echo intval( $last_scan['results']['threats_found'] ); ?> <?php _e( 'threats found', 'nexifymy-security' ); ?>
+								<?php
+								$threats_found = intval( $last_scan['results']['threats_found'] );
+								$threat_class = $threats_found > 0 ? 'nms-threat-count-danger' : 'nms-threat-count-success';
+								?>
+								&mdash; <span class="<?php echo esc_attr( $threat_class ); ?>">
+									<?php echo $threats_found; ?> <?php _e( 'threats found', 'nexifymy-security' ); ?>
 								</span>
 							<?php endif; ?>
 						</div>
 						<?php endif; ?>
 						
-						<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--nms-border);">
+						<div class="nms-auto-s154">
 							<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-scanner' ) ); ?>" class="nms-btn nms-btn-secondary">
 								<span class="dashicons dashicons-admin-generic"></span>
 								<?php _e( 'Advanced Scanner Options', 'nexifymy-security' ); ?>
@@ -1181,7 +1391,7 @@ class NexifyMy_Security_Admin {
 						</div>
 					</div>
 					
-					<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--nms-border);">
+					<div class="nms-auto-s154">
 						<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-modules' ) ); ?>" class="nms-btn nms-btn-secondary">
 							<span class="dashicons dashicons-admin-generic"></span>
 							<?php _e( 'Advanced Login Settings', 'nexifymy-security' ); ?>
@@ -1201,12 +1411,12 @@ class NexifyMy_Security_Admin {
 					<h3><?php _e( 'WordPress Hardening', 'nexifymy-security' ); ?></h3>
 				</div>
 				<div class="nms-card-body">
-					<p style="color: var(--nms-gray-600); margin-bottom: 20px;"><?php _e( 'Apply security hardening measures to protect your WordPress installation.', 'nexifymy-security' ); ?></p>
+					<p class="nms-auto-s028"><?php _e( 'Apply security hardening measures to protect your WordPress installation.', 'nexifymy-security' ); ?></p>
 					
 					<div class="nms-hardening-checklist">
 						<div class="nms-hardening-item">
 							<div class="nms-hardening-info">
-								<span class="dashicons dashicons-dismiss" style="color: var(--nms-danger);"></span>
+								<span class="dashicons dashicons-dismiss nms-auto-s024"></span>
 								<div>
 									<strong><?php _e( 'Disable XML-RPC', 'nexifymy-security' ); ?></strong>
 									<p><?php _e( 'Prevent XML-RPC attacks and brute force attempts', 'nexifymy-security' ); ?></p>
@@ -1220,7 +1430,7 @@ class NexifyMy_Security_Admin {
 						
 						<div class="nms-hardening-item">
 							<div class="nms-hardening-info">
-								<span class="dashicons dashicons-edit" style="color: var(--nms-warning);"></span>
+								<span class="dashicons dashicons-edit nms-auto-s033"></span>
 								<div>
 									<strong><?php _e( 'Disable File Editor', 'nexifymy-security' ); ?></strong>
 									<p><?php _e( 'Prevent code editing in WordPress admin', 'nexifymy-security' ); ?></p>
@@ -1234,7 +1444,7 @@ class NexifyMy_Security_Admin {
 						
 						<div class="nms-hardening-item">
 							<div class="nms-hardening-info">
-								<span class="dashicons dashicons-rest-api" style="color: var(--nms-info);"></span>
+								<span class="dashicons dashicons-rest-api nms-auto-s029"></span>
 								<div>
 									<strong><?php _e( 'Restrict REST API', 'nexifymy-security' ); ?></strong>
 									<p><?php _e( 'Limit REST API access to authenticated users', 'nexifymy-security' ); ?></p>
@@ -1248,7 +1458,7 @@ class NexifyMy_Security_Admin {
 						
 						<div class="nms-hardening-item">
 							<div class="nms-hardening-info">
-								<span class="dashicons dashicons-visibility" style="color: var(--nms-gray-500);"></span>
+								<span class="dashicons dashicons-visibility nms-auto-s025"></span>
 								<div>
 									<strong><?php _e( 'Disable Directory Browsing', 'nexifymy-security' ); ?></strong>
 									<p><?php _e( 'Prevent directory listing via .htaccess', 'nexifymy-security' ); ?></p>
@@ -1262,7 +1472,7 @@ class NexifyMy_Security_Admin {
 						
 						<div class="nms-hardening-item">
 							<div class="nms-hardening-info">
-								<span class="dashicons dashicons-shield" style="color: var(--nms-success);"></span>
+								<span class="dashicons dashicons-shield nms-auto-s032"></span>
 								<div>
 									<strong><?php _e( 'Security Headers', 'nexifymy-security' ); ?></strong>
 									<p><?php _e( 'Add HTTP security headers (X-Frame-Options, CSP, etc.)', 'nexifymy-security' ); ?></p>
@@ -1275,7 +1485,7 @@ class NexifyMy_Security_Admin {
 						</div>
 					</div>
 					
-					<div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--nms-border);">
+					<div class="nms-auto-s154">
 						<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-hardening' ) ); ?>" class="nms-btn nms-btn-secondary">
 							<span class="dashicons dashicons-admin-generic"></span>
 							<?php _e( 'Advanced Hardening Options', 'nexifymy-security' ); ?>
@@ -1314,7 +1524,7 @@ class NexifyMy_Security_Admin {
 					<div class="nms-card-header"><h3><?php _e( 'Help & Documentation', 'nexifymy-security' ); ?></h3></div>
 					<div class="nms-card-body">
 						<h4><?php _e( 'Getting Started', 'nexifymy-security' ); ?></h4>
-						<ul style="list-style: disc; margin-left: 20px; margin-bottom: 20px;">
+						<ul class="nms-auto-s122">
 							<li><?php _e( 'Run a security scan to identify vulnerabilities', 'nexifymy-security' ); ?></li>
 							<li><?php _e( 'Enable firewall protection to block attacks', 'nexifymy-security' ); ?></li>
 							<li><?php _e( 'Configure 2FA for enhanced login security', 'nexifymy-security' ); ?></li>
@@ -1465,31 +1675,31 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Scan Progress -->
-			<div id="scanner-progress" class="nms-card" style="display: none; margin-top: 20px;">
+			<div id="scanner-progress" class="nms-card nms-hidden-mt20">
 				<div class="nms-card-header">
 					<h3><span class="dashicons dashicons-update spin"></span> <?php _e( 'Scanning...', 'nexifymy-security' ); ?></h3>
 				</div>
 				<div class="nms-card-body">
 					<div class="nms-progress-container">
 						<div class="nms-progress-bar">
-							<div class="nms-progress-fill" style="width: 0%"></div>
+							<div class="nms-progress-fill nms-auto-s192"></div>
 						</div>
 						<div class="nms-progress-info">
 							<span class="nms-progress-percent">0%</span>
 							<span class="nms-progress-status"><?php _e( 'Initializing...', 'nexifymy-security' ); ?></span>
 						</div>
 					</div>
-					<p class="nms-scan-file-current" style="margin-top: 10px; color: var(--nms-gray-500); font-size: 12px;"></p>
+					<p class="nms-scan-file-current nms-auto-s143"></p>
 				</div>
 			</div>
 
 			<!-- Scan Results -->
-			<div id="scanner-results" class="nms-card" style="display: none; margin-top: 20px;">
+			<div id="scanner-results" class="nms-card nms-hidden-mt20">
 				<div class="nms-card-header">
 					<h3><?php _e( 'Scan Results', 'nexifymy-security' ); ?></h3>
 				</div>
 				<div class="nms-card-body">
-					<div id="results-summary" style="margin-bottom: 20px;"></div>
+					<div id="results-summary" class="nms-mb-20"></div>
 					<table class="widefat" id="results-table">
 						<thead>
 							<tr>
@@ -1513,7 +1723,11 @@ class NexifyMy_Security_Admin {
 	 */
 	public function render_firewall() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$fw_settings = isset( $settings['firewall'] ) ? $settings['firewall'] : array();
+		$fw_enabled = array_key_exists( 'enabled', $fw_settings )
+			? ! empty( $fw_settings['enabled'] )
+			: ( ! empty( $modules['waf_enabled'] ) || ! empty( $modules['firewall_enabled'] ) );
 		$blocked_count = get_option( 'nexifymy_blocked_requests_count', 0 );
 		?>
 		<div class="wrap nexifymy-security-wrap">
@@ -1525,13 +1739,13 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Firewall Stats -->
-			<div class="nms-stats-row" style="margin-bottom: 20px;">
+			<div class="nms-stats-row nms-mb-20">
 				<div class="nms-stat-card">
 					<div class="nms-stat-icon green">
 						<span class="dashicons dashicons-shield-alt"></span>
 					</div>
 					<div class="nms-stat-content">
-						<h4><?php echo empty( $fw_settings['enabled'] ) ? __( 'Disabled', 'nexifymy-security' ) : __( 'Active', 'nexifymy-security' ); ?></h4>
+						<h4><?php echo $fw_enabled ? __( 'Active', 'nexifymy-security' ) : __( 'Disabled', 'nexifymy-security' ); ?></h4>
 						<p><?php _e( 'WAF Status', 'nexifymy-security' ); ?></p>
 					</div>
 				</div>
@@ -1566,7 +1780,7 @@ class NexifyMy_Security_Admin {
 							<th><?php _e( 'Enable Firewall', 'nexifymy-security' ); ?></th>
 							<td>
 								<label class="nms-toggle">
-									<input type="checkbox" id="fw-enabled" <?php checked( ! empty( $fw_settings['enabled'] ) ); ?>>
+									<input type="checkbox" id="fw-enabled" <?php checked( $fw_enabled ); ?>>
 									<span class="nms-toggle-slider"></span>
 								</label>
 								<p class="description"><?php _e( 'Enable Web Application Firewall protection.', 'nexifymy-security' ); ?></p>
@@ -1624,11 +1838,11 @@ class NexifyMy_Security_Admin {
 							<th scope="row"><?php _e( 'Bot & Crawler Protection', 'nexifymy-security' ); ?></th>
 						<td>
 							<fieldset>
-								<label for="bad_bots" style="display: block; margin-bottom: 8px;">
+								<label for="bad_bots" class="nms-auto-s040">
 									<input type="checkbox" name="bad_bots" id="bad_bots" <?php checked( $fw_settings['bad_bots'] ?? true ); ?>>
 									<?php _e( 'Block known bad bots and scrapers', 'nexifymy-security' ); ?>
 								</label>
-								<label for="suspicious_agents" style="display: block; margin-bottom: 8px;">
+								<label for="suspicious_agents" class="nms-auto-s040">
 									<input type="checkbox" name="suspicious_agents" id="suspicious_agents" <?php checked( $fw_settings['suspicious_agents'] ?? false ); ?>>
 									<?php _e( 'Block suspicious User-Agents', 'nexifymy-security' ); ?>
 								</label>
@@ -1643,7 +1857,7 @@ class NexifyMy_Security_Admin {
 						<th scope="row"><?php _e( 'Advanced Hardening', 'nexifymy-security' ); ?></th>
 						<td>
 							<fieldset>
-								<label for="disable_xmlrpc" style="display: block; margin-bottom: 8px;">
+								<label for="disable_xmlrpc" class="nms-auto-s040">
 									<input type="checkbox" name="disable_xmlrpc" id="disable_xmlrpc" <?php checked( $fw_settings['disable_xmlrpc'] ?? false ); ?>>
 									<?php _e( 'Disable XML-RPC (prevents common brute force vector)', 'nexifymy-security' ); ?>
 								</label>
@@ -1665,23 +1879,23 @@ class NexifyMy_Security_Admin {
 						</tr>
 					</table>
 					
-					<table class="form-table" style="border-top: 1px solid #e2e8f0; margin-top: 20px; padding-top: 20px;">
+					<table class="form-table nms-auto-s008">
 						<tr>
 							<th scope="row"><?php _e( 'Rate Limiting', 'nexifymy-security' ); ?></th>
 							<td>
 								<fieldset>
-									<label for="ratelimit_enabled" style="display: block; margin-bottom: 10px;">
+									<label for="ratelimit_enabled" class="nms-auto-s037">
 										<input type="checkbox" name="ratelimit_enabled" id="ratelimit_enabled" <?php checked( $fw_settings['ratelimit_enabled'] ?? false ); ?>>
 										<?php _e( 'Enable Rate Limiting', 'nexifymy-security' ); ?>
 									</label>
-									<div class="nms-inline-settings" style="display: flex; gap: 20px; align-items: center; margin-bottom: 5px;">
+									<div class="nms-inline-settings nms-auto-s047">
 										<div>
 											<label for="ratelimit_requests" class="small-text"><?php _e( 'Max Requests', 'nexifymy-security' ); ?></label>
-											<input type="number" name="ratelimit_requests" id="ratelimit_requests" value="<?php echo esc_attr( $fw_settings['ratelimit_requests'] ?? 60 ); ?>" class="small-text" style="width: 70px;">
+											<input type="number" name="ratelimit_requests" id="ratelimit_requests" value="<?php echo esc_attr( $fw_settings['ratelimit_requests'] ?? 60 ); ?>" class="small-text nms-auto-s198">
 										</div>
 										<div>
 											<label for="ratelimit_window" class="small-text"><?php _e( 'Time Window (sec)', 'nexifymy-security' ); ?></label>
-											<input type="number" name="ratelimit_window" id="ratelimit_window" value="<?php echo esc_attr( $fw_settings['ratelimit_window'] ?? 60 ); ?>" class="small-text" style="width: 70px;">
+											<input type="number" name="ratelimit_window" id="ratelimit_window" value="<?php echo esc_attr( $fw_settings['ratelimit_window'] ?? 60 ); ?>" class="small-text nms-auto-s198">
 										</div>
 									</div>
 									<p class="description"><?php _e( 'Limit excessive requests from a single IP address.', 'nexifymy-security' ); ?></p>
@@ -1692,19 +1906,19 @@ class NexifyMy_Security_Admin {
 							<th scope="row"><?php _e( 'HTTP Security Headers', 'nexifymy-security' ); ?></th>
 							<td>
 								<fieldset>
-									<label for="header_xframe" style="display: block; margin-bottom: 5px;">
+									<label for="header_xframe" class="nms-auto-s038">
 										<input type="checkbox" name="header_xframe" id="header_xframe" <?php checked( $fw_settings['header_xframe'] ?? true ); ?>>
 										<?php _e( 'X-Frame-Options (Prevent Clickjacking)', 'nexifymy-security' ); ?>
 									</label>
-									<label for="header_xss" style="display: block; margin-bottom: 5px;">
+									<label for="header_xss" class="nms-auto-s038">
 										<input type="checkbox" name="header_xss" id="header_xss" <?php checked( $fw_settings['header_xss'] ?? true ); ?>>
 										<?php _e( 'X-XSS-Protection', 'nexifymy-security' ); ?>
 									</label>
-									<label for="header_hsts" style="display: block; margin-bottom: 5px;">
+									<label for="header_hsts" class="nms-auto-s038">
 										<input type="checkbox" name="header_hsts" id="header_hsts" <?php checked( $fw_settings['header_hsts'] ?? false ); ?>>
 										<?php _e( 'HTTP Strict Transport Security (HSTS)', 'nexifymy-security' ); ?>
 									</label>
-									<label for="header_nosniff" style="display: block;">
+									<label for="header_nosniff" class="nms-auto-s036">
 										<input type="checkbox" name="header_nosniff" id="header_nosniff" <?php checked( $fw_settings['header_nosniff'] ?? true ); ?>>
 										<?php _e( 'X-Content-Type-Options (No Sniff)', 'nexifymy-security' ); ?>
 									</label>
@@ -1712,11 +1926,11 @@ class NexifyMy_Security_Admin {
 							</td>
 						</tr>
 					</table>
-					<p style="margin-top: 20px;">
+					<p class="nms-mt-20">
 						<button type="button" class="nms-btn nms-btn-primary" id="save-firewall-settings">
 							<?php _e( 'Save Settings', 'nexifymy-security' ); ?>
 						</button>
-						<span id="firewall-status" style="margin-left: 15px;"></span>
+						<span id="firewall-status" class="nms-status-inline"></span>
 					</p>
 				</div>
 			</div>
@@ -1727,7 +1941,7 @@ class NexifyMy_Security_Admin {
 					<h3><?php _e( 'IP Management', 'nexifymy-security' ); ?></h3>
 				</div>
 				<div class="nms-card-body">
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+					<div class="nms-auto-s054">
 						<div>
 							<h4><?php _e( 'Whitelist IPs', 'nexifymy-security' ); ?></h4>
 							<textarea id="ip-whitelist" rows="6" class="large-text" placeholder="<?php _e( 'Enter IPs, one per line', 'nexifymy-security' ); ?>"><?php echo esc_textarea( $fw_settings['whitelist'] ?? '' ); ?></textarea>
@@ -2319,7 +2533,7 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Traffic Overview Stats -->
-			<div class="nms-stats-row" style="margin-bottom: 24px;">
+			<div class="nms-stats-row nms-auto-s137">
 				<div class="nms-stat-card">
 					<div class="nms-stat-icon blue">
 						<span class="dashicons dashicons-visibility"></span>
@@ -2359,11 +2573,11 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Visitor Trends Chart -->
-			<div class="nms-card" style="margin-bottom: 24px;">
+			<div class="nms-card nms-auto-s137">
 				<div class="nms-card-header">
 					<h3><?php _e( 'Visitor Trends - Last 30 Days', 'nexifymy-security' ); ?></h3>
 					<div class="nms-card-actions">
-						<select id="traffic-chart-period" style="padding: 4px 8px; border-radius: 4px; border: 1px solid var(--nms-border);">
+						<select id="traffic-chart-period" class="nms-auto-s178">
 							<option value="7"><?php _e( 'Last 7 Days', 'nexifymy-security' ); ?></option>
 							<option value="30" selected><?php _e( 'Last 30 Days', 'nexifymy-security' ); ?></option>
 							<option value="90"><?php _e( 'Last 90 Days', 'nexifymy-security' ); ?></option>
@@ -2383,7 +2597,7 @@ class NexifyMy_Security_Admin {
 					</div>
 					<div class="nms-card-body">
 						<div id="top-pages-list">
-							<p style="color: var(--nms-gray-500); text-align: center; padding: 20px;">
+							<p class="nms-auto-s026">
 								<?php _e( 'Loading top pages...', 'nexifymy-security' ); ?>
 							</p>
 						</div>
@@ -2397,7 +2611,7 @@ class NexifyMy_Security_Admin {
 					</div>
 					<div class="nms-card-body">
 						<div id="top-referrers-list">
-							<p style="color: var(--nms-gray-500); text-align: center; padding: 20px;">
+							<p class="nms-auto-s026">
 								<?php _e( 'Loading referrers...', 'nexifymy-security' ); ?>
 							</p>
 						</div>
@@ -2406,164 +2620,19 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Geographic Distribution -->
-			<div class="nms-card" style="margin-top: 24px;">
+			<div class="nms-card nms-auto-s155">
 				<div class="nms-card-header">
 					<h3><?php _e( 'Geographic Distribution', 'nexifymy-security' ); ?></h3>
 				</div>
 				<div class="nms-card-body">
 					<div id="geo-distribution">
-						<p style="color: var(--nms-gray-500); text-align: center; padding: 20px;">
+						<p class="nms-empty-state">
 							<?php _e( 'Loading geographic data...', 'nexifymy-security' ); ?>
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				if (typeof Chart === 'undefined') return;
-
-				// Load traffic analytics data
-				function loadTrafficAnalytics(days) {
-					jQuery.ajax({
-						url: nexifymySecurity.ajaxUrl,
-						type: 'POST',
-						data: {
-							action: 'nexifymy_get_traffic_analytics',
-							nonce: nexifymySecurity.nonce,
-							days: days || 30
-						},
-						success: function(response) {
-							if (response && response.success && response.data) {
-								updateTrafficChart(response.data.chart_data);
-								updateTopPages(response.data.top_pages);
-								updateTopReferrers(response.data.top_referrers);
-								updateGeoDistribution(response.data.geo_distribution);
-							}
-						}
-					});
-				}
-
-				// Update traffic trends chart
-				var trafficChart = null;
-				function updateTrafficChart(chartData) {
-					var ctx = document.getElementById('traffic-trends-chart');
-					if (!ctx) return;
-
-					if (trafficChart) {
-						trafficChart.destroy();
-					}
-
-					trafficChart = new Chart(ctx.getContext('2d'), {
-						type: 'line',
-						data: {
-							labels: chartData.labels,
-							datasets: [{
-								label: '<?php _e( 'Page Views', 'nexifymy-security' ); ?>',
-								data: chartData.page_views,
-								borderColor: '#6366f1',
-								backgroundColor: 'rgba(99, 102, 241, 0.1)',
-								borderWidth: 2,
-								tension: 0.4,
-								fill: true,
-								pointBackgroundColor: '#ffffff',
-								pointBorderColor: '#6366f1',
-								pointRadius: 4
-							}, {
-								label: '<?php _e( 'Unique Visitors', 'nexifymy-security' ); ?>',
-								data: chartData.unique_visitors,
-								borderColor: '#10b981',
-								backgroundColor: 'rgba(16, 185, 129, 0.05)',
-								borderWidth: 2,
-								tension: 0.4,
-								fill: false,
-								borderDash: [5, 5]
-							}]
-						},
-						options: {
-							responsive: true,
-							maintainAspectRatio: true,
-							plugins: {
-								legend: { position: 'top' },
-								tooltip: {
-									mode: 'index',
-									intersect: false
-								}
-							},
-							scales: {
-								y: { beginAtZero: true }
-							}
-						}
-					});
-				}
-
-				function updateTopPages(pages) {
-					var html = '<ul class="nms-list-stats">';
-					if (pages && pages.length > 0) {
-						pages.forEach(function(page) {
-							html += '<li>';
-							html += '<span class="nms-stat-label" title="' + page.url + '">';
-							html += '<span class="dashicons dashicons-admin-page"></span> ';
-							html += page.url.substring(0, 50) + (page.url.length > 50 ? '...' : '');
-							html += '</span>';
-							html += '<span class="nms-badge info">' + page.count + ' <?php _e( 'views', 'nexifymy-security' ); ?></span>';
-							html += '</li>';
-						});
-					} else {
-						html += '<li style="text-align: center; color: var(--nms-gray-500);"><?php _e( 'No data available', 'nexifymy-security' ); ?></li>';
-					}
-					html += '</ul>';
-					jQuery('#top-pages-list').html(html);
-				}
-
-				function updateTopReferrers(referrers) {
-					var html = '<ul class="nms-list-stats">';
-					if (referrers && referrers.length > 0) {
-						referrers.forEach(function(ref) {
-							var source = ref.referrer || '<?php _e( 'Direct', 'nexifymy-security' ); ?>';
-							html += '<li>';
-							html += '<span class="nms-stat-label" title="' + source + '">';
-							html += '<span class="dashicons dashicons-admin-links"></span> ';
-							html += source.substring(0, 40) + (source.length > 40 ? '...' : '');
-							html += '</span>';
-							html += '<span class="nms-badge success">' + ref.count + '</span>';
-							html += '</li>';
-						});
-					} else {
-						html += '<li style="text-align: center; color: var(--nms-gray-500);"><?php _e( 'No data available', 'nexifymy-security' ); ?></li>';
-					}
-					html += '</ul>';
-					jQuery('#top-referrers-list').html(html);
-				}
-
-				function updateGeoDistribution(geo) {
-					var html = '<ul class="nms-list-stats">';
-					if (geo && geo.length > 0) {
-						geo.forEach(function(country) {
-							html += '<li>';
-							html += '<span class="nms-stat-label">';
-							html += '<span class="dashicons dashicons-location"></span> ';
-							html += country.country_name || country.country_code || '<?php _e( 'Unknown', 'nexifymy-security' ); ?>';
-							html += '</span>';
-							html += '<span class="nms-badge warning">' + country.count + ' <?php _e( 'visits', 'nexifymy-security' ); ?></span>';
-							html += '</li>';
-						});
-					} else {
-						html += '<li style="text-align: center; color: var(--nms-gray-500);"><?php _e( 'No geographic data available', 'nexifymy-security' ); ?></li>';
-					}
-					html += '</ul>';
-					jQuery('#geo-distribution').html(html);
-				}
-
-				// Period selector
-				jQuery('#traffic-chart-period').on('change', function() {
-					loadTrafficAnalytics(jQuery(this).val());
-				});
-
-				// Initial load
-				loadTrafficAnalytics(30);
-			});
-			</script>
 		</div>
 		<?php
 	}
@@ -2604,7 +2673,7 @@ class NexifyMy_Security_Admin {
 						<tr>
 							<th><?php _e( 'Countries', 'nexifymy-security' ); ?></th>
 							<td>
-								<select id="geo-countries" multiple style="width: 100%; height: 200px;">
+								<select id="geo-countries" multiple class="nms-auto-s195">
 									<?php _e( 'Loading countries...', 'nexifymy-security' ); ?>
 								</select>
 								<p class="description"><?php _e( 'Hold Ctrl/Cmd to select multiple countries.', 'nexifymy-security' ); ?></p>
@@ -2807,9 +2876,9 @@ class NexifyMy_Security_Admin {
 					</table>
 					<p>
 						<button class="button button-primary" id="save-cdn-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-						<button class="button" id="test-cdn-connection" style="margin-left: 8px;"><?php _e( 'Test Connection', 'nexifymy-security' ); ?></button>
-						<button class="button" id="purge-cdn-cache" style="margin-left: 8px;"><?php _e( 'Purge Cache', 'nexifymy-security' ); ?></button>
-						<span id="cdn-settings-status" style="margin-left: 12px;"></span>
+						<button class="button nms-auto-s140" id="test-cdn-connection" ><?php _e( 'Test Connection', 'nexifymy-security' ); ?></button>
+						<button class="button nms-auto-s140" id="purge-cdn-cache" ><?php _e( 'Purge Cache', 'nexifymy-security' ); ?></button>
+						<span id="cdn-settings-status" class="nms-auto-s139"></span>
 					</p>
 				</div>
 			</div>
@@ -2966,9 +3035,9 @@ class NexifyMy_Security_Admin {
 				</div>
 				<div class="card-body">
 					<p><?php _e( 'This is how the captcha will appear on login forms:', 'nexifymy-security' ); ?></p>
-					<div style="max-width: 300px; padding: 20px; background: #f1f1f1; border-radius: 5px;">
-						<label style="font-weight: 600;">5 + 3 = ?</label><br>
-						<input type="number" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="<?php _e( 'Enter answer', 'nexifymy-security' ); ?>" />
+					<div class="nms-auto-s159">
+						<label class="nms-auto-s119">5 + 3 = ?</label><br>
+						<input type="number" class="nms-auto-s196" placeholder="<?php _e( 'Enter answer', 'nexifymy-security' ); ?>" />
 					</div>
 					</div>
 			</div>
@@ -3015,7 +3084,7 @@ class NexifyMy_Security_Admin {
 						<tr>
 							<th><?php _e( 'Remember Device', 'nexifymy-security' ); ?></th>
 							<td>
-								<input type="number" id="2fa-remember-days" value="30" min="1" max="365" style="width: 80px;" />
+								<input type="number" id="2fa-remember-days" value="30" min="1" max="365" class="nms-auto-s199" />
 								<span><?php _e( 'days', 'nexifymy-security' ); ?></span>
 							</td>
 						</tr>
@@ -3066,7 +3135,7 @@ class NexifyMy_Security_Admin {
 							<th><?php _e( 'Enable', 'nexifymy-security' ); ?></th>
 							<td>
 								<label><input type="checkbox" id="hide-login-enabled" /> <?php _e( 'Hide default login URLs', 'nexifymy-security' ); ?></label>
-								<p class="description" style="color: orange;">
+								<p class="description nms-auto-s022">
 									<strong><?php _e( 'Warning:', 'nexifymy-security' ); ?></strong>
 									<?php _e( 'Make sure to remember your custom login URL!', 'nexifymy-security' ); ?>
 								</p>
@@ -3076,7 +3145,7 @@ class NexifyMy_Security_Admin {
 							<th><?php _e( 'Login Slug', 'nexifymy-security' ); ?></th>
 							<td>
 								<code><?php echo esc_html( home_url( '/' ) ); ?></code>
-								<input type="text" id="login-slug" value="secure-login" style="width: 200px;" />
+								<input type="text" id="login-slug" value="secure-login" class="nms-auto-s197" />
 								<p class="description"><?php _e( 'Choose a unique, hard-to-guess slug.', 'nexifymy-security' ); ?></p>
 							</td>
 						</tr>
@@ -3245,7 +3314,7 @@ class NexifyMy_Security_Admin {
 						<button class="button button-primary" id="check-core-integrity">
 							<span class="dashicons dashicons-search"></span> <?php _e( 'Check Core Integrity', 'nexifymy-security' ); ?>
 						</button>
-						<button class="button button-secondary" id="repair-all-core" style="display: none;">
+						<button class="button button-secondary nms-auto-s065" id="repair-all-core" >
 							<span class="dashicons dashicons-hammer"></span> <?php _e( 'Repair All Modified Files', 'nexifymy-security' ); ?>
 						</button>
 						<span id="repair-status"></span>
@@ -3254,7 +3323,7 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<!-- Results -->
-			<div class="nexifymy-card" id="integrity-results" style="display: none;">
+			<div class="nexifymy-card nms-auto-s065" id="integrity-results" >
 				<div class="card-header">
 					<h2><?php _e( 'Integrity Check Results', 'nexifymy-security' ); ?></h2>
 				</div>
@@ -3389,7 +3458,7 @@ class NexifyMy_Security_Admin {
 					</div>
 					<div class="nms-module-card-footer">
 						<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-' . $module['page'] ) ); ?>" class="nms-btn nms-btn-secondary">
-							<?php _e( 'Settings', 'nexifymy-security' ); ?> →
+							<?php _e( 'Settings', 'nexifymy-security' ); ?> >
 						</a>
 					</div>
 				</div>
@@ -3518,17 +3587,17 @@ class NexifyMy_Security_Admin {
 							</tr>
 						</tbody>
 					</table>
-					<div style="margin-top: 20px;">
+					<div class="nms-mt-20">
 						<button type="button" id="update-definitions" class="nms-btn nms-btn-primary">
 							<span class="dashicons dashicons-update"></span>
 							<?php _e( 'Update Definitions Now', 'nexifymy-security' ); ?>
 						</button>
-						<span id="update-status" style="margin-left: 15px;"></span>
+						<span id="update-status" class="nms-status-inline"></span>
 					</div>
 				</div>
 			</div>
 			
-			<div class="nms-card" style="margin-top: 20px;">
+			<div class="nms-card nms-mt-20">
 				<div class="nms-card-header">
 					<h3><?php _e( 'Auto-Update Settings', 'nexifymy-security' ); ?></h3>
 				</div>
@@ -3556,7 +3625,11 @@ class NexifyMy_Security_Admin {
 	 */
 	public function render_login_protection() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$login_settings = isset( $settings['login_protection'] ) ? $settings['login_protection'] : array();
+		$login_enabled = array_key_exists( 'enabled', $login_settings )
+			? ! empty( $login_settings['enabled'] )
+			: ! empty( $modules['login_protection_enabled'] );
 		?>
 		<div class="wrap nexifymy-security-wrap">
 			<hr class="wp-header-end">
@@ -3575,7 +3648,7 @@ class NexifyMy_Security_Admin {
 							<th><?php _e( 'Enable Protection', 'nexifymy-security' ); ?></th>
 							<td>
 								<label class="nms-toggle">
-									<input type="checkbox" id="login-prot-enabled" value="1" <?php checked( ! empty( $login_settings['enabled'] ) ); ?>>
+									<input type="checkbox" id="login-prot-enabled" value="1" <?php checked( $login_enabled ); ?>>
 									<span class="nms-toggle-slider"></span>
 								</label>
 							</td>
@@ -3607,7 +3680,7 @@ class NexifyMy_Security_Admin {
 			
 			<p class="submit">
 				<button type="button" id="save-login-prot-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-				<span id="login-prot-status" style="margin-left: 15px;"></span>
+				<span id="login-prot-status" class="nms-status-inline"></span>
 			</p>
 		</div>
 		<?php
@@ -3618,7 +3691,11 @@ class NexifyMy_Security_Admin {
 	 */
 	public function render_rate_limiter() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$rate_settings = isset( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array();
+		$rate_enabled = array_key_exists( 'enabled', $rate_settings )
+			? ! empty( $rate_settings['enabled'] )
+			: ! empty( $modules['rate_limiter_enabled'] );
 		?>
 		<div class="wrap nexifymy-security-wrap">
 			<hr class="wp-header-end">
@@ -3637,7 +3714,7 @@ class NexifyMy_Security_Admin {
 							<th><?php _e( 'Enable Rate Limiting', 'nexifymy-security' ); ?></th>
 							<td>
 								<label class="nms-toggle">
-									<input type="checkbox" id="rate-enabled" value="1" <?php checked( ! empty( $rate_settings['enabled'] ) ); ?>>
+									<input type="checkbox" id="rate-enabled" value="1" <?php checked( $rate_enabled ); ?>>
 									<span class="nms-toggle-slider"></span>
 								</label>
 							</td>
@@ -3669,7 +3746,7 @@ class NexifyMy_Security_Admin {
 			
 			<p class="submit">
 				<button type="button" id="save-rate-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-				<span id="rate-status" style="margin-left: 15px;"></span>
+				<span id="rate-status" class="nms-status-inline"></span>
 			</p>
 		</div>
 		<?php
@@ -3703,16 +3780,16 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<div class="nms-tab-content">
-				<div id="tab-scanner" class="nms-tab-panel <?php echo $active_tab === 'scanner' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'scanner' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-scanner" class="nms-tab-panel <?php echo $active_tab === 'scanner' ? 'active' : ''; ?>">
 					<?php $this->render_scanner_content(); ?>
 				</div>
-				<div id="tab-ai-detection" class="nms-tab-panel <?php echo $active_tab === 'ai-detection' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'ai-detection' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-ai-detection" class="nms-tab-panel <?php echo $active_tab === 'ai-detection' ? 'active' : ''; ?>">
 					<?php $this->render_ai_detection_content(); ?>
 				</div>
-				<div id="tab-quarantine" class="nms-tab-panel <?php echo $active_tab === 'quarantine' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'quarantine' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-quarantine" class="nms-tab-panel <?php echo $active_tab === 'quarantine' ? 'active' : ''; ?>">
 					<?php $this->render_quarantine_content(); ?>
 				</div>
-				<div id="tab-definitions" class="nms-tab-panel <?php echo $active_tab === 'definitions' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'definitions' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-definitions" class="nms-tab-panel <?php echo $active_tab === 'definitions' ? 'active' : ''; ?>">
 					<?php $this->render_definitions_content(); ?>
 				</div>
 			</div>
@@ -3820,46 +3897,46 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<div class="nms-tab-content">
-				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'overview' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>">
 					<?php $this->render_modules_hub_content(); ?>
 				</div>
-				<div id="tab-waf" class="nms-tab-panel <?php echo $active_tab === 'waf' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'waf' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-waf" class="nms-tab-panel <?php echo $active_tab === 'waf' ? 'active' : ''; ?>">
 					<?php $this->render_waf_settings_content(); ?>
 				</div>
-				<div id="tab-firewall" class="nms-tab-panel <?php echo $active_tab === 'firewall' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'firewall' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-firewall" class="nms-tab-panel <?php echo $active_tab === 'firewall' ? 'active' : ''; ?>">
 					<?php $this->render_firewall_content(); ?>
 				</div>
-				<div id="tab-scanner" class="nms-tab-panel <?php echo $active_tab === 'scanner' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'scanner' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-scanner" class="nms-tab-panel <?php echo $active_tab === 'scanner' ? 'active' : ''; ?>">
 					<?php $this->render_scanner_settings_content(); ?>
 				</div>
-				<div id="tab-ratelimit" class="nms-tab-panel <?php echo $active_tab === 'ratelimit' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'ratelimit' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-ratelimit" class="nms-tab-panel <?php echo $active_tab === 'ratelimit' ? 'active' : ''; ?>">
 					<?php $this->render_rate_content(); ?>
 				</div>
-				<div id="tab-login" class="nms-tab-panel <?php echo $active_tab === 'login' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'login' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-login" class="nms-tab-panel <?php echo $active_tab === 'login' ? 'active' : ''; ?>">
 					<?php $this->render_login_content(); ?>
 				</div>
-				<div id="tab-geo" class="nms-tab-panel <?php echo $active_tab === 'geo' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'geo' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-geo" class="nms-tab-panel <?php echo $active_tab === 'geo' ? 'active' : ''; ?>">
 					<?php $this->render_geo_content(); ?>
 				</div>
-				<div id="tab-2fa" class="nms-tab-panel <?php echo $active_tab === '2fa' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === '2fa' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-2fa" class="nms-tab-panel <?php echo $active_tab === '2fa' ? 'active' : ''; ?>">
 					<?php $this->render_2fa_content(); ?>
 				</div>
-				<div id="tab-hardening" class="nms-tab-panel <?php echo $active_tab === 'hardening' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'hardening' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-hardening" class="nms-tab-panel <?php echo $active_tab === 'hardening' ? 'active' : ''; ?>">
 					<?php $this->render_hardening_content(); ?>
 				</div>
-				<div id="tab-hidelogin" class="nms-tab-panel <?php echo $active_tab === 'hidelogin' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'hidelogin' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-hidelogin" class="nms-tab-panel <?php echo $active_tab === 'hidelogin' ? 'active' : ''; ?>">
 					<?php $this->render_hide_login_content(); ?>
 				</div>
-				<div id="tab-password" class="nms-tab-panel <?php echo $active_tab === 'password' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'password' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-password" class="nms-tab-panel <?php echo $active_tab === 'password' ? 'active' : ''; ?>">
 					<?php $this->render_password_content(); ?>
 				</div>
-				<div id="tab-captcha" class="nms-tab-panel <?php echo $active_tab === 'captcha' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'captcha' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-captcha" class="nms-tab-panel <?php echo $active_tab === 'captcha' ? 'active' : ''; ?>">
 					<?php $this->render_captcha_content(); ?>
 				</div>
-				<div id="tab-traffic" class="nms-tab-panel <?php echo $active_tab === 'traffic' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'traffic' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-traffic" class="nms-tab-panel <?php echo $active_tab === 'traffic' ? 'active' : ''; ?>">
 					<?php $this->render_live_traffic_content(); ?>
 				</div>
-				<div id="tab-notifications" class="nms-tab-panel <?php echo $active_tab === 'notifications' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'notifications' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-notifications" class="nms-tab-panel <?php echo $active_tab === 'notifications' ? 'active' : ''; ?>">
 					<?php $this->render_notifications_content(); ?>
 				</div>
 			</div>
@@ -3898,19 +3975,19 @@ class NexifyMy_Security_Admin {
 			</div>
 
 			<div class="nms-tab-content">
-				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'overview' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>">
 					<?php $this->render_tools_hub_content(); ?>
 				</div>
-				<div id="tab-database" class="nms-tab-panel <?php echo $active_tab === 'database' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'database' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-database" class="nms-tab-panel <?php echo $active_tab === 'database' ? 'active' : ''; ?>">
 					<?php $this->render_database_content(); ?>
 				</div>
-				<div id="tab-core" class="nms-tab-panel <?php echo $active_tab === 'core' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'core' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-core" class="nms-tab-panel <?php echo $active_tab === 'core' ? 'active' : ''; ?>">
 					<?php $this->render_core_repair_content(); ?>
 				</div>
-				<div id="tab-traffic" class="nms-tab-panel <?php echo $active_tab === 'traffic' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'traffic' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-traffic" class="nms-tab-panel <?php echo $active_tab === 'traffic' ? 'active' : ''; ?>">
 					<?php $this->render_live_traffic_content(); ?>
 				</div>
-				<div id="tab-supply-chain" class="nms-tab-panel <?php echo $active_tab === 'supply-chain' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'supply-chain' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-supply-chain" class="nms-tab-panel <?php echo $active_tab === 'supply-chain' ? 'active' : ''; ?>">
 					<?php $this->render_supply_chain_content(); ?>
 				</div>
 			</div>
@@ -4024,7 +4101,7 @@ class NexifyMy_Security_Admin {
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		$enabled_modules = isset( $settings['modules'] ) ? $settings['modules'] : array();
 		?>
-		<div class="nms-modules-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-bottom: 30px;">
+		<div class="nms-modules-grid nms-modules-hub-grid">
 			<?php foreach ( $modules as $key => $module ) :
 				$option_key = $key . '_enabled';
 				$is_enabled = null;
@@ -4044,19 +4121,19 @@ class NexifyMy_Security_Admin {
 					$is_enabled = isset( $module['default_enabled'] ) ? (bool) $module['default_enabled'] : true;
 				}
 			?>
-			<div class="nms-card" style="margin: 0;">
+			<div class="nms-card nms-modules-hub-card">
 				<div class="nms-card-body">
-					<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-						<div class="nms-stat-icon <?php echo $is_enabled ? 'green' : 'blue'; ?>" style="width: 40px; height: 40px; flex-shrink: 0;">
+					<div class="nms-modules-hub-header">
+						<div class="nms-stat-icon nms-modules-hub-icon <?php echo $is_enabled ? 'green' : 'blue'; ?>">
 							<span class="dashicons dashicons-<?php echo esc_attr( $module['icon'] ); ?>"></span>
 						</div>
-						<div style="flex: 1;">
-							<h4 style="margin: 0 0 4px 0; font-size: 15px;"><?php echo esc_html( $module['name'] ); ?></h4>
-							<p style="margin: 0 0 8px 0; font-size: 12px; color: var(--nms-gray-500);"><?php echo esc_html( $module['desc'] ); ?></p>
-							<p style="margin: 0; font-size: 11px; color: var(--nms-gray-400); line-height: 1.4;"><?php echo esc_html( $module['info'] ); ?></p>
+						<div class="nms-modules-hub-meta">
+							<h4 class="nms-modules-hub-title"><?php echo esc_html( $module['name'] ); ?></h4>
+							<p class="nms-modules-hub-desc"><?php echo esc_html( $module['desc'] ); ?></p>
+							<p class="nms-modules-hub-info"><?php echo esc_html( $module['info'] ); ?></p>
 						</div>
 					</div>
-					<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--nms-border);">
+					<div class="nms-modules-hub-footer">
 						<label class="nms-toggle">
 							<input type="checkbox" class="module-toggle" data-module="<?php echo esc_attr( $key ); ?>" <?php checked( $is_enabled ); ?>>
 							<span class="nms-toggle-slider"></span>
@@ -4077,20 +4154,24 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_2fa_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$tfa_settings = isset( $settings['two_factor'] ) ? $settings['two_factor'] : array();
+		$two_factor_enabled = array_key_exists( 'enabled', $tfa_settings )
+			? ! empty( $tfa_settings['enabled'] )
+			: ! empty( $modules['two_factor_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-smartphone"></span> <?php _e( 'Two-Factor Authentication', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Add an extra layer of security by requiring two forms of authentication for user logins.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Add an extra layer of security by requiring two forms of authentication for user logins.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable 2FA Module', 'nexifymy-security' ); ?></th>
 						<td>
 							<label class="nms-toggle">
-								<input type="checkbox" id="2fa-enabled" data-module="two_factor" <?php checked( ! empty( $tfa_settings['enabled'] ) ); ?>>
+								<input type="checkbox" id="2fa-enabled" data-module="two_factor" <?php checked( $two_factor_enabled ); ?>>
 								<span class="nms-toggle-slider"></span>
 							</label>
 							<p class="description"><?php _e( 'Enable or disable two-factor authentication.', 'nexifymy-security' ); ?></p>
@@ -4231,7 +4312,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-2fa-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="2fa-status" style="margin-left: 15px;"></span>
+					<span id="2fa-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -4250,7 +4331,7 @@ class NexifyMy_Security_Admin {
 				<h3><span class="dashicons dashicons-hammer"></span> <?php _e( 'Security Hardening', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Reduce attack surface by disabling unnecessary features and hardening WordPress configuration.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Reduce attack surface by disabling unnecessary features and hardening WordPress configuration.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr class="nms-form-section-header">
 						<th colspan="2"><h4><span class="dashicons dashicons-edit"></span> <?php _e( 'Editor & File Access', 'nexifymy-security' ); ?></h4></th>
@@ -4470,7 +4551,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-hardening-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="hardening-status" style="margin-left: 15px;"></span>
+					<span id="hardening-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -4482,7 +4563,11 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_hide_login_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$hide_login = isset( $settings['hide_login'] ) ? $settings['hide_login'] : array();
+		$hide_login_enabled = array_key_exists( 'enabled', $hide_login )
+			? ! empty( $hide_login['enabled'] )
+			: ! empty( $modules['hide_login_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header">
@@ -4492,16 +4577,16 @@ class NexifyMy_Security_Admin {
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Hide Login', 'nexifymy-security' ); ?></th>
-						<td><label class="nms-toggle"><input type="checkbox" id="hide-login-enabled" <?php checked( ! empty( $hide_login['enabled'] ) ); ?>><span class="nms-toggle-slider"></span></label></td>
+						<td><label class="nms-toggle"><input type="checkbox" id="hide-login-enabled" <?php checked( $hide_login_enabled ); ?>><span class="nms-toggle-slider"></span></label></td>
 					</tr>
 					<tr>
 						<th><?php _e( 'Custom Login URL', 'nexifymy-security' ); ?></th>
-						<td><input type="text" id="hide-login-url" value="<?php echo esc_attr( $hide_login['login_url'] ?? '' ); ?>" class="regular-text" placeholder="my-secret-login"></td>
+						<td><input type="text" id="hide-login-url" value="<?php echo esc_attr( $hide_login['login_slug'] ?? ( $hide_login['login_url'] ?? '' ) ); ?>" class="regular-text" placeholder="my-secret-login"></td>
 					</tr>
 				</table>
 				<p class="submit">
 					<button type="button" id="save-hide-login-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="hide-login-status" style="margin-left: 15px;"></span>
+					<span id="hide-login-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -4532,7 +4617,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-pass-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="pass-status" style="margin-left: 15px;"></span>
+					<span id="pass-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -4544,7 +4629,14 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_captcha_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$captcha = isset( $settings['captcha'] ) ? $settings['captcha'] : array();
+		$captcha_provider = $captcha['provider'] ?? 'nexifymy';
+		$nexifymy_row_class = 'nexifymy' === $captcha_provider ? 'nms-table-row-visible' : 'nms-table-row-hidden';
+		$external_row_class = 'nexifymy' !== $captcha_provider ? 'nms-table-row-visible' : 'nms-table-row-hidden';
+		$captcha_enabled = array_key_exists( 'enabled', $captcha )
+			? ! empty( $captcha['enabled'] )
+			: ! empty( $modules['captcha_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header">
@@ -4554,7 +4646,7 @@ class NexifyMy_Security_Admin {
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Captcha', 'nexifymy-security' ); ?></th>
-						<td><label class="nms-toggle"><input type="checkbox" id="captcha-enabled" <?php checked( ! empty( $captcha['enabled'] ) ); ?>><span class="nms-toggle-slider"></span></label></td>
+						<td><label class="nms-toggle"><input type="checkbox" id="captcha-enabled" <?php checked( $captcha_enabled ); ?>><span class="nms-toggle-slider"></span></label></td>
 					</tr>
 					<tr>
 						<th><?php _e( 'Captcha Provider', 'nexifymy-security' ); ?></th>
@@ -4570,7 +4662,7 @@ class NexifyMy_Security_Admin {
 					</tr>
 
 					<!-- NexifyMy Captcha Settings -->
-					<tr class="nexifymy-captcha-row" style="display: <?php echo ( $captcha['provider'] ?? 'nexifymy' ) === 'nexifymy' ? 'table-row' : 'none'; ?>;">
+					<tr class="nexifymy-captcha-row <?php echo esc_attr( $nexifymy_row_class ); ?>">
 						<th><?php _e( 'NexifyMy Captcha Type', 'nexifymy-security' ); ?></th>
 						<td>
 							<select id="captcha-nexifymy-type" class="regular-text">
@@ -4582,7 +4674,7 @@ class NexifyMy_Security_Admin {
 							<p class="description"><?php _e( 'Choose the type of challenge for NexifyMy captcha.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
-					<tr class="nexifymy-captcha-row" style="display: <?php echo ( $captcha['provider'] ?? 'nexifymy' ) === 'nexifymy' ? 'table-row' : 'none'; ?>;">
+					<tr class="nexifymy-captcha-row <?php echo esc_attr( $nexifymy_row_class ); ?>">
 						<th><?php _e( 'Difficulty Level', 'nexifymy-security' ); ?></th>
 						<td>
 							<select id="captcha-difficulty" class="regular-text">
@@ -4595,14 +4687,14 @@ class NexifyMy_Security_Admin {
 					</tr>
 
 					<!-- Google reCAPTCHA / Cloudflare Settings -->
-					<tr class="external-captcha-row" style="display: <?php echo ( $captcha['provider'] ?? 'nexifymy' ) !== 'nexifymy' ? 'table-row' : 'none'; ?>;">
+					<tr class="external-captcha-row <?php echo esc_attr( $external_row_class ); ?>">
 						<th><?php _e( 'Site Key', 'nexifymy-security' ); ?></th>
 						<td>
 							<input type="text" id="captcha-site-key" value="<?php echo esc_attr( $captcha['site_key'] ?? '' ); ?>" class="regular-text">
 							<p class="description"><?php _e( 'Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
-					<tr class="external-captcha-row" style="display: <?php echo ( $captcha['provider'] ?? 'nexifymy' ) !== 'nexifymy' ? 'table-row' : 'none'; ?>;">
+					<tr class="external-captcha-row <?php echo esc_attr( $external_row_class ); ?>">
 						<th><?php _e( 'Secret Key', 'nexifymy-security' ); ?></th>
 						<td><input type="password" id="captcha-secret-key" value="<?php echo esc_attr( $captcha['secret_key'] ?? '' ); ?>" class="regular-text"></td>
 					</tr>
@@ -4620,24 +4712,10 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-captcha-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="captcha-status" style="margin-left: 15px;"></span>
+					<span id="captcha-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
-		<script>
-		jQuery(document).ready(function($) {
-			$('#captcha-provider').on('change', function() {
-				var provider = $(this).val();
-				if (provider === 'nexifymy') {
-					$('.nexifymy-captcha-row').show();
-					$('.external-captcha-row').hide();
-				} else {
-					$('.nexifymy-captcha-row').hide();
-					$('.external-captcha-row').show();
-				}
-			});
-		});
-		</script>
 		<?php
 	}
 
@@ -4651,16 +4729,16 @@ class NexifyMy_Security_Admin {
 			array( 'name' => __( 'Live Traffic', 'nexifymy-security' ), 'icon' => 'visibility', 'desc' => __( 'Monitor real-time traffic', 'nexifymy-security' ), 'tab' => 'traffic' ),
 		);
 		?>
-		<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+		<div class="nms-tools-hub-grid">
 			<?php foreach ( $tools as $tool ) : ?>
-			<div class="nms-card" style="margin: 0; cursor: pointer;" onclick="jQuery('.nms-page-tab[data-tab=\'<?php echo esc_attr( $tool['tab'] ); ?>\']').click();">
-				<div class="nms-card-body" style="display: flex; align-items: center; gap: 16px;">
-					<div class="nms-stat-icon blue" style="width: 48px; height: 48px;">
+					<div class="nms-card nms-open-page-tab nms-tools-hub-card" data-page-tab="<?php echo esc_attr( $tool['tab'] ); ?>">
+				<div class="nms-card-body nms-tools-hub-body">
+					<div class="nms-stat-icon blue nms-tools-hub-icon">
 						<span class="dashicons dashicons-<?php echo esc_attr( $tool['icon'] ); ?>"></span>
 					</div>
 					<div>
-						<h4 style="margin: 0 0 4px; font-size: 15px; font-weight: 600;"><?php echo esc_html( $tool['name'] ); ?></h4>
-						<p style="margin: 0; font-size: 13px; color: var(--nms-gray-500);"><?php echo esc_html( $tool['desc'] ); ?></p>
+						<h4 class="nms-tools-hub-title"><?php echo esc_html( $tool['name'] ); ?></h4>
+						<p class="nms-tools-hub-desc"><?php echo esc_html( $tool['desc'] ); ?></p>
 					</div>
 				</div>
 			</div>
@@ -4709,7 +4787,7 @@ class NexifyMy_Security_Admin {
 			<div class="nms-card-header"><h3><?php _e( 'Database Actions', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
 				<button class="nms-btn nms-btn-primary" id="optimize-db"><?php _e( 'Optimize Database', 'nexifymy-security' ); ?></button>
-				<span id="db-status" style="margin-left: 15px;"></span>
+				<span id="db-status" class="nms-status-inline"></span>
 			</div>
 		</div>
 		<?php
@@ -4724,11 +4802,11 @@ class NexifyMy_Security_Admin {
 			<div class="nms-card-header"><h3><?php _e( 'WordPress Core File Verification', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
 				<p class="description"><?php _e( 'Compare your WordPress core files against the official checksums to detect modifications.', 'nexifymy-security' ); ?></p>
-				<div style="margin-top: 20px;">
+				<div class="nms-mt-20">
 					<button class="nms-btn nms-btn-primary" id="verify-core"><?php _e( 'Verify Core Files', 'nexifymy-security' ); ?></button>
-					<span id="core-status" style="margin-left: 15px;"></span>
+					<span id="core-status" class="nms-status-inline"></span>
 				</div>
-				<div id="core-results" style="margin-top: 20px; display: none;"></div>
+				<div id="core-results" class="nms-auto-s151"></div>
 			</div>
 		</div>
 		<?php
@@ -4740,7 +4818,7 @@ class NexifyMy_Security_Admin {
 	private function render_live_traffic_content() {
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Live Traffic Monitor', 'nexifymy-security' ); ?></h3>
 				<button class="nms-btn nms-btn-secondary" id="refresh-traffic"><?php _e( 'Refresh', 'nexifymy-security' ); ?></button>
 			</div>
@@ -4773,7 +4851,7 @@ class NexifyMy_Security_Admin {
 		$settings = $nexifymy_supply_chain ? $nexifymy_supply_chain->get_settings() : array();
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Supply Chain Security', 'nexifymy-security' ); ?></h3>
 				<div>
 					<button class="nms-btn nms-btn-primary" id="run-supply-chain-scan">
@@ -4786,7 +4864,7 @@ class NexifyMy_Security_Admin {
 					<p><?php _e( 'No scan results available. Click "Run Scan" to analyze your dependencies.', 'nexifymy-security' ); ?></p>
 				<?php else : ?>
 					<!-- Summary Stats -->
-					<div class="nms-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
+					<div class="nms-stats-grid nms-auto-s061">
 						<div class="nms-stat-card">
 							<div class="nms-stat-label"><?php _e( 'Last Scan', 'nexifymy-security' ); ?></div>
 							<div class="nms-stat-value"><?php echo esc_html( $results['scanned_at'] ?? '-' ); ?></div>
@@ -4799,9 +4877,9 @@ class NexifyMy_Security_Admin {
 
 					<!-- Plugins Section -->
 					<?php if ( ! empty( $results['plugins'] ) ) : ?>
-					<div class="nms-section" style="margin-bottom: 25px;">
+					<div class="nms-section nms-auto-s138">
 						<h4><?php _e( 'Plugins', 'nexifymy-security' ); ?></h4>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 15px;">
+						<div class="nms-auto-s062">
 							<div class="nms-info-box">
 								<strong><?php echo intval( $results['plugins']['total'] ?? 0 ); ?></strong> Total Plugins
 							</div>
@@ -4851,9 +4929,9 @@ class NexifyMy_Security_Admin {
 
 					<!-- Composer Dependencies -->
 					<?php if ( ! empty( $results['composer']['found'] ) ) : ?>
-					<div class="nms-section" style="margin-bottom: 25px;">
+					<div class="nms-section nms-auto-s138">
 						<h4><?php _e( 'Composer Dependencies', 'nexifymy-security' ); ?></h4>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 15px;">
+						<div class="nms-auto-s062">
 							<div class="nms-info-box">
 								<strong><?php echo count( $results['composer']['packages'] ?? array() ); ?></strong> Packages
 							</div>
@@ -4887,9 +4965,9 @@ class NexifyMy_Security_Admin {
 
 					<!-- NPM Dependencies -->
 					<?php if ( ! empty( $results['npm']['found'] ) ) : ?>
-					<div class="nms-section" style="margin-bottom: 25px;">
+					<div class="nms-section nms-auto-s138">
 						<h4><?php _e( 'NPM Dependencies', 'nexifymy-security' ); ?></h4>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 15px;">
+						<div class="nms-auto-s062">
 							<div class="nms-info-box">
 								<strong><?php echo count( $results['npm']['packages'] ?? array() ); ?></strong> Packages
 							</div>
@@ -4925,7 +5003,7 @@ class NexifyMy_Security_Admin {
 					<?php if ( ! empty( $results['external_scripts']['total'] ) ) : ?>
 					<div class="nms-section">
 						<h4><?php _e( 'External Scripts & CDN Resources', 'nexifymy-security' ); ?></h4>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-bottom: 15px;">
+						<div class="nms-auto-s062">
 							<div class="nms-info-box">
 								<strong><?php echo intval( $results['external_scripts']['total'] ?? 0 ); ?></strong> External Scripts
 							</div>
@@ -4970,7 +5048,7 @@ class NexifyMy_Security_Admin {
 		</div>
 
 		<!-- Settings Card -->
-		<div class="nms-card" style="margin-top: 20px;">
+		<div class="nms-card nms-mt-20">
 			<div class="nms-card-header">
 				<h3><?php _e( 'Supply Chain Settings', 'nexifymy-security' ); ?></h3>
 			</div>
@@ -5047,80 +5125,137 @@ class NexifyMy_Security_Admin {
 			</div>
 		</div>
 
-		<script>
-		jQuery(document).ready(function($) {
-			// Run scan
-			$('#run-supply-chain-scan').on('click', function() {
-				var btn = $(this);
-				btn.prop('disabled', true).html('<span class="dashicons dashicons-update spin"></span> Scanning...');
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_supply_chain_scan',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>'
-				}, function(response) {
-					if (response.success) {
-						location.reload();
-					} else {
-						alert('Scan failed: ' + (response.data || 'Unknown error'));
-						btn.prop('disabled', false).html('<span class="dashicons dashicons-update"></span> Run Scan');
-					}
-				});
-			});
-
-			// Verify CDN script
-			$(document).on('click', '.verify-cdn-script', function() {
-				var btn = $(this);
-				var url = btn.data('url');
-				btn.prop('disabled', true).text('Generating...');
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_verify_cdn_script',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>',
-					url: url
-				}, function(response) {
-					if (response.success && response.data.integrity) {
-						var integrity = response.data.integrity;
-						prompt('Copy this SRI hash:', integrity);
-					} else {
-						alert('Failed to generate SRI hash');
-					}
-					btn.prop('disabled', false).text('Generate SRI');
-				});
-			});
-
-			// Save settings
-			$('#save-supply-chain-settings').on('click', function() {
-				var settings = {
-					enabled: true,
-					scan_plugins: $('#supply-chain-scan-plugins').is(':checked'),
-					scan_themes: $('#supply-chain-scan-themes').is(':checked'),
-					scan_composer: $('#supply-chain-scan-composer').is(':checked'),
-					scan_npm: $('#supply-chain-scan-npm').is(':checked'),
-					monitor_external_scripts: $('#supply-chain-monitor-scripts').is(':checked'),
-					verify_cdn_integrity: true,
-					auto_scan_schedule: $('#supply-chain-auto-scan').val(),
-					notify_on_issues: $('#supply-chain-notify').is(':checked')
-				};
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_save_module_settings',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>',
-					module: 'supply_chain',
-					settings: settings
-				}, function(response) {
-					if (response.success) {
-						alert('Settings saved successfully');
-					}
-				});
-			});
-		});
-		</script>
 		<?php
 	}
 
 	/**
 	 * Render compliance & reporting content.
 	 */
+	/**
+	 * Render Deception Technology settings content.
+	 */
+	private function render_deception_content() {
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+		$deception_enabled = ! empty( $settings['deception_enabled'] ) || ! empty( $modules['deception_enabled'] );
+		$honeytrap_paths = isset( $settings['deception_honeytrap_paths'] )
+			? $settings['deception_honeytrap_paths']
+			: ( $modules['deception_honeytrap_paths'] ?? '' );
+		$enum_trap = array_key_exists( 'deception_enum_trap', $settings )
+			? ! empty( $settings['deception_enum_trap'] )
+			: ( array_key_exists( 'deception_enum_trap', $modules ) ? ! empty( $modules['deception_enum_trap'] ) : true );
+		$enum_block = array_key_exists( 'deception_enum_block', $settings )
+			? ! empty( $settings['deception_enum_block'] )
+			: ! empty( $modules['deception_enum_block'] );
+		$block_all_enum = array_key_exists( 'deception_block_all_enum', $settings )
+			? ! empty( $settings['deception_block_all_enum'] )
+			: ! empty( $modules['deception_block_all_enum'] );
+		
+		// Convert array to newline-separated string for textarea
+		if ( is_array( $honeytrap_paths ) ) {
+			$honeytrap_paths = implode( "\n", $honeytrap_paths );
+		}
+		?>
+		<div class="nms-card">
+			<div class="nms-card-header nms-flex-between">
+				<h3><?php _e( 'Honeytrap Configuration', 'nexifymy-security' ); ?></h3>
+				<label class="nms-toggle">
+					<input type="checkbox" id="deception-enabled" <?php checked( $deception_enabled ); ?> />
+					<span class="nms-toggle-slider"></span>
+					<span class="nms-toggle-label"><?php _e( 'Enable Deception Module', 'nexifymy-security' ); ?></span>
+				</label>
+			</div>
+			<div class="nms-card-body">
+				<div class="nms-info-box nms-auto-s003">
+					<p class="nms-auto-s129"><strong><i class="fa-solid fa-triangle-exclamation"></i> <?php _e( 'How Deception Works:', 'nexifymy-security' ); ?></strong> <?php _e( 'The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning.', 'nexifymy-security' ); ?></p>
+				</div>
+
+				<div class="nms-form-group">
+					<label for="honeytrap-paths" class="nms-auto-s120">
+						<?php _e( 'Custom Honeytrap Paths', 'nexifymy-security' ); ?>
+					</label>
+					<p class="nms-auto-s011">
+						<?php _e( 'Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active.', 'nexifymy-security' ); ?>
+					</p>
+					<textarea id="honeytrap-paths" rows="6" class="nms-auto-s194" placeholder="/secret-admin/
+/backup.sql
+/.env.production"><?php echo esc_textarea( $honeytrap_paths ); ?></textarea>
+				</div>
+
+				<div class="nms-auto-s153">
+					<h4 class="nms-auto-s125"><?php _e( 'Default Honeytrap Paths (Always Active)', 'nexifymy-security' ); ?></h4>
+					<div class="nms-auto-s056">
+						<span>/backup.sql</span>
+						<span>/wp-config.php.bak</span>
+						<span>/.env</span>
+						<span>/.git/config</span>
+						<span>/phpmyadmin/</span>
+						<span>/admin-test/</span>
+						<span>/phpinfo.php</span>
+						<span>/debug.log</span>
+						<span>/.htpasswd</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="nms-card nms-mt-20">
+			<div class="nms-card-header">
+				<h3><?php _e( 'Login Page Honeypot', 'nexifymy-security' ); ?></h3>
+			</div>
+			<div class="nms-card-body">
+				<p class="nms-auto-s012">
+					<?php _e( 'An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking.', 'nexifymy-security' ); ?>
+				</p>
+				<div class="nms-status-badge nms-auto-s063">
+					<i class="fa-solid fa-circle-check nms-auto-s084"></i> <?php _e( 'Active', 'nexifymy-security' ); ?>
+				</div>
+				<p class="nms-auto-s147">
+					<?php _e( 'This protection is always enabled when the Deception module is active. No configuration required.', 'nexifymy-security' ); ?>
+				</p>
+			</div>
+		</div>
+
+		<div class="nms-card nms-mt-20">
+			<div class="nms-card-header">
+				<h3><?php _e( 'User Enumeration Trap', 'nexifymy-security' ); ?></h3>
+			</div>
+			<div class="nms-card-body">
+				<p class="nms-auto-s013">
+					<?php _e( 'Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc.', 'nexifymy-security' ); ?>
+				</p>
+				
+				<div class="nms-form-group">
+					<label class="nms-checkbox">
+						<input type="checkbox" id="enum-trap-enabled" <?php checked( $enum_trap ); ?> />
+						<span><?php _e( 'Enable user enumeration detection', 'nexifymy-security' ); ?></span>
+					</label>
+				</div>
+
+				<div class="nms-form-group nms-auto-s146">
+					<label class="nms-checkbox">
+						<input type="checkbox" id="enum-hard-block" <?php checked( $enum_block ); ?> />
+						<span><?php _e( 'Hard block on enumeration attempts (default: soft redirect to homepage)', 'nexifymy-security' ); ?></span>
+					</label>
+				</div>
+
+				<div class="nms-form-group nms-auto-s146">
+					<label class="nms-checkbox">
+						<input type="checkbox" id="enum-block-all" <?php checked( $block_all_enum ); ?> />
+						<span class="nms-auto-s016"><?php _e( 'Block ALL author enumeration (even for existing users)', 'nexifymy-security' ); ?></span>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<button class="nms-btn nms-btn-primary nms-auto-s156" id="save-deception-settings" >
+			<span class="dashicons dashicons-saved"></span> <?php _e( 'Save Changes', 'nexifymy-security' ); ?>
+		</button>
+		<div id="deception-status" class="nms-auto-s146"></div>
+
+		<?php
+	}
+
 	private function render_compliance_content() {
 		global $nexifymy_compliance;
 		$reports = $nexifymy_compliance ? $nexifymy_compliance->get_reports() : array();
@@ -5133,7 +5268,7 @@ class NexifyMy_Security_Admin {
 		}
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Compliance & Security Reporting', 'nexifymy-security' ); ?></h3>
 				<div>
 					<button class="nms-btn nms-btn-secondary" id="run-compliance-check">
@@ -5146,37 +5281,41 @@ class NexifyMy_Security_Admin {
 			</div>
 			<div class="nms-card-body">
 				<?php if ( $latest_report ) : ?>
-					<div class="nms-compliance-summary" style="display: grid; grid-template-columns: 180px 1fr; gap: 30px; padding: 30px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; margin-bottom: 30px;">
-						<div style="text-align: center;">
-							<div class="nms-grade-circle" style="width: 140px; height: 140px; border-radius: 50%; background: <?php echo $latest_report['grade'] === 'A' ? '#22c55e' : ($latest_report['grade'] === 'B' ? '#84cc16' : ($latest_report['grade'] === 'C' ? '#eab308' : ($latest_report['grade'] === 'D' ? '#f97316' : '#ef4444'))); ?>; display: flex; align-items: center; justify-content: center; font-size: 64px; font-weight: bold; color: white; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin: 0 auto;">
-								<?php echo esc_html( $latest_report['grade'] ); ?>
+					<div class="nms-compliance-summary nms-auto-s051">
+						<div class="nms-auto-s181">
+							<?php
+							$grade = strtoupper( (string) $latest_report['grade'] );
+							$grade_class = 'nms-grade-' . strtolower( preg_replace( '/[^A-Z]/', '', $grade ) );
+							?>
+							<div class="nms-grade-circle <?php echo esc_attr( $grade_class ); ?>">
+								<?php echo esc_html( $grade ); ?>
 							</div>
-							<div style="color: rgba(255,255,255,0.9); margin-top: 10px; font-size: 13px;">Security Grade</div>
+							<div class="nms-auto-s023">Security Grade</div>
 						</div>
-						<div style="color: white;">
-							<h3 style="margin: 0 0 15px 0; font-size: 24px; color: white;">Security Score: <?php echo esc_html( $latest_report['score'] ); ?>%</h3>
-							<p style="opacity: 0.9; margin-bottom: 20px;">Last generated: <?php echo esc_html( $latest_report['generated_at'] ); ?></p>
-							<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-								<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
-									<div style="font-size: 28px; font-weight: bold; color: #22c55e;"><i class="fas fa-check-circle"></i></div>
-									<div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">Compliant</div>
+						<div class="nms-auto-s035">
+							<h3 class="nms-auto-s126">Security Score: <?php echo esc_html( $latest_report['score'] ); ?>%</h3>
+							<p class="nms-auto-s160">Last generated: <?php echo esc_html( $latest_report['generated_at'] ); ?></p>
+							<div class="nms-auto-s057">
+								<div class="nms-auto-s004">
+									<div class="nms-auto-s112"><i class="fas fa-check-circle"></i></div>
+									<div class="nms-auto-s078">Compliant</div>
 								</div>
-								<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
-									<div style="font-size: 28px; font-weight: bold; color: #ef4444;"><i class="fas fa-times-circle"></i></div>
-									<div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">Critical</div>
+								<div class="nms-auto-s004">
+									<div class="nms-auto-s114"><i class="fas fa-times-circle"></i></div>
+									<div class="nms-auto-s078">Critical</div>
 								</div>
-								<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
-									<div style="font-size: 28px; font-weight: bold; color: #eab308;"><i class="fas fa-exclamation-triangle"></i></div>
-									<div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">Warnings</div>
+								<div class="nms-auto-s004">
+									<div class="nms-auto-s113"><i class="fas fa-exclamation-triangle"></i></div>
+									<div class="nms-auto-s078">Warnings</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				<?php else : ?>
-					<div class="nms-empty-state" style="text-align: center; padding: 60px 20px; background: #f8fafc; border-radius: 12px; margin-bottom: 30px;">
-						<span class="dashicons dashicons-media-document" style="font-size: 64px; color: #cbd5e1; margin-bottom: 15px;"></span>
-						<h3 style="margin: 0 0 10px 0; color: #64748b;">No Reports Generated Yet</h3>
-						<p style="color: #94a3b8; margin-bottom: 20px;">Generate your first compliance report to assess your security posture.</p>
+					<div class="nms-empty-state nms-auto-s188">
+						<span class="dashicons dashicons-media-document nms-auto-s118"></span>
+						<h3 class="nms-auto-s123">No Reports Generated Yet</h3>
+						<p class="nms-auto-s014">Generate your first compliance report to assess your security posture.</p>
 						<button class="nms-btn nms-btn-primary" id="generate-first-report">
 							<span class="dashicons dashicons-media-document"></span> Generate First Report
 						</button>
@@ -5184,8 +5323,8 @@ class NexifyMy_Security_Admin {
 				<?php endif; ?>
 
 				<!-- Quick Compliance Check Results -->
-				<div id="quick-compliance-results" style="display: none; margin-bottom: 30px;">
-					<h4 style="margin: 0 0 15px 0;">Compliance Check Results</h4>
+				<div id="quick-compliance-results" class="nms-auto-s066">
+					<h4 class="nms-auto-s125">Compliance Check Results</h4>
 					<div id="compliance-check-grid"></div>
 				</div>
 
@@ -5208,7 +5347,7 @@ class NexifyMy_Security_Admin {
 									<td><?php echo esc_html( $report['generated_at'] ); ?></td>
 									<td><?php echo esc_html( $report['score'] ); ?>%</td>
 									<td>
-										<span class="nms-grade-badge nms-grade-<?php echo esc_attr( strtolower( $report['grade'] ) ); ?>" style="display: inline-block; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-weight: bold; color: white;">
+										<span class="nms-grade-badge nms-grade-<?php echo esc_attr( strtolower( $report['grade'] ) ); ?> nms-auto-s064">
 											<?php echo esc_html( $report['grade'] ); ?>
 										</span>
 									</td>
@@ -5229,15 +5368,15 @@ class NexifyMy_Security_Admin {
 		</div>
 
 		<!-- Settings Card -->
-		<div class="nms-card" style="margin-top: 20px;">
+		<div class="nms-card nms-mt-20">
 			<div class="nms-card-header">
 				<h3><?php _e( 'Compliance Settings', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
 				<table class="form-table">
 					<tr>
-						<th style="vertical-align: middle;"><?php _e( 'Auto-Generate Reports', 'nexifymy-security' ); ?></th>
-						<td style="vertical-align: middle;">
+						<th class="nms-auto-s191"><?php _e( 'Auto-Generate Reports', 'nexifymy-security' ); ?></th>
+						<td class="nms-auto-s191">
 							<label class="nms-toggle">
 								<input type="checkbox" id="compliance-auto-generate" <?php checked( ! empty( $settings['auto_generate'] ) ); ?>>
 								<span class="nms-toggle-slider"></span>
@@ -5246,8 +5385,8 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 					<tr>
-						<th style="vertical-align: middle;"><?php _e( 'Report Schedule', 'nexifymy-security' ); ?></th>
-						<td style="vertical-align: middle;">
+						<th class="nms-auto-s191"><?php _e( 'Report Schedule', 'nexifymy-security' ); ?></th>
+						<td class="nms-auto-s191">
 							<select id="compliance-schedule">
 								<option value="daily" <?php selected( $settings['schedule'] ?? '', 'daily' ); ?>><?php _e( 'Daily', 'nexifymy-security' ); ?></option>
 								<option value="weekly" <?php selected( $settings['schedule'] ?? '', 'weekly' ); ?>><?php _e( 'Weekly', 'nexifymy-security' ); ?></option>
@@ -5256,8 +5395,8 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 					<tr>
-						<th style="vertical-align: middle;"><?php _e( 'Email Reports', 'nexifymy-security' ); ?></th>
-						<td style="vertical-align: middle;">
+						<th class="nms-auto-s191"><?php _e( 'Email Reports', 'nexifymy-security' ); ?></th>
+						<td class="nms-auto-s191">
 							<label class="nms-toggle">
 								<input type="checkbox" id="compliance-email-reports" <?php checked( ! empty( $settings['email_reports'] ) ); ?>>
 								<span class="nms-toggle-slider"></span>
@@ -5315,127 +5454,6 @@ class NexifyMy_Security_Admin {
 			</div>
 		</div>
 
-		<script>
-		jQuery(document).ready(function($) {
-			// Generate report
-			$('#generate-compliance-report, #generate-first-report').on('click', function() {
-				var btn = $(this);
-				btn.prop('disabled', true).html('<span class="dashicons dashicons-update spin"></span> Generating...');
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_generate_report',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>'
-				}, function(response) {
-					if (response.success) {
-						location.reload();
-					} else {
-						alert('Report generation failed: ' + (response.data || 'Unknown error'));
-						btn.prop('disabled', false).html('<span class="dashicons dashicons-media-document"></span> Generate Report');
-					}
-				});
-			});
-
-			// Run quick compliance check
-			$('#run-compliance-check').on('click', function() {
-				var btn = $(this);
-				btn.prop('disabled', true).html('<span class="dashicons dashicons-update spin"></span> Checking...');
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_run_compliance_check',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>'
-				}, function(response) {
-					if (response.success) {
-						displayComplianceResults(response.data);
-						btn.prop('disabled', false).html('<span class="dashicons dashicons-yes-alt"></span> Run Quick Check');
-					} else {
-						alert('Check failed: ' + (response.data || 'Unknown error'));
-						btn.prop('disabled', false).html('<span class="dashicons dashicons-yes-alt"></span> Run Quick Check');
-					}
-				});
-			});
-
-			function displayComplianceResults(results) {
-				var html = '<div style="display: grid; gap: 20px;">';
-
-				$.each(results, function(category, data) {
-					var passed = 0;
-					var failed = 0;
-					var checks = data.checks;
-
-					$.each(checks, function(key, check) {
-						if (check.passed) passed++;
-						else failed++;
-					});
-
-					var total = passed + failed;
-					var percentage = total > 0 ? Math.round((passed / total) * 100) : 0;
-
-					html += '<div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">';
-					html += '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">';
-					html += '<h4 style="margin: 0;">' + data.name + '</h4>';
-					html += '<span style="font-size: 24px; font-weight: bold; color: ' + (percentage >= 80 ? '#22c55e' : (percentage >= 60 ? '#eab308' : '#ef4444')) + ';">' + percentage + '%</span>';
-					html += '</div>';
-
-					html += '<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">';
-					$.each(checks, function(key, check) {
-						html += '<div style="display: flex; align-items: center; padding: 8px; background: ' + (check.passed ? '#f0fdf4' : '#fef2f2') + '; border-radius: 6px;">';
-						html += '<span style="margin-right: 10px;">' + (check.passed ? '✓' : '✗') + '</span>';
-						html += '<span style="font-size: 13px;">' + check.name + '</span>';
-						html += '</div>';
-					});
-					html += '</div></div>';
-				});
-
-				html += '</div>';
-
-				$('#compliance-check-grid').html(html);
-				$('#quick-compliance-results').slideDown();
-			}
-
-			// Download report
-			$(document).on('click', '.download-report', function() {
-				var reportId = $(this).data('report-id');
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_download_report',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>',
-					report_id: reportId
-				}, function(response) {
-					if (response.success && response.data.url) {
-						window.open(response.data.url, '_blank');
-					} else {
-						alert('Failed to download report');
-					}
-				});
-			});
-
-			// Save settings
-			$('#save-compliance-settings').on('click', function() {
-				var settings = {
-					enabled: true,
-					auto_generate: $('#compliance-auto-generate').is(':checked'),
-					schedule: $('#compliance-schedule').val(),
-					email_reports: $('#compliance-email-reports').is(':checked'),
-					include_gdpr: $('#compliance-include-gdpr').is(':checked'),
-					include_security: $('#compliance-include-security').is(':checked'),
-					include_performance: $('#compliance-include-performance').is(':checked'),
-					include_threats: $('#compliance-include-threats').is(':checked'),
-					retention_days: parseInt($('#compliance-retention-days').val())
-				};
-
-				$.post(ajaxurl, {
-					action: 'nexifymy_save_module_settings',
-					nonce: '<?php echo wp_create_nonce( 'nexifymy_security_nonce' ); ?>',
-					module: 'compliance',
-					settings: settings
-				}, function(response) {
-					if (response.success) {
-						alert('Settings saved successfully');
-					}
-				});
-			});
-		});
-		</script>
 		<?php
 	}
 
@@ -5510,7 +5528,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-general-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="general-status" style="margin-left: 15px;"></span>
+					<span id="general-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -5523,7 +5541,7 @@ class NexifyMy_Security_Admin {
 	private function render_logs_content() {
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Security Logs', 'nexifymy-security' ); ?></h3>
 				<div>
 					<button class="nms-btn nms-btn-secondary" id="refresh-logs"><?php _e( 'Refresh', 'nexifymy-security' ); ?></button>
@@ -5556,7 +5574,7 @@ class NexifyMy_Security_Admin {
 	private function render_notifications_content() {
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Security Notifications', 'nexifymy-security' ); ?></h3>
 				<button class="nms-btn nms-btn-secondary" id="mark-all-read"><?php _e( 'Mark All Read', 'nexifymy-security' ); ?></button>
 			</div>
@@ -5663,25 +5681,25 @@ class NexifyMy_Security_Admin {
 						<button class="nms-btn nms-btn-primary scan-btn"><?php _e( 'Start Scan', 'nexifymy-security' ); ?></button>
 					</div>
 				</div>
-				<div id="scan-progress" class="nms-scan-progress-panel" style="display: none;">
+				<div id="scan-progress" class="nms-scan-progress-panel nms-auto-s065">
 					<div class="nms-progress-header">
 						<span class="dashicons dashicons-update spin"></span>
 						<span id="scan-status-text"><?php _e( 'Initializing...', 'nexifymy-security' ); ?></span>
 					</div>
-					<div class="nms-progress-bar"><div class="nms-progress-fill" style="width: 0%;"></div></div>
+					<div class="nms-progress-bar"><div class="nms-progress-fill nms-auto-s193"></div></div>
 					<div class="nms-progress-info">
 						<span id="scan-files-count">0 / 0 files</span>
 						<span class="nms-progress-percent">0%</span>
 					</div>
-					<div class="nms-progress-current" style="margin-top: 10px; font-size: 12px; color: #666;">
+					<div class="nms-progress-current nms-auto-s145">
 						<strong><?php _e( 'Current:', 'nexifymy-security' ); ?></strong>
-						<code id="scan-current-file" style="background: #f5f5f5; padding: 2px 6px; border-radius: 3px;">—</code>
+						<code id="scan-current-file" class="nms-auto-s002">-</code>
 					</div>
-					<div id="scan-threat-counts" class="nms-threat-counts" style="margin-top: 10px; display: flex; gap: 15px; font-size: 13px;">
+					<div id="scan-threat-counts" class="nms-threat-counts nms-auto-s144">
 						<!-- Filled dynamically by JS -->
 					</div>
 				</div>
-				<div id="scan-results" style="display: none; margin-top: 20px;">
+				<div id="scan-results" class="nms-auto-s067">
 					<div id="results-content"></div>
 				</div>
 			</div>
@@ -5705,47 +5723,48 @@ class NexifyMy_Security_Admin {
 
 		$progress_width = $health_score;
 		$progress_color = $display['color'];
+		$health_status_class = 'nms-health-status-' . sanitize_html_class( $health_status );
 		?>
-		<div class="nms-card nms-health-dashboard" style="margin-bottom: 20px; border-left: 4px solid <?php echo esc_attr( $progress_color ); ?>;">
+		<div class="nms-card nms-health-dashboard nms-mb-20 <?php echo esc_attr( $health_status_class ); ?>">
 			<div class="nms-card-header">
 				<h3>
-					<span class="dashicons dashicons-heart" style="color: <?php echo esc_attr( $progress_color ); ?>;"></span>
+					<span class="dashicons dashicons-heart nms-health-icon"></span>
 					<?php _e( 'Site Security Health', 'nexifymy-security' ); ?>
 				</h3>
 			</div>
 			<div class="nms-card-body">
-				<div style="display: flex; align-items: center; gap: 30px; margin-bottom: 25px;">
-					<div style="flex: 0 0 auto;">
-						<div style="position: relative; width: 120px; height: 120px;">
-							<svg viewBox="0 0 100 100" style="transform: rotate(-90deg); width: 100%; height: 100%;">
+				<div class="nms-auto-s041">
+					<div class="nms-auto-s069">
+						<div class="nms-auto-s180">
+							<svg viewBox="0 0 100 100" class="nms-auto-s190">
 								<circle cx="50" cy="50" r="42" fill="none" stroke="#e0e0e0" stroke-width="8"></circle>
 								<circle cx="50" cy="50" r="42" fill="none" stroke="<?php echo esc_attr( $progress_color ); ?>" stroke-width="8"
 									stroke-dasharray="<?php echo esc_attr( ( $health_score / 100 ) * 264 ); ?> 264"
 									stroke-linecap="round"></circle>
 							</svg>
-							<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-								<strong style="font-size: 28px; display: block;"><?php echo esc_html( $health_score ); ?></strong>
-								<span style="font-size: 14px; color: #666;">/100</span>
+							<div class="nms-auto-s179">
+								<strong class="nms-auto-s105"><?php echo esc_html( $health_score ); ?></strong>
+								<span class="nms-auto-s082">/100</span>
 							</div>
 						</div>
 					</div>
-					<div style="flex: 1;">
-						<div style="margin-bottom: 15px;">
-							<span style="display: inline-block; padding: 6px 16px; background: <?php echo esc_attr( $progress_color ); ?>; color: white; border-radius: 20px; font-weight: 600; font-size: 14px;">
+					<div class="nms-auto-s070">
+						<div class="nms-auto-s136">
+							<span class="nms-health-pill">
 								<?php echo esc_html( $display['icon'] . ' ' . $display['label'] ); ?>
 							</span>
 						</div>
-						<div style="margin-bottom: 10px;">
+						<div class="nms-auto-s134">
 							<strong><?php _e( 'Files Scanned:', 'nexifymy-security' ); ?></strong>
 							<?php echo number_format( $health_summary['total_files_scanned'] ); ?>
 						</div>
-						<div style="margin-bottom: 10px;">
-							<strong style="color: #28a745;"><?php _e( 'Clean Files:', 'nexifymy-security' ); ?></strong>
+						<div class="nms-auto-s134">
+							<strong class="nms-auto-s010"><?php _e( 'Clean Files:', 'nexifymy-security' ); ?></strong>
 							<?php echo number_format( $health_summary['clean_files'] ); ?>
 							(<?php echo esc_html( $health_summary['clean_percentage'] ); ?>%)
 						</div>
 						<div>
-							<strong style="color: #dc3545;"><?php _e( 'Affected Files:', 'nexifymy-security' ); ?></strong>
+							<strong class="nms-auto-s017"><?php _e( 'Affected Files:', 'nexifymy-security' ); ?></strong>
 							<?php echo number_format( $health_summary['files_with_threats'] ); ?>
 							(<?php echo esc_html( $health_summary['affected_percentage'] ); ?>%)
 						</div>
@@ -5757,56 +5776,56 @@ class NexifyMy_Security_Admin {
 					$scan_results = get_option( 'nexifymy_scan_results', array() );
 					$classification_counts = $scan_results['classification_counts'] ?? array();
 					?>
-					<div style="padding: 15px; background: #f9f9f9; border-radius: 5px; margin-bottom: 20px;">
-						<h4 style="margin-top: 0; margin-bottom: 15px;">
+					<div class="nms-auto-s167">
+						<h4 class="nms-auto-s142">
 							<span class="dashicons dashicons-warning"></span>
 							<?php _e( 'Threat Breakdown:', 'nexifymy-security' ); ?>
 						</h4>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+						<div class="nms-auto-s060">
 							<?php if ( ( $classification_counts['CONFIRMED_MALWARE'] ?? 0 ) > 0 ) : ?>
-								<div style="padding: 10px; background: white; border-left: 3px solid #dc3545; border-radius: 3px;">
-									<div style="color: #dc3545; font-weight: 600; margin-bottom: 5px;">
+								<div class="nms-auto-s163">
+									<div class="nms-auto-s018">
 										<span class="dashicons dashicons-dismiss"></span> <?php _e( 'Confirmed Malware', 'nexifymy-security' ); ?>
 									</div>
-									<div style="font-size: 20px; font-weight: bold;">
+									<div class="nms-auto-s092">
 										<?php echo intval( $classification_counts['CONFIRMED_MALWARE'] ); ?>
-										<span style="font-size: 14px; color: #666;"><?php _e( 'files', 'nexifymy-security' ); ?></span>
+										<span class="nms-auto-s082"><?php _e( 'files', 'nexifymy-security' ); ?></span>
 									</div>
 								</div>
 							<?php endif; ?>
 
 							<?php if ( ( $classification_counts['SUSPICIOUS_CODE'] ?? 0 ) > 0 ) : ?>
-								<div style="padding: 10px; background: white; border-left: 3px solid #ff9800; border-radius: 3px;">
-									<div style="color: #ff9800; font-weight: 600; margin-bottom: 5px;">
+								<div class="nms-auto-s164">
+									<div class="nms-auto-s020">
 										<span class="dashicons dashicons-warning"></span> <?php _e( 'Suspicious Code', 'nexifymy-security' ); ?>
 									</div>
-									<div style="font-size: 20px; font-weight: bold;">
+									<div class="nms-auto-s092">
 										<?php echo intval( $classification_counts['SUSPICIOUS_CODE'] ); ?>
-										<span style="font-size: 14px; color: #666;"><?php _e( 'files', 'nexifymy-security' ); ?></span>
+										<span class="nms-auto-s082"><?php _e( 'files', 'nexifymy-security' ); ?></span>
 									</div>
 								</div>
 							<?php endif; ?>
 
 							<?php if ( ( $classification_counts['SECURITY_VULNERABILITY'] ?? 0 ) > 0 ) : ?>
-								<div style="padding: 10px; background: white; border-left: 3px solid #ffc107; border-radius: 3px;">
-									<div style="color: #ffc107; font-weight: 600; margin-bottom: 5px;">
+								<div class="nms-auto-s165">
+									<div class="nms-auto-s021">
 										<span class="dashicons dashicons-shield"></span> <?php _e( 'Security Vulnerabilities', 'nexifymy-security' ); ?>
 									</div>
-									<div style="font-size: 20px; font-weight: bold;">
+									<div class="nms-auto-s092">
 										<?php echo intval( $classification_counts['SECURITY_VULNERABILITY'] ); ?>
-										<span style="font-size: 14px; color: #666;"><?php _e( 'files', 'nexifymy-security' ); ?></span>
+										<span class="nms-auto-s082"><?php _e( 'files', 'nexifymy-security' ); ?></span>
 									</div>
 								</div>
 							<?php endif; ?>
 
 							<?php if ( ( $classification_counts['CODE_SMELL'] ?? 0 ) > 0 ) : ?>
-								<div style="padding: 10px; background: white; border-left: 3px solid #007bff; border-radius: 3px;">
-									<div style="color: #007bff; font-weight: 600; margin-bottom: 5px;">
+								<div class="nms-auto-s162">
+									<div class="nms-auto-s009">
 										<span class="dashicons dashicons-info"></span> <?php _e( 'Code Quality Issues', 'nexifymy-security' ); ?>
 									</div>
-									<div style="font-size: 20px; font-weight: bold;">
+									<div class="nms-auto-s092">
 										<?php echo intval( $classification_counts['CODE_SMELL'] ); ?>
-										<span style="font-size: 14px; color: #666;"><?php _e( 'files', 'nexifymy-security' ); ?></span>
+										<span class="nms-auto-s082"><?php _e( 'files', 'nexifymy-security' ); ?></span>
 									</div>
 								</div>
 							<?php endif; ?>
@@ -5814,10 +5833,10 @@ class NexifyMy_Security_Admin {
 					</div>
 				<?php endif; ?>
 
-				<div style="padding: 15px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 5px;">
-					<div style="display: flex; align-items: start; gap: 10px;">
-						<span class="dashicons dashicons-lightbulb" style="color: #ff9800; font-size: 20px; margin-top: 2px;"></span>
-						<div style="flex: 1;">
+				<div class="nms-auto-s168">
+					<div class="nms-auto-s043">
+						<span class="dashicons dashicons-lightbulb nms-auto-s019"></span>
+						<div class="nms-auto-s070">
 							<?php echo wp_kses_post( $health_summary['recommendation'] ); ?>
 						</div>
 					</div>
@@ -5836,13 +5855,13 @@ class NexifyMy_Security_Admin {
 		$quarantine_mode = $scanner_settings['quarantine_mode'] ?? ( ! empty( $scanner_settings['auto_quarantine_enabled'] ) ? 'auto' : 'manual' );
 		?>
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Quarantine Policy', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
 				<p class="description"><?php _e( 'Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware.', 'nexifymy-security' ); ?></p>
-				<div style="display: flex; gap: 12px; align-items: center;">
-					<select id="scanner-quarantine-mode" class="regular-text" style="max-width: 260px;">
+				<div class="nms-auto-s045">
+					<select id="scanner-quarantine-mode" class="regular-text nms-auto-s158">
 						<option value="manual" <?php selected( $quarantine_mode, 'manual' ); ?>><?php _e( 'Manual (Recommended)', 'nexifymy-security' ); ?></option>
 						<option value="auto" <?php selected( $quarantine_mode, 'auto' ); ?>><?php _e( 'Auto Quarantine', 'nexifymy-security' ); ?></option>
 					</select>
@@ -5853,7 +5872,7 @@ class NexifyMy_Security_Admin {
 		</div>
 
 		<div class="nms-card">
-			<div class="nms-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="nms-card-header nms-flex-between">
 				<h3><?php _e( 'Quarantined Files', 'nexifymy-security' ); ?></h3>
 				<button class="nms-btn nms-btn-secondary" id="refresh-quarantine"><?php _e( 'Refresh', 'nexifymy-security' ); ?></button>
 			</div>
@@ -5937,7 +5956,7 @@ class NexifyMy_Security_Admin {
 				$auto_update = isset( $settings['signatures']['auto_update'] ) ? $settings['signatures']['auto_update'] : true;
 				$next_update = wp_next_scheduled( 'nexifymy_update_signatures' );
 				?>
-				<table class="form-table" style="margin-bottom: 20px;">
+				<table class="form-table nms-mb-20">
 					<tr>
 						<th><?php _e( 'Auto-Update', 'nexifymy-security' ); ?></th>
 						<td>
@@ -5949,21 +5968,21 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 					<tr>
-						<th style="vertical-align: middle;"><?php _e( 'Next Update', 'nexifymy-security' ); ?></th>
-						<td style="vertical-align: middle;">
+						<th class="nms-auto-s191"><?php _e( 'Next Update', 'nexifymy-security' ); ?></th>
+						<td class="nms-auto-s191">
 							<?php if ( $next_update ) : ?>
-								<span style="color: var(--nms-success);"><?php echo human_time_diff( $next_update ) . ' ' . __( 'from now', 'nexifymy-security' ); ?></span>
+								<span class="nms-auto-s032"><?php echo human_time_diff( $next_update ) . ' ' . __( 'from now', 'nexifymy-security' ); ?></span>
 							<?php else : ?>
-								<span style="color: var(--nms-gray-500);"><?php _e( 'Not scheduled', 'nexifymy-security' ); ?></span>
+								<span class="nms-auto-s025"><?php _e( 'Not scheduled', 'nexifymy-security' ); ?></span>
 							<?php endif; ?>
 						</td>
 					</tr>
 				</table>
 				<button class="nms-btn nms-btn-primary" id="update-definitions">
-					<span class="dashicons dashicons-update" style="margin-right: 5px;"></span>
+					<span class="dashicons dashicons-update nms-auto-s141"></span>
 					<?php _e( 'Update Now', 'nexifymy-security' ); ?>
 				</button>
-				<span id="definition-status" style="margin-left: 15px;"></span>
+				<span id="definition-status" class="nms-status-inline"></span>
 			</div>
 		</div>
 		<?php
@@ -5979,7 +5998,7 @@ class NexifyMy_Security_Admin {
 		}
 		?>
 		<!-- AI Status Overview -->
-		<div class="nms-stats-row" style="margin-bottom: 24px;">
+		<div class="nms-stats-row nms-auto-s137">
 			<div class="nms-stat-card">
 				<div class="nms-stat-icon blue"><span class="dashicons dashicons-superhero"></span></div>
 				<div class="nms-stat-content">
@@ -6011,7 +6030,7 @@ class NexifyMy_Security_Admin {
 		</div>
 
 		<!-- AI Learning Status -->
-		<div class="nms-card" style="margin-bottom: 24px;">
+		<div class="nms-card nms-auto-s137">
 			<div class="nms-card-header">
 				<h3><?php _e( 'AI Learning Status', 'nexifymy-security' ); ?></h3>
 				<div class="nms-card-actions">
@@ -6026,7 +6045,7 @@ class NexifyMy_Security_Admin {
 			<div class="nms-card-body">
 				<table class="widefat">
 					<tr>
-						<th style="width: 30%;"><?php _e( 'Learning Period', 'nexifymy-security' ); ?></th>
+						<th class="nms-ai-col-label"><?php _e( 'Learning Period', 'nexifymy-security' ); ?></th>
 						<td><?php _e( '7 days (continuous)', 'nexifymy-security' ); ?></td>
 					</tr>
 					<tr>
@@ -6039,7 +6058,7 @@ class NexifyMy_Security_Admin {
 							<?php
 							if ( ! empty( $ai_status['peak_hours'] ) ) {
 								foreach ( $ai_status['peak_hours'] as $hour ) {
-									echo '<span class="nms-badge info" style="margin: 2px;">' . str_pad( $hour, 2, '0', STR_PAD_LEFT ) . ':00</span> ';
+									echo '<span class="nms-badge info nms-ai-hour-badge">' . str_pad( $hour, 2, '0', STR_PAD_LEFT ) . ':00</span> ';
 								}
 							} else {
 								_e( 'Learning...', 'nexifymy-security' );
@@ -6048,7 +6067,7 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 				</table>
-				<p class="description" style="margin-top: 15px;">
+				<p class="description nms-ai-description">
 					<?php _e( 'The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies.', 'nexifymy-security' ); ?>
 				</p>
 			</div>
@@ -6061,134 +6080,13 @@ class NexifyMy_Security_Admin {
 			</div>
 			<div class="nms-card-body">
 				<div id="ai-threats-list">
-					<p style="color: var(--nms-gray-500); text-align: center; padding: 20px;">
+					<p class="nms-empty-state">
 						<?php _e( 'Loading threat detections...', 'nexifymy-security' ); ?>
 					</p>
 				</div>
 			</div>
 		</div>
 
-		<script>
-		jQuery(document).ready(function($) {
-			// Load AI threats
-			function loadAIThreats() {
-				$.ajax({
-					url: nexifymySecurity.ajaxUrl,
-					type: 'POST',
-					data: {
-						action: 'nexifymy_get_ai_threats',
-						nonce: nexifymySecurity.nonce
-					},
-					success: function(response) {
-						if (response && response.success && response.data) {
-							displayThreats(response.data);
-						}
-					}
-				});
-			}
-
-			function displayThreats(threats) {
-				var html = '';
-				if (threats && threats.length > 0) {
-					html = '<table class="widefat striped">';
-					html += '<thead><tr>';
-					html += '<th><?php _e( 'IP Address', 'nexifymy-security' ); ?></th>';
-					html += '<th><?php _e( 'Threat Score', 'nexifymy-security' ); ?></th>';
-					html += '<th><?php _e( 'Anomalies', 'nexifymy-security' ); ?></th>';
-					html += '<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>';
-					html += '<th><?php _e( 'Time', 'nexifymy-security' ); ?></th>';
-					html += '</tr></thead><tbody>';
-
-					threats.reverse().slice(0, 20).forEach(function(threat) {
-						var statusClass = threat.status === 'blocked' ? 'danger' : 'warning';
-						var scoreClass = threat.score >= 90 ? 'danger' : (threat.score >= 75 ? 'warning' : 'info');
-						html += '<tr>';
-						html += '<td><code>' + threat.ip + '</code></td>';
-						html += '<td><span class="nms-badge ' + scoreClass + '">' + threat.score + '/100</span></td>';
-						html += '<td>' + (Array.isArray(threat.anomalies) ? threat.anomalies.join(', ') : threat.anomalies) + '</td>';
-						html += '<td><span class="nms-badge ' + statusClass + '">' + threat.status + '</span></td>';
-						html += '<td>' + (threat.blocked_at || threat.flagged_at || '') + '</td>';
-						html += '</tr>';
-					});
-
-					html += '</tbody></table>';
-				} else {
-					html = '<p style="color: var(--nms-gray-500); text-align: center; padding: 20px;"><?php _e( 'No threats detected yet.', 'nexifymy-security' ); ?></p>';
-				}
-				$('#ai-threats-list').html(html);
-			}
-
-			// Refresh AI status
-			$('#refresh-ai-status').on('click', function() {
-				var $btn = $(this);
-				$btn.prop('disabled', true);
-
-				$.ajax({
-					url: nexifymySecurity.ajaxUrl,
-					type: 'POST',
-					data: {
-						action: 'nexifymy_get_ai_status',
-						nonce: nexifymySecurity.nonce
-					},
-					success: function(response) {
-						if (response && response.success && response.data) {
-							var status = response.data;
-							$('#ai-total-records').text(status.total_records.toLocaleString());
-							$('#ai-threats-today').text(status.threats_today.toLocaleString());
-							$('#ai-countries').text(status.known_countries.toLocaleString());
-							$('#ai-last-learned').text(status.last_learned || '<?php _e( 'Never', 'nexifymy-security' ); ?>');
-
-							var hoursHtml = '';
-							if (status.peak_hours && status.peak_hours.length > 0) {
-								status.peak_hours.forEach(function(hour) {
-									hoursHtml += '<span class="nms-badge info" style="margin: 2px;">' + String(hour).padStart(2, '0') + ':00</span> ';
-								});
-							} else {
-								hoursHtml = '<?php _e( 'Learning...', 'nexifymy-security' ); ?>';
-							}
-							$('#ai-peak-hours').html(hoursHtml);
-						}
-						$btn.prop('disabled', false);
-					},
-					error: function() {
-						$btn.prop('disabled', false);
-					}
-				});
-			});
-
-			// Reset AI learning
-			$('#reset-ai-learning').on('click', function() {
-				if (!confirm('<?php _e( 'This will reset all AI learning data and behavior patterns. Continue?', 'nexifymy-security' ); ?>')) {
-					return;
-				}
-
-				var $btn = $(this);
-				$btn.prop('disabled', true).text('<?php _e( 'Resetting...', 'nexifymy-security' ); ?>');
-
-				$.ajax({
-					url: nexifymySecurity.ajaxUrl,
-					type: 'POST',
-					data: {
-						action: 'nexifymy_reset_ai_learning',
-						nonce: nexifymySecurity.nonce
-					},
-					success: function(response) {
-						if (response && response.success) {
-							alert('<?php _e( 'AI learning data reset successfully.', 'nexifymy-security' ); ?>');
-							location.reload();
-						}
-						$btn.prop('disabled', false).html('<span class="dashicons dashicons-trash"></span> <?php _e( 'Reset Learning', 'nexifymy-security' ); ?>');
-					},
-					error: function() {
-						$btn.prop('disabled', false).html('<span class="dashicons dashicons-trash"></span> <?php _e( 'Reset Learning', 'nexifymy-security' ); ?>');
-					}
-				});
-			});
-
-			// Initial load
-			loadAIThreats();
-		});
-		</script>
 		<?php
 	}
 
@@ -6205,7 +6103,7 @@ class NexifyMy_Security_Admin {
 				<h3><span class="dashicons dashicons-shield-alt"></span> <?php _e( 'Web Application Firewall (WAF)', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable WAF Module', 'nexifymy-security' ); ?></th>
@@ -6462,7 +6360,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-waf-module-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save WAF Settings', 'nexifymy-security' ); ?></button>
-					<span id="waf-module-status" style="margin-left: 15px;"></span>
+					<span id="waf-module-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -6486,7 +6384,7 @@ class NexifyMy_Security_Admin {
 				<h3><span class="dashicons dashicons-search"></span> <?php _e( 'Scanner Settings', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Configure malware scanner behavior and scheduled scanning options.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Configure malware scanner behavior and scheduled scanning options.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Scanner Module', 'nexifymy-security' ); ?></th>
@@ -6718,7 +6616,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-scanner-module-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Scanner Settings', 'nexifymy-security' ); ?></button>
-					<span id="scanner-module-status" style="margin-left: 15px;"></span>
+					<span id="scanner-module-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -6730,7 +6628,11 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_firewall_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$waf_settings = isset( $settings['waf'] ) ? $settings['waf'] : array();
+		$waf_enabled = array_key_exists( 'enabled', $waf_settings )
+			? ! empty( $waf_settings['enabled'] )
+			: ( ! empty( $modules['waf_enabled'] ) || ! empty( $modules['firewall_enabled'] ) );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><?php _e( 'Web Application Firewall', 'nexifymy-security' ); ?></h3></div>
@@ -6738,7 +6640,7 @@ class NexifyMy_Security_Admin {
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable WAF', 'nexifymy-security' ); ?></th>
-						<td><label class="nms-toggle"><input type="checkbox" id="waf-enabled" <?php checked( ! empty( $waf_settings['enabled'] ) ); ?>><span class="nms-toggle-slider"></span></label></td>
+						<td><label class="nms-toggle"><input type="checkbox" id="waf-enabled" <?php checked( $waf_enabled ); ?>><span class="nms-toggle-slider"></span></label></td>
 					</tr>
 					<tr>
 						<th><?php _e( 'Protection Level', 'nexifymy-security' ); ?></th>
@@ -6753,7 +6655,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-waf-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="waf-status" style="margin-left: 15px;"></span>
+					<span id="waf-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -6765,7 +6667,11 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_login_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$login_settings = isset( $settings['login_protection'] ) ? $settings['login_protection'] : array();
+		$login_enabled = array_key_exists( 'enabled', $login_settings )
+			? ! empty( $login_settings['enabled'] )
+			: ! empty( $modules['login_protection_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><?php _e( 'Login Protection', 'nexifymy-security' ); ?></h3></div>
@@ -6773,7 +6679,7 @@ class NexifyMy_Security_Admin {
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Protection', 'nexifymy-security' ); ?></th>
-						<td><label class="nms-toggle"><input type="checkbox" id="login-enabled" <?php checked( ! empty( $login_settings['enabled'] ) ); ?>><span class="nms-toggle-slider"></span></label></td>
+						<td><label class="nms-toggle"><input type="checkbox" id="login-enabled" <?php checked( $login_enabled ); ?>><span class="nms-toggle-slider"></span></label></td>
 					</tr>
 					<tr>
 						<th><?php _e( 'Max Attempts', 'nexifymy-security' ); ?></th>
@@ -6786,7 +6692,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-login-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="login-status" style="margin-left: 15px;"></span>
+					<span id="login-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -6798,7 +6704,11 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_geo_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$geo_settings = isset( $settings['geo_blocking'] ) ? $settings['geo_blocking'] : array();
+		$geo_enabled = array_key_exists( 'enabled', $geo_settings )
+			? ! empty( $geo_settings['enabled'] )
+			: ! empty( $modules['geo_blocking_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><?php _e( 'Geo Blocking', 'nexifymy-security' ); ?></h3></div>
@@ -6806,7 +6716,7 @@ class NexifyMy_Security_Admin {
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Geo Blocking', 'nexifymy-security' ); ?></th>
-						<td><label class="nms-toggle"><input type="checkbox" id="geo-enabled" <?php checked( ! empty( $geo_settings['enabled'] ) ); ?>><span class="nms-toggle-slider"></span></label></td>
+						<td><label class="nms-toggle"><input type="checkbox" id="geo-enabled" <?php checked( $geo_enabled ); ?>><span class="nms-toggle-slider"></span></label></td>
 					</tr>
 					<tr>
 						<th><?php _e( 'Block Mode', 'nexifymy-security' ); ?></th>
@@ -6821,10 +6731,10 @@ class NexifyMy_Security_Admin {
 					<tr>
 						<th><?php _e( 'Available Countries', 'nexifymy-security' ); ?></th>
 						<td>
-							<div style="display: flex; gap: 20px;">
+							<div class="nms-geo-layout">
 								<!-- Available Countries Checkboxes -->
-								<div style="flex: 1; max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 4px;">
-									<p style="margin-top: 0; font-weight: 600;"><?php _e( 'Select Countries:', 'nexifymy-security' ); ?></p>
+								<div class="nms-geo-list-box">
+									<p class="nms-geo-list-title"><?php _e( 'Select Countries:', 'nexifymy-security' ); ?></p>
 									<?php
 									$selected = $geo_settings['countries'] ?? array();
 									$countries = array(
@@ -6843,7 +6753,7 @@ class NexifyMy_Security_Admin {
 									foreach ( $countries as $code => $name ) {
 										if ( ! in_array( $code, $selected, true ) ) {
 											printf(
-												'<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-country-check" value="%s"> %s (%s)</label>',
+												'<label class="nms-geo-checkbox-row"><input type="checkbox" class="geo-country-check" value="%s"> %s (%s)</label>',
 												esc_attr( $code ),
 												esc_html( $name ),
 												esc_html( $code )
@@ -6854,24 +6764,24 @@ class NexifyMy_Security_Admin {
 								</div>
 
 								<!-- Add/Remove Buttons -->
-								<div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
-									<button type="button" id="geo-add-countries" class="nms-btn nms-btn-primary" style="white-space: nowrap;">
+								<div class="nms-geo-actions">
+									<button type="button" id="geo-add-countries" class="nms-btn nms-btn-primary nms-geo-action-btn">
 										<span class="dashicons dashicons-arrow-right-alt2"></span> <?php _e( 'Add to List', 'nexifymy-security' ); ?>
 									</button>
-									<button type="button" id="geo-remove-countries" class="nms-btn nms-btn-secondary" style="white-space: nowrap;">
+									<button type="button" id="geo-remove-countries" class="nms-btn nms-btn-secondary nms-geo-action-btn">
 										<span class="dashicons dashicons-arrow-left-alt2"></span> <?php _e( 'Remove', 'nexifymy-security' ); ?>
 									</button>
 								</div>
 
 								<!-- Selected Countries List -->
-								<div style="flex: 1; max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 4px; background: #f9f9f9;">
-									<p style="margin-top: 0; font-weight: 600;"><?php _e( 'Selected Countries:', 'nexifymy-security' ); ?></p>
+								<div class="nms-geo-list-box nms-geo-list-selected">
+									<p class="nms-geo-list-title"><?php _e( 'Selected Countries:', 'nexifymy-security' ); ?></p>
 									<div id="geo-selected-list">
 										<?php
 										foreach ( $selected as $code ) {
 											if ( isset( $countries[ $code ] ) ) {
 												printf(
-													'<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-selected-check" value="%s"> %s (%s)</label>',
+													'<label class="nms-geo-checkbox-row"><input type="checkbox" class="geo-selected-check" value="%s"> %s (%s)</label>',
 													esc_attr( $code ),
 													esc_html( $countries[ $code ] ),
 													esc_html( $code )
@@ -6879,19 +6789,19 @@ class NexifyMy_Security_Admin {
 											}
 										}
 										if ( empty( $selected ) ) {
-											echo '<p class="description" style="margin: 0;">' . __( 'No countries selected yet.', 'nexifymy-security' ) . '</p>';
+											echo '<p class="description nms-geo-empty-text">' . __( 'No countries selected yet.', 'nexifymy-security' ) . '</p>';
 										}
 										?>
 									</div>
 								</div>
 							</div>
-							<p class="description" style="margin-top: 10px;"><?php _e( 'Select countries from left, click "Add to List" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above.', 'nexifymy-security' ); ?></p>
+							<p class="description nms-geo-help"><?php _e( 'Select countries from left, click "Add to List" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
 				</table>
 				<p class="submit">
 					<button type="button" id="save-geo-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="geo-status" style="margin-left: 15px;"></span>
+					<span id="geo-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -6903,18 +6813,22 @@ class NexifyMy_Security_Admin {
 	 */
 	private function render_rate_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
 		$rate_settings = isset( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array();
+		$rate_enabled = array_key_exists( 'enabled', $rate_settings )
+			? ! empty( $rate_settings['enabled'] )
+			: ! empty( $modules['rate_limiter_enabled'] );
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><span class="dashicons dashicons-clock"></span> <?php _e( 'Rate Limiting', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Protect against brute force and DoS attacks by limiting request frequency per IP address.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Protect against brute force and DoS attacks by limiting request frequency per IP address.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Rate Limiting', 'nexifymy-security' ); ?></th>
 						<td>
 							<label class="nms-toggle">
-								<input type="checkbox" id="rate-enabled" data-module="rate_limiter" <?php checked( ! empty( $rate_settings['enabled'] ) ); ?>>
+								<input type="checkbox" id="rate-enabled" data-module="rate_limiter" <?php checked( $rate_enabled ); ?>>
 								<span class="nms-toggle-slider"></span>
 							</label>
 							<p class="description"><?php _e( 'Enable or disable the rate limiting module.', 'nexifymy-security' ); ?></p>
@@ -7067,7 +6981,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-rate-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
-					<span id="rate-status" style="margin-left: 15px;"></span>
+					<span id="rate-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7168,7 +7082,7 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-email-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Email Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-email" class="nms-btn nms-btn-secondary"><?php _e( 'Send Test Email', 'nexifymy-security' ); ?></button>
-					<span id="email-status" style="margin-left: 15px;"></span>
+					<span id="email-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7199,14 +7113,14 @@ class NexifyMy_Security_Admin {
 			<div class="nms-card-header"><h3><?php _e( 'Import Settings', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
 				<p><?php _e( 'Import settings from a previously exported JSON file. This will overwrite your current settings.', 'nexifymy-security' ); ?></p>
-				<p class="warning" style="color: #d63638; background: #fcf0f1; padding: 10px; border-radius: 4px;">
+				<p class="warning nms-auto-s015">
 					<span class="dashicons dashicons-warning"></span>
 					<?php _e( 'Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup.', 'nexifymy-security' ); ?>
 				</p>
-				<input type="file" id="import-file" accept=".json" style="margin: 10px 0;">
+				<input type="file" id="import-file" accept=".json" class="nms-auto-s132">
 				<p class="submit">
 					<button type="button" id="import-settings" class="nms-btn nms-btn-secondary"><span class="dashicons dashicons-upload"></span> <?php _e( 'Import Settings', 'nexifymy-security' ); ?></button>
-					<span id="import-status" style="margin-left: 15px;"></span>
+					<span id="import-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7216,7 +7130,7 @@ class NexifyMy_Security_Admin {
 			<div class="nms-card-body">
 				<p><?php _e( 'Reset all NexifyMy Security settings to their default values. This action cannot be undone.', 'nexifymy-security' ); ?></p>
 				<p class="submit">
-					<button type="button" id="reset-settings" class="nms-btn" style="background: #d63638; color: white;"><span class="dashicons dashicons-trash"></span> <?php _e( 'Reset All Settings', 'nexifymy-security' ); ?></button>
+					<button type="button" id="reset-settings" class="nms-btn nms-auto-s001"><span class="dashicons dashicons-trash"></span> <?php _e( 'Reset All Settings', 'nexifymy-security' ); ?></button>
 				</p>
 			</div>
 		</div>
@@ -7328,7 +7242,7 @@ class NexifyMy_Security_Admin {
 				</table>
 				<p class="submit">
 					<button type="button" id="save-advanced-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Advanced Settings', 'nexifymy-security' ); ?></button>
-					<span id="advanced-status" style="margin-left: 15px;"></span>
+					<span id="advanced-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7367,6 +7281,13 @@ class NexifyMy_Security_Admin {
 				<h3><?php _e( 'Threat Detection & Blocking - Last 7 Days', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
+				<div id="nms-analytics-chart-data"
+					class="nms-hidden-data"
+					data-labels="<?php echo esc_attr( wp_json_encode( $data['labels'] ) ); ?>"
+					data-blocked="<?php echo esc_attr( wp_json_encode( $data['datasets']['blocked'] ) ); ?>"
+					data-threats="<?php echo esc_attr( wp_json_encode( $data['datasets']['threats'] ) ); ?>"
+					data-logins="<?php echo esc_attr( wp_json_encode( $data['datasets']['logins'] ) ); ?>">
+				</div>
 				<canvas id="nms-threats-chart" width="400" height="150"></canvas>
 			</div>
 		</div>
@@ -7408,80 +7329,6 @@ class NexifyMy_Security_Admin {
 			</div>
 		</div>
 
-		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			if (typeof Chart === 'undefined') return;
-			
-			const ctxThreats = document.getElementById('nms-threats-chart').getContext('2d');
-			new Chart(ctxThreats, {
-				type: 'line',
-				data: {
-					labels: <?php echo json_encode( $data['labels'] ); ?>,
-					datasets: [{
-						label: 'Threats Blocked',
-						data: <?php echo json_encode( $data['datasets']['blocked'] ); ?>,
-						borderColor: '#4f46e5',
-						backgroundColor: 'rgba(79, 70, 229, 0.1)',
-						borderWidth: 2,
-						tension: 0.4,
-						fill: true,
-						pointBackgroundColor: '#ffffff',
-						pointBorderColor: '#4f46e5',
-						pointRadius: 4
-					}, {
-						label: 'Malware Detected',
-						data: <?php echo json_encode( $data['datasets']['threats'] ); ?>,
-						borderColor: '#dc2626',
-						backgroundColor: 'rgba(220, 38, 38, 0.05)',
-						borderWidth: 2,
-						tension: 0.4,
-						fill: false,
-						borderDash: [5, 5]
-					}]
-				},
-				options: {
-					responsive: true,
-					plugins: {
-						legend: { position: 'top' },
-						tooltip: {
-							mode: 'index',
-							intersect: false,
-							backgroundColor: 'rgba(255, 255, 255, 0.9)',
-							titleColor: '#1e293b',
-							bodyColor: '#64748b',
-							borderColor: '#e2e8f0',
-							borderWidth: 1
-						}
-					},
-					scales: {
-						y: { beginAtZero: true, grid: { borderDash: [2, 2] } },
-						x: { grid: { display: false } }
-					}
-				}
-			});
-
-			const ctxLogins = document.getElementById('nms-logins-chart').getContext('2d');
-			new Chart(ctxLogins, {
-				type: 'bar',
-				data: {
-					labels: <?php echo json_encode( $data['labels'] ); ?>,
-					datasets: [{
-						label: 'Failed Logins',
-						data: <?php echo json_encode( $data['datasets']['logins'] ); ?>,
-						backgroundColor: '#f59e0b',
-						borderRadius: 4
-					}]
-				},
-				options: {
-					responsive: true,
-					plugins: { legend: { display: false } },
-					scales: {
-						y: { beginAtZero: true }
-					}
-				}
-			});
-		});
-		</script>
 		<?php
 	}
 
@@ -7524,32 +7371,32 @@ class NexifyMy_Security_Admin {
 
 			<div class="nms-tab-content">
 				<!-- Overview Tab -->
-				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'overview' ? 'block' : 'none'; ?>;">
+				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>">
 					<?php $this->render_integrations_overview(); ?>
 				</div>
 
 				<!-- SIEM Tab -->
-				<div id="tab-siem" class="nms-tab-panel <?php echo $active_tab === 'siem' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'siem' ? 'block' : 'none'; ?>;">
+				<div id="tab-siem" class="nms-tab-panel <?php echo $active_tab === 'siem' ? 'active' : ''; ?>">
 					<?php $this->render_siem_integration(); ?>
 				</div>
 
 				<!-- Ticketing Tab -->
-				<div id="tab-ticketing" class="nms-tab-panel <?php echo $active_tab === 'ticketing' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'ticketing' ? 'block' : 'none'; ?>;">
+				<div id="tab-ticketing" class="nms-tab-panel <?php echo $active_tab === 'ticketing' ? 'active' : ''; ?>">
 					<?php $this->render_ticketing_integration(); ?>
 				</div>
 
 				<!-- Communication Tab -->
-				<div id="tab-communication" class="nms-tab-panel <?php echo $active_tab === 'communication' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'communication' ? 'block' : 'none'; ?>;">
+				<div id="tab-communication" class="nms-tab-panel <?php echo $active_tab === 'communication' ? 'active' : ''; ?>">
 					<?php $this->render_communication_integration(); ?>
 				</div>
 
 				<!-- CI/CD Tab -->
-				<div id="tab-cicd" class="nms-tab-panel <?php echo $active_tab === 'cicd' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'cicd' ? 'block' : 'none'; ?>;">
+				<div id="tab-cicd" class="nms-tab-panel <?php echo $active_tab === 'cicd' ? 'active' : ''; ?>">
 					<?php $this->render_cicd_integration(); ?>
 				</div>
 
 				<!-- Webhooks Tab -->
-				<div id="tab-webhooks" class="nms-tab-panel <?php echo $active_tab === 'webhooks' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'webhooks' ? 'block' : 'none'; ?>;">
+				<div id="tab-webhooks" class="nms-tab-panel <?php echo $active_tab === 'webhooks' ? 'active' : ''; ?>">
 					<?php $this->render_webhooks_integration(); ?>
 				</div>
 			</div>
@@ -7641,7 +7488,7 @@ class NexifyMy_Security_Admin {
 			</div>
 		</div>
 
-		<div class="nms-card" style="margin-top: 20px;">
+		<div class="nms-card nms-mt-20">
 			<div class="nms-card-header">
 				<h3><?php _e( 'Available Events', 'nexifymy-security' ); ?></h3>
 			</div>
@@ -7714,7 +7561,7 @@ class NexifyMy_Security_Admin {
 				<h3><span class="dashicons dashicons-database"></span> <?php _e( 'SIEM Integration', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable SIEM Integration', 'nexifymy-security' ); ?></th>
@@ -7794,7 +7641,7 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-siem-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save SIEM Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-siem" class="nms-btn nms-btn-secondary"><?php _e( 'Test Connection', 'nexifymy-security' ); ?></button>
-					<span id="siem-status" style="margin-left: 15px;"></span>
+					<span id="siem-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7809,12 +7656,12 @@ class NexifyMy_Security_Admin {
 		$integrations = isset( $settings['integrations'] ) ? $settings['integrations'] : array();
 		?>
 		<!-- Jira Settings -->
-		<div class="nms-card" style="margin-bottom: 20px;">
+		<div class="nms-card nms-mb-20">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-tickets-alt"></span> <?php _e( 'Jira Integration', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Automatically create Jira tickets for security incidents and vulnerabilities.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Automatically create Jira tickets for security incidents and vulnerabilities.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Jira', 'nexifymy-security' ); ?></th>
@@ -7885,18 +7732,18 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-jira-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Jira Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-jira" class="nms-btn nms-btn-secondary"><?php _e( 'Test Connection', 'nexifymy-security' ); ?></button>
-					<span id="jira-status" style="margin-left: 15px;"></span>
+					<span id="jira-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
 
 		<!-- ServiceNow Settings -->
-		<div class="nms-card" style="margin-bottom: 20px;">
+		<div class="nms-card nms-mb-20">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-tickets-alt"></span> <?php _e( 'ServiceNow Integration', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Create incidents in ServiceNow for critical security events.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Create incidents in ServiceNow for critical security events.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable ServiceNow', 'nexifymy-security' ); ?></th>
@@ -7959,7 +7806,7 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-servicenow-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save ServiceNow Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-servicenow" class="nms-btn nms-btn-secondary"><?php _e( 'Test Connection', 'nexifymy-security' ); ?></button>
-					<span id="servicenow-status" style="margin-left: 15px;"></span>
+					<span id="servicenow-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -7975,7 +7822,7 @@ class NexifyMy_Security_Admin {
 		?>
 		
 		<!-- Slack Settings -->
-		<div class="nms-card" style="margin-bottom: 20px;">
+		<div class="nms-card nms-mb-20">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-format-chat"></span> <?php _e( 'Slack Integration', 'nexifymy-security' ); ?></h3>
 			</div>
@@ -8016,13 +7863,13 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-slack-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Slack Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-slack" class="nms-btn nms-btn-secondary"><?php _e( 'Test Notification', 'nexifymy-security' ); ?></button>
-					<span id="slack-status" style="margin-left: 15px;"></span>
+					<span id="slack-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
 
 		<!-- Discord Settings -->
-		<div class="nms-card" style="margin-bottom: 20px;">
+		<div class="nms-card nms-mb-20">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-format-chat"></span> <?php _e( 'Discord Integration', 'nexifymy-security' ); ?></h3>
 			</div>
@@ -8056,13 +7903,13 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-discord-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Discord Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-discord" class="nms-btn nms-btn-secondary"><?php _e( 'Test Notification', 'nexifymy-security' ); ?></button>
-					<span id="discord-status" style="margin-left: 15px;"></span>
+					<span id="discord-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
 
 		<!-- Microsoft Teams Settings -->
-		<div class="nms-card" style="margin-bottom: 20px;">
+		<div class="nms-card nms-mb-20">
 			<div class="nms-card-header">
 				<h3><span class="dashicons dashicons-format-chat"></span> <?php _e( 'Microsoft Teams Integration', 'nexifymy-security' ); ?></h3>
 			</div>
@@ -8096,7 +7943,7 @@ class NexifyMy_Security_Admin {
 				<p class="submit">
 					<button type="button" id="save-teams-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Teams Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="test-teams" class="nms-btn nms-btn-secondary"><?php _e( 'Test Notification', 'nexifymy-security' ); ?></button>
-					<span id="teams-status" style="margin-left: 15px;"></span>
+					<span id="teams-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -8120,7 +7967,7 @@ class NexifyMy_Security_Admin {
 				<h3><span class="dashicons dashicons-admin-tools"></span> <?php _e( 'CI/CD Pipeline Integration', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Integrate security scanning into your continuous integration and deployment pipelines.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Integrate security scanning into your continuous integration and deployment pipelines.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable CI/CD Integration', 'nexifymy-security' ); ?></th>
@@ -8179,7 +8026,7 @@ class NexifyMy_Security_Admin {
 					</tr>
 				</table>
 
-				<h3 style="margin-top: 30px;"><?php _e( 'API Endpoints', 'nexifymy-security' ); ?></h3>
+				<h3 class="nms-auto-s157"><?php _e( 'API Endpoints', 'nexifymy-security' ); ?></h3>
 				<table class="widefat">
 					<thead>
 						<tr>
@@ -8212,7 +8059,7 @@ class NexifyMy_Security_Admin {
 					</tbody>
 				</table>
 
-				<h3 style="margin-top: 30px;"><?php _e( 'Example: GitHub Actions', 'nexifymy-security' ); ?></h3>
+				<h3 class="nms-auto-s157"><?php _e( 'Example: GitHub Actions', 'nexifymy-security' ); ?></h3>
 				<pre class="nms-code-block"><code>name: Security Scan
 on: [push, pull_request]
 jobs:
@@ -8232,7 +8079,7 @@ jobs:
             -H "Authorization: Bearer <?php echo esc_html( $api_key ); ?>" \
             <?php echo esc_url( rest_url( 'nexifymy-security/v1/scan/results' ) ); ?></code></pre>
 
-				<h3 style="margin-top: 30px;"><?php _e( 'Example: GitLab CI', 'nexifymy-security' ); ?></h3>
+				<h3 class="nms-auto-s157"><?php _e( 'Example: GitLab CI', 'nexifymy-security' ); ?></h3>
 				<pre class="nms-code-block"><code>security_scan:
   stage: test
   script:
@@ -8241,7 +8088,7 @@ jobs:
     - sleep 30
     - curl -H "Authorization: Bearer <?php echo esc_html( $api_key ); ?>" <?php echo esc_url( rest_url( 'nexifymy-security/v1/scan/results' ) ); ?></code></pre>
 
-				<h3 style="margin-top: 30px;"><?php _e( 'Example: Jenkins Pipeline', 'nexifymy-security' ); ?></h3>
+				<h3 class="nms-auto-s157"><?php _e( 'Example: Jenkins Pipeline', 'nexifymy-security' ); ?></h3>
 				<pre class="nms-code-block"><code>pipeline {
     agent any
     stages {
@@ -8257,7 +8104,7 @@ jobs:
 
 				<p class="submit">
 					<button type="button" id="save-cicd-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save CI/CD Settings', 'nexifymy-security' ); ?></button>
-					<span id="cicd-status" style="margin-left: 15px;"></span>
+					<span id="cicd-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -8276,7 +8123,7 @@ jobs:
 				<h3><span class="dashicons dashicons-rest-api"></span> <?php _e( 'Custom Webhooks', 'nexifymy-security' ); ?></h3>
 			</div>
 			<div class="nms-card-body">
-				<p class="description" style="margin-bottom: 20px;"><?php _e( 'Send security events to any HTTP endpoint with custom configuration.', 'nexifymy-security' ); ?></p>
+				<p class="description nms-mb-20"><?php _e( 'Send security events to any HTTP endpoint with custom configuration.', 'nexifymy-security' ); ?></p>
 				<table class="form-table">
 					<tr>
 						<th><?php _e( 'Enable Custom Webhooks', 'nexifymy-security' ); ?></th>
@@ -8291,8 +8138,8 @@ jobs:
 
 				<div id="webhooks-list">
 					<?php foreach ( $webhooks as $index => $webhook ) : ?>
-						<div class="nms-webhook-item nms-card" style="margin-top: 20px; background: #f5f5f5;">
-							<div class="nms-card-header" style="display: flex; justify-content: space-between;">
+						<div class="nms-webhook-item nms-card nms-auto-s149">
+							<div class="nms-card-header nms-auto-s048">
 								<h4><?php echo esc_html( $webhook['name'] ?? 'Webhook ' . ( $index + 1 ) ); ?></h4>
 								<button type="button" class="button remove-webhook" data-index="<?php echo esc_attr( $index ); ?>"><?php _e( 'Remove', 'nexifymy-security' ); ?></button>
 							</div>
@@ -8337,13 +8184,13 @@ jobs:
 					<?php endforeach; ?>
 				</div>
 
-				<p style="margin-top: 20px;">
+				<p class="nms-mt-20">
 					<button type="button" id="add-webhook" class="button"><?php _e( 'Add Webhook', 'nexifymy-security' ); ?></button>
 				</p>
 
 				<p class="submit">
 					<button type="button" id="save-webhooks-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Webhook Settings', 'nexifymy-security' ); ?></button>
-					<span id="webhooks-status" style="margin-left: 15px;"></span>
+					<span id="webhooks-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -8381,6 +8228,21 @@ jobs:
 	}
 
 	/**
+	 * Render Deception Technology page.
+	 */
+	public function render_deception_page() {
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<div class="nms-page-header">
+				<h1><span class="dashicons dashicons-visibility"></span> <?php _e( 'Deception Technology', 'nexifymy-security' ); ?></h1>
+				<p><?php _e( 'Honeypots, decoy assets, and attacker deception to catch threats before they strike.', 'nexifymy-security' ); ?></p>
+			</div>
+			<?php $this->render_deception_content(); ?>
+		</div>
+		<?php
+	}
+
+	/**
 	 * Render Recommendations (Proactive Security) page.
 	 */
 	public function render_recommendations_page() {
@@ -8399,22 +8261,32 @@ jobs:
 				<div class="nms-card-body">
 					<?php if ( empty( $recommendations ) ) : ?>
 						<div class="nms-empty-state">
-							<span class="dashicons dashicons-yes-alt" style="font-size: 48px; width: 48px; height: 48px; color: #22c55e;"></span>
+							<span class="dashicons dashicons-yes-alt nms-auto-s117"></span>
 							<h3><?php _e( 'All Clear!', 'nexifymy-security' ); ?></h3>
 							<p><?php _e( 'No security recommendations at this time. Your site is well protected.', 'nexifymy-security' ); ?></p>
 						</div>
 					<?php else : ?>
 						<div class="nms-recommendations-list">
 							<?php foreach ( $recommendations as $rec ) : ?>
-								<div class="nms-recommendation-item" style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 15px;">
-									<div style="display: flex; align-items: flex-start; gap: 15px;">
-										<div class="nms-rec-icon" style="flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: <?php echo esc_attr( $rec['bg_color'] ); ?>; border-radius: 8px; color: <?php echo esc_attr( $rec['icon_color'] ); ?>;">
+								<?php
+								$rec_color_key = strtolower( ( $rec['bg_color'] ?? '' ) . '|' . ( $rec['icon_color'] ?? '' ) );
+								$rec_icon_class_map = array(
+									'#fee2e2|#dc2626' => 'nms-rec-icon-critical',
+									'#fef3c7|#d97706' => 'nms-rec-icon-warning',
+									'#eef2ff|#4f46e5' => 'nms-rec-icon-indigo',
+									'#e0f2fe|#0284c7' => 'nms-rec-icon-sky',
+								);
+								$rec_icon_class = $rec_icon_class_map[ $rec_color_key ] ?? 'nms-rec-icon-default';
+								?>
+								<div class="nms-recommendation-item nms-auto-s173">
+									<div class="nms-auto-s042">
+										<div class="nms-rec-icon <?php echo esc_attr( $rec_icon_class ); ?>">
 											<span class="dashicons dashicons-<?php echo esc_attr( $rec['icon'] ); ?>"></span>
 										</div>
-										<div style="flex: 1;">
-											<h4 style="margin: 0 0 8px 0; font-size: 16px;"><?php echo esc_html( $rec['title'] ); ?></h4>
-											<p style="margin: 0 0 12px 0; color: #64748b;"><?php echo esc_html( $rec['description'] ); ?></p>
-											<div style="display: flex; gap: 10px; align-items: center;">
+										<div class="nms-auto-s070">
+											<h4 class="nms-auto-s127"><?php echo esc_html( $rec['title'] ); ?></h4>
+											<p class="nms-auto-s124"><?php echo esc_html( $rec['description'] ); ?></p>
+											<div class="nms-auto-s044">
 												<span class="nms-badge nms-badge-<?php echo esc_attr( $rec['severity'] ?? 'info' ); ?>">
 													<?php echo esc_html( ucfirst( $rec['severity'] ?? 'info' ) ); ?>
 												</span>
@@ -8586,27 +8458,26 @@ jobs:
 					<span class="dashicons dashicons-admin-generic"></span> <?php _e( 'System Events', 'nexifymy-security' ); ?>
 				</button>
 				<button class="nms-page-tab <?php echo $active_tab === 'settings' ? 'active' : ''; ?>" data-tab="settings">
-					<span class="dashicons dashicons-admin-settings"></span> <?php _e( 'Settings', 'nexifymy-security' ); ?>
-				</button>
+					<span class="dashicons dashicons-admin-settings"></span> <?php _e( 'Settings', 'nexifymy-security' ); ?> ></button>
 			</div>
 
 			<div class="nms-tab-content">
-				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'overview' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-overview" class="nms-tab-panel <?php echo $active_tab === 'overview' ? 'active' : ''; ?>">
 					<?php $this->render_activity_overview_content(); ?>
 				</div>
-				<div id="tab-login" class="nms-tab-panel <?php echo $active_tab === 'login' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'login' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-login" class="nms-tab-panel <?php echo $active_tab === 'login' ? 'active' : ''; ?>">
 					<?php $this->render_activity_login_content(); ?>
 				</div>
-				<div id="tab-users" class="nms-tab-panel <?php echo $active_tab === 'users' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'users' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-users" class="nms-tab-panel <?php echo $active_tab === 'users' ? 'active' : ''; ?>">
 					<?php $this->render_activity_users_content(); ?>
 				</div>
-				<div id="tab-content" class="nms-tab-panel <?php echo $active_tab === 'content' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'content' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-content" class="nms-tab-panel <?php echo $active_tab === 'content' ? 'active' : ''; ?>">
 					<?php $this->render_activity_content_content(); ?>
 				</div>
-				<div id="tab-system" class="nms-tab-panel <?php echo $active_tab === 'system' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'system' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-system" class="nms-tab-panel <?php echo $active_tab === 'system' ? 'active' : ''; ?>">
 					<?php $this->render_activity_system_content(); ?>
 				</div>
-				<div id="tab-settings" class="nms-tab-panel <?php echo $active_tab === 'settings' ? 'active' : ''; ?>" style="display: <?php echo $active_tab === 'settings' ? 'block !important' : 'none !important'; ?>;">
+				<div id="tab-settings" class="nms-tab-panel <?php echo $active_tab === 'settings' ? 'active' : ''; ?>">
 					<?php $this->render_activity_settings_content(); ?>
 				</div>
 			</div>
@@ -8639,13 +8510,13 @@ jobs:
 		$security_class = $security_score >= 80 ? 'green' : ( $security_score >= 50 ? 'orange' : 'red' );
 		?>
 		<!-- Period Selector -->
-		<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-			<h2 style="margin: 0; display: flex; align-items: center; gap: 10px;">
+		<div class="nms-auto-s049">
+			<h2 class="nms-auto-s130">
 				<span class="dashicons dashicons-chart-area"></span>
 				<?php _e( 'Activity Dashboard', 'nexifymy-security' ); ?>
 			</h2>
-			<div style="display: flex; gap: 10px; align-items: center;">
-				<span style="color: var(--nms-gray-500);"><?php _e( 'Last 30 days', 'nexifymy-security' ); ?></span>
+			<div class="nms-auto-s044">
+				<span class="nms-auto-s025"><?php _e( 'Last 30 days', 'nexifymy-security' ); ?></span>
 				<button class="nms-btn nms-btn-secondary" id="refresh-stats">
 					<span class="dashicons dashicons-update"></span> <?php _e( 'Refresh', 'nexifymy-security' ); ?>
 				</button>
@@ -8653,150 +8524,150 @@ jobs:
 		</div>
 
 		<!-- Top Stats Row - Primary Metrics -->
-		<div class="nms-stats-row" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 25px;">
+		<div class="nms-stats-row nms-auto-s058">
 			<!-- Total Events -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-body" style="text-align: center; padding: 20px;">
-					<div class="nms-stat-icon blue" style="margin: 0 auto 8px; width: 40px; height: 40px;"><span class="dashicons dashicons-chart-bar"></span></div>
-					<div style="font-size: 26px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['total'] ?? 0 ); ?></div>
-					<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'Total Events', 'nexifymy-security' ); ?></div>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-body nms-center-pad20">
+					<div class="nms-stat-icon blue nms-auto-s128"><span class="dashicons dashicons-chart-bar"></span></div>
+					<div class="nms-auto-s099"><?php echo number_format( $stats['total'] ?? 0 ); ?></div>
+					<div class="nms-auto-s075"><?php _e( 'Total Events', 'nexifymy-security' ); ?></div>
 				</div>
 			</div>
 			<!-- Events Today -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-body" style="text-align: center; padding: 20px;">
-					<div class="nms-stat-icon cyan" style="margin: 0 auto 8px; width: 40px; height: 40px;"><span class="dashicons dashicons-calendar-alt"></span></div>
-					<div style="font-size: 26px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['today'] ?? 0 ); ?></div>
-					<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'Today', 'nexifymy-security' ); ?></div>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-body nms-center-pad20">
+					<div class="nms-stat-icon cyan nms-auto-s128"><span class="dashicons dashicons-calendar-alt"></span></div>
+					<div class="nms-auto-s099"><?php echo number_format( $stats['today'] ?? 0 ); ?></div>
+					<div class="nms-auto-s075"><?php _e( 'Today', 'nexifymy-security' ); ?></div>
 				</div>
 			</div>
 			<!-- Unique Users -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-body" style="text-align: center; padding: 20px;">
-					<div class="nms-stat-icon purple" style="margin: 0 auto 8px; width: 40px; height: 40px;"><span class="dashicons dashicons-groups"></span></div>
-					<div style="font-size: 26px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['unique_users'] ?? 0 ); ?></div>
-					<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'Unique Users', 'nexifymy-security' ); ?></div>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-body nms-center-pad20">
+					<div class="nms-stat-icon purple nms-auto-s128"><span class="dashicons dashicons-groups"></span></div>
+					<div class="nms-auto-s099"><?php echo number_format( $stats['unique_users'] ?? 0 ); ?></div>
+					<div class="nms-auto-s075"><?php _e( 'Unique Users', 'nexifymy-security' ); ?></div>
 				</div>
 			</div>
 			<!-- Unique IPs -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-body" style="text-align: center; padding: 20px;">
-					<div class="nms-stat-icon teal" style="margin: 0 auto 8px; width: 40px; height: 40px;"><span class="dashicons dashicons-admin-site-alt3"></span></div>
-					<div style="font-size: 26px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['unique_ips'] ?? 0 ); ?></div>
-					<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'Unique IPs', 'nexifymy-security' ); ?></div>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-body nms-center-pad20">
+					<div class="nms-stat-icon teal nms-auto-s128"><span class="dashicons dashicons-admin-site-alt3"></span></div>
+					<div class="nms-auto-s099"><?php echo number_format( $stats['unique_ips'] ?? 0 ); ?></div>
+					<div class="nms-auto-s075"><?php _e( 'Unique IPs', 'nexifymy-security' ); ?></div>
 				</div>
 			</div>
 			<!-- Avg per Day -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-body" style="text-align: center; padding: 20px;">
-					<div class="nms-stat-icon gray" style="margin: 0 auto 8px; width: 40px; height: 40px;"><span class="dashicons dashicons-performance"></span></div>
-					<div style="font-size: 26px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['avg_events_per_day'] ?? 0, 1 ); ?></div>
-					<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'Avg/Day', 'nexifymy-security' ); ?></div>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-body nms-center-pad20">
+					<div class="nms-stat-icon gray nms-auto-s128"><span class="dashicons dashicons-performance"></span></div>
+					<div class="nms-auto-s099"><?php echo number_format( $stats['avg_events_per_day'] ?? 0, 1 ); ?></div>
+					<div class="nms-auto-s075"><?php _e( 'Avg/Day', 'nexifymy-security' ); ?></div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Login & Authentication Stats -->
-		<div class="nms-card" style="margin-bottom: 25px;">
-			<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-				<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-					<span class="dashicons dashicons-lock" style="color: var(--nms-primary);"></span>
+		<div class="nms-card nms-auto-s138">
+			<div class="nms-card-header nms-border-bottom">
+				<h3 class="nms-auto-s131">
+					<span class="dashicons dashicons-lock nms-auto-s030"></span>
 					<?php _e( 'Login & Authentication', 'nexifymy-security' ); ?>
 				</h3>
 			</div>
-			<div class="nms-card-body" style="padding: 25px;">
-				<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+			<div class="nms-card-body nms-auto-s176">
+				<div class="nms-auto-s059">
 					<!-- Successful Logins -->
-					<div style="text-align: center; padding: 20px; background: var(--nms-success-bg, #ecfdf5); border-radius: 12px;">
-						<span class="dashicons dashicons-yes-alt" style="font-size: 28px; color: var(--nms-success); margin-bottom: 10px;"></span>
-						<div style="font-size: 28px; font-weight: 700; color: var(--nms-success);"><?php echo number_format( $stats['logins'] ?? 0 ); ?></div>
-						<div style="font-size: 12px; color: var(--nms-gray-600); margin-top: 4px;"><?php _e( 'Successful Logins', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s186">
+						<span class="dashicons dashicons-yes-alt nms-auto-s103"></span>
+						<div class="nms-auto-s110"><?php echo number_format( $stats['logins'] ?? 0 ); ?></div>
+						<div class="nms-auto-s076"><?php _e( 'Successful Logins', 'nexifymy-security' ); ?></div>
 					</div>
 					<!-- Failed Logins -->
-					<div style="text-align: center; padding: 20px; background: var(--nms-danger-bg, #fef2f2); border-radius: 12px;">
-						<span class="dashicons dashicons-dismiss" style="font-size: 28px; color: var(--nms-danger); margin-bottom: 10px;"></span>
-						<div style="font-size: 28px; font-weight: 700; color: var(--nms-danger);"><?php echo number_format( $stats['failed_logins'] ?? 0 ); ?></div>
-						<div style="font-size: 12px; color: var(--nms-gray-600); margin-top: 4px;"><?php _e( 'Failed Logins', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s183">
+						<span class="dashicons dashicons-dismiss nms-auto-s100"></span>
+						<div class="nms-auto-s107"><?php echo number_format( $stats['failed_logins'] ?? 0 ); ?></div>
+						<div class="nms-auto-s076"><?php _e( 'Failed Logins', 'nexifymy-security' ); ?></div>
 					</div>
 					<!-- Logouts -->
-					<div style="text-align: center; padding: 20px; background: var(--nms-info-bg, #eff6ff); border-radius: 12px;">
-						<span class="dashicons dashicons-migrate" style="font-size: 28px; color: var(--nms-info); margin-bottom: 10px;"></span>
-						<div style="font-size: 28px; font-weight: 700; color: var(--nms-info);"><?php echo number_format( $stats['logouts'] ?? 0 ); ?></div>
-						<div style="font-size: 12px; color: var(--nms-gray-600); margin-top: 4px;"><?php _e( 'Logouts', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s185">
+						<span class="dashicons dashicons-migrate nms-auto-s101"></span>
+						<div class="nms-auto-s109"><?php echo number_format( $stats['logouts'] ?? 0 ); ?></div>
+						<div class="nms-auto-s076"><?php _e( 'Logouts', 'nexifymy-security' ); ?></div>
 					</div>
 					<!-- Success Rate -->
-					<div style="text-align: center; padding: 20px; background: var(--nms-gray-100, #f3f4f6); border-radius: 12px;">
-						<span class="dashicons dashicons-awards" style="font-size: 28px; color: var(--nms-primary); margin-bottom: 10px;"></span>
-						<div style="font-size: 28px; font-weight: 700; color: var(--nms-gray-900);"><?php echo $stats['login_success_rate'] ?? 100; ?>%</div>
-						<div style="font-size: 12px; color: var(--nms-gray-600); margin-top: 4px;"><?php _e( 'Success Rate', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s184">
+						<span class="dashicons dashicons-awards nms-auto-s102"></span>
+						<div class="nms-auto-s108"><?php echo $stats['login_success_rate'] ?? 100; ?>%</div>
+						<div class="nms-auto-s076"><?php _e( 'Success Rate', 'nexifymy-security' ); ?></div>
 					</div>
 					<!-- Password Resets -->
-					<div style="text-align: center; padding: 20px; background: var(--nms-warning-bg, #fffbeb); border-radius: 12px;">
-						<span class="dashicons dashicons-admin-network" style="font-size: 28px; color: var(--nms-warning-dark, #d97706); margin-bottom: 10px;"></span>
-						<div style="font-size: 28px; font-weight: 700; color: var(--nms-warning-dark, #d97706);"><?php echo number_format( $stats['password_resets'] ?? 0 ); ?></div>
-						<div style="font-size: 12px; color: var(--nms-gray-600); margin-top: 4px;"><?php _e( 'Password Resets', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s187">
+						<span class="dashicons dashicons-admin-network nms-auto-s104"></span>
+						<div class="nms-auto-s111"><?php echo number_format( $stats['password_resets'] ?? 0 ); ?></div>
+						<div class="nms-auto-s076"><?php _e( 'Password Resets', 'nexifymy-security' ); ?></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Two Column Layout: User Management & Content Activity -->
-		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+		<div class="nms-auto-s055">
 			<!-- User Management Stats -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-admin-users" style="color: var(--nms-purple);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-admin-users nms-auto-s031"></span>
 						<?php _e( 'User Management', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
 				<div class="nms-card-body">
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Users Created', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-success);"><?php echo number_format( $stats['users_created'] ?? 0 ); ?></strong>
+					<div class="nms-auto-s053">
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Users Created', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s089"><?php echo number_format( $stats['users_created'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Users Deleted', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-danger);"><?php echo number_format( $stats['users_deleted'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Users Deleted', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s085"><?php echo number_format( $stats['users_deleted'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Role Changes', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-warning-dark, #d97706);"><?php echo number_format( $stats['role_changes'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Role Changes', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s090"><?php echo number_format( $stats['role_changes'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Profile Updates', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-info);"><?php echo number_format( $stats['profile_updates'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Profile Updates', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s086"><?php echo number_format( $stats['profile_updates'] ?? 0 ); ?></strong>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Content Activity Stats -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-edit-page" style="color: var(--nms-info);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-edit-page nms-auto-s029"></span>
 						<?php _e( 'Content Activity', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
 				<div class="nms-card-body">
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Posts Created', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-success);"><?php echo number_format( $stats['posts_created'] ?? 0 ); ?></strong>
+					<div class="nms-auto-s053">
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Posts Created', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s089"><?php echo number_format( $stats['posts_created'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Posts Updated', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-info);"><?php echo number_format( $stats['posts_updated'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Posts Updated', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s086"><?php echo number_format( $stats['posts_updated'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Posts Published', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-primary);"><?php echo number_format( $stats['posts_published'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Posts Published', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s087"><?php echo number_format( $stats['posts_published'] ?? 0 ); ?></strong>
 						</div>
-						<div style="padding: 15px; background: var(--nms-gray-50); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-							<span style="color: var(--nms-gray-600);"><?php _e( 'Media Uploads', 'nexifymy-security' ); ?></span>
-							<strong style="font-size: 18px; color: var(--nms-purple);"><?php echo number_format( $stats['media_uploads'] ?? 0 ); ?></strong>
+						<div class="nms-auto-s169">
+							<span class="nms-auto-s027"><?php _e( 'Media Uploads', 'nexifymy-security' ); ?></span>
+							<strong class="nms-auto-s088"><?php echo number_format( $stats['media_uploads'] ?? 0 ); ?></strong>
 						</div>
 					</div>
 				</div>
@@ -8804,85 +8675,85 @@ jobs:
 		</div>
 
 		<!-- System Activity Stats -->
-		<div class="nms-card" style="margin-bottom: 25px;">
-			<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-				<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-					<span class="dashicons dashicons-admin-generic" style="color: var(--nms-warning-dark, #d97706);"></span>
+		<div class="nms-card nms-auto-s138">
+			<div class="nms-card-header nms-border-bottom">
+				<h3 class="nms-auto-s131">
+					<span class="dashicons dashicons-admin-generic nms-auto-s034"></span>
 					<?php _e( 'System Activity', 'nexifymy-security' ); ?>
 				</h3>
 			</div>
-			<div class="nms-card-body" style="padding: 25px;">
-				<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
-					<div style="text-align: center; padding: 15px; background: var(--nms-gray-50); border-radius: 10px;">
-						<span class="dashicons dashicons-plugins-checked" style="font-size: 24px; color: var(--nms-success); margin-bottom: 8px;"></span>
-						<div style="font-size: 24px; font-weight: 700;"><?php echo number_format( $stats['plugins_activated'] ?? 0 ); ?></div>
-						<div style="font-size: 11px; color: var(--nms-gray-500);"><?php _e( 'Plugins Activated', 'nexifymy-security' ); ?></div>
+			<div class="nms-card-body nms-auto-s176">
+				<div class="nms-auto-s059">
+					<div class="nms-auto-s182">
+						<span class="dashicons dashicons-plugins-checked nms-auto-s096"></span>
+						<div class="nms-auto-s098"><?php echo number_format( $stats['plugins_activated'] ?? 0 ); ?></div>
+						<div class="nms-auto-s072"><?php _e( 'Plugins Activated', 'nexifymy-security' ); ?></div>
 					</div>
-					<div style="text-align: center; padding: 15px; background: var(--nms-gray-50); border-radius: 10px;">
-						<span class="dashicons dashicons-admin-plugins" style="font-size: 24px; color: var(--nms-gray-400); margin-bottom: 8px;"></span>
-						<div style="font-size: 24px; font-weight: 700;"><?php echo number_format( $stats['plugins_deactivated'] ?? 0 ); ?></div>
-						<div style="font-size: 11px; color: var(--nms-gray-500);"><?php _e( 'Plugins Deactivated', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s182">
+						<span class="dashicons dashicons-admin-plugins nms-auto-s093"></span>
+						<div class="nms-auto-s098"><?php echo number_format( $stats['plugins_deactivated'] ?? 0 ); ?></div>
+						<div class="nms-auto-s072"><?php _e( 'Plugins Deactivated', 'nexifymy-security' ); ?></div>
 					</div>
-					<div style="text-align: center; padding: 15px; background: var(--nms-gray-50); border-radius: 10px;">
-						<span class="dashicons dashicons-update-alt" style="font-size: 24px; color: var(--nms-info); margin-bottom: 8px;"></span>
-						<div style="font-size: 24px; font-weight: 700;"><?php echo number_format( $stats['plugins_updated'] ?? 0 ); ?></div>
-						<div style="font-size: 11px; color: var(--nms-gray-500);"><?php _e( 'Plugins Updated', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s182">
+						<span class="dashicons dashicons-update-alt nms-auto-s094"></span>
+						<div class="nms-auto-s098"><?php echo number_format( $stats['plugins_updated'] ?? 0 ); ?></div>
+						<div class="nms-auto-s072"><?php _e( 'Plugins Updated', 'nexifymy-security' ); ?></div>
 					</div>
-					<div style="text-align: center; padding: 15px; background: var(--nms-gray-50); border-radius: 10px;">
-						<span class="dashicons dashicons-admin-appearance" style="font-size: 24px; color: var(--nms-purple); margin-bottom: 8px;"></span>
-						<div style="font-size: 24px; font-weight: 700;"><?php echo number_format( $stats['theme_switches'] ?? 0 ); ?></div>
-						<div style="font-size: 11px; color: var(--nms-gray-500);"><?php _e( 'Theme Switches', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s182">
+						<span class="dashicons dashicons-admin-appearance nms-auto-s095"></span>
+						<div class="nms-auto-s098"><?php echo number_format( $stats['theme_switches'] ?? 0 ); ?></div>
+						<div class="nms-auto-s072"><?php _e( 'Theme Switches', 'nexifymy-security' ); ?></div>
 					</div>
-					<div style="text-align: center; padding: 15px; background: var(--nms-gray-50); border-radius: 10px;">
-						<span class="dashicons dashicons-admin-settings" style="font-size: 24px; color: var(--nms-warning-dark, #d97706); margin-bottom: 8px;"></span>
-						<div style="font-size: 24px; font-weight: 700;"><?php echo number_format( $stats['option_updates'] ?? 0 ); ?></div>
-						<div style="font-size: 11px; color: var(--nms-gray-500);"><?php _e( 'Option Changes', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s182">
+						<span class="dashicons dashicons-admin-settings nms-auto-s097"></span>
+						<div class="nms-auto-s098"><?php echo number_format( $stats['option_updates'] ?? 0 ); ?></div>
+						<div class="nms-auto-s072"><?php _e( 'Option Changes', 'nexifymy-security' ); ?></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Peak Activity & Event Types -->
-		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+		<div class="nms-auto-s055">
 			<!-- Peak Activity Insights -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-clock" style="color: var(--nms-info);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-clock nms-auto-s029"></span>
 						<?php _e( 'Peak Activity Insights', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
 				<div class="nms-card-body">
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-						<div style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: #fff;">
-							<div style="font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;"><?php _e( 'Peak Hour', 'nexifymy-security' ); ?></div>
-							<div style="font-size: 28px; font-weight: 700;"><?php echo sprintf( '%02d:00', $stats['peak_hour'] ?? 0 ); ?></div>
-							<div style="font-size: 12px; opacity: 0.8;"><?php echo number_format( $stats['peak_hour_count'] ?? 0 ); ?> <?php _e( 'events', 'nexifymy-security' ); ?></div>
+					<div class="nms-auto-s053">
+						<div class="nms-auto-s170">
+							<div class="nms-auto-s074"><?php _e( 'Peak Hour', 'nexifymy-security' ); ?></div>
+							<div class="nms-auto-s106"><?php echo sprintf( '%02d:00', $stats['peak_hour'] ?? 0 ); ?></div>
+							<div class="nms-auto-s077"><?php echo number_format( $stats['peak_hour_count'] ?? 0 ); ?> <?php _e( 'events', 'nexifymy-security' ); ?></div>
 						</div>
-						<div style="padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 10px; color: #fff;">
-							<div style="font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;"><?php _e( 'Busiest Day', 'nexifymy-security' ); ?></div>
-							<div style="font-size: 20px; font-weight: 700;"><?php echo ! empty( $stats['peak_day'] ) ? esc_html( gmdate( 'M j', strtotime( $stats['peak_day'] ) ) ) : '—'; ?></div>
-							<div style="font-size: 12px; opacity: 0.8;"><?php echo number_format( $stats['peak_day_count'] ?? 0 ); ?> <?php _e( 'events', 'nexifymy-security' ); ?></div>
+						<div class="nms-auto-s171">
+							<div class="nms-auto-s074"><?php _e( 'Busiest Day', 'nexifymy-security' ); ?></div>
+							<div class="nms-auto-s091"><?php echo ! empty( $stats['peak_day'] ) ? esc_html( gmdate( 'M j', strtotime( $stats['peak_day'] ) ) ) : '-'; ?></div>
+							<div class="nms-auto-s077"><?php echo number_format( $stats['peak_day_count'] ?? 0 ); ?> <?php _e( 'events', 'nexifymy-security' ); ?></div>
 						</div>
-						<div style="padding: 20px; background: var(--nms-gray-100); border-radius: 10px;">
-							<div style="font-size: 11px; color: var(--nms-gray-500); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;"><?php _e( 'This Hour', 'nexifymy-security' ); ?></div>
-							<div style="font-size: 28px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['this_hour'] ?? 0 ); ?></div>
-							<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'events', 'nexifymy-security' ); ?></div>
+						<div class="nms-auto-s172">
+							<div class="nms-auto-s073"><?php _e( 'This Hour', 'nexifymy-security' ); ?></div>
+							<div class="nms-auto-s108"><?php echo number_format( $stats['this_hour'] ?? 0 ); ?></div>
+							<div class="nms-auto-s075"><?php _e( 'events', 'nexifymy-security' ); ?></div>
 						</div>
-						<div style="padding: 20px; background: var(--nms-gray-100); border-radius: 10px;">
-							<div style="font-size: 11px; color: var(--nms-gray-500); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;"><?php _e( 'Database Size', 'nexifymy-security' ); ?></div>
-							<div style="font-size: 28px; font-weight: 700; color: var(--nms-gray-900);"><?php echo number_format( $stats['db_rows'] ?? 0 ); ?></div>
-							<div style="font-size: 12px; color: var(--nms-gray-500);"><?php _e( 'total records', 'nexifymy-security' ); ?></div>
+						<div class="nms-auto-s172">
+							<div class="nms-auto-s073"><?php _e( 'Database Size', 'nexifymy-security' ); ?></div>
+							<div class="nms-auto-s108"><?php echo number_format( $stats['db_rows'] ?? 0 ); ?></div>
+							<div class="nms-auto-s075"><?php _e( 'total records', 'nexifymy-security' ); ?></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Top Event Types -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-list-view" style="color: var(--nms-primary);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-list-view nms-auto-s030"></span>
 						<?php _e( 'Top Event Types', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
@@ -8892,14 +8763,15 @@ jobs:
 						$max_count = max( array_column( $stats['by_event_type'], 'count' ) );
 						foreach ( array_slice( $stats['by_event_type'], 0, 6 ) as $event ) : 
 							$percentage = $max_count > 0 ? ( $event->count / $max_count ) * 100 : 0;
+							$bar_width = max( 0, min( 100, (int) round( $percentage ) ) );
 						?>
-							<div style="margin-bottom: 12px;">
-								<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-									<span style="font-size: 13px; color: var(--nms-gray-700);"><?php echo esc_html( ucwords( str_replace( '_', ' ', $event->event_type ) ) ); ?></span>
-									<span style="font-size: 13px; font-weight: 600; color: var(--nms-gray-900);"><?php echo number_format( $event->count ); ?></span>
+							<div class="nms-auto-s135">
+								<div class="nms-auto-s050">
+									<span class="nms-auto-s080"><?php echo esc_html( ucwords( str_replace( '_', ' ', $event->event_type ) ) ); ?></span>
+									<span class="nms-auto-s081"><?php echo number_format( $event->count ); ?></span>
 								</div>
-								<div style="height: 6px; background: var(--nms-gray-200); border-radius: 3px; overflow: hidden;">
-									<div style="height: 100%; width: <?php echo esc_attr( $percentage ); ?>%; background: linear-gradient(90deg, var(--nms-primary), var(--nms-primary-light, var(--nms-primary))); border-radius: 3px;"></div>
+								<div class="nms-auto-s121">
+									<div class="nms-event-type-bar nms-event-type-bar-width-<?php echo esc_attr( $bar_width ); ?>"></div>
 								</div>
 							</div>
 						<?php endforeach; ?>
@@ -8911,26 +8783,26 @@ jobs:
 		</div>
 
 		<!-- Three Column: Most Active Users, Suspicious IPs, Event Groups -->
-		<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+		<div class="nms-auto-s052">
 			<!-- Most Active Users -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-businessman" style="color: var(--nms-purple);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-businessman nms-auto-s031"></span>
 						<?php _e( 'Most Active Users', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
-				<div class="nms-card-body" style="padding: 0;">
+				<div class="nms-card-body nms-auto-s161">
 					<?php if ( ! empty( $stats['active_users'] ) ) : ?>
-						<table class="widefat" style="border: none;">
+						<table class="widefat nms-auto-s006">
 							<tbody>
 								<?php foreach ( array_slice( $stats['active_users'], 0, 5 ) as $index => $user ) : ?>
-									<tr style="<?php echo $index % 2 === 0 ? 'background: var(--nms-gray-50);' : ''; ?>">
-										<td style="padding: 12px 15px;">
+									<tr class="<?php echo $index % 2 === 0 ? 'nms-row-alt' : ''; ?>">
+										<td class="nms-auto-s166">
 											<strong><?php echo esc_html( $user->username ); ?></strong>
-											<br><small style="color: var(--nms-gray-500);"><?php echo esc_html( ucfirst( $user->user_role ) ); ?></small>
+											<br><small class="nms-auto-s025"><?php echo esc_html( ucfirst( $user->user_role ) ); ?></small>
 										</td>
-										<td style="text-align: right; padding: 12px 15px;">
+										<td class="nms-auto-s189">
 											<span class="nms-badge nms-badge-primary"><?php echo number_format( $user->count ); ?></span>
 										</td>
 									</tr>
@@ -8938,7 +8810,7 @@ jobs:
 							</tbody>
 						</table>
 					<?php else : ?>
-						<div style="padding: 20px; text-align: center; color: var(--nms-gray-500);">
+						<div class="nms-auto-s174">
 							<?php _e( 'No user activity yet.', 'nexifymy-security' ); ?>
 						</div>
 					<?php endif; ?>
@@ -8946,21 +8818,21 @@ jobs:
 			</div>
 
 			<!-- Suspicious IPs -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-shield" style="color: var(--nms-danger);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-shield nms-auto-s024"></span>
 						<?php _e( 'Suspicious IPs', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
-				<div class="nms-card-body" style="padding: 0;">
+				<div class="nms-card-body nms-auto-s161">
 					<?php if ( ! empty( $stats['suspicious_ips'] ) ) : ?>
-						<table class="widefat" style="border: none;">
+						<table class="widefat nms-auto-s006">
 							<tbody>
 								<?php foreach ( array_slice( $stats['suspicious_ips'], 0, 5 ) as $index => $ip ) : ?>
-									<tr style="<?php echo $index % 2 === 0 ? 'background: var(--nms-gray-50);' : ''; ?>">
-										<td style="padding: 12px 15px;"><code><?php echo esc_html( $ip->ip_address ); ?></code></td>
-										<td style="text-align: right; padding: 12px 15px;">
+									<tr class="<?php echo $index % 2 === 0 ? 'nms-row-alt' : ''; ?>">
+										<td class="nms-auto-s166"><code><?php echo esc_html( $ip->ip_address ); ?></code></td>
+										<td class="nms-auto-s189">
 											<span class="nms-badge nms-badge-danger"><?php echo intval( $ip->count ); ?> <?php _e( 'fails', 'nexifymy-security' ); ?></span>
 										</td>
 									</tr>
@@ -8968,7 +8840,7 @@ jobs:
 							</tbody>
 						</table>
 					<?php else : ?>
-						<div style="padding: 20px; text-align: center; color: var(--nms-success);">
+						<div class="nms-auto-s175">
 							<span class="dashicons dashicons-yes-alt"></span> <?php _e( 'No suspicious IPs detected.', 'nexifymy-security' ); ?>
 						</div>
 					<?php endif; ?>
@@ -8976,30 +8848,22 @@ jobs:
 			</div>
 
 			<!-- Severity Breakdown -->
-			<div class="nms-card" style="margin: 0;">
-				<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200);">
-					<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-						<span class="dashicons dashicons-warning" style="color: var(--nms-warning-dark, #d97706);"></span>
+			<div class="nms-card nms-m-0">
+				<div class="nms-card-header nms-border-bottom">
+					<h3 class="nms-auto-s131">
+						<span class="dashicons dashicons-warning nms-auto-s034"></span>
 						<?php _e( 'Event Severity', 'nexifymy-security' ); ?>
 					</h3>
 				</div>
 				<div class="nms-card-body">
-					<?php 
-					$severity_colors = array(
-						'info'     => array( 'bg' => '#eff6ff', 'color' => '#3b82f6' ),
-						'low'      => array( 'bg' => '#f0fdf4', 'color' => '#22c55e' ),
-						'medium'   => array( 'bg' => '#fefce8', 'color' => '#eab308' ),
-						'warning'  => array( 'bg' => '#fff7ed', 'color' => '#f97316' ),
-						'high'     => array( 'bg' => '#fef2f2', 'color' => '#ef4444' ),
-						'critical' => array( 'bg' => '#fef2f2', 'color' => '#dc2626' ),
-					);
+					<?php
 					if ( ! empty( $stats['by_severity'] ) ) :
 						foreach ( $stats['by_severity'] as $severity => $count ) :
-							$colors = $severity_colors[ $severity ] ?? array( 'bg' => '#f3f4f6', 'color' => '#6b7280' );
+							$severity_key = sanitize_html_class( (string) $severity );
 					?>
-						<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; margin-bottom: 8px; background: <?php echo esc_attr( $colors['bg'] ); ?>; border-radius: 8px; border-left: 4px solid <?php echo esc_attr( $colors['color'] ); ?>;">
-							<span style="font-weight: 500; color: <?php echo esc_attr( $colors['color'] ); ?>; text-transform: capitalize;"><?php echo esc_html( $severity ); ?></span>
-							<strong style="font-size: 16px;"><?php echo number_format( $count ); ?></strong>
+						<div class="nms-severity-item nms-severity-<?php echo esc_attr( $severity_key ); ?>">
+							<span class="nms-severity-label"><?php echo esc_html( $severity ); ?></span>
+							<strong class="nms-auto-s084"><?php echo number_format( $count ); ?></strong>
 						</div>
 					<?php 
 						endforeach;
@@ -9012,25 +8876,25 @@ jobs:
 
 		<!-- Recent Activity -->
 		<div class="nms-card">
-			<div class="nms-card-header" style="border-bottom: 1px solid var(--nms-gray-200); display: flex; justify-content: space-between; align-items: center;">
-				<h3 style="margin: 0; display: flex; align-items: center; gap: 8px;">
-					<span class="dashicons dashicons-backup" style="color: var(--nms-gray-600);"></span>
+			<div class="nms-card-header nms-auto-s007">
+				<h3 class="nms-auto-s131">
+					<span class="dashicons dashicons-backup nms-text-muted"></span>
 					<?php _e( 'Recent Activity', 'nexifymy-security' ); ?>
 				</h3>
-				<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-activity-log&tab=login' ) ); ?>" class="nms-btn nms-btn-secondary" style="font-size: 12px; padding: 6px 12px;">
-					<?php _e( 'View All', 'nexifymy-security' ); ?> →
+				<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-activity-log&tab=login' ) ); ?>" class="nms-btn nms-btn-secondary nms-auto-s079">
+					<?php _e( 'View All', 'nexifymy-security' ); ?> >
 				</a>
 			</div>
-			<div class="nms-card-body" style="padding: 0;">
+			<div class="nms-card-body nms-auto-s161">
 				<?php if ( ! empty( $recent['entries'] ) ) : ?>
-					<table class="widefat" style="border: none;">
-						<thead style="background: var(--nms-gray-50);">
+					<table class="widefat nms-auto-s006">
+						<thead class="nms-auto-s005">
 							<tr>
-								<th style="padding: 12px 15px;"><?php _e( 'Time', 'nexifymy-security' ); ?></th>
-								<th style="padding: 12px 15px;"><?php _e( 'User', 'nexifymy-security' ); ?></th>
-								<th style="padding: 12px 15px;"><?php _e( 'Event', 'nexifymy-security' ); ?></th>
-								<th style="padding: 12px 15px;"><?php _e( 'Description', 'nexifymy-security' ); ?></th>
-								<th style="padding: 12px 15px;"><?php _e( 'IP Address', 'nexifymy-security' ); ?></th>
+								<th class="nms-auto-s166"><?php _e( 'Time', 'nexifymy-security' ); ?></th>
+								<th class="nms-auto-s166"><?php _e( 'User', 'nexifymy-security' ); ?></th>
+								<th class="nms-auto-s166"><?php _e( 'Event', 'nexifymy-security' ); ?></th>
+								<th class="nms-auto-s166"><?php _e( 'Description', 'nexifymy-security' ); ?></th>
+								<th class="nms-auto-s166"><?php _e( 'IP Address', 'nexifymy-security' ); ?></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -9046,21 +8910,21 @@ jobs:
 									$badge_class = 'nms-badge-danger';
 								}
 							?>
-								<tr style="<?php echo $index % 2 === 0 ? 'background: var(--nms-gray-50);' : ''; ?>">
-									<td style="padding: 12px 15px;"><small><?php echo esc_html( human_time_diff( strtotime( $entry->created_at ), current_time( 'timestamp' ) ) ); ?> <?php _e( 'ago', 'nexifymy-security' ); ?></small></td>
-									<td style="padding: 12px 15px;"><strong><?php echo esc_html( $entry->username ?: '—' ); ?></strong></td>
-									<td style="padding: 12px 15px;">
+								<tr class="<?php echo $index % 2 === 0 ? 'nms-row-alt' : ''; ?>">
+									<td class="nms-auto-s166"><small><?php echo esc_html( human_time_diff( strtotime( $entry->created_at ), current_time( 'timestamp' ) ) ); ?> <?php _e( 'ago', 'nexifymy-security' ); ?></small></td>
+									<td class="nms-auto-s166"><strong><?php echo esc_html( $entry->username ?: 'Unknown' ); ?></strong></td>
+									<td class="nms-auto-s166">
 										<span class="nms-badge <?php echo esc_attr( $badge_class ); ?>"><?php echo esc_html( ucwords( str_replace( '_', ' ', $entry->event_type ) ) ); ?></span>
 									</td>
-									<td style="padding: 12px 15px;"><?php echo esc_html( wp_trim_words( $entry->description, 8, '...' ) ); ?></td>
-									<td style="padding: 12px 15px;"><code style="font-size: 11px;"><?php echo esc_html( $entry->ip_address ); ?></code></td>
+									<td class="nms-auto-s166"><?php echo esc_html( wp_trim_words( $entry->description, 8, '...' ) ); ?></td>
+									<td class="nms-auto-s166"><code class="nms-auto-s071"><?php echo esc_html( $entry->ip_address ); ?></code></td>
 								</tr>
 							<?php endforeach; ?>
 						</tbody>
 					</table>
 				<?php else : ?>
-					<div style="padding: 40px; text-align: center; color: var(--nms-gray-500);">
-						<span class="dashicons dashicons-clipboard" style="font-size: 48px; margin-bottom: 15px;"></span>
+					<div class="nms-auto-s177">
+						<span class="dashicons dashicons-clipboard nms-auto-s116"></span>
 						<p><?php _e( 'No activity recorded yet. Activity will appear here once users start performing actions.', 'nexifymy-security' ); ?></p>
 					</div>
 				<?php endif; ?>
@@ -9080,13 +8944,13 @@ jobs:
 			</div>
 			<div class="nms-card-body">
 				<!-- Filters -->
-				<div class="nms-filters" style="display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; align-items: flex-end;">
+				<div class="nms-filters nms-auto-s046">
 					<div>
-						<label for="login-filter-username" style="display: block; margin-bottom: 5px; font-weight: 500;"><?php _e( 'Username', 'nexifymy-security' ); ?></label>
+						<label for="login-filter-username" class="nms-auto-s039"><?php _e( 'Username', 'nexifymy-security' ); ?></label>
 						<input type="text" id="login-filter-username" class="regular-text" placeholder="<?php _e( 'Search username...', 'nexifymy-security' ); ?>">
 					</div>
 					<div>
-						<label for="login-filter-status" style="display: block; margin-bottom: 5px; font-weight: 500;"><?php _e( 'Status', 'nexifymy-security' ); ?></label>
+						<label for="login-filter-status" class="nms-auto-s039"><?php _e( 'Status', 'nexifymy-security' ); ?></label>
 						<select id="login-filter-status" class="regular-text">
 							<option value=""><?php _e( 'All', 'nexifymy-security' ); ?></option>
 							<option value="login_success"><?php _e( 'Successful Login', 'nexifymy-security' ); ?></option>
@@ -9095,11 +8959,11 @@ jobs:
 						</select>
 					</div>
 					<div>
-						<label for="login-filter-date-from" style="display: block; margin-bottom: 5px; font-weight: 500;"><?php _e( 'From Date', 'nexifymy-security' ); ?></label>
+						<label for="login-filter-date-from" class="nms-auto-s039"><?php _e( 'From Date', 'nexifymy-security' ); ?></label>
 						<input type="date" id="login-filter-date-from" class="regular-text">
 					</div>
 					<div>
-						<label for="login-filter-date-to" style="display: block; margin-bottom: 5px; font-weight: 500;"><?php _e( 'To Date', 'nexifymy-security' ); ?></label>
+						<label for="login-filter-date-to" class="nms-auto-s039"><?php _e( 'To Date', 'nexifymy-security' ); ?></label>
 						<input type="date" id="login-filter-date-to" class="regular-text">
 					</div>
 					<div>
@@ -9118,7 +8982,7 @@ jobs:
 				</div>
 
 				<!-- Export Buttons -->
-				<div style="margin-top: 20px; display: flex; gap: 10px;">
+				<div class="nms-auto-s150">
 					<button type="button" id="export-login-csv" class="nms-btn nms-btn-secondary">
 						<span class="dashicons dashicons-download"></span> <?php _e( 'Export CSV', 'nexifymy-security' ); ?>
 					</button>
@@ -9171,7 +9035,7 @@ jobs:
 								}
 								?>
 								<span class="nms-badge <?php echo esc_attr( $badge ); ?>">
-									<span class="dashicons dashicons-<?php echo esc_attr( $icon ); ?>" style="font-size: 14px; width: 14px; height: 14px; vertical-align: middle;"></span>
+									<span class="dashicons dashicons-<?php echo esc_attr( $icon ); ?> nms-auto-s083"></span>
 									<?php echo esc_html( $label ); ?>
 								</span>
 							</td>
@@ -9181,7 +9045,7 @@ jobs:
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-			<div style="margin-top: 15px; text-align: center;">
+			<div class="nms-auto-s148">
 				<span class="description"><?php printf( __( 'Showing %d of %d entries', 'nexifymy-security' ), count( $results['entries'] ), $results['total'] ); ?></span>
 			</div>
 		<?php else : ?>
@@ -9241,7 +9105,7 @@ jobs:
 							<?php endforeach; ?>
 						</tbody>
 					</table>
-					<div style="margin-top: 15px; text-align: center;">
+					<div class="nms-auto-s148">
 						<span class="description"><?php printf( __( 'Showing %d of %d entries', 'nexifymy-security' ), count( $results['entries'] ), $results['total'] ); ?></span>
 					</div>
 				<?php else : ?>
@@ -9311,7 +9175,7 @@ jobs:
 							<?php endforeach; ?>
 						</tbody>
 					</table>
-					<div style="margin-top: 15px; text-align: center;">
+					<div class="nms-auto-s148">
 						<span class="description"><?php printf( __( 'Showing %d of %d entries', 'nexifymy-security' ), count( $results['entries'] ), $results['total'] ); ?></span>
 					</div>
 				<?php else : ?>
@@ -9380,7 +9244,7 @@ jobs:
 							<?php endforeach; ?>
 						</tbody>
 					</table>
-					<div style="margin-top: 15px; text-align: center;">
+					<div class="nms-auto-s148">
 						<span class="description"><?php printf( __( 'Showing %d of %d entries', 'nexifymy-security' ), count( $results['entries'] ), $results['total'] ); ?></span>
 					</div>
 				<?php else : ?>
@@ -9396,7 +9260,8 @@ jobs:
 	 */
 	private function render_activity_settings_content() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
-		$activity_settings = isset( $settings['activity_log'] ) ? $settings['activity_log'] : array();
+		$activity_settings_raw = isset( $settings['activity_log'] ) && is_array( $settings['activity_log'] ) ? $settings['activity_log'] : array();
+		$activity_settings = $activity_settings_raw;
 		
 		$defaults = array(
 			'enabled'             => true,
@@ -9418,6 +9283,10 @@ jobs:
 			'excluded_users'      => '',
 		);
 		$activity_settings = wp_parse_args( $activity_settings, $defaults );
+		if ( ! array_key_exists( 'enabled', $activity_settings_raw ) ) {
+			$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+			$activity_settings['enabled'] = ! empty( $modules['activity_log_enabled'] );
+		}
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header">
@@ -9564,10 +9433,10 @@ jobs:
 						</td>
 					</tr>
 				</table>
-				<p class="submit" style="display: flex; gap: 10px; align-items: center;">
+				<p class="submit nms-auto-s044">
 					<button type="button" id="save-activity-log-settings" class="nms-btn nms-btn-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
 					<button type="button" id="purge-activity-log" class="nms-btn nms-btn-danger"><?php _e( 'Purge All Logs', 'nexifymy-security' ); ?></button>
-					<span id="activity-log-status" style="margin-left: 15px;"></span>
+					<span id="activity-log-status" class="nms-status-inline"></span>
 				</p>
 			</div>
 		</div>
@@ -9605,8 +9474,8 @@ jobs:
 			<div class="nms-main-content">
 				
 				<!-- Loading State -->
-				<div id="analytics-loading" style="display: none; text-align: center; padding: 50px;">
-					<span class="dashicons dashicons-update spin" style="font-size: 40px; width: 40px; height: 40px; color: var(--nms-primary);"></span>
+				<div id="analytics-loading" class="nms-auto-s068">
+					<span class="dashicons dashicons-update spin nms-auto-s115"></span>
 					<p><?php _e( 'Loading analytics data...', 'nexifymy-security' ); ?></p>
 				</div>
 
@@ -9659,46 +9528,46 @@ jobs:
 							<h3><?php _e( 'Traffic Overview', 'nexifymy-security' ); ?></h3>
 						</div>
 						<div class="nms-card-body">
-							<div style="height: 300px; position: relative;">
+							<div class="nms-analytics-chart-lg">
 								<canvas id="chart-traffic-overview"></canvas>
 							</div>
 						</div>
 					</div>
 
 					<!-- Secondary Charts Grid -->
-					<div class="nms-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px;">
+					<div class="nms-grid-3 nms-analytics-grid-3">
 						
 						<!-- Browser Distribution -->
-						<div class="nms-card" style="margin-bottom: 0;">
+						<div class="nms-card nms-analytics-grid-card">
 							<div class="nms-card-header">
 								<h3><?php _e( 'Browsers', 'nexifymy-security' ); ?></h3>
 							</div>
 							<div class="nms-card-body">
-								<div style="height: 250px; position: relative;">
+								<div class="nms-analytics-chart-md">
 									<canvas id="chart-browsers"></canvas>
 								</div>
 							</div>
 						</div>
 
 						<!-- OS Distribution -->
-						<div class="nms-card" style="margin-bottom: 0;">
+						<div class="nms-card nms-analytics-grid-card">
 							<div class="nms-card-header">
 								<h3><?php _e( 'Operating Systems', 'nexifymy-security' ); ?></h3>
 							</div>
 							<div class="nms-card-body">
-								<div style="height: 250px; position: relative;">
+								<div class="nms-analytics-chart-md">
 									<canvas id="chart-os"></canvas>
 								</div>
 							</div>
 						</div>
 
 						<!-- Device Type -->
-						<div class="nms-card" style="margin-bottom: 0;">
+						<div class="nms-card nms-analytics-grid-card">
 							<div class="nms-card-header">
 								<h3><?php _e( 'Device Types', 'nexifymy-security' ); ?></h3>
 							</div>
 							<div class="nms-card-body">
-								<div style="height: 250px; position: relative;">
+								<div class="nms-analytics-chart-md">
 									<canvas id="chart-devices"></canvas>
 								</div>
 							</div>
@@ -9718,7 +9587,7 @@ jobs:
 									<thead>
 										<tr>
 											<th><?php _e( 'URL', 'nexifymy-security' ); ?></th>
-											<th style="width: 80px; text-align: right;"><?php _e( 'Views', 'nexifymy-security' ); ?></th>
+											<th class="nms-analytics-col-count"><?php _e( 'Views', 'nexifymy-security' ); ?></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -9738,7 +9607,7 @@ jobs:
 									<thead>
 										<tr>
 											<th><?php _e( 'Source', 'nexifymy-security' ); ?></th>
-											<th style="width: 80px; text-align: right;"><?php _e( 'Count', 'nexifymy-security' ); ?></th>
+											<th class="nms-analytics-col-count"><?php _e( 'Count', 'nexifymy-security' ); ?></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -9756,14 +9625,14 @@ jobs:
 							<h3><?php _e( 'Geographic Distribution', 'nexifymy-security' ); ?></h3>
 						</div>
 						<div class="nms-card-body">
-							<div id="geo-map-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+							<div id="geo-map-container" class="nms-analytics-geo-grid">
 								<div class="geo-table-wrapper">
 									<table class="widefat striped" id="table-geo">
 										<thead>
 											<tr>
 												<th><?php _e( 'Country', 'nexifymy-security' ); ?></th>
 												<th><?php _e( 'Code', 'nexifymy-security' ); ?></th>
-												<th style="text-align: right;"><?php _e( 'Visitors', 'nexifymy-security' ); ?></th>
+												<th class="nms-analytics-th-right"><?php _e( 'Visitors', 'nexifymy-security' ); ?></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -9772,7 +9641,7 @@ jobs:
 									</table>
 								</div>
 								<div class="geo-chart-wrapper">
-									<div style="height: 300px; position: relative;">
+									<div class="nms-analytics-chart-lg">
 										<canvas id="chart-geo"></canvas>
 									</div>
 								</div>
@@ -9785,4 +9654,563 @@ jobs:
 		</div>
 		<?php
 	}
+
+	/**
+	 * Save Deception module settings via AJAX.
+	 */
+	public function ajax_save_deception_settings() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		$payload  = isset( $_POST['settings'] ) && is_array( $_POST['settings'] )
+			? wp_unslash( $_POST['settings'] )
+			: wp_unslash( $_POST );
+		$to_bool  = static function ( $value ) {
+			if ( is_bool( $value ) ) {
+				return $value;
+			}
+			if ( is_numeric( $value ) ) {
+				return (int) $value > 0;
+			}
+			if ( is_string( $value ) ) {
+				return in_array( strtolower( $value ), array( '1', 'true', 'yes', 'on' ), true );
+			}
+			return false;
+		};
+
+		$enabled = $payload['deception_enabled'] ?? ( $payload['enabled'] ?? false );
+		$paths   = $payload['deception_honeytrap_paths'] ?? ( $payload['honeytrap_paths'] ?? '' );
+		$enum_trap = $payload['deception_enum_trap'] ?? ( $payload['enum_trap'] ?? false );
+		$enum_block = $payload['deception_enum_block'] ?? ( $payload['enum_block'] ?? false );
+		$block_all = $payload['deception_block_all_enum'] ?? ( $payload['block_all_enum'] ?? false );
+
+		$settings['deception_enabled'] = $to_bool( $enabled );
+		$settings['deception_honeytrap_paths'] = sanitize_textarea_field( (string) $paths );
+		$settings['deception_enum_trap'] = $to_bool( $enum_trap );
+		$settings['deception_enum_block'] = $to_bool( $enum_block );
+		$settings['deception_block_all_enum'] = $to_bool( $block_all );
+
+		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+			$settings['modules'] = array();
+		}
+		$settings['modules']['deception_enabled'] = $settings['deception_enabled'];
+		$settings['modules']['deception_honeytrap_paths'] = $settings['deception_honeytrap_paths'];
+		$settings['modules']['deception_enum_trap'] = $settings['deception_enum_trap'];
+		$settings['modules']['deception_enum_block'] = $settings['deception_enum_block'];
+		$settings['modules']['deception_block_all_enum'] = $settings['deception_block_all_enum'];
+
+		$result = update_option( 'nexifymy_security_settings', $settings, false );
+
+		if ( $result !== false ) {
+			wp_send_json_success( 'Settings saved successfully' );
+		} else {
+			wp_send_json_error( 'Failed to save settings' );
+		}
+	}
+
+	/**
+	 * Render the P2P Intelligence page.
+	 */
+	public function render_p2p_page() {
+		if ( ! class_exists( 'NexifyMy_Security_P2P' ) ) {
+			?><div class="wrap"><div class="notice notice-error"><p><?php _e( 'P2P Intelligence module is not loaded.', 'nexifymy-security' ); ?></p></div></div><?php
+			return;
+		}
+
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+		$p2p_enabled = ! empty( $settings['p2p_enabled'] ) || ! empty( $modules['p2p_enabled'] );
+		$p2p_broadcast_enabled = isset( $settings['p2p_broadcast_enabled'] ) ? $settings['p2p_broadcast_enabled'] : ( $modules['p2p_broadcast_enabled'] ?? true );
+		$p2p_trust_threshold = isset( $settings['p2p_trust_threshold'] ) ? intval( $settings['p2p_trust_threshold'] ) : intval( $modules['p2p_trust_threshold'] ?? 70 );
+		
+		$peers = NexifyMy_Security_P2P::get_peers();
+		$node_key = NexifyMy_Security_P2P::get_node_key();
+		$daily_count = NexifyMy_Security_P2P::get_daily_threat_count();
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<h1><?php _e( 'P2P Threat Intelligence', 'nexifymy-security' ); ?></h1>
+			<p class="description"><?php _e( 'Share threat intelligence with other SentinelWP installations for herd immunity.', 'nexifymy-security' ); ?></p>
+
+			<div class="nms-card">
+				<div class="nms-card-header">
+					<h2><span class="dashicons dashicons-networking"></span> <?php _e( 'P2P Settings', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="nms-card-body">
+					<form method="post" id="p2p-settings-form">
+						<?php wp_nonce_field( 'nexifymy_p2p_settings', 'nexifymy_p2p_nonce' ); ?>
+						
+						<table class="form-table">
+							<tr>
+								<th><?php _e( 'Enable P2P Intelligence', 'nexifymy-security' ); ?></th>
+								<td>
+									<label class="nms-toggle">
+										<input type="checkbox" name="p2p_enabled" id="p2p_enabled" value="1" <?php checked( $p2p_enabled ); ?>>
+										<span class="nms-toggle-slider"></span>
+									</label>
+									<p class="description"><?php _e( 'Enable collaborative threat intelligence sharing with peer nodes.', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'My Node Key', 'nexifymy-security' ); ?></th>
+								<td>
+									<input type="text" class="regular-text" value="<?php echo esc_attr( $node_key ); ?>" readonly id="p2p-node-key">
+									<button type="button" class="button nms-copy-node-key" data-key="<?php echo esc_attr( $node_key ); ?>">
+										<span class="dashicons dashicons-clipboard"></span> <?php _e( 'Copy', 'nexifymy-security' ); ?>
+									</button>
+									<p class="description"><?php _e( 'Share this key with peers who want to connect to your site.', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Broadcast Threats', 'nexifymy-security' ); ?></th>
+								<td>
+									<label class="nms-toggle">
+										<input type="checkbox" name="p2p_broadcast_enabled" value="1" <?php checked( $p2p_broadcast_enabled ); ?>>
+										<span class="nms-toggle-slider"></span>
+									</label>
+									<p class="description"><?php _e( 'Share detected threats with registered peers.', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Trust Threshold', 'nexifymy-security' ); ?></th>
+								<td>
+									<input type="range" name="p2p_trust_threshold" id="p2p-threshold-slider" min="0" max="100" value="<?php echo esc_attr( $p2p_trust_threshold ); ?>">
+									<span id="threshold-value" class="nms-p2p-threshold-value"><?php echo esc_html( $p2p_trust_threshold ); ?></span>/100
+									<p class="description"><?php _e( 'Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking.', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+						</table>
+
+						<p class="submit">
+							<button type="submit" class="button button-primary"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="nms-card">
+				<div class="nms-card-header">
+					<h2><i class="fa-solid fa-users"></i> <?php _e( 'Registered Peers', 'nexifymy-security' ); ?></h2>
+					<div id="p2p-peer-status" class="nms-p2p-peer-status"></div>
+					<button type="button" class="button button-secondary" id="add-peer-btn">
+						<i class="fa-solid fa-plus"></i> <?php _e( 'Add Peer', 'nexifymy-security' ); ?>
+					</button>
+				</div>
+				<div class="nms-card-body">
+					<?php if ( empty( $peers ) ) : ?>
+						<p class="description"><?php _e( 'No peers registered yet. Add a peer to start sharing threat intelligence.', 'nexifymy-security' ); ?></p>
+					<?php else : ?>
+						<table class="wp-list-table widefat fixed striped">
+							<thead>
+								<tr>
+									<th><?php _e( 'Label', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'URL', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Last Sync', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Sent/Received', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Actions', 'nexifymy-security' ); ?></th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ( $peers as $peer ) : ?>
+									<tr>
+										<td><strong><?php echo esc_html( $peer['label'] ?: __( 'Unnamed', 'nexifymy-security' ) ); ?></strong></td>
+										<td><code><?php echo esc_html( $peer['url'] ); ?></code></td>
+										<td>
+											<?php
+											$status = $peer['last_status'] ?? 'unknown';
+											$status_class = $status === 'ok' ? 'success' : ( $status === 'error' ? 'danger' : 'warning' );
+											$status_icon = $status === 'ok' ? 'yes-alt' : ( $status === 'error' ? 'dismiss' : 'warning' );
+											?>
+											<span class="nms-badge nms-badge-<?php echo esc_attr( $status_class ); ?>">
+												<span class="dashicons dashicons-<?php echo esc_attr( $status_icon ); ?>"></span>
+												<?php echo esc_html( ucfirst( $status ) ); ?>
+											</span>
+										</td>
+										<td>
+											<?php
+											if ( ! empty( $peer['last_sync'] ) ) {
+												echo esc_html( sprintf(
+													__( '%s ago', 'nexifymy-security' ),
+													human_time_diff( strtotime( $peer['last_sync'] ), current_time( 'timestamp' ) )
+												) );
+											} else {
+												_e( 'Never', 'nexifymy-security' );
+											}
+											?>
+										</td>
+										<td>
+											<span class="dashicons dashicons-arrow-up-alt" title="<?php esc_attr_e( 'Threats Sent', 'nexifymy-security' ); ?>"></span> <?php echo intval( $peer['threats_sent'] ?? 0 ); ?>
+											/
+											<span class="dashicons dashicons-arrow-down-alt" title="<?php esc_attr_e( 'Threats Received', 'nexifymy-security' ); ?>"></span> <?php echo intval( $peer['threats_recv'] ?? 0 ); ?>
+										</td>
+										<td>
+											<button type="button" class="button button-small delete-peer-btn" data-peer-id="<?php echo esc_attr( $peer['id'] ); ?>">
+												<i class="fa-solid fa-trash"></i> <?php _e( 'Remove', 'nexifymy-security' ); ?>
+											</button>
+										</td>
+									</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<div class="nms-card">
+				<div class="nms-card-header">
+					<h2><span class="dashicons dashicons-chart-line"></span> <?php _e( 'Statistics', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="nms-card-body">
+					<div class="nms-stats-row">
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon blue">
+								<span class="dashicons dashicons-groups"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo count( $peers ); ?></h4>
+								<p><?php _e( 'Connected Peers', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon green">
+								<span class="dashicons dashicons-shield-alt"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo esc_html( $daily_count ); ?></h4>
+								<p><?php _e( 'Threats Received (24h)', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon purple">
+								<span class="dashicons dashicons-admin-network"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo $p2p_enabled ? __( 'Active', 'nexifymy-security' ) : __( 'Disabled', 'nexifymy-security' ); ?></h4>
+								<p><?php _e( 'P2P Status', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="add-peer-modal" class="nms-p2p-modal">
+				<div class="nms-modal-content">
+					<span class="nms-modal-close">&times;</span>
+					<h2><?php _e( 'Add New Peer', 'nexifymy-security' ); ?></h2>
+					<form id="add-peer-form">
+						<?php wp_nonce_field( 'nexifymy_security_nonce', 'nexifymy_add_peer_nonce' ); ?>
+						<table class="form-table">
+							<tr>
+								<th><label for="peer_url"><?php _e( 'Peer URL', 'nexifymy-security' ); ?></label></th>
+								<td>
+									<input type="url" id="peer_url" name="peer_url" class="regular-text" required 
+										placeholder="https://peer-site.com">
+									<p class="description"><?php _e( 'Full URL of the peer WordPress site (must use HTTPS in production).', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="peer_api_key"><?php _e( 'Peer Node Key', 'nexifymy-security' ); ?></label></th>
+								<td>
+									<input type="text" id="peer_api_key" name="peer_api_key" class="regular-text" required>
+									<p class="description"><?php _e( 'The peer\'s node key (they can copy it from their P2P settings page).', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="peer_label"><?php _e( 'Label (Optional)', 'nexifymy-security' ); ?></label></th>
+								<td>
+									<input type="text" id="peer_label" name="peer_label" class="regular-text" placeholder="<?php esc_attr_e( 'My Production Server', 'nexifymy-security' ); ?>">
+									<p class="description"><?php _e( 'A friendly name to identify this peer.', 'nexifymy-security' ); ?></p>
+								</td>
+							</tr>
+						</table>
+						<p class="submit">
+							<button type="submit" class="button button-primary"><?php _e( 'Add Peer', 'nexifymy-security' ); ?></button>
+							<button type="button" class="button cancel-peer-btn"><?php _e( 'Cancel', 'nexifymy-security' ); ?></button>
+						</p>
+					</form>
+				</div>
+			</div>
+
+
+		</div>
+		<?php
+	}
+
+	/**
+	 * Save P2P module settings via AJAX.
+	 */
+	public function ajax_save_p2p_settings() {
+		check_ajax_referer( 'nexifymy_p2p_settings', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$settings = get_option( 'nexifymy_security_settings', array() );
+
+		$settings['p2p_enabled'] = ! empty( $_POST['p2p_enabled'] );
+		$settings['p2p_broadcast_enabled'] = ! empty( $_POST['p2p_broadcast_enabled'] );
+		$settings['p2p_trust_threshold'] = isset( $_POST['p2p_trust_threshold'] ) 
+			? max( 0, min( 100, intval( $_POST['p2p_trust_threshold'] ) ) )
+			: 70;
+		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+			$settings['modules'] = array();
+		}
+		$settings['modules']['p2p_enabled'] = $settings['p2p_enabled'];
+		$settings['modules']['p2p_broadcast_enabled'] = $settings['p2p_broadcast_enabled'];
+		$settings['modules']['p2p_trust_threshold'] = $settings['p2p_trust_threshold'];
+
+		$result = update_option( 'nexifymy_security_settings', $settings, false );
+
+		if ( $result !== false ) {
+			// Init module immediately if enabled
+			if ( $settings['p2p_enabled'] && class_exists( 'NexifyMy_Security_P2P' ) ) {
+				NexifyMy_Security_P2P::init();
+			}
+			wp_send_json_success( 'Settings saved successfully' );
+		} else {
+			wp_send_json_error( 'Failed to save settings' );
+		}
+	}
+
+	/**
+	 * Add a P2P peer via AJAX.
+	 */
+	public function ajax_add_peer() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		if ( ! class_exists( 'NexifyMy_Security_P2P' ) ) {
+			wp_send_json_error( 'P2P module not loaded' );
+		}
+
+		$url = isset( $_POST['peer_url'] ) ? esc_url_raw( wp_unslash( $_POST['peer_url'] ) ) : '';
+		$key = isset( $_POST['peer_api_key'] ) ? sanitize_text_field( wp_unslash( $_POST['peer_api_key'] ) ) : '';
+		$label = isset( $_POST['peer_label'] ) ? sanitize_text_field( wp_unslash( $_POST['peer_label'] ) ) : '';
+
+		$result = NexifyMy_Security_P2P::register_peer( $url, $key, $label );
+
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( $result->get_error_message() );
+		} else {
+			wp_send_json_success( $result );
+		}
+	}
+
+	/**
+	 * Remove a P2P peer via AJAX.
+	 */
+	public function ajax_remove_peer() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		if ( ! class_exists( 'NexifyMy_Security_P2P' ) ) {
+			wp_send_json_error( 'P2P module not loaded' );
+		}
+
+		$id = isset( $_POST['peer_id'] ) ? sanitize_text_field( wp_unslash( $_POST['peer_id'] ) ) : '';
+
+		if ( NexifyMy_Security_P2P::remove_peer( $id ) ) {
+			wp_send_json_success();
+		} else {
+			wp_send_json_error( 'Peer not found' );
+		}
+	}
+
+	/**
+	 * Register AJAX hooks.
+	 */
+	public function register_ajax_hooks() {
+		// Kept for backwards compatibility entrypoint; legacy aliases removed.
+	}
+
+	/**
+	 * Handle the Sandbox Console AJAX execution request.
+	 *
+	 * Calls the Sandbox module's analyze_code() method with the provided
+	 * PHP code and returns the analysis results.
+	 */
+	public function ajax_sandbox_execute() {
+		check_ajax_referer( 'nexifymy_sandbox_console_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
+		}
+
+		// Check if Sandbox module is available.
+		if ( ! class_exists( 'NexifyMy_Security_Sandbox' ) ) {
+			wp_send_json_error( __( 'Sandbox module is not loaded.', 'nexifymy-security' ) );
+		}
+
+		$settings = get_option( 'nexifymy_security_settings', array() );
+		$modules  = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+		$sandbox_enabled = ! empty( $modules['sandbox_enabled'] ) || ! empty( $settings['sandbox_enabled'] );
+
+		if ( ! $sandbox_enabled ) {
+			wp_send_json_error( __( 'Sandbox module is disabled.', 'nexifymy-security' ) );
+		}
+
+		$code        = isset( $_POST['code'] ) ? wp_unslash( $_POST['code'] ) : '';
+		$timeout     = isset( $_POST['timeout'] ) ? absint( $_POST['timeout'] ) : 5;
+		$static_only = ! empty( $_POST['static_only'] );
+
+		if ( empty( $code ) ) {
+			wp_send_json_error( __( 'No code provided.', 'nexifymy-security' ) );
+		}
+
+		// Enforce reasonable limits.
+		$timeout = max( 1, min( 30, $timeout ) );
+
+		$options = array(
+			'timeout'     => $timeout,
+			'preview'     => true, // Always rollback DB changes.
+			'label'       => 'Console execution',
+			'static_only' => $static_only,
+		);
+
+		$result = NexifyMy_Security_Sandbox::analyze_code( $code, $options );
+
+		wp_send_json_success( $result );
+	}
+
+	/**
+	 * Render the Sandbox Console admin page.
+	 *
+	 * Provides a PHP code editor, execution controls, and result display
+	 * for the Shadow Runtime sandbox.
+	 */
+	public function render_sandbox_page() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'Insufficient permissions.', 'nexifymy-security' ) );
+		}
+
+		$settings        = get_option( 'nexifymy_security_settings', array() );
+		$modules         = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : array();
+		$sandbox_enabled = ! empty( $modules['sandbox_enabled'] ) || ! empty( $settings['sandbox_enabled'] );
+		$console_enabled = ! empty( $modules['sandbox_console_enabled'] ) || ! empty( $settings['sandbox_console_enabled'] );
+		$nonce           = wp_create_nonce( 'nexifymy_sandbox_console_nonce' );
+		$default_timeout = isset( $modules['sandbox_timeout'] ) ? intval( $modules['sandbox_timeout'] ) : ( isset( $settings['sandbox_timeout'] ) ? intval( $settings['sandbox_timeout'] ) : 5 );
+		?>
+		<div class="wrap nexifymy-security-wrap">
+			<h1 class="wp-heading-inline">
+				<span class="dashicons dashicons-editor-code nms-sandbox-page-icon"></span>
+				<?php esc_html_e( 'Sandbox Console', 'nexifymy-security' ); ?>
+			</h1>
+			<hr class="wp-header-end">
+
+			<?php if ( ! $sandbox_enabled ) : ?>
+				<div class="nms-card nms-sandbox-banner">
+					<div class="nms-sandbox-banner-inner">
+						<span class="dashicons dashicons-warning nms-sandbox-banner-icon"></span>
+						<div class="nms-sandbox-banner-content">
+							<strong><?php esc_html_e( 'Sandbox Module Disabled', 'nexifymy-security' ); ?></strong>
+							<p class="nms-sandbox-banner-note">
+								<?php esc_html_e( 'The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console.', 'nexifymy-security' ); ?>
+							</p>
+							<p class="nms-sandbox-banner-note">
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings' ) ); ?>" class="button button-primary">
+									<?php esc_html_e( 'Go to Settings', 'nexifymy-security' ); ?>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			<?php else : ?>
+
+				<!-- Warning Banner -->
+				<div class="nms-card nms-sandbox-banner nms-sandbox-banner-warning">
+					<div class="nms-sandbox-banner-inner">
+						<span class="dashicons dashicons-warning nms-sandbox-banner-icon nms-sandbox-banner-icon-fixed"></span>
+						<div class="nms-sandbox-banner-content nms-sandbox-banner-text">
+							<strong><?php esc_html_e( 'Danger Zone: Code Execution', 'nexifymy-security' ); ?></strong>
+							<p class="nms-sandbox-banner-note">
+								<?php esc_html_e( 'This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing.', 'nexifymy-security' ); ?>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Code Editor Card -->
+				<div class="nms-card nms-sandbox-editor-card">
+					<div class="nms-card-header">
+						<h2>
+							<span class="dashicons dashicons-editor-code nms-sandbox-editor-icon"></span>
+							<?php esc_html_e( 'PHP Code Editor', 'nexifymy-security' ); ?>
+						</h2>
+					</div>
+					<div class="nms-card-body">
+						<textarea id="sandbox-code" class="large-text code nms-sandbox-code" rows="12" data-nonce="<?php echo esc_attr( $nonce ); ?>"><?php echo esc_textarea( "<?php\n// Enter code to analyze or execute\necho 'Hello from Sandbox!';\n" ); ?></textarea>
+
+						<div class="nms-sandbox-controls">
+							<button type="button" id="sandbox-run" class="button button-primary nms-sandbox-action-btn">
+								<span class="dashicons dashicons-controls-play"></span>
+								<?php esc_html_e( 'Run Code', 'nexifymy-security' ); ?>
+							</button>
+							<button type="button" id="sandbox-analyze" class="button nms-sandbox-action-btn">
+								<span class="dashicons dashicons-search"></span>
+								<?php esc_html_e( 'Analyze Only', 'nexifymy-security' ); ?>
+							</button>
+							<div class="nms-sandbox-timeout">
+								<label for="sandbox-timeout"><?php esc_html_e( 'Timeout:', 'nexifymy-security' ); ?></label>
+								<input type="number" id="sandbox-timeout" class="nms-sandbox-timeout-input" value="<?php echo esc_attr( $default_timeout ); ?>" min="1" max="30">
+								<span><?php esc_html_e( 'seconds', 'nexifymy-security' ); ?></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Results Card -->
+				<div id="sandbox-results" class="nms-card nms-sandbox-results-card">
+					<div class="nms-card-header" id="sandbox-result-header">
+						<h2>
+							<span class="dashicons dashicons-info" id="sandbox-result-icon"></span>
+							<span id="sandbox-result-title"><?php esc_html_e( 'Execution Results', 'nexifymy-security' ); ?></span>
+						</h2>
+					</div>
+					<div class="nms-card-body">
+						<!-- Meta Grid -->
+						<div id="sandbox-meta" class="nms-sandbox-meta-grid"></div>
+
+						<!-- Static Analysis -->
+						<div id="sandbox-static" class="nms-sandbox-section">
+							<h4 class="nms-sandbox-section-title"><?php esc_html_e( 'STATIC ANALYSIS', 'nexifymy-security' ); ?></h4>
+							<div id="sandbox-static-content"></div>
+						</div>
+
+						<!-- Output -->
+						<div id="sandbox-output-section" class="nms-sandbox-section">
+							<h4 class="nms-sandbox-section-title"><?php esc_html_e( 'OUTPUT', 'nexifymy-security' ); ?></h4>
+							<pre id="sandbox-output" class="nms-sandbox-output-pre"></pre>
+						</div>
+
+						<!-- Errors -->
+						<div id="sandbox-errors-section" class="nms-sandbox-section">
+							<h4 class="nms-sandbox-section-title"><?php esc_html_e( 'ERRORS', 'nexifymy-security' ); ?></h4>
+							<div id="sandbox-errors"></div>
+						</div>
+
+						<!-- Queries -->
+						<div id="sandbox-queries-section" class="nms-sandbox-section nms-sandbox-section-last">
+							<h4 class="nms-sandbox-section-title"><?php esc_html_e( 'DATABASE QUERIES', 'nexifymy-security' ); ?></h4>
+							<div id="sandbox-queries"></div>
+						</div>
+					</div>
+				</div>
+
+			<?php endif; ?>
+		</div>
+
+		<?php
+	}
 }
+
