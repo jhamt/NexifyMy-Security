@@ -141,6 +141,16 @@ function nexifymy_security_activate() {
 				'compliance_enabled'      => 1,
 				'developer_api_enabled'   => 1,
 				'integrations_enabled'    => 1,
+				'deception_enabled'   	  => true,
+    			'deception_honeytrap_paths' => "/secret-backup.zip\n/old-admin/",
+   				'deception_honeytrap_override_defaults'=> false,
+    			'deception_enum_trap'     => true,
+    			'deception_enum_block'    => false,  // true = hard block; false = 301 redirect
+    			'deception_block_all_enum'=> false,
+				'sandbox_enabled'         => false,
+				'sandbox_timeout'         => 5,
+				'sandbox_dynamic_analysis'=> false,
+				'sandbox_console_enabled' => false,
 			),
 			'firewall' => array(
 				'enabled'        => true,
@@ -193,6 +203,19 @@ function nexifymy_security_deactivate() {
 	wp_clear_scheduled_hook( 'nexifymy_daily_summary' );
 	wp_clear_scheduled_hook( 'nexifymy_log_cleanup' );
 	wp_clear_scheduled_hook( 'nexifymy_scheduled_backup' );
+	wp_clear_scheduled_hook( 'nexifymy_p2p_sync' );
+
+	// Allow modules to run their own deactivation cleanup.
+	do_action( 'nexifymy_security_deactivate' );
+
+	// Clean up sandbox transients.
+	global $wpdb;
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$wpdb->query(
+		"DELETE FROM {$wpdb->options}
+		 WHERE option_name LIKE '_transient_nexifymy_sbx_%'
+		    OR option_name LIKE '_transient_timeout_nexifymy_sbx_%'"
+	);
 }
 
 register_activation_hook( __FILE__, 'nexifymy_security_activate' );
@@ -284,15 +307,20 @@ function nexifymy_security_plugin_locale( $locale, $domain ) {
  * @return bool
  */
 function nexifymy_security_is_module_enabled( $settings, $module_option, $default = true ) {
-	if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+	if ( ! is_array( $settings ) ) {
 		return (bool) $default;
 	}
 
-	if ( ! array_key_exists( $module_option, $settings['modules'] ) ) {
-		return (bool) $default;
+	if ( isset( $settings['modules'] ) && is_array( $settings['modules'] ) && array_key_exists( $module_option, $settings['modules'] ) ) {
+		return (bool) $settings['modules'][ $module_option ];
 	}
 
-	return (bool) $settings['modules'][ $module_option ];
+	// Backward compatibility with legacy top-level keys.
+	if ( array_key_exists( $module_option, $settings ) ) {
+		return (bool) $settings[ $module_option ];
+	}
+
+	return (bool) $default;
 }
 
 /*
@@ -495,6 +523,25 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_graphql_security']->init();
 	}
 
+	// Load Deception Technology (Honeypots 2.0).
+	if ( nexifymy_security_is_module_enabled( $settings, 'deception_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/deception.php';
+		$GLOBALS['nexifymy_deception'] = new NexifyMy_Security_Deception();
+		$GLOBALS['nexifymy_deception']->init();
+	}
+
+	// Load P2P Threat Intelligence.
+	if ( nexifymy_security_is_module_enabled( $settings, 'p2p_enabled', false ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/p2p-intelligence.php';
+		NexifyMy_Security_P2P::init();
+	}
+
+	// Load Shadow Runtime Sandbox.
+	if ( nexifymy_security_is_module_enabled( $settings, 'sandbox_enabled', false ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/sandbox.php';
+		NexifyMy_Security_Sandbox::init();
+	}
+
 	// Load WP-CLI Commands (DevOps integration).
 	if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-cli.php';
@@ -514,6 +561,9 @@ function nexifymy_security_init() {
 	if ( is_admin() ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-admin.php';
 		$GLOBALS['nexifymy_admin'] = new NexifyMy_Security_Admin();
+		
+		// Register AJAX hooks for admin functionality
+		$GLOBALS['nexifymy_admin']->register_ajax_hooks();
 		$GLOBALS['nexifymy_admin']->init();
 
 		// Load Settings.
