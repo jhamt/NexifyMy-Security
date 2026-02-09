@@ -470,20 +470,14 @@ class NexifyMy_Security_Firewall {
 		// Styled Block Page.
 		$ip = esc_html( $_SERVER['REMOTE_ADDR'] );
 		$reason_safe = esc_html( $reason );
+		$block_css_url = esc_url( NEXIFYMY_SECURITY_URL . 'assets/css/firewall-block.css' );
 		
 		echo <<<HTML
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Access Denied</title>
-	<style>
-		body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f0f2f5; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-		.block-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 500px; text-align: center; border-top: 4px solid #d32f2f; }
-		h1 { color: #d32f2f; margin-top: 0; }
-		p { color: #333; line-height: 1.6; }
-		.meta { background: #fee; color: #d32f2f; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 13px; margin-top: 20px; text-align: left; }
-		.footer { margin-top: 20px; font-size: 12px; color: #888; }
-	</style>
+	<link rel="stylesheet" href="{$block_css_url}">
 </head>
 <body>
 	<div class="block-container">

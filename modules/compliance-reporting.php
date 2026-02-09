@@ -579,15 +579,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string HTML content.
 	 */
 	private function generate_html_report( $report ) {
-		$grade_colors = array(
-			'A' => '#22c55e',
-			'B' => '#84cc16',
-			'C' => '#eab308',
-			'D' => '#f97316',
-			'F' => '#ef4444',
-		);
-
-		$grade_color = $grade_colors[ $report['summary']['grade'] ] ?? '#666';
+		$compliance_css_url = esc_url( NEXIFYMY_SECURITY_URL . 'assets/css/compliance-report.css' );
 
 		ob_start();
 		?>
@@ -598,69 +590,33 @@ class NexifyMy_Security_Compliance {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Security Audit Report - <?php echo esc_html( $report['site_name'] ); ?></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<style>
-		* { margin: 0; padding: 0; box-sizing: border-box; }
-		body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
-		.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-		.header { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 40px; border-radius: 12px 12px 0 0; }
-		.header h1 { font-size: 28px; margin-bottom: 8px; }
-		.header p { opacity: 0.9; }
-		.content { background: white; padding: 40px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-		.score-card { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 30px; border-radius: 12px; margin-bottom: 40px; }
-		.grade { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: white; background: <?php echo $grade_color; ?>; }
-		.score-details { flex: 1; margin-left: 30px; }
-		.score-details h2 { font-size: 24px; margin-bottom: 10px; }
-		.stats { display: flex; gap: 20px; margin-top: 15px; }
-		.stat { text-align: center; padding: 10px 20px; background: white; border-radius: 8px; }
-		.stat-value { font-size: 24px; font-weight: bold; }
-		.stat-label { font-size: 12px; color: #666; text-transform: uppercase; }
-		.section { margin-bottom: 30px; }
-		.section h3 { font-size: 18px; color: #1e3a5f; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
-		.check-list { list-style: none; }
-		.check-item { display: flex; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
-		.check-item:last-child { border-bottom: none; }
-		.check-status { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 14px; flex-shrink: 0; }
-		.check-status.pass { background: #dcfce7; color: #16a34a; }
-		.check-status.fail { background: #fee2e2; color: #dc2626; }
-		.check-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-		.check-info p { font-size: 13px; color: #666; }
-		.weight-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; text-transform: uppercase; margin-left: 10px; }
-		.weight-critical { background: #fee2e2; color: #dc2626; }
-		.weight-high { background: #ffedd5; color: #ea580c; }
-		.weight-medium { background: #fef9c3; color: #ca8a04; }
-		.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
-		.metric { background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center; }
-		.metric-value { font-size: 24px; font-weight: bold; color: #1e3a5f; }
-		.metric-label { font-size: 12px; color: #666; margin-top: 5px; }
-		.footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #666; font-size: 13px; }
-		@media print { body { background: white; } .container { padding: 0; } .content { box-shadow: none; } }
-	</style>
+	<link rel="stylesheet" href="<?php echo $compliance_css_url; ?>">
 </head>
 <body>
 	<div class="container">
 		<div class="header">
 			<h1><i class="fas fa-shield-alt"></i> Security Audit Report</h1>
 			<p><?php echo esc_html( $report['site_name'] ); ?> — <?php echo esc_html( $report['site_url'] ); ?></p>
-			<p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Generated: <?php echo esc_html( $report['generated_at'] ); ?></p>
+			<p class="generated-at">Generated: <?php echo esc_html( $report['generated_at'] ); ?></p>
 		</div>
 		
 		<div class="content">
 			<div class="score-card">
-				<div class="grade"><?php echo esc_html( $report['summary']['grade'] ); ?></div>
+				<div class="grade grade-<?php echo esc_attr( strtolower( $report['summary']['grade'] ) ); ?>"><?php echo esc_html( $report['summary']['grade'] ); ?></div>
 				<div class="score-details">
 					<h2>Security Score: <?php echo esc_html( $report['summary']['score'] ); ?>%</h2>
 					<p>Based on <?php echo esc_html( $report['summary']['total_checks'] ); ?> compliance and security checks.</p>
 					<div class="stats">
 						<div class="stat">
-							<div class="stat-value" style="color: #16a34a;"><?php echo esc_html( $report['summary']['passed'] ); ?></div>
+							<div class="stat-value stat-value-pass"><?php echo esc_html( $report['summary']['passed'] ); ?></div>
 							<div class="stat-label">Passed</div>
 						</div>
 						<div class="stat">
-							<div class="stat-value" style="color: #dc2626;"><?php echo esc_html( $report['summary']['failed'] ); ?></div>
+							<div class="stat-value stat-value-fail"><?php echo esc_html( $report['summary']['failed'] ); ?></div>
 							<div class="stat-label">Critical</div>
 						</div>
 						<div class="stat">
-							<div class="stat-value" style="color: #ca8a04;"><?php echo esc_html( $report['summary']['warnings'] ); ?></div>
+							<div class="stat-value stat-value-warning"><?php echo esc_html( $report['summary']['warnings'] ); ?></div>
 							<div class="stat-label">Warnings</div>
 						</div>
 					</div>
@@ -698,11 +654,11 @@ class NexifyMy_Security_Compliance {
 						<div class="metric-label">Total Requests</div>
 					</div>
 					<div class="metric">
-						<div class="metric-value" style="color: #dc2626;"><?php echo esc_html( $report['threats']['high_threats'] ); ?></div>
+						<div class="metric-value metric-value-danger"><?php echo esc_html( $report['threats']['high_threats'] ); ?></div>
 						<div class="metric-label">High Threats</div>
 					</div>
 					<div class="metric">
-						<div class="metric-value" style="color: #ca8a04;"><?php echo esc_html( $report['threats']['failed_logins'] ); ?></div>
+						<div class="metric-value metric-value-warning"><?php echo esc_html( $report['threats']['failed_logins'] ); ?></div>
 						<div class="metric-label">Failed Logins</div>
 					</div>
 				</div>
@@ -731,16 +687,16 @@ class NexifyMy_Security_Compliance {
 
 			<div class="section">
 				<h3>System Information</h3>
-				<table style="width: 100%; font-size: 14px;">
-					<tr><td style="padding: 8px 0; border-bottom: 1px solid #f3f4f6;"><strong>WordPress Version</strong></td><td><?php echo esc_html( $report['wp_version'] ); ?></td></tr>
-					<tr><td style="padding: 8px 0; border-bottom: 1px solid #f3f4f6;"><strong>PHP Version</strong></td><td><?php echo esc_html( $report['php_version'] ); ?></td></tr>
-					<tr><td style="padding: 8px 0;"><strong>Report ID</strong></td><td><?php echo esc_html( $report['id'] ); ?></td></tr>
+				<table class="system-table">
+					<tr><td class="system-cell system-cell-border"><strong>WordPress Version</strong></td><td class="system-cell system-cell-border"><?php echo esc_html( $report['wp_version'] ); ?></td></tr>
+					<tr><td class="system-cell system-cell-border"><strong>PHP Version</strong></td><td class="system-cell system-cell-border"><?php echo esc_html( $report['php_version'] ); ?></td></tr>
+					<tr><td class="system-cell"><strong>Report ID</strong></td><td class="system-cell"><?php echo esc_html( $report['id'] ); ?></td></tr>
 				</table>
 			</div>
 
 			<div class="footer">
 				<p>Generated by NexifyMy Security</p>
-				<p style="margin-top: 5px;">This report is confidential and intended for security assessment purposes only.</p>
+				<p class="footer-note">This report is confidential and intended for security assessment purposes only.</p>
 			</div>
 		</div>
 	</div>
