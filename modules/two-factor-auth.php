@@ -58,6 +58,7 @@ class NexifyMy_Security_Two_Factor {
 		add_action( 'edit_user_profile', array( $this, 'render_user_settings' ) );
 		add_action( 'personal_options_update', array( $this, 'save_user_settings' ) );
 		add_action( 'edit_user_profile_update', array( $this, 'save_user_settings' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_profile_assets' ) );
 
 		// AJAX handlers.
 		add_action( 'wp_ajax_nexifymy_generate_2fa_secret', array( $this, 'ajax_generate_secret' ) );
@@ -67,6 +68,25 @@ class NexifyMy_Security_Two_Factor {
 		add_action( 'wp_ajax_nopriv_nexifymy_send_email_code', array( $this, 'ajax_send_email_code' ) );
 		add_action( 'wp_ajax_nexifymy_get_2fa_settings', array( $this, 'ajax_get_settings' ) );
 		add_action( 'wp_ajax_nexifymy_save_2fa_settings', array( $this, 'ajax_save_settings' ) );
+	}
+
+	/**
+	 * Enqueue minimal profile-page styles for 2FA status badges.
+	 *
+	 * @param string $hook Current admin page hook.
+	 * @return void
+	 */
+	public function enqueue_profile_assets( $hook ) {
+		if ( ! in_array( $hook, array( 'profile.php', 'user-edit.php' ), true ) ) {
+			return;
+		}
+
+		wp_enqueue_style(
+			'nexifymy-two-factor-profile',
+			NEXIFYMY_SECURITY_URL . 'assets/css/two-factor-auth.css',
+			array(),
+			NEXIFYMY_SECURITY_VERSION
+		);
 	}
 
 	/**
@@ -382,16 +402,16 @@ class NexifyMy_Security_Two_Factor {
 				<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
 				<td>
 					<?php if ( $is_enabled ) : ?>
-						<span style="color: green; font-weight: bold;">✓ <?php _e( 'Enabled', 'nexifymy-security' ); ?></span>
+						<span class="nms-2fa-status nms-2fa-status-enabled"><?php _e( 'Enabled', 'nexifymy-security' ); ?></span>
 						<button type="button" class="button" id="disable-2fa"><?php _e( 'Disable 2FA', 'nexifymy-security' ); ?></button>
 					<?php else : ?>
-						<span style="color: orange;">✗ <?php _e( 'Not Enabled', 'nexifymy-security' ); ?></span>
+						<span class="nms-2fa-status nms-2fa-status-disabled"><?php _e( 'Not Enabled', 'nexifymy-security' ); ?></span>
 						<button type="button" class="button button-primary" id="setup-2fa"><?php _e( 'Enable 2FA', 'nexifymy-security' ); ?></button>
 					<?php endif; ?>
 				</td>
 			</tr>
 		</table>
-		<div id="2fa-setup-modal" style="display: none;"></div>
+		<div id="2fa-setup-modal" hidden></div>
 		<?php
 	}
 

@@ -1,0 +1,12 @@
+.nms-2fa-status {
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.nms-2fa-status-enabled {
+  color: #15803d;
+}
+
+.nms-2fa-status-disabled {
+  color: #b45309;
+}
