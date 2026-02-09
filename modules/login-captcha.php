@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Login Captcha Module.
  * Adds math-based captcha to login, registration, and password reset forms.
@@ -89,8 +89,9 @@ class NexifyMy_Security_Login_Captcha {
 		add_action( 'wp_ajax_nexifymy_get_captcha_settings', array( $this, 'ajax_get_settings' ) );
 		add_action( 'wp_ajax_nexifymy_save_captcha_settings', array( $this, 'ajax_save_settings' ) );
 
-		// Enqueue styles.
-		add_action( 'login_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		// Enqueue assets.
+		add_action( 'login_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 	}
 
 	/**
@@ -188,11 +189,11 @@ class NexifyMy_Security_Login_Captcha {
 				break;
 			case '*':
 				$answer = $num1 * $num2;
-				$symbol = '×';
+				$symbol = '*';
 				break;
 			case '/':
 				$answer = $num1 / $num2;
-				$symbol = '÷';
+				$symbol = '/';
 				break;
 			default:
 				$answer = $num1 + $num2;
@@ -272,11 +273,6 @@ class NexifyMy_Security_Login_Captcha {
 			<label for="nexifymy_captcha"><?php echo esc_html( $captcha['question'] ); ?></label>
 			<input type="number" name="nexifymy_captcha" id="nexifymy_captcha" class="input" required aria-required="true" />
 		</p>
-		<style>
-			.nexifymy-captcha-field { margin-bottom: 15px; }
-			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
-			.nexifymy-captcha-field input { width: 100%; padding: 8px; font-size: 16px; }
-		</style>
 		<?php
 	}
 
@@ -298,11 +294,6 @@ class NexifyMy_Security_Login_Captcha {
 			<label for="nexifymy_captcha"><?php _e( 'Type the word:', 'nexifymy-security' ); ?> <strong><?php echo esc_html( $word ); ?></strong></label>
 			<input type="text" name="nexifymy_captcha" id="nexifymy_captcha" class="input" required aria-required="true" autocomplete="off" />
 		</p>
-		<style>
-			.nexifymy-captcha-field { margin-bottom: 15px; }
-			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
-			.nexifymy-captcha-field input { width: 100%; padding: 8px; font-size: 16px; }
-		</style>
 		<?php
 	}
 
@@ -321,21 +312,17 @@ class NexifyMy_Security_Login_Captcha {
 		?>
 		<p class="nexifymy-captcha-field">
 			<label><?php _e( 'Select the image with a checkmark:', 'nexifymy-security' ); ?></label>
-			<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px;">
+			<div class="nexifymy-captcha-grid">
 				<?php for ( $i = 1; $i <= 4; $i++ ) : ?>
-					<label style="cursor: pointer; border: 2px solid #ddd; padding: 10px; text-align: center; border-radius: 4px;">
-						<input type="radio" name="nexifymy_captcha" value="<?php echo $i; ?>" required style="margin: 0;">
-						<div style="font-size: 40px; margin-top: 5px;">
-							<?php echo $i === $answer ? '✓' : '✗'; ?>
+					<label class="nexifymy-captcha-choice">
+						<input type="radio" name="nexifymy_captcha" value="<?php echo $i; ?>" required class="nexifymy-captcha-choice-input">
+						<div class="nexifymy-captcha-choice-icon">
+							<?php echo $i === $answer ? '&#10003;' : '&#10007;'; ?>
 						</div>
 					</label>
 				<?php endfor; ?>
 			</div>
 		</p>
-		<style>
-			.nexifymy-captcha-field { margin-bottom: 15px; }
-			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
-		</style>
 		<?php
 	}
 
@@ -354,14 +341,9 @@ class NexifyMy_Security_Login_Captcha {
 		?>
 		<p class="nexifymy-captcha-field">
 			<label for="nexifymy_captcha"><?php _e( 'Enter the code:', 'nexifymy-security' ); ?> <strong><?php echo esc_html( $number ); ?></strong></label>
-			<small style="display: block; margin: 5px 0; color: #666;"><?php _e( '(Speak this code to verify)', 'nexifymy-security' ); ?></small>
+			<small class="nexifymy-captcha-hint"><?php _e( '(Speak this code to verify)', 'nexifymy-security' ); ?></small>
 			<input type="number" name="nexifymy_captcha" id="nexifymy_captcha" class="input" required aria-required="true" />
 		</p>
-		<style>
-			.nexifymy-captcha-field { margin-bottom: 15px; }
-			.nexifymy-captcha-field label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
-			.nexifymy-captcha-field input { width: 100%; padding: 8px; font-size: 16px; }
-		</style>
 		<?php
 	}
 
@@ -373,14 +355,13 @@ class NexifyMy_Security_Login_Captcha {
 		$site_key = $settings['site_key'] ?? '';
 
 		if ( empty( $site_key ) ) {
-			echo '<p style="color: red;">reCAPTCHA site key not configured.</p>';
+			echo '<p class="nexifymy-captcha-error">reCAPTCHA site key not configured.</p>';
 			return;
 		}
 
 		wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), null, true );
 		?>
-		<div class="g-recaptcha" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
-		<style>.g-recaptcha { margin-bottom: 15px; }</style>
+		<div class="g-recaptcha nexifymy-recaptcha" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
 		<?php
 	}
 
@@ -392,20 +373,19 @@ class NexifyMy_Security_Login_Captcha {
 		$site_key = $settings['site_key'] ?? '';
 
 		if ( empty( $site_key ) ) {
-			echo '<p style="color: red;">reCAPTCHA site key not configured.</p>';
+			echo '<p class="nexifymy-captcha-error">reCAPTCHA site key not configured.</p>';
 			return;
 		}
 
 		wp_enqueue_script( 'google-recaptcha-v3', 'https://www.google.com/recaptcha/api.js?render=' . $site_key, array(), null, true );
 		?>
-		<input type="hidden" name="recaptcha_token" id="recaptcha_token">
-		<script>
-		grecaptcha.ready(function() {
-			grecaptcha.execute('<?php echo esc_js( $site_key ); ?>', {action: 'login'}).then(function(token) {
-				document.getElementById('recaptcha_token').value = token;
-			});
-		});
-		</script>
+		<input
+			type="hidden"
+			name="recaptcha_token"
+			id="recaptcha_token"
+			class="nexifymy-recaptcha-v3-token"
+			data-site-key="<?php echo esc_attr( $site_key ); ?>"
+			data-action="login">
 		<?php
 	}
 
@@ -417,14 +397,13 @@ class NexifyMy_Security_Login_Captcha {
 		$site_key = $settings['site_key'] ?? '';
 
 		if ( empty( $site_key ) ) {
-			echo '<p style="color: red;">Turnstile site key not configured.</p>';
+			echo '<p class="nexifymy-captcha-error">Turnstile site key not configured.</p>';
 			return;
 		}
 
 		wp_enqueue_script( 'cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), null, true );
 		?>
-		<div class="cf-turnstile" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
-		<style>.cf-turnstile { margin-bottom: 15px; }</style>
+		<div class="cf-turnstile nexifymy-turnstile" data-sitekey="<?php echo esc_attr( $site_key ); ?>"></div>
 		<?php
 	}
 
@@ -575,17 +554,21 @@ class NexifyMy_Security_Login_Captcha {
 	/**
 	 * Enqueue login page styles.
 	 */
-	public function enqueue_styles() {
-		wp_add_inline_style( 'login', '
-			.nexifymy-captcha-field {
-				margin-bottom: 20px;
-			}
-			.nexifymy-captcha-field label {
-				color: #333;
-				font-size: 14px;
-				font-weight: 600;
-			}
-		' );
+	public function enqueue_assets() {
+		wp_enqueue_style(
+			'nexifymy-login-captcha',
+			NEXIFYMY_SECURITY_URL . 'assets/css/login-captcha.css',
+			array(),
+			NEXIFYMY_SECURITY_VERSION
+		);
+
+		wp_enqueue_script(
+			'nexifymy-login-captcha',
+			NEXIFYMY_SECURITY_URL . 'assets/js/login-captcha.js',
+			array( 'jquery' ),
+			NEXIFYMY_SECURITY_VERSION,
+			true
+		);
 	}
 
 	/*
@@ -644,3 +627,4 @@ class NexifyMy_Security_Login_Captcha {
 		wp_send_json_success( array( 'message' => 'Settings saved.' ) );
 	}
 }
+

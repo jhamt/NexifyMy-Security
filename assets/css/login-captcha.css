@@ -1,0 +1,61 @@
+/**
+ * NexifyMy Security - Login Captcha Styles
+ */
+
+.nexifymy-captcha-field {
+  margin-bottom: 15px;
+}
+
+.nexifymy-captcha-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.nexifymy-captcha-field input[type="text"],
+.nexifymy-captcha-field input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.nexifymy-captcha-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nexifymy-captcha-choice {
+  cursor: pointer;
+  border: 2px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.nexifymy-captcha-choice-input {
+  margin: 0;
+}
+
+.nexifymy-captcha-choice-icon {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.nexifymy-captcha-hint {
+  display: block;
+  margin: 5px 0;
+  color: #666;
+}
+
+.nexifymy-captcha-error {
+  color: #d63638;
+}
+
+.nexifymy-recaptcha,
+.nexifymy-turnstile {
+  margin-bottom: 15px;
+}
