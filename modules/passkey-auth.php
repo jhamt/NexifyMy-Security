@@ -154,6 +154,13 @@ class NexifyMy_Security_Passkey {
 				'confirmDelete'  => __( 'Are you sure you want to delete this passkey?', 'nexifymy-security' ),
 			),
 		) );
+
+		wp_enqueue_style(
+			'nexifymy-passkey-admin',
+			NEXIFYMY_SECURITY_URL . 'assets/css/passkey.css',
+			array(),
+			NEXIFYMY_SECURITY_VERSION
+		);
 	}
 
 	/**
@@ -161,20 +168,15 @@ class NexifyMy_Security_Passkey {
 	 */
 	public function render_login_passkey_button() {
 		?>
-		<div id="nexifymy-passkey-login" style="margin-bottom: 16px; text-align: center;">
-			<button type="button" id="passkey-login-btn" class="button button-secondary" style="width: 100%; padding: 10px;">
-				<span class="dashicons dashicons-admin-network" style="margin-right: 8px;"></span>
+		<div id="nexifymy-passkey-login">
+			<button type="button" id="passkey-login-btn" class="button button-secondary">
+				<span class="dashicons dashicons-admin-network"></span>
 				<?php _e( 'Sign in with Passkey', 'nexifymy-security' ); ?>
 			</button>
-			<p class="passkey-divider" style="margin: 16px 0; color: #666;">
-				<span style="background: #fff; padding: 0 10px;"><?php _e( 'or', 'nexifymy-security' ); ?></span>
+			<p class="passkey-divider">
+				<span><?php _e( 'or', 'nexifymy-security' ); ?></span>
 			</p>
 		</div>
-		<script>
-		if (!window.PublicKeyCredential) {
-			document.getElementById('nexifymy-passkey-login').style.display = 'none';
-		}
-		</script>
 		<?php
 	}
 
@@ -195,18 +197,19 @@ class NexifyMy_Security_Passkey {
 						<?php if ( empty( $credentials ) ) : ?>
 							<p class="description"><?php _e( 'No passkeys registered yet.', 'nexifymy-security' ); ?></p>
 						<?php else : ?>
-							<ul style="margin: 0;">
+							<ul class="passkey-list">
 								<?php foreach ( $credentials as $id => $cred ) : ?>
-									<li style="margin-bottom: 8px; padding: 10px; background: #f9f9f9; border-radius: 4px;" data-credential-id="<?php echo esc_attr( $id ); ?>">
-										<strong><?php echo esc_html( $cred['name'] ); ?></strong>
-										<br>
-										<small>
+									<li class="passkey-item" data-credential-id="<?php echo esc_attr( $id ); ?>">
+										<div class="passkey-info">
+											<strong class="passkey-name"><?php echo esc_html( $cred['name'] ); ?></strong>
+											<small class="passkey-meta">
 											<?php printf( __( 'Created: %s', 'nexifymy-security' ), esc_html( $cred['created'] ) ); ?>
 											<?php if ( ! empty( $cred['last_used'] ) ) : ?>
 												| <?php printf( __( 'Last used: %s', 'nexifymy-security' ), esc_html( $cred['last_used'] ) ); ?>
 											<?php endif; ?>
-										</small>
-										<button type="button" class="button button-small passkey-delete" style="float: right;" data-id="<?php echo esc_attr( $id ); ?>">
+											</small>
+										</div>
+										<button type="button" class="button button-small passkey-delete" data-id="<?php echo esc_attr( $id ); ?>">
 											<?php _e( 'Delete', 'nexifymy-security' ); ?>
 										</button>
 									</li>
@@ -219,12 +222,12 @@ class NexifyMy_Security_Passkey {
 			<tr>
 				<th><?php _e( 'Add New Passkey', 'nexifymy-security' ); ?></th>
 				<td>
-					<input type="text" id="passkey-name" placeholder="<?php esc_attr_e( 'Passkey name (e.g., MacBook Touch ID)', 'nexifymy-security' ); ?>" style="width: 300px;">
+					<input type="text" id="passkey-name" class="regular-text passkey-name-input" placeholder="<?php esc_attr_e( 'Passkey name (e.g., MacBook Touch ID)', 'nexifymy-security' ); ?>">
 					<button type="button" id="passkey-register-btn" class="button button-primary">
 						<?php _e( 'Register Passkey', 'nexifymy-security' ); ?>
 					</button>
 					<p class="description"><?php _e( 'Use Touch ID, Face ID, Windows Hello, or a hardware security key.', 'nexifymy-security' ); ?></p>
-					<div id="passkey-status" style="margin-top: 10px;"></div>
+					<div id="passkey-status"></div>
 				</td>
 			</tr>
 		</table>

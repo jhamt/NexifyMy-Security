@@ -5,6 +5,11 @@
 /* Login page passkey button */
 #nexifymy-passkey-login {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+#nexifymy-passkey-login.passkey-hidden {
+  display: none;
 }
 
 #passkey-login-btn {
@@ -63,6 +68,12 @@
 }
 
 /* Profile page passkey section */
+.passkey-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 #passkey-section .passkey-item {
   display: flex;
   align-items: center;
@@ -84,6 +95,7 @@
 }
 
 #passkey-section .passkey-item .passkey-name {
+  display: block;
   font-weight: 600;
   color: #1d2327;
   margin-bottom: 4px;
@@ -112,6 +124,27 @@
 
 #passkey-status {
   padding: 10px 0;
+  margin-top: 10px;
+}
+
+.nms-inline-spinner {
+  float: none;
+  margin: 0 5px 0 0;
+}
+
+.passkey-status-success {
+  color: #1a7f37;
+  font-weight: 600;
+}
+
+.passkey-status-error {
+  color: #d63638;
+  font-weight: 600;
+}
+
+.passkey-name-input {
+  max-width: 300px;
+  margin-right: 8px;
 }
 
 /* Passkey icon animation */

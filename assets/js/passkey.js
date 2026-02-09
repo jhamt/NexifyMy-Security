@@ -8,6 +8,7 @@
 
   // Check WebAuthn support.
   if (!window.PublicKeyCredential) {
+    $("#nexifymy-passkey-login").addClass("passkey-hidden");
     console.log("WebAuthn not supported in this browser.");
     return;
   }
@@ -245,7 +246,7 @@
       $btn
         .prop("disabled", true)
         .html(
-          '<span class="spinner is-active" style="float: none; margin: 0;"></span> ' +
+          '<span class="spinner is-active nms-inline-spinner"></span> ' +
             nexifymyPasskey.strings.authenticating
         );
 
@@ -268,7 +269,7 @@
 
       $btn.prop("disabled", true);
       $status.html(
-        '<span class="spinner is-active" style="float: none;"></span> ' +
+        '<span class="spinner is-active nms-inline-spinner"></span> ' +
           nexifymyPasskey.strings.registering
       );
 
@@ -276,7 +277,7 @@
 
       if (result.success) {
         $status.html(
-          '<span style="color: green;">✓ ' +
+          '<span class="passkey-status-success">OK ' +
             nexifymyPasskey.strings.registered +
             "</span>"
         );
@@ -284,7 +285,7 @@
         setTimeout(() => location.reload(), 1000);
       } else {
         $status.html(
-          '<span style="color: red;">✗ ' + result.message + "</span>"
+          '<span class="passkey-status-error">X ' + result.message + "</span>"
         );
         $btn.prop("disabled", false);
       }
