@@ -5,6 +5,15 @@
 (function ($) {
   "use strict";
 
+  function nmsEscapeHtml(value) {
+    return $("<div>").text(String(value == null ? "" : value)).html();
+  }
+
+  function nmsToInt(value) {
+    var parsed = parseInt(value, 10);
+    return isNaN(parsed) ? 0 : parsed;
+  }
+
   var NexifymySecurity = {
     init: function () {
       this.bindEvents();
@@ -76,7 +85,7 @@
         };
 
         $btn.prop("disabled", true).text("Saving...");
-        $status.html('<span style="color: #666;">Saving...</span>');
+        $status.html('<span class="nms-auto-j002">Saving...</span>');
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
@@ -91,7 +100,7 @@
             $btn.prop("disabled", false).text(originalText);
             if (response.success) {
               $status.html(
-                '<span style="color: var(--nms-success);">Saved! Reloading...</span>',
+                '<span class="nms-auto-j009">Saved! Reloading...</span>',
               );
               // Reload to apply language changes
               setTimeout(function () {
@@ -99,7 +108,7 @@
               }, 1000);
             } else {
               $status.html(
-                '<span style="color: var(--nms-danger);">' +
+                '<span class="nms-auto-j006">' +
                   (response.data || "Failed") +
                   "</span>",
               );
@@ -112,7 +121,7 @@
                 ? jqXHR.responseText.trim()
                 : "";
             $status.html(
-              '<span style="color: var(--nms-danger);">' +
+              '<span class="nms-auto-j006">' +
                 (raw === "-1"
                   ? "Security check failed. Refresh and try again."
                   : raw === "0"
@@ -240,7 +249,7 @@
             // Dashboard mode - just track changes
             moduleChanges[module] = enabled ? 1 : 0;
             $("#module-toggles-status").html(
-              '<span style="color: #d63638;">●</span> Unsaved changes',
+              '<span class="nms-auto-j004">Pending changes</span>',
             );
 
             // Update card visual state
@@ -408,7 +417,7 @@
 
         $btn.prop("disabled", true).find(".dashicons").addClass("spin");
         $status.html(
-          '<span style="color: #666;"><i class="fa-solid fa-spinner fa-spin"></i> Fetching signatures from Wordfence Intelligence & PHP-Malware-Finder...</span>',
+          '<span class="nms-auto-j002"><i class="fa-solid fa-spinner fa-spin"></i> Fetching signatures from Wordfence Intelligence & PHP-Malware-Finder...</span>',
         );
 
         $.ajax({
@@ -438,7 +447,7 @@
               // Show sources
               if (data.sources && data.sources.length > 0) {
                 msg +=
-                  '<br><small style="opacity: 0.8;">Sources: ' +
+                  '<br><small class="nms-auto-j025">Sources: ' +
                   data.sources.join(", ") +
                   "</small>";
               }
@@ -446,13 +455,13 @@
               // Show any errors (partial success)
               if (data.errors && Object.keys(data.errors).length > 0) {
                 msg +=
-                  '<br><small style="color: #d63638;">Some sources failed: ' +
+                  '<br><small class="nms-auto-j004">Some sources failed: ' +
                   Object.keys(data.errors).join(", ") +
                   "</small>";
               }
 
               $status.html(
-                '<span style="color: var(--nms-success);">' + msg + "</span>",
+                '<span class="nms-auto-j009">' + msg + "</span>",
               );
 
               // Reload page to show new counts
@@ -467,7 +476,7 @@
                 errMsg = response.data;
               }
               $status.html(
-                '<span style="color: var(--nms-danger);"><i class="fa-solid fa-times-circle"></i> ' +
+                '<span class="nms-auto-j006"><i class="fa-solid fa-times-circle"></i> ' +
                   errMsg +
                   "</span>",
               );
@@ -483,26 +492,26 @@
 
             if (textStatus === "timeout") {
               $status.html(
-                '<span style="color: var(--nms-danger);"><i class="fa-solid fa-clock"></i> Request timed out. The signature database is large (~100MB). Try again.</span>',
+                '<span class="nms-auto-j006"><i class="fa-solid fa-clock"></i> Request timed out. The signature database is large (~100MB). Try again.</span>',
               );
               return;
             }
 
             if (raw === "-1") {
               $status.html(
-                '<span style="color: var(--nms-danger);">Security check failed. Please refresh and try again.</span>',
+                '<span class="nms-auto-j006">Security check failed. Please refresh and try again.</span>',
               );
               return;
             }
 
             if (raw === "0") {
               $status.html(
-                '<span style="color: var(--nms-danger);">Update handler not available.</span>',
+                '<span class="nms-auto-j006">Update handler not available.</span>',
               );
               return;
             }
             $status.html(
-              '<span style="color: var(--nms-danger);"><i class="fa-solid fa-exclamation-triangle"></i> Connection error</span>',
+              '<span class="nms-auto-j006"><i class="fa-solid fa-exclamation-triangle"></i> Connection error</span>',
             );
           },
         });
@@ -511,7 +520,7 @@
       // Generic module settings save function
       function saveModuleSettings(module, settings, $btn, $status) {
         $btn.prop("disabled", true);
-        $status.html('<span style="color: #666;">Saving...</span>');
+        $status.html('<span class="nms-auto-j002">Saving...</span>');
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
@@ -526,14 +535,14 @@
             $btn.prop("disabled", false);
             if (response.success) {
               $status.html(
-                '<span style="color: var(--nms-success);">Saved!</span>',
+                '<span class="nms-auto-j009">Saved!</span>',
               );
               setTimeout(function () {
                 $status.html("");
               }, 3000);
             } else {
               $status.html(
-                '<span style="color: var(--nms-danger);">' +
+                '<span class="nms-auto-j006">' +
                   (response.data || "Failed") +
                   "</span>",
               );
@@ -542,11 +551,21 @@
           error: function () {
             $btn.prop("disabled", false);
             $status.html(
-              '<span style="color: var(--nms-danger);">Connection error</span>',
+              '<span class="nms-auto-j006">Connection error</span>',
             );
           },
         });
       }
+
+      // ==========================================================================
+      //    P2P INTELLIGENCE
+      // ==========================================================================
+
+      // Trust Threshold Slider - Update display value as user drags slider
+      $("#p2p-threshold-slider").on("input", function () {
+        $("#threshold-value").text($(this).val());
+      });
+      // P2P add/remove/settings handlers are managed in assets/js/admin-pages.js.
 
       // 2FA Settings Save
       $("#save-2fa-settings").on("click", function () {
@@ -587,10 +606,10 @@
           var label = $(this).parent().text().trim();
           // Add to selected list
           $("#geo-selected-list").append(
-            '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-selected-check" value="' +
-              code +
+            '<label class="nms-geo-checkbox-row"><input type="checkbox" class="geo-selected-check" value="' +
+              nmsEscapeHtml(code) +
               '"> ' +
-              label +
+              nmsEscapeHtml(label) +
               "</label>",
           );
           // Remove from available list
@@ -618,10 +637,10 @@
             .parent()
             .parent()
             .append(
-              '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-country-check" value="' +
-                code +
+              '<label class="nms-geo-checkbox-row"><input type="checkbox" class="geo-country-check" value="' +
+                nmsEscapeHtml(code) +
                 '"> ' +
-                label +
+                nmsEscapeHtml(label) +
                 "</label>",
             );
           // Remove from selected list
@@ -631,7 +650,7 @@
         // Add "no countries" message if list is empty
         if ($(".geo-selected-check").length === 0) {
           $("#geo-selected-list").html(
-            '<p class="description" style="margin: 0;">No countries selected yet.</p>',
+            '<p class="description nms-geo-empty-text">No countries selected yet.</p>',
           );
         }
       });
@@ -663,7 +682,7 @@
 
         if (Object.keys(changes).length === 0) {
           $status.html(
-            '<span style="color: #00a32a;">✓ No modules to save</span>',
+            '<span class="nms-auto-j001">No modules to save</span>',
           );
           setTimeout(function () {
             $status.html("");
@@ -672,7 +691,7 @@
         }
 
         $btn.prop("disabled", true).text("Saving...");
-        $status.html('<span style="color: #999;">Saving modules...</span>');
+        $status.html('<span class="nms-auto-j003">Saving modules...</span>');
 
         var promises = [];
         $.each(changes, function (module, enabled) {
@@ -694,7 +713,7 @@
           .apply($, promises)
           .done(function () {
             $status.html(
-              '<span style="color: #00a32a;">✓ All modules saved!</span>',
+              '<span class="nms-auto-j001">All modules saved</span>',
             );
             // Update badges and icons
             $(".module-toggle").each(function () {
@@ -721,7 +740,7 @@
           })
           .fail(function () {
             $status.html(
-              '<span style="color: #d63638;">✗ Error saving modules</span>',
+              '<span class="nms-auto-j004">Error saving modules</span>',
             );
           })
           .always(function () {
@@ -740,7 +759,7 @@
 
         if (Object.keys(moduleChanges).length === 0) {
           $status.html(
-            '<span style="color: #00a32a;">✓ No changes to save</span>',
+            '<span class="nms-auto-j001">No changes to save</span>',
           );
           setTimeout(function () {
             $status.html("");
@@ -750,7 +769,7 @@
 
         $btn.prop("disabled", true).text("Saving...");
         $status.html(
-          '<span style="color: #999;">Saving ' +
+          '<span class="nms-auto-j003">Saving ' +
             Object.keys(moduleChanges).length +
             " module(s)...</span>",
         );
@@ -776,7 +795,7 @@
           .apply($, promises)
           .done(function () {
             $status.html(
-              '<span style="color: #00a32a;">✓ All changes saved successfully!</span>',
+              '<span class="nms-auto-j001">All changes saved successfully</span>',
             );
             moduleChanges = {}; // Clear changes
 
@@ -799,7 +818,7 @@
           })
           .fail(function () {
             $status.html(
-              '<span style="color: #d63638;">✗ Error saving some modules</span>',
+              '<span class="nms-auto-j004">Error saving some modules</span>',
             );
           })
           .always(function () {
@@ -813,10 +832,14 @@
 
       // Hide Login Settings Save
       $("#save-hide-login-settings").on("click", function () {
+        var loginSlug = $("#hide-login-url").val() || $("#login-slug").val();
+        var redirectSlug = $("#hide-login-redirect").val() || "404";
         var settings = {
           enabled: $("#hide-login-enabled").is(":checked") ? 1 : 0,
-          slug: $("#login-slug").val(),
-          redirect: $("#hide-login-redirect").val(),
+          login_slug: loginSlug,
+          redirect_slug: redirectSlug,
+          slug: loginSlug,
+          redirect: redirectSlug,
         };
         saveModuleSettings(
           "hide_login",
@@ -884,11 +907,18 @@
         );
       });
 
-      // Firewall Settings Save
-      $("#save-firewall-settings").on("click", function () {
+      // Firewall Settings Save (supports legacy and tabbed page button IDs)
+      $("#save-firewall-settings, #save-waf-settings").on("click", function () {
+        var enabledSelector = $("#fw-enabled").length
+          ? "#fw-enabled"
+          : "#waf-enabled";
+        var modeVal = $("#fw-mode").length
+          ? $("#fw-mode").val()
+          : $("#waf-level").val();
         var settings = {
-          enabled: $("#fw-enabled").is(":checked") ? 1 : 0,
-          mode: $("#fw-mode").val(),
+          enabled: $(enabledSelector).is(":checked") ? 1 : 0,
+          mode: modeVal || "medium",
+          level: $("#waf-level").length ? $("#waf-level").val() : modeVal,
           sql_injection: $("#firewall-rules input[name=sql_injection]").is(
             ":checked",
           )
@@ -915,27 +945,46 @@
           whitelist: $("#ip-whitelist").val(),
           blacklist: $("#ip-blacklist").val(),
         };
+        var $status = $("#firewall-status").length
+          ? $("#firewall-status")
+          : $("#waf-status");
         saveModuleSettings(
           "firewall",
           settings,
           $(this),
-          $("#firewall-status"),
+          $status,
         );
       });
 
       // Login Protection Settings Save
-      $("#save-login-prot-settings").on("click", function () {
+      $("#save-login-prot-settings, #save-login-settings").on("click", function () {
+        var enabledSelector = $("#login-prot-enabled").length
+          ? "#login-prot-enabled"
+          : "#login-enabled";
+        var maxAttemptsSelector = $("#login-prot-attempts").length
+          ? "#login-prot-attempts"
+          : "#login-max-attempts";
+        var lockoutSelector = $("#login-prot-duration").length
+          ? "#login-prot-duration"
+          : "#login-lockout";
+
         var settings = {
-          enabled: $("#login-prot-enabled").is(":checked") ? 1 : 0,
-          max_attempts: $("#login-prot-attempts").val(),
-          lockout_duration: $("#login-prot-duration").val(),
-          ban_threshold: $("#login-prot-ban").val(),
+          enabled: $(enabledSelector).is(":checked") ? 1 : 0,
+          max_attempts: $(maxAttemptsSelector).val(),
+          lockout_duration: $(lockoutSelector).val(),
         };
+        if ($("#login-prot-ban").length) {
+          settings.ban_threshold = $("#login-prot-ban").val();
+        }
+
+        var $status = $("#login-prot-status").length
+          ? $("#login-prot-status")
+          : $("#login-status");
         saveModuleSettings(
           "login_protection",
           settings,
           $(this),
-          $("#login-prot-status"),
+          $status,
         );
       });
 
@@ -1147,7 +1196,7 @@
 
         if (payload.error) {
           $status.html(
-            '<span style="color: var(--nms-danger);">' +
+            '<span class="nms-auto-j006">' +
               payload.error +
               "</span>",
           );
@@ -1155,7 +1204,7 @@
         }
 
         $btn.prop("disabled", true).text("Saving...");
-        $status.html('<span style="color: #666;">Saving...</span>');
+        $status.html('<span class="nms-auto-j002">Saving...</span>');
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
@@ -1170,11 +1219,11 @@
             $btn.prop("disabled", false).text(originalText);
             if (response.success) {
               $status.html(
-                '<span style="color: var(--nms-success);">Saved!</span>',
+                '<span class="nms-auto-j009">Saved!</span>',
               );
             } else {
               $status.html(
-                '<span style="color: var(--nms-danger);">' +
+                '<span class="nms-auto-j006">' +
                   (response.data || "Failed") +
                   "</span>",
               );
@@ -1183,7 +1232,7 @@
           error: function () {
             $btn.prop("disabled", false).text(originalText);
             $status.html(
-              '<span style="color: var(--nms-danger);">Connection error</span>',
+              '<span class="nms-auto-j006">Connection error</span>',
             );
           },
         });
@@ -1192,7 +1241,7 @@
       function testIntegration(type, $btn, $status) {
         var originalText = $btn.text();
         $btn.prop("disabled", true).text("Testing...");
-        $status.html('<span style="color: #666;">Testing...</span>');
+        $status.html('<span class="nms-auto-j002">Testing...</span>');
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
@@ -1207,7 +1256,7 @@
             $btn.prop("disabled", false).text(originalText);
             if (response.success) {
               $status.html(
-                '<span style="color: var(--nms-success);">' +
+                '<span class="nms-auto-j009">' +
                   (response.data && response.data.message
                     ? response.data.message
                     : "Test successful") +
@@ -1215,7 +1264,7 @@
               );
             } else {
               $status.html(
-                '<span style="color: var(--nms-danger);">' +
+                '<span class="nms-auto-j006">' +
                   (response.data || "Test failed") +
                   "</span>",
               );
@@ -1224,7 +1273,7 @@
           error: function () {
             $btn.prop("disabled", false).text(originalText);
             $status.html(
-              '<span style="color: var(--nms-danger);">Connection error</span>',
+              '<span class="nms-auto-j006">Connection error</span>',
             );
           },
         });
@@ -1279,9 +1328,9 @@
         var eventsName = "webhook_events_new_" + index + "[]";
         var html = "";
         html +=
-          '<div class="nms-webhook-item nms-card" style="margin-top: 20px; background: #f5f5f5;">';
+          '<div class="nms-webhook-item nms-card nms-auto-j021">';
         html +=
-          '<div class="nms-card-header" style="display: flex; justify-content: space-between;">';
+          '<div class="nms-card-header nms-auto-j011">';
         html += "<h4>Webhook " + (index + 1) + "</h4>";
         html +=
           '<button type="button" class="button remove-webhook">Remove</button>';
@@ -1465,7 +1514,7 @@
             var files = response.data.files;
             if (files.length === 0) {
               $tbody.html(
-                '<tr><td colspan="5" style="text-align: center; color: #64748b;">No files in quarantine. Your site is clean!</td></tr>',
+                '<tr><td colspan="5" class="nms-auto-j026">No files in quarantine. Your site is clean!</td></tr>',
               );
               NexifymySecurity.loadDeletedQuarantineFiles();
               return;
@@ -1475,7 +1524,7 @@
             files.forEach(function (file) {
               html += "<tr>";
               html +=
-                '<td><code style="font-size: 12px;">' +
+                '<td><code class="nms-auto-j013">' +
                 file.original_path +
                 "</code></td>";
               html += "<td>" + file.size_formatted + "</td>";
@@ -1500,7 +1549,7 @@
             $tbody.html(html);
           } else {
             $tbody.html(
-              '<tr><td colspan="5" style="color: #dc2626;">Error loading files: ' +
+              '<tr><td colspan="5" class="nms-auto-j005">Error loading files: ' +
                 response.data +
                 "</td></tr>",
             );
@@ -1509,7 +1558,7 @@
         },
         error: function () {
           $tbody.html(
-            '<tr><td colspan="5" style="color: #dc2626;">Failed to load quarantine files.</td></tr>',
+            '<tr><td colspan="5" class="nms-auto-j005">Failed to load quarantine files.</td></tr>',
           );
         },
       });
@@ -1609,14 +1658,11 @@
     },
 
     showNotice: function (type, message) {
-      var bgColor = type === "success" ? "#059669" : "#dc2626";
-      var $notice = $(
-        '<div class="nms-toast" style="position: fixed; top: 50px; right: 20px; background: ' +
-          bgColor +
-          '; color: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 100001; animation: nmsModalSlideIn 0.2s ease-out;">' +
-          message +
-          "</div>",
-      );
+      var toastClass = type === "success" ? "nms-toast-success" : "nms-toast-error";
+      var $notice = $("<div>", {
+        class: "nms-toast " + toastClass,
+        text: String(message || ""),
+      });
       $("body").append($notice);
       setTimeout(function () {
         $notice.fadeOut(300, function () {
@@ -1904,12 +1950,12 @@
 
         // Build filter bar
         html +=
-          '<div class="nms-scan-filters" style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">';
+          '<div class="nms-scan-filters nms-auto-j015">';
         html +=
-          '<strong style="margin-right: 10px;"><i class="fa-solid fa-filter"></i> Filter Results:</strong>';
+          '<strong class="nms-auto-j018"><i class="fa-solid fa-filter"></i> Filter Results:</strong>';
 
         // Severity filter
-        html += '<select id="scan-filter-severity" style="min-width: 130px;">';
+        html += '<select id="scan-filter-severity" class="nms-auto-j022">';
         html += '<option value="all">All Severities</option>';
         if (severities["critical"])
           html += '<option value="critical">Critical</option>';
@@ -1920,7 +1966,7 @@
         html += "</select>";
 
         // Category filter
-        html += '<select id="scan-filter-category" style="min-width: 150px;">';
+        html += '<select id="scan-filter-category" class="nms-auto-j023">';
         html += '<option value="all">All Categories</option>';
         var categoryLabels = {
           command_execution: "Command Execution",
@@ -1955,11 +2001,11 @@
 
         // Search box
         html +=
-          '<input type="text" id="scan-filter-search" placeholder="Search file or threat..." style="min-width: 200px; padding: 5px 10px;">';
+          '<input type="text" id="scan-filter-search" placeholder="Search file or threat..." class="nms-auto-j024">';
 
         // Count display
         html +=
-          '<span id="scan-filter-count" style="margin-left: auto; color: #666;"></span>';
+          '<span id="scan-filter-count" class="nms-auto-j016"></span>';
         html += "</div>";
 
         // Results table
@@ -1974,12 +2020,13 @@
               var category = t.category || "malware";
               var confidence = t.confidence || threat.confidence || 70;
               var classification = t.classification || "SUSPICIOUS_CODE";
-              var classificationLabel = {
-                CONFIRMED_MALWARE: "Confirmed Malware",
-                SUSPICIOUS_CODE: "Suspicious Code",
-                SECURITY_VULNERABILITY: "Security Vulnerability",
-                CODE_SMELL: "Code Smell",
-              }[classification] || classification;
+              var classificationLabel =
+                {
+                  CONFIRMED_MALWARE: "Confirmed Malware",
+                  SUSPICIOUS_CODE: "Suspicious Code",
+                  SECURITY_VULNERABILITY: "Security Vulnerability",
+                  CODE_SMELL: "Code Smell",
+                }[classification] || classification;
               html +=
                 '<tr data-severity="' +
                 (t.severity || "unknown") +
@@ -1997,11 +2044,11 @@
                 (t.description || t.title || "Unknown threat") +
                 "</td>";
               html +=
-                '<td><span class="nms-badge nms-badge-info" style="font-size: 11px;">' +
+                '<td><span class="nms-badge nms-badge-info nms-auto-j012">' +
                 (categoryLabels[category] || category) +
                 "</span></td>";
               html +=
-                '<td><span class="nms-badge nms-badge-secondary" style="font-size: 11px;">' +
+                '<td><span class="nms-badge nms-badge-secondary nms-auto-j012">' +
                 classificationLabel +
                 "</span></td>";
               html +=
@@ -2446,7 +2493,8 @@
           } else {
             response.data.files.forEach(function (file) {
               html += "<tr>";
-              html += "<td><code>" + (file.original_path || "-") + "</code></td>";
+              html +=
+                "<td><code>" + (file.original_path || "-") + "</code></td>";
               html += "<td>" + (file.size_formatted || "-") + "</td>";
               html += "<td>" + (file.deleted_at || "-") + "</td>";
               html += '<td class="quarantine-actions">';
@@ -2473,9 +2521,7 @@
           $(".permanent-delete-quarantined").on("click", function () {
             var deletedName = $(this).data("deleted-name");
             if (
-              confirm(
-                "Permanently delete this file? This cannot be undone.",
-              )
+              confirm("Permanently delete this file? This cannot be undone.")
             ) {
               NexifymySecurity.deleteQuarantinedPermanently(
                 deletedName,
@@ -2506,10 +2552,16 @@
                 $(this).remove();
               });
             }
-            NexifymySecurity.showNotice("success", "File restored successfully.");
+            NexifymySecurity.showNotice(
+              "success",
+              "File restored successfully.",
+            );
             NexifymySecurity.loadQuarantinedFiles();
           } else {
-            NexifymySecurity.showNotice("error", "Restore failed: " + response.data);
+            NexifymySecurity.showNotice(
+              "error",
+              "Restore failed: " + response.data,
+            );
             if (hasButton) $button.prop("disabled", false).text("Restore");
           }
         },
@@ -2542,7 +2594,10 @@
             NexifymySecurity.loadQuarantinedFiles();
             NexifymySecurity.loadDeletedQuarantineFiles();
           } else {
-            NexifymySecurity.showNotice("error", "Delete failed: " + response.data);
+            NexifymySecurity.showNotice(
+              "error",
+              "Delete failed: " + response.data,
+            );
             if (hasButton) $button.prop("disabled", false).text("Delete");
           }
         },
@@ -2598,10 +2653,7 @@
         },
         success: function (response) {
           if (response.success) {
-            NexifymySecurity.showNotice(
-              "success",
-              "File permanently deleted.",
-            );
+            NexifymySecurity.showNotice("success", "File permanently deleted.");
             NexifymySecurity.loadDeletedQuarantineFiles();
           } else {
             NexifymySecurity.showNotice(
@@ -2739,7 +2791,7 @@
             html += "<tr><th>Table Prefix</th><td>" + info.prefix;
             if (info.is_default_prefix) {
               html +=
-                ' <span class="notice notice-warning" style="margin-left:10px;display:inline-block;padding:2px 8px;">Using default prefix - consider changing for security</span>';
+                ' <span class="notice notice-warning nms-auto-j017">Using default prefix - consider changing for security</span>';
             }
             html += "</td></tr>";
             html +=
@@ -2996,10 +3048,11 @@
         },
         success: function (response) {
           if (!response || typeof response !== "object" || !response.success) {
+            var errorMessage = nmsEscapeHtml(
+              (response && response.data) || "Failed to load traffic",
+            );
             $tbody.html(
-              '<tr><td colspan="5">Error: ' +
-                ((response && response.data) || "Failed to load traffic") +
-                "</td></tr>",
+              '<tr><td colspan="5">Error: ' + errorMessage + "</td></tr>",
             );
             return;
           }
@@ -3015,14 +3068,16 @@
           var html = "";
           traffic.forEach(function (entry) {
             html += "<tr>";
-            html += "<td>" + (entry.request_time_formatted || "") + "</td>";
-            html += "<td><code>" + (entry.ip_address || "") + "</code></td>";
-            html += "<td>" + (entry.request_method || "") + "</td>";
+            html +=
+              "<td>" + nmsEscapeHtml(entry.request_time_formatted || "") + "</td>";
+            html +=
+              "<td><code>" + nmsEscapeHtml(entry.ip_address || "") + "</code></td>";
+            html += "<td>" + nmsEscapeHtml(entry.request_method || "") + "</td>";
             html +=
               "<td><code>" +
-              (entry.request_uri || "").toString().substring(0, 120) +
+              nmsEscapeHtml((entry.request_uri || "").toString().substring(0, 120)) +
               "</code></td>";
-            html += "<td>" + (entry.response_code || "") + "</td>";
+            html += "<td>" + nmsEscapeHtml(entry.response_code || "") + "</td>";
             html += "</tr>";
           });
           $tbody.html(html);
@@ -3058,10 +3113,11 @@
         },
         success: function (response) {
           if (!response || typeof response !== "object" || !response.success) {
+            var statsError = nmsEscapeHtml(
+              (response && response.data) || "Failed to load stats",
+            );
             $container.html(
-              "<p>Error: " +
-                ((response && response.data) || "Failed to load stats") +
-                "</p>",
+              "<p>Error: " + statsError + "</p>",
             );
             return;
           }
@@ -3070,15 +3126,15 @@
           var html = '<table class="widefat">';
           html +=
             "<tr><th>Total Requests</th><td>" +
-            (stats.total_requests || 0) +
+            nmsToInt(stats.total_requests) +
             "</td></tr>";
           html +=
             "<tr><th>Unique IPs</th><td>" +
-            (stats.unique_ips || 0) +
+            nmsToInt(stats.unique_ips) +
             "</td></tr>";
           html +=
             "<tr><th>Blocked</th><td>" +
-            (stats.blocked_count || 0) +
+            nmsToInt(stats.blocked_count) +
             "</td></tr>";
           html += "</table>";
           $container.html(html);
@@ -3122,7 +3178,11 @@
           var options = "";
           Object.keys(countries).forEach(function (code) {
             options +=
-              '<option value="' + code + '">' + countries[code] + "</option>";
+              '<option value="' +
+              nmsEscapeHtml(code) +
+              '">' +
+              nmsEscapeHtml(countries[code]) +
+              "</option>";
           });
           $select.html(options);
 
@@ -3486,14 +3546,14 @@
       var $resultsDiv = $("#verify-core-results");
       if (!$resultsDiv.length) {
         $button.after(
-          '<div id="verify-core-results" style="margin-top: 15px;"></div>',
+          '<div id="verify-core-results" class="nms-auto-j020"></div>',
         );
         $resultsDiv = $("#verify-core-results");
       }
 
       $button.prop("disabled", true).text("Verifying...");
       $resultsDiv.html(
-        '<p style="color: #666;">Checking core file integrity...</p>',
+        '<p class="nms-auto-j002">Checking core file integrity...</p>',
       );
 
       $.ajax({
@@ -3514,7 +3574,7 @@
               (hasIssues ? "warning" : "success") +
               '">';
             html += "<p><strong>Verification Complete:</strong></p>";
-            html += '<ul style="margin: 10px 0; padding-left: 20px;">';
+            html += '<ul class="nms-auto-j014">';
             html += "<li>Total files checked: " + data.total_files + "</li>";
             html += "<li>Verified files: " + data.verified + "</li>";
             html += "<li>Modified files: " + data.modified_count + "</li>";
@@ -3522,10 +3582,10 @@
             html += "</ul>";
             if (hasIssues) {
               html +=
-                '<p style="margin-top: 10px;"><em>Some core files have been modified or are missing. This could indicate a security issue or customization.</em></p>';
+                '<p class="nms-auto-j019"><em>Some core files have been modified or are missing. This could indicate a security issue or customization.</em></p>';
             } else {
               html +=
-                '<p style="margin-top: 10px;"><em>All WordPress core files are intact and match official checksums.</em></p>';
+                '<p class="nms-auto-j019"><em>All WordPress core files are intact and match official checksums.</em></p>';
             }
             html += "</div>";
             $resultsDiv.html(html);
@@ -3947,7 +4007,7 @@
           $body.append(
             '<tr><td colspan="' +
               columns.length +
-              '" style="text-align:center; color: #999;">No data available</td></tr>',
+              '" class="nms-auto-j028">No data available</td></tr>',
           );
           return;
         }
@@ -3955,25 +4015,29 @@
         data.forEach(function (row) {
           var html = "<tr>";
           columns.forEach(function (col, index) {
-            var val = row[col];
-            if (col === "url")
-              val =
-                '<a href="' +
-                val +
-                '" target="_blank">' +
-                val.substring(0, 50) +
-                (val.length > 50 ? "..." : "") +
-                "</a>";
-            var style =
-              index === columns.length - 1
-                ? "text-align: right; font-weight: 600;"
-                : "";
-            html +=
-              '<td style="' +
-              style +
-              '">' +
-              (index === columns.length - 1 ? formatNumber(val) : val) +
-              "</td>";
+            var rawVal = row[col];
+            var val = "";
+            if (col === "url") {
+              var url = String(rawVal || "");
+              var safeUrl = /^https?:\/\//i.test(url) ? url : "";
+              var label = escapeHtml(
+                url.substring(0, 50) + (url.length > 50 ? "..." : ""),
+              );
+              val = safeUrl
+                ? '<a href="' +
+                  escapeHtml(safeUrl) +
+                  '" target="_blank" rel="noopener noreferrer">' +
+                  label +
+                  "</a>"
+                : label;
+            } else if (index === columns.length - 1) {
+              val = formatNumber(rawVal);
+            } else {
+              val = escapeHtml(rawVal);
+            }
+            var cellClass =
+              index === columns.length - 1 ? ' class="nms-analytics-cell-num"' : "";
+            html += "<td" + cellClass + ">" + val + "</td>";
           });
           html += "</tr>";
           $body.append(html);
@@ -3987,17 +4051,17 @@
 
         if (!data || data.length === 0) {
           $body.append(
-            '<tr><td colspan="3" style="text-align:center; color: #999;">No data available</td></tr>',
+            '<tr><td colspan="3" class="nms-auto-j028">No data available</td></tr>',
           );
           return;
         }
 
         data.slice(0, 10).forEach(function (row) {
           var html = "<tr>";
-          html += "<td>" + row.country_name + "</td>";
-          html += "<td><code>" + row.country_code + "</code></td>";
+          html += "<td>" + escapeHtml(row.country_name) + "</td>";
+          html += "<td><code>" + escapeHtml(row.country_code) + "</code></td>";
           html +=
-            '<td style="text-align: right; font-weight: 600;">' +
+            '<td class="nms-auto-j027">' +
             formatNumber(row.count) +
             "</td>";
           html += "</tr>";
@@ -4007,7 +4071,15 @@
 
       // Helper: Format Number
       function formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        var parsed = parseInt(num, 10);
+        if (isNaN(parsed)) {
+          return "0";
+        }
+        return parsed.toLocaleString();
+      }
+
+      function escapeHtml(value) {
+        return $("<div>").text(String(value == null ? "" : value)).html();
       }
 
       // Handle Range Change
@@ -4024,6 +4096,252 @@
       fetchAnalytics(30);
     },
   };
+
+  // =====================================================================
+  //    SANDBOX CONSOLE
+  // =====================================================================
+  $(document).on("click", "#sandbox-run", function () {
+    runSandbox(false);
+  });
+
+  $(document).on("click", "#sandbox-analyze", function () {
+    runSandbox(true);
+  });
+
+  function runSandbox(staticOnly) {
+    var $code = $("#sandbox-code");
+    var $results = $("#sandbox-results");
+    var code = $code.val();
+    var timeout = parseInt($("#sandbox-timeout").val(), 10) || 5;
+    var nonce = $("#sandbox-code").data("nonce");
+
+    if (!nonce) {
+      console.error("Sandbox nonce not found");
+      return;
+    }
+
+    $results.show();
+    $("#sandbox-result-title").text("Processing...");
+    $("#sandbox-result-icon")
+      .attr("class", "dashicons dashicons-update spin")
+      .css("color", "");
+    $(
+      "#sandbox-meta, #sandbox-static-content, #sandbox-output, #sandbox-errors, #sandbox-queries",
+    ).empty();
+    $(
+      "#sandbox-static, #sandbox-output-section, #sandbox-errors-section, #sandbox-queries-section",
+    ).hide();
+
+    $.ajax({
+      url: ajaxurl,
+      type: "POST",
+      dataType: "json",
+      data: {
+        action: "nexifymy_sandbox_execute",
+        nonce: nonce,
+        code: code,
+        timeout: timeout,
+        static_only: staticOnly ? 1 : 0,
+      },
+      success: function (response) {
+        if (response.success) {
+          displaySandboxResults(response.data);
+        } else {
+          $("#sandbox-result-title").text("Error");
+          $("#sandbox-result-icon")
+            .attr("class", "dashicons dashicons-dismiss")
+            .css("color", "#d63638");
+          $("#sandbox-output-section").show();
+          $("#sandbox-output").text(response.data || "Unknown error");
+        }
+      },
+      error: function (xhr, status, error) {
+        $("#sandbox-result-title").text("Connection Error");
+        $("#sandbox-result-icon")
+          .attr("class", "dashicons dashicons-dismiss")
+          .css("color", "#d63638");
+        $("#sandbox-output-section").show();
+        $("#sandbox-output").text(error || status);
+      },
+    });
+  }
+
+  function displaySandboxResults(data) {
+    var risk = data.risk || 0;
+    var status = (data.dynamic && data.dynamic.status) || "analyzed";
+
+    // Header styling based on risk
+    if (risk >= 70) {
+      $("#sandbox-result-header").css("background", "#fce8e8");
+      $("#sandbox-result-icon")
+        .attr("class", "dashicons dashicons-dismiss")
+        .css("color", "#d63638");
+      $("#sandbox-result-title").text("High Risk Detected");
+    } else if (risk >= 40) {
+      $("#sandbox-result-header").css("background", "#fef8e8");
+      $("#sandbox-result-icon")
+        .attr("class", "dashicons dashicons-warning")
+        .css("color", "#dba617");
+      $("#sandbox-result-title").text("Suspicious Code");
+    } else {
+      $("#sandbox-result-header").css("background", "#edf7ed");
+      $("#sandbox-result-icon")
+        .attr("class", "dashicons dashicons-yes-alt")
+        .css("color", "#00a32a");
+      $("#sandbox-result-title").text("Analysis Complete");
+    }
+
+    // Meta boxes
+    var metaHtml = "";
+    metaHtml +=
+      '<div class="nms-sandbox-meta-item"><div class="nms-sandbox-meta-label">RISK SCORE</div><div class="nms-sandbox-meta-value">' +
+      nmsToInt(risk) +
+      "/100</div></div>";
+    metaHtml +=
+      '<div class="nms-sandbox-meta-item"><div class="nms-sandbox-meta-label">STATUS</div><div class="nms-sandbox-meta-value">' +
+      nmsEscapeHtml(String(status).toUpperCase()) +
+      "</div></div>";
+    if (data.dynamic) {
+      var execTime = parseFloat(data.dynamic.execution_time || 0);
+      if (isNaN(execTime)) {
+        execTime = 0;
+      }
+      metaHtml +=
+        '<div class="nms-sandbox-meta-item"><div class="nms-sandbox-meta-label">EXEC TIME</div><div class="nms-sandbox-meta-value">' +
+        execTime.toFixed(3) +
+        "s</div></div>";
+      metaHtml +=
+        '<div class="nms-sandbox-meta-item"><div class="nms-sandbox-meta-label">QUERIES</div><div class="nms-sandbox-meta-value">' +
+        (data.dynamic.queries ? data.dynamic.queries.length : 0) +
+        "</div></div>";
+    }
+    $("#sandbox-meta").html(metaHtml);
+
+    // Static analysis
+    if (data.static && Object.keys(data.static).length > 0) {
+      var staticHtml = "";
+      for (var cat in data.static) {
+        if (data.static[cat].length > 0) {
+          staticHtml +=
+            '<div class="nms-sandbox-static-row"><strong>' +
+            nmsEscapeHtml(cat) +
+            ":</strong> ";
+          data.static[cat].forEach(function (fn) {
+            staticHtml +=
+              '<span class="nms-sandbox-static-token">' +
+              nmsEscapeHtml(fn) +
+              "</span>";
+          });
+          staticHtml += "</div>";
+        }
+      }
+      if (staticHtml) {
+        $("#sandbox-static-content").html(staticHtml);
+        $("#sandbox-static").show();
+      }
+    }
+
+    // Output
+    if (data.dynamic && data.dynamic.output) {
+      $("#sandbox-output").text(data.dynamic.output);
+      $("#sandbox-output-section").show();
+    }
+
+    // Errors
+    if (data.dynamic && data.dynamic.errors && data.dynamic.errors.length > 0) {
+      var errHtml = "";
+      data.dynamic.errors.forEach(function (err) {
+        var isFatal =
+          err.type && err.type.toLowerCase().indexOf("fatal") !== -1;
+        errHtml +=
+          '<div class="nms-sandbox-error-item ' +
+          (isFatal ? "nms-sandbox-error-fatal" : "nms-sandbox-error-warning") +
+          '">';
+        errHtml +=
+          "<strong>" +
+          nmsEscapeHtml(err.type || "Error") +
+          "</strong>: " +
+          nmsEscapeHtml(err.message || err) +
+          "</div>";
+      });
+      $("#sandbox-errors").html(errHtml);
+      $("#sandbox-errors-section").show();
+    }
+
+    // Queries
+    if (
+      data.dynamic &&
+      data.dynamic.queries &&
+      data.dynamic.queries.length > 0
+    ) {
+      var qHtml = "";
+      data.dynamic.queries.forEach(function (q) {
+        var queryText = typeof q === "object" && q !== null ? q.sql || "" : q;
+        qHtml +=
+          '<div class="nms-sandbox-query-item">' +
+          nmsEscapeHtml(queryText) +
+          "</div>";
+      });
+      $("#sandbox-queries").html(qHtml);
+      $("#sandbox-queries-section").show();
+    }
+  }
+
+  // =====================================================================
+  //    DECEPTION MODULE
+  // =====================================================================
+  $(document).on("click", "#save-deception-settings", function () {
+    var $btn = $(this);
+    var $status = $("#deception-status");
+
+    var honeytrapPaths = $("#honeytrap-paths").val();
+    var settings = {
+      deception_enabled: $("#deception-enabled").is(":checked") ? 1 : 0,
+      deception_honeytrap_paths: honeytrapPaths,
+      deception_enum_trap: $("#enum-trap-enabled").is(":checked") ? 1 : 0,
+      deception_enum_block: $("#enum-hard-block").is(":checked") ? 1 : 0,
+      deception_block_all_enum: $("#enum-block-all").is(":checked") ? 1 : 0,
+    };
+
+    $btn.prop("disabled", true).addClass("disabled");
+    $status.html(
+      '<span class="nms-auto-j008"><i class="fa-solid fa-spinner fa-spin"></i> Saving...</span>',
+    );
+
+    $.ajax({
+      url: ajaxurl,
+      type: "POST",
+      dataType: "json",
+      data: {
+        action: "nexifymy_save_deception_settings",
+        nonce: nexifymySecurity.nonce,
+        settings: settings,
+      },
+      success: function (response) {
+        if (response.success) {
+          $status.html(
+            '<span class="nms-auto-j010"><i class="fa-solid fa-circle-check"></i> Settings saved successfully!</span>',
+          );
+          setTimeout(function () {
+            $status.html("");
+          }, 3000);
+        } else {
+          $status.html(
+            '<span class="nms-auto-j007"><i class="fa-solid fa-circle-xmark"></i> Error: ' +
+              (response.data || "Failed to save settings") +
+              "</span>",
+          );
+        }
+        $btn.prop("disabled", false).removeClass("disabled");
+      },
+      error: function () {
+        $status.html(
+          '<span class="nms-auto-j007"><i class="fa-solid fa-circle-xmark"></i> Connection error</span>',
+        );
+        $btn.prop("disabled", false).removeClass("disabled");
+      },
+    });
+  });
 
   $(document).ready(function () {
     NexifymySecurity.init();
