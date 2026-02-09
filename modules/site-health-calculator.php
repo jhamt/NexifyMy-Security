@@ -199,7 +199,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 		// Critical threats
 		if ( $threat_counts['CONFIRMED_MALWARE'] > 0 ) {
 			$recommendations[] = sprintf(
-				'<i class="fas fa-exclamation-circle" style="color: #dc3545;"></i> <strong>URGENT:</strong> %d confirmed malware file%s detected. Review and quarantine immediately.',
+				'<i class="fas fa-exclamation-circle nms-health-rec-icon nms-health-rec-icon-danger"></i> <strong>URGENT:</strong> %d confirmed malware file%s detected. Review and quarantine immediately.',
 				$threat_counts['CONFIRMED_MALWARE'],
 				$threat_counts['CONFIRMED_MALWARE'] > 1 ? 's' : ''
 			);
@@ -208,7 +208,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 		// Suspicious code
 		if ( $threat_counts['SUSPICIOUS_CODE'] > 0 ) {
 			$recommendations[] = sprintf(
-				'<i class="fas fa-exclamation-triangle" style="color: #ff9800;"></i> %d suspicious code pattern%s found. Manual review recommended.',
+				'<i class="fas fa-exclamation-triangle nms-health-rec-icon nms-health-rec-icon-warning"></i> %d suspicious code pattern%s found. Manual review recommended.',
 				$threat_counts['SUSPICIOUS_CODE'],
 				$threat_counts['SUSPICIOUS_CODE'] > 1 ? 's' : ''
 			);
@@ -217,7 +217,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 		// Security vulnerabilities
 		if ( $threat_counts['SECURITY_VULNERABILITY'] > 0 ) {
 			$recommendations[] = sprintf(
-				'<i class="fas fa-tools" style="color: #ffc107;"></i> %d security vulnerabilit%s detected. Update plugins/themes to patched versions.',
+				'<i class="fas fa-tools nms-health-rec-icon nms-health-rec-icon-caution"></i> %d security vulnerabilit%s detected. Update plugins/themes to patched versions.',
 				$threat_counts['SECURITY_VULNERABILITY'],
 				$threat_counts['SECURITY_VULNERABILITY'] > 1 ? 'ies' : 'y'
 			);
@@ -226,21 +226,21 @@ class NexifyMy_Security_Site_Health_Calculator {
 		// Code smells (informational)
 		if ( $threat_counts['CODE_SMELL'] > 0 && $health_score >= self::HEALTH_GOOD ) {
 			$recommendations[] = sprintf(
-				'<i class="fas fa-info-circle" style="color: #007bff;"></i> %d code quality issue%s found. Review if unexpected.',
+				'<i class="fas fa-info-circle nms-health-rec-icon nms-health-rec-icon-info"></i> %d code quality issue%s found. Review if unexpected.',
 				$threat_counts['CODE_SMELL'],
 				$threat_counts['CODE_SMELL'] > 1 ? 's' : ''
 			);
 		}
 
 		// Health status recommendations
-		if ( $health_score >= self::HEALTH_EXCELLENT && empty($threat_counts['CONFIRMED_MALWARE']) ) {
-			$recommendations[] = '<i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Excellent security health!</strong> Your site is clean and secure.';
-		} elseif ( $health_score >= self::HEALTH_GOOD && empty($threat_counts['CONFIRMED_MALWARE']) ) {
-			$recommendations[] = '<i class="fas fa-thumbs-up" style="color: #ffc107;"></i> <strong>Good security health.</strong> Address findings to maintain security.';
-		} elseif ( $health_score >= self::HEALTH_AT_RISK && empty($threat_counts['CONFIRMED_MALWARE']) ) {
-			$recommendations[] = '<i class="fas fa-exclamation-triangle" style="color: #ff9800;"></i> <strong>Site security at risk.</strong> Address threats as soon as possible.';
+		if ( $health_score >= self::HEALTH_EXCELLENT && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
+			$recommendations[] = '<i class="fas fa-check-circle nms-health-rec-icon nms-health-rec-icon-success"></i> <strong>Excellent security health!</strong> Your site is clean and secure.';
+		} elseif ( $health_score >= self::HEALTH_GOOD && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
+			$recommendations[] = '<i class="fas fa-thumbs-up nms-health-rec-icon nms-health-rec-icon-caution"></i> <strong>Good security health.</strong> Address findings to maintain security.';
+		} elseif ( $health_score >= self::HEALTH_AT_RISK && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
+			$recommendations[] = '<i class="fas fa-exclamation-triangle nms-health-rec-icon nms-health-rec-icon-warning"></i> <strong>Site security at risk.</strong> Address threats as soon as possible.';
 		} else {
-			$recommendations[] = '<i class="fas fa-radiation" style="color: #dc3545;"></i> <strong>CRITICAL SECURITY RISK!</strong> Immediate action required.';
+			$recommendations[] = '<i class="fas fa-radiation nms-health-rec-icon nms-health-rec-icon-danger"></i> <strong>CRITICAL SECURITY RISK!</strong> Immediate action required.';
 		}
 
 		return implode( '<br>', $recommendations );
@@ -338,33 +338,25 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 * @return string HTML summary card.
 	 */
 	public function format_health_summary_html( $health_metrics ) {
-		$health_score = $health_metrics['health_score'];
-		$health_status = $health_metrics['health_status'];
+		$health_score = (int) ( $health_metrics['health_score'] ?? 0 );
+		$health_status = (string) ( $health_metrics['health_status'] ?? 'at_risk' );
 		$display = $this->get_health_status_display( $health_status );
+		$status_class = 'nms-health-summary-card-' . sanitize_html_class( $health_status );
+		$health_score = max( 0, min( 100, $health_score ) );
 
-		$progress_width = $health_score;
-		$progress_color = $display['color'];
-
-		$html = sprintf(
-			'<div class="health-summary-card" style="border-left: 4px solid %s; padding: 20px; background: #f9f9f9; margin-bottom: 20px;">',
-			$progress_color
-		);
+		$html = sprintf( '<div class="health-summary-card nms-health-summary-card %s">', esc_attr( $status_class ) );
 
 		// Header
 		$html .= sprintf(
-			'<h3><i class="fas fa-heartbeat" style="color: %s;"></i> Site Security Health: %d/100 <span style="color: %s;">(%s)</span></h3>',
-			$progress_color,
+			'<h3 class="nms-health-summary-title"><i class="fas fa-heartbeat nms-health-summary-icon"></i> Site Security Health: %d/100 <span class="nms-health-summary-label">(%s)</span></h3>',
 			$health_score,
-			$progress_color,
-			$display['label']
+			esc_html( $display['label'] )
 		);
 
 		// Progress bar
 		$html .= sprintf(
-			'<div class="health-progress" style="background: #e0e0e0; height: 20px; border-radius: 10px; margin-bottom: 15px;">' .
-			'<div style="width: %d%%; height: 100%%; background: %s; border-radius: 10px; transition: width 0.3s;"></div></div>',
-			$progress_width,
-			$progress_color
+			'<progress class="health-progress nms-health-progress" max="100" value="%d"></progress>',
+			$health_score
 		);
 
 		// Stats
@@ -388,7 +380,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 			if ( $counts['CONFIRMED_MALWARE'] > 0 ) {
 				$html .= sprintf(
-					'<li style="color: #dc3545;"><i class="fas fa-times-circle"></i> <strong>Confirmed Malware:</strong> %d file%s (%s%%)</li>',
+					'<li class="nms-health-threat-danger"><i class="fas fa-times-circle"></i> <strong>Confirmed Malware:</strong> %d file%s (%s%%)</li>',
 					$counts['CONFIRMED_MALWARE'],
 					$counts['CONFIRMED_MALWARE'] > 1 ? 's' : '',
 					$percentages['CONFIRMED_MALWARE']
@@ -397,7 +389,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 			if ( $counts['SUSPICIOUS_CODE'] > 0 ) {
 				$html .= sprintf(
-					'<li style="color: #ff9800;"><i class="fas fa-exclamation-circle"></i> <strong>Suspicious Code:</strong> %d file%s (%s%%)</li>',
+					'<li class="nms-health-threat-warning"><i class="fas fa-exclamation-circle"></i> <strong>Suspicious Code:</strong> %d file%s (%s%%)</li>',
 					$counts['SUSPICIOUS_CODE'],
 					$counts['SUSPICIOUS_CODE'] > 1 ? 's' : '',
 					$percentages['SUSPICIOUS_CODE']
@@ -406,7 +398,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 			if ( $counts['SECURITY_VULNERABILITY'] > 0 ) {
 				$html .= sprintf(
-					'<li style="color: #ffc107;"><i class="fas fa-bug"></i> <strong>Security Vulnerabilities:</strong> %d file%s (%s%%)</li>',
+					'<li class="nms-health-threat-caution"><i class="fas fa-bug"></i> <strong>Security Vulnerabilities:</strong> %d file%s (%s%%)</li>',
 					$counts['SECURITY_VULNERABILITY'],
 					$counts['SECURITY_VULNERABILITY'] > 1 ? 's' : '',
 					$percentages['SECURITY_VULNERABILITY']
@@ -415,7 +407,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 			if ( $counts['CODE_SMELL'] > 0 ) {
 				$html .= sprintf(
-					'<li style="color: #007bff;"><i class="fas fa-code"></i> <strong>Code Quality Issues:</strong> %d file%s (%s%%)</li>',
+					'<li class="nms-health-threat-info"><i class="fas fa-code"></i> <strong>Code Quality Issues:</strong> %d file%s (%s%%)</li>',
 					$counts['CODE_SMELL'],
 					$counts['CODE_SMELL'] > 1 ? 's' : '',
 					$percentages['CODE_SMELL']
@@ -427,7 +419,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 		// Recommendation
 		$html .= sprintf(
-			'<div class="health-recommendation" style="margin-top: 15px; padding: 10px; background: #fff; border-radius: 5px;">%s</div>',
+			'<div class="health-recommendation nms-health-recommendation">%s</div>',
 			$health_metrics['recommendation']
 		);
 
