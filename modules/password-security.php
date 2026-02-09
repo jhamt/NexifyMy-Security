@@ -220,7 +220,7 @@ class NexifyMy_Security_Password {
 	 */
 	public function add_password_requirements() {
 		$settings = $this->get_settings();
-		echo '<p class="description" style="margin-bottom: 15px;">';
+		echo '<p class="description">';
 		echo '<strong>' . esc_html__( 'Password Requirements:', 'nexifymy-security' ) . '</strong><br>';
 		echo sprintf( esc_html__( 'Minimum %d characters', 'nexifymy-security' ), absint( $settings['min_length'] ) );
 

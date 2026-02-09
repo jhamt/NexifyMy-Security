@@ -1864,4 +1864,146 @@ class NexifyMy_Security_Scanner {
 			'missing_files'  => $missing_files,
 		);
 	}
+
+	/**
+	 * Analyze a suspicious code snippet using the Shadow Runtime sandbox.
+	 *
+	 * Called when the scanner's heuristic engine classifies a file or code
+	 * block as CLASSIFICATION_SUSPICIOUS_CODE. The sandbox provides both
+	 * static analysis (forbidden function detection) and optional dynamic
+	 * analysis (actual execution with DB rollback).
+	 *
+	 * @param  string $code          The suspicious code snippet.
+	 * @param  string $file_path     The file where the code was found.
+	 * @param  string $classification Current classification from the scanner.
+	 * @return array {
+	 *     @type string $verdict       'malicious' | 'suspicious' | 'clean'.
+	 *     @type int    $risk_score    0–100 risk assessment.
+	 *     @type array  $details       Detailed findings.
+	 *     @type bool   $sandbox_used  Whether the sandbox was invoked.
+	 * }
+	 */
+	public static function analyze_with_sandbox(
+		string $code,
+		string $file_path = '',
+		string $classification = 'CLASSIFICATION_SUSPICIOUS_CODE'
+	): array {
+
+		$verdict = array(
+			'verdict'      => 'clean',
+			'risk_score'   => 0,
+			'details'      => array(),
+			'sandbox_used' => false,
+		);
+
+		// Check if Sandbox module is available and enabled.
+		if ( ! class_exists( 'NexifyMy_Security_Sandbox' ) ) {
+			$verdict['details'][] = 'Sandbox module not available; skipping analysis.';
+			return $verdict;
+		}
+
+		$settings = NexifyMy_Security_Sandbox::get_settings();
+		if ( empty( $settings['sandbox_enabled'] ) ) {
+			$verdict['details'][] = 'Sandbox module disabled; skipping analysis.';
+			return $verdict;
+		}
+
+		$verdict['sandbox_used'] = true;
+
+		// Run analysis.
+		$analysis = NexifyMy_Security_Sandbox::analyze_code( $code, array(
+			'timeout'     => 3,
+			'preview'     => true, // Always rollback.
+			'label'       => sprintf( 'Scanner analysis: %s', basename( $file_path ) ),
+			'static_only' => empty( $settings['sandbox_dynamic_analysis'] ),
+		) );
+
+		$verdict['risk_score'] = $analysis['risk'];
+
+		// Static findings.
+		if ( ! empty( $analysis['static'] ) ) {
+			$verdict['details']['static_analysis'] = $analysis['static'];
+
+			// High-risk categories that immediately flag as malicious.
+			$critical_categories = array( 'code_execution', 'wordpress_auth' );
+
+			foreach ( $critical_categories as $cat ) {
+				if ( ! empty( $analysis['static'][ $cat ] ) ) {
+					$verdict['verdict'] = 'malicious';
+					$verdict['details']['reason'] = sprintf(
+						'Critical forbidden function(s) detected in category "%s": %s',
+						$cat,
+						implode( ', ', $analysis['static'][ $cat ] )
+					);
+				}
+			}
+		}
+
+		// Dynamic findings.
+		if ( ! empty( $analysis['dynamic'] ) ) {
+
+			$dynamic = $analysis['dynamic'];
+
+			$verdict['details']['dynamic_analysis'] = array(
+				'status'         => $dynamic['status'],
+				'execution_time' => $dynamic['execution_time'],
+				'output_length'  => strlen( $dynamic['output'] ),
+				'error_count'    => count( $dynamic['errors'] ),
+				'query_count'    => count( $dynamic['queries'] ),
+			);
+
+			// Check for dangerous DB operations.
+			$qa = $dynamic['query_analysis'] ?? array();
+
+			if ( ! empty( $qa['dangerous_queries'] ) ) {
+				$verdict['verdict']    = 'malicious';
+				$verdict['risk_score'] = max( $verdict['risk_score'], 90 );
+				$verdict['details']['dangerous_queries'] = $qa['dangerous_queries'];
+			}
+
+			// If the code wrote to sensitive tables, flag it.
+			$sensitive_tables = array( 'users', 'usermeta', 'options' );
+			if ( ! empty( $qa['tables_affected'] ) ) {
+				foreach ( $qa['tables_affected'] as $table ) {
+					foreach ( $sensitive_tables as $st ) {
+						if ( stripos( $table, $st ) !== false ) {
+							$verdict['verdict'] = 'malicious';
+							$verdict['risk_score'] = max( $verdict['risk_score'], 95 );
+							$verdict['details']['reason'] = sprintf(
+								'Code attempted to modify sensitive table: %s',
+								$table
+							);
+						}
+					}
+				}
+			}
+		}
+
+		// Final verdict.
+		if ( $verdict['verdict'] === 'clean' && $verdict['risk_score'] > 40 ) {
+			$verdict['verdict'] = 'suspicious';
+		}
+
+		// Log.
+		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
+			NexifyMy_Security_Logger::log(
+				'scanner_sandbox_analysis',
+				sprintf(
+					'Sandbox analysis of %s: verdict=%s, risk=%d',
+					basename( $file_path ),
+					$verdict['verdict'],
+					$verdict['risk_score']
+				),
+				$verdict['verdict'] === 'malicious' ? 'critical' : 'info',
+				array(
+					'file'       => $file_path,
+					'verdict'    => $verdict['verdict'],
+					'risk_score' => $verdict['risk_score'],
+					'static'     => $analysis['static'],
+				)
+			);
+		}
+
+		return $verdict;
+	}
 }
