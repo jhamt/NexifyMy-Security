@@ -159,17 +159,25 @@ class NexifyMy_Security_API_Security {
 	 * Register JWT authentication endpoints.
 	 */
 	public function register_jwt_endpoints() {
-		register_rest_route( 'nexifymy-security/v1', '/token', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'generate_jwt_token' ),
-			'permission_callback' => '__return_true',
-		) );
+		register_rest_route(
+			'nexifymy-security/v1',
+			'/token',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'generate_jwt_token' ),
+				'permission_callback' => '__return_true',
+			)
+		);
 
-		register_rest_route( 'nexifymy-security/v1', '/token/validate', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'validate_jwt_endpoint' ),
-			'permission_callback' => '__return_true',
-		) );
+		register_rest_route(
+			'nexifymy-security/v1',
+			'/token/validate',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'validate_jwt_endpoint' ),
+				'permission_callback' => '__return_true',
+			)
+		);
 	}
 
 	/**
@@ -194,12 +202,14 @@ class NexifyMy_Security_API_Security {
 
 		$token = $this->create_jwt_token( $user->ID );
 
-		return rest_ensure_response( array(
-			'token'      => $token,
-			'user_email' => $user->user_email,
-			'user_nicename' => $user->user_nicename,
-			'user_display_name' => $user->display_name,
-		) );
+		return rest_ensure_response(
+			array(
+				'token'             => $token,
+				'user_email'        => $user->user_email,
+				'user_nicename'     => $user->user_nicename,
+				'user_display_name' => $user->display_name,
+			)
+		);
 	}
 
 	/**
@@ -209,16 +219,16 @@ class NexifyMy_Security_API_Security {
 	 * @return string JWT token.
 	 */
 	private function create_jwt_token( $user_id ) {
-		$settings = $this->get_settings();
+		$settings   = $this->get_settings();
 		$secret_key = ! empty( $settings['jwt_secret_key'] ) ? $settings['jwt_secret_key'] : wp_salt( 'auth' );
 
-		$issued_at = time();
+		$issued_at  = time();
 		$expiration = $issued_at + ( DAY_IN_SECONDS * 7 ); // 7 days
 
 		$payload = array(
-			'iss' => get_bloginfo( 'url' ),
-			'iat' => $issued_at,
-			'exp' => $expiration,
+			'iss'  => get_bloginfo( 'url' ),
+			'iat'  => $issued_at,
+			'exp'  => $expiration,
 			'data' => array(
 				'user' => array(
 					'id' => $user_id,
@@ -237,14 +247,17 @@ class NexifyMy_Security_API_Security {
 	 * @return string JWT token.
 	 */
 	private function jwt_encode( $payload, $key ) {
-		$header = array( 'typ' => 'JWT', 'alg' => 'HS256' );
+		$header = array(
+			'typ' => 'JWT',
+			'alg' => 'HS256',
+		);
 
-		$segments = array();
-		$segments[] = $this->base64url_encode( wp_json_encode( $header ) );
-		$segments[] = $this->base64url_encode( wp_json_encode( $payload ) );
+		$segments      = array();
+		$segments[]    = $this->base64url_encode( wp_json_encode( $header ) );
+		$segments[]    = $this->base64url_encode( wp_json_encode( $payload ) );
 		$signing_input = implode( '.', $segments );
 
-		$signature = hash_hmac( 'sha256', $signing_input, $key, true );
+		$signature  = hash_hmac( 'sha256', $signing_input, $key, true );
 		$segments[] = $this->base64url_encode( $signature );
 
 		return implode( '.', $segments );
@@ -257,7 +270,7 @@ class NexifyMy_Security_API_Security {
 	 * @return int|false User ID or false.
 	 */
 	private function verify_jwt_token( $token ) {
-		$settings = $this->get_settings();
+		$settings   = $this->get_settings();
 		$secret_key = ! empty( $settings['jwt_secret_key'] ) ? $settings['jwt_secret_key'] : wp_salt( 'auth' );
 
 		$segments = explode( '.', $token );
@@ -267,7 +280,7 @@ class NexifyMy_Security_API_Security {
 
 		list( $header64, $payload64, $signature64 ) = $segments;
 
-		$header = json_decode( $this->base64url_decode( $header64 ), true );
+		$header  = json_decode( $this->base64url_decode( $header64 ), true );
 		$payload = json_decode( $this->base64url_decode( $payload64 ), true );
 
 		if ( empty( $header ) || empty( $payload ) ) {
@@ -276,8 +289,8 @@ class NexifyMy_Security_API_Security {
 
 		// Verify signature
 		$signing_input = $header64 . '.' . $payload64;
-		$signature = $this->base64url_decode( $signature64 );
-		$expected = hash_hmac( 'sha256', $signing_input, $secret_key, true );
+		$signature     = $this->base64url_decode( $signature64 );
+		$expected      = hash_hmac( 'sha256', $signing_input, $secret_key, true );
 
 		if ( ! hash_equals( $expected, $signature ) ) {
 			return false;
@@ -310,7 +323,7 @@ class NexifyMy_Security_API_Security {
 	 * Validate JWT token endpoint.
 	 */
 	public function validate_jwt_endpoint( $request ) {
-		$token = $request->get_param( 'token' );
+		$token   = $request->get_param( 'token' );
 		$user_id = $this->verify_jwt_token( $token );
 
 		if ( ! $user_id ) {
@@ -318,11 +331,13 @@ class NexifyMy_Security_API_Security {
 		}
 
 		$user = get_userdata( $user_id );
-		return rest_ensure_response( array(
-			'valid' => true,
-			'user_id' => $user_id,
-			'user_login' => $user->user_login,
-		) );
+		return rest_ensure_response(
+			array(
+				'valid'      => true,
+				'user_id'    => $user_id,
+				'user_login' => $user->user_login,
+			)
+		);
 	}
 
 	/**
@@ -330,16 +345,16 @@ class NexifyMy_Security_API_Security {
 	 */
 	public function check_api_rate_limit( $result, $server, $request ) {
 		$settings = $this->get_settings();
-		$limit = isset( $settings['api_rate_limit'] ) ? $settings['api_rate_limit'] : 100;
+		$limit    = isset( $settings['api_rate_limit'] ) ? $settings['api_rate_limit'] : 100;
 
-		$ip = $this->get_client_ip();
-		$key = 'api_rate_' . md5( $ip );
+		$ip    = $this->get_client_ip();
+		$key   = 'api_rate_' . md5( $ip );
 		$count = get_transient( $key );
 
 		if ( false === $count ) {
 			set_transient( $key, 1, $settings['api_rate_window'] );
 		} else {
-			$count++;
+			++$count;
 			set_transient( $key, $count, $settings['api_rate_window'] );
 
 			if ( $count > $limit ) {
@@ -384,7 +399,7 @@ class NexifyMy_Security_API_Security {
 	 * Add CORS headers.
 	 */
 	public function add_cors_headers() {
-		$settings = $this->get_settings();
+		$settings        = $this->get_settings();
 		$allowed_origins = ! empty( $settings['allowed_origins'] ) ? $settings['allowed_origins'] : array();
 
 		if ( empty( $allowed_origins ) ) {
@@ -412,9 +427,9 @@ class NexifyMy_Security_API_Security {
 		}
 
 		$log_data = array(
-			'ip' => $this->get_client_ip(),
-			'route' => $route,
-			'method' => isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET',
+			'ip'      => $this->get_client_ip(),
+			'route'   => $route,
+			'method'  => isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET',
 			'user_id' => get_current_user_id(),
 		);
 
@@ -425,15 +440,27 @@ class NexifyMy_Security_API_Security {
 	 * Get client IP.
 	 */
 	private function get_client_ip() {
-		$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR' );
-		foreach ( $ip_keys as $key ) {
-			if ( ! empty( $_SERVER[ $key ] ) ) {
-				$ip = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
-				if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
-					return $ip;
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
+
+		// Only trust forwarded headers when the direct sender is a configured trusted proxy.
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$forwarded_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $forwarded_keys as $key ) {
+				if ( ! empty( $_SERVER[ $key ] ) ) {
+					$raw = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
+					$ip  = strpos( $raw, ',' ) !== false ? trim( explode( ',', $raw )[0] ) : $raw;
+					if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+						return $ip;
+					}
 				}
 			}
 		}
+
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
+		}
+
 		return '0.0.0.0';
 	}
 
@@ -449,8 +476,8 @@ class NexifyMy_Security_API_Security {
 		// Get stats from logs
 		$stats = array(
 			'total_requests' => 0,
-			'authenticated' => 0,
-			'rate_limited' => 0,
+			'authenticated'  => 0,
+			'rate_limited'   => 0,
 		);
 
 		wp_send_json_success( $stats );
@@ -469,15 +496,15 @@ class NexifyMy_Security_API_Security {
 
 		// Sanitize
 		$sanitized = array(
-			'enabled' => ! empty( $settings['enabled'] ),
-			'require_auth_rest' => ! empty( $settings['require_auth_rest'] ),
-			'jwt_auth_enabled' => ! empty( $settings['jwt_auth_enabled'] ),
-			'jwt_secret_key' => sanitize_text_field( $settings['jwt_secret_key'] ?? '' ),
-			'api_rate_limit' => absint( $settings['api_rate_limit'] ?? 100 ),
+			'enabled'                => ! empty( $settings['enabled'] ),
+			'require_auth_rest'      => ! empty( $settings['require_auth_rest'] ),
+			'jwt_auth_enabled'       => ! empty( $settings['jwt_auth_enabled'] ),
+			'jwt_secret_key'         => sanitize_text_field( $settings['jwt_secret_key'] ?? '' ),
+			'api_rate_limit'         => absint( $settings['api_rate_limit'] ?? 100 ),
 			'block_user_enumeration' => ! empty( $settings['block_user_enumeration'] ),
 		);
 
-		$all_settings = get_option( 'nexifymy_security_settings', array() );
+		$all_settings                 = get_option( 'nexifymy_security_settings', array() );
 		$all_settings['api_security'] = $sanitized;
 		update_option( 'nexifymy_security_settings', $all_settings );
 

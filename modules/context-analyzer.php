@@ -18,6 +18,7 @@ class NexifyMy_Security_Context_Analyzer {
 
 	/**
 	 * Location risk scores by directory pattern.
+	 *
 	 * @var array
 	 */
 	private $location_risk_map = array(
@@ -40,23 +41,25 @@ class NexifyMy_Security_Context_Analyzer {
 
 	/**
 	 * Sanitization function patterns (presence reduces confidence).
+	 *
 	 * @var array
 	 */
 	private $sanitization_patterns = array(
-		'escapeshellarg'  => -25,
-		'escapeshellcmd'  => -25,
-		'esc_sql'         => -20,
-		'esc_html'        => -15,
-		'esc_attr'        => -15,
-		'esc_url'         => -15,
-		'sanitize_'       => -20,
-		'wp_kses'         => -20,
-		'intval'          => -10,
-		'absint'          => -10,
+		'escapeshellarg' => -25,
+		'escapeshellcmd' => -25,
+		'esc_sql'        => -20,
+		'esc_html'       => -15,
+		'esc_attr'       => -15,
+		'esc_url'        => -15,
+		'sanitize_'      => -20,
+		'wp_kses'        => -20,
+		'intval'         => -10,
+		'absint'         => -10,
 	);
 
 	/**
 	 * Dangerous input source patterns (presence increases confidence).
+	 *
 	 * @var array
 	 */
 	private $dangerous_input_patterns = array(
@@ -69,6 +72,7 @@ class NexifyMy_Security_Context_Analyzer {
 
 	/**
 	 * Safe namespace patterns (presence forces CLEAN or reduces confidence dramatically).
+	 *
 	 * @var array
 	 */
 	private $safe_namespace_patterns = array(
@@ -91,13 +95,13 @@ class NexifyMy_Security_Context_Analyzer {
 	 */
 	public function analyze_code_context( $rule, $filepath, $file_content, $matched_content ) {
 		$context_data = array(
-			'confidence_modifier' => 0,
-			'context_summary'     => array(),
+			'confidence_modifier'      => 0,
+			'context_summary'          => array(),
 			'suggested_classification' => null,
-			'is_safe_context'     => false,
-			'has_sanitization'    => false,
-			'has_user_input'      => false,
-			'location_risk'       => 0,
+			'is_safe_context'          => false,
+			'has_sanitization'         => false,
+			'has_user_input'           => false,
+			'location_risk'            => 0,
 		);
 
 		// Extract surrounding code context
@@ -106,10 +110,10 @@ class NexifyMy_Security_Context_Analyzer {
 		// Check for safe namespaces (highest priority)
 		$namespace_check = $this->check_safe_namespaces( $surrounding_code );
 		if ( $namespace_check['is_safe'] ) {
-			$context_data['confidence_modifier'] = $namespace_check['modifier'];
+			$context_data['confidence_modifier']      = $namespace_check['modifier'];
 			$context_data['suggested_classification'] = NexifyMy_Security_Scanner::CLASSIFICATION_CLEAN;
-			$context_data['is_safe_context'] = true;
-			$context_data['context_summary'][] = $namespace_check['reason'];
+			$context_data['is_safe_context']          = true;
+			$context_data['context_summary'][]        = $namespace_check['reason'];
 			return $context_data; // Early return - force CLEAN
 		}
 
@@ -117,29 +121,29 @@ class NexifyMy_Security_Context_Analyzer {
 		$sanitization_check = $this->check_sanitization( $surrounding_code );
 		if ( $sanitization_check['has_sanitization'] ) {
 			$context_data['confidence_modifier'] += $sanitization_check['modifier'];
-			$context_data['has_sanitization'] = true;
-			$context_data['context_summary'][] = $sanitization_check['reason'];
+			$context_data['has_sanitization']     = true;
+			$context_data['context_summary'][]    = $sanitization_check['reason'];
 		}
 
 		// Check for dangerous user input
 		$input_check = $this->check_user_input( $surrounding_code );
 		if ( $input_check['has_user_input'] ) {
 			$context_data['confidence_modifier'] += $input_check['modifier'];
-			$context_data['has_user_input'] = true;
-			$context_data['context_summary'][] = $input_check['reason'];
+			$context_data['has_user_input']       = true;
+			$context_data['context_summary'][]    = $input_check['reason'];
 		}
 
 		// Apply rule-specific context rules
 		if ( isset( $rule['context_rules'] ) ) {
-			$rule_context = $this->apply_rule_context_rules( $rule['context_rules'], $filepath, $surrounding_code );
+			$rule_context                         = $this->apply_rule_context_rules( $rule['context_rules'], $filepath, $surrounding_code );
 			$context_data['confidence_modifier'] += $rule_context['modifier'];
-			$context_data['context_summary'] = array_merge( $context_data['context_summary'], $rule_context['summary'] );
+			$context_data['context_summary']      = array_merge( $context_data['context_summary'], $rule_context['summary'] );
 		}
 
 		// Calculate location risk
-		$location_risk = $this->calculate_location_risk( $filepath );
+		$location_risk                        = $this->calculate_location_risk( $filepath );
 		$context_data['confidence_modifier'] += $location_risk['modifier'];
-		$context_data['location_risk'] = $location_risk['risk_score'];
+		$context_data['location_risk']        = $location_risk['risk_score'];
 		if ( ! empty( $location_risk['reason'] ) ) {
 			$context_data['context_summary'][] = $location_risk['reason'];
 		}
@@ -169,7 +173,7 @@ class NexifyMy_Security_Context_Analyzer {
 
 		// Extract context lines
 		$start_line = max( 0, $match_line - self::CONTEXT_LINES );
-		$end_line = min( count( $lines ) - 1, $match_line + self::CONTEXT_LINES );
+		$end_line   = min( count( $lines ) - 1, $match_line + self::CONTEXT_LINES );
 
 		$context_lines = array_slice( $lines, $start_line, $end_line - $start_line + 1 );
 
@@ -207,12 +211,12 @@ class NexifyMy_Security_Context_Analyzer {
 	 * @return array Result with has_sanitization, modifier, reason.
 	 */
 	private function check_sanitization( $code ) {
-		$total_modifier = 0;
+		$total_modifier  = 0;
 		$found_functions = array();
 
 		foreach ( $this->sanitization_patterns as $pattern => $modifier ) {
 			if ( stripos( $code, $pattern ) !== false ) {
-				$total_modifier += $modifier;
+				$total_modifier   += $modifier;
 				$found_functions[] = $pattern;
 			}
 		}
@@ -240,12 +244,12 @@ class NexifyMy_Security_Context_Analyzer {
 	 */
 	private function check_user_input( $code ) {
 		$total_modifier = 0;
-		$found_inputs = array();
+		$found_inputs   = array();
 
 		foreach ( $this->dangerous_input_patterns as $pattern => $modifier ) {
 			if ( stripos( $code, $pattern ) !== false ) {
 				$total_modifier += $modifier;
-				$found_inputs[] = $pattern;
+				$found_inputs[]  = $pattern;
 			}
 		}
 
@@ -274,14 +278,14 @@ class NexifyMy_Security_Context_Analyzer {
 	 */
 	private function apply_rule_context_rules( $context_rules, $filepath, $code ) {
 		$total_modifier = 0;
-		$summary = array();
+		$summary        = array();
 
 		// Apply safe context rules
 		if ( isset( $context_rules['safe_contexts'] ) && is_array( $context_rules['safe_contexts'] ) ) {
 			foreach ( $context_rules['safe_contexts'] as $pattern => $modifier ) {
 				if ( preg_match( $pattern, $filepath ) || preg_match( $pattern, $code ) ) {
 					$total_modifier += $modifier;
-					$summary[] = sprintf( 'Safe context: %s', trim( $pattern, '/' ) );
+					$summary[]       = sprintf( 'Safe context: %s', trim( $pattern, '/' ) );
 				}
 			}
 		}
@@ -291,7 +295,7 @@ class NexifyMy_Security_Context_Analyzer {
 			foreach ( $context_rules['dangerous_contexts'] as $pattern => $modifier ) {
 				if ( preg_match( $pattern, $filepath ) || preg_match( $pattern, $code ) ) {
 					$total_modifier += $modifier;
-					$summary[] = sprintf( 'Dangerous context: %s', trim( $pattern, '/' ) );
+					$summary[]       = sprintf( 'Dangerous context: %s', trim( $pattern, '/' ) );
 				}
 			}
 		}
@@ -310,8 +314,8 @@ class NexifyMy_Security_Context_Analyzer {
 	 */
 	public function calculate_location_risk( $filepath ) {
 		$relative_path = str_replace( ABSPATH, '', $filepath );
-		$risk_score = 0;
-		$reason = '';
+		$risk_score    = 0;
+		$reason        = '';
 
 		// Check location patterns
 		foreach ( $this->location_risk_map as $pattern => $score ) {
@@ -319,7 +323,7 @@ class NexifyMy_Security_Context_Analyzer {
 			if ( substr( $pattern, -1 ) === '$' ) {
 				if ( preg_match( '/' . preg_quote( rtrim( $pattern, '$' ), '/' ) . '$/i', $relative_path ) ) {
 					$risk_score = $score;
-					$reason = sprintf( 'Location risk: %s', trim( $pattern, '$/i' ) );
+					$reason     = sprintf( 'Location risk: %s', trim( $pattern, '$/i' ) );
 					break;
 				}
 			} else {
@@ -338,9 +342,9 @@ class NexifyMy_Security_Context_Analyzer {
 
 		// Extra penalty for executable PHP files in uploads directory
 		if ( stripos( $relative_path, 'wp-content/uploads/' ) !== false &&
-		     pathinfo( $filepath, PATHINFO_EXTENSION ) === 'php' ) {
+			pathinfo( $filepath, PATHINFO_EXTENSION ) === 'php' ) {
 			$risk_score += 20; // Additional penalty
-			$reason = 'CRITICAL: Executable PHP file in uploads directory';
+			$reason      = 'CRITICAL: Executable PHP file in uploads directory';
 		}
 
 		return array(
@@ -404,7 +408,7 @@ class NexifyMy_Security_Context_Analyzer {
 			return 0;
 		}
 
-		$mtime = filemtime( $filepath );
+		$mtime       = filemtime( $filepath );
 		$age_seconds = time() - $mtime;
 		return (int) floor( $age_seconds / 86400 );
 	}

@@ -15,15 +15,19 @@ class NexifyMy_Security_Cleanup {
 	 * Initialize the cleanup tool.
 	 */
 	public function init() {
-		// Load the quarantine module.
-		require_once NEXIFYMY_SECURITY_PATH . 'modules/quarantine.php';
-		$GLOBALS['nexifymy_quarantine'] = new NexifyMy_Security_Quarantine();
-		$GLOBALS['nexifymy_quarantine']->init();
 
-		// Legacy delete endpoint - now redirects to quarantine.
-		add_action( 'wp_ajax_nexifymy_delete_file', array( $this, 'ajax_delete_file' ) );
+		// Reuse the shared Quarantine instance instead of re-registering duplicate hooks.
+		if ( ! isset( $GLOBALS['nexifymy_quarantine'] ) || ! ( $GLOBALS['nexifymy_quarantine'] instanceof NexifyMy_Security_Quarantine ) ) {
+				require_once NEXIFYMY_SECURITY_PATH . 'modules/quarantine.php';
+			$GLOBALS['nexifymy_quarantine'] = new NexifyMy_Security_Quarantine();
+			$GLOBALS['nexifymy_quarantine']->init();
+		}
+
+		// Legacy fallback endpoint (only if nothing already handles it).
+		if ( ! has_action( 'wp_ajax_nexifymy_delete_file' ) ) {
+			add_action( 'wp_ajax_nexifymy_delete_file', array( $this, 'ajax_delete_file' ) );
+		}
 	}
-
 	/**
 	 * Handle file "deletion" via AJAX.
 	 * This now quarantines the file instead of deleting it directly.
@@ -64,12 +68,12 @@ class NexifyMy_Security_Cleanup {
 		if ( $force_delete ) {
 			// This should only work for files already in quarantine.
 			$quarantine_path = $quarantine->get_quarantine_path();
-			$real_path = realpath( $file_path );
+			$real_path       = realpath( $file_path );
 
 			if ( $real_path && strpos( $real_path, realpath( $quarantine_path ) ) === 0 ) {
 				// It's in quarantine, we can delete.
 				$filename = basename( $file_path );
-				$result = $quarantine->delete_quarantined( $filename );
+				$result   = $quarantine->delete_quarantined( $filename );
 
 				if ( is_wp_error( $result ) ) {
 					wp_send_json_error( $result->get_error_message() );
@@ -88,10 +92,12 @@ class NexifyMy_Security_Cleanup {
 			wp_send_json_error( $result->get_error_message() );
 		}
 
-		wp_send_json_success( array(
-			'message'     => 'File has been quarantined (not deleted). You can restore or permanently delete it from the Quarantine section.',
-			'quarantined' => true,
-			'info'        => $result,
-		) );
+		wp_send_json_success(
+			array(
+				'message'     => 'File has been quarantined (not deleted). You can restore or permanently delete it from the Quarantine section.',
+				'quarantined' => true,
+				'info'        => $result,
+			)
+		);
 	}
 }

@@ -64,7 +64,7 @@ class NexifyMy_Security_Core_Repair {
 		global $wp_version;
 
 		$locale = get_locale();
-		$url = add_query_arg(
+		$url    = add_query_arg(
 			array(
 				'version' => $wp_version,
 				'locale'  => $locale,
@@ -105,7 +105,7 @@ class NexifyMy_Security_Core_Repair {
 		}
 
 		$modified = array();
-		$missing = array();
+		$missing  = array();
 		$verified = 0;
 
 		foreach ( $checksums as $file => $expected_hash ) {
@@ -132,7 +132,7 @@ class NexifyMy_Security_Core_Repair {
 					'status'   => 'modified',
 				);
 			} else {
-				$verified++;
+				++$verified;
 			}
 		}
 
@@ -195,17 +195,23 @@ class NexifyMy_Security_Core_Repair {
 	 * @return array Repair result.
 	 */
 	public function repair_file( $file, $source_dir = null ) {
-		$settings = $this->get_settings();
+		$settings    = $this->get_settings();
 		$target_path = ABSPATH . $file;
 
 		// Validate file is a core file.
 		$checksums = $this->get_official_checksums();
 		if ( is_wp_error( $checksums ) ) {
-			return array( 'success' => false, 'error' => $checksums->get_error_message() );
+			return array(
+				'success' => false,
+				'error'   => $checksums->get_error_message(),
+			);
 		}
 
 		if ( ! isset( $checksums[ $file ] ) ) {
-			return array( 'success' => false, 'error' => 'File is not a WordPress core file.' );
+			return array(
+				'success' => false,
+				'error'   => 'File is not a WordPress core file.',
+			);
 		}
 
 		// Backup if enabled.
@@ -220,13 +226,19 @@ class NexifyMy_Security_Core_Repair {
 			// Download fresh core if no source provided.
 			$fresh_dir = $this->download_fresh_core();
 			if ( is_wp_error( $fresh_dir ) ) {
-				return array( 'success' => false, 'error' => $fresh_dir->get_error_message() );
+				return array(
+					'success' => false,
+					'error'   => $fresh_dir->get_error_message(),
+				);
 			}
 			$source_path = $fresh_dir . '/' . $file;
 		}
 
 		if ( ! file_exists( $source_path ) ) {
-			return array( 'success' => false, 'error' => 'Fresh file not found in WordPress package.' );
+			return array(
+				'success' => false,
+				'error'   => 'Fresh file not found in WordPress package.',
+			);
 		}
 
 		// Create directory if needed.
@@ -237,15 +249,21 @@ class NexifyMy_Security_Core_Repair {
 
 		// Copy fresh file.
 		if ( ! copy( $source_path, $target_path ) ) {
-			return array( 'success' => false, 'error' => 'Failed to copy file. Check permissions.' );
+			return array(
+				'success' => false,
+				'error'   => 'Failed to copy file. Check permissions.',
+			);
 		}
 
 		// Verify repair.
-		$new_hash = md5_file( $target_path );
+		$new_hash      = md5_file( $target_path );
 		$expected_hash = $checksums[ $file ];
 
 		if ( $new_hash !== $expected_hash ) {
-			return array( 'success' => false, 'error' => 'File replaced but hash still does not match.' );
+			return array(
+				'success' => false,
+				'error'   => 'File replaced but hash still does not match.',
+			);
 		}
 
 		// Log the repair.
@@ -279,8 +297,8 @@ class NexifyMy_Security_Core_Repair {
 
 		if ( $integrity['is_clean'] ) {
 			return array(
-				'success' => true,
-				'message' => 'All core files are already intact.',
+				'success'  => true,
+				'message'  => 'All core files are already intact.',
 				'repaired' => 0,
 			);
 		}
@@ -288,11 +306,14 @@ class NexifyMy_Security_Core_Repair {
 		// Download fresh core once.
 		$fresh_dir = $this->download_fresh_core();
 		if ( is_wp_error( $fresh_dir ) ) {
-			return array( 'success' => false, 'error' => $fresh_dir->get_error_message() );
+			return array(
+				'success' => false,
+				'error'   => $fresh_dir->get_error_message(),
+			);
 		}
 
 		$repaired = array();
-		$failed = array();
+		$failed   = array();
 
 		// Repair modified files.
 		foreach ( $integrity['modified'] as $item ) {
@@ -300,7 +321,10 @@ class NexifyMy_Security_Core_Repair {
 			if ( $result['success'] ) {
 				$repaired[] = $item['file'];
 			} else {
-				$failed[] = array( 'file' => $item['file'], 'error' => $result['error'] );
+				$failed[] = array(
+					'file'  => $item['file'],
+					'error' => $result['error'],
+				);
 			}
 		}
 
@@ -310,7 +334,10 @@ class NexifyMy_Security_Core_Repair {
 			if ( $result['success'] ) {
 				$repaired[] = $item['file'];
 			} else {
-				$failed[] = array( 'file' => $item['file'], 'error' => $result['error'] );
+				$failed[] = array(
+					'file'  => $item['file'],
+					'error' => $result['error'],
+				);
 			}
 		}
 
@@ -339,7 +366,7 @@ class NexifyMy_Security_Core_Repair {
 	 * @param string $relative Relative file path.
 	 */
 	private function backup_file( $file_path, $relative ) {
-		$backup_dir = WP_CONTENT_DIR . '/nexifymy-backups/core/' . date( 'Y-m-d_H-i-s' );
+		$backup_dir  = WP_CONTENT_DIR . '/nexifymy-backups/core/' . date( 'Y-m-d_H-i-s' );
 		$backup_path = $backup_dir . '/' . $relative;
 
 		wp_mkdir_p( dirname( $backup_path ) );
@@ -379,10 +406,10 @@ class NexifyMy_Security_Core_Repair {
 	 * @param array $failed Failed files.
 	 */
 	private function send_repair_notification( $repaired, $failed ) {
-		$to = get_option( 'admin_email' );
+		$to      = get_option( 'admin_email' );
 		$subject = sprintf( '[%s] WordPress Core Files Repaired', get_bloginfo( 'name' ) );
 
-		$message = "WordPress Core File Repair Report\n\n";
+		$message  = "WordPress Core File Repair Report\n\n";
 		$message .= sprintf( "Site: %s\n", home_url() );
 		$message .= sprintf( "Time: %s\n\n", current_time( 'mysql' ) );
 
@@ -471,9 +498,11 @@ class NexifyMy_Security_Core_Repair {
 			wp_send_json_error( $path->get_error_message() );
 		}
 
-		wp_send_json_success( array(
-			'message' => 'Fresh WordPress core downloaded.',
-			'path'    => $path,
-		) );
+		wp_send_json_success(
+			array(
+				'message' => 'Fresh WordPress core downloaded.',
+				'path'    => $path,
+			)
+		);
 	}
 }

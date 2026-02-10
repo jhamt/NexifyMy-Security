@@ -67,6 +67,10 @@ class NexifyMy_Security_CDN {
 	 * Detect CDN and fix the client IP.
 	 */
 	public function detect_and_fix_ip() {
+		if ( ! $this->should_trust_proxy_headers() ) {
+			return;
+		}
+
 		$provider = $this->detect_provider();
 
 		if ( ! $provider ) {
@@ -78,6 +82,26 @@ class NexifyMy_Security_CDN {
 		if ( $real_ip && filter_var( $real_ip, FILTER_VALIDATE_IP ) ) {
 			$_SERVER['REMOTE_ADDR'] = $real_ip;
 		}
+	}
+
+	/**
+	 * Determine if forwarded proxy headers should be trusted for IP rewriting.
+	 *
+	 * @return bool
+	 */
+	private function should_trust_proxy_headers() {
+		$settings = $this->get_settings();
+		if ( empty( $settings['trust_proxy_headers'] ) ) {
+			return false;
+		}
+
+		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		if ( empty( $remote_addr ) ) {
+			return false;
+		}
+
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
+		return in_array( $remote_addr, (array) $trusted_proxies, true );
 	}
 
 	/**
@@ -153,17 +177,17 @@ class NexifyMy_Security_CDN {
 		$provider = $this->detect_provider();
 
 		$status = array(
-			'enabled'           => ! empty( $settings['enabled'] ),
-			'detected_provider' => $provider,
-			'provider_name'     => $this->get_provider_name( $provider ),
-			'real_ip'           => isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '',
-			'is_cloudflare'     => 'cloudflare' === $provider,
+			'enabled'               => ! empty( $settings['enabled'] ),
+			'detected_provider'     => $provider,
+			'provider_name'         => $this->get_provider_name( $provider ),
+			'real_ip'               => isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '',
+			'is_cloudflare'         => 'cloudflare' === $provider,
 			'cloudflare_configured' => ! empty( $settings['cloudflare_api_key'] ) && ! empty( $settings['cloudflare_zone_id'] ),
 		);
 
 		// Add Cloudflare-specific info.
 		if ( 'cloudflare' === $provider ) {
-			$status['cf_ray'] = isset( $_SERVER['HTTP_CF_RAY'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_RAY'] ) ) : '';
+			$status['cf_ray']     = isset( $_SERVER['HTTP_CF_RAY'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_RAY'] ) ) : '';
 			$status['cf_country'] = isset( $_SERVER['HTTP_CF_IPCOUNTRY'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_IPCOUNTRY'] ) ) : '';
 		}
 
@@ -188,7 +212,7 @@ class NexifyMy_Security_CDN {
 	/**
 	 * Purge Cloudflare cache.
 	 *
-	 * @param bool $purge_all Whether to purge all cache.
+	 * @param bool  $purge_all Whether to purge all cache.
 	 * @param array $urls Specific URLs to purge (if not purge_all).
 	 * @return array|WP_Error Result or error.
 	 */
@@ -204,14 +228,17 @@ class NexifyMy_Security_CDN {
 
 		$body = $purge_all ? array( 'purge_everything' => true ) : array( 'files' => $urls );
 
-		$response = wp_remote_post( $api_url, array(
-			'headers' => array(
-				'Authorization' => 'Bearer ' . $settings['cloudflare_api_key'],
-				'Content-Type'  => 'application/json',
-			),
-			'body'    => wp_json_encode( $body ),
-			'timeout' => 15,
-		) );
+		$response = wp_remote_post(
+			$api_url,
+			array(
+				'headers' => array(
+					'Authorization' => 'Bearer ' . $settings['cloudflare_api_key'],
+					'Content-Type'  => 'application/json',
+				),
+				'body'    => wp_json_encode( $body ),
+				'timeout' => 15,
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -230,7 +257,10 @@ class NexifyMy_Security_CDN {
 				);
 			}
 
-			return array( 'success' => true, 'message' => 'Cache purged successfully.' );
+			return array(
+				'success' => true,
+				'message' => 'Cache purged successfully.',
+			);
 		}
 
 		$error_msg = isset( $body['errors'][0]['message'] ) ? $body['errors'][0]['message'] : 'Unknown error';
@@ -252,13 +282,16 @@ class NexifyMy_Security_CDN {
 		$zone_id = sanitize_text_field( $settings['cloudflare_zone_id'] );
 		$api_url = 'https://api.cloudflare.com/client/v4/zones/' . $zone_id;
 
-		$response = wp_remote_get( $api_url, array(
-			'headers' => array(
-				'Authorization' => 'Bearer ' . $settings['cloudflare_api_key'],
-				'Content-Type'  => 'application/json',
-			),
-			'timeout' => 15,
-		) );
+		$response = wp_remote_get(
+			$api_url,
+			array(
+				'headers' => array(
+					'Authorization' => 'Bearer ' . $settings['cloudflare_api_key'],
+					'Content-Type'  => 'application/json',
+				),
+				'timeout' => 15,
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -295,10 +328,12 @@ class NexifyMy_Security_CDN {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		wp_send_json_success( array(
-			'status'   => $this->get_status(),
-			'settings' => $this->get_settings(),
-		) );
+		wp_send_json_success(
+			array(
+				'status'   => $this->get_status(),
+				'settings' => $this->get_settings(),
+			)
+		);
 	}
 
 	/**
@@ -360,7 +395,7 @@ class NexifyMy_Security_CDN {
 
 		// Save to main settings.
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings        = NexifyMy_Security_Settings::get_all();
 			$all_settings['cdn'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}

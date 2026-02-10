@@ -160,7 +160,7 @@ class NexifyMy_Security_Background_Scanner {
 
 		// Log results.
 		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
-			$threats = isset( $results['threats_found'] ) ? $results['threats_found'] : 0;
+			$threats  = isset( $results['threats_found'] ) ? $results['threats_found'] : 0;
 			$severity = $threats > 0 ? 'critical' : 'info';
 
 			NexifyMy_Security_Logger::log(
@@ -180,12 +180,15 @@ class NexifyMy_Security_Background_Scanner {
 		$memory_mb = round( memory_get_peak_usage( true ) / 1024 / 1024, 2 );
 
 		// Store last scan results with metrics.
-		update_option( 'nexifymy_last_scheduled_scan', array(
-			'time'       => current_time( 'mysql' ),
-			'results'    => $results,
-			'duration'   => $duration,
-			'memory_mb'  => $memory_mb,
-		) );
+		update_option(
+			'nexifymy_last_scheduled_scan',
+			array(
+				'time'      => current_time( 'mysql' ),
+				'results'   => $results,
+				'duration'  => $duration,
+				'memory_mb' => $memory_mb,
+			)
+		);
 
 		// Clear running lock.
 		delete_transient( 'nexifymy_scan_running' );
@@ -230,10 +233,12 @@ class NexifyMy_Security_Background_Scanner {
 
 		$this->schedule_scan( $frequency );
 
-		wp_send_json_success( array(
-			'frequency' => $frequency,
-			'next_run'  => $this->get_next_scheduled_time(),
-		) );
+		wp_send_json_success(
+			array(
+				'frequency' => $frequency,
+				'next_run'  => $this->get_next_scheduled_time(),
+			)
+		);
 	}
 
 	/**
@@ -253,10 +258,12 @@ class NexifyMy_Security_Background_Scanner {
 		// Trigger the scan immediately.
 		do_action( self::CRON_HOOK );
 
-		wp_send_json_success( array(
-			'message' => 'Background scan triggered',
-			'results' => get_option( 'nexifymy_last_scheduled_scan' ),
-		) );
+		wp_send_json_success(
+			array(
+				'message' => 'Background scan triggered',
+				'results' => get_option( 'nexifymy_last_scheduled_scan' ),
+			)
+		);
 	}
 
 	/**
@@ -270,22 +277,26 @@ class NexifyMy_Security_Background_Scanner {
 		}
 
 		if ( ! $this->is_enabled() ) {
-			wp_send_json_success( array(
-				'frequency' => 'disabled',
-				'next_run'  => null,
-				'last_scan' => get_option( 'nexifymy_last_scheduled_scan', null ),
-				'disabled'  => true,
-			) );
+			wp_send_json_success(
+				array(
+					'frequency' => 'disabled',
+					'next_run'  => null,
+					'last_scan' => get_option( 'nexifymy_last_scheduled_scan', null ),
+					'disabled'  => true,
+				)
+			);
 		}
 
 		$frequency = get_option( self::SCHEDULE_OPTION, 'daily' );
 		$last_scan = get_option( 'nexifymy_last_scheduled_scan', null );
 
-		wp_send_json_success( array(
-			'frequency'  => $frequency,
-			'next_run'   => $this->get_next_scheduled_time(),
-			'last_scan'  => $last_scan,
-		) );
+		wp_send_json_success(
+			array(
+				'frequency' => $frequency,
+				'next_run'  => $this->get_next_scheduled_time(),
+				'last_scan' => $last_scan,
+			)
+		);
 	}
 
 	/**
