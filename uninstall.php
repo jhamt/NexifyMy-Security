@@ -31,9 +31,21 @@ global $wpdb;
  * =============================================================================
  */
 
-// Drop the security logs table.
-$table_name = $wpdb->prefix . 'nexifymy_security_logs';
-$wpdb->query( "DROP TABLE IF EXISTS {$table_name}" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+// Drop all plugin-owned tables.
+$tables_to_drop = array(
+	$wpdb->prefix . 'nexifymy_security_logs',
+	$wpdb->prefix . 'nexifymy_live_traffic',
+	$wpdb->prefix . 'nexifymy_activity_log',
+	$wpdb->prefix . 'nexifymy_behavior_log',
+	$wpdb->prefix . 'sentinel_user_profiles',
+	$wpdb->prefix . 'nexifymy_insider_events',
+	$wpdb->prefix . 'nexifymy_exfiltration_log',
+	$wpdb->prefix . 'nexifymy_temp_permissions',
+);
+foreach ( $tables_to_drop as $table_name ) {
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$wpdb->query( "DROP TABLE IF EXISTS {$table_name}" );
+}
 
 /*
  * =============================================================================
@@ -49,6 +61,7 @@ $options_to_delete = array(
 
 	// WAF/Firewall.
 	'nexifymy_security_ip_whitelist',
+	'nexifymy_security_blocked_ips',
 	'nexifymy_security_trusted_proxies',
 
 	// Scanner.
@@ -56,9 +69,26 @@ $options_to_delete = array(
 	'nexifymy_last_scan_timestamp',
 	'nexifymy_security_last_scan',
 	'nexifymy_last_scheduled_scan',
+	'nexifymy_last_scan',
 
 	// Quarantine.
 	'nexifymy_quarantine_log',
+
+	// Activity & traffic.
+	'nexifymy_activity_log_db_version',
+	'nexifymy_live_traffic_db_version',
+
+	// AI detection.
+	'nexifymy_ai_behavior_patterns',
+	'nexifymy_ai_detected_threats',
+	'nexifymy_temp_permissions_legacy_migrated',
+
+	// P2P intelligence.
+	'nexifymy_p2p_peers',
+	'nexifymy_p2p_node_key',
+
+	// Integrations migration legacy key.
+	'nexifymy_integrations',
 
 	// Rate Limiter (transients are handled separately).
 );
@@ -73,14 +103,23 @@ foreach ( $options_to_delete as $option ) {
  * =============================================================================
  */
 
-// Delete all rate limiter transients.
-$wpdb->query(
-	$wpdb->prepare(
-		"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
-		'_transient_nexifymy_rl_%',
-		'_transient_timeout_nexifymy_rl_%'
-	)
-); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+$transient_patterns = array(
+	'nexifymy_rl_',
+	'nexifymy_sbx_',
+	'nexifymy_p2p_',
+	'nexifymy_geo_',
+	'nexifymy_vuln_',
+);
+foreach ( $transient_patterns as $pattern ) {
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$wpdb->query(
+		$wpdb->prepare(
+			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
+			'_transient_' . $pattern . '%',
+			'_transient_timeout_' . $pattern . '%'
+		)
+	);
+}
 
 /*
  * =============================================================================
@@ -93,6 +132,20 @@ $cron_hooks = array(
 	'nexifymy_scheduled_scan',
 	'nexifymy_daily_summary',
 	'nexifymy_log_cleanup',
+	'nexifymy_scheduled_backup',
+	'nexifymy_p2p_sync',
+	'nexifymy_vulnerability_scan',
+	'nexifymy_activity_log_cleanup',
+	'nexifymy_supply_chain_scan',
+	'nexifymy_update_signatures',
+	'nexifymy_integrity_check',
+	'nexifymy_security_benchmark',
+	'nexifymy_auto_patch',
+	'nexifymy_traffic_cleanup',
+	'nexifymy_generate_report',
+	'nexifymy_cleanup_reports',
+	'nexifymy_learn_patterns',
+	'nexifymy_revoke_expired_permissions',
 );
 
 foreach ( $cron_hooks as $hook ) {
@@ -114,10 +167,18 @@ foreach ( $cron_hooks as $hook ) {
  */
 
 $quarantine_dir = WP_CONTENT_DIR . '/nexifymy-quarantine';
+$deleted_dir    = WP_CONTENT_DIR . '/nexifymy-deleted';
+$backups_dir    = WP_CONTENT_DIR . '/nexifymy-backups';
 
 if ( is_dir( $quarantine_dir ) ) {
 	// Recursively delete the quarantine directory.
 	nexifymy_recursive_delete( $quarantine_dir );
+}
+if ( is_dir( $deleted_dir ) ) {
+	nexifymy_recursive_delete( $deleted_dir );
+}
+if ( is_dir( $backups_dir ) ) {
+	nexifymy_recursive_delete( $backups_dir );
 }
 
 /**
