@@ -16,6 +16,16 @@ class NexifyMy_Security_Live_Traffic {
 	const TABLE_NAME = 'nexifymy_traffic';
 
 	/**
+	 * Option key used to track schema version.
+	 */
+	const SCHEMA_OPTION = 'nexifymy_traffic_schema_version';
+
+	/**
+	 * Current table schema version.
+	 */
+	const SCHEMA_VERSION = '1.0.0';
+
+	/**
 	 * Maximum entries to keep.
 	 */
 	const MAX_ENTRIES = 5000;
@@ -62,10 +72,8 @@ class NexifyMy_Security_Live_Traffic {
 	 * Check if table exists and create if needed.
 	 */
 	private function maybe_create_table() {
-		global $wpdb;
-		$table_name = $wpdb->prefix . self::TABLE_NAME;
-
-		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) !== $table_name ) {
+		$installed_version = get_option( self::SCHEMA_OPTION, '' );
+		if ( self::SCHEMA_VERSION !== (string) $installed_version ) {
 			self::create_table();
 		}
 	}
@@ -99,6 +107,8 @@ class NexifyMy_Security_Live_Traffic {
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		dbDelta( $sql );
+
+		update_option( self::SCHEMA_OPTION, self::SCHEMA_VERSION, false );
 	}
 
 	/**
@@ -321,21 +331,29 @@ class NexifyMy_Security_Live_Traffic {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		// Check for Cloudflare.
-		if ( ! empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) {
-			return sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) );
-		}
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
-		// Check for proxy headers.
-		$headers = array( 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
-		foreach ( $headers as $header ) {
-			if ( ! empty( $_SERVER[ $header ] ) ) {
-				$ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) ) );
-				return trim( $ips[0] );
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$headers = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $headers as $header ) {
+				if ( empty( $_SERVER[ $header ] ) ) {
+					continue;
+				}
+
+				$raw = sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) );
+				$ip  = strpos( $raw, ',' ) !== false ? trim( explode( ',', $raw )[0] ) : $raw;
+				if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+					return $ip;
+				}
 			}
 		}
 
-		return isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '0.0.0.0';
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
+		}
+
+		return '0.0.0.0';
 	}
 
 	/**

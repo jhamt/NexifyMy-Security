@@ -1024,6 +1024,32 @@ class NexifyMy_Security_Scanner {
 			'quarantined' => $quarantined_count,
 		) );
 
+		$threat_total = array_sum( $threat_counts );
+
+		if ( $threat_total > 0 ) {
+			do_action(
+				'nexifymy_malware_found',
+				array(
+					'files'         => $suspicious_files,
+					'threat_counts' => $threat_counts,
+					'threats_found' => $threat_total,
+					'scanned_at'    => current_time( 'mysql' ),
+					'mode'          => $mode,
+				)
+			);
+		}
+
+		do_action(
+			'nexifymy_scan_completed',
+			array(
+				'issues'        => $threat_total,
+				'threats_found' => $threat_total,
+				'files_scanned' => $files_scanned,
+				'mode'          => $mode,
+				'results'       => $results,
+			)
+		);
+
 		return $results;
 	}
 

@@ -24,16 +24,16 @@ class NexifyMy_Security_Compliance {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'              => true,
-		'auto_generate'        => true,
-		'schedule'             => 'weekly',  // daily, weekly, monthly.
-		'email_reports'        => true,
-		'include_gdpr'         => true,
-		'include_security'     => true,
-		'include_performance'  => true,
-		'include_threats'      => true,
-		'report_format'        => 'html',    // html, pdf.
-		'retention_days'       => 90,
+		'enabled'             => true,
+		'auto_generate'       => true,
+		'schedule'            => 'weekly',  // daily, weekly, monthly.
+		'email_reports'       => true,
+		'include_gdpr'        => true,
+		'include_security'    => true,
+		'include_performance' => true,
+		'include_threats'     => true,
+		'report_format'       => 'html',    // html, pdf.
+		'retention_days'      => 90,
 	);
 
 	/**
@@ -97,22 +97,22 @@ class NexifyMy_Security_Compliance {
 	private function define_compliance_checks() {
 		$this->compliance_checks = array(
 			// GDPR Compliance.
-			'gdpr' => array(
+			'gdpr'     => array(
 				'name'   => 'GDPR Compliance',
 				'checks' => array(
-					'ssl_enabled' => array(
+					'ssl_enabled'      => array(
 						'name'        => 'SSL/HTTPS Encryption',
 						'description' => 'Data must be encrypted in transit.',
 						'check'       => array( $this, 'check_ssl_enabled' ),
 						'weight'      => 'critical',
 					),
-					'privacy_policy' => array(
+					'privacy_policy'   => array(
 						'name'        => 'Privacy Policy Page',
 						'description' => 'Site must have a privacy policy.',
 						'check'       => array( $this, 'check_privacy_policy' ),
 						'weight'      => 'critical',
 					),
-					'data_retention' => array(
+					'data_retention'   => array(
 						'name'        => 'Log Retention Policy',
 						'description' => 'Logs should be automatically purged.',
 						'check'       => array( $this, 'check_log_retention' ),
@@ -124,7 +124,7 @@ class NexifyMy_Security_Compliance {
 						'check'       => array( $this, 'check_data_export' ),
 						'weight'      => 'high',
 					),
-					'cookie_consent' => array(
+					'cookie_consent'   => array(
 						'name'        => 'Cookie Consent',
 						'description' => 'Cookie consent mechanism is recommended.',
 						'check'       => array( $this, 'check_cookie_consent' ),
@@ -143,7 +143,7 @@ class NexifyMy_Security_Compliance {
 						'check'       => array( $this, 'check_firewall_enabled' ),
 						'weight'      => 'critical',
 					),
-					'2fa_available' => array(
+					'2fa_available'    => array(
 						'name'        => 'Two-Factor Authentication',
 						'description' => '2FA should be available for users.',
 						'check'       => array( $this, 'check_2fa_available' ),
@@ -161,13 +161,13 @@ class NexifyMy_Security_Compliance {
 						'check'       => array( $this, 'check_login_protection' ),
 						'weight'      => 'critical',
 					),
-					'file_integrity' => array(
+					'file_integrity'   => array(
 						'name'        => 'File Integrity Monitoring',
 						'description' => 'Scanner checks for file changes.',
 						'check'       => array( $this, 'check_file_integrity' ),
 						'weight'      => 'high',
 					),
-					'updates_current' => array(
+					'updates_current'  => array(
 						'name'        => 'Software Updates',
 						'description' => 'WordPress core and plugins are up to date.',
 						'check'       => array( $this, 'check_updates_current' ),
@@ -177,16 +177,16 @@ class NexifyMy_Security_Compliance {
 			),
 
 			// Access Control.
-			'access' => array(
+			'access'   => array(
 				'name'   => 'Access Control',
 				'checks' => array(
-					'admin_users' => array(
+					'admin_users'          => array(
 						'name'        => 'Administrator Accounts',
 						'description' => 'Number of admin users should be minimal.',
 						'check'       => array( $this, 'check_admin_users' ),
 						'weight'      => 'medium',
 					),
-					'no_admin_username' => array(
+					'no_admin_username'    => array(
 						'name'        => 'Default Username',
 						'description' => 'No user with "admin" username.',
 						'check'       => array( $this, 'check_no_admin_username' ),
@@ -202,10 +202,10 @@ class NexifyMy_Security_Compliance {
 			),
 
 			// Data Protection.
-			'data' => array(
+			'data'     => array(
 				'name'   => 'Data Protection',
 				'checks' => array(
-					'database_backups' => array(
+					'database_backups'  => array(
 						'name'        => 'Database Backups',
 						'description' => 'Regular database backups are scheduled.',
 						'check'       => array( $this, 'check_database_backups' ),
@@ -268,21 +268,34 @@ class NexifyMy_Security_Compliance {
 	}
 
 	private function check_firewall_enabled() {
+
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$settings = NexifyMy_Security_Settings::get_all();
-			return ! empty( $settings['waf']['enabled'] );
+			if ( function_exists( 'nexifymy_security_is_module_enabled' ) ) {
+				return nexifymy_security_is_module_enabled( $settings, 'waf_enabled', true );
+			}
+			if ( isset( $settings['modules']['waf_enabled'] ) ) {
+				return ! empty( $settings['modules']['waf_enabled'] );
+			}
+			return ! empty( $settings['waf']['enabled'] ) || ! empty( $settings['firewall']['enabled'] );
 		}
 		return false;
 	}
 
 	private function check_2fa_available() {
+
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$settings = NexifyMy_Security_Settings::get_all();
-			return ! empty( $settings['2fa']['enabled'] );
+			if ( function_exists( 'nexifymy_security_is_module_enabled' ) ) {
+				return nexifymy_security_is_module_enabled( $settings, 'two_factor_enabled', true );
+			}
+			if ( isset( $settings['modules']['two_factor_enabled'] ) ) {
+				return ! empty( $settings['modules']['two_factor_enabled'] );
+			}
+			return ! empty( $settings['two_factor']['enabled'] ) || ! empty( $settings['2fa']['enabled'] );
 		}
 		return false;
 	}
-
 	private function check_password_policy() {
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$settings = NexifyMy_Security_Settings::get_all();
@@ -292,28 +305,41 @@ class NexifyMy_Security_Compliance {
 	}
 
 	private function check_login_protection() {
+
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$settings = NexifyMy_Security_Settings::get_all();
+			if ( function_exists( 'nexifymy_security_is_module_enabled' ) ) {
+				return nexifymy_security_is_module_enabled( $settings, 'rate_limiter_enabled', true );
+			}
+			if ( isset( $settings['modules']['rate_limiter_enabled'] ) ) {
+				return ! empty( $settings['modules']['rate_limiter_enabled'] );
+			}
 			return ! empty( $settings['rate_limiter']['enabled'] );
 		}
 		return false;
 	}
 
 	private function check_file_integrity() {
+
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$settings = NexifyMy_Security_Settings::get_all();
+			if ( function_exists( 'nexifymy_security_is_module_enabled' ) ) {
+				return nexifymy_security_is_module_enabled( $settings, 'scanner_enabled', true );
+			}
+			if ( isset( $settings['modules']['scanner_enabled'] ) ) {
+				return ! empty( $settings['modules']['scanner_enabled'] );
+			}
 			return ! empty( $settings['scanner']['enabled'] );
 		}
 		return false;
 	}
-
 	private function check_updates_current() {
 		if ( ! function_exists( 'get_plugin_updates' ) ) {
 			require_once ABSPATH . 'wp-admin/includes/update.php';
 		}
 
-		$plugin_updates = get_plugin_updates();
-		$core = get_preferred_from_update_core();
+		$plugin_updates    = get_plugin_updates();
+		$core              = get_preferred_from_update_core();
 		$core_needs_update = $core && $core->response === 'upgrade';
 
 		return empty( $plugin_updates ) && ! $core_needs_update;
@@ -358,7 +384,7 @@ class NexifyMy_Security_Compliance {
 	 */
 	public function generate_report() {
 		$settings = $this->get_settings();
-		$report = array(
+		$report   = array(
 			'id'           => uniqid( 'report_' ),
 			'generated_at' => current_time( 'mysql' ),
 			'site_url'     => home_url(),
@@ -367,17 +393,17 @@ class NexifyMy_Security_Compliance {
 			'php_version'  => PHP_VERSION,
 			'sections'     => array(),
 			'summary'      => array(
-				'total_checks'  => 0,
-				'passed'        => 0,
-				'failed'        => 0,
-				'warnings'      => 0,
-				'score'         => 0,
-				'grade'         => 'F',
+				'total_checks' => 0,
+				'passed'       => 0,
+				'failed'       => 0,
+				'warnings'     => 0,
+				'score'        => 0,
+				'grade'        => 'F',
 			),
 		);
 
 		// Run compliance checks.
-		$total_weight = 0;
+		$total_weight  = 0;
 		$earned_weight = 0;
 
 		foreach ( $this->compliance_checks as $category_key => $category ) {
@@ -395,14 +421,14 @@ class NexifyMy_Security_Compliance {
 				$total_weight += $weight;
 				if ( $passed ) {
 					$earned_weight += $weight;
-					$section['passed']++;
-					$report['summary']['passed']++;
+					++$section['passed'];
+					++$report['summary']['passed'];
 				} else {
-					$section['failed']++;
+					++$section['failed'];
 					if ( $check['weight'] === 'critical' ) {
-						$report['summary']['failed']++;
+						++$report['summary']['failed'];
 					} else {
-						$report['summary']['warnings']++;
+						++$report['summary']['warnings'];
 					}
 				}
 
@@ -413,7 +439,7 @@ class NexifyMy_Security_Compliance {
 					'weight'      => $check['weight'],
 				);
 
-				$report['summary']['total_checks']++;
+				++$report['summary']['total_checks'];
 			}
 
 			$report['sections'][ $category_key ] = $section;
@@ -467,10 +493,18 @@ class NexifyMy_Security_Compliance {
 	 * @return string Grade.
 	 */
 	private function score_to_grade( $score ) {
-		if ( $score >= 90 ) return 'A';
-		if ( $score >= 80 ) return 'B';
-		if ( $score >= 70 ) return 'C';
-		if ( $score >= 60 ) return 'D';
+		if ( $score >= 90 ) {
+			return 'A';
+		}
+		if ( $score >= 80 ) {
+			return 'B';
+		}
+		if ( $score >= 70 ) {
+			return 'C';
+		}
+		if ( $score >= 60 ) {
+			return 'D';
+		}
 		return 'F';
 	}
 
@@ -482,7 +516,7 @@ class NexifyMy_Security_Compliance {
 	private function get_threat_summary() {
 		global $wpdb;
 
-		$table = $wpdb->prefix . 'nexifymy_behavior_log';
+		$table        = $wpdb->prefix . 'nexifymy_behavior_log';
 		$table_exists = $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) === $table;
 
 		if ( ! $table_exists ) {
@@ -501,12 +535,12 @@ class NexifyMy_Security_Compliance {
 		);
 
 		return array(
-			'available'     => true,
-			'period'        => '30 days',
-			'total_requests'=> (int) ( $last_30_days['total_requests'] ?? 0 ),
-			'high_threats'  => (int) ( $last_30_days['high_threats'] ?? 0 ),
-			'medium_threats'=> (int) ( $last_30_days['medium_threats'] ?? 0 ),
-			'failed_logins' => (int) ( $last_30_days['failed_logins'] ?? 0 ),
+			'available'      => true,
+			'period'         => '30 days',
+			'total_requests' => (int) ( $last_30_days['total_requests'] ?? 0 ),
+			'high_threats'   => (int) ( $last_30_days['high_threats'] ?? 0 ),
+			'medium_threats' => (int) ( $last_30_days['medium_threats'] ?? 0 ),
+			'failed_logins'  => (int) ( $last_30_days['failed_logins'] ?? 0 ),
 		);
 	}
 
@@ -532,7 +566,7 @@ class NexifyMy_Security_Compliance {
 	 */
 	private function save_report( $report ) {
 		// Save to uploads directory.
-		$upload_dir = wp_upload_dir();
+		$upload_dir  = wp_upload_dir();
 		$reports_dir = $upload_dir['basedir'] . '/' . self::REPORTS_DIR;
 
 		if ( ! is_dir( $reports_dir ) ) {
@@ -549,7 +583,7 @@ class NexifyMy_Security_Compliance {
 		file_put_contents( $filepath, $html );
 
 		// Store report metadata.
-		$reports = get_option( self::REPORTS_OPTION, array() );
+		$reports                  = get_option( self::REPORTS_OPTION, array() );
 		$reports[ $report['id'] ] = array(
 			'id'           => $report['id'],
 			'filename'     => $filename,
@@ -579,16 +613,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string HTML content.
 	 */
 	private function generate_html_report( $report ) {
-		$grade_colors = array(
-			'A' => '#22c55e',
-			'B' => '#84cc16',
-			'C' => '#eab308',
-			'D' => '#f97316',
-			'F' => '#ef4444',
-		);
-
-		$grade_color = $grade_colors[ $report['summary']['grade'] ] ?? '#666';
-
+		$compliance_css_url = esc_url( NEXIFYMY_SECURITY_URL . 'assets/css/compliance-report.css' );
 		ob_start();
 		?>
 <!DOCTYPE html>
@@ -598,69 +623,33 @@ class NexifyMy_Security_Compliance {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Security Audit Report - <?php echo esc_html( $report['site_name'] ); ?></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<style>
-		* { margin: 0; padding: 0; box-sizing: border-box; }
-		body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
-		.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-		.header { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 40px; border-radius: 12px 12px 0 0; }
-		.header h1 { font-size: 28px; margin-bottom: 8px; }
-		.header p { opacity: 0.9; }
-		.content { background: white; padding: 40px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-		.score-card { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 30px; border-radius: 12px; margin-bottom: 40px; }
-		.grade { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: white; background: <?php echo $grade_color; ?>; }
-		.score-details { flex: 1; margin-left: 30px; }
-		.score-details h2 { font-size: 24px; margin-bottom: 10px; }
-		.stats { display: flex; gap: 20px; margin-top: 15px; }
-		.stat { text-align: center; padding: 10px 20px; background: white; border-radius: 8px; }
-		.stat-value { font-size: 24px; font-weight: bold; }
-		.stat-label { font-size: 12px; color: #666; text-transform: uppercase; }
-		.section { margin-bottom: 30px; }
-		.section h3 { font-size: 18px; color: #1e3a5f; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
-		.check-list { list-style: none; }
-		.check-item { display: flex; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
-		.check-item:last-child { border-bottom: none; }
-		.check-status { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 14px; flex-shrink: 0; }
-		.check-status.pass { background: #dcfce7; color: #16a34a; }
-		.check-status.fail { background: #fee2e2; color: #dc2626; }
-		.check-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-		.check-info p { font-size: 13px; color: #666; }
-		.weight-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; text-transform: uppercase; margin-left: 10px; }
-		.weight-critical { background: #fee2e2; color: #dc2626; }
-		.weight-high { background: #ffedd5; color: #ea580c; }
-		.weight-medium { background: #fef9c3; color: #ca8a04; }
-		.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
-		.metric { background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center; }
-		.metric-value { font-size: 24px; font-weight: bold; color: #1e3a5f; }
-		.metric-label { font-size: 12px; color: #666; margin-top: 5px; }
-		.footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #666; font-size: 13px; }
-		@media print { body { background: white; } .container { padding: 0; } .content { box-shadow: none; } }
-	</style>
+	<link rel="stylesheet" href="<?php echo $compliance_css_url; ?>">
 </head>
 <body>
 	<div class="container">
 		<div class="header">
 			<h1><i class="fas fa-shield-alt"></i> Security Audit Report</h1>
 			<p><?php echo esc_html( $report['site_name'] ); ?> — <?php echo esc_html( $report['site_url'] ); ?></p>
-			<p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Generated: <?php echo esc_html( $report['generated_at'] ); ?></p>
+			<p class="generated-at">Generated: <?php echo esc_html( $report['generated_at'] ); ?></p>
 		</div>
 		
 		<div class="content">
 			<div class="score-card">
-				<div class="grade"><?php echo esc_html( $report['summary']['grade'] ); ?></div>
+				<div class="grade grade-<?php echo esc_attr( strtolower( $report['summary']['grade'] ) ); ?>"><?php echo esc_html( $report['summary']['grade'] ); ?></div>
 				<div class="score-details">
 					<h2>Security Score: <?php echo esc_html( $report['summary']['score'] ); ?>%</h2>
 					<p>Based on <?php echo esc_html( $report['summary']['total_checks'] ); ?> compliance and security checks.</p>
 					<div class="stats">
 						<div class="stat">
-							<div class="stat-value" style="color: #16a34a;"><?php echo esc_html( $report['summary']['passed'] ); ?></div>
+							<div class="stat-value stat-value-pass"><?php echo esc_html( $report['summary']['passed'] ); ?></div>
 							<div class="stat-label">Passed</div>
 						</div>
 						<div class="stat">
-							<div class="stat-value" style="color: #dc2626;"><?php echo esc_html( $report['summary']['failed'] ); ?></div>
+							<div class="stat-value stat-value-fail"><?php echo esc_html( $report['summary']['failed'] ); ?></div>
 							<div class="stat-label">Critical</div>
 						</div>
 						<div class="stat">
-							<div class="stat-value" style="color: #ca8a04;"><?php echo esc_html( $report['summary']['warnings'] ); ?></div>
+							<div class="stat-value stat-value-warning"><?php echo esc_html( $report['summary']['warnings'] ); ?></div>
 							<div class="stat-label">Warnings</div>
 						</div>
 					</div>
@@ -698,11 +687,11 @@ class NexifyMy_Security_Compliance {
 						<div class="metric-label">Total Requests</div>
 					</div>
 					<div class="metric">
-						<div class="metric-value" style="color: #dc2626;"><?php echo esc_html( $report['threats']['high_threats'] ); ?></div>
+						<div class="metric-value metric-value-danger"><?php echo esc_html( $report['threats']['high_threats'] ); ?></div>
 						<div class="metric-label">High Threats</div>
 					</div>
 					<div class="metric">
-						<div class="metric-value" style="color: #ca8a04;"><?php echo esc_html( $report['threats']['failed_logins'] ); ?></div>
+						<div class="metric-value metric-value-warning"><?php echo esc_html( $report['threats']['failed_logins'] ); ?></div>
 						<div class="metric-label">Failed Logins</div>
 					</div>
 				</div>
@@ -731,16 +720,16 @@ class NexifyMy_Security_Compliance {
 
 			<div class="section">
 				<h3>System Information</h3>
-				<table style="width: 100%; font-size: 14px;">
-					<tr><td style="padding: 8px 0; border-bottom: 1px solid #f3f4f6;"><strong>WordPress Version</strong></td><td><?php echo esc_html( $report['wp_version'] ); ?></td></tr>
-					<tr><td style="padding: 8px 0; border-bottom: 1px solid #f3f4f6;"><strong>PHP Version</strong></td><td><?php echo esc_html( $report['php_version'] ); ?></td></tr>
-					<tr><td style="padding: 8px 0;"><strong>Report ID</strong></td><td><?php echo esc_html( $report['id'] ); ?></td></tr>
+				<table class="system-table">
+					<tr><td class="system-cell system-cell-border"><strong>WordPress Version</strong></td><td class="system-cell system-cell-border"><?php echo esc_html( $report['wp_version'] ); ?></td></tr>
+					<tr><td class="system-cell system-cell-border"><strong>PHP Version</strong></td><td class="system-cell system-cell-border"><?php echo esc_html( $report['php_version'] ); ?></td></tr>
+					<tr><td class="system-cell"><strong>Report ID</strong></td><td class="system-cell"><?php echo esc_html( $report['id'] ); ?></td></tr>
 				</table>
 			</div>
 
 			<div class="footer">
 				<p>Generated by NexifyMy Security</p>
-				<p style="margin-top: 5px;">This report is confidential and intended for security assessment purposes only.</p>
+				<p class="footer-note">This report is confidential and intended for security assessment purposes only.</p>
 			</div>
 		</div>
 	</div>
@@ -757,23 +746,24 @@ class NexifyMy_Security_Compliance {
 	 * @param string $filepath Path to report file.
 	 */
 	private function email_report( $report, $filepath ) {
-		$to = get_option( 'admin_email' );
+		$to      = get_option( 'admin_email' );
 		$subject = sprintf( '[%s] Security Audit Report - Grade: %s', get_bloginfo( 'name' ), $report['summary']['grade'] );
 
-		$message = "Security Audit Report\n\n";
+		$message  = "Security Audit Report\n\n";
 		$message .= sprintf( "Site: %s\n", $report['site_url'] );
 		$message .= sprintf( "Generated: %s\n\n", $report['generated_at'] );
 		$message .= sprintf( "Security Grade: %s\n", $report['summary']['grade'] );
 		$message .= sprintf( "Security Score: %d%%\n\n", $report['summary']['score'] );
-		$message .= sprintf( "Passed: %d | Critical: %d | Warnings: %d\n\n", 
+		$message .= sprintf(
+			"Passed: %d | Critical: %d | Warnings: %d\n\n",
 			$report['summary']['passed'],
 			$report['summary']['failed'],
 			$report['summary']['warnings']
 		);
 		$message .= "The full HTML report is attached to this email.\n";
-		$message .= "You can open it in any web browser or print it to PDF.";
+		$message .= 'You can open it in any web browser or print it to PDF.';
 
-		$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+		$headers     = array( 'Content-Type: text/plain; charset=UTF-8' );
 		$attachments = array( $filepath );
 
 		wp_mail( $to, $subject, $message, $headers, $attachments );
@@ -790,10 +780,10 @@ class NexifyMy_Security_Compliance {
 	 * Cleanup old reports.
 	 */
 	public function cleanup_old_reports() {
-		$settings = $this->get_settings();
+		$settings       = $this->get_settings();
 		$retention_days = $settings['retention_days'];
 
-		$upload_dir = wp_upload_dir();
+		$upload_dir  = wp_upload_dir();
 		$reports_dir = $upload_dir['basedir'] . '/' . self::REPORTS_DIR;
 
 		if ( ! is_dir( $reports_dir ) ) {
@@ -850,22 +840,24 @@ class NexifyMy_Security_Compliance {
 		}
 
 		$report_id = isset( $_POST['report_id'] ) ? sanitize_text_field( wp_unslash( $_POST['report_id'] ) ) : '';
-		$reports = $this->get_reports();
+		$reports   = $this->get_reports();
 
 		if ( ! isset( $reports[ $report_id ] ) ) {
 			wp_send_json_error( 'Report not found.' );
 		}
 
 		$upload_dir = wp_upload_dir();
-		$filepath = $upload_dir['basedir'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'];
+		$filepath   = $upload_dir['basedir'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'];
 
 		if ( ! file_exists( $filepath ) ) {
 			wp_send_json_error( 'Report file not found.' );
 		}
 
-		wp_send_json_success( array(
-			'url' => $upload_dir['baseurl'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'],
-		) );
+		wp_send_json_success(
+			array(
+				'url' => $upload_dir['baseurl'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'],
+			)
+		);
 	}
 
 	public function ajax_run_compliance_check() {
