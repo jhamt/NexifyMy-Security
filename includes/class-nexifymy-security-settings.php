@@ -1,13 +1,21 @@
 <?php
 /**
  * Settings Module.
+ *
  * Provides centralized configuration for all security features.
+ *
+ * @package NexifyMy_Security
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Settings class.
+ *
+ * Centralized settings management for all security features.
+ */
 class NexifyMy_Security_Settings {
 
 	/**
@@ -17,43 +25,51 @@ class NexifyMy_Security_Settings {
 
 	/**
 	 * Default settings.
+	 *
+	 * @var array<string, mixed>
 	 */
 	private static $defaults = array(
 		// Module Toggles.
-		'modules' => array(
-			'waf_enabled'              => true,
-			'scanner_enabled'          => true,
-			'rate_limiter_enabled'     => true,
-			'background_scan_enabled'  => true,
-			'signatures_enabled'       => true,
-			'hardening_enabled'        => true,
-			'geo_blocking_enabled'     => false,
-			'hide_login_enabled'       => false,
-			'live_traffic_enabled'     => true,
-			'activity_log_enabled'     => true,
-			'captcha_enabled'          => true,
-			'two_factor_enabled'       => true,
-			'password_enabled'         => true,
-			'self_protection_enabled'  => true,
-			'integrations_enabled'     => true,
-			'quarantine_enabled'       => true,
-			'database_enabled'         => true,
-			'cdn_enabled'              => true,
-			'performance_enabled'      => true,
-			'core_repair_enabled'      => true,
+		'modules'                               => array(
+			'waf_enabled'                   => true,
+			'scanner_enabled'               => true,
+			'rate_limiter_enabled'          => true,
+			'login_protection_enabled'      => false,
+			'background_scan_enabled'       => true,
+			'signatures_enabled'            => true,
+			'hardening_enabled'             => true,
+			'geo_blocking_enabled'          => false,
+			'hide_login_enabled'            => false,
+			'live_traffic_enabled'          => true,
+			'activity_log_enabled'          => true,
+			'captcha_enabled'               => true,
+			'two_factor_enabled'            => true,
+			'password_enabled'              => true,
+			'self_protection_enabled'       => true,
+			'integrations_enabled'          => true,
+			'quarantine_enabled'            => true,
+			'database_enabled'              => true,
+			'cdn_enabled'                   => true,
+			'performance_enabled'           => true,
+			'core_repair_enabled'           => true,
 			'vulnerability_scanner_enabled' => true,
-			'supply_chain_enabled'     => true,
-			'proactive_enabled'        => true,
-			'ai_detection_enabled'     => true,
-			'api_security_enabled'     => true,
-			'graphql_security_enabled' => true,
-			'passkey_enabled'          => true,
-			'compliance_enabled'       => true,
-			'developer_api_enabled'    => true,
+			'supply_chain_enabled'          => true,
+			'proactive_enabled'             => true,
+			'ai_detection_enabled'          => true,
+			'api_security_enabled'          => true,
+			'graphql_security_enabled'      => true,
+			'passkey_enabled'               => true,
+			'compliance_enabled'            => true,
+			'developer_api_enabled'         => true,
+			'deception_enabled'             => true,
+			'p2p_enabled'                   => false,
+			'sandbox_enabled'               => false,
+			'sandbox_console_enabled'       => false,
+			'temp_permissions_enabled'      => true,
 		),
 
 		// General Settings.
-		'general' => array(
+		'general'                               => array(
 			'language'            => 'site_default',
 			'email_notifications' => true,
 			'email_address'       => '', // Defaults to admin_email if empty
@@ -61,39 +77,39 @@ class NexifyMy_Security_Settings {
 		),
 
 		// WAF Settings.
-		'waf' => array(
-			'block_sqli'         => true,
-			'block_xss'          => true,
-			'block_lfi'          => true,
-			'block_bad_bots'     => true,
-			'log_only_mode'      => false, // If true, log but don't block.
+		'waf'                                   => array(
+			'block_sqli'     => true,
+			'block_xss'      => true,
+			'block_lfi'      => true,
+			'block_bad_bots' => true,
+			'log_only_mode'  => false, // If true, log but don't block.
 		),
 
 		// Rate Limiter Settings.
-		'rate_limiter' => array(
-			'max_attempts'       => 5,
-			'lockout_duration'   => 900,  // 15 minutes.
-			'attempt_window'     => 300,  // 5 minutes.
+		'rate_limiter'                          => array(
+			'max_attempts'     => 5,
+			'lockout_duration' => 900,  // 15 minutes.
+			'attempt_window'   => 300,  // 5 minutes.
 		),
 
 		// Scanner Settings.
-		'scanner' => array(
-			'default_mode'       => 'standard',
-			'max_file_size_kb'   => 2048,  // 2MB.
-			'excluded_paths'     => array(),
-			'excluded_extensions' => array( 'jpg', 'jpeg', 'png', 'gif', 'pdf', 'zip' ),
-			'quarantine_mode'    => 'manual',
+		'scanner'                               => array(
+			'default_mode'            => 'standard',
+			'max_file_size_kb'        => 2048,  // 2MB.
+			'excluded_paths'          => array(),
+			'excluded_extensions'     => array( 'jpg', 'jpeg', 'png', 'gif', 'pdf', 'zip' ),
+			'quarantine_mode'         => 'manual',
 			'auto_quarantine_enabled' => false,
 		),
 
 		// IP Settings.
-		'ip' => array(
-			'whitelist'          => array(),
-			'trusted_proxies'    => array(),
+		'ip'                                    => array(
+			'whitelist'       => array(),
+			'trusted_proxies' => array(),
 		),
 
 		// Logging Settings.
-		'logging' => array(
+		'logging'                               => array(
 			'retention_days'     => 30,
 			'log_waf_blocks'     => true,
 			'log_login_attempts' => true,
@@ -101,13 +117,13 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Background Scan Settings.
-		'background_scan' => array(
-			'schedule'           => 'daily',
-			'scan_mode'          => 'standard',
+		'background_scan'                       => array(
+			'schedule'  => 'daily',
+			'scan_mode' => 'standard',
 		),
 
 		// Database Security Settings.
-		'database' => array(
+		'database'                              => array(
 			'backup_enabled'     => true,
 			'backup_schedule'    => 'weekly',
 			'max_backups'        => 5,
@@ -116,70 +132,77 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Performance Optimizer Settings.
-		'performance' => array(
-			'enabled'            => true,
-			'smart_caching'      => true,
-			'cache_ttl'          => 3600,
-			'throttle_scans'     => true,
-			'max_scan_time'      => 30,
-			'max_memory_percent' => 50,
-			'defer_heavy_tasks'  => true,
-			'off_peak_start'     => 2,
-			'off_peak_end'       => 6,
-			'lazy_load_modules'  => true,
-			'optimize_db_queries'=> true,
+		'performance'                           => array(
+			'enabled'             => true,
+			'smart_caching'       => true,
+			'cache_ttl'           => 3600,
+			'throttle_scans'      => true,
+			'max_scan_time'       => 30,
+			'max_memory_percent'  => 50,
+			'defer_heavy_tasks'   => true,
+			'off_peak_start'      => 2,
+			'off_peak_end'        => 6,
+			'lazy_load_modules'   => true,
+			'optimize_db_queries' => true,
 		),
 
 		// Core Repair Settings.
-		'core_repair' => array(
+		'core_repair'                           => array(
 			'enabled'       => true,
 			'backup_before' => true,
 			'notify_admin'  => true,
 		),
 
 		// Supply Chain Security Settings.
-		'supply_chain' => array(
-			'enabled'                => true,
-			'scan_plugins'           => true,
-			'scan_themes'            => true,
-			'scan_composer'          => true,
-			'scan_npm'               => true,
+		'supply_chain'                          => array(
+			'enabled'                  => true,
+			'scan_plugins'             => true,
+			'scan_themes'              => true,
+			'scan_composer'            => true,
+			'scan_npm'                 => true,
 			'monitor_external_scripts' => true,
-			'verify_cdn_integrity'   => true,
-			'auto_scan_schedule'     => 'weekly',
-			'notify_on_issues'       => true,
+			'verify_cdn_integrity'     => true,
+			'auto_scan_schedule'       => 'weekly',
+			'notify_on_issues'         => true,
 		),
 
 		// Proactive Security Settings.
-		'proactive' => array(
-			'enabled'                => true,
-			'auto_recommendations'   => true,
-			'auto_patch_plugins'     => false,
-			'auto_patch_themes'      => false,
-			'auto_patch_core'        => false,
-			'patch_schedule'         => 'daily',
-			'notify_before_patch'    => true,
-			'keep_backups'           => 5,
-			'benchmark_schedule'     => 'weekly',
+		'proactive'                             => array(
+			'enabled'              => true,
+			'auto_recommendations' => true,
+			'auto_patch_plugins'   => false,
+			'auto_patch_themes'    => false,
+			'auto_patch_core'      => false,
+			'patch_schedule'       => 'daily',
+			'notify_before_patch'  => true,
+			'keep_backups'         => 5,
+			'benchmark_schedule'   => 'weekly',
 		),
 
 		// AI Threat Detection Settings.
-		'ai_detection' => array(
-			'enabled'                => true,
-			'learning_mode'          => true,
-			'learning_period_days'   => 7,
-			'anomaly_threshold'      => 75,
-			'auto_block_threshold'   => 90,
-			'track_login_behavior'   => true,
-			'track_request_patterns' => true,
-			'track_user_agents'      => true,
-			'track_geo_patterns'     => true,
-			'notify_on_anomaly'      => true,
-			'session_risk_threshold' => 60,
+		'ai_detection'                          => array(
+			'enabled'                    => true,
+			'learning_mode'              => true,
+			'learning_period_days'       => 7,
+			'anomaly_threshold'          => 75,
+			'auto_block_threshold'       => 90,
+			'track_login_behavior'       => true,
+			'track_request_patterns'     => true,
+			'track_user_agents'          => true,
+			'track_geo_patterns'         => true,
+			'notify_on_anomaly'          => true,
+			'session_risk_threshold'     => 60,
+			'zero_trust_reauth_interval' => 900,
+			'zero_trust_risk_spike_threshold' => 20,
+			'insider_threat_enabled'     => true,
+			'insider_threat_threshold'   => 60,
+			'data_exfiltration_enabled'  => true,
+			'exfiltration_threshold'     => 60,
+			'exfiltration_baseline_days' => 30,
 		),
 
 		// Passkey/WebAuthn Settings.
-		'passkey' => array(
+		'passkey'                               => array(
 			'enabled'              => true,
 			'allow_passwordless'   => true,
 			'require_for_admins'   => false,
@@ -190,21 +213,21 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Compliance & Reporting Settings.
-		'compliance' => array(
-			'enabled'              => true,
-			'auto_generate'        => true,
-			'schedule'             => 'weekly',
-			'email_reports'        => true,
-			'include_gdpr'         => true,
-			'include_security'     => true,
-			'include_performance'  => true,
-			'include_threats'      => true,
-			'report_format'        => 'html',
-			'retention_days'       => 90,
+		'compliance'                            => array(
+			'enabled'             => true,
+			'auto_generate'       => true,
+			'schedule'            => 'weekly',
+			'email_reports'       => true,
+			'include_gdpr'        => true,
+			'include_security'    => true,
+			'include_performance' => true,
+			'include_threats'     => true,
+			'report_format'       => 'html',
+			'retention_days'      => 90,
 		),
 
 		// Developer API Settings.
-		'developer_api' => array(
+		'developer_api'                         => array(
 			'enabled'                  => true,
 			'rest_api_enabled'         => true,
 			'graphql_protection'       => true,
@@ -217,29 +240,29 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Signature Updater Settings.
-		'signatures' => array(
+		'signatures'                            => array(
 			'enabled'         => true,
 			'auto_update'     => true,
 			'update_interval' => 'daily',
 		),
 
 		// Security Hardening Settings.
-		'hardening' => array(
-			'disable_xmlrpc'       => true,
-			'hide_wp_version'      => true,
-			'disable_file_editor'  => true,
-			'security_headers'     => true,
-			'disable_rest_api'     => false,
-			'disable_rss'          => false,
-			'remove_rsd_link'      => true,
-			'remove_wlwmanifest'   => true,
-			'remove_shortlink'     => true,
-			'disable_embeds'       => false,
-			'disable_pingback'     => true,
+		'hardening'                             => array(
+			'disable_xmlrpc'      => true,
+			'hide_wp_version'     => true,
+			'disable_file_editor' => true,
+			'security_headers'    => true,
+			'disable_rest_api'    => false,
+			'disable_rss'         => false,
+			'remove_rsd_link'     => true,
+			'remove_wlwmanifest'  => true,
+			'remove_shortlink'    => true,
+			'disable_embeds'      => false,
+			'disable_pingback'    => true,
 		),
 
 		// Geo Blocking Settings.
-		'geo_blocking' => array(
+		'geo_blocking'                          => array(
 			'enabled'       => false,
 			'mode'          => 'blacklist',
 			'countries'     => array(),
@@ -248,7 +271,7 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Hide Login Settings.
-		'hide_login' => array(
+		'hide_login'                            => array(
 			'enabled'       => false,
 			'login_slug'    => 'secure-login',
 			'redirect_slug' => '404',
@@ -256,7 +279,7 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Live Traffic Settings.
-		'live_traffic' => array(
+		'live_traffic'                          => array(
 			'enabled'         => true,
 			'log_admin'       => false,
 			'log_ajax'        => false,
@@ -267,18 +290,18 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Captcha Settings.
-		'captcha' => array(
-			'enabled'              => true,
-			'enable_login'         => true,
-			'enable_registration'  => true,
-			'enable_reset'         => true,
-			'enable_comment'       => false,
-			'difficulty'           => 'easy',
-			'failed_threshold'     => 3,
+		'captcha'                               => array(
+			'enabled'             => true,
+			'enable_login'        => true,
+			'enable_registration' => true,
+			'enable_reset'        => true,
+			'enable_comment'      => false,
+			'difficulty'          => 'easy',
+			'failed_threshold'    => 3,
 		),
 
 		// Two-Factor Authentication Settings.
-		'two_factor' => array(
+		'two_factor'                            => array(
 			'enabled'       => true,
 			'force_admin'   => false,
 			'force_all'     => false,
@@ -287,49 +310,68 @@ class NexifyMy_Security_Settings {
 		),
 
 		// Integrations Settings.
-		'integrations' => array(
-			'enabled'             => true,
-			'slack_enabled'       => false,
-			'slack_webhook_url'   => '',
-			'slack_channel'       => '#security',
-			'slack_events'        => array( 'threat_detected', 'malware_found', 'login_failed' ),
-			'discord_enabled'     => false,
-			'discord_webhook_url' => '',
-			'discord_events'      => array( 'threat_detected', 'malware_found' ),
-			'teams_enabled'       => false,
-			'teams_webhook_url'   => '',
-			'teams_events'        => array( 'threat_detected', 'scan_completed' ),
-			'siem_enabled'        => false,
-			'siem_type'           => 'splunk',
-			'siem_endpoint'       => '',
-			'siem_token'          => '',
-			'siem_index'          => 'wordpress_security',
-			'siem_format'         => 'json',
-			'siem_ssl_verify'     => false,
-			'siem_events'         => array( 'all' ),
-			'jira_enabled'        => false,
-			'jira_url'            => '',
-			'jira_email'          => '',
-			'jira_api_token'      => '',
-			'jira_project_key'    => '',
-			'jira_issue_type'     => 'Bug',
-			'jira_priority'       => 'High',
-			'jira_events'         => array( 'malware_found', 'plugin_vulnerability' ),
-			'servicenow_enabled'  => false,
-			'servicenow_instance' => '',
-			'servicenow_username' => '',
-			'servicenow_password' => '',
-			'servicenow_table'    => 'incident',
-			'servicenow_impact'   => '2',
-			'servicenow_urgency'  => '2',
-			'custom_webhooks_enabled' => false,
-			'custom_webhooks'     => array(),
-			'cicd_enabled'        => false,
-			'cicd_webhook_url'    => '',
-			'cicd_fail_on_malware' => true,
+		'integrations'                          => array(
+			'enabled'                      => true,
+			'slack_enabled'                => false,
+			'slack_webhook_url'            => '',
+			'slack_channel'                => '#security',
+			'slack_events'                 => array( 'threat_detected', 'malware_found', 'login_failed' ),
+			'discord_enabled'              => false,
+			'discord_webhook_url'          => '',
+			'discord_events'               => array( 'threat_detected', 'malware_found' ),
+			'teams_enabled'                => false,
+			'teams_webhook_url'            => '',
+			'teams_events'                 => array( 'threat_detected', 'scan_completed' ),
+			'siem_enabled'                 => false,
+			'siem_type'                    => 'splunk',
+			'siem_endpoint'                => '',
+			'siem_token'                   => '',
+			'siem_index'                   => 'wordpress_security',
+			'siem_format'                  => 'json',
+			'siem_ssl_verify'              => false,
+			'siem_events'                  => array( 'all' ),
+			'jira_enabled'                 => false,
+			'jira_url'                     => '',
+			'jira_email'                   => '',
+			'jira_api_token'               => '',
+			'jira_project_key'             => '',
+			'jira_issue_type'              => 'Bug',
+			'jira_priority'                => 'High',
+			'jira_events'                  => array( 'malware_found', 'plugin_vulnerability' ),
+			'servicenow_enabled'           => false,
+			'servicenow_instance'          => '',
+			'servicenow_username'          => '',
+			'servicenow_password'          => '',
+			'servicenow_table'             => 'incident',
+			'servicenow_impact'            => '2',
+			'servicenow_urgency'           => '2',
+			'custom_webhooks_enabled'      => false,
+			'custom_webhooks'              => array(),
+			'cicd_enabled'                 => false,
+			'cicd_webhook_url'             => '',
+			'cicd_fail_on_malware'         => true,
 			'cicd_fail_on_vulnerabilities' => true,
-			'cicd_min_severity'   => 'high',
+			'cicd_min_severity'            => 'high',
 		),
+
+		// Deception defaults (stored as top-level keys for legacy compatibility).
+		'deception_enabled'                     => true,
+		'deception_honeytrap_paths'             => "/secret-backup.zip\n/old-admin/",
+		'deception_honeytrap_override_defaults' => false,
+		'deception_enum_trap'                   => true,
+		'deception_enum_block'                  => false,
+		'deception_block_all_enum'              => false,
+
+		// P2P defaults (stored as top-level keys for module compatibility).
+		'p2p_enabled'                           => false,
+		'p2p_broadcast_enabled'                 => true,
+		'p2p_trust_threshold'                   => 70,
+
+		// Sandbox defaults (stored as top-level keys for module compatibility).
+		'sandbox_enabled'                       => false,
+		'sandbox_timeout'                       => 5,
+		'sandbox_dynamic_analysis'              => false,
+		'sandbox_console_enabled'               => false,
 	);
 
 	/**
@@ -398,11 +440,15 @@ class NexifyMy_Security_Settings {
 	 * Register settings.
 	 */
 	public function register_settings() {
-		register_setting( 'nexifymy_security_settings', self::OPTION_KEY, array(
-			'type'              => 'array',
-			'sanitize_callback' => array( $this, 'sanitize_settings' ),
-			'default'           => self::$defaults,
-		) );
+		register_setting(
+			'nexifymy_security_settings',
+			self::OPTION_KEY,
+			array(
+				'type'              => 'array',
+				'sanitize_callback' => array( $this, 'sanitize_settings' ),
+				'default'           => self::$defaults,
+			)
+		);
 	}
 
 	/**
@@ -451,7 +497,7 @@ class NexifyMy_Security_Settings {
 	 * @return bool
 	 */
 	public static function set( $group, $key, $value ) {
-		$settings = self::get_all();
+		$settings                   = self::get_all();
 		$settings[ $group ][ $key ] = $value;
 		// Use autoload=false for security (like Sucuri/WP Defender)
 		return update_option( self::OPTION_KEY, $settings, false );
@@ -487,10 +533,10 @@ class NexifyMy_Security_Settings {
 	 */
 	public static function save( $settings ) {
 		// Sanitize before saving
-		$instance = new self();
+		$instance  = new self();
 		$sanitized = $instance->sanitize_settings( $settings );
-		$current = self::get_all();
-		$merged = self::array_merge_recursive_distinct( $current, $sanitized );
+		$current   = self::get_all();
+		$merged    = self::array_merge_recursive_distinct( $current, $sanitized );
 		return update_option( self::OPTION_KEY, $merged, false );
 	}
 
@@ -505,7 +551,7 @@ class NexifyMy_Security_Settings {
 
 		// General Settings.
 		if ( isset( $input['general'] ) ) {
-			$language = sanitize_text_field( $input['general']['language'] ?? 'site_default' );
+			$language          = sanitize_text_field( $input['general']['language'] ?? 'site_default' );
 			$legacy_locale_map = array(
 				'tr_TR' => 'tr',
 				'uk'    => 'uk_UA',
@@ -530,38 +576,99 @@ class NexifyMy_Security_Settings {
 
 		// Modules.
 		if ( isset( $input['modules'] ) ) {
-			$current_modules = self::get_all()['modules'] ?? self::$defaults['modules'];
+			$current_modules      = self::get_all()['modules'] ?? self::$defaults['modules'];
 			$sanitized['modules'] = array(
-				'waf_enabled'              => array_key_exists( 'waf_enabled', $input['modules'] ) ? ! empty( $input['modules']['waf_enabled'] ) : ! empty( $current_modules['waf_enabled'] ),
-				'scanner_enabled'          => array_key_exists( 'scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['scanner_enabled'] ) : ! empty( $current_modules['scanner_enabled'] ),
-				'rate_limiter_enabled'     => array_key_exists( 'rate_limiter_enabled', $input['modules'] ) ? ! empty( $input['modules']['rate_limiter_enabled'] ) : ! empty( $current_modules['rate_limiter_enabled'] ),
-				'background_scan_enabled'  => array_key_exists( 'background_scan_enabled', $input['modules'] ) ? ! empty( $input['modules']['background_scan_enabled'] ) : ! empty( $current_modules['background_scan_enabled'] ),
-				'signatures_enabled'       => array_key_exists( 'signatures_enabled', $input['modules'] ) ? ! empty( $input['modules']['signatures_enabled'] ) : ! empty( $current_modules['signatures_enabled'] ),
-				'hardening_enabled'        => array_key_exists( 'hardening_enabled', $input['modules'] ) ? ! empty( $input['modules']['hardening_enabled'] ) : ! empty( $current_modules['hardening_enabled'] ),
-				'geo_blocking_enabled'     => array_key_exists( 'geo_blocking_enabled', $input['modules'] ) ? ! empty( $input['modules']['geo_blocking_enabled'] ) : ! empty( $current_modules['geo_blocking_enabled'] ),
-				'hide_login_enabled'       => array_key_exists( 'hide_login_enabled', $input['modules'] ) ? ! empty( $input['modules']['hide_login_enabled'] ) : ! empty( $current_modules['hide_login_enabled'] ),
-				'live_traffic_enabled'     => array_key_exists( 'live_traffic_enabled', $input['modules'] ) ? ! empty( $input['modules']['live_traffic_enabled'] ) : ! empty( $current_modules['live_traffic_enabled'] ),
-				'activity_log_enabled'     => array_key_exists( 'activity_log_enabled', $input['modules'] ) ? ! empty( $input['modules']['activity_log_enabled'] ) : ! empty( $current_modules['activity_log_enabled'] ),
-				'captcha_enabled'          => array_key_exists( 'captcha_enabled', $input['modules'] ) ? ! empty( $input['modules']['captcha_enabled'] ) : ! empty( $current_modules['captcha_enabled'] ),
-				'two_factor_enabled'       => array_key_exists( 'two_factor_enabled', $input['modules'] ) ? ! empty( $input['modules']['two_factor_enabled'] ) : ! empty( $current_modules['two_factor_enabled'] ),
-				'password_enabled'         => array_key_exists( 'password_enabled', $input['modules'] ) ? ! empty( $input['modules']['password_enabled'] ) : ! empty( $current_modules['password_enabled'] ),
-				'self_protection_enabled'  => array_key_exists( 'self_protection_enabled', $input['modules'] ) ? ! empty( $input['modules']['self_protection_enabled'] ) : ! empty( $current_modules['self_protection_enabled'] ),
-				'integrations_enabled'     => array_key_exists( 'integrations_enabled', $input['modules'] ) ? ! empty( $input['modules']['integrations_enabled'] ) : ! empty( $current_modules['integrations_enabled'] ),
-				'quarantine_enabled'       => array_key_exists( 'quarantine_enabled', $input['modules'] ) ? ! empty( $input['modules']['quarantine_enabled'] ) : ! empty( $current_modules['quarantine_enabled'] ),
-				'database_enabled'         => array_key_exists( 'database_enabled', $input['modules'] ) ? ! empty( $input['modules']['database_enabled'] ) : ! empty( $current_modules['database_enabled'] ),
-				'cdn_enabled'              => array_key_exists( 'cdn_enabled', $input['modules'] ) ? ! empty( $input['modules']['cdn_enabled'] ) : ! empty( $current_modules['cdn_enabled'] ),
-				'performance_enabled'      => array_key_exists( 'performance_enabled', $input['modules'] ) ? ! empty( $input['modules']['performance_enabled'] ) : ! empty( $current_modules['performance_enabled'] ),
-				'core_repair_enabled'      => array_key_exists( 'core_repair_enabled', $input['modules'] ) ? ! empty( $input['modules']['core_repair_enabled'] ) : ! empty( $current_modules['core_repair_enabled'] ),
+				'waf_enabled'                   => array_key_exists( 'waf_enabled', $input['modules'] ) ? ! empty( $input['modules']['waf_enabled'] ) : ! empty( $current_modules['waf_enabled'] ),
+				'scanner_enabled'               => array_key_exists( 'scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['scanner_enabled'] ) : ! empty( $current_modules['scanner_enabled'] ),
+				'rate_limiter_enabled'          => array_key_exists( 'rate_limiter_enabled', $input['modules'] ) ? ! empty( $input['modules']['rate_limiter_enabled'] ) : ! empty( $current_modules['rate_limiter_enabled'] ),
+				'login_protection_enabled'      => array_key_exists( 'login_protection_enabled', $input['modules'] ) ? ! empty( $input['modules']['login_protection_enabled'] ) : ! empty( $current_modules['login_protection_enabled'] ?? false ),
+				'background_scan_enabled'       => array_key_exists( 'background_scan_enabled', $input['modules'] ) ? ! empty( $input['modules']['background_scan_enabled'] ) : ! empty( $current_modules['background_scan_enabled'] ),
+				'signatures_enabled'            => array_key_exists( 'signatures_enabled', $input['modules'] ) ? ! empty( $input['modules']['signatures_enabled'] ) : ! empty( $current_modules['signatures_enabled'] ),
+				'hardening_enabled'             => array_key_exists( 'hardening_enabled', $input['modules'] ) ? ! empty( $input['modules']['hardening_enabled'] ) : ! empty( $current_modules['hardening_enabled'] ),
+				'geo_blocking_enabled'          => array_key_exists( 'geo_blocking_enabled', $input['modules'] ) ? ! empty( $input['modules']['geo_blocking_enabled'] ) : ! empty( $current_modules['geo_blocking_enabled'] ),
+				'hide_login_enabled'            => array_key_exists( 'hide_login_enabled', $input['modules'] ) ? ! empty( $input['modules']['hide_login_enabled'] ) : ! empty( $current_modules['hide_login_enabled'] ),
+				'live_traffic_enabled'          => array_key_exists( 'live_traffic_enabled', $input['modules'] ) ? ! empty( $input['modules']['live_traffic_enabled'] ) : ! empty( $current_modules['live_traffic_enabled'] ),
+				'activity_log_enabled'          => array_key_exists( 'activity_log_enabled', $input['modules'] ) ? ! empty( $input['modules']['activity_log_enabled'] ) : ! empty( $current_modules['activity_log_enabled'] ),
+				'captcha_enabled'               => array_key_exists( 'captcha_enabled', $input['modules'] ) ? ! empty( $input['modules']['captcha_enabled'] ) : ! empty( $current_modules['captcha_enabled'] ),
+				'two_factor_enabled'            => array_key_exists( 'two_factor_enabled', $input['modules'] ) ? ! empty( $input['modules']['two_factor_enabled'] ) : ! empty( $current_modules['two_factor_enabled'] ),
+				'password_enabled'              => array_key_exists( 'password_enabled', $input['modules'] ) ? ! empty( $input['modules']['password_enabled'] ) : ! empty( $current_modules['password_enabled'] ),
+				'self_protection_enabled'       => array_key_exists( 'self_protection_enabled', $input['modules'] ) ? ! empty( $input['modules']['self_protection_enabled'] ) : ! empty( $current_modules['self_protection_enabled'] ),
+				'integrations_enabled'          => array_key_exists( 'integrations_enabled', $input['modules'] ) ? ! empty( $input['modules']['integrations_enabled'] ) : ! empty( $current_modules['integrations_enabled'] ),
+				'quarantine_enabled'            => array_key_exists( 'quarantine_enabled', $input['modules'] ) ? ! empty( $input['modules']['quarantine_enabled'] ) : ! empty( $current_modules['quarantine_enabled'] ),
+				'database_enabled'              => array_key_exists( 'database_enabled', $input['modules'] ) ? ! empty( $input['modules']['database_enabled'] ) : ! empty( $current_modules['database_enabled'] ),
+				'cdn_enabled'                   => array_key_exists( 'cdn_enabled', $input['modules'] ) ? ! empty( $input['modules']['cdn_enabled'] ) : ! empty( $current_modules['cdn_enabled'] ),
+				'performance_enabled'           => array_key_exists( 'performance_enabled', $input['modules'] ) ? ! empty( $input['modules']['performance_enabled'] ) : ! empty( $current_modules['performance_enabled'] ),
+				'core_repair_enabled'           => array_key_exists( 'core_repair_enabled', $input['modules'] ) ? ! empty( $input['modules']['core_repair_enabled'] ) : ! empty( $current_modules['core_repair_enabled'] ),
 				'vulnerability_scanner_enabled' => array_key_exists( 'vulnerability_scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['vulnerability_scanner_enabled'] ) : ! empty( $current_modules['vulnerability_scanner_enabled'] ),
-				'supply_chain_enabled'     => array_key_exists( 'supply_chain_enabled', $input['modules'] ) ? ! empty( $input['modules']['supply_chain_enabled'] ) : ! empty( $current_modules['supply_chain_enabled'] ),
-				'proactive_enabled'        => array_key_exists( 'proactive_enabled', $input['modules'] ) ? ! empty( $input['modules']['proactive_enabled'] ) : ! empty( $current_modules['proactive_enabled'] ),
-				'ai_detection_enabled'     => array_key_exists( 'ai_detection_enabled', $input['modules'] ) ? ! empty( $input['modules']['ai_detection_enabled'] ) : ! empty( $current_modules['ai_detection_enabled'] ),
-				'api_security_enabled'     => array_key_exists( 'api_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['api_security_enabled'] ) : ! empty( $current_modules['api_security_enabled'] ),
-				'graphql_security_enabled' => array_key_exists( 'graphql_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['graphql_security_enabled'] ) : ! empty( $current_modules['graphql_security_enabled'] ),
-				'passkey_enabled'          => array_key_exists( 'passkey_enabled', $input['modules'] ) ? ! empty( $input['modules']['passkey_enabled'] ) : ! empty( $current_modules['passkey_enabled'] ),
-				'compliance_enabled'       => array_key_exists( 'compliance_enabled', $input['modules'] ) ? ! empty( $input['modules']['compliance_enabled'] ) : ! empty( $current_modules['compliance_enabled'] ),
-				'developer_api_enabled'    => array_key_exists( 'developer_api_enabled', $input['modules'] ) ? ! empty( $input['modules']['developer_api_enabled'] ) : ! empty( $current_modules['developer_api_enabled'] ),
+				'supply_chain_enabled'          => array_key_exists( 'supply_chain_enabled', $input['modules'] ) ? ! empty( $input['modules']['supply_chain_enabled'] ) : ! empty( $current_modules['supply_chain_enabled'] ),
+				'proactive_enabled'             => array_key_exists( 'proactive_enabled', $input['modules'] ) ? ! empty( $input['modules']['proactive_enabled'] ) : ! empty( $current_modules['proactive_enabled'] ),
+				'ai_detection_enabled'          => array_key_exists( 'ai_detection_enabled', $input['modules'] ) ? ! empty( $input['modules']['ai_detection_enabled'] ) : ! empty( $current_modules['ai_detection_enabled'] ),
+				'api_security_enabled'          => array_key_exists( 'api_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['api_security_enabled'] ) : ! empty( $current_modules['api_security_enabled'] ),
+				'graphql_security_enabled'      => array_key_exists( 'graphql_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['graphql_security_enabled'] ) : ! empty( $current_modules['graphql_security_enabled'] ),
+				'passkey_enabled'               => array_key_exists( 'passkey_enabled', $input['modules'] ) ? ! empty( $input['modules']['passkey_enabled'] ) : ! empty( $current_modules['passkey_enabled'] ),
+				'compliance_enabled'            => array_key_exists( 'compliance_enabled', $input['modules'] ) ? ! empty( $input['modules']['compliance_enabled'] ) : ! empty( $current_modules['compliance_enabled'] ),
+				'developer_api_enabled'         => array_key_exists( 'developer_api_enabled', $input['modules'] ) ? ! empty( $input['modules']['developer_api_enabled'] ) : ! empty( $current_modules['developer_api_enabled'] ),
+				'deception_enabled'             => array_key_exists( 'deception_enabled', $input['modules'] ) ? ! empty( $input['modules']['deception_enabled'] ) : ! empty( $current_modules['deception_enabled'] ),
+				'p2p_enabled'                   => array_key_exists( 'p2p_enabled', $input['modules'] ) ? ! empty( $input['modules']['p2p_enabled'] ) : ! empty( $current_modules['p2p_enabled'] ),
+				'sandbox_enabled'               => array_key_exists( 'sandbox_enabled', $input['modules'] ) ? ! empty( $input['modules']['sandbox_enabled'] ) : ! empty( $current_modules['sandbox_enabled'] ),
+				'sandbox_console_enabled'       => array_key_exists( 'sandbox_console_enabled', $input['modules'] ) ? ! empty( $input['modules']['sandbox_console_enabled'] ) : ! empty( $current_modules['sandbox_console_enabled'] ),
+				'temp_permissions_enabled'      => array_key_exists( 'temp_permissions_enabled', $input['modules'] ) ? ! empty( $input['modules']['temp_permissions_enabled'] ) : ! empty( $current_modules['temp_permissions_enabled'] ?? true ),
 			);
+
+			// Keep top-level compatibility flags synchronized when module toggles are submitted.
+			if ( array_key_exists( 'deception_enabled', $input['modules'] ) ) {
+				$sanitized['deception_enabled'] = ! empty( $input['modules']['deception_enabled'] );
+			}
+			if ( array_key_exists( 'p2p_enabled', $input['modules'] ) ) {
+				$sanitized['p2p_enabled'] = ! empty( $input['modules']['p2p_enabled'] );
+			}
+			if ( array_key_exists( 'sandbox_enabled', $input['modules'] ) ) {
+				$sanitized['sandbox_enabled'] = ! empty( $input['modules']['sandbox_enabled'] );
+			}
+			if ( array_key_exists( 'sandbox_console_enabled', $input['modules'] ) ) {
+				$sanitized['sandbox_console_enabled'] = ! empty( $input['modules']['sandbox_console_enabled'] );
+			}
+		}
+
+		// Deception (top-level legacy/module compatibility).
+		if (
+			array_key_exists( 'deception_enabled', $input ) ||
+			array_key_exists( 'deception_honeytrap_paths', $input ) ||
+			array_key_exists( 'deception_honeytrap_override_defaults', $input ) ||
+			array_key_exists( 'deception_enum_trap', $input ) ||
+			array_key_exists( 'deception_enum_block', $input ) ||
+			array_key_exists( 'deception_block_all_enum', $input )
+		) {
+			$sanitized['deception_enabled']                     = ! empty( $input['deception_enabled'] );
+			$sanitized['deception_honeytrap_paths']             = sanitize_textarea_field( (string) ( $input['deception_honeytrap_paths'] ?? '' ) );
+			$sanitized['deception_honeytrap_override_defaults'] = ! empty( $input['deception_honeytrap_override_defaults'] );
+			$sanitized['deception_enum_trap']                   = ! empty( $input['deception_enum_trap'] );
+			$sanitized['deception_enum_block']                  = ! empty( $input['deception_enum_block'] );
+			$sanitized['deception_block_all_enum']              = ! empty( $input['deception_block_all_enum'] );
+		}
+
+		// P2P (top-level legacy/module compatibility).
+		if (
+			array_key_exists( 'p2p_enabled', $input ) ||
+			array_key_exists( 'p2p_broadcast_enabled', $input ) ||
+			array_key_exists( 'p2p_trust_threshold', $input )
+		) {
+			$sanitized['p2p_enabled']           = ! empty( $input['p2p_enabled'] );
+			$sanitized['p2p_broadcast_enabled'] = ! empty( $input['p2p_broadcast_enabled'] );
+			$sanitized['p2p_trust_threshold']   = max( 0, min( 100, absint( $input['p2p_trust_threshold'] ?? 70 ) ) );
+		}
+
+		// Sandbox (top-level legacy/module compatibility).
+		if (
+			array_key_exists( 'sandbox_enabled', $input ) ||
+			array_key_exists( 'sandbox_timeout', $input ) ||
+			array_key_exists( 'sandbox_dynamic_analysis', $input ) ||
+			array_key_exists( 'sandbox_console_enabled', $input )
+		) {
+			$sanitized['sandbox_enabled']          = ! empty( $input['sandbox_enabled'] );
+			$sanitized['sandbox_timeout']          = max( 1, min( 30, absint( $input['sandbox_timeout'] ?? 5 ) ) );
+			$sanitized['sandbox_dynamic_analysis'] = ! empty( $input['sandbox_dynamic_analysis'] );
+			$sanitized['sandbox_console_enabled']  = ! empty( $input['sandbox_console_enabled'] );
 		}
 
 		// WAF.
@@ -577,9 +684,9 @@ class NexifyMy_Security_Settings {
 
 		// Rate Limiter.
 		if ( isset( $input['rate_limiter'] ) ) {
-			$max_attempts_raw = absint( $input['rate_limiter']['max_attempts'] ?? 5 );
+			$max_attempts_raw     = absint( $input['rate_limiter']['max_attempts'] ?? 5 );
 			$lockout_duration_raw = absint( $input['rate_limiter']['lockout_duration'] ?? 900 );
-			$attempt_window_raw = absint( $input['rate_limiter']['attempt_window'] ?? 300 );
+			$attempt_window_raw   = absint( $input['rate_limiter']['attempt_window'] ?? 300 );
 
 			$sanitized['rate_limiter'] = array(
 				'max_attempts'     => max( 1, $max_attempts_raw ?: 5 ),
@@ -590,20 +697,20 @@ class NexifyMy_Security_Settings {
 
 		// Scanner.
 		if ( isset( $input['scanner'] ) ) {
-			$default_mode = sanitize_key( $input['scanner']['default_mode'] ?? 'standard' );
+			$default_mode         = sanitize_key( $input['scanner']['default_mode'] ?? 'standard' );
 			$max_file_size_kb_raw = absint( $input['scanner']['max_file_size_kb'] ?? 2048 );
-			$quarantine_mode = sanitize_key( $input['scanner']['quarantine_mode'] ?? 'manual' );
+			$quarantine_mode      = sanitize_key( $input['scanner']['quarantine_mode'] ?? 'manual' );
 			if ( ! in_array( $quarantine_mode, array( 'manual', 'auto' ), true ) ) {
 				$quarantine_mode = 'manual';
 			}
 			$auto_quarantine = ! empty( $input['scanner']['auto_quarantine_enabled'] ) || ! empty( $input['scanner']['auto_quarantine'] ) || $quarantine_mode === 'auto';
 
 			$sanitized['scanner'] = array(
-				'default_mode'     => $default_mode ?: 'standard',
-				'max_file_size_kb' => max( 100, $max_file_size_kb_raw ?: 2048 ),
-				'excluded_paths'   => $this->sanitize_list( $input['scanner']['excluded_paths'] ?? '' ),
-				'excluded_extensions' => $this->sanitize_list( $input['scanner']['excluded_extensions'] ?? '' ),
-				'quarantine_mode'  => $quarantine_mode,
+				'default_mode'            => $default_mode ?: 'standard',
+				'max_file_size_kb'        => max( 100, $max_file_size_kb_raw ?: 2048 ),
+				'excluded_paths'          => $this->sanitize_list( $input['scanner']['excluded_paths'] ?? '' ),
+				'excluded_extensions'     => $this->sanitize_list( $input['scanner']['excluded_extensions'] ?? '' ),
+				'quarantine_mode'         => $quarantine_mode,
 				'auto_quarantine_enabled' => (bool) $auto_quarantine,
 			);
 		}
@@ -704,17 +811,24 @@ class NexifyMy_Security_Settings {
 		// AI Detection.
 		if ( isset( $input['ai_detection'] ) ) {
 			$sanitized['ai_detection'] = array(
-				'enabled'                => ! empty( $input['ai_detection']['enabled'] ),
-				'learning_mode'          => ! empty( $input['ai_detection']['learning_mode'] ),
-				'learning_period_days'   => max( 1, absint( $input['ai_detection']['learning_period_days'] ?? 7 ) ),
-				'anomaly_threshold'      => max( 0, min( 100, absint( $input['ai_detection']['anomaly_threshold'] ?? 75 ) ) ),
-				'auto_block_threshold'   => max( 0, min( 100, absint( $input['ai_detection']['auto_block_threshold'] ?? 90 ) ) ),
-				'track_login_behavior'   => ! empty( $input['ai_detection']['track_login_behavior'] ),
-				'track_request_patterns' => ! empty( $input['ai_detection']['track_request_patterns'] ),
-				'track_user_agents'      => ! empty( $input['ai_detection']['track_user_agents'] ),
-				'track_geo_patterns'     => ! empty( $input['ai_detection']['track_geo_patterns'] ),
-				'notify_on_anomaly'      => ! empty( $input['ai_detection']['notify_on_anomaly'] ),
-				'session_risk_threshold' => max( 1, min( 100, absint( $input['ai_detection']['session_risk_threshold'] ?? 60 ) ) ),
+				'enabled'                    => ! empty( $input['ai_detection']['enabled'] ),
+				'learning_mode'              => ! empty( $input['ai_detection']['learning_mode'] ),
+				'learning_period_days'       => max( 1, absint( $input['ai_detection']['learning_period_days'] ?? 7 ) ),
+				'anomaly_threshold'          => max( 0, min( 100, absint( $input['ai_detection']['anomaly_threshold'] ?? 75 ) ) ),
+				'auto_block_threshold'       => max( 0, min( 100, absint( $input['ai_detection']['auto_block_threshold'] ?? 90 ) ) ),
+				'track_login_behavior'       => ! empty( $input['ai_detection']['track_login_behavior'] ),
+				'track_request_patterns'     => ! empty( $input['ai_detection']['track_request_patterns'] ),
+				'track_user_agents'          => ! empty( $input['ai_detection']['track_user_agents'] ),
+				'track_geo_patterns'         => ! empty( $input['ai_detection']['track_geo_patterns'] ),
+				'notify_on_anomaly'          => ! empty( $input['ai_detection']['notify_on_anomaly'] ),
+				'session_risk_threshold'     => max( 1, min( 100, absint( $input['ai_detection']['session_risk_threshold'] ?? 60 ) ) ),
+				'zero_trust_reauth_interval' => max( 60, min( 86400, absint( $input['ai_detection']['zero_trust_reauth_interval'] ?? 900 ) ) ),
+				'zero_trust_risk_spike_threshold' => max( 1, min( 100, absint( $input['ai_detection']['zero_trust_risk_spike_threshold'] ?? 20 ) ) ),
+				'insider_threat_enabled'     => ! empty( $input['ai_detection']['insider_threat_enabled'] ),
+				'insider_threat_threshold'   => max( 1, min( 100, absint( $input['ai_detection']['insider_threat_threshold'] ?? 60 ) ) ),
+				'data_exfiltration_enabled'  => ! empty( $input['ai_detection']['data_exfiltration_enabled'] ),
+				'exfiltration_threshold'     => max( 1, min( 100, absint( $input['ai_detection']['exfiltration_threshold'] ?? 60 ) ) ),
+				'exfiltration_baseline_days' => max( 1, min( 365, absint( $input['ai_detection']['exfiltration_baseline_days'] ?? 30 ) ) ),
 			);
 		}
 
@@ -782,17 +896,17 @@ class NexifyMy_Security_Settings {
 		// Hardening.
 		if ( isset( $input['hardening'] ) ) {
 			$sanitized['hardening'] = array(
-				'disable_xmlrpc'       => ! empty( $input['hardening']['disable_xmlrpc'] ),
-				'hide_wp_version'      => ! empty( $input['hardening']['hide_wp_version'] ),
-				'disable_file_editor'  => ! empty( $input['hardening']['disable_file_editor'] ),
-				'security_headers'     => ! empty( $input['hardening']['security_headers'] ),
-				'disable_rest_api'     => ! empty( $input['hardening']['disable_rest_api'] ),
-				'disable_rss'          => ! empty( $input['hardening']['disable_rss'] ),
-				'remove_rsd_link'      => ! empty( $input['hardening']['remove_rsd_link'] ),
-				'remove_wlwmanifest'   => ! empty( $input['hardening']['remove_wlwmanifest'] ),
-				'remove_shortlink'     => ! empty( $input['hardening']['remove_shortlink'] ),
-				'disable_embeds'       => ! empty( $input['hardening']['disable_embeds'] ),
-				'disable_pingback'     => ! empty( $input['hardening']['disable_pingback'] ),
+				'disable_xmlrpc'      => ! empty( $input['hardening']['disable_xmlrpc'] ),
+				'hide_wp_version'     => ! empty( $input['hardening']['hide_wp_version'] ),
+				'disable_file_editor' => ! empty( $input['hardening']['disable_file_editor'] ),
+				'security_headers'    => ! empty( $input['hardening']['security_headers'] ),
+				'disable_rest_api'    => ! empty( $input['hardening']['disable_rest_api'] ),
+				'disable_rss'         => ! empty( $input['hardening']['disable_rss'] ),
+				'remove_rsd_link'     => ! empty( $input['hardening']['remove_rsd_link'] ),
+				'remove_wlwmanifest'  => ! empty( $input['hardening']['remove_wlwmanifest'] ),
+				'remove_shortlink'    => ! empty( $input['hardening']['remove_shortlink'] ),
+				'disable_embeds'      => ! empty( $input['hardening']['disable_embeds'] ),
+				'disable_pingback'    => ! empty( $input['hardening']['disable_pingback'] ),
 			);
 		}
 
@@ -837,13 +951,13 @@ class NexifyMy_Security_Settings {
 			$difficulties = array( 'easy', 'medium', 'hard' );
 
 			$sanitized['captcha'] = array(
-				'enabled'              => ! empty( $input['captcha']['enabled'] ),
-				'enable_login'         => ! empty( $input['captcha']['enable_login'] ),
-				'enable_registration'  => ! empty( $input['captcha']['enable_registration'] ),
-				'enable_reset'         => ! empty( $input['captcha']['enable_reset'] ),
-				'enable_comment'       => ! empty( $input['captcha']['enable_comment'] ),
-				'difficulty'           => in_array( $input['captcha']['difficulty'] ?? 'easy', $difficulties, true ) ? $input['captcha']['difficulty'] : 'easy',
-				'failed_threshold'     => max( 1, absint( $input['captcha']['failed_threshold'] ?? 3 ) ),
+				'enabled'             => ! empty( $input['captcha']['enabled'] ),
+				'enable_login'        => ! empty( $input['captcha']['enable_login'] ),
+				'enable_registration' => ! empty( $input['captcha']['enable_registration'] ),
+				'enable_reset'        => ! empty( $input['captcha']['enable_reset'] ),
+				'enable_comment'      => ! empty( $input['captcha']['enable_comment'] ),
+				'difficulty'          => in_array( $input['captcha']['difficulty'] ?? 'easy', $difficulties, true ) ? $input['captcha']['difficulty'] : 'easy',
+				'failed_threshold'    => max( 1, absint( $input['captcha']['failed_threshold'] ?? 3 ) ),
 			);
 		}
 
@@ -866,63 +980,63 @@ class NexifyMy_Security_Settings {
 			$available_events = array( 'all', 'threat_detected', 'login_failed', 'user_locked', 'malware_found', 'scan_completed', 'plugin_vulnerability', 'settings_changed', 'core_file_modified' );
 
 			$sanitized['integrations'] = array(
-				'enabled' => ! empty( $input['integrations']['enabled'] ),
+				'enabled'                      => ! empty( $input['integrations']['enabled'] ),
 
 				// Slack.
-				'slack_enabled'       => ! empty( $input['integrations']['slack_enabled'] ),
-				'slack_webhook_url'   => esc_url_raw( $input['integrations']['slack_webhook_url'] ?? '' ),
-				'slack_channel'       => sanitize_text_field( $input['integrations']['slack_channel'] ?? '#security' ),
-				'slack_events'        => array_values( array_intersect( (array) ( $input['integrations']['slack_events'] ?? array() ), $available_events ) ),
+				'slack_enabled'                => ! empty( $input['integrations']['slack_enabled'] ),
+				'slack_webhook_url'            => esc_url_raw( $input['integrations']['slack_webhook_url'] ?? '' ),
+				'slack_channel'                => sanitize_text_field( $input['integrations']['slack_channel'] ?? '#security' ),
+				'slack_events'                 => array_values( array_intersect( (array) ( $input['integrations']['slack_events'] ?? array() ), $available_events ) ),
 
 				// Discord.
-				'discord_enabled'     => ! empty( $input['integrations']['discord_enabled'] ),
-				'discord_webhook_url' => esc_url_raw( $input['integrations']['discord_webhook_url'] ?? '' ),
-				'discord_events'      => array_values( array_intersect( (array) ( $input['integrations']['discord_events'] ?? array() ), $available_events ) ),
+				'discord_enabled'              => ! empty( $input['integrations']['discord_enabled'] ),
+				'discord_webhook_url'          => esc_url_raw( $input['integrations']['discord_webhook_url'] ?? '' ),
+				'discord_events'               => array_values( array_intersect( (array) ( $input['integrations']['discord_events'] ?? array() ), $available_events ) ),
 
 				// Teams.
-				'teams_enabled'       => ! empty( $input['integrations']['teams_enabled'] ),
-				'teams_webhook_url'   => esc_url_raw( $input['integrations']['teams_webhook_url'] ?? '' ),
-				'teams_events'        => array_values( array_intersect( (array) ( $input['integrations']['teams_events'] ?? array() ), $available_events ) ),
+				'teams_enabled'                => ! empty( $input['integrations']['teams_enabled'] ),
+				'teams_webhook_url'            => esc_url_raw( $input['integrations']['teams_webhook_url'] ?? '' ),
+				'teams_events'                 => array_values( array_intersect( (array) ( $input['integrations']['teams_events'] ?? array() ), $available_events ) ),
 
 				// SIEM.
-				'siem_enabled'  => ! empty( $input['integrations']['siem_enabled'] ),
-				'siem_type'     => in_array( $input['integrations']['siem_type'] ?? 'splunk', $siem_types, true ) ? $input['integrations']['siem_type'] : 'splunk',
-				'siem_endpoint' => esc_url_raw( $input['integrations']['siem_endpoint'] ?? '' ),
-				'siem_token'    => sanitize_text_field( $input['integrations']['siem_token'] ?? '' ),
-				'siem_index'    => sanitize_text_field( $input['integrations']['siem_index'] ?? 'wordpress_security' ),
-				'siem_format'   => in_array( $input['integrations']['siem_format'] ?? 'json', $siem_formats, true ) ? $input['integrations']['siem_format'] : 'json',
-				'siem_ssl_verify' => ! empty( $input['integrations']['siem_ssl_verify'] ),
-				'siem_events'   => array_values( array_intersect( (array) ( $input['integrations']['siem_events'] ?? array() ), $available_events ) ),
+				'siem_enabled'                 => ! empty( $input['integrations']['siem_enabled'] ),
+				'siem_type'                    => in_array( $input['integrations']['siem_type'] ?? 'splunk', $siem_types, true ) ? $input['integrations']['siem_type'] : 'splunk',
+				'siem_endpoint'                => esc_url_raw( $input['integrations']['siem_endpoint'] ?? '' ),
+				'siem_token'                   => sanitize_text_field( $input['integrations']['siem_token'] ?? '' ),
+				'siem_index'                   => sanitize_text_field( $input['integrations']['siem_index'] ?? 'wordpress_security' ),
+				'siem_format'                  => in_array( $input['integrations']['siem_format'] ?? 'json', $siem_formats, true ) ? $input['integrations']['siem_format'] : 'json',
+				'siem_ssl_verify'              => ! empty( $input['integrations']['siem_ssl_verify'] ),
+				'siem_events'                  => array_values( array_intersect( (array) ( $input['integrations']['siem_events'] ?? array() ), $available_events ) ),
 
 				// Jira.
-				'jira_enabled'     => ! empty( $input['integrations']['jira_enabled'] ),
-				'jira_url'         => esc_url_raw( $input['integrations']['jira_url'] ?? '' ),
-				'jira_email'       => sanitize_email( $input['integrations']['jira_email'] ?? '' ),
-				'jira_api_token'   => sanitize_text_field( $input['integrations']['jira_api_token'] ?? '' ),
-				'jira_project_key' => sanitize_text_field( $input['integrations']['jira_project_key'] ?? '' ),
-				'jira_issue_type'  => sanitize_text_field( $input['integrations']['jira_issue_type'] ?? 'Bug' ),
-				'jira_priority'    => sanitize_text_field( $input['integrations']['jira_priority'] ?? 'High' ),
-				'jira_events'      => array_values( array_intersect( (array) ( $input['integrations']['jira_events'] ?? array() ), $available_events ) ),
+				'jira_enabled'                 => ! empty( $input['integrations']['jira_enabled'] ),
+				'jira_url'                     => esc_url_raw( $input['integrations']['jira_url'] ?? '' ),
+				'jira_email'                   => sanitize_email( $input['integrations']['jira_email'] ?? '' ),
+				'jira_api_token'               => sanitize_text_field( $input['integrations']['jira_api_token'] ?? '' ),
+				'jira_project_key'             => sanitize_text_field( $input['integrations']['jira_project_key'] ?? '' ),
+				'jira_issue_type'              => sanitize_text_field( $input['integrations']['jira_issue_type'] ?? 'Bug' ),
+				'jira_priority'                => sanitize_text_field( $input['integrations']['jira_priority'] ?? 'High' ),
+				'jira_events'                  => array_values( array_intersect( (array) ( $input['integrations']['jira_events'] ?? array() ), $available_events ) ),
 
 				// ServiceNow.
-				'servicenow_enabled'  => ! empty( $input['integrations']['servicenow_enabled'] ),
-				'servicenow_instance' => sanitize_text_field( $input['integrations']['servicenow_instance'] ?? '' ),
-				'servicenow_username' => sanitize_text_field( $input['integrations']['servicenow_username'] ?? '' ),
-				'servicenow_password' => sanitize_text_field( $input['integrations']['servicenow_password'] ?? '' ),
-				'servicenow_table'    => sanitize_text_field( $input['integrations']['servicenow_table'] ?? 'incident' ),
-				'servicenow_impact'   => in_array( (string) ( $input['integrations']['servicenow_impact'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_impact'] : '2',
-				'servicenow_urgency'  => in_array( (string) ( $input['integrations']['servicenow_urgency'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_urgency'] : '2',
+				'servicenow_enabled'           => ! empty( $input['integrations']['servicenow_enabled'] ),
+				'servicenow_instance'          => sanitize_text_field( $input['integrations']['servicenow_instance'] ?? '' ),
+				'servicenow_username'          => sanitize_text_field( $input['integrations']['servicenow_username'] ?? '' ),
+				'servicenow_password'          => sanitize_text_field( $input['integrations']['servicenow_password'] ?? '' ),
+				'servicenow_table'             => sanitize_text_field( $input['integrations']['servicenow_table'] ?? 'incident' ),
+				'servicenow_impact'            => in_array( (string) ( $input['integrations']['servicenow_impact'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_impact'] : '2',
+				'servicenow_urgency'           => in_array( (string) ( $input['integrations']['servicenow_urgency'] ?? '2' ), array( '1', '2', '3' ), true ) ? (string) $input['integrations']['servicenow_urgency'] : '2',
 
 				// Custom webhooks.
-				'custom_webhooks_enabled' => ! empty( $input['integrations']['custom_webhooks_enabled'] ),
-				'custom_webhooks' => $this->sanitize_custom_webhooks( $input['integrations']['custom_webhooks'] ?? array(), $available_events ),
+				'custom_webhooks_enabled'      => ! empty( $input['integrations']['custom_webhooks_enabled'] ),
+				'custom_webhooks'              => $this->sanitize_custom_webhooks( $input['integrations']['custom_webhooks'] ?? array(), $available_events ),
 
 				// CI/CD integration.
-				'cicd_enabled' => ! empty( $input['integrations']['cicd_enabled'] ),
-				'cicd_webhook_url' => esc_url_raw( $input['integrations']['cicd_webhook_url'] ?? '' ),
-				'cicd_fail_on_malware' => ! empty( $input['integrations']['cicd_fail_on_malware'] ),
+				'cicd_enabled'                 => ! empty( $input['integrations']['cicd_enabled'] ),
+				'cicd_webhook_url'             => esc_url_raw( $input['integrations']['cicd_webhook_url'] ?? '' ),
+				'cicd_fail_on_malware'         => ! empty( $input['integrations']['cicd_fail_on_malware'] ),
 				'cicd_fail_on_vulnerabilities' => ! empty( $input['integrations']['cicd_fail_on_vulnerabilities'] ),
-				'cicd_min_severity' => in_array( $input['integrations']['cicd_min_severity'] ?? 'high', $severity_levels, true ) ? $input['integrations']['cicd_min_severity'] : 'high',
+				'cicd_min_severity'            => in_array( $input['integrations']['cicd_min_severity'] ?? 'high', $severity_levels, true ) ? $input['integrations']['cicd_min_severity'] : 'high',
 			);
 		}
 
@@ -961,9 +1075,12 @@ class NexifyMy_Security_Settings {
 	private function sanitize_ip_list( $input ) {
 		$items = $this->sanitize_list( $input );
 
-		return array_filter( $items, function( $ip ) {
-			return filter_var( $ip, FILTER_VALIDATE_IP );
-		} );
+		return array_filter(
+			$items,
+			function ( $ip ) {
+				return filter_var( $ip, FILTER_VALIDATE_IP );
+			}
+		);
 	}
 
 	/**
@@ -978,7 +1095,7 @@ class NexifyMy_Security_Settings {
 			return array();
 		}
 
-		$sanitized = array();
+		$sanitized       = array();
 		$allowed_methods = array( 'POST', 'PUT', 'PATCH' );
 
 		foreach ( $input as $webhook ) {
@@ -987,7 +1104,7 @@ class NexifyMy_Security_Settings {
 			}
 
 			$name = sanitize_text_field( $webhook['name'] ?? '' );
-			$url = esc_url_raw( $webhook['url'] ?? '' );
+			$url  = esc_url_raw( $webhook['url'] ?? '' );
 			if ( empty( $url ) ) {
 				continue;
 			}
@@ -1077,7 +1194,11 @@ class NexifyMy_Security_Settings {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$settings = isset( $_POST['settings'] ) ? $_POST['settings'] : array();
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via sanitize_settings() method below
+		$settings = isset( $_POST['settings'] ) ? wp_unslash( $_POST['settings'] ) : array();
+		if ( ! is_array( $settings ) ) {
+			$settings = array();
+		}
 		$sanitized = $this->sanitize_settings( $settings );
 
 		self::update( $sanitized );
@@ -1095,10 +1216,12 @@ class NexifyMy_Security_Settings {
 			);
 		}
 
-		wp_send_json_success( array(
-			'message'  => 'Settings saved successfully.',
-			'settings' => $sanitized,
-		) );
+		wp_send_json_success(
+			array(
+				'message'  => 'Settings saved successfully.',
+				'settings' => $sanitized,
+			)
+		);
 	}
 
 	/**
@@ -1136,10 +1259,12 @@ class NexifyMy_Security_Settings {
 			);
 		}
 
-		wp_send_json_success( array(
-			'message'  => 'Settings reset to defaults.',
-			'settings' => self::$defaults,
-		) );
+		wp_send_json_success(
+			array(
+				'message'  => 'Settings reset to defaults.',
+				'settings' => self::$defaults,
+			)
+		);
 	}
 
 	/**
@@ -1186,6 +1311,17 @@ class NexifyMy_Security_Settings {
 				$bg_scanner->schedule_scan( $settings['background_scan']['schedule'] );
 			}
 		}
+
+		// Flush runtime module settings caches after settings changes.
+		if ( class_exists( 'NexifyMy_Security_Deception' ) && method_exists( 'NexifyMy_Security_Deception', 'flush_settings_cache' ) ) {
+			NexifyMy_Security_Deception::flush_settings_cache();
+		}
+		if ( class_exists( 'NexifyMy_Security_P2P' ) && method_exists( 'NexifyMy_Security_P2P', 'flush_settings_cache' ) ) {
+			NexifyMy_Security_P2P::flush_settings_cache();
+		}
+		if ( class_exists( 'NexifyMy_Security_Sandbox' ) && method_exists( 'NexifyMy_Security_Sandbox', 'flush_settings_cache' ) ) {
+			NexifyMy_Security_Sandbox::flush_settings_cache();
+		}
 	}
 
 	/**
@@ -1196,11 +1332,10 @@ class NexifyMy_Security_Settings {
 		// Migrate integrations from old option key.
 		$old_integrations = get_option( 'nexifymy_integrations', null );
 		if ( null !== $old_integrations && is_array( $old_integrations ) ) {
-			$all_settings = self::get_all();
+			$all_settings                 = self::get_all();
 			$all_settings['integrations'] = wp_parse_args( $old_integrations, self::$defaults['integrations'] );
 			update_option( self::OPTION_KEY, $all_settings );
 			delete_option( 'nexifymy_integrations' );
 		}
 	}
 }
-

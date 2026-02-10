@@ -95,6 +95,7 @@ if ( ! $nexifymy_skip_early_waf ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
 		$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
 		$GLOBALS['nexifymy_rate_limiter']->init();
+		$GLOBALS['nexifymy_rate_limiter_initialized'] = true;
 	}
 }
 
@@ -115,6 +116,7 @@ function nexifymy_security_activate() {
 				'waf_enabled'             => 1,
 				'scanner_enabled'         => 1,
 				'rate_limiter_enabled'    => 1,
+				'login_protection_enabled'=> 0,
 				'background_scan_enabled' => 1,
 				'signatures_enabled'      => 1,
 				'quarantine_enabled'      => 1,
@@ -141,7 +143,25 @@ function nexifymy_security_activate() {
 				'compliance_enabled'      => 1,
 				'developer_api_enabled'   => 1,
 				'integrations_enabled'    => 1,
+				'deception_enabled'       => true,
+				'p2p_enabled'             => false,
+				'sandbox_enabled'         => false,
+				'sandbox_console_enabled' => false,
+				'temp_permissions_enabled' => 1,
 			),
+			'deception_enabled'       => true,
+			'deception_honeytrap_paths' => "/secret-backup.zip\n/old-admin/",
+			'deception_honeytrap_override_defaults' => false,
+			'deception_enum_trap'     => true,
+			'deception_enum_block'    => false,
+			'deception_block_all_enum'=> false,
+			'p2p_enabled'             => false,
+			'p2p_broadcast_enabled'   => true,
+			'p2p_trust_threshold'     => 70,
+			'sandbox_enabled'         => false,
+			'sandbox_timeout'         => 5,
+			'sandbox_dynamic_analysis'=> false,
+			'sandbox_console_enabled' => false,
 			'firewall' => array(
 				'enabled'        => true,
 				'block_bad_bots' => true,
@@ -149,9 +169,9 @@ function nexifymy_security_activate() {
 			),
 			'rate_limiter' => array(
 				'enabled'            => true,
-				'max_login_attempts' => 5,
-				'login_window'       => 15,
-				'login_lockout'      => 1800,
+				'max_attempts'       => 5,
+				'attempt_window'     => 300,
+				'lockout_duration'   => 1800,
 			),
 			'notifications' => array(
 				'enabled' => true,
@@ -177,6 +197,11 @@ function nexifymy_security_activate() {
 	$activity_log = new NexifyMy_Security_Activity_Log();
 	$activity_log->maybe_create_table();
 
+	// Create Temp Permissions table.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/time-bound-permissions.php';
+	$temp_perms = new NexifyMy_Security_Temp_Permissions();
+	$temp_perms->create_table();
+
 	// Schedule background scans (default: daily).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
@@ -188,11 +213,41 @@ function nexifymy_security_activate() {
  * Plugin deactivation.
  */
 function nexifymy_security_deactivate() {
-	// Clear scheduled cron events if any exist.
-	wp_clear_scheduled_hook( 'nexifymy_scheduled_scan' );
-	wp_clear_scheduled_hook( 'nexifymy_daily_summary' );
-	wp_clear_scheduled_hook( 'nexifymy_log_cleanup' );
-	wp_clear_scheduled_hook( 'nexifymy_scheduled_backup' );
+	// Clear scheduled cron events across all modules.
+	$cron_hooks = array(
+		'nexifymy_scheduled_scan',
+		'nexifymy_daily_summary',
+		'nexifymy_log_cleanup',
+		'nexifymy_scheduled_backup',
+		'nexifymy_p2p_sync',
+		'nexifymy_vulnerability_scan',
+		'nexifymy_activity_log_cleanup',
+		'nexifymy_supply_chain_scan',
+		'nexifymy_update_signatures',
+		'nexifymy_integrity_check',
+		'nexifymy_security_benchmark',
+		'nexifymy_auto_patch',
+		'nexifymy_traffic_cleanup',
+		'nexifymy_generate_report',
+		'nexifymy_cleanup_reports',
+		'nexifymy_learn_patterns',
+		'nexifymy_revoke_expired_permissions',
+	);
+	foreach ( $cron_hooks as $cron_hook ) {
+		wp_clear_scheduled_hook( $cron_hook );
+	}
+
+	// Allow modules to run their own deactivation cleanup.
+	do_action( 'nexifymy_security_deactivate' );
+
+	// Clean up sandbox transients.
+	global $wpdb;
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$wpdb->query(
+		"DELETE FROM {$wpdb->options}
+		 WHERE option_name LIKE '_transient_nexifymy_sbx_%'
+		    OR option_name LIKE '_transient_timeout_nexifymy_sbx_%'"
+	);
 }
 
 register_activation_hook( __FILE__, 'nexifymy_security_activate' );
@@ -213,6 +268,10 @@ function nexifymy_security_add_cron_schedules( $schedules ) {
 	$schedules['weekly'] = array(
 		'interval' => WEEK_IN_SECONDS,
 		'display'  => __( 'Once Weekly', 'nexifymy-security' ),
+	);
+	$schedules['every_five_minutes'] = array(
+		'interval' => 300,
+		'display'  => __( 'Every 5 Minutes', 'nexifymy-security' ),
 	);
 	return $schedules;
 }
@@ -284,15 +343,20 @@ function nexifymy_security_plugin_locale( $locale, $domain ) {
  * @return bool
  */
 function nexifymy_security_is_module_enabled( $settings, $module_option, $default = true ) {
-	if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
+	if ( ! is_array( $settings ) ) {
 		return (bool) $default;
 	}
 
-	if ( ! array_key_exists( $module_option, $settings['modules'] ) ) {
-		return (bool) $default;
+	if ( isset( $settings['modules'] ) && is_array( $settings['modules'] ) && array_key_exists( $module_option, $settings['modules'] ) ) {
+		return (bool) $settings['modules'][ $module_option ];
 	}
 
-	return (bool) $settings['modules'][ $module_option ];
+	// Backward compatibility with legacy top-level keys.
+	if ( array_key_exists( $module_option, $settings ) ) {
+		return (bool) $settings[ $module_option ];
+	}
+
+	return (bool) $default;
 }
 
 /*
@@ -308,6 +372,9 @@ add_action( 'plugins_loaded', 'nexifymy_security_init' );
  * Initialize the plugin (admin, scanner, logger, background tasks).
  */
 function nexifymy_security_init() {
+	// Load settings class early so all modules can read centralized settings reliably.
+	require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-settings.php';
+
 	$settings = get_option( 'nexifymy_security_settings', array() );
 
 	// Load Logger.
@@ -327,6 +394,16 @@ function nexifymy_security_init() {
 		require_once NEXIFYMY_SECURITY_PATH . 'modules/signature-updater.php';
 		$GLOBALS['nexifymy_signatures'] = new NexifyMy_Security_Signature_Updater();
 		$GLOBALS['nexifymy_signatures']->init();
+	}
+
+	// Ensure rate limiter is initialized when early bootstrap is skipped (for example on wp-login.php).
+	if ( nexifymy_security_is_module_enabled( $settings, 'rate_limiter_enabled', true ) && empty( $GLOBALS['nexifymy_rate_limiter_initialized'] ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/rate-limiter.php';
+		if ( ! isset( $GLOBALS['nexifymy_rate_limiter'] ) || ! ( $GLOBALS['nexifymy_rate_limiter'] instanceof NexifyMy_Security_RateLimiter ) ) {
+			$GLOBALS['nexifymy_rate_limiter'] = new NexifyMy_Security_RateLimiter();
+		}
+		$GLOBALS['nexifymy_rate_limiter']->init();
+		$GLOBALS['nexifymy_rate_limiter_initialized'] = true;
 	}
 
 	// Load Scanner (uses signatures from above).
@@ -495,6 +572,32 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_graphql_security']->init();
 	}
 
+	// Load Deception Technology (Honeypots 2.0).
+	if ( nexifymy_security_is_module_enabled( $settings, 'deception_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/deception.php';
+		$GLOBALS['nexifymy_deception'] = new NexifyMy_Security_Deception();
+		$GLOBALS['nexifymy_deception']->init();
+	}
+
+	// Load P2P Threat Intelligence.
+	if ( nexifymy_security_is_module_enabled( $settings, 'p2p_enabled', false ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/p2p-intelligence.php';
+		NexifyMy_Security_P2P::init();
+	}
+
+	// Load Shadow Runtime Sandbox.
+	if ( nexifymy_security_is_module_enabled( $settings, 'sandbox_enabled', false ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/sandbox.php';
+		NexifyMy_Security_Sandbox::init();
+	}
+
+	// Load Time-Bound Permissions.
+	if ( nexifymy_security_is_module_enabled( $settings, 'temp_permissions_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/time-bound-permissions.php';
+		$GLOBALS['nexifymy_temp_permissions'] = new NexifyMy_Security_Temp_Permissions();
+		$GLOBALS['nexifymy_temp_permissions']->init();
+	}
+
 	// Load WP-CLI Commands (DevOps integration).
 	if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-cli.php';
@@ -514,10 +617,12 @@ function nexifymy_security_init() {
 	if ( is_admin() ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-admin.php';
 		$GLOBALS['nexifymy_admin'] = new NexifyMy_Security_Admin();
+		
+		// Register AJAX hooks for admin functionality
+		$GLOBALS['nexifymy_admin']->register_ajax_hooks();
 		$GLOBALS['nexifymy_admin']->init();
 
-		// Load Settings.
-		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-settings.php';
+		// Load Settings hooks/AJAX handlers in admin context.
 		$GLOBALS['nexifymy_settings'] = new NexifyMy_Security_Settings();
 		$GLOBALS['nexifymy_settings']->init();
 	}
