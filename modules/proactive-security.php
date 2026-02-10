@@ -246,7 +246,13 @@ class NexifyMy_Security_Proactive {
 			return false;
 		}
 		$settings = NexifyMy_Security_Settings::get_all();
-		return ! empty( $settings['2fa']['enabled'] );
+		if ( function_exists( 'nexifymy_security_is_module_enabled' ) ) {
+			return nexifymy_security_is_module_enabled( $settings, 'two_factor_enabled', true );
+		}
+		if ( isset( $settings['modules']['two_factor_enabled'] ) ) {
+			return ! empty( $settings['modules']['two_factor_enabled'] );
+		}
+		return ! empty( $settings['two_factor']['enabled'] ) || ! empty( $settings['2fa']['enabled'] );
 	}
 
 	private function check_no_admin_username() {
