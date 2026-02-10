@@ -19,22 +19,22 @@ class NexifyMy_Security_Alerts {
 	 * Alert types.
 	 */
 	const ALERT_TYPES = array(
-		'threat_detected'   => 'Threat Detected',
-		'ip_lockout'        => 'IP Locked Out',
-		'waf_block'         => 'WAF Attack Blocked',
-		'file_quarantined'  => 'File Quarantined',
-		'scan_completed'    => 'Scan Completed (with threats)',
+		'threat_detected'  => 'Threat Detected',
+		'ip_lockout'       => 'IP Locked Out',
+		'waf_block'        => 'WAF Attack Blocked',
+		'file_quarantined' => 'File Quarantined',
+		'scan_completed'   => 'Scan Completed (with threats)',
 	);
 
 	/**
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'           => false,
-		'recipient_email'   => '',
-		'alert_types'       => array( 'threat_detected', 'ip_lockout' ),
-		'throttle_minutes'  => 60, // Don't send duplicate alerts within this window.
-		'daily_summary'     => false,
+		'enabled'            => false,
+		'recipient_email'    => '',
+		'alert_types'        => array( 'threat_detected', 'ip_lockout' ),
+		'throttle_minutes'   => 60, // Don't send duplicate alerts within this window.
+		'daily_summary'      => false,
 		'daily_summary_time' => '08:00',
 	);
 
@@ -122,7 +122,7 @@ class NexifyMy_Security_Alerts {
 	 * @return bool
 	 */
 	private function is_throttled( $type, $data ) {
-		$settings = self::get_settings();
+		$settings         = self::get_settings();
 		$throttle_minutes = absint( $settings['throttle_minutes'] );
 
 		if ( $throttle_minutes <= 0 ) {
@@ -130,7 +130,7 @@ class NexifyMy_Security_Alerts {
 		}
 
 		// Create a unique key for this alert.
-		$key = 'nexifymy_alert_' . md5( $type . wp_json_encode( $data ) );
+		$key       = 'nexifymy_alert_' . md5( $type . wp_json_encode( $data ) );
 		$last_sent = get_transient( $key );
 
 		return (bool) $last_sent;
@@ -143,7 +143,7 @@ class NexifyMy_Security_Alerts {
 	 * @param array  $data Alert data.
 	 */
 	private function record_alert( $type, $data ) {
-		$settings = self::get_settings();
+		$settings         = self::get_settings();
 		$throttle_minutes = absint( $settings['throttle_minutes'] );
 
 		if ( $throttle_minutes <= 0 ) {
@@ -163,17 +163,17 @@ class NexifyMy_Security_Alerts {
 	 * @param array  $data    Additional data.
 	 */
 	private function send_alert_email( $to, $type, $message, $data = array() ) {
-		$site_name = get_bloginfo( 'name' );
-		$site_url = home_url();
+		$site_name  = get_bloginfo( 'name' );
+		$site_url   = home_url();
 		$type_label = isset( self::ALERT_TYPES[ $type ] ) ? self::ALERT_TYPES[ $type ] : $type;
 
 		$subject = sprintf( '[%s] Security Alert: %s', $site_name, $type_label );
 
-		$body = "Security Alert from NexifyMy Security\n";
+		$body  = "Security Alert from NexifyMy Security\n";
 		$body .= "=====================================\n\n";
 		$body .= "Site: {$site_name}\n";
 		$body .= "URL: {$site_url}\n";
-		$body .= "Time: " . current_time( 'mysql' ) . "\n\n";
+		$body .= 'Time: ' . current_time( 'mysql' ) . "\n\n";
 		$body .= "Alert Type: {$type_label}\n\n";
 		$body .= "Details:\n";
 		$body .= "{$message}\n\n";
@@ -190,13 +190,13 @@ class NexifyMy_Security_Alerts {
 		}
 
 		if ( isset( $data['ip_address'] ) || isset( $_SERVER['REMOTE_ADDR'] ) ) {
-			$ip = isset( $data['ip_address'] ) ? $data['ip_address'] : $_SERVER['REMOTE_ADDR'];
+			$ip    = isset( $data['ip_address'] ) ? $data['ip_address'] : $_SERVER['REMOTE_ADDR'];
 			$body .= "IP Address: {$ip}\n";
 		}
 
 		$body .= "\n---\n";
 		$body .= "This alert was sent by NexifyMy Security plugin.\n";
-		$body .= "Manage your alert settings: " . admin_url( 'admin.php?page=nexifymy-security-settings' ) . "\n";
+		$body .= 'Manage your alert settings: ' . admin_url( 'admin.php?page=nexifymy-security-settings' ) . "\n";
 
 		$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
 
@@ -218,8 +218,8 @@ class NexifyMy_Security_Alerts {
 		if ( ! wp_next_scheduled( 'nexifymy_daily_summary' ) ) {
 			// Schedule for the configured time.
 			$time_parts = explode( ':', $settings['daily_summary_time'] );
-			$hour = isset( $time_parts[0] ) ? absint( $time_parts[0] ) : 8;
-			$minute = isset( $time_parts[1] ) ? absint( $time_parts[1] ) : 0;
+			$hour       = isset( $time_parts[0] ) ? absint( $time_parts[0] ) : 8;
+			$minute     = isset( $time_parts[1] ) ? absint( $time_parts[1] ) : 0;
 
 			$next_run = strtotime( "today {$hour}:{$minute}" );
 			if ( $next_run < time() ) {
@@ -251,13 +251,13 @@ class NexifyMy_Security_Alerts {
 		$stats = $this->get_24h_stats();
 
 		$site_name = get_bloginfo( 'name' );
-		$subject = sprintf( '[%s] Daily Security Summary', $site_name );
+		$subject   = sprintf( '[%s] Daily Security Summary', $site_name );
 
-		$body = "Daily Security Summary from NexifyMy Security\n";
+		$body  = "Daily Security Summary from NexifyMy Security\n";
 		$body .= "=============================================\n\n";
 		$body .= "Site: {$site_name}\n";
 		$body .= "Period: Last 24 hours\n";
-		$body .= "Generated: " . current_time( 'mysql' ) . "\n\n";
+		$body .= 'Generated: ' . current_time( 'mysql' ) . "\n\n";
 
 		$body .= "Security Events Summary:\n";
 		$body .= "------------------------\n";
@@ -281,7 +281,7 @@ class NexifyMy_Security_Alerts {
 		$body = preg_replace( '/\n[^\r\n]*Action may be required\./u', "\nAction may be required.", $body );
 		$body = preg_replace( '/\n[^\r\n]*Your site appears secure\./u', "\nYour site appears secure.", $body );
 
-		$body .= "View full logs: " . admin_url( 'admin.php?page=nexifymy-security-logs' ) . "\n";
+		$body .= 'View full logs: ' . admin_url( 'admin.php?page=nexifymy-security-logs' ) . "\n";
 		$body .= "\n---\n";
 		$body .= "This summary was sent by NexifyMy Security plugin.\n";
 
@@ -327,7 +327,7 @@ class NexifyMy_Security_Alerts {
 
 		foreach ( $severity_counts as $row ) {
 			$stats[ $row['severity'] ] = (int) $row['count'];
-			$stats['total'] += (int) $row['count'];
+			$stats['total']           += (int) $row['count'];
 		}
 
 		// Specific event counts.
@@ -376,20 +376,22 @@ class NexifyMy_Security_Alerts {
 		}
 
 		$settings = array(
-			'enabled'           => ! empty( $_POST['enabled'] ),
-			'recipient_email'   => sanitize_email( $_POST['recipient_email'] ?? '' ),
-			'alert_types'       => isset( $_POST['alert_types'] ) ? array_map( 'sanitize_key', (array) $_POST['alert_types'] ) : array(),
-			'throttle_minutes'  => absint( $_POST['throttle_minutes'] ?? 60 ),
-			'daily_summary'     => ! empty( $_POST['daily_summary'] ),
+			'enabled'            => ! empty( $_POST['enabled'] ),
+			'recipient_email'    => sanitize_email( $_POST['recipient_email'] ?? '' ),
+			'alert_types'        => isset( $_POST['alert_types'] ) ? array_map( 'sanitize_key', (array) $_POST['alert_types'] ) : array(),
+			'throttle_minutes'   => absint( $_POST['throttle_minutes'] ?? 60 ),
+			'daily_summary'      => ! empty( $_POST['daily_summary'] ),
 			'daily_summary_time' => sanitize_text_field( $_POST['daily_summary_time'] ?? '08:00' ),
 		);
 
 		self::update_settings( $settings );
 
-		wp_send_json_success( array(
-			'message'  => 'Alert settings saved.',
-			'settings' => $settings,
-		) );
+		wp_send_json_success(
+			array(
+				'message'  => 'Alert settings saved.',
+				'settings' => $settings,
+			)
+		);
 	}
 
 	/**
@@ -415,7 +417,7 @@ class NexifyMy_Security_Alerts {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$settings = self::get_settings();
+		$settings  = self::get_settings();
 		$recipient = $settings['recipient_email'];
 		if ( empty( $recipient ) ) {
 			$recipient = get_option( 'admin_email' );

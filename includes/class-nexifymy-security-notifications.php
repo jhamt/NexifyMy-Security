@@ -76,17 +76,17 @@ class NexifyMy_Security_Notifications {
 
 		$last_seen = self::get_last_seen_id( $user_id );
 
-		$severities = array( 'critical', 'warning' );
+		$severities            = array( 'critical', 'warning' );
 		$severity_placeholders = implode( ',', array_fill( 0, count( $severities ), '%s' ) );
 
-		$sql = "SELECT COUNT(*) FROM {$table} WHERE id > %d AND severity IN ({$severity_placeholders})";
+		$sql    = "SELECT COUNT(*) FROM {$table} WHERE id > %d AND severity IN ({$severity_placeholders})";
 		$params = array_merge( array( $last_seen ), $severities );
 
 		$excluded = self::EXCLUDED_EVENT_TYPES;
 		if ( ! empty( $excluded ) ) {
 			$excluded_placeholders = implode( ',', array_fill( 0, count( $excluded ), '%s' ) );
-			$sql .= " AND event_type NOT IN ({$excluded_placeholders})";
-			$params = array_merge( $params, $excluded );
+			$sql                  .= " AND event_type NOT IN ({$excluded_placeholders})";
+			$params                = array_merge( $params, $excluded );
 		}
 
 		return (int) $wpdb->get_var( $wpdb->prepare( $sql, $params ) );
@@ -108,12 +108,12 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$last_seen = self::get_last_seen_id( $user_id );
-		$limit = max( 1, min( 200, absint( $limit ) ) );
+		$limit     = max( 1, min( 200, absint( $limit ) ) );
 
-		$severities = array( 'critical', 'warning' );
+		$severities            = array( 'critical', 'warning' );
 		$severity_placeholders = implode( ',', array_fill( 0, count( $severities ), '%s' ) );
 
-		$sql = "SELECT id, created_at, event_type, severity, message, ip_address
+		$sql    = "SELECT id, created_at, event_type, severity, message, ip_address
 			FROM {$table}
 			WHERE id > %d AND severity IN ({$severity_placeholders})";
 		$params = array_merge( array( $last_seen ), $severities );
@@ -121,11 +121,11 @@ class NexifyMy_Security_Notifications {
 		$excluded = self::EXCLUDED_EVENT_TYPES;
 		if ( ! empty( $excluded ) ) {
 			$excluded_placeholders = implode( ',', array_fill( 0, count( $excluded ), '%s' ) );
-			$sql .= " AND event_type NOT IN ({$excluded_placeholders})";
-			$params = array_merge( $params, $excluded );
+			$sql                  .= " AND event_type NOT IN ({$excluded_placeholders})";
+			$params                = array_merge( $params, $excluded );
 		}
 
-		$sql .= ' ORDER BY id DESC LIMIT %d';
+		$sql     .= ' ORDER BY id DESC LIMIT %d';
 		$params[] = $limit;
 
 		return (array) $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A );
@@ -160,12 +160,14 @@ class NexifyMy_Security_Notifications {
 			$title .= ' (' . (int) $count . ')';
 		}
 
-		$wp_admin_bar->add_node( array(
-			'id'    => 'nexifymy-security-alerts',
-			'title' => $title,
-			'href'  => admin_url( 'admin.php?page=nexifymy-security-notifications' ),
-			'meta'  => array( 'class' => $count > 0 ? 'nexifymy-security-alerts-has-unread' : '' ),
-		) );
+		$wp_admin_bar->add_node(
+			array(
+				'id'    => 'nexifymy-security-alerts',
+				'title' => $title,
+				'href'  => admin_url( 'admin.php?page=nexifymy-security-notifications' ),
+				'meta'  => array( 'class' => $count > 0 ? 'nexifymy-security-alerts-has-unread' : '' ),
+			)
+		);
 	}
 
 	/**
@@ -178,7 +180,7 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-		
+
 		// Don't show on notifications page itself.
 		if ( $screen && isset( $screen->id ) && strpos( $screen->id, 'nexifymy-security-notifications' ) !== false ) {
 			return;
@@ -197,11 +199,11 @@ class NexifyMy_Security_Notifications {
 			</div>
 			<div class="nms-admin-notice-content">
 				<p>
-					<?php 
+					<?php
 					printf(
 						__( 'NexifyMy Security: You have %d unread security alert(s).', 'nexifymy-security' ),
 						(int) $count
-					); 
+					);
 					?>
 					<a href="<?php echo esc_url( $url ); ?>"><?php _e( 'Review Alerts &rsaquo;', 'nexifymy-security' ); ?></a>
 				</p>
@@ -221,15 +223,17 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$user_id = get_current_user_id();
-		$limit = isset( $_POST['limit'] ) ? absint( $_POST['limit'] ) : self::DEFAULT_LIMIT;
+		$limit   = isset( $_POST['limit'] ) ? absint( $_POST['limit'] ) : self::DEFAULT_LIMIT;
 
 		$alerts = self::get_unread_alerts( $user_id, $limit );
 		$count  = self::get_unread_count( $user_id );
 
-		wp_send_json_success( array(
-			'unread_count' => $count,
-			'alerts'       => $alerts,
-		) );
+		wp_send_json_success(
+			array(
+				'unread_count' => $count,
+				'alerts'       => $alerts,
+			)
+		);
 	}
 
 	/**
@@ -243,11 +247,13 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$user_id = get_current_user_id();
-		$max_id = self::mark_all_read( $user_id );
+		$max_id  = self::mark_all_read( $user_id );
 
-		wp_send_json_success( array(
-			'last_seen_id' => $max_id,
-		) );
+		wp_send_json_success(
+			array(
+				'last_seen_id' => $max_id,
+			)
+		);
 	}
 
 	/**

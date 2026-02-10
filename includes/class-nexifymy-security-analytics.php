@@ -49,7 +49,7 @@ class NexifyMy_Security_Analytics {
 		}
 
 		if ( isset( $stats[ $date ][ $type ] ) ) {
-			$stats[ $date ][ $type ]++;
+			++$stats[ $date ][ $type ];
 		}
 
 		// Keep only last 30 days
@@ -78,11 +78,11 @@ class NexifyMy_Security_Analytics {
 		);
 
 		for ( $i = $days - 1; $i >= 0; $i-- ) {
-			$date = date( 'Y-m-d', strtotime( "-$i days" ) );
+			$date             = date( 'Y-m-d', strtotime( "-$i days" ) );
 			$data['labels'][] = date( 'M j', strtotime( $date ) );
 
 			$day_stats = isset( $stats[ $date ] ) ? $stats[ $date ] : array();
-			
+
 			$data['datasets']['threats'][] = isset( $day_stats['threat_detected'] ) ? $day_stats['threat_detected'] : 0;
 			$data['datasets']['blocked'][] = isset( $day_stats['blocked_request'] ) ? $day_stats['blocked_request'] : 0;
 			$data['datasets']['logins'][]  = isset( $day_stats['auth_failed'] ) ? $day_stats['auth_failed'] : 0;

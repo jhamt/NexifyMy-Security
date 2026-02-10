@@ -33,7 +33,7 @@ class NexifyMy_Security_CLI {
 	 * @param array $assoc_args Named arguments.
 	 */
 	public function scan( $args, $assoc_args ) {
-		$mode = isset( $assoc_args['mode'] ) ? $assoc_args['mode'] : 'quick';
+		$mode   = isset( $assoc_args['mode'] ) ? $assoc_args['mode'] : 'quick';
 		$format = isset( $assoc_args['format'] ) ? $assoc_args['format'] : 'table';
 
 		WP_CLI::log( "Starting {$mode} scan..." );
@@ -49,7 +49,7 @@ class NexifyMy_Security_CLI {
 			WP_CLI::error( $results->get_error_message() );
 		}
 
-		$threats = $results['threats_found'] ?? 0;
+		$threats       = $results['threats_found'] ?? 0;
 		$files_scanned = $results['files_scanned'] ?? 0;
 
 		if ( $format === 'json' ) {
@@ -86,11 +86,11 @@ class NexifyMy_Security_CLI {
 	 */
 	public function config__export( $args, $assoc_args ) {
 		$format = isset( $assoc_args['format'] ) ? $assoc_args['format'] : 'json';
-		$file = isset( $assoc_args['file'] ) ? $assoc_args['file'] : null;
+		$file   = isset( $assoc_args['file'] ) ? $assoc_args['file'] : null;
 
-		$config = get_option( 'nexifymy_security_settings', array() );
+		$config                 = get_option( 'nexifymy_security_settings', array() );
 		$config['_exported_at'] = current_time( 'mysql' );
-		$config['_site_url'] = get_site_url();
+		$config['_site_url']    = get_site_url();
 
 		if ( $format === 'yaml' ) {
 			$output = $this->array_to_yaml( $config );
@@ -126,7 +126,7 @@ class NexifyMy_Security_CLI {
 	 * @param array $assoc_args Named arguments.
 	 */
 	public function config__import( $args, $assoc_args ) {
-		$file = $args[0];
+		$file  = $args[0];
 		$merge = isset( $assoc_args['merge'] );
 
 		if ( ! file_exists( $file ) ) {
@@ -151,7 +151,7 @@ class NexifyMy_Security_CLI {
 
 		if ( $merge ) {
 			$existing = get_option( 'nexifymy_security_settings', array() );
-			$config = array_merge( $existing, $config );
+			$config   = array_merge( $existing, $config );
 		}
 
 		update_option( 'nexifymy_security_settings', $config );
@@ -180,7 +180,7 @@ class NexifyMy_Security_CLI {
 	 */
 	public function firewall( $args, $assoc_args ) {
 		$action = $args[0] ?? 'list';
-		$ip = $args[1] ?? null;
+		$ip     = $args[1] ?? null;
 
 		switch ( $action ) {
 			case 'block':
@@ -230,7 +230,7 @@ class NexifyMy_Security_CLI {
 	 */
 	public function logs( $args, $assoc_args ) {
 		$severity = isset( $assoc_args['severity'] ) ? $assoc_args['severity'] : null;
-		$limit = isset( $assoc_args['limit'] ) ? absint( $assoc_args['limit'] ) : 20;
+		$limit    = isset( $assoc_args['limit'] ) ? absint( $assoc_args['limit'] ) : 20;
 
 		if ( ! class_exists( 'NexifyMy_Security_Logger' ) ) {
 			WP_CLI::error( 'Logger not available.' );
@@ -280,22 +280,33 @@ class NexifyMy_Security_CLI {
 	 * Helper: Block IP address.
 	 */
 	private function block_ip( $ip ) {
-		$blocked = get_option( 'nexifymy_blocked_ips', array() );
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'block_ip' ) ) {
+			NexifyMy_Security_Firewall::block_ip( $ip, 'Blocked via CLI' );
+			return;
+		}
+
+		$blocked        = get_option( 'nexifymy_security_blocked_ips', array() );
 		$blocked[ $ip ] = array(
-			'reason' => 'Blocked via CLI',
-			'blocked_at' => current_time( 'mysql' ),
+			'reason'     => 'Blocked via CLI',
+			'blocked_at' => time(),
+			'expires_at' => 0,
 		);
-		update_option( 'nexifymy_blocked_ips', $blocked );
+		update_option( 'nexifymy_security_blocked_ips', $blocked, false );
 	}
 
 	/**
 	 * Helper: Unblock IP address.
 	 */
 	private function unblock_ip( $ip ) {
-		$blocked = get_option( 'nexifymy_blocked_ips', array() );
-		if ( isset( $blocked[ $ip ] ) ) {
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'unblock_ip' ) ) {
+			NexifyMy_Security_Firewall::unblock_ip( $ip );
+			return;
+		}
+
+		$blocked = get_option( 'nexifymy_security_blocked_ips', array() );
+		if ( is_array( $blocked ) && isset( $blocked[ $ip ] ) ) {
 			unset( $blocked[ $ip ] );
-			update_option( 'nexifymy_blocked_ips', $blocked );
+			update_option( 'nexifymy_security_blocked_ips', $blocked, false );
 		}
 	}
 
@@ -303,13 +314,17 @@ class NexifyMy_Security_CLI {
 	 * Helper: Get blocked IPs.
 	 */
 	private function get_blocked_ips() {
-		$blocked = get_option( 'nexifymy_blocked_ips', array() );
-		$result = array();
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'get_blocked_ips' ) ) {
+			$blocked = NexifyMy_Security_Firewall::get_blocked_ips();
+		} else {
+			$blocked = get_option( 'nexifymy_security_blocked_ips', array() );
+		}
+		$result  = array();
 
 		foreach ( $blocked as $ip => $data ) {
 			$result[] = array(
-				'ip' => $ip,
-				'reason' => $data['reason'] ?? '',
+				'ip'         => $ip,
+				'reason'     => $data['reason'] ?? '',
 				'blocked_at' => $data['blocked_at'] ?? '',
 			);
 		}
@@ -321,7 +336,7 @@ class NexifyMy_Security_CLI {
 	 * Convert array to YAML format.
 	 */
 	private function array_to_yaml( $array, $indent = 0 ) {
-		$yaml = '';
+		$yaml   = '';
 		$prefix = str_repeat( '  ', $indent );
 
 		foreach ( $array as $key => $value ) {
@@ -341,10 +356,10 @@ class NexifyMy_Security_CLI {
 	 */
 	private function yaml_to_array( $yaml ) {
 		// This is a simple YAML parser. For production, use symfony/yaml or similar.
-		$lines = explode( "\n", $yaml );
-		$result = array();
+		$lines   = explode( "\n", $yaml );
+		$result  = array();
 		$current = &$result;
-		$stack = array();
+		$stack   = array();
 
 		foreach ( $lines as $line ) {
 			if ( empty( trim( $line ) ) || $line[0] === '#' ) {
@@ -354,8 +369,8 @@ class NexifyMy_Security_CLI {
 			preg_match( '/^(\s*)([^:]+):\s*(.*)$/', $line, $matches );
 			if ( $matches ) {
 				$indent = strlen( $matches[1] );
-				$key = trim( $matches[2] );
-				$value = trim( $matches[3] );
+				$key    = trim( $matches[2] );
+				$value  = trim( $matches[3] );
 
 				if ( empty( $value ) ) {
 					$current[ $key ] = array();
