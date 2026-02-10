@@ -487,14 +487,29 @@ class NexifyMy_Security_Self_Protection {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		if ( ! empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) {
-			return sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) );
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
+
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$headers = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $headers as $header ) {
+				if ( empty( $_SERVER[ $header ] ) ) {
+					continue;
+				}
+
+				$raw = sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) );
+				$ip  = strpos( $raw, ',' ) !== false ? trim( explode( ',', $raw )[0] ) : $raw;
+				if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+					return $ip;
+				}
+			}
 		}
-		if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-			$ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) );
-			return trim( $ips[0] );
+
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
 		}
-		return isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '0.0.0.0';
+
+		return '0.0.0.0';
 	}
 
 	/*

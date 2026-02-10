@@ -79,9 +79,10 @@ class NexifyMy_Security_RateLimiter {
 		}
 
 		$rate_limiter = isset( $settings['rate_limiter'] ) && is_array( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array();
+		$login_protection = isset( $settings['login_protection'] ) && is_array( $settings['login_protection'] ) ? $settings['login_protection'] : array();
 
-		$max_attempts = absint( $rate_limiter['max_attempts'] ?? self::DEFAULT_MAX_ATTEMPTS );
-		$lockout_duration = absint( $rate_limiter['lockout_duration'] ?? self::DEFAULT_LOCKOUT_DURATION );
+		$max_attempts = absint( $rate_limiter['max_attempts'] ?? $login_protection['max_attempts'] ?? self::DEFAULT_MAX_ATTEMPTS );
+		$lockout_duration = absint( $rate_limiter['lockout_duration'] ?? ( isset( $login_protection['lockout_duration'] ) ? ( absint( $login_protection['lockout_duration'] ) * MINUTE_IN_SECONDS ) : self::DEFAULT_LOCKOUT_DURATION ) );
 		$attempt_window = absint( $rate_limiter['attempt_window'] ?? self::DEFAULT_ATTEMPT_WINDOW );
 
 		// Clamp to sane ranges.
@@ -108,33 +109,29 @@ class NexifyMy_Security_RateLimiter {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( $_SERVER['REMOTE_ADDR'] ) : '';
+		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 
 		// Get list of trusted proxies from settings.
 		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
 		// Only trust forwarded headers if the request comes from a trusted proxy.
 		if ( in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
-			// X-Forwarded-For: client, proxy1, proxy2 - first one is the real client.
-			if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-				$ips = explode( ',', $_SERVER['HTTP_X_FORWARDED_FOR'] );
-				$client_ip = trim( $ips[0] );
-				// Validate it's a real IP.
-				if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
-					return sanitize_text_field( $client_ip );
+			$headers = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $headers as $header ) {
+				if ( empty( $_SERVER[ $header ] ) ) {
+					continue;
 				}
-			}
-			// X-Real-IP is set by some proxies like nginx.
-			if ( ! empty( $_SERVER['HTTP_X_REAL_IP'] ) ) {
-				$client_ip = $_SERVER['HTTP_X_REAL_IP'];
+
+				$raw       = sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) );
+				$client_ip = strpos( $raw, ',' ) !== false ? trim( explode( ',', $raw )[0] ) : $raw;
 				if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
-					return sanitize_text_field( $client_ip );
+					return $client_ip;
 				}
 			}
 		}
 
 		// Default to REMOTE_ADDR (direct connection IP).
-		return $remote_addr;
+		return $remote_addr ?: '0.0.0.0';
 	}
 
 	/**
@@ -232,6 +229,16 @@ class NexifyMy_Security_RateLimiter {
 				)
 			);
 		}
+
+		do_action(
+			'nexifymy_user_locked',
+			array(
+				'ip'       => $ip,
+				'reason'   => 'Rate limiter lockout',
+				'duration' => $this->lockout_duration,
+				'source'   => 'rate_limiter',
+			)
+		);
 	}
 
 	/**

@@ -300,13 +300,17 @@ class NexifyMy_Security_Developer_API {
 			return false;
 		}
 
-		$keys = get_option( self::API_KEYS_OPTION, array() );
+		$keys     = get_option( self::API_KEYS_OPTION, array() );
 		$key_hash = hash( 'sha256', $key );
 
-		foreach ( $keys as $stored_key ) {
+		foreach ( $keys as $key_id => $stored_key ) {
+			if ( ! isset( $stored_key['hash'] ) ) {
+				continue;
+			}
+
 			if ( hash_equals( $stored_key['hash'], $key_hash ) ) {
 				// Update last used.
-				$stored_key['last_used'] = current_time( 'mysql' );
+				$keys[ $key_id ]['last_used'] = current_time( 'mysql' );
 				update_option( self::API_KEYS_OPTION, $keys, false );
 				return true;
 			}
@@ -399,7 +403,11 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	public function api_get_blocked( $request ) {
-		$blocked = get_option( 'nexifymy_blocked_ips', array() );
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'get_blocked_ips' ) ) {
+			$blocked = NexifyMy_Security_Firewall::get_blocked_ips();
+		} else {
+			$blocked = get_option( 'nexifymy_security_blocked_ips', array() );
+		}
 		return rest_ensure_response( $blocked );
 	}
 
@@ -407,8 +415,8 @@ class NexifyMy_Security_Developer_API {
 		$ip = $request->get_param( 'ip' );
 		$reason = $request->get_param( 'reason' );
 
-		if ( isset( $GLOBALS['nexifymy_waf'] ) && method_exists( $GLOBALS['nexifymy_waf'], 'add_to_blocklist' ) ) {
-			$GLOBALS['nexifymy_waf']->add_to_blocklist( $ip, $reason );
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'block_ip' ) ) {
+			NexifyMy_Security_Firewall::block_ip( $ip, $reason );
 		}
 
 		// Trigger webhook.
@@ -424,8 +432,8 @@ class NexifyMy_Security_Developer_API {
 	public function api_unblock_ip( $request ) {
 		$ip = $request->get_param( 'ip' );
 
-		if ( isset( $GLOBALS['nexifymy_waf'] ) && method_exists( $GLOBALS['nexifymy_waf'], 'remove_from_blocklist' ) ) {
-			$GLOBALS['nexifymy_waf']->remove_from_blocklist( $ip );
+		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'unblock_ip' ) ) {
+			NexifyMy_Security_Firewall::unblock_ip( $ip );
 		}
 
 		return rest_ensure_response( array( 'success' => true, 'message' => "IP {$ip} unblocked." ) );
@@ -466,19 +474,59 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	public function api_update_settings( $request ) {
-		$body = $request->get_json_params();
+		$raw_body = $request->get_json_params();
 
-		if ( empty( $body ) ) {
+		if ( empty( $raw_body ) || ! is_array( $raw_body ) ) {
 			return new WP_Error( 'invalid_body', 'Request body is required.', array( 'status' => 400 ) );
 		}
 
-		// Trigger webhook for settings change.
-		$this->dispatch_webhook( 'settings_changed', array(
-			'changed_keys' => array_keys( $body ),
-			'source'       => 'api',
-		) );
+		$body = ( isset( $raw_body['settings'] ) && is_array( $raw_body['settings'] ) ) ? $raw_body['settings'] : $raw_body;
+		if ( empty( $body ) || ! is_array( $body ) ) {
+			return new WP_Error( 'invalid_settings', 'Settings payload must be a non-empty object.', array( 'status' => 400 ) );
+		}
 
-		return rest_ensure_response( array( 'success' => true, 'message' => 'Settings updated.' ) );
+		if ( ! class_exists( 'NexifyMy_Security_Settings' ) ) {
+			return new WP_Error( 'settings_unavailable', 'Settings module not available.', array( 'status' => 503 ) );
+		}
+
+		$current_settings = NexifyMy_Security_Settings::get_all();
+
+		// Support both full settings payloads and flat developer_api payloads.
+		$developer_api_keys           = array_keys( self::$defaults );
+		$body_keys                    = array_keys( $body );
+		$is_flat_developer_api_update = ! isset( $body['developer_api'] ) && ! empty( $body_keys ) && empty( array_diff( $body_keys, $developer_api_keys ) );
+		$payload                      = $is_flat_developer_api_update ? array( 'developer_api' => $body ) : $body;
+
+		NexifyMy_Security_Settings::save( $payload );
+		$updated_settings = NexifyMy_Security_Settings::get_all();
+
+		$changed_keys = array();
+		foreach ( $updated_settings as $key => $value ) {
+			if ( ! array_key_exists( $key, $current_settings ) || $current_settings[ $key ] !== $value ) {
+				$changed_keys[] = $key;
+			}
+		}
+
+		// Hide Login relies on rewrite rules when slug/enabled state changes.
+		if (
+			in_array( 'hide_login', $changed_keys, true ) &&
+			class_exists( 'NexifyMy_Security_Hide_Login' ) &&
+			method_exists( 'NexifyMy_Security_Hide_Login', 'flush_rules' )
+		) {
+			NexifyMy_Security_Hide_Login::flush_rules();
+		}
+
+		$response_settings = $updated_settings;
+		unset( $response_settings['api_keys'] );
+
+		return rest_ensure_response(
+			array(
+				'success'      => true,
+				'message'      => 'Settings updated.',
+				'changed_keys' => $changed_keys,
+				'settings'     => $response_settings,
+			)
+		);
 	}
 
 	public function api_get_logs( $request ) {
@@ -605,9 +653,22 @@ class NexifyMy_Security_Developer_API {
 	 */
 	private function register_webhook_listeners() {
 		// Threat detected.
-		add_action( 'nexifymy_threat_detected', function( $threat_data ) {
-			$this->dispatch_webhook( 'threat_detected', $threat_data );
-		} );
+		add_action(
+			'nexifymy_threat_detected',
+			function( $threat_data, $reason = '', $score = 0 ) {
+				if ( ! is_array( $threat_data ) ) {
+					$threat_data = array(
+						'ip'     => sanitize_text_field( (string) $threat_data ),
+						'reason' => sanitize_text_field( (string) $reason ),
+						'score'  => absint( $score ),
+					);
+				}
+
+				$this->dispatch_webhook( 'threat_detected', $threat_data );
+			},
+			10,
+			3
+		);
 
 		// Login failed.
 		add_action( 'wp_login_failed', function( $username ) {
@@ -633,9 +694,13 @@ class NexifyMy_Security_Developer_API {
 		} );
 
 		// Settings changed.
-		add_action( 'update_option_nexifymy_settings', function( $old, $new ) {
+		add_action( 'update_option_nexifymy_security_settings', function( $old, $new ) {
+			$old = is_array( $old ) ? $old : array();
+			$new = is_array( $new ) ? $new : array();
+
 			$this->dispatch_webhook( 'settings_changed', array(
 				'changed' => array_keys( array_diff_assoc( $new, $old ) ),
+				'source'  => ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ? 'api' : 'runtime',
 			) );
 		}, 10, 2 );
 	}
@@ -772,7 +837,7 @@ class NexifyMy_Security_Developer_API {
 
 	private function count_active_modules() {
 		$count = 0;
-		$modules = array( 'waf', 'scanner', 'rate_limiter', '2fa', 'ai_detection', 'passkey' );
+		$modules = array( 'waf', 'scanner', 'rate_limiter', 'two_factor', 'ai_detection', 'passkey' );
 
 		foreach ( $modules as $module ) {
 			if ( $this->is_module_enabled( $module ) ) {
@@ -784,10 +849,40 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	private function is_module_enabled( $module ) {
-		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$settings = NexifyMy_Security_Settings::get_all();
-			return ! empty( $settings[ $module ]['enabled'] );
+		if ( ! class_exists( 'NexifyMy_Security_Settings' ) ) {
+			return false;
 		}
+
+		$settings = NexifyMy_Security_Settings::get_all();
+		$aliases = array(
+			'2fa' => 'two_factor',
+		);
+		$module = $aliases[ $module ] ?? $module;
+
+		$module_flag_map = array(
+			'waf'          => 'waf_enabled',
+			'scanner'      => 'scanner_enabled',
+			'rate_limiter' => 'rate_limiter_enabled',
+			'two_factor'   => 'two_factor_enabled',
+			'ai_detection' => 'ai_detection_enabled',
+			'passkey'      => 'passkey_enabled',
+		);
+
+		if ( isset( $module_flag_map[ $module ] ) ) {
+			$flag = $module_flag_map[ $module ];
+			if ( isset( $settings['modules'][ $flag ] ) ) {
+				return ! empty( $settings['modules'][ $flag ] );
+			}
+		}
+
+		if ( ! empty( $settings[ $module ]['enabled'] ) ) {
+			return true;
+		}
+
+		if ( 'two_factor' === $module && ! empty( $settings['2fa']['enabled'] ) ) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -806,10 +901,16 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	private function get_client_ip() {
-		$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR' );
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
-		foreach ( $ip_keys as $key ) {
-			if ( ! empty( $_SERVER[ $key ] ) ) {
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $ip_keys as $key ) {
+				if ( empty( $_SERVER[ $key ] ) ) {
+					continue;
+				}
+
 				$ip = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
 				if ( strpos( $ip, ',' ) !== false ) {
 					$ip = trim( explode( ',', $ip )[0] );
@@ -818,6 +919,10 @@ class NexifyMy_Security_Developer_API {
 					return $ip;
 				}
 			}
+		}
+
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
 		}
 
 		return '0.0.0.0';
@@ -945,7 +1050,7 @@ class NexifyMy_Security_Developer_API {
 
 		// Remove secrets before sending.
 		foreach ( $webhooks as &$webhook ) {
-			$webhook['secret'] = ! empty( $webhook['secret'] ) ? '••••••••' : '';
+			$webhook['secret'] = ! empty( $webhook['secret'] ) ? '********' : '';
 		}
 
 		wp_send_json_success( array(
@@ -980,7 +1085,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				'PHP' => PHP_VERSION,
 				'Firewall' => $this->check_enabled( 'waf' ) ? 'Enabled' : 'Disabled',
 				'Scanner' => $this->check_enabled( 'scanner' ) ? 'Enabled' : 'Disabled',
-				'2FA' => $this->check_enabled( '2fa' ) ? 'Enabled' : 'Disabled',
+				'2FA' => $this->check_enabled( 'two_factor' ) ? 'Enabled' : 'Disabled',
 				'AI Detection' => $this->check_enabled( 'ai_detection' ) ? 'Enabled' : 'Disabled',
 			);
 
@@ -1139,11 +1244,37 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		}
 
 		private function check_enabled( $module ) {
-			if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-				$settings = NexifyMy_Security_Settings::get_all();
-				return ! empty( $settings[ $module ]['enabled'] );
+			if ( ! class_exists( 'NexifyMy_Security_Settings' ) ) {
+				return false;
 			}
-			return false;
+
+			$settings = NexifyMy_Security_Settings::get_all();
+			$aliases = array(
+				'2fa' => 'two_factor',
+			);
+			$module = $aliases[ $module ] ?? $module;
+
+			$module_flag_map = array(
+				'waf'          => 'waf_enabled',
+				'scanner'      => 'scanner_enabled',
+				'rate_limiter' => 'rate_limiter_enabled',
+				'two_factor'   => 'two_factor_enabled',
+				'ai_detection' => 'ai_detection_enabled',
+				'passkey'      => 'passkey_enabled',
+			);
+
+			if ( isset( $module_flag_map[ $module ] ) ) {
+				$flag = $module_flag_map[ $module ];
+				if ( isset( $settings['modules'][ $flag ] ) ) {
+					return ! empty( $settings['modules'][ $flag ] );
+				}
+			}
+
+			if ( ! empty( $settings[ $module ]['enabled'] ) ) {
+				return true;
+			}
+
+			return 'two_factor' === $module && ! empty( $settings['2fa']['enabled'] );
 		}
 	}
 }

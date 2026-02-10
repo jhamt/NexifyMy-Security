@@ -23,6 +23,12 @@ class NexifyMy_Security_Firewall {
 	private $log_only_mode = false;
 
 	/**
+	 * Master enable flag for the firewall module.
+	 * @var bool
+	 */
+	private $enabled = true;
+
+	/**
 	 * Per-rule enable toggles.
 	 * @var array<string,bool>
 	 */
@@ -46,6 +52,16 @@ class NexifyMy_Security_Firewall {
 	 * @var int
 	 */
 	const IDENTITY_RISK_THRESHOLD = 50;
+
+	/**
+	 * Option key for persistent blocked IP records (module-to-module shared).
+	 */
+	const BLOCKED_IPS_OPTION = 'nexifymy_security_blocked_ips';
+
+	/**
+	 * Legacy option key used by older modules/CLI.
+	 */
+	const LEGACY_BLOCKED_IPS_OPTION = 'nexifymy_blocked_ips';
 
 	/**
 	 * Initialize the firewall rules.
@@ -133,6 +149,12 @@ class NexifyMy_Security_Firewall {
 		// Apply settings (if present) and define rules.
 		$this->apply_settings();
 		$this->define_rules();
+
+		// Full module kill switch.
+		if ( ! $this->enabled ) {
+			return;
+		}
+
 		if ( function_exists( 'add_action' ) ) {
 			// Re-evaluate identity-aware access once WordPress auth context is available.
 			add_action( 'init', array( $this, 'apply_identity_aware_rules' ), 0 );
@@ -141,6 +163,17 @@ class NexifyMy_Security_Firewall {
 		// Skip for whitelisted IPs (configurable in settings).
 		if ( $this->is_ip_whitelisted() ) {
 			return;
+		}
+
+		// Respect globally blocked IPs pushed by other modules (P2P, Deception, etc.).
+		$blocked_reason = '';
+		if ( $this->is_ip_blocked( $blocked_reason ) ) {
+			$this->block_request(
+				$blocked_reason ? $blocked_reason : 'Blocked IP',
+				'ip_block',
+				$this->get_client_ip(),
+				true
+			);
 		}
 
 		// Apply identity-aware rules (Zero-Trust) before URL allowlist checks.
@@ -197,10 +230,12 @@ class NexifyMy_Security_Firewall {
 	 */
 	private function apply_settings() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
+		$this->enabled = true;
 
 		// Module toggle.
 		if ( isset( $settings['modules']['waf_enabled'] ) && ! $settings['modules']['waf_enabled'] ) {
 			// Disable WAF entirely.
+			$this->enabled = false;
 			$this->enabled_rules = array(
 				'sqli'   => false,
 				'xss'    => false,
@@ -338,32 +373,194 @@ class NexifyMy_Security_Firewall {
 	}
 
 	/**
+	 * Check whether the current client IP exists in the persistent block list.
+	 *
+	 * @param string $reason Optional reason output.
+	 * @return bool
+	 */
+	private function is_ip_blocked( &$reason = '' ) {
+		$ip = $this->get_client_ip();
+		if ( empty( $ip ) ) {
+			return false;
+		}
+
+		$blocked_ips = get_option( self::BLOCKED_IPS_OPTION, array() );
+		if ( ( ! is_array( $blocked_ips ) || empty( $blocked_ips ) ) ) {
+			$legacy_blocked = get_option( self::LEGACY_BLOCKED_IPS_OPTION, array() );
+			if ( is_array( $legacy_blocked ) && ! empty( $legacy_blocked ) ) {
+				$blocked_ips = $legacy_blocked;
+				update_option( self::BLOCKED_IPS_OPTION, $blocked_ips, false );
+			}
+		}
+
+		if ( ! is_array( $blocked_ips ) || ! isset( $blocked_ips[ $ip ] ) ) {
+			return false;
+		}
+
+		$record = is_array( $blocked_ips[ $ip ] ) ? $blocked_ips[ $ip ] : array();
+		$expires_at = isset( $record['expires_at'] ) ? absint( $record['expires_at'] ) : 0;
+
+		// Auto-clean expired block records.
+		if ( $expires_at > 0 && $expires_at <= time() ) {
+			unset( $blocked_ips[ $ip ] );
+			update_option( self::BLOCKED_IPS_OPTION, $blocked_ips, false );
+			return false;
+		}
+
+		$reason = isset( $record['reason'] ) ? sanitize_text_field( $record['reason'] ) : '';
+		return true;
+	}
+
+	/**
+	 * Add an IP to the persistent firewall block list.
+	 *
+	 * @param string $ip Target IPv4/IPv6 address.
+	 * @param string $reason Reason for auditability.
+	 * @param int    $ttl Optional block duration (seconds). 0 means indefinite.
+	 * @return bool
+	 */
+	public static function block_ip( $ip, $reason = '', $ttl = 0 ) {
+		$ip = sanitize_text_field( trim( (string) $ip ) );
+		if ( ! filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+			return false;
+		}
+
+		$whitelist = get_option( 'nexifymy_security_ip_whitelist', array() );
+		if ( in_array( $ip, (array) $whitelist, true ) ) {
+			return false;
+		}
+
+		$blocked_ips = get_option( self::BLOCKED_IPS_OPTION, array() );
+		if ( ! is_array( $blocked_ips ) ) {
+			$blocked_ips = array();
+		}
+
+		$max_entries = 1000;
+		if ( count( $blocked_ips ) >= $max_entries ) {
+			uasort(
+				$blocked_ips,
+				static function( $a, $b ) {
+					$time_a = isset( $a['blocked_at'] ) ? absint( $a['blocked_at'] ) : 0;
+					$time_b = isset( $b['blocked_at'] ) ? absint( $b['blocked_at'] ) : 0;
+					return $time_a <=> $time_b;
+				}
+			);
+			$blocked_ips = array_slice( $blocked_ips, - ( $max_entries - 1 ), null, true );
+		}
+
+		$now = time();
+		$ttl = absint( $ttl );
+
+		$blocked_ips[ $ip ] = array(
+			'reason'     => sanitize_text_field( $reason ),
+			'blocked_at' => $now,
+			'expires_at' => $ttl > 0 ? $now + $ttl : 0,
+		);
+
+		update_option( self::BLOCKED_IPS_OPTION, $blocked_ips, false );
+		update_option( self::LEGACY_BLOCKED_IPS_OPTION, $blocked_ips, false );
+		return true;
+	}
+
+	/**
+	 * Remove an IP from the persistent firewall block list.
+	 *
+	 * @param string $ip Target IPv4/IPv6 address.
+	 * @return bool
+	 */
+	public static function unblock_ip( $ip ) {
+		$ip = sanitize_text_field( trim( (string) $ip ) );
+		if ( ! filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+			return false;
+		}
+
+		$blocked_ips = get_option( self::BLOCKED_IPS_OPTION, array() );
+		$changed     = false;
+		if ( is_array( $blocked_ips ) && isset( $blocked_ips[ $ip ] ) ) {
+			unset( $blocked_ips[ $ip ] );
+			update_option( self::BLOCKED_IPS_OPTION, $blocked_ips, false );
+			$changed = true;
+		}
+
+		$legacy_blocked = get_option( self::LEGACY_BLOCKED_IPS_OPTION, array() );
+		if ( is_array( $legacy_blocked ) && isset( $legacy_blocked[ $ip ] ) ) {
+			unset( $legacy_blocked[ $ip ] );
+			update_option( self::LEGACY_BLOCKED_IPS_OPTION, $legacy_blocked, false );
+			$changed = true;
+		}
+
+		return $changed;
+	}
+
+	/**
+	 * Get the current blocked IP records.
+	 *
+	 * @return array
+	 */
+	public static function get_blocked_ips() {
+		$blocked_ips = get_option( self::BLOCKED_IPS_OPTION, array() );
+		if ( ! is_array( $blocked_ips ) || empty( $blocked_ips ) ) {
+			$legacy_blocked = get_option( self::LEGACY_BLOCKED_IPS_OPTION, array() );
+			if ( is_array( $legacy_blocked ) ) {
+				$blocked_ips = $legacy_blocked;
+			}
+		}
+
+		if ( ! is_array( $blocked_ips ) ) {
+			return array();
+		}
+
+		return $blocked_ips;
+	}
+
+	/**
+	 * Backward-compatible alias for older integrations.
+	 *
+	 * @param string $ip Target IP.
+	 * @param string $reason Block reason.
+	 * @param int    $ttl Optional block duration in seconds.
+	 * @return bool
+	 */
+	public function add_to_blocklist( $ip, $reason = '', $ttl = 0 ) {
+		return self::block_ip( $ip, $reason, $ttl );
+	}
+
+	/**
+	 * Backward-compatible alias for older integrations.
+	 *
+	 * @param string $ip Target IP.
+	 * @return bool
+	 */
+	public function remove_from_blocklist( $ip ) {
+		return self::unblock_ip( $ip );
+	}
+
+	/**
 	 * Get the client IP address securely.
 	 * Only trusts X-Forwarded-For/X-Real-IP if the direct requester is a configured trusted proxy.
 	 *
 	 * @return string
 	 */
 	private function get_client_ip() {
-		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( $_SERVER['REMOTE_ADDR'] ) : '';
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
 		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
-			if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-				$ips = explode( ',', $_SERVER['HTTP_X_FORWARDED_FOR'] );
-				$client_ip = trim( $ips[0] );
-				if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
-					return sanitize_text_field( $client_ip );
+			$forwarded_headers = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $forwarded_headers as $header ) {
+				if ( empty( $_SERVER[ $header ] ) ) {
+					continue;
 				}
-			}
-			if ( ! empty( $_SERVER['HTTP_X_REAL_IP'] ) ) {
-				$client_ip = $_SERVER['HTTP_X_REAL_IP'];
+
+				$raw       = sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) );
+				$client_ip = strpos( $raw, ',' ) !== false ? trim( explode( ',', $raw )[0] ) : $raw;
 				if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
-					return sanitize_text_field( $client_ip );
+					return $client_ip;
 				}
 			}
 		}
 
-		return $remote_addr;
+		return $remote_addr ?: '0.0.0.0';
 	}
 
 	/**
@@ -443,8 +640,9 @@ class NexifyMy_Security_Firewall {
 	 * @param string $reason The reason for blocking.
 	 * @param string $key The key that triggered the block (optional).
 	 * @param string $value The value that triggered the block (optional).
+	 * @param bool   $force Whether to bypass log-only mode.
 	 */
-	private function block_request( $reason, $key = '', $value = '' ) {
+	private function block_request( $reason, $key = '', $value = '', $force = false ) {
 		// Log to database using our Logger class.
 		if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
 			NexifyMy_Security_Logger::log(
@@ -459,16 +657,24 @@ class NexifyMy_Security_Firewall {
 			);
 		}
 
-		if ( $this->log_only_mode ) {
+		if ( $this->log_only_mode && ! $force ) {
 			return;
 		}
+
+		$client_ip = $this->get_client_ip();
+		do_action(
+			'nexifymy_threat_detected',
+			$client_ip,
+			$reason,
+			$force ? 100 : 90
+		);
 
 		// Send 403 Forbidden.
 		status_header( 403 );
 		nocache_headers();
 		
 		// Styled Block Page.
-		$ip = esc_html( $_SERVER['REMOTE_ADDR'] );
+		$ip = esc_html( $client_ip );
 		$reason_safe = esc_html( $reason );
 		
 		echo <<<HTML

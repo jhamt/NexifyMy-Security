@@ -175,7 +175,7 @@ class NexifyMy_Security_Geo_Blocking {
 	}
 
 	/**
-	 * Lookup IP using ip-api.com.
+	 * Lookup IP using a TLS-protected geo endpoint.
 	 *
 	 * @param string $ip IP address.
 	 * @return string Country code or empty string.
@@ -186,11 +186,10 @@ class NexifyMy_Security_Geo_Blocking {
 			return '';
 		}
 
-		$url = 'http://ip-api.com/json/' . urlencode( $ip ) . '?fields=status,countryCode';
+		$url = 'https://ipwho.is/' . rawurlencode( $ip ) . '?fields=success,country_code';
 
 		$response = wp_remote_get( $url, array(
 			'timeout' => 5,
-			'sslverify' => false,
 		) );
 
 		if ( is_wp_error( $response ) ) {
@@ -200,8 +199,8 @@ class NexifyMy_Security_Geo_Blocking {
 		$body = wp_remote_retrieve_body( $response );
 		$data = json_decode( $body, true );
 
-		if ( isset( $data['status'] ) && 'success' === $data['status'] && ! empty( $data['countryCode'] ) ) {
-			return strtoupper( $data['countryCode'] );
+		if ( ! empty( $data['success'] ) && ! empty( $data['country_code'] ) ) {
+			return strtoupper( sanitize_text_field( $data['country_code'] ) );
 		}
 
 		return '';
@@ -227,19 +226,31 @@ class NexifyMy_Security_Geo_Blocking {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		if ( ! empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) {
-			return sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) );
-		}
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
-		$headers = array( 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
-		foreach ( $headers as $header ) {
-			if ( ! empty( $_SERVER[ $header ] ) ) {
-				$ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) ) );
-				return trim( $ips[0] );
+		// Only trust forwarded headers if the direct requester is an explicitly trusted proxy.
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			if ( ! empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) {
+				$client_ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) );
+				if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
+					return $client_ip;
+				}
+			}
+
+			$headers = array( 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $headers as $header ) {
+				if ( ! empty( $_SERVER[ $header ] ) ) {
+					$ips       = explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) ) );
+					$client_ip = trim( $ips[0] );
+					if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
+						return $client_ip;
+					}
+				}
 			}
 		}
 
-		return isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '0.0.0.0';
+		return $remote_addr ?: '0.0.0.0';
 	}
 
 	/**

@@ -135,7 +135,7 @@ class NexifyMy_Security_Integrations {
 	 */
 	private function register_event_listeners() {
 		// Threat detected.
-		add_action( 'nexifymy_threat_detected', array( $this, 'handle_threat_detected' ) );
+		add_action( 'nexifymy_threat_detected', array( $this, 'handle_threat_detected' ), 10, 3 );
 
 		// Login failed.
 		add_action( 'wp_login_failed', array( $this, 'handle_login_failed' ) );
@@ -159,7 +159,15 @@ class NexifyMy_Security_Integrations {
 	 * =========================================================================
 	 */
 
-	public function handle_threat_detected( $data ) {
+	public function handle_threat_detected( $data, $reason = '', $score = 0 ) {
+		if ( ! is_array( $data ) ) {
+			$data = array(
+				'ip'     => sanitize_text_field( (string) $data ),
+				'reason' => sanitize_text_field( (string) $reason ),
+				'score'  => absint( $score ),
+			);
+		}
+
 		$this->dispatch_to_all( 'threat_detected', array(
 			'title'       => '[URGENT] Threat Detected',
 			'description' => sprintf( 'AI detected threat from IP: %s (Score: %d)', $data['ip'] ?? 'Unknown', $data['score'] ?? 0 ),
@@ -799,10 +807,16 @@ class NexifyMy_Security_Integrations {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR' );
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
-		foreach ( $ip_keys as $key ) {
-			if ( ! empty( $_SERVER[ $key ] ) ) {
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $ip_keys as $key ) {
+				if ( empty( $_SERVER[ $key ] ) ) {
+					continue;
+				}
+
 				$ip = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
 				if ( strpos( $ip, ',' ) !== false ) {
 					$ip = trim( explode( ',', $ip )[0] );
@@ -811,6 +825,10 @@ class NexifyMy_Security_Integrations {
 					return $ip;
 				}
 			}
+		}
+
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
 		}
 
 		return '0.0.0.0';

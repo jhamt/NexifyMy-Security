@@ -273,15 +273,30 @@ class NexifyMy_Security_GraphQL_Security {
 	 * Get client IP.
 	 */
 	private function get_client_ip() {
-		$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR' );
-		foreach ( $ip_keys as $key ) {
-			if ( ! empty( $_SERVER[ $key ] ) ) {
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
+
+		if ( $remote_addr && in_array( $remote_addr, (array) $trusted_proxies, true ) ) {
+			$ip_keys = array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
+			foreach ( $ip_keys as $key ) {
+				if ( empty( $_SERVER[ $key ] ) ) {
+					continue;
+				}
+
 				$ip = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
+				if ( strpos( $ip, ',' ) !== false ) {
+					$ip = trim( explode( ',', $ip )[0] );
+				}
 				if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
 					return $ip;
 				}
 			}
 		}
+
+		if ( $remote_addr && filter_var( $remote_addr, FILTER_VALIDATE_IP ) ) {
+			return $remote_addr;
+		}
+
 		return '0.0.0.0';
 	}
 
