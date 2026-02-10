@@ -550,11 +550,43 @@
 
       // 2FA Settings Save
       $("#save-2fa-settings").on("click", function () {
+        var mandatoryRoles = [];
+        $('input[name="2fa-roles[]"]:checked').each(function () {
+          mandatoryRoles.push($(this).val());
+        });
+
         var settings = {
           enabled: $("#2fa-enabled").is(":checked") ? 1 : 0,
           force_admin: $("#2fa-force-admin").is(":checked") ? 1 : 0,
-          email_backup: $("#2fa-email-backup").is(":checked") ? 1 : 0,
-          remember_days: $("#2fa-remember-days").val(),
+          force_all: $("#2fa-force-all").is(":checked") ? 1 : 0,
+          email_backup:
+            ($("#2fa-email-backup").length &&
+              $("#2fa-email-backup").is(":checked")) ||
+            ($("#2fa-email").length && $("#2fa-email").is(":checked"))
+              ? 1
+              : 0,
+          remember_days:
+            $("#2fa-remember-days").val() ||
+            Math.max(
+              1,
+              Math.round(
+                (parseInt($("#2fa-remember-duration").val(), 10) || 2592000) /
+                  86400,
+              ),
+            ),
+          totp_enabled: $("#2fa-totp").is(":checked") ? 1 : 0,
+          email_enabled: $("#2fa-email").is(":checked") ? 1 : 0,
+          backup_codes: $("#2fa-backup").is(":checked") ? 1 : 0,
+          backup_code_count: $("#2fa-backup-count").val() || 10,
+          mandatory_roles: mandatoryRoles,
+          optional_all: $("#2fa-optional").is(":checked") ? 1 : 0,
+          grace_period: $("#2fa-grace-period").val() || 7,
+          remember_device: $("#2fa-remember").is(":checked") ? 1 : 0,
+          remember_duration: $("#2fa-remember-duration").val() || 2592000,
+          code_expiry: $("#2fa-code-expiry").val() || 300,
+          max_attempts: $("#2fa-max-attempts").val() || 3,
+          lockout_duration: $("#2fa-lockout").val() || 900,
+          email_notify: $("#2fa-notify").is(":checked") ? 1 : 0,
         };
         saveModuleSettings("two_factor", settings, $(this), $("#2fa-status"));
       });
@@ -941,11 +973,42 @@
 
       // Rate Limiter Settings Save
       $("#save-rate-settings").on("click", function () {
+        var maxAttempts = $("#rate-login-attempts").length
+          ? $("#rate-login-attempts").val() || 5
+          : $("#rate-requests").val() || 5;
+        var loginWindowMinutes = $("#rate-login-window").length
+          ? $("#rate-login-window").val() || 15
+          : 15;
+        var lockoutDuration = $("#rate-login-lockout").length
+          ? $("#rate-login-lockout").val() || 1800
+          : $("#rate-duration").val() || 900;
+        var whitelistValue = $("#rate-whitelist").val() || "";
+
         var settings = {
           enabled: $("#rate-enabled").is(":checked") ? 1 : 0,
-          max_attempts: $("#rate-login-attempts").val() || 5,
-          login_window: $("#rate-login-window").val() || 15,
-          lockout_duration: $("#rate-login-lockout").val() || 1800,
+          max_attempts: maxAttempts,
+          max_login_attempts: maxAttempts,
+          login_window: loginWindowMinutes,
+          attempt_window_minutes: loginWindowMinutes,
+          attempt_window: (parseInt(loginWindowMinutes, 10) || 15) * 60,
+          lockout_duration: lockoutDuration,
+          login_lockout: lockoutDuration,
+          block_duration: lockoutDuration,
+          whitelist: whitelistValue,
+          whitelist_ips: whitelistValue,
+          requests_per_minute: $("#rate-requests").val() || 60,
+          login_notify: $("#rate-login-notify").is(":checked") ? 1 : 0,
+          api_requests_per_minute: $("#rate-api-requests").val() || 60,
+          api_burst: $("#rate-api-burst").val() || 10,
+          api_block: $("#rate-api-block").is(":checked") ? 1 : 0,
+          page_requests_per_minute: $("#rate-page-requests").val() || 120,
+          ajax_requests_per_minute: $("#rate-ajax-requests").val() || 200,
+          search_requests_per_minute: $("#rate-search-requests").val() || 10,
+          comment_requests_per_minute:
+            $("#rate-comment-requests").val() || 5,
+          trust_proxy: $("#rate-trust-proxy").is(":checked") ? 1 : 0,
+          log_violations: $("#rate-log-violations").is(":checked") ? 1 : 0,
+          response_code: $("#rate-response-code").val() || 429,
         };
         saveModuleSettings(
           "rate_limiter",
