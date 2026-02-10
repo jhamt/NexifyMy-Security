@@ -368,9 +368,146 @@ if ( ! function_exists( 'wp_json_encode' ) ) {
 	}
 }
 
+if ( ! function_exists( 'is_user_logged_in' ) ) {
+	function is_user_logged_in() {
+		return ! empty( $GLOBALS['nexifymy_testing_user_id'] );
+	}
+}
+
+if ( ! function_exists( 'wp_get_session_token' ) ) {
+	function wp_get_session_token() {
+		return $GLOBALS['nexifymy_testing_session_token'] ?? 'test-session-token';
+	}
+}
+
+if ( ! function_exists( 'get_user_meta' ) ) {
+	function get_user_meta( $user_id, $key = '', $single = false ) {
+		if ( ! isset( $GLOBALS['nexifymy_test_user_meta'][ $user_id ] ) ) {
+			return $single ? '' : array();
+		}
+		if ( empty( $key ) ) {
+			return $GLOBALS['nexifymy_test_user_meta'][ $user_id ];
+		}
+		if ( ! isset( $GLOBALS['nexifymy_test_user_meta'][ $user_id ][ $key ] ) ) {
+			return $single ? '' : array();
+		}
+		return $single
+			? $GLOBALS['nexifymy_test_user_meta'][ $user_id ][ $key ]
+			: array( $GLOBALS['nexifymy_test_user_meta'][ $user_id ][ $key ] );
+	}
+}
+
+if ( ! function_exists( 'update_user_meta' ) ) {
+	function update_user_meta( $user_id, $meta_key, $meta_value ) {
+		if ( ! isset( $GLOBALS['nexifymy_test_user_meta'] ) ) {
+			$GLOBALS['nexifymy_test_user_meta'] = array();
+		}
+		if ( ! isset( $GLOBALS['nexifymy_test_user_meta'][ $user_id ] ) ) {
+			$GLOBALS['nexifymy_test_user_meta'][ $user_id ] = array();
+		}
+		$GLOBALS['nexifymy_test_user_meta'][ $user_id ][ $meta_key ] = $meta_value;
+		return true;
+	}
+}
+
+if ( ! function_exists( 'delete_user_meta' ) ) {
+	function delete_user_meta( $user_id, $meta_key ) {
+		unset( $GLOBALS['nexifymy_test_user_meta'][ $user_id ][ $meta_key ] );
+		return true;
+	}
+}
+
+if ( ! function_exists( 'wp_logout' ) ) {
+	function wp_logout() {
+		$GLOBALS['nexifymy_test_logged_out'] = true;
+	}
+}
+
+if ( ! function_exists( 'wp_redirect' ) ) {
+	function wp_redirect( $location, $status = 302 ) {
+		$GLOBALS['nexifymy_test_redirect'] = $location;
+		return true;
+	}
+}
+
+if ( ! function_exists( 'wp_login_url' ) ) {
+	function wp_login_url( $redirect = '' ) {
+		return 'http://example.com/wp-login.php';
+	}
+}
+
+if ( ! function_exists( 'add_query_arg' ) ) {
+	function add_query_arg( $args, $url = '' ) {
+		if ( is_array( $args ) ) {
+			return $url . '?' . http_build_query( $args );
+		}
+		return $url;
+	}
+}
+
+if ( ! function_exists( 'esc_url_raw' ) ) {
+	function esc_url_raw( $url ) {
+		return $url;
+	}
+}
+
+if ( ! function_exists( 'admin_url' ) ) {
+	function admin_url( $path = '' ) {
+		return 'http://example.com/wp-admin/' . ltrim( $path, '/' );
+	}
+}
+
+if ( ! function_exists( 'get_userdata' ) ) {
+	function get_userdata( $user_id ) {
+		if ( isset( $GLOBALS['nexifymy_test_userdata'][ $user_id ] ) ) {
+			return $GLOBALS['nexifymy_test_userdata'][ $user_id ];
+		}
+		return false;
+	}
+}
+
+if ( ! function_exists( 'wp_is_post_revision' ) ) {
+	function wp_is_post_revision( $post_id ) {
+		return false;
+	}
+}
+
+if ( ! function_exists( 'get_post' ) ) {
+	function get_post( $post_id ) {
+		return (object) array(
+			'ID'        => $post_id,
+			'post_type' => 'post',
+		);
+	}
+}
+
+if ( ! function_exists( 'get_plugin_data' ) ) {
+	function get_plugin_data( $plugin_file ) {
+		return array( 'Name' => basename( $plugin_file ) );
+	}
+}
+
+if ( ! function_exists( 'dbDelta' ) ) {
+	function dbDelta( $queries ) {
+		return array();
+	}
+}
+
 // Define WP constants.
+if ( ! defined( 'ARRAY_A' ) ) {
+	define( 'ARRAY_A', 'ARRAY_A' );
+}
+if ( ! defined( 'ARRAY_N' ) ) {
+	define( 'ARRAY_N', 'ARRAY_N' );
+}
+if ( ! defined( 'OBJECT' ) ) {
+	define( 'OBJECT', 'OBJECT' );
+}
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __DIR__ ) . '/' );
+}
+if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
+	define( 'WP_PLUGIN_DIR', ABSPATH . 'wp-content/plugins' );
 }
 
 // Initialize test options storage.
@@ -382,16 +519,23 @@ $GLOBALS['nexifymy_test_actions'] = array();
 $GLOBALS['nexifymy_test_filters'] = array();
 $GLOBALS['nexifymy_test_cron']    = array();
 $GLOBALS['nexifymy_test_mail']    = array();
+$GLOBALS['nexifymy_test_user_meta'] = array();
+$GLOBALS['nexifymy_test_userdata']  = array();
 
 // Minimal $wpdb mock for module/unit tests.
 if ( empty( $GLOBALS['wpdb'] ) ) {
 	class NexifyMy_Test_WPDB {
 		public $prefix = 'wp_';
 		public $dbname = 'wordpress';
+		public $usermeta = 'wp_usermeta';
 		public $insert_calls = array();
+		public $update_calls = array();
 		public $queries = array();
 		public $get_var_map = array();
 		public $get_col_map = array();
+		public $get_row_map = array();
+		public $get_results_map = array();
+		public $insert_id = 1;
 
 		public function get_charset_collate() {
 			return 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci';
@@ -421,8 +565,23 @@ if ( empty( $GLOBALS['wpdb'] ) ) {
 			return array();
 		}
 
+		public function get_row( $query, $output = OBJECT ) {
+			$this->queries[] = $query;
+			foreach ( $this->get_row_map as $needle => $value ) {
+				if ( strpos( $query, $needle ) !== false ) {
+					return $value;
+				}
+			}
+			return null;
+		}
+
 		public function insert( $table, $data, $format = null ) {
 			$this->insert_calls[] = compact( 'table', 'data', 'format' );
+			return true;
+		}
+
+		public function update( $table, $data, $where, $format = null, $where_format = null ) {
+			$this->update_calls[] = compact( 'table', 'data', 'where', 'format', 'where_format' );
 			return true;
 		}
 
@@ -430,10 +589,77 @@ if ( empty( $GLOBALS['wpdb'] ) ) {
 			$this->queries[] = $query;
 			return 0;
 		}
+
+		public function get_results( $query, $output = OBJECT ) {
+			$this->queries[] = $query;
+			foreach ( $this->get_results_map as $needle => $value ) {
+				if ( strpos( $query, $needle ) !== false ) {
+					return $value;
+				}
+			}
+			return array();
+		}
 	}
 
 	$GLOBALS['wpdb'] = new NexifyMy_Test_WPDB();
 }
 
-// Include plugin files (for class definitions).
-// Note: In real WP tests, you'd use the WordPress test suite.
+if ( ! function_exists( 'wp_update_user' ) ) {
+	function wp_update_user( $userdata ) {
+		$GLOBALS['nexifymy_test_wp_update_user'][] = $userdata;
+		return isset( $userdata['ID'] ) ? $userdata['ID'] : 0;
+	}
+}
+
+if ( ! function_exists( 'get_role' ) ) {
+	function get_role( $role ) {
+		$roles = array(
+			'administrator' => (object) array(
+				'capabilities' => array(
+					'manage_options'    => true,
+					'edit_posts'        => true,
+					'delete_posts'      => true,
+					'manage_categories' => true,
+				),
+			),
+			'editor' => (object) array(
+				'capabilities' => array(
+					'edit_posts'   => true,
+					'delete_posts' => true,
+				),
+			),
+			'subscriber' => (object) array(
+				'capabilities' => array(
+					'read' => true,
+				),
+			),
+		);
+		return isset( $roles[ $role ] ) ? $roles[ $role ] : null;
+	}
+}
+
+if ( ! function_exists( 'wp_clear_scheduled_hook' ) ) {
+	function wp_clear_scheduled_hook( $hook ) {
+		unset( $GLOBALS['nexifymy_test_cron'][ $hook ] );
+		return true;
+	}
+}
+
+if ( ! function_exists( 'esc_attr_e' ) ) {
+	function esc_attr_e( $text ) {
+		echo $text;
+	}
+}
+
+if ( ! function_exists( 'wp_remote_post' ) ) {
+	function wp_remote_post( $url, $args = array() ) {
+		$GLOBALS['nexifymy_test_remote_posts'][] = compact( 'url', 'args' );
+		return array( 'response' => array( 'code' => 200 ) );
+	}
+}
+
+if ( ! function_exists( 'wp_remote_retrieve_body' ) ) {
+	function wp_remote_retrieve_body( $response ) {
+		return isset( $response['body'] ) ? $response['body'] : '';
+	}
+}

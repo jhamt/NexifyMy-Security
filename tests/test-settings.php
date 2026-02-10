@@ -38,6 +38,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		$this->assertTrue( $settings['modules']['waf_enabled'] );
 		$this->assertTrue( $settings['modules']['scanner_enabled'] );
 		$this->assertTrue( $settings['modules']['rate_limiter_enabled'] );
+		$this->assertTrue( $settings['modules']['temp_permissions_enabled'] );
 
 		// Check rate limiter defaults.
 		$this->assertEquals( 5, $settings['rate_limiter']['max_attempts'] );
@@ -45,6 +46,10 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 
 		// Check logging defaults.
 		$this->assertEquals( 30, $settings['logging']['retention_days'] );
+
+		// Check AI zero-trust defaults.
+		$this->assertEquals( 900, $settings['ai_detection']['zero_trust_reauth_interval'] );
+		$this->assertEquals( 20, $settings['ai_detection']['zero_trust_risk_spike_threshold'] );
 	}
 
 	/**
@@ -101,5 +106,27 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		// Check it's back to default.
 		$max_attempts = NexifyMy_Security_Settings::get( 'rate_limiter', 'max_attempts', 0 );
 		$this->assertEquals( 5, $max_attempts );
+	}
+
+	/**
+	 * Test sanitization for temp-permissions module toggle and AI zero-trust ranges.
+	 */
+	public function test_sanitize_settings_clamps_new_module_and_ai_fields() {
+		$settings = new NexifyMy_Security_Settings();
+		$output   = $settings->sanitize_settings(
+			array(
+				'modules'      => array(
+					'temp_permissions_enabled' => '',
+				),
+				'ai_detection' => array(
+					'zero_trust_reauth_interval'      => 20,
+					'zero_trust_risk_spike_threshold' => 500,
+				),
+			)
+		);
+
+		$this->assertFalse( $output['modules']['temp_permissions_enabled'] );
+		$this->assertEquals( 60, $output['ai_detection']['zero_trust_reauth_interval'] );
+		$this->assertEquals( 100, $output['ai_detection']['zero_trust_risk_spike_threshold'] );
 	}
 }
