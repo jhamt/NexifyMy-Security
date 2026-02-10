@@ -215,7 +215,6 @@ body[class*="nexifymy-security"] #wpfooter {
    ========================================================================== */
 
 /* Tabs styling moved to unified section below (line ~954) */
-}
 
 /* Tab Content */
 .nms-tab-content-wrapper {
@@ -4280,4 +4279,73 @@ body[class*="nexifymy-security"] #wpfooter {
     margin-top: 15px;
     font-size: 16px;
     color: var(--nms-gray-600);
+}
+
+/* ==========================================================================
+   TEMPORARY ACCESS PAGE
+   ========================================================================== */
+
+.nms-temp-access-page .nms-temp-request-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.nms-temp-access-page .nms-temp-field {
+  margin-bottom: 14px;
+}
+
+.nms-temp-access-page .nms-temp-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--nms-gray-700);
+}
+
+.nms-temp-feedback {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nms-temp-feedback--ok {
+  color: var(--nms-success);
+}
+
+.nms-temp-feedback--error {
+  color: var(--nms-danger);
+}
+
+.nms-temp-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.nms-temp-status--pending {
+  background: var(--nms-warning-light);
+  color: var(--nms-warning);
+}
+
+.nms-temp-status--active {
+  background: var(--nms-success-light);
+  color: var(--nms-success);
+}
+
+.nms-temp-status--expired,
+.nms-temp-status--revoked {
+  background: var(--nms-gray-100);
+  color: var(--nms-gray-600);
+}
+
+.nms-temp-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }

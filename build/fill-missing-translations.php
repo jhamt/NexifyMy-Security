@@ -35,8 +35,8 @@ foreach ( $po_files as $po_file ) {
 	}
 
 	$current_msgid = null;
-	$updated = 0;
-	$line_count = count( $lines );
+	$updated       = 0;
+	$line_count    = count( $lines );
 
 	for ( $i = 0; $i < $line_count; $i++ ) {
 		$line = $lines[ $i ];
@@ -54,7 +54,7 @@ foreach ( $po_files as $po_file ) {
 
 			// Fill missing translation with source string.
 			$lines[ $i ] = 'msgstr "' . addcslashes( $current_msgid, "\\\"\n\r\t" ) . '"';
-			$updated++;
+			++$updated;
 		}
 	}
 
