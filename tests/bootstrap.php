@@ -8,10 +8,53 @@
 // Define test mode.
 define( 'NEXIFYMY_TESTING', true );
 
+// Define WordPress time constants.
+if ( ! defined( 'MINUTE_IN_SECONDS' ) ) {
+	define( 'MINUTE_IN_SECONDS', 60 );
+}
+
+if ( ! defined( 'HOUR_IN_SECONDS' ) ) {
+	define( 'HOUR_IN_SECONDS', 3600 );
+}
+
+if ( ! defined( 'DAY_IN_SECONDS' ) ) {
+	define( 'DAY_IN_SECONDS', 86400 );
+}
+
+if ( ! defined( 'WEEK_IN_SECONDS' ) ) {
+	define( 'WEEK_IN_SECONDS', 604800 );
+}
+
+if ( ! defined( 'MONTH_IN_SECONDS' ) ) {
+	define( 'MONTH_IN_SECONDS', 2592000 );
+}
+
+if ( ! defined( 'YEAR_IN_SECONDS' ) ) {
+	define( 'YEAR_IN_SECONDS', 31536000 );
+}
+
 // Mock WordPress functions for standalone testing.
 if ( ! function_exists( '__' ) ) {
 	function __( $text ) {
 		return $text;
+	}
+}
+
+if ( ! function_exists( 'esc_html' ) ) {
+	function esc_html( $text ) {
+		return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' );
+	}
+}
+
+if ( ! function_exists( 'esc_url' ) ) {
+	function esc_url( $url ) {
+		return htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
+	}
+}
+
+if ( ! function_exists( 'esc_attr' ) ) {
+	function esc_attr( $text ) {
+		return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' );
 	}
 }
 
@@ -48,6 +91,47 @@ if ( ! function_exists( 'trailingslashit' ) ) {
 if ( ! function_exists( 'wp_unslash' ) ) {
 	function wp_unslash( $value ) {
 		return $value;
+	}
+}
+
+if ( ! function_exists( 'wp_rand' ) ) {
+	function wp_rand( $min = 0, $max = 0 ) {
+		return mt_rand( $min, $max );
+	}
+}
+
+if ( ! function_exists( 'wp_generate_uuid4' ) ) {
+	function wp_generate_uuid4() {
+		$data = random_bytes( 16 );
+		$data[6] = chr( ( ord( $data[6] ) & 0x0f ) | 0x40 );
+		$data[8] = chr( ( ord( $data[8] ) & 0x3f ) | 0x80 );
+		return vsprintf( '%s%s-%s-%s-%s-%s%s%s', str_split( bin2hex( $data ), 4 ) );
+	}
+}
+
+if ( ! function_exists( 'wp_hash_password' ) ) {
+	function wp_hash_password( $password ) {
+		return '$P$B' . md5( $password );
+	}
+}
+
+if ( ! function_exists( 'wp_generate_password' ) ) {
+	function wp_generate_password( $length = 12, $special_chars = true, $extra_special_chars = false ) {
+		$chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+		if ( $special_chars ) {
+			$chars .= '!@#$%^&*()';
+		}
+		$password = '';
+		for ( $i = 0; $i < $length; $i++ ) {
+			$password .= $chars[ rand( 0, strlen( $chars ) - 1 ) ];
+		}
+		return $password;
+	}
+}
+
+if ( ! function_exists( 'is_admin' ) ) {
+	function is_admin() {
+		return ! empty( $GLOBALS['nexifymy_testing_is_admin'] );
 	}
 }
 
@@ -312,6 +396,18 @@ if ( ! function_exists( 'sanitize_text_field' ) ) {
 	}
 }
 
+if ( ! function_exists( 'sanitize_user' ) ) {
+	/**
+	 * Mock sanitize_user for tests.
+	 *
+	 * @param string $username Username to sanitize.
+	 * @return string
+	 */
+	function sanitize_user( $username ) {
+		return preg_replace( '/[^a-zA-Z0-9_\-\.@]/', '', (string) $username );
+	}
+}
+
 if ( ! function_exists( 'sanitize_key' ) ) {
 	/**
 	 * Mock sanitize_key for tests.
@@ -321,6 +417,61 @@ if ( ! function_exists( 'sanitize_key' ) ) {
 	 */
 	function sanitize_key( $key ) {
 		return preg_replace( '/[^a-z0-9_\-]/', '', strtolower( $key ) );
+	}
+}
+
+if ( ! function_exists( 'sanitize_email' ) ) {
+	function sanitize_email( $email ) {
+		return filter_var( (string) $email, FILTER_SANITIZE_EMAIL );
+	}
+}
+
+if ( ! function_exists( 'esc_sql' ) ) {
+	function esc_sql( $value ) {
+		return addslashes( (string) $value );
+	}
+}
+
+if ( ! function_exists( 'wp_parse_url' ) ) {
+	function wp_parse_url( $url, $component = -1 ) {
+		return parse_url( $url, $component );
+	}
+}
+
+if ( ! function_exists( 'add_shortcode' ) ) {
+	function add_shortcode( $tag, $callback ) {
+		$GLOBALS['nexifymy_test_shortcodes'][ $tag ] = $callback;
+		return true;
+	}
+}
+
+if ( ! function_exists( 'wp_verify_nonce' ) ) {
+	function wp_verify_nonce( $nonce, $action = -1 ) {
+		return true;
+	}
+}
+
+if ( ! function_exists( 'wp_nonce_field' ) ) {
+	function wp_nonce_field( $action = -1, $name = '_wpnonce', $referer = true, $display = true ) {
+		$field = '<input type="hidden" name="' . esc_attr( $name ) . '" value="test-nonce" />';
+		if ( $display ) {
+			echo $field;
+		}
+		return $field;
+	}
+}
+
+if ( ! function_exists( 'get_user_by' ) ) {
+	function get_user_by( $field, $value ) {
+		foreach ( $GLOBALS['nexifymy_test_userdata'] as $user ) {
+			if ( 'email' === $field && isset( $user->user_email ) && $user->user_email === $value ) {
+				return $user;
+			}
+			if ( 'id' === $field && isset( $user->ID ) && (int) $user->ID === (int) $value ) {
+				return $user;
+			}
+		}
+		return false;
 	}
 }
 
@@ -506,6 +657,9 @@ if ( ! defined( 'OBJECT' ) ) {
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __DIR__ ) . '/' );
 }
+if ( ! defined( 'NEXIFYMY_SECURITY_PATH' ) ) {
+	define( 'NEXIFYMY_SECURITY_PATH', dirname( __DIR__ ) . '/' );
+}
 if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
 	define( 'WP_PLUGIN_DIR', ABSPATH . 'wp-content/plugins' );
 }
@@ -661,5 +815,71 @@ if ( ! function_exists( 'wp_remote_post' ) ) {
 if ( ! function_exists( 'wp_remote_retrieve_body' ) ) {
 	function wp_remote_retrieve_body( $response ) {
 		return isset( $response['body'] ) ? $response['body'] : '';
+	}
+}
+
+if ( ! function_exists( 'wp_remote_retrieve_response_code' ) ) {
+	function wp_remote_retrieve_response_code( $response ) {
+		return isset( $response['response']['code'] ) ? (int) $response['response']['code'] : 0;
+	}
+}
+
+if ( ! function_exists( 'get_transient' ) ) {
+	function get_transient( $transient ) {
+		if ( ! isset( $GLOBALS['nexifymy_test_transients'] ) ) {
+			$GLOBALS['nexifymy_test_transients'] = array();
+		}
+		if ( isset( $GLOBALS['nexifymy_test_transients'][ $transient ] ) ) {
+			$data = $GLOBALS['nexifymy_test_transients'][ $transient ];
+			if ( $data['expiration'] === 0 || $data['expiration'] > time() ) {
+				return $data['value'];
+			} else {
+				unset( $GLOBALS['nexifymy_test_transients'][ $transient ] );
+			}
+		}
+		return false;
+	}
+}
+
+if ( ! function_exists( 'set_transient' ) ) {
+	function set_transient( $transient, $value, $expiration = 0 ) {
+		if ( ! isset( $GLOBALS['nexifymy_test_transients'] ) ) {
+			$GLOBALS['nexifymy_test_transients'] = array();
+		}
+		$GLOBALS['nexifymy_test_transients'][ $transient ] = array(
+			'value'      => $value,
+			'expiration' => $expiration > 0 ? time() + $expiration : 0,
+		);
+		return true;
+	}
+}
+
+if ( ! function_exists( 'delete_transient' ) ) {
+	function delete_transient( $transient ) {
+		if ( isset( $GLOBALS['nexifymy_test_transients'][ $transient ] ) ) {
+			unset( $GLOBALS['nexifymy_test_transients'][ $transient ] );
+			return true;
+		}
+		return false;
+	}
+}
+
+// Mock Logger class for deception tests.
+if ( ! class_exists( 'NexifyMy_Security_Logger', false ) ) {
+	class NexifyMy_Security_Logger {
+		public static function log( $type, $message, $level = 'info', $data = array() ) {
+			$GLOBALS['nexifymy_test_logger_calls'][] = compact( 'type', 'message', 'level', 'data' );
+			return true;
+		}
+	}
+}
+
+// Mock Firewall class for deception tests.
+if ( ! class_exists( 'NexifyMy_Security_Firewall', false ) ) {
+	class NexifyMy_Security_Firewall {
+		public static function block_ip( $ip, $reason = '' ) {
+			$GLOBALS['nexifymy_test_firewall_blocks'][] = compact( 'ip', 'reason' );
+			return true;
+		}
 	}
 }
