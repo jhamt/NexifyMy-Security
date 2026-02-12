@@ -36,6 +36,15 @@ class NexifyMy_Security_P2P {
     /** REST route path for peer handshake / heartbeat. */
     const REST_ROUTE_HEARTBEAT = '/p2p/heartbeat';
 
+    /** REST route path for earning credits. */
+    const REST_ROUTE_EARN_CREDITS = '/p2p/earn-credits';
+
+    /** REST route path for retrieving credits/reputation. */
+    const REST_ROUTE_MY_CREDITS = '/p2p/my-credits';
+
+    /** REST route path for redeeming benefits. */
+    const REST_ROUTE_REDEEM = '/p2p/redeem';
+
     /** Cron hook name for periodic sync. */
     const CRON_HOOK = 'nexifymy_p2p_sync';
 
@@ -65,6 +74,30 @@ class NexifyMy_Security_P2P {
 
     /** Maximum number of peers allowed. */
     const MAX_PEERS = 50;
+
+    /** Option key for credit table schema version. */
+    const CREDITS_SCHEMA_OPTION = 'nexifymy_p2p_credits_schema_version';
+
+    /** Current credit table schema version. */
+    const CREDITS_SCHEMA_VERSION = '1.0.0';
+
+    /** Credits table suffix. */
+    const CREDITS_TABLE = 'nexifymy_p2p_credits';
+
+    /** Option key for cached credit data by site_id hash. */
+    const CREDITS_CACHE_OPTION = 'nexifymy_p2p_credits_cache';
+
+    /** Option key for cached accuracy percentages by site_id hash. */
+    const CREDITS_ACCURACY_OPTION = 'nexifymy_p2p_credits_accuracy';
+
+    /** Option key for contribution counters by site_id hash. */
+    const CREDITS_CONTRIBUTION_OPTION = 'nexifymy_p2p_contribution_counts';
+
+    /** Option key for redeemed benefits per site hash. */
+    const CREDITS_BENEFITS_OPTION = 'nexifymy_p2p_redeemed_benefits';
+
+    /** Transient prefix for threat validation votes. */
+    const VALIDATION_PREFIX = 'nexifymy_p2p_validation_';
 
     /* ================================================================
      *  Properties
@@ -103,6 +136,9 @@ class NexifyMy_Security_P2P {
 
         // Ensure this node has a unique API key.
         self::ensure_node_key();
+
+        // Ensure credit/reputation schema exists.
+        self::maybe_create_credits_table();
 
         /*
          * Hook into the action fired by WAF / Deception / Login modules
@@ -411,6 +447,8 @@ class NexifyMy_Security_P2P {
             'type'      => 'ip_block', // future: 'malware_hash', 'url_pattern', etc.
         );
 
+        $success_count = 0;
+
         foreach ( $peers as $index => $peer ) {
 
             $endpoint = trailingslashit( $peer['url'] ) . 'wp-json/' . self::REST_NAMESPACE . self::REST_ROUTE_RECEIVE;
@@ -458,6 +496,7 @@ class NexifyMy_Security_P2P {
                     $results[ $peer['url'] ] = 'ok';
                     $peers[ $index ]['threats_sent'] = intval( $peer['threats_sent'] ) + 1;
                     $peers[ $index ]['last_status']  = 'ok';
+                    $success_count++;
                 } else {
                     $body = wp_remote_retrieve_body( $response );
                     $results[ $peer['url'] ] = new WP_Error(
@@ -473,6 +512,16 @@ class NexifyMy_Security_P2P {
                         array( 'peer' => $peer['url'], 'ip' => $ip, 'http_code' => $code )
                     );
                 }
+            }
+        }
+
+        // Award contribution credits once per successful threat-share event.
+        if ( $success_count > 0 ) {
+            $site_id = self::get_anonymous_site_id();
+            self::award_credits( $site_id, 'blocked_ip', 1 );
+
+            if ( false !== stripos( $reason, 'zero-day' ) || false !== stripos( $reason, 'zeroday' ) ) {
+                self::award_credits( $site_id, 'zero_day', 1 );
             }
         }
 
@@ -516,6 +565,81 @@ class NexifyMy_Security_P2P {
             'methods'             => WP_REST_Server::READABLE, // GET
             'callback'            => array( __CLASS__, 'rest_heartbeat' ),
             'permission_callback' => array( __CLASS__, 'rest_permission_check' ),
+        ) );
+
+        /*
+         * POST /wp-json/nexifymy/v1/p2p/earn-credits
+         *
+         * Awards credits for a contribution event.
+         */
+        register_rest_route( self::REST_NAMESPACE, self::REST_ROUTE_EARN_CREDITS, array(
+            'methods'             => WP_REST_Server::CREATABLE, // POST
+            'callback'            => array( __CLASS__, 'rest_earn_credits' ),
+            'permission_callback' => array( __CLASS__, 'rest_admin_or_peer_permission' ),
+            'args'                => array(
+                'site_id' => array(
+                    'required'          => false,
+                    'type'              => 'string',
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+                'contribution_type' => array(
+                    'required'          => true,
+                    'type'              => 'string',
+                    'sanitize_callback' => 'sanitize_key',
+                ),
+                'value' => array(
+                    'required'          => false,
+                    'type'              => 'integer',
+                    'default'           => 1,
+                    'sanitize_callback' => 'absint',
+                ),
+            ),
+        ) );
+
+        /*
+         * GET /wp-json/nexifymy/v1/p2p/my-credits
+         *
+         * Returns credit balance, reputation, accuracy and badges.
+         */
+        register_rest_route( self::REST_NAMESPACE, self::REST_ROUTE_MY_CREDITS, array(
+            'methods'             => WP_REST_Server::READABLE, // GET
+            'callback'            => array( __CLASS__, 'rest_my_credits' ),
+            'permission_callback' => array( __CLASS__, 'rest_admin_or_peer_permission' ),
+            'args'                => array(
+                'site_id' => array(
+                    'required'          => false,
+                    'type'              => 'string',
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+        ) );
+
+        /*
+         * POST /wp-json/nexifymy/v1/p2p/redeem
+         *
+         * Redeems credits for premium benefits.
+         */
+        register_rest_route( self::REST_NAMESPACE, self::REST_ROUTE_REDEEM, array(
+            'methods'             => WP_REST_Server::CREATABLE, // POST
+            'callback'            => array( __CLASS__, 'rest_redeem_credits' ),
+            'permission_callback' => array( __CLASS__, 'rest_admin_or_peer_permission' ),
+            'args'                => array(
+                'site_id' => array(
+                    'required'          => false,
+                    'type'              => 'string',
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+                'benefit_type' => array(
+                    'required'          => true,
+                    'type'              => 'string',
+                    'sanitize_callback' => 'sanitize_key',
+                ),
+                'credits' => array(
+                    'required'          => false,
+                    'type'              => 'integer',
+                    'sanitize_callback' => 'absint',
+                ),
+            ),
         ) );
     }
 
@@ -679,6 +803,21 @@ class NexifyMy_Security_P2P {
     }
 
     /**
+     * Permission callback allowing either authenticated admin users
+     * or authenticated P2P peer requests.
+     *
+     * @param WP_REST_Request $request Incoming request.
+     * @return bool|WP_Error
+     */
+    public static function rest_admin_or_peer_permission( WP_REST_Request $request ) {
+        if ( function_exists( 'current_user_can' ) && current_user_can( 'manage_options' ) ) {
+            return true;
+        }
+
+        return self::rest_permission_check( $request );
+    }
+
+    /**
      * REST callback: receive a threat report from a peer.
      *
      * @param  WP_REST_Request $request
@@ -727,6 +866,7 @@ class NexifyMy_Security_P2P {
             : self::DEFAULT_TRUST_THRESHOLD;
 
         $blocked = false;
+        $source_site_id = self::get_anonymous_site_id( $source ? $source : $peer_url );
 
         if ( $score >= $threshold ) {
 
@@ -746,6 +886,9 @@ class NexifyMy_Security_P2P {
 
                 if ( $blocked ) {
                     $intel['action'] = 'blocked';
+                    self::record_validation_vote( $ip, 'block' );
+                    self::update_accuracy_by_feedback( $source_site_id, true );
+                    self::award_credits( $source_site_id, 'high_quality_report', 1 );
 
                     self::log(
                         'p2p_preemptive_block',
@@ -781,6 +924,14 @@ class NexifyMy_Security_P2P {
                 'info',
                 $intel
             );
+        }
+
+        // If peers propagate allowlist events, treat this as false-positive feedback.
+        if ( 'allowlist' === $type || 'false_positive' === $type ) {
+            $majority_allowlisted = self::record_validation_vote( $ip, 'allowlist' );
+            if ( $majority_allowlisted ) {
+                self::update_accuracy_by_feedback( $source_site_id, false );
+            }
         }
 
         // Cache the intelligence regardless of block decision.
@@ -824,7 +975,837 @@ class NexifyMy_Security_P2P {
     }
 
     /* ================================================================
-     *  5. CRON SYNC (HOURLY)
+     *  5. CREDITS / REPUTATION / REDEEM
+     * ============================================================= */
+
+    /**
+     * Ensure credits table exists.
+     *
+     * @return void
+     */
+    public static function maybe_create_credits_table() {
+        $current = get_option( self::CREDITS_SCHEMA_OPTION, '' );
+        if ( self::CREDITS_SCHEMA_VERSION === $current ) {
+            return;
+        }
+
+        self::create_credits_table();
+    }
+
+    /**
+     * Create credits table schema.
+     *
+     * @return void
+     */
+    public static function create_credits_table() {
+        global $wpdb;
+
+        if ( empty( $wpdb ) ) {
+            return;
+        }
+
+        if ( ! function_exists( 'dbDelta' ) ) {
+            $upgrade_file = ABSPATH . 'wp-admin/includes/upgrade.php';
+            if ( file_exists( $upgrade_file ) ) {
+                require_once $upgrade_file;
+            }
+        }
+
+        if ( ! function_exists( 'dbDelta' ) ) {
+            return;
+        }
+
+        $table_name      = self::get_credits_table_name();
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE {$table_name} (
+            id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+            site_id varchar(128) NOT NULL,
+            credits_earned bigint(20) unsigned NOT NULL DEFAULT 0,
+            credits_spent bigint(20) unsigned NOT NULL DEFAULT 0,
+            reputation_score decimal(14,2) NOT NULL DEFAULT 0,
+            last_contribution datetime NULL,
+            PRIMARY KEY (id),
+            UNIQUE KEY site_id (site_id)
+        ) {$charset_collate};";
+
+        dbDelta( $sql );
+        update_option( self::CREDITS_SCHEMA_OPTION, self::CREDITS_SCHEMA_VERSION, false );
+    }
+
+    /**
+     * Award credits to a contributor.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param string $contribution_type Contribution category.
+     * @param int    $value Multiplier.
+     * @return array|WP_Error
+     */
+    public static function award_credits( $site_id, $contribution_type, $value = 1 ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            return new WP_Error( 'invalid_site_id', __( 'Invalid site identifier.', 'nexifymy-security' ) );
+        }
+
+        $credit_value = self::get_contribution_credit_value( $contribution_type );
+        if ( $credit_value <= 0 ) {
+            return new WP_Error( 'invalid_contribution_type', __( 'Unknown contribution type.', 'nexifymy-security' ) );
+        }
+
+        $multiplier = max( 1, absint( $value ) );
+        $earned_now = $credit_value * $multiplier;
+
+        $account = self::get_credit_account( $site_id );
+        $account['credits_earned']     = intval( $account['credits_earned'] ) + $earned_now;
+        $account['last_contribution']  = current_time( 'mysql' );
+        $account['reputation_score']   = self::calculate_reputation_score( $site_id, $account['credits_earned'] );
+
+        self::set_credit_account( $site_id, $account );
+        self::increment_contribution_count( $site_id, $contribution_type, $multiplier );
+
+        self::log(
+            'p2p_credits_awarded',
+            sprintf( 'Awarded %d credits (%s) to contributor %s', $earned_now, $contribution_type, substr( $site_id, 0, 12 ) ),
+            'info',
+            array(
+                'site_id'           => $site_id,
+                'contribution_type' => $contribution_type,
+                'earned_now'        => $earned_now,
+                'credits_earned'    => $account['credits_earned'],
+                'reputation_score'  => $account['reputation_score'],
+            )
+        );
+
+        $account['credits_awarded_now'] = $earned_now;
+        $account['credit_balance']      = max( 0, intval( $account['credits_earned'] ) - intval( $account['credits_spent'] ) );
+        $account['accuracy_percentage'] = self::get_accuracy_percentage( $site_id );
+        $account['premium_free']        = self::is_premium_free( $account );
+        $account['badges']              = self::get_badges_for_site( $site_id );
+
+        return $account;
+    }
+
+    /**
+     * Spend credits for a specific benefit.
+     *
+     * @param int    $credits Explicit spend amount (optional).
+     * @param string $benefit_type Benefit slug.
+     * @param string $site_id Contributor site hash.
+     * @return array|WP_Error
+     */
+    public static function spend_credits( $credits, $benefit_type, $site_id = '' ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            return new WP_Error( 'invalid_site_id', __( 'Invalid site identifier.', 'nexifymy-security' ) );
+        }
+
+        $account = self::get_credit_account( $site_id );
+        $benefit_costs = self::get_benefit_cost_map();
+        $benefit_type  = sanitize_key( $benefit_type );
+
+        if ( ! isset( $benefit_costs[ $benefit_type ] ) ) {
+            return new WP_Error( 'invalid_benefit_type', __( 'Unknown benefit type.', 'nexifymy-security' ) );
+        }
+
+        $cost = absint( $credits );
+        if ( $cost <= 0 ) {
+            $cost = $benefit_costs[ $benefit_type ];
+        }
+
+        $premium_free = self::is_premium_free( $account );
+        if ( $premium_free ) {
+            $cost = 0;
+        }
+
+        $balance = max( 0, intval( $account['credits_earned'] ) - intval( $account['credits_spent'] ) );
+        if ( $balance < $cost ) {
+            return new WP_Error( 'insufficient_credits', __( 'Insufficient credits for this benefit.', 'nexifymy-security' ) );
+        }
+
+        $account['credits_spent']    = intval( $account['credits_spent'] ) + $cost;
+        $account['reputation_score'] = self::calculate_reputation_score( $site_id, $account['credits_earned'] );
+
+        self::set_credit_account( $site_id, $account );
+        self::record_benefit_redemption( $site_id, $benefit_type, $cost, $premium_free );
+
+        self::log(
+            'p2p_credits_spent',
+            sprintf( 'Redeemed benefit %s for contributor %s', $benefit_type, substr( $site_id, 0, 12 ) ),
+            'info',
+            array(
+                'site_id'      => $site_id,
+                'benefit_type' => $benefit_type,
+                'spent'        => $cost,
+                'premium_free' => $premium_free,
+            )
+        );
+
+        $account['spent_now']           = $cost;
+        $account['credit_balance']      = max( 0, intval( $account['credits_earned'] ) - intval( $account['credits_spent'] ) );
+        $account['accuracy_percentage'] = self::get_accuracy_percentage( $site_id );
+        $account['premium_free']        = $premium_free;
+        $account['benefit_type']        = $benefit_type;
+        $account['badges']              = self::get_badges_for_site( $site_id );
+
+        return $account;
+    }
+
+    /**
+     * Update contributor accuracy based on peer feedback.
+     *
+     * +10 when confirmed by peers, -20 when marked as false positive.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param bool   $confirmed Whether feedback is a confirmation.
+     * @return int New accuracy percentage.
+     */
+    public static function update_accuracy_by_feedback( $site_id, $confirmed = true ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            return 100;
+        }
+
+        $accuracy = self::get_accuracy_percentage( $site_id );
+        $accuracy += $confirmed ? 10 : -20;
+        $accuracy  = max( 0, min( 200, $accuracy ) );
+
+        $accuracy_map            = self::get_accuracy_map();
+        $accuracy_map[ $site_id ] = $accuracy;
+        update_option( self::CREDITS_ACCURACY_OPTION, $accuracy_map, false );
+
+        $account = self::get_credit_account( $site_id );
+        $account['reputation_score'] = self::calculate_reputation_score( $site_id, $account['credits_earned'] );
+        self::set_credit_account( $site_id, $account );
+
+        return $accuracy;
+    }
+
+    /**
+     * Retrieve account data for a site hash.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return array
+     */
+    public static function get_credit_account( $site_id = '' ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            return self::get_default_credit_account( self::get_anonymous_site_id() );
+        }
+
+        $cache = self::get_credit_cache();
+        if ( ! empty( $cache[ $site_id ] ) && is_array( $cache[ $site_id ] ) ) {
+            return self::normalise_credit_account_row( $site_id, $cache[ $site_id ] );
+        }
+
+        $db_account = self::get_credit_account_from_table( $site_id );
+        if ( ! empty( $db_account ) ) {
+            $cache[ $site_id ] = $db_account;
+            update_option( self::CREDITS_CACHE_OPTION, $cache, false );
+            return self::normalise_credit_account_row( $site_id, $db_account );
+        }
+
+        return self::get_default_credit_account( $site_id );
+    }
+
+    /**
+     * Get leaderboard of top contributors.
+     *
+     * @param int $limit Number of rows.
+     * @return array
+     */
+    public static function get_credit_leaderboard( $limit = 10 ) {
+        $limit = max( 1, min( 50, absint( $limit ) ) );
+        $cache = self::get_credit_cache();
+        $rows  = array();
+
+        foreach ( $cache as $site_id => $row ) {
+            if ( ! is_array( $row ) ) {
+                continue;
+            }
+            $account = self::normalise_credit_account_row( $site_id, $row );
+            $rows[] = array(
+                'site_id'            => $site_id,
+                'anonymous_site_id'  => self::mask_site_id( $site_id ),
+                'credits_earned'     => $account['credits_earned'],
+                'credits_spent'      => $account['credits_spent'],
+                'credit_balance'     => max( 0, $account['credits_earned'] - $account['credits_spent'] ),
+                'accuracy_percentage'=> self::get_accuracy_percentage( $site_id ),
+                'reputation_score'   => $account['reputation_score'],
+            );
+        }
+
+        usort(
+            $rows,
+            function ( $a, $b ) {
+                if ( floatval( $a['reputation_score'] ) === floatval( $b['reputation_score'] ) ) {
+                    return intval( $b['credits_earned'] ) <=> intval( $a['credits_earned'] );
+                }
+                return floatval( $b['reputation_score'] ) <=> floatval( $a['reputation_score'] );
+            }
+        );
+
+        $rows = array_slice( $rows, 0, $limit );
+        foreach ( $rows as $index => $row ) {
+            $rows[ $index ]['rank'] = $index + 1;
+        }
+
+        return $rows;
+    }
+
+    /**
+     * Return badges for a site hash.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return array
+     */
+    public static function get_badges_for_site( $site_id = '' ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            return array();
+        }
+
+        $account       = self::get_credit_account( $site_id );
+        $contributions = self::get_contribution_map();
+        $site_counts   = $contributions[ $site_id ] ?? array();
+        $badges        = array();
+
+        if ( floatval( $account['reputation_score'] ) > 1000 ) {
+            $badges[] = 'Top Defender';
+        }
+
+        $zero_day_count = intval( $site_counts['zero_day'] ?? 0 );
+        if ( $zero_day_count > 0 ) {
+            $badges[] = 'Zero-Day Hunter';
+        }
+
+        return $badges;
+    }
+
+    /**
+     * REST callback to award credits.
+     *
+     * @param WP_REST_Request $request Incoming request.
+     * @return WP_REST_Response|WP_Error
+     */
+    public static function rest_earn_credits( WP_REST_Request $request ) {
+        $site_id = $request->get_param( 'site_id' );
+        $type    = $request->get_param( 'contribution_type' );
+        $value   = absint( $request->get_param( 'value' ) );
+
+        $result = self::award_credits( $site_id, $type, $value > 0 ? $value : 1 );
+        if ( is_wp_error( $result ) ) {
+            return $result;
+        }
+
+        return new WP_REST_Response(
+            array(
+                'status'  => 'ok',
+                'message' => 'Credits awarded.',
+                'data'    => $result,
+            ),
+            200
+        );
+    }
+
+    /**
+     * REST callback to retrieve current balance/reputation.
+     *
+     * @param WP_REST_Request $request Incoming request.
+     * @return WP_REST_Response
+     */
+    public static function rest_my_credits( WP_REST_Request $request ) {
+        $site_id = $request->get_param( 'site_id' );
+        $site_id = self::normalize_site_id_input( $site_id );
+        if ( empty( $site_id ) ) {
+            $site_id = self::get_anonymous_site_id();
+        }
+
+        $account = self::get_credit_account( $site_id );
+        $account['site_id']             = $site_id;
+        $account['anonymous_site_id']   = self::mask_site_id( $site_id );
+        $account['credit_balance']      = max( 0, intval( $account['credits_earned'] ) - intval( $account['credits_spent'] ) );
+        $account['accuracy_percentage'] = self::get_accuracy_percentage( $site_id );
+        $account['premium_free']        = self::is_premium_free( $account );
+        $account['badges']              = self::get_badges_for_site( $site_id );
+        $account['leaderboard_rank']    = self::get_site_rank( $site_id );
+
+        return new WP_REST_Response(
+            array(
+                'status' => 'ok',
+                'data'   => $account,
+            ),
+            200
+        );
+    }
+
+    /**
+     * REST callback to redeem benefits.
+     *
+     * @param WP_REST_Request $request Incoming request.
+     * @return WP_REST_Response|WP_Error
+     */
+    public static function rest_redeem_credits( WP_REST_Request $request ) {
+        $site_id     = $request->get_param( 'site_id' );
+        $benefit     = $request->get_param( 'benefit_type' );
+        $credit_cost = absint( $request->get_param( 'credits' ) );
+
+        $result = self::spend_credits( $credit_cost, $benefit, $site_id );
+        if ( is_wp_error( $result ) ) {
+            return $result;
+        }
+
+        return new WP_REST_Response(
+            array(
+                'status'  => 'ok',
+                'message' => 'Benefit redeemed.',
+                'data'    => $result,
+            ),
+            200
+        );
+    }
+
+    /**
+     * Get local-site credit summary for admin widgets.
+     *
+     * @return array
+     */
+    public static function get_my_credit_summary() {
+        $site_id = self::get_anonymous_site_id();
+        $account = self::get_credit_account( $site_id );
+
+        return array(
+            'site_id'             => $site_id,
+            'anonymous_site_id'   => self::mask_site_id( $site_id ),
+            'credits_earned'      => intval( $account['credits_earned'] ),
+            'credits_spent'       => intval( $account['credits_spent'] ),
+            'credit_balance'      => max( 0, intval( $account['credits_earned'] ) - intval( $account['credits_spent'] ) ),
+            'reputation_score'    => floatval( $account['reputation_score'] ),
+            'accuracy_percentage' => self::get_accuracy_percentage( $site_id ),
+            'premium_free'        => self::is_premium_free( $account ),
+            'badges'              => self::get_badges_for_site( $site_id ),
+            'leaderboard_rank'    => self::get_site_rank( $site_id ),
+        );
+    }
+
+    /**
+     * Get site hash using GDPR-friendly HMAC hashing.
+     *
+     * @param string $site_reference Raw site reference (URL, label, hash).
+     * @return string
+     */
+    public static function get_anonymous_site_id( $site_reference = '' ) {
+        $reference = is_string( $site_reference ) ? trim( $site_reference ) : '';
+
+        if ( empty( $reference ) ) {
+            $reference = home_url();
+        }
+
+        if ( preg_match( '/^[a-f0-9]{64}$/i', $reference ) ) {
+            return strtolower( $reference );
+        }
+
+        $reference = self::normalise_site_reference( $reference );
+        $salt      = function_exists( 'wp_salt' ) ? wp_salt( 'auth' ) : self::get_node_key();
+        if ( empty( $salt ) ) {
+            $salt = self::get_node_key();
+        }
+
+        return hash_hmac( 'sha256', $reference, $salt );
+    }
+
+    /**
+     * Get credits table name.
+     *
+     * @return string
+     */
+    private static function get_credits_table_name() {
+        global $wpdb;
+        return $wpdb->prefix . self::CREDITS_TABLE;
+    }
+
+    /**
+     * Normalize inbound site_id values.
+     *
+     * @param string $site_id Site hash or URL.
+     * @return string
+     */
+    private static function normalize_site_id_input( $site_id ) {
+        $site_id = is_string( $site_id ) ? trim( $site_id ) : '';
+
+        if ( empty( $site_id ) ) {
+            return self::get_anonymous_site_id();
+        }
+
+        if ( preg_match( '/^[a-f0-9]{64}$/i', $site_id ) ) {
+            return strtolower( $site_id );
+        }
+
+        return self::get_anonymous_site_id( $site_id );
+    }
+
+    /**
+     * Ensure site references are normalized before hashing.
+     *
+     * @param string $reference Site URL or identifier.
+     * @return string
+     */
+    private static function normalise_site_reference( $reference ) {
+        $reference = strtolower( trim( (string) $reference ) );
+
+        if ( filter_var( $reference, FILTER_VALIDATE_URL ) ) {
+            $parsed = wp_parse_url( $reference );
+            if ( is_array( $parsed ) ) {
+                $host = sanitize_text_field( $parsed['host'] ?? '' );
+                $path = sanitize_text_field( $parsed['path'] ?? '' );
+                $reference = rtrim( $host . $path, '/' );
+            }
+        }
+
+        return $reference ?: 'unknown-site';
+    }
+
+    /**
+     * Return credit value for each contribution type.
+     *
+     * @param string $contribution_type Contribution slug.
+     * @return int
+     */
+    private static function get_contribution_credit_value( $contribution_type ) {
+        $map = array(
+            'blocked_ip'          => 1,
+            'ip_block'            => 1,
+            'malware_signature'   => 5,
+            'zero_day'            => 25,
+            'zero_day_threat'     => 25,
+            'high_quality_report' => 10,
+        );
+
+        $type = sanitize_key( $contribution_type );
+        return intval( $map[ $type ] ?? 0 );
+    }
+
+    /**
+     * Cost map for redeemable benefits.
+     *
+     * @return array
+     */
+    private static function get_benefit_cost_map() {
+        return array(
+            'priority_alerts'   => 5,
+            'signature_db'      => 10,
+            'advanced_analytics'=> 20,
+            'manual_analysis'   => 50,
+        );
+    }
+
+    /**
+     * Compute reputation from earned credits and accuracy.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param int    $credits_earned Earned credits.
+     * @return float
+     */
+    private static function calculate_reputation_score( $site_id, $credits_earned ) {
+        $accuracy = self::get_accuracy_percentage( $site_id );
+        return round( ( floatval( $credits_earned ) * floatval( $accuracy ) ) / 100, 2 );
+    }
+
+    /**
+     * Get accuracy map from options.
+     *
+     * @return array
+     */
+    private static function get_accuracy_map() {
+        $map = get_option( self::CREDITS_ACCURACY_OPTION, array() );
+        return is_array( $map ) ? $map : array();
+    }
+
+    /**
+     * Get accuracy percentage for site.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return int
+     */
+    private static function get_accuracy_percentage( $site_id ) {
+        $map = self::get_accuracy_map();
+        $accuracy = isset( $map[ $site_id ] ) ? intval( $map[ $site_id ] ) : 100;
+        return max( 0, min( 200, $accuracy ) );
+    }
+
+    /**
+     * Record validation votes for threat outcomes.
+     *
+     * @param string $ip IP identifier.
+     * @param string $vote Vote type: block|allowlist.
+     * @return bool True when allowlist vote becomes majority.
+     */
+    private static function record_validation_vote( $ip, $vote ) {
+        $ip = sanitize_text_field( (string) $ip );
+        if ( empty( $ip ) ) {
+            return false;
+        }
+
+        $vote = sanitize_key( $vote );
+        if ( ! in_array( $vote, array( 'block', 'allowlist' ), true ) ) {
+            return false;
+        }
+
+        $key  = self::VALIDATION_PREFIX . md5( $ip );
+        $data = get_transient( $key );
+
+        if ( ! is_array( $data ) ) {
+            $data = array(
+                'block'     => 0,
+                'allowlist' => 0,
+            );
+        }
+
+        $data[ $vote ] = intval( $data[ $vote ] ) + 1;
+        set_transient( $key, $data, DAY_IN_SECONDS );
+
+        return intval( $data['allowlist'] ) > intval( $data['block'] );
+    }
+
+    /**
+     * Whether site qualifies for free premium benefits.
+     *
+     * @param array $account Credit account.
+     * @return bool
+     */
+    private static function is_premium_free( $account ) {
+        return floatval( $account['reputation_score'] ?? 0 ) > 1000;
+    }
+
+    /**
+     * Increment contribution counters per site.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param string $type Contribution type.
+     * @param int    $amount Amount to increment.
+     * @return void
+     */
+    private static function increment_contribution_count( $site_id, $type, $amount = 1 ) {
+        $map  = self::get_contribution_map();
+        $type = sanitize_key( $type );
+
+        if ( empty( $map[ $site_id ] ) || ! is_array( $map[ $site_id ] ) ) {
+            $map[ $site_id ] = array();
+        }
+
+        $map[ $site_id ][ $type ] = intval( $map[ $site_id ][ $type ] ?? 0 ) + max( 1, absint( $amount ) );
+        update_option( self::CREDITS_CONTRIBUTION_OPTION, $map, false );
+    }
+
+    /**
+     * Get contribution counters map.
+     *
+     * @return array
+     */
+    private static function get_contribution_map() {
+        $map = get_option( self::CREDITS_CONTRIBUTION_OPTION, array() );
+        return is_array( $map ) ? $map : array();
+    }
+
+    /**
+     * Persist benefit redemption.
+     *
+     * @param string $site_id Site hash.
+     * @param string $benefit_type Benefit.
+     * @param int    $cost Cost spent.
+     * @param bool   $premium_free Whether redeemed for free.
+     * @return void
+     */
+    private static function record_benefit_redemption( $site_id, $benefit_type, $cost, $premium_free ) {
+        $benefits = get_option( self::CREDITS_BENEFITS_OPTION, array() );
+        if ( ! is_array( $benefits ) ) {
+            $benefits = array();
+        }
+
+        if ( empty( $benefits[ $site_id ] ) || ! is_array( $benefits[ $site_id ] ) ) {
+            $benefits[ $site_id ] = array();
+        }
+
+        $is_monthly = in_array( $benefit_type, array( 'priority_alerts', 'advanced_analytics' ), true );
+        $expires_at = $is_monthly ? gmdate( 'Y-m-d H:i:s', time() + MONTH_IN_SECONDS ) : null;
+
+        $benefits[ $site_id ][ $benefit_type ] = array(
+            'redeemed_at'   => current_time( 'mysql' ),
+            'expires_at'    => $expires_at,
+            'cost'          => intval( $cost ),
+            'premium_free'  => (bool) $premium_free,
+        );
+
+        update_option( self::CREDITS_BENEFITS_OPTION, $benefits, false );
+    }
+
+    /**
+     * Retrieve credit cache map.
+     *
+     * @return array
+     */
+    private static function get_credit_cache() {
+        $cache = get_option( self::CREDITS_CACHE_OPTION, array() );
+        return is_array( $cache ) ? $cache : array();
+    }
+
+    /**
+     * Save a normalized account into cache and DB.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param array  $account Account row.
+     * @return void
+     */
+    private static function set_credit_account( $site_id, $account ) {
+        $site_id = self::normalize_site_id_input( $site_id );
+        $account = self::normalise_credit_account_row( $site_id, $account );
+
+        $cache = self::get_credit_cache();
+        $cache[ $site_id ] = $account;
+        update_option( self::CREDITS_CACHE_OPTION, $cache, false );
+
+        self::save_credit_account_to_table( $site_id, $account );
+    }
+
+    /**
+     * Normalize an account row.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param array  $row Source row.
+     * @return array
+     */
+    private static function normalise_credit_account_row( $site_id, $row ) {
+        return array(
+            'site_id'            => $site_id,
+            'credits_earned'     => intval( $row['credits_earned'] ?? 0 ),
+            'credits_spent'      => intval( $row['credits_spent'] ?? 0 ),
+            'reputation_score'   => floatval( $row['reputation_score'] ?? 0 ),
+            'last_contribution'  => ! empty( $row['last_contribution'] ) ? sanitize_text_field( $row['last_contribution'] ) : null,
+        );
+    }
+
+    /**
+     * Return default account row.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return array
+     */
+    private static function get_default_credit_account( $site_id ) {
+        return array(
+            'site_id'           => $site_id,
+            'credits_earned'    => 0,
+            'credits_spent'     => 0,
+            'reputation_score'  => 0,
+            'last_contribution' => null,
+        );
+    }
+
+    /**
+     * Save account row to DB table.
+     *
+     * @param string $site_id Contributor site hash.
+     * @param array  $account Account row.
+     * @return void
+     */
+    private static function save_credit_account_to_table( $site_id, $account ) {
+        global $wpdb;
+
+        if ( empty( $wpdb ) || ! method_exists( $wpdb, 'insert' ) ) {
+            return;
+        }
+
+        self::maybe_create_credits_table();
+
+        $table = self::get_credits_table_name();
+        $data  = array(
+            'site_id'           => $site_id,
+            'credits_earned'    => intval( $account['credits_earned'] ?? 0 ),
+            'credits_spent'     => intval( $account['credits_spent'] ?? 0 ),
+            'reputation_score'  => floatval( $account['reputation_score'] ?? 0 ),
+            'last_contribution' => ! empty( $account['last_contribution'] ) ? $account['last_contribution'] : current_time( 'mysql' ),
+        );
+
+        $exists = 0;
+        if ( method_exists( $wpdb, 'get_var' ) && method_exists( $wpdb, 'prepare' ) ) {
+            $exists = intval( $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE site_id = %s", $site_id ) ) );
+        }
+
+        if ( $exists > 0 && method_exists( $wpdb, 'update' ) ) {
+            $wpdb->update(
+                $table,
+                $data,
+                array( 'site_id' => $site_id ),
+                array( '%s', '%d', '%d', '%f', '%s' ),
+                array( '%s' )
+            );
+            return;
+        }
+
+        $wpdb->insert(
+            $table,
+            $data,
+            array( '%s', '%d', '%d', '%f', '%s' )
+        );
+    }
+
+    /**
+     * Load account row from DB table.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return array
+     */
+    private static function get_credit_account_from_table( $site_id ) {
+        global $wpdb;
+
+        if ( empty( $wpdb ) || ! method_exists( $wpdb, 'get_row' ) || ! method_exists( $wpdb, 'prepare' ) ) {
+            return array();
+        }
+
+        $table = self::get_credits_table_name();
+        $row   = $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT site_id, credits_earned, credits_spent, reputation_score, last_contribution FROM {$table} WHERE site_id = %s LIMIT 1",
+                $site_id
+            ),
+            ARRAY_A
+        );
+
+        return is_array( $row ) ? $row : array();
+    }
+
+    /**
+     * Get rank of a site in the reputation leaderboard.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return int|null
+     */
+    private static function get_site_rank( $site_id ) {
+        $leaderboard = self::get_credit_leaderboard( 1000 );
+        foreach ( $leaderboard as $entry ) {
+            if ( $entry['site_id'] === $site_id ) {
+                return intval( $entry['rank'] );
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Render masked site hash for anonymous leaderboard display.
+     *
+     * @param string $site_id Contributor site hash.
+     * @return string
+     */
+    private static function mask_site_id( $site_id ) {
+        $site_id = strtolower( sanitize_text_field( (string) $site_id ) );
+        if ( strlen( $site_id ) < 12 ) {
+            return $site_id;
+        }
+
+        return substr( $site_id, 0, 6 ) . '...' . substr( $site_id, -4 );
+    }
+
+    /* ================================================================
+     *  6. CRON SYNC (HOURLY)
      * ============================================================= */
 
     /**
