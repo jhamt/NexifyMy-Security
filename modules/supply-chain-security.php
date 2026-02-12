@@ -36,6 +36,26 @@ class NexifyMy_Security_Supply_Chain {
 	const SRI_REGISTRY_CACHE_TTL = 86400;
 
 	/**
+	 * Patch execution timeout in seconds.
+	 */
+	const PATCH_COMMAND_TIMEOUT = 120;
+
+	/**
+	 * Patch log schema version option key.
+	 */
+	const PATCH_LOG_SCHEMA_OPTION = 'nexifymy_patch_log_schema_version';
+
+	/**
+	 * Patch log table schema version.
+	 */
+	const PATCH_LOG_SCHEMA_VERSION = '1.0.0';
+
+	/**
+	 * Patch log table suffix.
+	 */
+	const PATCH_LOG_TABLE = 'nexifymy_patch_log';
+
+	/**
 	 * Default settings.
 	 */
 	private static $defaults = array(
@@ -78,6 +98,8 @@ class NexifyMy_Security_Supply_Chain {
 	 * Initialize the module.
 	 */
 	public function init() {
+		$this->maybe_create_patch_log_table();
+
 		// Schedule automatic scans.
 		add_action( 'nexifymy_supply_chain_scan', array( $this, 'run_full_scan' ) );
 
@@ -99,6 +121,8 @@ class NexifyMy_Security_Supply_Chain {
 		add_action( 'wp_ajax_nexifymy_verify_cdn_script', array( $this, 'ajax_verify_cdn_script' ) );
 		add_action( 'wp_ajax_nexifymy_check_package_vuln', array( $this, 'ajax_check_package_vuln' ) );
 		add_action( 'wp_ajax_nexifymy_verify_sri', array( $this, 'ajax_verify_sri' ) );
+		add_action( 'wp_ajax_nexifymy_preview_supply_chain_patch', array( $this, 'ajax_preview_patch' ) );
+		add_action( 'wp_ajax_nexifymy_apply_supply_chain_patch', array( $this, 'ajax_apply_patch' ) );
 	}
 
 	/**
@@ -128,6 +152,11 @@ class NexifyMy_Security_Supply_Chain {
 			'themes'            => array(),
 			'composer'          => array(),
 			'npm'               => array(),
+			'patch_suggestions' => array(
+				'composer' => array(),
+				'npm'      => array(),
+				'total'    => 0,
+			),
 			'external_scripts'  => array(),
 			'issues'            => array(),
 			'total_issues'      => 0,
@@ -155,7 +184,10 @@ class NexifyMy_Security_Supply_Chain {
 			$results['npm'] = $this->scan_npm_dependencies();
 		}
 
-		// 5. Get external scripts.
+		// 5. Build patch suggestions for vulnerable dependencies.
+		$results['patch_suggestions'] = $this->collect_patch_suggestions( $results );
+
+		// 6. Get external scripts.
 		$results['external_scripts'] = $this->get_cached_external_scripts();
 
 		// Count total issues.
@@ -972,6 +1004,854 @@ class NexifyMy_Security_Supply_Chain {
 		return get_option( self::SCAN_RESULTS_OPTION, array() );
 	}
 
+	/**
+	 * Ensure patch log table exists.
+	 */
+	private function maybe_create_patch_log_table() {
+		$schema_version = get_option( self::PATCH_LOG_SCHEMA_OPTION );
+		if ( self::PATCH_LOG_SCHEMA_VERSION === $schema_version ) {
+			return;
+		}
+
+		$this->create_patch_log_table();
+	}
+
+	/**
+	 * Create patch log table.
+	 */
+	public function create_patch_log_table() {
+		global $wpdb;
+
+		if ( empty( $wpdb ) ) {
+			return;
+		}
+
+		if ( ! function_exists( 'dbDelta' ) ) {
+			$upgrade_file = ABSPATH . 'wp-admin/includes/upgrade.php';
+			if ( file_exists( $upgrade_file ) ) {
+				require_once $upgrade_file;
+			}
+		}
+
+		if ( ! function_exists( 'dbDelta' ) ) {
+			return;
+		}
+
+		$table_name      = $this->get_patch_log_table_name();
+		$charset_collate = $wpdb->get_charset_collate();
+
+		$sql = "CREATE TABLE {$table_name} (
+			id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+			package_name varchar(255) NOT NULL,
+			ecosystem varchar(32) NOT NULL,
+			command text NOT NULL,
+			status varchar(32) NOT NULL,
+			preview_mode tinyint(1) NOT NULL DEFAULT 1,
+			vulnerability_id varchar(100) DEFAULT '',
+			fixed_version varchar(64) DEFAULT '',
+			details longtext NULL,
+			attempted_by bigint(20) unsigned NOT NULL DEFAULT 0,
+			created_at datetime NOT NULL,
+			PRIMARY KEY (id),
+			KEY status (status),
+			KEY created_at (created_at)
+		) {$charset_collate};";
+
+		dbDelta( $sql );
+
+		update_option( self::PATCH_LOG_SCHEMA_OPTION, self::PATCH_LOG_SCHEMA_VERSION, false );
+	}
+
+	/**
+	 * Get patch log table name.
+	 *
+	 * @return string
+	 */
+	private function get_patch_log_table_name() {
+		global $wpdb;
+		return $wpdb->prefix . self::PATCH_LOG_TABLE;
+	}
+
+	/**
+	 * Build patch suggestions for vulnerable dependencies.
+	 *
+	 * @param array $results Full scan results.
+	 * @return array
+	 */
+	private function collect_patch_suggestions( &$results ) {
+		$suggestions = array(
+			'composer' => array(),
+			'npm'      => array(),
+			'total'    => 0,
+		);
+
+		if ( ! empty( $results['composer']['vulnerable'] ) ) {
+			foreach ( $results['composer']['vulnerable'] as $index => $pkg ) {
+				$pkg_suggestions = $this->suggest_patches(
+					$pkg['vulnerabilities'] ?? array(),
+					$pkg['name'] ?? '',
+					$pkg['version'] ?? '',
+					'composer'
+				);
+
+				if ( ! empty( $pkg_suggestions ) ) {
+					$results['composer']['vulnerable'][ $index ]['patch_suggestions'] = $pkg_suggestions;
+					$key = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
+					$suggestions['composer'][ $key ] = $pkg_suggestions;
+					$suggestions['total'] += count( $pkg_suggestions );
+				}
+			}
+		}
+
+		if ( ! empty( $results['npm']['vulnerable'] ) ) {
+			foreach ( $results['npm']['vulnerable'] as $index => $pkg ) {
+				$pkg_suggestions = $this->suggest_patches(
+					$pkg['vulnerabilities'] ?? array(),
+					$pkg['name'] ?? '',
+					$pkg['version'] ?? '',
+					'npm'
+				);
+
+				if ( ! empty( $pkg_suggestions ) ) {
+					$results['npm']['vulnerable'][ $index ]['patch_suggestions'] = $pkg_suggestions;
+					$key = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
+					$suggestions['npm'][ $key ] = $pkg_suggestions;
+					$suggestions['total'] += count( $pkg_suggestions );
+				}
+			}
+		}
+
+		return $suggestions;
+	}
+
+	/**
+	 * Build patch suggestions from OSV vulnerability data.
+	 *
+	 * @param array  $vulnerabilities Vulnerabilities from OSV parser/query.
+	 * @param string $package_name Package name.
+	 * @param string $current_version Current installed version.
+	 * @param string $ecosystem Dependency ecosystem.
+	 * @return array
+	 */
+	public function suggest_patches( $vulnerabilities, $package_name = '', $current_version = '', $ecosystem = '' ) {
+		$suggestions = array();
+
+		if ( empty( $vulnerabilities ) || ! is_array( $vulnerabilities ) ) {
+			return $suggestions;
+		}
+
+		$ecosystem = $this->normalize_patch_ecosystem( $ecosystem, $package_name );
+
+		foreach ( $vulnerabilities as $vulnerability ) {
+			if ( ! is_array( $vulnerability ) ) {
+				continue;
+			}
+
+			$fixed_version = $this->extract_fixed_version_from_vulnerability( $vulnerability );
+			if ( empty( $fixed_version ) ) {
+				continue;
+			}
+
+			$fixed_version = $this->normalize_version_value( $fixed_version );
+			$command       = $this->build_patch_command( $ecosystem, $package_name, $fixed_version );
+
+			if ( empty( $command ) ) {
+				continue;
+			}
+
+			$vulnerability_id = sanitize_text_field( $vulnerability['id'] ?? 'UNKNOWN' );
+			$cve              = sanitize_text_field( $vulnerability['cve'] ?? '' );
+			$reference_id     = ! empty( $cve ) ? $cve : $vulnerability_id;
+			$wp_compatible    = $this->is_patch_compatible_with_wordpress( $package_name, $fixed_version );
+			$major_upgrade    = $this->is_major_upgrade( $current_version, $fixed_version );
+
+			$suggestions[] = array(
+				'package_name'        => sanitize_text_field( $package_name ),
+				'ecosystem'           => $ecosystem,
+				'current_version'     => sanitize_text_field( $current_version ),
+				'fixed_version'       => $fixed_version,
+				'vulnerability_id'    => $vulnerability_id,
+				'cve'                 => $cve,
+				'severity'            => sanitize_text_field( $vulnerability['severity'] ?? 'UNKNOWN' ),
+				'summary'             => sanitize_text_field( $vulnerability['summary'] ?? '' ),
+				'command'             => $command,
+				'wp_compatible'       => $wp_compatible,
+				'major_upgrade'       => $major_upgrade,
+				'risk'                => $major_upgrade ? 'high' : 'medium',
+				'display_text'        => sprintf( 'Update to v%s (fixes %s)', $fixed_version, $reference_id ),
+				'compatibility_notes' => $wp_compatible ? 'Compatible with current WordPress version.' : 'Potential WordPress compatibility risk.',
+			);
+		}
+
+		return $suggestions;
+	}
+
+	/**
+	 * Apply patch commands with preview/live safeguards.
+	 *
+	 * @param array $patch_commands Patch command payloads.
+	 * @param bool  $preview Whether to run in preview mode.
+	 * @return array
+	 */
+	public function apply_patches_safely( $patch_commands, $preview = true ) {
+		$preview = (bool) $preview;
+		$items   = array();
+
+		foreach ( (array) $patch_commands as $patch ) {
+			$sanitized = $this->sanitize_patch_payload( $patch );
+			if ( empty( $sanitized['command'] ) || ! $this->is_allowed_patch_command( $sanitized['command'] ) ) {
+				$this->log_patch_attempt(
+					$sanitized,
+					'blocked_command',
+					array( 'reason' => 'Invalid or disallowed patch command.' ),
+					$preview
+				);
+				continue;
+			}
+			$items[] = $sanitized;
+		}
+
+		if ( empty( $items ) ) {
+			return array(
+				'success' => false,
+				'mode'    => $preview ? 'preview' : 'live',
+				'message' => 'No valid patch commands found.',
+			);
+		}
+
+		if ( $preview ) {
+			$compatibility_report = $this->build_patch_preview_report( $items );
+			$sandbox_used         = false;
+			$sandbox_result       = null;
+
+			if ( ! class_exists( 'NexifyMy_Security_Sandbox' ) && defined( 'NEXIFYMY_SECURITY_PATH' ) ) {
+				$sandbox_file = NEXIFYMY_SECURITY_PATH . 'modules/sandbox.php';
+				if ( file_exists( $sandbox_file ) ) {
+					require_once $sandbox_file;
+				}
+			}
+
+			if ( class_exists( 'NexifyMy_Security_Sandbox' ) ) {
+				$patch_code = '$report = ' . var_export( $compatibility_report, true ) . '; return $report;';
+				$sandbox_result = NexifyMy_Security_Sandbox::execute(
+					$patch_code,
+					array(
+						'preview' => true,
+						'timeout' => 10,
+						'label'   => 'Supply chain patch preview',
+					)
+				);
+				$sandbox_used = true;
+			}
+
+			foreach ( $items as $patch ) {
+				$this->log_patch_attempt(
+					$patch,
+					$compatibility_report['safe_to_apply'] ? 'preview_safe' : 'preview_warning',
+					array(
+						'preview_report' => $compatibility_report,
+						'sandbox_used'   => $sandbox_used,
+					),
+					true
+				);
+			}
+
+			return array(
+				'success'             => true,
+				'mode'                => 'preview',
+				'sandbox_used'        => $sandbox_used,
+				'sandbox_result'      => $sandbox_result,
+				'compatibility_report'=> $compatibility_report,
+				'patches'             => $items,
+			);
+		}
+
+		$backup_manifest = $this->create_patch_backup( $items );
+		$execution       = array();
+		$overall_success = true;
+
+		foreach ( $items as $patch ) {
+			$result = $this->execute_patch_command( $patch['command'], self::PATCH_COMMAND_TIMEOUT );
+			$execution[] = array_merge( $patch, $result );
+
+			$this->log_patch_attempt(
+				$patch,
+				$result['success'] ? 'applied' : 'failed',
+				$result,
+				false
+			);
+
+			if ( ! $result['success'] ) {
+				$overall_success = false;
+			}
+		}
+
+		$health_check = $this->site_health_is_ok();
+		if ( ! $health_check['healthy'] ) {
+			$overall_success = false;
+		}
+
+		$rolled_back = false;
+		if ( ! $overall_success ) {
+			$rolled_back = $this->rollback_patch_backup( $backup_manifest );
+		}
+
+		if ( $overall_success ) {
+			$this->send_patch_success_notification( $execution, $health_check );
+		}
+
+		return array(
+			'success'      => $overall_success,
+			'mode'         => 'live',
+			'backup_id'    => $backup_manifest['id'] ?? '',
+			'health_check' => $health_check,
+			'rolled_back'  => $rolled_back,
+			'execution'    => $execution,
+		);
+	}
+
+	/**
+	 * Extract fixed version from parsed or raw OSV vulnerability.
+	 *
+	 * @param array $vulnerability Vulnerability payload.
+	 * @return string
+	 */
+	private function extract_fixed_version_from_vulnerability( $vulnerability ) {
+		if ( ! empty( $vulnerability['fixed_version'] ) ) {
+			return (string) $vulnerability['fixed_version'];
+		}
+
+		if ( empty( $vulnerability['affected'] ) || ! is_array( $vulnerability['affected'] ) ) {
+			return '';
+		}
+
+		foreach ( $vulnerability['affected'] as $affected ) {
+			if ( empty( $affected['ranges'] ) || ! is_array( $affected['ranges'] ) ) {
+				continue;
+			}
+
+			foreach ( $affected['ranges'] as $range ) {
+				if ( empty( $range['events'] ) || ! is_array( $range['events'] ) ) {
+					continue;
+				}
+
+				foreach ( $range['events'] as $event ) {
+					if ( ! empty( $event['fixed'] ) ) {
+						return (string) $event['fixed'];
+					}
+				}
+			}
+		}
+
+		return '';
+	}
+
+	/**
+	 * Normalize ecosystem label for patching.
+	 *
+	 * @param string $ecosystem Ecosystem value.
+	 * @param string $package_name Package name.
+	 * @return string
+	 */
+	private function normalize_patch_ecosystem( $ecosystem, $package_name = '' ) {
+		$eco = strtolower( trim( (string) $ecosystem ) );
+
+		if ( 'packagist' === $eco || 'composer' === $eco ) {
+			return 'composer';
+		}
+
+		if ( 'npm' === $eco ) {
+			return 'npm';
+		}
+
+		if ( preg_match( '/^(@[^\/]+\/)?[^\/]+$/', (string) $package_name ) ) {
+			return 'npm';
+		}
+
+		if ( strpos( (string) $package_name, '/' ) !== false ) {
+			return 'composer';
+		}
+
+		return $eco ?: 'unknown';
+	}
+
+	/**
+	 * Normalize version by removing leading "v".
+	 *
+	 * @param string $version Version.
+	 * @return string
+	 */
+	private function normalize_version_value( $version ) {
+		$version = trim( (string) $version );
+		$version = preg_replace( '/^v/i', '', $version );
+		return sanitize_text_field( $version );
+	}
+
+	/**
+	 * Build patch command for supported ecosystems.
+	 *
+	 * @param string $ecosystem Ecosystem.
+	 * @param string $package_name Package name.
+	 * @param string $fixed_version Target version.
+	 * @return string
+	 */
+	private function build_patch_command( $ecosystem, $package_name, $fixed_version ) {
+		$package_name = trim( (string) $package_name );
+		$fixed_version = $this->normalize_version_value( $fixed_version );
+		$constraint = $this->build_patch_constraint( $fixed_version );
+
+		if ( empty( $package_name ) || empty( $constraint ) ) {
+			return '';
+		}
+
+		if ( 'composer' === $ecosystem ) {
+			return sprintf( 'composer require %s:%s', $package_name, $constraint );
+		}
+
+		if ( 'npm' === $ecosystem ) {
+			return sprintf( 'npm install %s@%s', $package_name, $constraint );
+		}
+
+		return '';
+	}
+
+	/**
+	 * Build semver constraint from fixed version.
+	 *
+	 * @param string $fixed_version Version.
+	 * @return string
+	 */
+	private function build_patch_constraint( $fixed_version ) {
+		$fixed_version = $this->normalize_version_value( $fixed_version );
+
+		if ( preg_match( '/^[0-9]+\.[0-9]+\.[0-9A-Za-z.+-]+$/', $fixed_version ) ) {
+			return '^' . $fixed_version;
+		}
+
+		if ( preg_match( '/^[0-9]+\.[0-9]+$/', $fixed_version ) ) {
+			return '^' . $fixed_version . '.0';
+		}
+
+		if ( preg_match( '/^[0-9]+$/', $fixed_version ) ) {
+			return '^' . $fixed_version . '.0.0';
+		}
+
+		return $fixed_version;
+	}
+
+	/**
+	 * Check whether a fixed version appears compatible with current WordPress version.
+	 *
+	 * @param string $package_name Package name.
+	 * @param string $fixed_version Fixed version.
+	 * @return bool
+	 */
+	private function is_patch_compatible_with_wordpress( $package_name, $fixed_version ) {
+		$wp_version = get_bloginfo( 'version' );
+		if ( empty( $wp_version ) ) {
+			return true;
+		}
+
+		$is_wp_scoped_package = (bool) preg_match(
+			'/^(wordpress|roots\/wordpress|@wordpress\/|wpackagist-plugin\/|wpackagist-theme\/)/i',
+			(string) $package_name
+		);
+
+		if ( ! $is_wp_scoped_package ) {
+			return true;
+		}
+
+		return version_compare( $this->normalize_version_value( $fixed_version ), $wp_version, '<=' );
+	}
+
+	/**
+	 * Determine if suggested update crosses major version.
+	 *
+	 * @param string $current_version Current version.
+	 * @param string $fixed_version Target fixed version.
+	 * @return bool
+	 */
+	private function is_major_upgrade( $current_version, $fixed_version ) {
+		$current_version = $this->normalize_version_value( $current_version );
+		$fixed_version   = $this->normalize_version_value( $fixed_version );
+
+		if ( ! preg_match( '/^(\d+)/', $current_version, $current_parts ) ) {
+			return false;
+		}
+
+		if ( ! preg_match( '/^(\d+)/', $fixed_version, $fixed_parts ) ) {
+			return false;
+		}
+
+		return (int) $fixed_parts[1] > (int) $current_parts[1];
+	}
+
+	/**
+	 * Build compatibility report used in preview mode.
+	 *
+	 * @param array $patch_commands Patch payloads.
+	 * @return array
+	 */
+	private function build_patch_preview_report( $patch_commands ) {
+		$report = array(
+			'total_patches'   => count( $patch_commands ),
+			'safe_to_apply'   => true,
+			'high_risk_count' => 0,
+			'items'           => array(),
+			'summary'         => 'No compatibility blockers detected.',
+		);
+
+		foreach ( $patch_commands as $patch ) {
+			$is_high_risk = ! empty( $patch['major_upgrade'] ) || empty( $patch['wp_compatible'] );
+			if ( $is_high_risk ) {
+				$report['safe_to_apply'] = false;
+				$report['high_risk_count']++;
+			}
+
+			$report['items'][] = array(
+				'package_name'    => $patch['package_name'] ?? '',
+				'command'         => $patch['command'] ?? '',
+				'wp_compatible'   => ! empty( $patch['wp_compatible'] ),
+				'major_upgrade'   => ! empty( $patch['major_upgrade'] ),
+				'risk'            => $is_high_risk ? 'high' : 'medium',
+				'fixed_version'   => $patch['fixed_version'] ?? '',
+				'vulnerability_id'=> $patch['vulnerability_id'] ?? '',
+			);
+		}
+
+		if ( ! $report['safe_to_apply'] ) {
+			$report['summary'] = 'One or more patches may cause compatibility issues and should be validated carefully.';
+		}
+
+		return $report;
+	}
+
+	/**
+	 * Sanitize patch payload from UI/AJAX.
+	 *
+	 * @param array $patch Patch payload.
+	 * @return array
+	 */
+	private function sanitize_patch_payload( $patch ) {
+		$sanitized = array(
+			'package_name'     => sanitize_text_field( $patch['package_name'] ?? '' ),
+			'ecosystem'        => $this->normalize_patch_ecosystem( $patch['ecosystem'] ?? '', $patch['package_name'] ?? '' ),
+			'current_version'  => sanitize_text_field( $patch['current_version'] ?? '' ),
+			'fixed_version'    => $this->normalize_version_value( $patch['fixed_version'] ?? '' ),
+			'vulnerability_id' => sanitize_text_field( $patch['vulnerability_id'] ?? '' ),
+			'cve'              => sanitize_text_field( $patch['cve'] ?? '' ),
+			'severity'         => sanitize_text_field( $patch['severity'] ?? '' ),
+			'command'          => trim( sanitize_text_field( $patch['command'] ?? '' ) ),
+			'wp_compatible'    => ! empty( $patch['wp_compatible'] ),
+			'major_upgrade'    => ! empty( $patch['major_upgrade'] ),
+		);
+
+		if ( empty( $sanitized['command'] ) ) {
+			$sanitized['command'] = $this->build_patch_command(
+				$sanitized['ecosystem'],
+				$sanitized['package_name'],
+				$sanitized['fixed_version']
+			);
+		}
+
+		return $sanitized;
+	}
+
+	/**
+	 * Validate patch command against strict allow-list.
+	 *
+	 * @param string $command Shell command.
+	 * @return bool
+	 */
+	private function is_allowed_patch_command( $command ) {
+		$command = trim( (string) $command );
+
+		$composer_regex = '/^composer\s+require\s+[a-z0-9._\-\/]+:[\^~]?[0-9A-Za-z.\-+]+$/i';
+		$npm_regex      = '/^npm\s+(install|update)\s+(@[a-z0-9._\-]+\/)?[a-z0-9._\-]+@[\^~]?[0-9A-Za-z.\-+]+$/i';
+
+		return (bool) preg_match( $composer_regex, $command ) || (bool) preg_match( $npm_regex, $command );
+	}
+
+	/**
+	 * Execute patch command with timeout marker parsing.
+	 *
+	 * @param string $command Command to execute.
+	 * @param int    $timeout Timeout in seconds.
+	 * @return array
+	 */
+	private function execute_patch_command( $command, $timeout ) {
+		$command = trim( (string) $command );
+		$timeout = max( 10, absint( $timeout ) );
+
+		if ( empty( $command ) || ! function_exists( 'shell_exec' ) ) {
+			return array(
+				'success'   => false,
+				'command'   => $command,
+				'output'    => '',
+				'exit_code' => 1,
+				'error'     => 'Shell execution is unavailable.',
+			);
+		}
+
+		if ( stripos( PHP_OS, 'WIN' ) === 0 ) {
+			$command_escaped = str_replace( '^', '^^', $command );
+			$timeout_wrapper = sprintf( 'cmd /V:ON /C "%s 2>&1 & echo __NEXI_EXIT_CODE:!ERRORLEVEL!"', $command_escaped );
+		} else {
+			$timeout_wrapper = sprintf(
+				'if command -v timeout >/dev/null 2>&1; then timeout %1$ds %2$s 2>&1; else %2$s 2>&1; fi; echo __NEXI_EXIT_CODE:$?',
+				$timeout,
+				$command
+			);
+		}
+
+		$raw_output      = shell_exec( $timeout_wrapper );
+
+		if ( ! is_string( $raw_output ) ) {
+			return array(
+				'success'   => false,
+				'command'   => $command,
+				'output'    => '',
+				'exit_code' => 1,
+				'error'     => 'Command execution returned no output.',
+			);
+		}
+
+		$exit_code = 1;
+		if ( preg_match( '/__NEXI_EXIT_CODE:(\d+)/', $raw_output, $matches ) ) {
+			$exit_code = (int) $matches[1];
+			$raw_output = str_replace( $matches[0], '', $raw_output );
+		}
+
+		return array(
+			'success'   => 0 === $exit_code,
+			'command'   => $command,
+			'output'    => trim( $raw_output ),
+			'exit_code' => $exit_code,
+			'error'     => 0 === $exit_code ? '' : 'Patch command failed.',
+		);
+	}
+
+	/**
+	 * Create backup of package manifests/lock files before patching.
+	 *
+	 * @param array $patches Patch payloads.
+	 * @return array Backup manifest.
+	 */
+	private function create_patch_backup( $patches ) {
+		$backup_id = gmdate( 'YmdHis' ) . '-' . substr( md5( wp_json_encode( $patches ) . microtime( true ) ), 0, 10 );
+		$content_dir = defined( 'WP_CONTENT_DIR' ) ? WP_CONTENT_DIR : trailingslashit( ABSPATH ) . 'wp-content';
+		$base_dir    = $content_dir . '/uploads/nexifymy-patch-backups/' . $backup_id;
+
+		if ( ! function_exists( 'wp_mkdir_p' ) ) {
+			return array(
+				'id'    => $backup_id,
+				'files' => array(),
+			);
+		}
+
+		wp_mkdir_p( $base_dir );
+
+		$files = array_merge(
+			$this->find_lock_files( 'composer.lock' ),
+			$this->find_lock_files( 'package-lock.json' )
+		);
+
+		foreach ( $this->find_lock_files( 'composer.lock' ) as $lock_file ) {
+			$composer_json = dirname( $lock_file ) . '/composer.json';
+			if ( file_exists( $composer_json ) ) {
+				$files[] = $composer_json;
+			}
+		}
+
+		foreach ( $this->find_lock_files( 'package-lock.json' ) as $lock_file ) {
+			$package_json = dirname( $lock_file ) . '/package.json';
+			if ( file_exists( $package_json ) ) {
+				$files[] = $package_json;
+			}
+		}
+
+		$files    = array_unique( $files );
+		$manifest = array(
+			'id'        => $backup_id,
+			'dir'       => $base_dir,
+			'files'     => array(),
+			'created_at'=> current_time( 'mysql' ),
+		);
+
+		foreach ( $files as $file ) {
+			if ( ! file_exists( $file ) ) {
+				continue;
+			}
+
+			$backup_file = trailingslashit( $base_dir ) . md5( $file ) . '-' . basename( $file );
+			if ( @copy( $file, $backup_file ) ) {
+				$manifest['files'][] = array(
+					'original' => $file,
+					'backup'   => $backup_file,
+				);
+			}
+		}
+
+		@file_put_contents( trailingslashit( $base_dir ) . 'manifest.json', wp_json_encode( $manifest ) );
+
+		return $manifest;
+	}
+
+	/**
+	 * Restore backup after failed patching.
+	 *
+	 * @param array $backup_manifest Backup manifest.
+	 * @return bool
+	 */
+	private function rollback_patch_backup( $backup_manifest ) {
+		if ( empty( $backup_manifest['files'] ) || ! is_array( $backup_manifest['files'] ) ) {
+			return false;
+		}
+
+		$restored = 0;
+		foreach ( $backup_manifest['files'] as $file_map ) {
+			if ( empty( $file_map['original'] ) || empty( $file_map['backup'] ) ) {
+				continue;
+			}
+
+			if ( file_exists( $file_map['backup'] ) && @copy( $file_map['backup'], $file_map['original'] ) ) {
+				$restored++;
+			}
+		}
+
+		return $restored > 0;
+	}
+
+	/**
+	 * Perform post-patch health check.
+	 *
+	 * @return array
+	 */
+	private function site_health_is_ok() {
+		$response = wp_remote_get(
+			home_url( '/' ),
+			array(
+				'timeout'   => 10,
+				'sslverify' => false,
+			)
+		);
+
+		if ( is_wp_error( $response ) ) {
+			return array(
+				'healthy' => false,
+				'code'    => 0,
+				'error'   => $response->get_error_message(),
+			);
+		}
+
+		$code = function_exists( 'wp_remote_retrieve_response_code' )
+			? (int) wp_remote_retrieve_response_code( $response )
+			: (int) ( $response['response']['code'] ?? 0 );
+
+		return array(
+			'healthy' => 200 === $code,
+			'code'    => $code,
+			'error'   => 200 === $code ? '' : 'Homepage health check failed.',
+		);
+	}
+
+	/**
+	 * Log patch attempt into dedicated patch log table.
+	 *
+	 * @param array  $patch Patch payload.
+	 * @param string $status Attempt status.
+	 * @param array  $details Additional details.
+	 * @param bool   $preview Whether attempt was preview mode.
+	 * @return bool
+	 */
+	private function log_patch_attempt( $patch, $status, $details = array(), $preview = true ) {
+		global $wpdb;
+
+		if ( empty( $wpdb ) || ! method_exists( $wpdb, 'insert' ) ) {
+			return false;
+		}
+
+		$table = $this->get_patch_log_table_name();
+
+		return (bool) $wpdb->insert(
+			$table,
+			array(
+				'package_name'     => sanitize_text_field( $patch['package_name'] ?? '' ),
+				'ecosystem'        => sanitize_text_field( $patch['ecosystem'] ?? '' ),
+				'command'          => sanitize_text_field( $patch['command'] ?? '' ),
+				'status'           => sanitize_text_field( $status ),
+				'preview_mode'     => $preview ? 1 : 0,
+				'vulnerability_id' => sanitize_text_field( $patch['vulnerability_id'] ?? '' ),
+				'fixed_version'    => sanitize_text_field( $patch['fixed_version'] ?? '' ),
+				'details'          => wp_json_encode( $details ),
+				'attempted_by'     => function_exists( 'get_current_user_id' ) ? absint( get_current_user_id() ) : 0,
+				'created_at'       => current_time( 'mysql' ),
+			),
+			array(
+				'%s',
+				'%s',
+				'%s',
+				'%s',
+				'%d',
+				'%s',
+				'%s',
+				'%s',
+				'%d',
+				'%s',
+			)
+		);
+	}
+
+	/**
+	 * Send successful patch notification email.
+	 *
+	 * @param array $execution Patch execution records.
+	 * @param array $health_check Health check payload.
+	 */
+	private function send_patch_success_notification( $execution, $health_check ) {
+		$to      = get_option( 'admin_email' );
+		$subject = sprintf( '[%s] Supply Chain Patch Applied', get_bloginfo( 'name' ) );
+		$message = "Supply Chain patch operation completed successfully.\n\n";
+		$message .= sprintf( "Site: %s\n", home_url() );
+		$message .= sprintf( "Time: %s\n", current_time( 'mysql' ) );
+		$message .= sprintf( "Health Check: HTTP %d\n\n", (int) ( $health_check['code'] ?? 0 ) );
+		$message .= "Applied Patches:\n";
+
+		foreach ( $execution as $item ) {
+			if ( empty( $item['success'] ) ) {
+				continue;
+			}
+			$message .= sprintf(
+				"- %s (%s) -> %s\n",
+				$item['package_name'] ?? 'unknown',
+				$item['ecosystem'] ?? 'unknown',
+				$item['fixed_version'] ?? 'unknown'
+			);
+		}
+
+		wp_mail( $to, $subject, $message );
+	}
+
+	/**
+	 * Parse and sanitize patch payload from AJAX request.
+	 *
+	 * @return array
+	 */
+	private function get_patch_payload_from_request() {
+		$patch = $_POST['patch'] ?? array();
+
+		if ( is_string( $patch ) ) {
+			$decoded = json_decode( wp_unslash( $patch ), true );
+			$patch = is_array( $decoded ) ? $decoded : array();
+		}
+
+		if ( ! is_array( $patch ) ) {
+			return array();
+		}
+
+		return $this->sanitize_patch_payload( $patch );
+	}
+
 	/*
 	 * =========================================================================
 	 * AJAX HANDLERS
@@ -1069,6 +1949,67 @@ class NexifyMy_Security_Supply_Chain {
 		}
 
 		$result = $this->verify_script_integrity( $url );
+		wp_send_json_success( $result );
+	}
+
+	/**
+	 * AJAX: Preview a proposed patch command in sandbox mode.
+	 */
+	public function ajax_preview_patch() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$patch = $this->get_patch_payload_from_request();
+		if ( empty( $patch ) || empty( $patch['command'] ) ) {
+			wp_send_json_error( 'Invalid patch payload.' );
+		}
+
+		if ( ! $this->is_allowed_patch_command( $patch['command'] ) ) {
+			$this->log_patch_attempt( $patch, 'blocked_command', array( 'reason' => 'Patch command is not allowed.' ), true );
+			wp_send_json_error( 'Patch command is not allowed.' );
+		}
+
+		$result = $this->apply_patches_safely( array( $patch ), true );
+		if ( empty( $result['success'] ) ) {
+			wp_send_json_error( $result );
+		}
+
+		wp_send_json_success( $result );
+	}
+
+	/**
+	 * AJAX: Apply a proposed patch command after explicit admin confirmation.
+	 */
+	public function ajax_apply_patch() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$confirmed = isset( $_POST['confirm'] ) ? sanitize_text_field( wp_unslash( $_POST['confirm'] ) ) : '';
+		if ( 'yes' !== strtolower( $confirmed ) ) {
+			wp_send_json_error( 'Admin confirmation is required.' );
+		}
+
+		$patch = $this->get_patch_payload_from_request();
+		if ( empty( $patch ) || empty( $patch['command'] ) ) {
+			wp_send_json_error( 'Invalid patch payload.' );
+		}
+
+		if ( ! $this->is_allowed_patch_command( $patch['command'] ) ) {
+			$this->log_patch_attempt( $patch, 'blocked_command', array( 'reason' => 'Patch command is not allowed.' ), false );
+			wp_send_json_error( 'Patch command is not allowed.' );
+		}
+
+		$result = $this->apply_patches_safely( array( $patch ), false );
+		if ( empty( $result['success'] ) ) {
+			wp_send_json_error( $result );
+		}
+
 		wp_send_json_success( $result );
 	}
 
