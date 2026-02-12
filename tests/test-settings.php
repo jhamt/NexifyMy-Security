@@ -39,6 +39,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		$this->assertTrue( $settings['modules']['scanner_enabled'] );
 		$this->assertTrue( $settings['modules']['rate_limiter_enabled'] );
 		$this->assertTrue( $settings['modules']['temp_permissions_enabled'] );
+		$this->assertTrue( $settings['modules']['predictive_hunting_enabled'] );
 
 		// Check rate limiter defaults.
 		$this->assertEquals( 5, $settings['rate_limiter']['max_attempts'] );
@@ -117,6 +118,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 			array(
 				'modules'      => array(
 					'temp_permissions_enabled' => '',
+					'predictive_hunting_enabled' => 0,
 				),
 				'ai_detection' => array(
 					'zero_trust_reauth_interval'      => 20,
@@ -126,6 +128,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		);
 
 		$this->assertFalse( $output['modules']['temp_permissions_enabled'] );
+		$this->assertFalse( $output['modules']['predictive_hunting_enabled'] );
 		$this->assertEquals( 60, $output['ai_detection']['zero_trust_reauth_interval'] );
 		$this->assertEquals( 100, $output['ai_detection']['zero_trust_risk_spike_threshold'] );
 	}
