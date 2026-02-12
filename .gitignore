@@ -37,3 +37,16 @@ error_log
 
 #Files
 CLAUDE.md
+
+# Local Runtime/Sensitive Artifacts
+.env
+database-backup.sql
+phpinfo.php
+wp-config-backup.php
+wp-content/nexifymy-quarantine/
+wp-content/nexifymy-quarantine-deleted/
+
+# Local Verification/Demo Scripts
+demo-deception-files.php
+test-deception-working.php
+test-docker-sandbox.php
