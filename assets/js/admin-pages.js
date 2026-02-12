@@ -283,6 +283,45 @@
         );
       });
 
+    function parsePatchPayload($button) {
+      var raw = $button.attr("data-patch");
+      if (!raw) {
+        return null;
+      }
+
+      try {
+        return JSON.parse(raw);
+      } catch (_error) {
+        return null;
+      }
+    }
+
+    function formatPreviewSummary(data) {
+      if (!data || !data.compatibility_report) {
+        return "Preview completed.";
+      }
+
+      var report = data.compatibility_report;
+      var safe = report.safe_to_apply ? "Yes" : "No";
+      var total = report.total_patches || 0;
+      var highRisk = report.high_risk_count || 0;
+      var summary = report.summary || "";
+
+      return (
+        "Preview Result\n" +
+        "Safe to Apply: " +
+        safe +
+        "\n" +
+        "Patches Reviewed: " +
+        total +
+        "\n" +
+        "High-Risk Items: " +
+        highRisk +
+        "\n\n" +
+        summary
+      );
+    }
+
     $(document)
       .off("click.nmsSupplyChain", ".verify-cdn-script")
       .on("click.nmsSupplyChain", ".verify-cdn-script", function () {
@@ -304,6 +343,90 @@
               alert("Failed to generate SRI hash");
             }
             $btn.prop("disabled", false).text("Generate SRI");
+          },
+          "json",
+        );
+      });
+
+    $(document)
+      .off("click.nmsSupplyChain", ".preview-supply-chain-patch")
+      .on("click.nmsSupplyChain", ".preview-supply-chain-patch", function () {
+        var $btn = $(this);
+        var patch = parsePatchPayload($btn);
+
+        if (!patch) {
+          alert("Invalid patch payload.");
+          return;
+        }
+
+        $btn.prop("disabled", true).text("Previewing...");
+
+        $.post(
+          nexifymySecurity.ajaxUrl,
+          {
+            action: "nexifymy_preview_supply_chain_patch",
+            nonce: nexifymySecurity.nonce,
+            patch: JSON.stringify(patch),
+          },
+          function (response) {
+            if (response && response.success) {
+              alert(formatPreviewSummary(response.data));
+            } else {
+              alert(
+                "Preview failed: " +
+                  ((response && response.data) || "Unknown error"),
+              );
+            }
+            $btn.prop("disabled", false).text("Preview Patch");
+          },
+          "json",
+        );
+      });
+
+    $(document)
+      .off("click.nmsSupplyChain", ".apply-supply-chain-patch")
+      .on("click.nmsSupplyChain", ".apply-supply-chain-patch", function () {
+        var $btn = $(this);
+        var patch = parsePatchPayload($btn);
+
+        if (!patch) {
+          alert("Invalid patch payload.");
+          return;
+        }
+
+        var confirmationMessage =
+          "Apply patch now?\n\n" +
+          "Package: " +
+          (patch.package_name || "unknown") +
+          "\nCommand: " +
+          (patch.command || "n/a");
+
+        if (!window.confirm(confirmationMessage)) {
+          return;
+        }
+
+        $btn.prop("disabled", true).text("Applying...");
+
+        $.post(
+          nexifymySecurity.ajaxUrl,
+          {
+            action: "nexifymy_apply_supply_chain_patch",
+            nonce: nexifymySecurity.nonce,
+            confirm: "yes",
+            patch: JSON.stringify(patch),
+          },
+          function (response) {
+            if (response && response.success) {
+              alert("Patch applied successfully.");
+              window.location.reload();
+              return;
+            }
+
+            alert(
+              "Patch failed: " +
+                ((response && response.data) || "Unknown error"),
+            );
+            $btn.prop("disabled", false).text("Apply Patch");
           },
           "json",
         );
@@ -348,7 +471,9 @@
     if (
       !$("#generate-compliance-report").length &&
       !$("#generate-first-report").length &&
-      !$("#run-compliance-check").length
+      !$("#run-compliance-check").length &&
+      !$("#run-data-map-scan").length &&
+      !$("#submit-rtbf-request").length
     ) {
       return;
     }
@@ -412,6 +537,32 @@
 
       $("#compliance-check-grid").html(html);
       $("#quick-compliance-results").slideDown();
+    }
+
+    function renderDataMapRows(records) {
+      var html = "";
+      if (Array.isArray(records) && records.length > 0) {
+        html += '<table class="widefat striped">';
+        html +=
+          "<thead><tr><th>Data Element</th><th>Location</th><th>Purpose</th><th>Retention</th><th>Third-Party Sharing</th><th>Legal Basis</th></tr></thead><tbody>";
+        records.forEach(function (record) {
+          html += "<tr>";
+          html += "<td>" + escapeHtml(record.data_element || "") + "</td>";
+          html += "<td>" + escapeHtml(record.location || "") + "</td>";
+          html += "<td>" + escapeHtml(record.purpose || "") + "</td>";
+          html += "<td>" + escapeHtml(record.retention || "") + "</td>";
+          html +=
+            "<td>" + escapeHtml(record.third_party_sharing || "") + "</td>";
+          html += "<td>" + escapeHtml(record.legal_basis || "") + "</td>";
+          html += "</tr>";
+        });
+        html += "</tbody></table>";
+      } else {
+        html =
+          "<p id='data-map-table-body'>No PII records detected yet. Run a data map scan to build the report.</p>";
+      }
+
+      $("#data-map-results").html(html);
     }
 
     $("#generate-compliance-report, #generate-first-report")
@@ -505,6 +656,150 @@
           },
           "json",
         );
+      });
+
+    $("#run-data-map-scan")
+      .off("click.nmsCompliance")
+      .on("click.nmsCompliance", function () {
+        var $btn = $(this);
+        $btn
+          .prop("disabled", true)
+          .html('<span class="dashicons dashicons-update spin"></span> Scanning...');
+
+        $.post(
+          nexifymySecurity.ajaxUrl,
+          {
+            action: "nexifymy_get_data_map",
+            nonce: nexifymySecurity.nonce,
+          },
+          function (response) {
+            if (response && response.success && response.data) {
+              renderDataMapRows(response.data.records || []);
+            } else {
+              alert(
+                "Data map scan failed: " +
+                  ((response && response.data) || "Unknown error"),
+              );
+            }
+
+            $btn
+              .prop("disabled", false)
+              .html('<span class="dashicons dashicons-update"></span> Refresh Map');
+          },
+          "json",
+        );
+      });
+
+    $("#export-data-map-pdf")
+      .off("click.nmsCompliance")
+      .on("click.nmsCompliance", function () {
+        var $btn = $(this);
+        $btn
+          .prop("disabled", true)
+          .html(
+            '<span class="dashicons dashicons-update spin"></span> Exporting...',
+          );
+
+        $.post(
+          nexifymySecurity.ajaxUrl,
+          {
+            action: "nexifymy_export_data_map",
+            nonce: nexifymySecurity.nonce,
+            format: "pdf",
+          },
+          function (response) {
+            if (response && response.success && response.data && response.data.url) {
+              window.open(response.data.url, "_blank");
+              if (response.data.fallback) {
+                alert(
+                  "PDF generator not available. Opened HTML report instead; use browser Print to save as PDF.",
+                );
+              }
+            } else {
+              alert(
+                "Data map export failed: " +
+                  ((response && response.data) || "Unknown error"),
+              );
+            }
+
+            $btn
+              .prop("disabled", false)
+              .html(
+                '<span class="dashicons dashicons-download"></span> Export Data Map (PDF)',
+              );
+          },
+          "json",
+        );
+      });
+
+    function runRtbfAction(actionName) {
+      var userId = parseInt($("#rtbf-user-id").val(), 10);
+      if (!userId || userId < 1) {
+        alert("Please enter a valid user ID.");
+        return;
+      }
+
+      var payload = {
+        action: actionName,
+        nonce: nexifymySecurity.nonce,
+        user_id: userId,
+      };
+
+      if (actionName === "nexifymy_erase_user_data") {
+        payload.include_comments = $("#rtbf-include-comments").is(":checked")
+          ? 1
+          : 0;
+      }
+
+      $("#rtbf-status").html(
+        '<p><span class="dashicons dashicons-update spin"></span> Processing request...</p>',
+      );
+
+      $.post(
+        nexifymySecurity.ajaxUrl,
+        payload,
+        function (response) {
+          if (response && response.success) {
+            if (actionName === "nexifymy_erase_user_data") {
+              $("#rtbf-status").html(
+                '<div class="notice notice-success inline"><p>Erasure completed. Verification status: ' +
+                  escapeHtml(
+                    response.data.verification &&
+                      response.data.verification.is_clean
+                      ? "Clean"
+                      : "Review needed",
+                  ) +
+                  "</p></div>",
+              );
+            } else {
+              $("#rtbf-status").html(
+                '<div class="notice notice-info inline"><p>Verification result: ' +
+                  escapeHtml(response.data.is_clean ? "Clean" : "Review needed") +
+                  "</p></div>",
+              );
+            }
+          } else {
+            $("#rtbf-status").html(
+              '<div class="notice notice-error inline"><p>' +
+                escapeHtml((response && response.data) || "Request failed.") +
+                "</p></div>",
+            );
+          }
+        },
+        "json",
+      );
+    }
+
+    $("#submit-rtbf-request")
+      .off("click.nmsCompliance")
+      .on("click.nmsCompliance", function () {
+        runRtbfAction("nexifymy_erase_user_data");
+      });
+
+    $("#verify-rtbf-request")
+      .off("click.nmsCompliance")
+      .on("click.nmsCompliance", function () {
+        runRtbfAction("nexifymy_verify_erasure");
       });
 
     $("#save-compliance-settings")

@@ -407,6 +407,7 @@ class NexifyMy_Security_Admin {
 			'ai_detection',
 			'supply_chain',
 			'proactive',
+			'predictive_hunting',
 			'passkey',
 			'compliance',
 			'developer_api',
@@ -805,6 +806,12 @@ class NexifyMy_Security_Admin {
 		if ( 'sandbox' === $module ) {
 			$settings['sandbox_enabled'] = (bool) $enabled;
 		}
+		if ( 'predictive_hunting' === $module ) {
+			if ( ! isset( $settings['predictive_threat_hunting'] ) || ! is_array( $settings['predictive_threat_hunting'] ) ) {
+				$settings['predictive_threat_hunting'] = array();
+			}
+			$settings['predictive_threat_hunting']['enabled'] = (bool) $enabled;
+		}
 		if ( 'login_protection' === $module ) {
 			$settings['modules']['rate_limiter_enabled'] = (bool) $enabled;
 			if ( ! isset( $settings['rate_limiter'] ) || ! is_array( $settings['rate_limiter'] ) ) {
@@ -893,6 +900,13 @@ class NexifyMy_Security_Admin {
 						'icon'    => 'superhero-alt',
 						'enabled' => $module_enabled( 'ai_detection_enabled', true ),
 						'tooltip' => __( 'Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior.', 'nexifymy-security' ),
+					),
+					'predictive_hunting' => array(
+						'name'    => __( 'Predictive Threat Hunting', 'nexifymy-security' ),
+						'desc'    => __( 'Forecast next attack vectors', 'nexifymy-security' ),
+						'icon'    => 'chart-line',
+						'enabled' => $module_enabled( 'predictive_hunting_enabled', true ),
+						'tooltip' => __( 'Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance.', 'nexifymy-security' ),
 					),
 					'core_repair'     => array(
 						'name'    => __( 'Core File Repair', 'nexifymy-security' ),
@@ -1294,6 +1308,7 @@ class NexifyMy_Security_Admin {
 									'login_protection' => 'login_protection',
 									'geo_blocking'     => 'geo_blocking',
 									'ai_detection'     => 'ai_detection',
+									'predictive_hunting' => 'predictive_hunting',
 									'core_repair'      => 'core_repair',
 									'vulnerabilities'  => 'vulnerability_scanner',
 									'two_factor'       => 'two_factor',
@@ -5372,15 +5387,37 @@ class NexifyMy_Security_Admin {
 								<tr>
 									<th><?php _e( 'Package', 'nexifymy-security' ); ?></th>
 									<th><?php _e( 'Version', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Available Fix', 'nexifymy-security' ); ?></th>
 									<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Action', 'nexifymy-security' ); ?></th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php foreach ( $results['composer']['vulnerable'] as $pkg ) : ?>
+								<?php $composer_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
 								<tr>
 									<td><code><?php echo esc_html( $pkg['name'] ); ?></code></td>
 									<td><?php echo esc_html( $pkg['version'] ); ?></td>
+									<td>
+										<?php if ( ! empty( $composer_fix['display_text'] ) ) : ?>
+											<?php echo esc_html( $composer_fix['display_text'] ); ?>
+										<?php else : ?>
+											-
+										<?php endif; ?>
+									</td>
 									<td><span class="nms-badge nms-badge-danger"><?php _e( 'Vulnerable', 'nexifymy-security' ); ?></span></td>
+									<td>
+										<?php if ( ! empty( $composer_fix['command'] ) ) : ?>
+											<button class="button button-small preview-supply-chain-patch" data-patch="<?php echo esc_attr( wp_json_encode( $composer_fix ) ); ?>">
+												<?php _e( 'Preview Patch', 'nexifymy-security' ); ?>
+											</button>
+											<button class="button button-small button-primary apply-supply-chain-patch" data-patch="<?php echo esc_attr( wp_json_encode( $composer_fix ) ); ?>">
+												<?php _e( 'Apply Patch', 'nexifymy-security' ); ?>
+											</button>
+										<?php else : ?>
+											-
+										<?php endif; ?>
+									</td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
@@ -5408,15 +5445,37 @@ class NexifyMy_Security_Admin {
 								<tr>
 									<th><?php _e( 'Package', 'nexifymy-security' ); ?></th>
 									<th><?php _e( 'Version', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Available Fix', 'nexifymy-security' ); ?></th>
 									<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Action', 'nexifymy-security' ); ?></th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php foreach ( $results['npm']['vulnerable'] as $pkg ) : ?>
+								<?php $npm_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
 								<tr>
 									<td><code><?php echo esc_html( $pkg['name'] ); ?></code></td>
 									<td><?php echo esc_html( $pkg['version'] ); ?></td>
+									<td>
+										<?php if ( ! empty( $npm_fix['display_text'] ) ) : ?>
+											<?php echo esc_html( $npm_fix['display_text'] ); ?>
+										<?php else : ?>
+											-
+										<?php endif; ?>
+									</td>
 									<td><span class="nms-badge nms-badge-danger"><?php _e( 'Vulnerable', 'nexifymy-security' ); ?></span></td>
+									<td>
+										<?php if ( ! empty( $npm_fix['command'] ) ) : ?>
+											<button class="button button-small preview-supply-chain-patch" data-patch="<?php echo esc_attr( wp_json_encode( $npm_fix ) ); ?>">
+												<?php _e( 'Preview Patch', 'nexifymy-security' ); ?>
+											</button>
+											<button class="button button-small button-primary apply-supply-chain-patch" data-patch="<?php echo esc_attr( wp_json_encode( $npm_fix ) ); ?>">
+												<?php _e( 'Apply Patch', 'nexifymy-security' ); ?>
+											</button>
+										<?php else : ?>
+											-
+										<?php endif; ?>
+									</td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
@@ -5880,6 +5939,152 @@ class NexifyMy_Security_Admin {
 			</div>
 		</div>
 
+		<?php
+	}
+
+	/**
+	 * Render GDPR data map tab content.
+	 *
+	 * @return void
+	 */
+	private function render_compliance_data_map_content() {
+		global $nexifymy_compliance;
+
+		$data_map = array();
+		if ( $nexifymy_compliance && method_exists( $nexifymy_compliance, 'generate_data_map_report' ) ) {
+			$data_map = $nexifymy_compliance->generate_data_map_report( 'array' );
+		}
+
+		$records = is_array( $data_map['records'] ?? null ) ? $data_map['records'] : array();
+		?>
+		<div class="nms-card">
+			<div class="nms-card-header nms-flex-between">
+				<h3><?php _e( 'GDPR Article 30 Data Mapping', 'nexifymy-security' ); ?></h3>
+				<div>
+					<button class="nms-btn nms-btn-secondary" id="run-data-map-scan">
+						<span class="dashicons dashicons-update"></span> <?php _e( 'Refresh Map', 'nexifymy-security' ); ?>
+					</button>
+					<button class="nms-btn nms-btn-primary" id="export-data-map-pdf">
+						<span class="dashicons dashicons-download"></span> <?php _e( 'Export Data Map (PDF)', 'nexifymy-security' ); ?>
+					</button>
+				</div>
+			</div>
+			<div class="nms-card-body">
+				<p class="description"><?php _e( 'Automated PII discovery across database tables, data flow mapping, and third-party sharing detection.', 'nexifymy-security' ); ?></p>
+
+				<div id="data-map-results">
+					<?php if ( ! empty( $records ) ) : ?>
+						<table class="widefat striped">
+							<thead>
+								<tr>
+									<th><?php _e( 'Data Element', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Location', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Purpose', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Retention', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Third-Party Sharing', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Legal Basis', 'nexifymy-security' ); ?></th>
+								</tr>
+							</thead>
+							<tbody id="data-map-table-body">
+								<?php foreach ( $records as $record ) : ?>
+								<tr>
+									<td><?php echo esc_html( $record['data_element'] ?? '' ); ?></td>
+									<td><?php echo esc_html( $record['location'] ?? '' ); ?></td>
+									<td><?php echo esc_html( $record['purpose'] ?? '' ); ?></td>
+									<td><?php echo esc_html( $record['retention'] ?? '' ); ?></td>
+									<td><?php echo esc_html( $record['third_party_sharing'] ?? '' ); ?></td>
+									<td><?php echo esc_html( $record['legal_basis'] ?? '' ); ?></td>
+								</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
+					<?php else : ?>
+						<p id="data-map-table-body"><?php _e( 'No PII records detected yet. Run a data map scan to build the report.', 'nexifymy-security' ); ?></p>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render privacy requests tab (RTBF workflow).
+	 *
+	 * @return void
+	 */
+	private function render_compliance_privacy_requests_content() {
+		global $nexifymy_compliance;
+
+		$requests = array();
+		if ( $nexifymy_compliance && method_exists( $nexifymy_compliance, 'get_recent_gdpr_requests' ) ) {
+			$requests = $nexifymy_compliance->get_recent_gdpr_requests( 50 );
+		}
+		?>
+		<div class="nms-card">
+			<div class="nms-card-header">
+				<h3><?php _e( 'Right-to-be-Forgotten Automation', 'nexifymy-security' ); ?></h3>
+			</div>
+			<div class="nms-card-body">
+				<p class="description"><?php _e( 'Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows.', 'nexifymy-security' ); ?></p>
+				<table class="form-table">
+					<tr>
+						<th><?php _e( 'User ID', 'nexifymy-security' ); ?></th>
+						<td>
+							<input type="number" id="rtbf-user-id" min="1" class="regular-text" placeholder="123">
+						</td>
+					</tr>
+					<tr>
+						<th><?php _e( 'Comments', 'nexifymy-security' ); ?></th>
+						<td>
+							<label><input type="checkbox" id="rtbf-include-comments"> <?php _e( 'Delete comments instead of anonymizing', 'nexifymy-security' ); ?></label>
+						</td>
+					</tr>
+				</table>
+				<p>
+					<button class="nms-btn nms-btn-primary" id="submit-rtbf-request">
+						<span class="dashicons dashicons-trash"></span> <?php _e( 'Run Erasure', 'nexifymy-security' ); ?>
+					</button>
+					<button class="nms-btn nms-btn-secondary" id="verify-rtbf-request">
+						<span class="dashicons dashicons-yes-alt"></span> <?php _e( 'Verify Erasure', 'nexifymy-security' ); ?>
+					</button>
+				</p>
+				<div id="rtbf-status"></div>
+			</div>
+		</div>
+
+		<div class="nms-card nms-mt-20">
+			<div class="nms-card-header">
+				<h3><?php _e( 'GDPR Request Log', 'nexifymy-security' ); ?></h3>
+			</div>
+			<div class="nms-card-body">
+				<?php if ( ! empty( $requests ) ) : ?>
+					<table class="widefat striped">
+						<thead>
+							<tr>
+								<th><?php _e( 'User ID', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Request Type', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Requested At', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Completed At', 'nexifymy-security' ); ?></th>
+								<th><?php _e( 'Status', 'nexifymy-security' ); ?></th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach ( $requests as $request ) : ?>
+							<tr>
+								<td><?php echo esc_html( $request['user_id'] ?? '' ); ?></td>
+								<td><?php echo esc_html( $request['request_type'] ?? '' ); ?></td>
+								<td><?php echo esc_html( $request['requested_at'] ?? '' ); ?></td>
+								<td><?php echo esc_html( $request['completed_at'] ?? '-' ); ?></td>
+								<td><?php echo esc_html( $request['status'] ?? '' ); ?></td>
+							</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+				<?php else : ?>
+					<p><?php _e( 'No GDPR requests logged yet.', 'nexifymy-security' ); ?></p>
+				<?php endif; ?>
+			</div>
+		</div>
 		<?php
 	}
 
@@ -8771,12 +8976,35 @@ jobs:
 	 */
 	public function render_compliance_page() {
 		?>
-		<div class="wrap nexifymy-security-wrap">
+		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
 				<h1><span class="dashicons dashicons-yes-alt"></span> <?php _e( 'Compliance & Reporting', 'nexifymy-security' ); ?></h1>
 				<p><?php _e( 'GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports.', 'nexifymy-security' ); ?></p>
 			</div>
-			<?php $this->render_compliance_content(); ?>
+
+			<div class="nms-page-tabs">
+				<button class="nms-page-tab active" data-tab="overview">
+					<span class="dashicons dashicons-analytics"></span> <?php _e( 'Overview', 'nexifymy-security' ); ?>
+				</button>
+				<button class="nms-page-tab" data-tab="data-map">
+					<span class="dashicons dashicons-networking"></span> <?php _e( 'Data Map', 'nexifymy-security' ); ?>
+				</button>
+				<button class="nms-page-tab" data-tab="privacy-requests">
+					<span class="dashicons dashicons-shield"></span> <?php _e( 'Privacy Requests', 'nexifymy-security' ); ?>
+				</button>
+			</div>
+
+			<div class="nms-tab-content">
+				<div id="tab-overview" class="nms-tab-panel active">
+					<?php $this->render_compliance_content(); ?>
+				</div>
+				<div id="tab-data-map" class="nms-tab-panel" style="display:none;">
+					<?php $this->render_compliance_data_map_content(); ?>
+				</div>
+				<div id="tab-privacy-requests" class="nms-tab-panel" style="display:none;">
+					<?php $this->render_compliance_privacy_requests_content(); ?>
+				</div>
+			</div>
 		</div>
 		<?php
 	}
@@ -10297,6 +10525,12 @@ jobs:
 		$peers       = NexifyMy_Security_P2P::get_peers();
 		$node_key    = NexifyMy_Security_P2P::get_node_key();
 		$daily_count = NexifyMy_Security_P2P::get_daily_threat_count();
+		$credit_summary = method_exists( 'NexifyMy_Security_P2P', 'get_my_credit_summary' )
+			? NexifyMy_Security_P2P::get_my_credit_summary()
+			: array();
+		$credit_leaderboard = method_exists( 'NexifyMy_Security_P2P', 'get_credit_leaderboard' )
+			? NexifyMy_Security_P2P::get_credit_leaderboard( 10 )
+			: array();
 		?>
 		<div class="wrap nexifymy-security-wrap">
 			<h1><?php _e( 'P2P Threat Intelligence', 'nexifymy-security' ); ?></h1>
@@ -10463,6 +10697,90 @@ jobs:
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+
+			<div class="nms-card">
+				<div class="nms-card-header">
+					<h2><span class="dashicons dashicons-awards"></span> <?php _e( 'Threat Intelligence Credits', 'nexifymy-security' ); ?></h2>
+				</div>
+				<div class="nms-card-body">
+					<div class="nms-stats-row">
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon blue">
+								<span class="dashicons dashicons-tickets-alt"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo intval( $credit_summary['credit_balance'] ?? 0 ); ?></h4>
+								<p><?php _e( 'Current Credit Balance', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon green">
+								<span class="dashicons dashicons-chart-area"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo esc_html( number_format_i18n( floatval( $credit_summary['reputation_score'] ?? 0 ), 2 ) ); ?></h4>
+								<p><?php _e( 'Reputation Score', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+						<div class="nms-stat-card">
+							<div class="nms-stat-icon purple">
+								<span class="dashicons dashicons-yes-alt"></span>
+							</div>
+							<div class="nms-stat-content">
+								<h4><?php echo esc_html( intval( $credit_summary['accuracy_percentage'] ?? 100 ) . '%' ); ?></h4>
+								<p><?php _e( 'Accuracy', 'nexifymy-security' ); ?></p>
+							</div>
+						</div>
+					</div>
+
+					<p>
+						<strong><?php _e( 'Badges:', 'nexifymy-security' ); ?></strong>
+						<?php if ( ! empty( $credit_summary['badges'] ) && is_array( $credit_summary['badges'] ) ) : ?>
+							<?php foreach ( $credit_summary['badges'] as $badge ) : ?>
+								<span class="nms-badge nms-badge-success"><?php echo esc_html( $badge ); ?></span>
+							<?php endforeach; ?>
+						<?php else : ?>
+							<span class="nms-badge nms-badge-secondary"><?php _e( 'No badges yet', 'nexifymy-security' ); ?></span>
+						<?php endif; ?>
+					</p>
+
+					<p class="description">
+						<?php
+						if ( ! empty( $credit_summary['premium_free'] ) ) {
+							_e( 'Premium benefits are unlocked for free because your reputation score is above 1000.', 'nexifymy-security' );
+						} else {
+							_e( 'Reach a reputation score above 1000 to unlock premium benefits for free.', 'nexifymy-security' );
+						}
+						?>
+					</p>
+
+					<h3><?php _e( 'Top Contributors (Anonymous)', 'nexifymy-security' ); ?></h3>
+					<?php if ( empty( $credit_leaderboard ) ) : ?>
+						<p class="description"><?php _e( 'No contributor data available yet.', 'nexifymy-security' ); ?></p>
+					<?php else : ?>
+						<table class="wp-list-table widefat striped">
+							<thead>
+								<tr>
+									<th><?php _e( 'Rank', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Anonymous Site ID', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Credits', 'nexifymy-security' ); ?></th>
+									<th><?php _e( 'Reputation', 'nexifymy-security' ); ?></th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ( $credit_leaderboard as $entry ) : ?>
+									<tr>
+										<td><?php echo intval( $entry['rank'] ?? 0 ); ?></td>
+										<td><code><?php echo esc_html( $entry['anonymous_site_id'] ?? '-' ); ?></code></td>
+										<td><?php echo intval( $entry['credit_balance'] ?? 0 ); ?></td>
+										<td><?php echo esc_html( number_format_i18n( floatval( $entry['reputation_score'] ?? 0 ), 2 ) ); ?></td>
+									</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
+					<?php endif; ?>
 				</div>
 			</div>
 
