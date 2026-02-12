@@ -136,11 +136,13 @@ function nexifymy_security_activate() {
 				'performance_enabled'     => 1,
 				'supply_chain_enabled'    => 1,
 				'proactive_enabled'       => 1,
+				'predictive_hunting_enabled' => 1,
 				'ai_detection_enabled'    => 1,
 				'api_security_enabled'    => 1,
 				'graphql_security_enabled' => 1,
 				'passkey_enabled'         => 1,
 				'compliance_enabled'      => 1,
+				'consent_enabled'         => 1,
 				'developer_api_enabled'   => 1,
 				'integrations_enabled'    => 1,
 				'deception_enabled'       => true,
@@ -162,6 +164,14 @@ function nexifymy_security_activate() {
 			'sandbox_timeout'         => 5,
 			'sandbox_dynamic_analysis'=> false,
 			'sandbox_console_enabled' => false,
+			'predictive_threat_hunting' => array(
+				'enabled'               => true,
+				'forecast_update'       => 'weekly',
+				'simulation_enabled'    => true,
+				'simulation_schedule'   => 'monthly',
+				'simulation_run_hour'   => 3,
+				'probability_threshold' => 25,
+			),
 			'firewall' => array(
 				'enabled'        => true,
 				'block_bad_bots' => true,
@@ -202,6 +212,30 @@ function nexifymy_security_activate() {
 	$temp_perms = new NexifyMy_Security_Temp_Permissions();
 	$temp_perms->create_table();
 
+	// Create Supply Chain patch log table.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/supply-chain-security.php';
+	$supply_chain = new NexifyMy_Security_Supply_Chain();
+	$supply_chain->create_patch_log_table();
+
+	// Create compliance/GDPR report tables.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/compliance-reporting.php';
+	$compliance = new NexifyMy_Security_Compliance();
+	$compliance->maybe_create_tables();
+
+	// Create predictive threat-hunting tables.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/predictive-threat-hunting.php';
+	$predictive_hunting = new NexifyMy_Security_Predictive_Threat_Hunting();
+	$predictive_hunting->create_table();
+
+	// Create P2P intelligence credits table.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/p2p-intelligence.php';
+	NexifyMy_Security_P2P::create_credits_table();
+
+	// Create consent records table.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/consent-management.php';
+	$consent = new NexifyMy_Security_Consent_Management();
+	$consent->maybe_create_table();
+
 	// Schedule background scans (default: daily).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
@@ -229,8 +263,11 @@ function nexifymy_security_deactivate() {
 		'nexifymy_auto_patch',
 		'nexifymy_traffic_cleanup',
 		'nexifymy_generate_report',
+		'nexifymy_generate_data_map_report',
 		'nexifymy_cleanup_reports',
 		'nexifymy_learn_patterns',
+		'nexifymy_update_threat_forecast',
+		'nexifymy_monthly_attack_simulation',
 		'nexifymy_revoke_expired_permissions',
 	);
 	foreach ( $cron_hooks as $cron_hook ) {
@@ -268,6 +305,10 @@ function nexifymy_security_add_cron_schedules( $schedules ) {
 	$schedules['weekly'] = array(
 		'interval' => WEEK_IN_SECONDS,
 		'display'  => __( 'Once Weekly', 'nexifymy-security' ),
+	);
+	$schedules['monthly'] = array(
+		'interval' => MONTH_IN_SECONDS,
+		'display'  => __( 'Once Monthly', 'nexifymy-security' ),
 	);
 	$schedules['every_five_minutes'] = array(
 		'interval' => 300,
@@ -523,6 +564,13 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_proactive']->init();
 	}
 
+	// Load Predictive Threat Hunting.
+	if ( nexifymy_security_is_module_enabled( $settings, 'predictive_hunting_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/predictive-threat-hunting.php';
+		$GLOBALS['nexifymy_predictive_hunting'] = new NexifyMy_Security_Predictive_Threat_Hunting();
+		$GLOBALS['nexifymy_predictive_hunting']->init();
+	}
+
 	// Load AI Threat Detection.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/ai-threat-detection.php';
 	$GLOBALS['nexifymy_ai_detection'] = new NexifyMy_Security_AI_Threat_Detection();
@@ -542,6 +590,13 @@ function nexifymy_security_init() {
 		require_once NEXIFYMY_SECURITY_PATH . 'modules/compliance-reporting.php';
 		$GLOBALS['nexifymy_compliance'] = new NexifyMy_Security_Compliance();
 		$GLOBALS['nexifymy_compliance']->init();
+	}
+
+	// Load Consent Management.
+	if ( nexifymy_security_is_module_enabled( $settings, 'consent_enabled', true ) ) {
+		require_once NEXIFYMY_SECURITY_PATH . 'modules/consent-management.php';
+		$GLOBALS['nexifymy_consent'] = new NexifyMy_Security_Consent_Management();
+		$GLOBALS['nexifymy_consent']->init();
 	}
 
 	// Load Developer API.
