@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! class_exists( 'NexifyMy_Security_Logger' ) ) {
 class NexifyMy_Security_Logger {
 
 	/**
@@ -394,4 +395,5 @@ class NexifyMy_Security_Logger {
 
 		return $stats;
 	}
+}
 }

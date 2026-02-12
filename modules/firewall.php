@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! class_exists( 'NexifyMy_Security_Firewall' ) ) {
 class NexifyMy_Security_Firewall {
 
 	/**
@@ -707,4 +708,5 @@ class NexifyMy_Security_Firewall {
 HTML;
 		exit;
 	}
+}
 }
