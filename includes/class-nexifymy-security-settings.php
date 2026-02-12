@@ -55,11 +55,13 @@ class NexifyMy_Security_Settings {
 			'vulnerability_scanner_enabled' => true,
 			'supply_chain_enabled'          => true,
 			'proactive_enabled'             => true,
+			'predictive_hunting_enabled'    => true,
 			'ai_detection_enabled'          => true,
 			'api_security_enabled'          => true,
 			'graphql_security_enabled'      => true,
 			'passkey_enabled'               => true,
 			'compliance_enabled'            => true,
+			'consent_enabled'               => true,
 			'developer_api_enabled'         => true,
 			'deception_enabled'             => true,
 			'p2p_enabled'                   => false,
@@ -179,6 +181,16 @@ class NexifyMy_Security_Settings {
 			'benchmark_schedule'   => 'weekly',
 		),
 
+		// Predictive Threat Hunting settings.
+		'predictive_threat_hunting'             => array(
+			'enabled'               => true,
+			'forecast_update'       => 'weekly',
+			'simulation_enabled'    => true,
+			'simulation_schedule'   => 'monthly',
+			'simulation_run_hour'   => 3,
+			'probability_threshold' => 25,
+		),
+
 		// AI Threat Detection Settings.
 		'ai_detection'                          => array(
 			'enabled'                    => true,
@@ -224,6 +236,13 @@ class NexifyMy_Security_Settings {
 			'include_threats'     => true,
 			'report_format'       => 'html',
 			'retention_days'      => 90,
+		),
+
+		// Consent Management Settings.
+		'consent'                               => array(
+			'enabled'              => true,
+			'banner_enabled'       => true,
+			'preference_page_slug' => 'privacy-preferences',
 		),
 
 		// Developer API Settings.
@@ -602,11 +621,13 @@ class NexifyMy_Security_Settings {
 				'vulnerability_scanner_enabled' => array_key_exists( 'vulnerability_scanner_enabled', $input['modules'] ) ? ! empty( $input['modules']['vulnerability_scanner_enabled'] ) : ! empty( $current_modules['vulnerability_scanner_enabled'] ),
 				'supply_chain_enabled'          => array_key_exists( 'supply_chain_enabled', $input['modules'] ) ? ! empty( $input['modules']['supply_chain_enabled'] ) : ! empty( $current_modules['supply_chain_enabled'] ),
 				'proactive_enabled'             => array_key_exists( 'proactive_enabled', $input['modules'] ) ? ! empty( $input['modules']['proactive_enabled'] ) : ! empty( $current_modules['proactive_enabled'] ),
+				'predictive_hunting_enabled'    => array_key_exists( 'predictive_hunting_enabled', $input['modules'] ) ? ! empty( $input['modules']['predictive_hunting_enabled'] ) : ! empty( $current_modules['predictive_hunting_enabled'] ?? true ),
 				'ai_detection_enabled'          => array_key_exists( 'ai_detection_enabled', $input['modules'] ) ? ! empty( $input['modules']['ai_detection_enabled'] ) : ! empty( $current_modules['ai_detection_enabled'] ),
 				'api_security_enabled'          => array_key_exists( 'api_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['api_security_enabled'] ) : ! empty( $current_modules['api_security_enabled'] ),
 				'graphql_security_enabled'      => array_key_exists( 'graphql_security_enabled', $input['modules'] ) ? ! empty( $input['modules']['graphql_security_enabled'] ) : ! empty( $current_modules['graphql_security_enabled'] ),
 				'passkey_enabled'               => array_key_exists( 'passkey_enabled', $input['modules'] ) ? ! empty( $input['modules']['passkey_enabled'] ) : ! empty( $current_modules['passkey_enabled'] ),
 				'compliance_enabled'            => array_key_exists( 'compliance_enabled', $input['modules'] ) ? ! empty( $input['modules']['compliance_enabled'] ) : ! empty( $current_modules['compliance_enabled'] ),
+				'consent_enabled'               => array_key_exists( 'consent_enabled', $input['modules'] ) ? ! empty( $input['modules']['consent_enabled'] ) : ! empty( $current_modules['consent_enabled'] ?? true ),
 				'developer_api_enabled'         => array_key_exists( 'developer_api_enabled', $input['modules'] ) ? ! empty( $input['modules']['developer_api_enabled'] ) : ! empty( $current_modules['developer_api_enabled'] ),
 				'deception_enabled'             => array_key_exists( 'deception_enabled', $input['modules'] ) ? ! empty( $input['modules']['deception_enabled'] ) : ! empty( $current_modules['deception_enabled'] ),
 				'p2p_enabled'                   => array_key_exists( 'p2p_enabled', $input['modules'] ) ? ! empty( $input['modules']['p2p_enabled'] ) : ! empty( $current_modules['p2p_enabled'] ),
@@ -864,6 +885,45 @@ class NexifyMy_Security_Settings {
 				'include_threats'     => ! empty( $input['compliance']['include_threats'] ),
 				'report_format'       => in_array( $input['compliance']['report_format'] ?? 'html', $formats, true ) ? $input['compliance']['report_format'] : 'html',
 				'retention_days'      => max( 7, absint( $input['compliance']['retention_days'] ?? 90 ) ),
+			);
+		}
+
+		// Predictive Threat Hunting.
+		if ( isset( $input['predictive_threat_hunting'] ) ) {
+			$forecast_schedules   = array( 'daily', 'weekly' );
+			$simulation_schedules = array( 'weekly', 'monthly' );
+
+			$forecast_update = sanitize_key( $input['predictive_threat_hunting']['forecast_update'] ?? 'weekly' );
+			if ( ! in_array( $forecast_update, $forecast_schedules, true ) ) {
+				$forecast_update = 'weekly';
+			}
+
+			$simulation_schedule = sanitize_key( $input['predictive_threat_hunting']['simulation_schedule'] ?? 'monthly' );
+			if ( ! in_array( $simulation_schedule, $simulation_schedules, true ) ) {
+				$simulation_schedule = 'monthly';
+			}
+
+			$sanitized['predictive_threat_hunting'] = array(
+				'enabled'               => ! empty( $input['predictive_threat_hunting']['enabled'] ),
+				'forecast_update'       => $forecast_update,
+				'simulation_enabled'    => ! empty( $input['predictive_threat_hunting']['simulation_enabled'] ),
+				'simulation_schedule'   => $simulation_schedule,
+				'simulation_run_hour'   => max( 0, min( 23, absint( $input['predictive_threat_hunting']['simulation_run_hour'] ?? 3 ) ) ),
+				'probability_threshold' => max( 1, min( 100, absint( $input['predictive_threat_hunting']['probability_threshold'] ?? 25 ) ) ),
+			);
+		}
+
+		// Consent.
+		if ( isset( $input['consent'] ) ) {
+			$slug = sanitize_title( $input['consent']['preference_page_slug'] ?? 'privacy-preferences' );
+			if ( empty( $slug ) ) {
+				$slug = 'privacy-preferences';
+			}
+
+			$sanitized['consent'] = array(
+				'enabled'              => ! empty( $input['consent']['enabled'] ),
+				'banner_enabled'       => ! empty( $input['consent']['banner_enabled'] ),
+				'preference_page_slug' => $slug,
 			);
 		}
 
@@ -1321,6 +1381,9 @@ class NexifyMy_Security_Settings {
 		}
 		if ( class_exists( 'NexifyMy_Security_Sandbox' ) && method_exists( 'NexifyMy_Security_Sandbox', 'flush_settings_cache' ) ) {
 			NexifyMy_Security_Sandbox::flush_settings_cache();
+		}
+		if ( class_exists( 'NexifyMy_Security_Predictive_Threat_Hunting' ) && method_exists( 'NexifyMy_Security_Predictive_Threat_Hunting', 'flush_settings_cache' ) ) {
+			NexifyMy_Security_Predictive_Threat_Hunting::flush_settings_cache();
 		}
 	}
 
