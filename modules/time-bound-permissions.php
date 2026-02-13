@@ -237,6 +237,7 @@ class NexifyMy_Security_Temp_Permissions {
 		add_action( 'wp_ajax_nexifymy_approve_temp_access', array( $this, 'ajax_approve_access' ) );
 		add_action( 'wp_ajax_nexifymy_revoke_temp_access', array( $this, 'ajax_revoke_access' ) );
 		add_action( 'wp_ajax_nexifymy_get_temp_permissions', array( $this, 'ajax_get_temp_permissions' ) );
+		add_action( 'wp_ajax_nexifymy_grant_temp_access', array( $this, 'ajax_grant_access' ) );
 	}
 
 	/**
@@ -728,6 +729,84 @@ class NexifyMy_Security_Temp_Permissions {
 		wp_send_json_success(
 			array(
 				'message' => __( 'Access approved successfully', 'nexifymy-security' ),
+			)
+		);
+	}
+
+	/**
+	 * Grant temporary access directly to a specific user (admin only).
+	 *
+	 * @return void
+	 */
+	public function ajax_grant_access() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( self::APPROVER_CAPABILITY ) ) {
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
+		}
+
+		$target_raw         = isset( $_POST['target_user'] ) ? sanitize_text_field( wp_unslash( $_POST['target_user'] ) ) : '';
+		$reason             = isset( $_POST['reason'] ) ? sanitize_text_field( wp_unslash( $_POST['reason'] ) ) : '';
+		$duration           = isset( $_POST['duration'] ) ? absint( $_POST['duration'] ) : self::DEFAULT_DURATION_MINUTES;
+		$requested_role_raw = isset( $_POST['requested_role'] ) ? sanitize_key( wp_unslash( $_POST['requested_role'] ) ) : self::$allowed_elevated_roles[0];
+
+		$target = trim( $target_raw );
+		if ( '' === $target ) {
+			wp_send_json_error( __( 'Target user (username or email) is required.', 'nexifymy-security' ) );
+		}
+
+		if ( '' === $reason ) {
+			wp_send_json_error( __( 'A reason is required.', 'nexifymy-security' ) );
+		}
+
+		$requested_role = $this->sanitize_elevated_role( $requested_role_raw );
+		if ( '' === $requested_role ) {
+			wp_send_json_error( __( 'Invalid requested role.', 'nexifymy-security' ) );
+		}
+
+		$user = false;
+		if ( is_email( $target ) ) {
+			$user = get_user_by( 'email', $target );
+		} elseif ( ctype_digit( $target ) ) {
+			$user = get_user_by( 'id', absint( $target ) );
+		} else {
+			$user = get_user_by( 'login', $target );
+			if ( ! $user ) {
+				$user = get_user_by( 'slug', sanitize_title( $target ) );
+			}
+		}
+
+		if ( ! $user || empty( $user->ID ) ) {
+			wp_send_json_error( __( 'Target user not found. Use an existing username or email.', 'nexifymy-security' ) );
+		}
+
+		$user_id       = (int) $user->ID;
+		$duration      = $this->clamp_duration_minutes( $duration );
+		$current_role  = $this->get_primary_role( $user );
+		$approver_id   = get_current_user_id();
+
+		if ( $current_role === $requested_role ) {
+			wp_send_json_error( __( 'User already has this role. Temporary elevation is not needed.', 'nexifymy-security' ) );
+		}
+
+		if ( $this->has_pending_or_active_grant( $user_id, $requested_role ) ) {
+			wp_send_json_error( __( 'An active or pending grant already exists for this user and role.', 'nexifymy-security' ) );
+		}
+
+		$insert_id = $this->grant_temporary_permission( $user_id, $requested_role, $duration, $reason, $approver_id );
+		if ( ! $insert_id ) {
+			wp_send_json_error( __( 'Unable to grant temporary access.', 'nexifymy-security' ) );
+		}
+
+		wp_send_json_success(
+			array(
+				'message' => sprintf(
+					/* translators: 1: username, 2: role, 3: duration in minutes */
+					__( 'Temporary %2$s access granted to %1$s for %3$d minutes.', 'nexifymy-security' ),
+					(string) $user->user_login,
+					$requested_role,
+					$duration
+				),
 			)
 		);
 	}
