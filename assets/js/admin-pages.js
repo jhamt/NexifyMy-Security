@@ -42,6 +42,13 @@
     return parsed;
   }
 
+  function reloadAfterSettingsSave(delayMs) {
+    var delay = typeof delayMs === "number" ? delayMs : 700;
+    window.setTimeout(function () {
+      window.location.reload();
+    }, delay);
+  }
+
   function initTrafficAnalyticsWidget() {
     if (
       typeof Chart === "undefined" ||
@@ -459,7 +466,8 @@
           },
           function (response) {
             if (response && response.success) {
-              alert("Settings saved successfully");
+              alert("Settings saved successfully. Reloading...");
+              reloadAfterSettingsSave(300);
             }
           },
           "json",
@@ -827,7 +835,8 @@
           },
           function (response) {
             if (response && response.success) {
-              alert("Settings saved successfully");
+              alert("Settings saved successfully. Reloading...");
+              reloadAfterSettingsSave(300);
             }
           },
           "json",
@@ -1074,8 +1083,8 @@
             if (response && response.success) {
               $status
                 .addClass("nms-temp-feedback--ok")
-                .text("AI settings saved.");
-              $("#refresh-ai-status").trigger("click");
+                .text("AI settings saved. Reloading...");
+              reloadAfterSettingsSave();
               return;
             }
 
@@ -1303,6 +1312,74 @@
           },
           error: function () {
             setFeedback($msg, "Network error while submitting request.", false);
+          },
+          complete: function () {
+            $btn.prop("disabled", false);
+          },
+        });
+      });
+
+    $("#btn-grant-temp-access")
+      .off("click.nmsTempAccess")
+      .on("click.nmsTempAccess", function () {
+        var $btn = $(this);
+        var $msg = $("#temp-access-grant-msg");
+        var targetUser = $.trim($("#temp-access-target-user").val());
+        var reason = $.trim($("#temp-access-grant-reason").val());
+        var requestedRole = $("#temp-access-grant-role").val();
+        var duration = clampInt($("#temp-access-grant-duration").val(), 60, 5, 1440);
+
+        if (!isAdmin) {
+          setFeedback($msg, "Only administrators can grant temporary access.", false);
+          return;
+        }
+
+        if (!targetUser) {
+          setFeedback($msg, "Target user is required.", false);
+          return;
+        }
+
+        if (!reason) {
+          setFeedback($msg, "Reason is required.", false);
+          return;
+        }
+
+        $btn.prop("disabled", true);
+        setFeedback($msg, "Granting temporary access...", true);
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_grant_temp_access",
+            nonce: nexifymySecurity.nonce,
+            target_user: targetUser,
+            reason: reason,
+            duration: duration,
+            requested_role: requestedRole,
+          },
+          success: function (response) {
+            if (response && response.success) {
+              setFeedback(
+                $msg,
+                (response.data && response.data.message) || "Temporary access granted.",
+                true,
+              );
+              $("#temp-access-target-user").val("");
+              $("#temp-access-grant-reason").val("");
+              loadTempPermissions();
+              return;
+            }
+
+            setFeedback(
+              $msg,
+              "Grant failed: " + ((response && response.data) || "Unknown error"),
+              false,
+            );
+          },
+          error: function () {
+            setFeedback($msg, "Network error while granting temporary access.", false);
           },
           complete: function () {
             $btn.prop("disabled", false);
@@ -1728,7 +1805,8 @@
           },
           success: function (response) {
             if (response && response.success) {
-              alert("Settings saved successfully.");
+              alert("Settings saved successfully. Reloading...");
+              reloadAfterSettingsSave(300);
             } else {
               alert(
                 "Error: " + ((response && response.data) || "Unknown error"),
