@@ -634,9 +634,11 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_deception']->init();
 	}
 
-	// Load P2P Threat Intelligence.
+	// Always load the P2P class so the admin page can render settings/UI.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/p2p-intelligence.php';
+
+	// Only initialize runtime hooks when the module is enabled.
 	if ( nexifymy_security_is_module_enabled( $settings, 'p2p_enabled', false ) ) {
-		require_once NEXIFYMY_SECURITY_PATH . 'modules/p2p-intelligence.php';
 		NexifyMy_Security_P2P::init();
 	}
 
