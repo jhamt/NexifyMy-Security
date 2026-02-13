@@ -28,6 +28,21 @@
       this.loadAnalyticsDashboard();
     },
 
+    reloadAfterSettingsSave: function ($status, delayMs, message) {
+      var delay = typeof delayMs === "number" ? delayMs : 800;
+      var text = message || "Saved! Reloading...";
+
+      if ($status && $status.length) {
+        $status.html(
+          '<span style="color: var(--nms-success);">' + text + "</span>",
+        );
+      }
+
+      setTimeout(function () {
+        window.location.reload();
+      }, delay);
+    },
+
     bindEvents: function () {
       // Tab Navigation is handled by the delegated handler below in TAB NAVIGATION HANDLERS section
 
@@ -73,6 +88,30 @@
             email_address: $("#settings-email-address").val(),
             auto_updates: $("#settings-auto-update").is(":checked") ? 1 : 0,
           },
+          modules: {
+            sandbox_enabled: $("#settings-sandbox-enabled").is(":checked")
+              ? 1
+              : 0,
+            sandbox_console_enabled: $(
+              "#settings-sandbox-console-enabled",
+            ).is(":checked")
+              ? 1
+              : 0,
+          },
+          sandbox_enabled: $("#settings-sandbox-enabled").is(":checked")
+            ? 1
+            : 0,
+          sandbox_console_enabled: $(
+            "#settings-sandbox-console-enabled",
+          ).is(":checked")
+            ? 1
+            : 0,
+          sandbox_timeout: $("#settings-sandbox-timeout").val() || 5,
+          sandbox_dynamic_analysis: $(
+            "#settings-sandbox-dynamic-analysis",
+          ).is(":checked")
+            ? 1
+            : 0,
         };
 
         $btn.prop("disabled", true).text("Saving...");
@@ -90,13 +129,11 @@
           success: function (response) {
             $btn.prop("disabled", false).text(originalText);
             if (response.success) {
-              $status.html(
-                '<span style="color: var(--nms-success);">Saved! Reloading...</span>',
+              NexifymySecurity.reloadAfterSettingsSave(
+                $status,
+                900,
+                "Saved! Reloading...",
               );
-              // Reload to apply language changes
-              setTimeout(function () {
-                location.reload();
-              }, 1000);
             } else {
               $status.html(
                 '<span style="color: var(--nms-danger);">' +
@@ -323,12 +360,10 @@
                   "Module " + module + " " + (enabled ? "enabled" : "disabled"),
                 );
 
-                // Modules hub cards need a refresh so runtime module init/deinit is applied consistently.
-                if (isModulesHubToggle) {
-                  setTimeout(function () {
-                    location.reload();
-                  }, 350);
-                }
+                // Reload after immediate settings save to ensure runtime config propagates.
+                setTimeout(function () {
+                  window.location.reload();
+                }, isModulesHubToggle ? 350 : 700);
               } else {
                 // Revert toggle on error
                 $this.prop("checked", !enabled);
@@ -525,12 +560,11 @@
           success: function (response) {
             $btn.prop("disabled", false);
             if (response.success) {
-              $status.html(
-                '<span style="color: var(--nms-success);">Saved!</span>',
+              NexifymySecurity.reloadAfterSettingsSave(
+                $status,
+                700,
+                "Saved! Reloading...",
               );
-              setTimeout(function () {
-                $status.html("");
-              }, 3000);
             } else {
               $status.html(
                 '<span style="color: var(--nms-danger);">' +
@@ -605,67 +639,134 @@
         );
       });
 
-      // Geo Blocking Settings Save
-      // Geo Blocking: Add Countries to List
+      // Geo Blocking: dual-list country transfer.
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function normaliseCountryName(raw) {
+        var text = String(raw || "").trim();
+        return text.replace(/\s*\([A-Z]{2}\)\s*$/, "").trim();
+      }
+
+      function getCountryMeta($checkbox) {
+        var code = String($checkbox.val() || "").trim().toUpperCase();
+        var name =
+          $checkbox.data("country-name") ||
+          $checkbox.closest("label").data("country-name") ||
+          normaliseCountryName($checkbox.closest("label").text());
+        return {
+          code: code,
+          name: String(name || code).trim(),
+        };
+      }
+
+      function buildCountryRow(typeClass, code, name) {
+        return (
+          '<label class="nms-geo-checkbox-row" data-country-code="' +
+          escapeHtml(code) +
+          '" data-country-name="' +
+          escapeHtml(name) +
+          '"><input type="checkbox" class="' +
+          typeClass +
+          '" value="' +
+          escapeHtml(code) +
+          '" data-country-code="' +
+          escapeHtml(code) +
+          '" data-country-name="' +
+          escapeHtml(name) +
+          '"> <span class="nms-geo-country-name">' +
+          escapeHtml(name) +
+          '</span> <span class="nms-geo-country-code">(' +
+          escapeHtml(code) +
+          ")</span></label>"
+        );
+      }
+
+      function sortGeoList($container) {
+        var $rows = $container.find("label.nms-geo-checkbox-row").get();
+        $rows.sort(function (a, b) {
+          var aName = ($(a).data("country-name") || "").toString().toLowerCase();
+          var bName = ($(b).data("country-name") || "").toString().toLowerCase();
+          if (aName < bName) return -1;
+          if (aName > bName) return 1;
+          var aCode = ($(a).data("country-code") || "").toString().toLowerCase();
+          var bCode = ($(b).data("country-code") || "").toString().toLowerCase();
+          if (aCode < bCode) return -1;
+          if (aCode > bCode) return 1;
+          return 0;
+        });
+        $.each($rows, function (_, row) {
+          $container.append(row);
+        });
+      }
+
+      function ensureGeoEmptyState() {
+        var $selectedList = $("#geo-selected-list");
+        var hasRows = $selectedList.find("label.nms-geo-checkbox-row").length > 0;
+        $selectedList.find(".nms-geo-empty-text").remove();
+        if (!hasRows) {
+          $selectedList.append(
+            '<p class="description nms-geo-empty-text">No countries selected yet.</p>',
+          );
+        }
+      }
+
       $("#geo-add-countries").on("click", function () {
-        var checkedBoxes = $(".geo-country-check:checked");
-        if (checkedBoxes.length === 0) {
+        var $checkedBoxes = $("#geo-available-list .geo-country-check:checked");
+        if ($checkedBoxes.length === 0) {
           alert("Please select at least one country to add.");
           return;
         }
 
-        checkedBoxes.each(function () {
-          var code = $(this).val();
-          var label = $(this).parent().text().trim();
-          // Add to selected list
-          $("#geo-selected-list").append(
-            '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-selected-check" value="' +
-              code +
-              '"> ' +
-              label +
-              "</label>",
-          );
-          // Remove from available list
-          $(this).parent().remove();
+        var $selectedList = $("#geo-selected-list");
+        $checkedBoxes.each(function () {
+          var $checkbox = $(this);
+          var meta = getCountryMeta($checkbox);
+          if (!meta.code) return;
+
+          if (
+            $selectedList.find('.geo-selected-check[value="' + meta.code + '"]')
+              .length === 0
+          ) {
+            $selectedList.append(buildCountryRow("geo-selected-check", meta.code, meta.name));
+          }
+          $checkbox.closest("label.nms-geo-checkbox-row").remove();
         });
 
-        // Remove "no countries" message if present
-        $("#geo-selected-list p.description").remove();
+        sortGeoList($selectedList);
+        ensureGeoEmptyState();
       });
 
-      // Geo Blocking: Remove Countries from List
       $("#geo-remove-countries").on("click", function () {
-        var checkedBoxes = $(".geo-selected-check:checked");
-        if (checkedBoxes.length === 0) {
+        var $checkedBoxes = $("#geo-selected-list .geo-selected-check:checked");
+        if ($checkedBoxes.length === 0) {
           alert("Please select at least one country to remove.");
           return;
         }
 
-        checkedBoxes.each(function () {
-          var code = $(this).val();
-          var label = $(this).parent().text().trim();
-          // Add back to available list (alphabetically - simplified by just prepending)
-          $(".geo-country-check")
-            .first()
-            .parent()
-            .parent()
-            .append(
-              '<label style="display: block; margin-bottom: 5px;"><input type="checkbox" class="geo-country-check" value="' +
-                code +
-                '"> ' +
-                label +
-                "</label>",
-            );
-          // Remove from selected list
-          $(this).parent().remove();
+        var $availableList = $("#geo-available-list");
+        $checkedBoxes.each(function () {
+          var $checkbox = $(this);
+          var meta = getCountryMeta($checkbox);
+          if (!meta.code) return;
+
+          if (
+            $availableList.find('.geo-country-check[value="' + meta.code + '"]')
+              .length === 0
+          ) {
+            $availableList.append(buildCountryRow("geo-country-check", meta.code, meta.name));
+          }
+          $checkbox.closest("label.nms-geo-checkbox-row").remove();
         });
 
-        // Add "no countries" message if list is empty
-        if ($(".geo-selected-check").length === 0) {
-          $("#geo-selected-list").html(
-            '<p class="description" style="margin: 0;">No countries selected yet.</p>',
-          );
-        }
+        sortGeoList($availableList);
+        ensureGeoEmptyState();
       });
 
       $("#save-geo-settings").on("click", function () {
@@ -679,6 +780,60 @@
           countries: countries,
         };
         saveModuleSettings("geo_blocking", settings, $(this), $("#geo-status"));
+      });
+
+      // Deception Settings Save
+      $("#save-deception-settings").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#deception-status");
+
+        $btn.prop("disabled", true).text("Saving...");
+        $status.html('<span style="color: #666;">Saving...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_save_deception_settings",
+            nonce: nexifymySecurity.nonce,
+            deception_enabled: $("#deception-enabled").is(":checked") ? 1 : 0,
+            deception_honeytrap_paths: $("#honeytrap-paths").val() || "",
+            deception_enum_trap: $("#enum-trap-enabled").is(":checked") ? 1 : 0,
+            deception_enum_block: $("#enum-hard-block").is(":checked") ? 1 : 0,
+            deception_block_all_enum: $("#enum-block-all").is(":checked")
+              ? 1
+              : 0,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).html(
+              '<span class="dashicons dashicons-saved"></span> Save Changes',
+            );
+
+            if (response && response.success) {
+              NexifymySecurity.reloadAfterSettingsSave(
+                $status,
+                700,
+                "Saved! Reloading...",
+              );
+              return;
+            }
+
+            $status.html(
+              '<span style="color: var(--nms-danger);">' +
+                ((response && response.data) || "Failed to save settings.") +
+                "</span>",
+            );
+          },
+          error: function () {
+            $btn.prop("disabled", false).html(
+              '<span class="dashicons dashicons-saved"></span> Save Changes',
+            );
+            $status.html(
+              '<span style="color: var(--nms-danger);">Connection error</span>',
+            );
+          },
+        });
       });
 
       // Save Module Hub Toggles (Modules Page)
@@ -725,8 +880,10 @@
         $.when
           .apply($, promises)
           .done(function () {
-            $status.html(
-              '<span style="color: #00a32a;">✓ All modules saved!</span>',
+            NexifymySecurity.reloadAfterSettingsSave(
+              $status,
+              700,
+              "All modules saved! Reloading...",
             );
             // Update badges and icons
             $(".module-toggle").each(function () {
@@ -747,9 +904,6 @@
                 $icon.removeClass("green").addClass("blue");
               }
             });
-            setTimeout(function () {
-              $status.html("");
-            }, 3000);
           })
           .fail(function () {
             $status.html(
@@ -807,8 +961,10 @@
         $.when
           .apply($, promises)
           .done(function () {
-            $status.html(
-              '<span style="color: #00a32a;">✓ All changes saved successfully!</span>',
+            NexifymySecurity.reloadAfterSettingsSave(
+              $status,
+              700,
+              "All changes saved successfully! Reloading...",
             );
             moduleChanges = {}; // Clear changes
 
@@ -825,9 +981,6 @@
               }
             });
 
-            setTimeout(function () {
-              $status.html("");
-            }, 3000);
           })
           .fail(function () {
             $status.html(
@@ -1232,8 +1385,10 @@
           success: function (response) {
             $btn.prop("disabled", false).text(originalText);
             if (response.success) {
-              $status.html(
-                '<span style="color: var(--nms-success);">Saved!</span>',
+              NexifymySecurity.reloadAfterSettingsSave(
+                $status,
+                700,
+                "Saved! Reloading...",
               );
             } else {
               $status.html(
@@ -2412,8 +2567,10 @@
           if (response.success) {
             alert(
               "Schedule saved! Next scan: " +
-                (response.data.next_run || "Disabled"),
+                (response.data.next_run || "Disabled") +
+                ". Reloading...",
             );
+            window.location.reload();
           } else {
             alert("Error: " + response.data);
           }
@@ -2716,6 +2873,11 @@
         }
       });
 
+      function finalizeSettingsSave() {
+        alert("Settings saved successfully! Reloading...");
+        window.location.reload();
+      }
+
       $.ajax({
         url: nexifymySecurity.ajaxUrl,
         type: "POST",
@@ -2726,34 +2888,39 @@
         },
         success: function (response) {
           $button.prop("disabled", false).text("Save Settings");
-          if (response.success) {
-            alert("Settings saved successfully!");
-          } else {
+          if (!response.success) {
             alert("Error: " + response.data);
+            return;
           }
+
+          // Also save alert settings if present, then reload after both saves complete.
+          if (formData.alerts) {
+            $.ajax({
+              url: nexifymySecurity.ajaxUrl,
+              type: "POST",
+              data: {
+                action: "nexifymy_save_alert_settings",
+                enabled: formData.alerts.enabled || "",
+                recipient_email: formData.alerts.recipient_email || "",
+                alert_types: formData.alerts.alert_types || [],
+                throttle_minutes: formData.alerts.throttle_minutes || 60,
+                daily_summary: formData.alerts.daily_summary || "",
+                nonce: nexifymySecurity.nonce,
+              },
+              complete: function () {
+                finalizeSettingsSave();
+              },
+            });
+            return;
+          }
+
+          finalizeSettingsSave();
         },
         error: function () {
           $button.prop("disabled", false).text("Save Settings");
           alert("Failed to save settings. Please try again.");
         },
       });
-
-      // Also save alert settings if present
-      if (formData.alerts) {
-        $.ajax({
-          url: nexifymySecurity.ajaxUrl,
-          type: "POST",
-          data: {
-            action: "nexifymy_save_alert_settings",
-            enabled: formData.alerts.enabled || "",
-            recipient_email: formData.alerts.recipient_email || "",
-            alert_types: formData.alerts.alert_types || [],
-            throttle_minutes: formData.alerts.throttle_minutes || 60,
-            daily_summary: formData.alerts.daily_summary || "",
-            nonce: nexifymySecurity.nonce,
-          },
-        });
-      }
     },
 
     resetSettings: function () {
@@ -3364,11 +3531,13 @@
         success: function (response) {
           $button.prop("disabled", false);
           if (response && response.success) {
-            if ($status && $status.length)
-              $status
-                .text(response.data.message || "Saved.")
-                .css("color", "green");
-            NexifymySecurity.loadCdnStatus();
+            NexifymySecurity.reloadAfterSettingsSave(
+              $status,
+              700,
+              (response.data && response.data.message
+                ? response.data.message
+                : "Saved.") + " Reloading...",
+            );
           } else {
             if ($status && $status.length)
               $status
@@ -3680,8 +3849,11 @@
         success: function (response) {
           $button.prop("disabled", false);
           if (response && response.success) {
-            if ($status && $status.length)
-              $status.text("Saved.").css("color", "green");
+            NexifymySecurity.reloadAfterSettingsSave(
+              $status,
+              700,
+              "Saved. Reloading...",
+            );
           } else {
             if ($status && $status.length)
               $status
@@ -3802,6 +3974,23 @@
 
       // Update dashboard UI
       function updateDashboard(data) {
+        data = data || {};
+        var chartData = data.chart_data || {};
+        var browserDistribution = data.browser_distribution || {};
+        var osDistribution = data.os_distribution || {};
+        var deviceDistribution = data.device_distribution || {};
+        var geoDistribution = Array.isArray(data.geo_distribution)
+          ? data.geo_distribution
+          : [];
+
+        chartData.labels = Array.isArray(chartData.labels) ? chartData.labels : [];
+        chartData.page_views = Array.isArray(chartData.page_views)
+          ? chartData.page_views
+          : [];
+        chartData.unique_visitors = Array.isArray(chartData.unique_visitors)
+          ? chartData.unique_visitors
+          : [];
+
         // Update summary cards
         if (data.totals) {
           $("#stats-total-views").text(formatNumber(data.totals.total_views));
@@ -3812,8 +4001,8 @@
         }
 
         // Top Country
-        if (data.geo_distribution && data.geo_distribution.length > 0) {
-          $("#stats-top-country").text(data.geo_distribution[0].country_name);
+        if (geoDistribution.length > 0) {
+          $("#stats-top-country").text(geoDistribution[0].country_name);
         } else {
           $("#stats-top-country").text("-");
         }
@@ -3823,11 +4012,11 @@
           "chart-traffic-overview",
           "line",
           {
-            labels: data.chart_data.labels,
+            labels: chartData.labels,
             datasets: [
               {
                 label: "Page Views",
-                data: data.chart_data.page_views,
+                data: chartData.page_views,
                 borderColor: "#4f46e5",
                 backgroundColor: "rgba(79, 70, 229, 0.1)",
                 borderWidth: 2,
@@ -3836,7 +4025,7 @@
               },
               {
                 label: "Unique Visitors",
-                data: data.chart_data.unique_visitors,
+                data: chartData.unique_visitors,
                 borderColor: "#06b6d4",
                 backgroundColor: "rgba(6, 182, 212, 0.1)",
                 borderWidth: 2,
@@ -3855,8 +4044,9 @@
         );
 
         // 2. Browser Distribution (Doughnut)
-        var browserLabels = Object.keys(data.browser_distribution);
-        var browserData = Object.values(data.browser_distribution);
+        var browserSeries = compactDistribution(browserDistribution, 6);
+        var browserLabels = browserSeries.labels;
+        var browserData = browserSeries.values;
         renderChart(
           "chart-browsers",
           "doughnut",
@@ -3881,8 +4071,9 @@
         );
 
         // 3. OS Distribution (Pie)
-        var osLabels = Object.keys(data.os_distribution);
-        var osData = Object.values(data.os_distribution);
+        var osSeries = compactDistribution(osDistribution, 6);
+        var osLabels = osSeries.labels;
+        var osData = osSeries.values;
         renderChart(
           "chart-os",
           "pie",
@@ -3907,8 +4098,9 @@
         );
 
         // 4. Device Distribution (Bar)
-        var deviceLabels = Object.keys(data.device_distribution);
-        var deviceData = Object.values(data.device_distribution);
+        var deviceSeries = compactDistribution(deviceDistribution, 6);
+        var deviceLabels = deviceSeries.labels;
+        var deviceData = deviceSeries.values;
         renderChart(
           "chart-devices",
           "bar",
@@ -3934,16 +4126,17 @@
         );
 
         // 5. Geo Chart (Doughnut for now, effectively same data as map list)
-        var geoLabels = data.geo_distribution
-          .map(function (item) {
-            return item.country_name;
+        var geoTop = geoDistribution
+          .filter(function (item) {
+            return toNumber(item && item.count) > 0;
           })
           .slice(0, 5);
-        var geoData = data.geo_distribution
-          .map(function (item) {
-            return item.count;
-          })
-          .slice(0, 5);
+        var geoLabels = geoTop.map(function (item) {
+          return item.country_name;
+        });
+        var geoData = geoTop.map(function (item) {
+          return item.count;
+        });
         renderChart(
           "chart-geo",
           "doughnut",
@@ -3967,24 +4160,46 @@
         );
 
         // Update Tables
-        updateTable("#table-top-pages", data.top_pages, ["url", "count"]);
-        updateTable("#table-top-referrers", data.top_referrers, [
+        updateTable("#table-top-pages", data.top_pages || [], ["url", "count"]);
+        updateTable("#table-top-referrers", data.top_referrers || [], [
           "referrer",
           "count",
         ]);
-        updateGeoTable("#table-geo", data.geo_distribution);
+        updateGeoTable("#table-geo", geoDistribution);
       }
 
       // Helper: Render Chart
       function renderChart(id, type, data, options) {
-        var ctx = document.getElementById(id);
-        if (!ctx) return;
+        var canvas = document.getElementById(id);
+        if (!canvas) return;
+
+        var fallbackId = id + "-fallback";
+        var fallbackEl = document.getElementById(fallbackId);
+
+        if (typeof window.Chart !== "function") {
+          renderChartFallback(canvas, fallbackId, type, data);
+          return;
+        }
+
+        if (!hasRenderableData(data)) {
+          if (charts[id]) {
+            charts[id].destroy();
+            delete charts[id];
+          }
+          renderChartFallback(canvas, fallbackId, type, data);
+          return;
+        }
 
         if (charts[id]) {
           charts[id].destroy();
         }
 
-        charts[id] = new Chart(ctx, {
+        if (fallbackEl) {
+          fallbackEl.remove();
+        }
+        $(canvas).show();
+
+        charts[id] = new Chart(canvas, {
           type: type,
           data: data,
           options: $.extend(
@@ -3999,6 +4214,185 @@
             options,
           ),
         });
+      }
+
+      function renderChartFallback(canvas, fallbackId, type, data) {
+        var $canvas = $(canvas);
+        var $parent = $canvas.parent();
+        var $fallback = $("#" + fallbackId);
+
+        if ($fallback.length === 0) {
+          $fallback = $('<div class="nms-chart-fallback" id="' + fallbackId + '"></div>');
+          $parent.append($fallback);
+        }
+
+        $canvas.hide();
+        $fallback.html(buildFallbackMarkup(type, data)).show();
+      }
+
+      function buildFallbackMarkup(type, data) {
+        var labels = Array.isArray(data && data.labels) ? data.labels : [];
+        var datasets = Array.isArray(data && data.datasets) ? data.datasets : [];
+
+        if (!labels.length || !datasets.length) {
+          return '<p class="nms-chart-fallback-empty">No data available for this range.</p>';
+        }
+
+        if (type === "line") {
+          return buildSeriesFallback(labels, datasets, 12);
+        }
+
+        return buildDistributionFallback(labels, datasets[0]);
+      }
+
+      function buildSeriesFallback(labels, datasets, maxRows) {
+        var startIndex = Math.max(labels.length - maxRows, 0);
+        var activeLabels = labels.slice(startIndex);
+        var maxValue = 0;
+        var html = '<div class="nms-chart-fallback-series">';
+
+        datasets.forEach(function (dataset) {
+          (dataset.data || []).forEach(function (value) {
+            maxValue = Math.max(maxValue, toNumber(value));
+          });
+        });
+
+        if (maxValue <= 0) {
+          return '<p class="nms-chart-fallback-empty">No traffic data recorded for this range.</p>';
+        }
+
+        activeLabels.forEach(function (label, localIndex) {
+          var index = startIndex + localIndex;
+          html += '<div class="nms-chart-fallback-row">';
+          html += '<div class="nms-chart-fallback-label">' + escapeHtml(label) + "</div>";
+          html += '<div class="nms-chart-fallback-bars">';
+
+          datasets.forEach(function (dataset, datasetIndex) {
+            var value = toNumber((dataset.data || [])[index]);
+            var width = value > 0 ? Math.max(2, Math.round((value / maxValue) * 100)) : 0;
+            var color =
+              dataset.borderColor ||
+              ["#4f46e5", "#06b6d4", "#10b981", "#f59e0b"][datasetIndex % 4];
+
+            html += '<div class="nms-chart-fallback-bar-row">';
+            html +=
+              '<span class="nms-chart-fallback-series-name">' +
+              escapeHtml(dataset.label || "Series") +
+              "</span>";
+            html += '<div class="nms-chart-fallback-track">';
+            html +=
+              '<div class="nms-chart-fallback-fill" style="width:' +
+              width +
+              "%;background:" +
+              escapeHtml(color) +
+              ';"></div>';
+            html += "</div>";
+            html +=
+              '<span class="nms-chart-fallback-value">' +
+              formatNumber(value) +
+              "</span>";
+            html += "</div>";
+          });
+
+          html += "</div></div>";
+        });
+
+        html += "</div>";
+        return html;
+      }
+
+      function buildDistributionFallback(labels, dataset) {
+        var values = Array.isArray(dataset && dataset.data) ? dataset.data : [];
+        var maxValue = 0;
+        var rows = [];
+        var html = '<div class="nms-chart-fallback-series">';
+
+        labels.forEach(function (label, index) {
+          var value = toNumber(values[index]);
+          maxValue = Math.max(maxValue, value);
+          rows.push({ label: label, value: value });
+        });
+
+        if (maxValue <= 0) {
+          return '<p class="nms-chart-fallback-empty">No data available for this range.</p>';
+        }
+
+        rows.forEach(function (row) {
+          var width = row.value > 0 ? Math.max(2, Math.round((row.value / maxValue) * 100)) : 0;
+          html += '<div class="nms-chart-fallback-row">';
+          html += '<div class="nms-chart-fallback-label">' + escapeHtml(row.label) + "</div>";
+          html += '<div class="nms-chart-fallback-bars">';
+          html += '<div class="nms-chart-fallback-bar-row">';
+          html += '<div class="nms-chart-fallback-track">';
+          html +=
+            '<div class="nms-chart-fallback-fill" style="width:' +
+            width +
+            '%;"></div>';
+          html += "</div>";
+          html +=
+            '<span class="nms-chart-fallback-value">' +
+            formatNumber(row.value) +
+            "</span>";
+          html += "</div></div></div>";
+        });
+
+        html += "</div>";
+        return html;
+      }
+
+      function hasRenderableData(data) {
+        var datasets = Array.isArray(data && data.datasets) ? data.datasets : [];
+
+        return datasets.some(function (dataset) {
+          var values = Array.isArray(dataset && dataset.data) ? dataset.data : [];
+
+          return values.some(function (value) {
+            return toNumber(value) > 0;
+          });
+        });
+      }
+
+      function compactDistribution(distribution, limit) {
+        var entries = Object.keys(distribution || {})
+          .map(function (label) {
+            return {
+              label: label,
+              value: toNumber(distribution[label]),
+            };
+          })
+          .filter(function (entry) {
+            return entry.value > 0;
+          })
+          .sort(function (a, b) {
+            return b.value - a.value;
+          });
+
+        if (limit > 0 && entries.length > limit) {
+          entries = entries.slice(0, limit);
+        }
+
+        return {
+          labels: entries.map(function (entry) {
+            return entry.label;
+          }),
+          values: entries.map(function (entry) {
+            return entry.value;
+          }),
+        };
+      }
+
+      function toNumber(value) {
+        var num = Number(value);
+        return Number.isFinite(num) ? num : 0;
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#39;");
       }
 
       // Helper: Update Table
@@ -4070,7 +4464,11 @@
 
       // Helper: Format Number
       function formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        var safe = Number(num);
+        if (!Number.isFinite(safe)) {
+          safe = 0;
+        }
+        return safe.toLocaleString();
       }
 
       // Handle Range Change
