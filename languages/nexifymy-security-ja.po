@@ -8,1774 +8,1774 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "前回のスキャンで %d 個の脅威が検出されました"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(確認するにはこのコードを話してください)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - 高"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1日"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1時間"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14日間"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15分"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - 中"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24時間"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA メソッド"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA 設定"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - 低"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3日間"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30日"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30分"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30日"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 禁止"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 見つかりません"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 リクエストが多すぎます (推奨)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5分"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 サービスは利用できません"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6時間"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60日"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7日間"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7日間（連続）"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90日"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90日"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "AI学習状況"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "AIステータス"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI 脅威検出"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "AI学習データのリセットに成功しました。"
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "1 分あたりの AJAX リクエスト数"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "APIとヘッドレスセキュリティ"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "APIとサービス"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "API バースト許容量"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "APIエンドポイント"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "APIキー"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "API レート制限"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "1 分あたりの API リクエスト数"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "APIセキュリティ"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "APIトークン"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "API レート制限を超えました。制限: 1 分あたり %d リクエスト。"
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "APIの制限事項"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API トークン、HEC トークン、または認証キー。"
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "放棄された"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "検疫について"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "アクセスが拒否されました"
 
 msgid "Action"
-msgstr "Action"
+msgstr "アクション"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "アクション"
 
 msgid "Active"
-msgstr "Active"
+msgstr "アクティブ"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "アクティビティダッシュボード"
 
 msgid "Activity Log"
 msgstr "アクティビティログ"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "アクティビティログの設定"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "これらのユーザーのアクティビティは記録されません。"
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "これより古いアクティビティ ログは自動的に削除されます。"
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "アクティビティ追跡"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "さらに %d 文字を追加します。"
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "セキュリティを強化するためにユーザー アカウントに 2FA を追加します。"
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "ログインとフォームに CAPTCHA を追加します。"
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "ログインフォームに CAPTCHA 認証を追加する"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "HTTP セキュリティ ヘッダー (X-Frame-Options、CSP など) を追加します。"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "新しいパスキーを追加"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "セキュリティヘッダーの追加"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Webhook の追加"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "X-Frame-Options、X-Content-Type-Options、およびその他のセキュリティ ヘッダーを追加します。"
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "X-Frame-Options、X-XSS-Protection ヘッダーを追加"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "2 番目の認証形式を要求することで、セキュリティ層を追加します。"
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "ユーザーのログインに 2 つの形式の認証を要求することで、セキュリティ層を追加します。"
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "TOTP ベースの 2FA でセキュリティ層を追加します。"
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "小文字を追加します。"
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "数字を追加します。"
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "特殊文字を追加します。"
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "リストに追加"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "大文字を追加します。"
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "追加のログインセキュリティ対策。レートリミッターで動作します。"
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "ログインフォームに CAPTCHA を追加します。安全ですが、ユーザーエクスペリエンスに影響を与える可能性があります。"
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Google reCAPTCHA、Cloudflare Turnstile、または数学の課題を追加します"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "HTTP セキュリティ ヘッダー (X-Frame-Options、CSP) を追加します。安全 - ブラウザのセキュリティを向上させます。"
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "TOTP、電子メール、または SMS コードを使用して追加のセキュリティ層を追加します"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "管理者ログイン (成功した管理者ログイン)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "上級者向け"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "高度なファイアウォール設定"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "高度な硬化"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "高度な強化オプション"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "詳細なログイン設定"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "詳細オプション"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "高度なスキャナー オプション"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "高度なヒューリスティック"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "影響を受けるファイル:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "アラートしきい値"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "アラートの種類"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "アラート"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "プラグインが非アクティブ化された場合にアラートが送信されます。"
 
 msgid "All"
-msgstr "All"
+msgstr "すべて"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "オールクリア！"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "すべてのイベント"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "すべての重大度"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "すべてのユーザーが自主的に 2FA を有効にできるようにします。"
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "メールコードをバックアップ方法として許可する"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "レート制限を超える短いバーストを許可します。"
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "施行前にユーザーに 2FA を設定する時間を与えます。"
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "ユーザーが 2FA を有効にすることを許可する"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "ユーザーが緊急バックアップ コードを生成できるようにします。"
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "ユーザーが信頼できるデバイスで 2FA をスキップできるようにします。"
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "許可されたユーザーエージェント"
 
 msgid "Analytics"
 msgstr "分析"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "異常"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "任意の重大度"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "変更を加えると、即時に電子メール アラートがトリガーされます。"
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "設定を適用する"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "WordPress セキュリティのベストプラクティスを適用します。"
 
 msgid "Apply security fixes"
 msgstr "セキュリティ修正を適用"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "WordPress にセキュリティ強化措置を適用します。"
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "WordPress インストールを保護するためにセキュリティ強化措置を適用します。"
 
 msgid "ArcSight"
-msgstr "ArcSight"
+msgstr "アークサイト"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "このパスキーを削除してもよろしいですか?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "続行してもよろしいですか?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "攻撃保護"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "試行ウィンドウ"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "音声（スピーキング）"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "認証中..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "認証コード"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "認証イベント"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "認証トークン"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "認証に失敗しました。もう一度試してください。"
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "APIアクセスには認証が必要です。"
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "GraphQL アクセスには認証が必要です。"
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "著者のスキャン"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "自動ブロック期間"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "繰り返しの違反者を自動ブロック"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "自動ブロックしきい値"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "自動修正"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "レポートの自動生成"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "脅威の自動隔離"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "自動スキャンスケジュール"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "自動更新"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "自動更新設定"
 
 msgid "Auto-Updates"
 msgstr "è‡ªå‹•æ›´æ–°"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "自動検出"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "自動スキャン"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "自動スキャン"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "ルールを複数回トリガーする IP を自動的にブラックリストに登録します。"
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "セキュリティ インシデントと脆弱性に対する Jira チケットを自動的に作成します。"
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "プロジェクト管理システムでセキュリティ インシデントのチケットを自動的に作成します。"
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "スケジュールに従ってレポートを自動的に生成する"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "検出されたマルウェアを自動的に隔離に移動します。"
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "バックグラウンドでスキャンを自動的に実行します。"
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "マルウェアのシグネチャを毎日自動的に更新します。"
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "利用可能な国"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "利用可能なイベント"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "平均/日"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "バックグラウンドスキャン"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "破損したファイルを置き換える前にバックアップします"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "バックアップコード"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "データベースをバックアップ、最適化、保護します。"
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "バックアップとクリーンアップ"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "バックアップは wp-content/nexifymy-backups/core/ に保存されます。"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "悪いボット"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "不正なリクエスト"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "バランスのとれた（推奨）"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "行動記録"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "行動分析"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "ブラックリスト (ブロックリストに登録)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "ブラックリスト (ブロックが選択されています)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "ブラックリストIP"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "ブラックリスト: 選択した国をブロックします。ホワイトリスト: 選択した国のみを許可します。"
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "ブラックリストに登録されたIP"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "悪質なボットをブロックする"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "CSRF攻撃をブロックする"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "一般的なパスワードをブロックする"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "ディレクトリトラバーサルをブロックする"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "ブロック期間"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "空のユーザーエージェントをブロックする"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "過剰な API ユーザーをブロックする"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "ブロックファイルエディタ"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "ローカル ファイルの組み込みをブロックする"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "メッセージをブロックする"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "ブロックモード"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "ブロックモード (推奨)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "ブロックモード: 悪意のあるリクエストをブロックします。監視モード: ブロックせずに脅威をログに記録します。"
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "リモートコード実行をブロックする"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "リモート ファイルの組み込みをブロックする"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "ブロックSQLインジェクション"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "不審なファイルのアップロードをブロックする"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "XML-RPC アクセスをブロックする (ブルート フォースを防止)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "XSS 攻撃をブロックする"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "特定の国からのアクセスをブロックします。"
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "攻撃的なクローラをブロックします (高いリクエスト率)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "著者列挙スキャンをブロックする (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "過度に長いクエリ文字列をブロックします。"
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "既知の悪質なボットやスクレーパーをブロック"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "既知の悪意のあるボットやスクレーパーをブロックします。"
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "不正なリクエストと疑わしいクエリ文字列をブロックします"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "悪意のあるリクエストをブロックする"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "悪意のあるリクエストと攻撃をブロックする"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "国に基づいてトラフィックをブロックまたは許可します。"
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "DoS 攻撃を防ぐために、このサイズを超えるリクエストをブロックします。"
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "空のユーザーエージェントを含むリクエストをブロックします (一部の正当なボットをブロックする可能性があります)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "User-Agent ヘッダーのないリクエストをブロックします。"
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "疑わしい IP をブロックする"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "疑わしいユーザーエージェントをブロックする"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "特定の国からのトラフィックをブロックします。有効にする前に設定で国を構成してください。"
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "実行可能拡張子 (.php、.exe、.sh など) を持つアップロードをブロックします。"
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "ブロックされた攻撃"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "ブロックされたファイル拡張子"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "ブロックされたリクエスト"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "ブロックされたユーザーエージェント"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "悪意のある動作を示す IP アドレスをブロックします。安全 - IP をホワイトリストに登録できます。"
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "この URL をブックマークしておくと、いつでもログイン ページにアクセスできます。"
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "ボットとクローラーの保護"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "ボットとユーザーエージェントの保護"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "ボットの防止"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "ボット保護"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "ブラウザ"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "ブルートフォース"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "ブルートフォースプロテクション"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "ブルート フォース保護とログイン試行制限。"
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "バグ"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "最も忙しい日"
 
 msgid "CAPTCHA"
-msgstr "CAPTCHA"
+msgstr "キャプチャ"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "CAPTCHA保護"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDNの統合"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN ステータス"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (共通イベントフォーマット)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "CI/CD パイプライン"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "CI/CD パイプラインの統合"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "キャンセル"
 
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "キャプチャ"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "キャプチャのプレビュー"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "キャプチャプロバイダー"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "キャプチャ設定"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "データベースのプレフィックスを変更する"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "データベース テーブルのプレフィックスを変更します (データベースの手動更新が必要です)。"
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "攻撃を防ぐためにデフォルトのログイン URL を変更します。"
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "自動攻撃を防ぐために、デフォルトの wp-admin ログイン URL を変更します。"
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "ボット攻撃を防ぐために、ログイン URL を /wp-admin からカスタム スラッグに変更します。"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "チャンネル"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "キャラクター要件"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "コアの整合性をチェックする"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "チェック間隔"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "公式ソースを使用して、破損した WordPress コア ファイルを確認し、修復します。"
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "コア ファイルに変更やマルウェアがないか確認します。"
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "バックドアをチェックする"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "難読化のチェック"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "既知の脆弱性を確認します。"
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "アップロードされたファイルに悪意のあるコンテンツがないか確認します。"
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Webシェルのチェック"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "プラグイン/テーマに既知の脆弱性がないかチェックします。安全 - バージョンのみをチェックします。"
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "ユニークで推測が難しいナメクジを選択してください。"
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "NexifyMy キャプチャのチャレンジの種類を選択します。"
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "クリーンなファイル"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "クリーンなファイル:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "データベースのクリーンアップと最適化"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "不要なデータをクリーンアップしてデータベースのパフォーマンスを向上させます。"
 
 msgid "Clear Logs"
 msgstr "ログをクリア"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "クラウドフレア"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "クラウドフレアなど"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API設定"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API トークン (ゾーン権限付き)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "クラウドフレア回転木戸"
 
 msgid "Code"
-msgstr "Code"
+msgstr "コード"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "コードの有効期限"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "コードの品質の問題"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "アップロードでブロックするファイル拡張子のカンマ区切りのリスト。"
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "スキップするファイル拡張子のカンマ区切りのリスト (例: jpg、png、pdf)。"
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "コメントはブロックされました"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "コメントフォーム"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "コメント投稿率"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "コメントフォーム"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "コミュニケーション"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "コミュニケーションプラットフォーム"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "コア ファイルを WordPress の公式チェックサムと比較します。"
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "WordPress コア ファイルを公式チェックサムと比較して、変更を検出します。"
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "各コア ファイルを予想されるハッシュと比較します。"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "すべての RSS フィードと Atom フィードを完全に無効にします。"
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "すべてのファイル変更を完全に無効にします (DISALLOW_FILE_MODS)。"
 
 msgid "Compliance"
 msgstr "コンプライアンス"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "コンプライアンスと報告"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "コンプライアンスとセキュリティのレポート"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "コンプライアンス設定"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Composer の依存関係"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "総合分析"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "包括的なユーザーアクティビティ追跡、ログイン監視、システムイベントログ。"
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "設定する"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "2FA を構成してログイン セキュリティを強化する"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "セキュリティとパフォーマンスのために CDN を構成します。"
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "CDN 統合とキャッシュ管理を構成します。"
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Web アプリケーション ファイアウォール (WAF) を構成してサイトを保護します。"
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "電子メールのアラートと通知を構成します。"
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "ファイアウォール ルールと保護設定を構成します。"
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "マルウェア スキャナーの動作とスケジュールされたスキャン オプションを構成します。"
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "プラグインの設定と環境設定を構成します。"
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "プラグインの設定を行います。"
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "セキュリティ設定を構成します。"
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "確認する"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "アクションの確認"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "確認されたマルウェア"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "セキュリティ監視を SIEM、チケット発行、通信、CI/CD プラットフォームに接続します。"
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "NexifyMy Security に関するサポートについては、サポート チームにお問い合わせください。"
 
 msgid "Content"
-msgstr "Content"
+msgstr "内容"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "コンテンツアクティビティ"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "内容の変更"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "コンテンツイベント"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "コンテンツセキュリティ"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "コアファイルの変更"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "コアファイルの修復"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "コアの修理"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "核となるWordPressの整合性"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "コアファイルの整合性"
 
 msgid "Count"
-msgstr "Count"
+msgstr "カウント"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "国"
 
 msgid "Country"
-msgstr "Country"
+msgstr "国"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "国のブロック設定"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "国の制限"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "今すぐバックアップを作成"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "WordPress データベースのバックアップを作成します。バックアップは安全に保存され、ダウンロードできます。"
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "重要なセキュリティ イベントに対して ServiceNow でインシデントを作成します。"
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Webhook を次の場所で作成します: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Discordサーバー設定>統合>WebhookでWebhookを作成します"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Webhook を作成します: [チーム] > [チャネル] > [コネクタ] > [受信 Webhook]"
 
 msgid "Created"
-msgstr "Created"
+msgstr "作成されました"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "作成日: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "クリティカル"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "クリティカルのみ"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "現在のログインURL"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "現在のバージョン"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "現在:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "カスタムログインURL"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "カスタムURL"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "カスタムWebhook"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "毎日"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "毎日（推奨）"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "毎日のステータスの概要"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "毎日のサマリー"
 
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "データの保持"
 
 msgid "Database"
-msgstr "Database"
+msgstr "データベース"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "データベースアクション"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "データベースのバックアップ"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "データベース情報"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "データベースの最適化"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "データベースオプティマイザー"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "データベースのセキュリティ"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "データベースのサイズ"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "データベースのバックアップと最適化。有効にする前にバックアップ スケジュールを構成します。"
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "データベースのセキュリティチェック"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "データドッグ"
 
 msgid "Date"
-msgstr "Date"
+msgstr "日付"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "日付/時刻"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "非アクティブ化の監視:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "デバッグモード"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "深い"
 
 msgid "Deep Scan"
 msgstr "詳細スキャン"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "デフォルトのスキャンモード"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "何も指定されていない場合に使用されるデフォルトのスキャン モード。"
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "定義"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "削除"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "アンインストール時にプラグインデータをすべて削除する"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "削除:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "依存関係のスキャン、サードパーティのスクリプトの監視、CDN の整合性検証。"
 
 msgid "Description"
-msgstr "Description"
+msgstr "説明"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "サイトのトラフィックとセキュリティ イベントに関する詳細な洞察"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Web サイトのセキュリティ パフォーマンスに関する詳細な洞察。"
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "コード実行の試みを検出してブロックします。"
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "隠されたバックドア スクリプトとシェルを検出します。"
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "マルウェア、バックドア、疑わしいコードを検出"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "脅威を検出する"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "行動分析を使用して未知の脅威を検出します。"
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "検出方法"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "デバイスの種類"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "難易度"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "難易度"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "NexifyMy キャプチャ チャレンジの難易度。"
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "直接"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "ディレクトリトラバーサル"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "ディレクトリトラバーサル保護"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "2FA を無効にする"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "アプリケーションパスワードを無効にする"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "著者のアーカイブを無効にする"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "ディレクトリの参照を無効にする"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "埋め込みを無効にする"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "ファイルエディタを無効にする"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "ファイルの変更を無効にする"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "ログインエラーメッセージを無効にする"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "ピンバックを無効にする"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "ピンバックを無効にする"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "プラグイン/テーマのインストールを無効にする"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "REST API ユーザー列挙を無効にする"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "RSS/Atom フィードを無効にする"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "右クリックを無効にする"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "テキスト選択を無効にする"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "トラックバックを無効にする"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "WPエディターを無効にする"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "XML-RPC を無効にする"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "XML-RPC を無効にする (一般的なブルート フォース ベクトルを防止)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "XML-RPC を無効にする (ピンバック攻撃を防止)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "XML-RPC (DDoS およびブルート フォース攻撃で使用される) を無効にします。"
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "ユーザー名の列挙を防ぐには、作成者のアーカイブ ページを無効にします。"
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "oEmbed 機能と REST API エンドポイントを無効にします。"
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "DDoS を防ぐためにピンバック機能を無効にします。"
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "ピンバック/トラックバック機能を無効にする"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "WordPress 管理画面でプラグイン/テーマ ファイル エディターを無効にします。"
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "REST API を介したパブリック ユーザーの列挙を無効にする"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "フロントエンドでの右クリックのコンテキスト メニューを無効にします。"
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "コードインジェクションを防ぐために、組み込みのテーマとプラグインエディタを無効にします。"
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "テーマとプラグインエディターを無効にする"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "管理画面でテーマ/プラグインエディターを無効にする"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "トラックバック機能を無効にします。"
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "障害者"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "XML-RPC を無効にして攻撃を防ぎます。 Jetpack またはモバイル アプリを使用しない限り安全です。"
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "組み込みのテーマ/プラグインエディターを無効にします。安全 - 管理者でのコード編集を禁止します。"
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "ファイル編集、XML-RPC を無効にし、WordPress のベスト プラクティスを適用します。"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Discordの統合"
 
 msgid "Download"
-msgstr "Download"
+msgstr "ダウンロード"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "公式ソースから新しい WordPress パッケージをダウンロードします"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "簡単"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "簡単（加算のみ）"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "NexifyMy Security プラグイン ファイルの編集は、セキュリティ上の理由から無効になっています。"
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "エディターとファイル アクセス"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "エディターのブロック:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "エラスティックサーチ"
 
 msgid "Email"
-msgstr "Email"
+msgstr "電子メール"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "電子メールアラート設定"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "電子メールアラート"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "電子メールバックアップ"
 
 msgid "Email Notifications"
 msgstr "ãƒ¡ãƒ¼ãƒ«é€šçŸ¥"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "電子メールレポート"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "スキャンレポートを電子メールで送信"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "メール認証"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "空のユーザーエージェント"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "有効にする"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "2FA を有効にする"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "2FA モジュールを有効にする"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "アクティビティログを有効にする"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "アラートを有効にする"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "CAPTCHA 保護を有効にする"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "CDN統合を有効にする"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "CDN 機能を有効にする"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "CI/CD統合を有効にする"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "キャプチャを有効にする"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "カスタム Webhook を有効にする"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Discordを有効にする"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "電子メールアラートを有効にする"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "ファイアウォールを有効にする"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "地理的ブロックを有効にする"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "ログインの非表示を有効にする"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Jira を有効にする"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "保護を有効にする"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "レート制限を有効にする"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "SIEM統合を有効にする"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "SSL/HTTPSを有効にする"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "スキャナーを有効にする"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "スキャナモジュールを有効にする"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "スケジュールされたスキャンを有効にする"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "ServiceNow を有効にする"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "スラックを有効にする"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "チームを有効にする"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "二要素認証を有効にする"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "WAFを有効にする"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "WAFモジュールを有効にする"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "WAF 保護を有効にする"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Web アプリケーション ファイアウォールを有効にする"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Web アプリケーション ファイアウォール保護を有効にします。"
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "サイトのセキュリティ モジュールを有効にして構成します。"
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "セキュリティモジュールを有効にして構成します。"
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "キャプチャ保護を有効にする"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "国ベースのブロックを有効にする"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "デバッグログを有効にする (トラブルシューティングのみ)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "ファイアウォール保護を有効にして攻撃をブロックする"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "ログイン速度制限を有効にする"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "マルウェア スキャナーを有効にする"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "セキュリティモジュールを有効または無効にします。"
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "WAF モジュール全体を有効または無効にします。"
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "マルウェア スキャナーを有効または無効にします。"
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "レート制限モジュールを有効または無効にします。"
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "2 要素認証を有効または無効にします。"
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "スケジュールされたスキャンを有効にする"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "脆弱性スキャナー機能を有効にする"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "有効"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "エンドポイント"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "エンドポイント URL"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "強力なパスワードを強制する"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "強力なパスワード要件を強制する"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "すべてのユーザーに強力なパスワード要件を強制します。"
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "強力なパスワード要件を強制します。"
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "ユーザーに強力なパスワード要件を強制します。安全 - 新しいパスワードにのみ影響します。"
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "最小限の長さ、複雑さのルールを備えた強力なパスワードを強制します"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "6 桁のコードを入力してセットアップを確認してください"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "IP を 1 行に 1 つずつ入力します"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "答えを入力してください"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "コードを入力してください:"
 
 msgid "Enterprise-Grade WordPress Security"
 msgstr "エンタープライズ級WordPressセキュリティ"
 
 msgid "Error"
-msgstr "Error"
+msgstr "エラー"
 
 msgid "Event"
-msgstr "Event"
+msgstr "イベント"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "イベント形式"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "イベントログ"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "イベントの重大度"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "イベントの種類"
 
 msgid "Events"
-msgstr "Events"
+msgstr "イベント"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "イベント（7日間）"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "チケットを作成するイベント"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "転送するイベント"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "通知するイベント"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "例: GitHub アクション"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "例: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "例: Jenkins パイプライン"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "除外される拡張子"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "除外されるファイルのパターン"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "除外されたパス"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "除外されたユーザー"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "除外事項"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "徹底的なファイルスキャン"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "既存のバックアップ"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "CSVのエクスポート"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "設定のエクスポート"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "NexifyMy Security 設定を JSON ファイルにエクスポートします。これには、すべてのモジュール構成、ファイアウォール ルール、IP リスト、スキャン設定が含まれます。"
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "外部スクリプトと CDN リソース"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "追加のログインセキュリティ"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "マルウェア上でのビルドの失敗"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "脆弱性によるビルドの失敗"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "失敗しました"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "一時的なロックアウトの前に 2FA の試行が失敗しました。"
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "ログインの失敗"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "ログインの失敗"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "ログイン試行の失敗が検出されました"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "パスキーの登録に失敗しました。"
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "高速実行"
 
 msgid "Fast security check"
 msgstr "高速セキュリティチェック"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "WordPress.org API から公式ファイルのチェックサムを取得します"
 
 msgid "File"
-msgstr "File"
+msgstr "ファイル"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "ファイルエディタ"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "ファイルのハッシュ:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "ファイルのインクルード"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "ファイル包含保護"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "ファイルの整合性チェック"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "ファイル整合性の監視"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "ファイルのアクセス許可"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "ファイルが隔離されました"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "スキャンから除外するファイル拡張子 (1 行に 1 つ、ドットなし)。"
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "ファイル名"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "スキャンされたファイル"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "スキャンされたファイル:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "ファイルは定期的にベースラインと比較されます。"
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "隔離されたファイルは安全に保存され、実行できません。"
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "これより大きいファイルはスキャン中にスキップされます。"
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "フィルター"
 
 msgid "Firewall"
 msgstr "ファイアウォール"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "ファイアウォールと保護"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "ファイアウォールの設定"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "ファイアウォールルール"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "ファイアウォールの設定"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "変更されたファイルを修正する"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "高度に難読化されたコードまたはエンコードされたコードにフラグを立てます。"
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "管理者にSSLを強制する"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "管理領域に SSL/HTTPS を強制します (FORCE_SSL_ADMIN)。"
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "管理者向けの強制"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "形式:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "セキュリティ イベントをセキュリティ情報およびイベント管理 (SIEM) プラットフォームに転送して、一元的なログ記録と分析を行います。"
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Cloudflareダッシュボードの「概要」にあります"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "既知の安全なプラグインで見つかりました - 正当に使用されている可能性があります"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "システム ディレクトリに見つかりました - 正規のものである可能性があります"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "開始日"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "メールから"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "差出人名"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "SIEM プラットフォームの完全な HTTP/HTTPS エンドポイント URL。"
 
 msgid "Full malware analysis"
 msgstr "完全なマルウェア解析"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "マルウェアの完全スキャン"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "完全なマルウェアのシグネチャ"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "サイト全体の分析"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR、CCPA、HIPAA コンプライアンス モジュールと包括的なセキュリティ監査レポート。"
 
 msgid "General"
-msgstr "General"
+msgstr "一般的な"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "一般的なリクエストの制限"
 
 msgid "General Settings"
 msgstr "ä¸€èˆ¬è¨­å®š"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "レポートの生成"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "SRIの生成"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "生成元: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "生成された"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "汎用 HTTP エンドポイント"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "汎用プロキシ"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "ジオブロック"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "地理的ブロッキング"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "地理的分布"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "詳細な脆弱性データについては、wpscan.com から無料の API トークンを取得してください。"
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "セキュリティ イベントが発生したときに、チームのコミュニケーション チャネルで即座に通知を受け取ります。"
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "最新のスキャンステータスを取得する"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "スキャン結果の取得 (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Google reCAPTCHA または Cloudflare Turnstile ダッシュボードからキーを取得します。"
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "はじめに"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "猶予期間"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "グレード"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQLのセキュリティ"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL イントロスペクションは無効になっています。"
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL のレート制限を超えました。制限: 1 分あたり %d クエリ。"
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTPセキュリティヘッダー"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTPヘッダー"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "ハンドル"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "ハード"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "ハード (乗算を含む)"
 
 msgid "Harden Site"
 msgstr "サイトを強化"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "硬化"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "硬化オプション"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "ヘッダー"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "ヘルプとドキュメント"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "ヒューリスティック分析"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "ヒューリスティックパターン検出"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "ログインを隠す"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "ログインページを隠す"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "ログインURLを隠す"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "ログイン URL を非表示:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "WP バージョンを隠す"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "WordPress のログイン URL を非表示にする"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "WordPress のバージョンを隠す"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "ソースコードからWordPressのバージョンを隠す"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "デフォルトのログイン URL を非表示にする"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "wp-adminを隠す"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "wp-admin と wp-login.php を攻撃者から隠します。"
 
 msgid "High"
-msgstr "High"
+msgstr "高"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "高 (最大検出)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "高セキュリティ (より多くのチェック、より遅い)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "最近ブロックされた攻撃の数が多い"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "高い以上"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "重大度の高い脅威"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "高リスクエリアのみ"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "AI分析により高スコアの脅威を検出"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "感度が高いほど、偽陽性が多くなる可能性があります。"
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "最高"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Ctrl/Cmd を押したまま複数の国を選択します。"
 
 msgid "Host"
-msgstr "Host"
+msgstr "ホスト"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "毎時"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "2FA の仕組み"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "コア修復の仕組み"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "自己防衛の仕組み"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "試行回数を超えた後に IP をブロックする期間。"
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "レート制限を超えた後に IP をブロックする期間。"
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "古いレポートを保存する期間 (30 ～ 365 日)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,979 +1934,979 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "IPアクセス制御"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IPアドレス"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IPブロッキング"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP構成"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IPロックアウト"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP ロックアウト (ブルート フォース試行)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "知的財産管理"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "IPホワイトリスト"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "レート制限をバイパスする IP。"
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "常にブロックされる IP。"
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "決してブロックされない IP。"
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "変更されたファイルまたは欠落しているファイルを識別します"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "画像の選択"
 
 msgid "Immediate action required"
 msgstr "直ちに対応が必要です"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "影響レベル"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "インポート設定"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "以前にエクスポートした JSON ファイルから設定をインポートします。これにより、現在の設定が上書きされます。"
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "インポート/エクスポート"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "非アクティブ"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "事件"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "GDPR チェックを含める"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "IP ホワイトリスト/ブラックリストを含める"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "パフォーマンス指標を含める"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "セキュリティチェックを含める"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "脅威の概要を含める"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "最新のスキャン結果を含める"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "セキュリティ ログを含める (過去 30 日間)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "キャプチャの回答が正しくありません。戻ってもう一度試してください。"
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "キャプチャの回答が正しくありません。もう一度試してください。"
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "イベント分類のインデックス名またはソース識別子。"
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "索引/出典"
 
 msgid "Info"
-msgstr "Info"
+msgstr "情報"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "情報開示"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "初期化中..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "インスタンス名"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "セキュリティ スキャンを継続的統合および展開パイプラインに統合します。"
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Webhook と API アクセスを使用して、セキュリティ スキャンを展開パイプラインに統合します。"
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "CDN サービスと統合します。有効にする前に CDN 資格情報を構成します。"
 
 msgid "Integrations"
 msgstr "連携"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "整合性チェックの結果"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "整合性チェック:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "整合性ステータス"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "無効な JWT トークンです。"
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "無効な資格情報です。"
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "無効な確認コードです。"
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "脅威を隔離する"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "疑わしいファイルを削除せずに隔離します。安全 - ファイルを復元できます。"
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "問題の種類"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "見つかった問題"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON形式。例: {\"Authorization\": \"Bearer TOKEN\"、\"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "Jira クラウド URL"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Jira の統合"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "分析のためにブロックされたすべてのリクエストのログを保存します。"
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "分析のためにすべてのレート制限違反のログを保存します。"
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "最大限の保護を実現するために、マルウェアのシグネチャを最新の状態に保ちます。"
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "既知の国"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "インストールされているプラグインに既知の脆弱性が見つかりました"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (ログイベント拡張フォーマット)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "過去 30 日間"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "過去 30 日間"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "過去 7 日間"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "過去90日間"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "最後に学習したもの"
 
 msgid "Last Scan"
 msgstr "最終スキャン"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "最終スキャン:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "最終更新日"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "最後に使用した時間: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "最新バージョン"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "学習 - ログのみ、ブロックなし"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "学習期間"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "学習中..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "管理者の電子メールを使用する場合は空白のままにします。"
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "おそらく安全 - 必要に応じて確認してください"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "REST API アクセスを認証されたユーザーに制限する"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "スパムを防ぐためにコメントの送信を制限します。"
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "単一の IP アドレスからの過剰なリクエストを制限します。"
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "ログイン試行を制限する"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "ブルート フォース攻撃を防ぐためにログイン試行を制限する"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "リクエストレートを制限して、悪用や DDoS 攻撃を防ぎます。"
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "悪用を防ぐためにリクエスト率を制限します。"
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "ブルート フォース攻撃を防ぐためにログイン試行を制限します。安全 - 失敗したログイン試行にのみ影響します。"
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "既知の脆弱性をリストする"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "ライブ交通状況"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "ライブトラフィックモニター"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "CDN ステータスを読み込み中..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "アラートを読み込んでいます..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "分析データをロードしています..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "バックアップを読み込んでいます..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "ブロックされた IP を読み込んでいます..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "国を読み込んでいます..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "データベース情報をロードしています..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "地理データをロードしています..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "ログを読み込んでいます..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "通知を読み込んでいます..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "最適化統計を読み込んでいます..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "保護ステータスを読み込んでいます..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "隔離されたファイルをロードしています..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "リファラーを読み込んでいます..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "脅威検出を読み込んでいます..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "トップページを読み込み中..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "交通量データを読み込み中..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "この回数の試行が失敗するとロックアウトされます。"
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "ロックアウト期間"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "2FA 試行が最大失敗した後のロックアウト期間。"
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "許可されたリクエストをログに記録する"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "ブロックされたリクエストをログに記録する"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "失敗したログイン試行をログに記録する"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "ログアウト"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "メディアのアップロードのログを記録する"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "ログオプションの変更"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "プラグインの変更をログに記録する"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "投稿/ページ変更のログ"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "プロファイルの変更をログに記録する"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "レート制限違反のログを記録する"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "ログの保存期間"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "役割の変更をログに記録する"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "成功したログインをログに記録する"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "テーマの変更をログに記録する"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "ログユーザーの作成/削除"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "WAF チェックに合格したすべてのリクエストをログに記録します (ディスク使用率が高い)。"
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "ロギング"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "ロギングとモニタリング"
 
 msgid "Login"
-msgstr "Login"
+msgstr "ログイン"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "ログインと認証"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "ログインアクティビティ"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "ログイン試行ウィンドウ"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "ログイン試行"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "ログイン キャプチャ"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "ログインキャプチャ"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "ログインフォーム"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "ログインロックアウト期間"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "ログイン保護"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "ログイン率制限"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "ログインセキュリティ"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "ログインスラッグ"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "ログインURLの設定"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "ログインフォーム"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "ログアウト"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "ログアウト"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "ログ"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "これより古いログは毎日自動的に消去されます。"
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "レビューのためにセキュリティ イベントをログに記録します。安全 - アクティビティのみを記録します。"
 
 msgid "Low"
-msgstr "Low"
+msgstr "低い"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "低い (誤検知が少ない)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "影響が少ない (チェックが少なく、高速)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "小文字 (a ～ z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "サイトのメンテナンスおよび診断ツール。"
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "カスタム ログイン URL を必ず覚えておいてください。"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "マルウェアとスキャン"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "マルウェアの定義"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "マルウェアが見つかりました"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "マルウェアスキャナー"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "ファイルスキャン中にマルウェアが検出されました"
 
 msgid "Manage Notifications"
 msgstr "通知を管理"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "隔離された脅威を管理します。ファイルを確認、復元、または完全に削除します。"
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "役割には必須"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "手動レビューを推奨"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "すべて既読としてマーク"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "すべて既読としてマーク"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "すべてのアクティビティ ログを有効または無効にするマスター スイッチ。"
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "数学の質問"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "最大試行回数"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "失敗した試行の最大数"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "最大ファイルサイズ"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "最大ログイン試行回数"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "クエリ文字列の最大長"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "最大リクエストサイズ"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "最大リクエスト数"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "IP ごとの 1 分あたりの最大 AJAX リクエスト。"
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "IP ごとの 1 分あたりの最大 API リクエスト。"
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "ロックアウトされるまでに失敗したログイン試行の最大数。"
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "IP ごとの 1 分あたりの最大ページ リクエスト。"
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "スキャンするリクエスト本文の最大サイズ。それより大きなリクエストはスキップされます。"
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "IP ごとに 1 分あたりに許可される最大リクエスト。"
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "データベースの枯渇を防ぐための 1 分あたりの最大検索リクエスト。"
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "1 回のスキャン操作の最大時間。"
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "タイムアウトになるまでのマルウェア スキャンの最大時間。"
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "メディアのアップロード"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "中"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "ミディアム (バランス)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "中（足し算・引き算）"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "中以上"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "メモリ制限"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "スキャン操作に割り当てられたメモリ。"
 
 msgid "Message"
-msgstr "Message"
+msgstr "メッセージ"
 
 msgid "Method"
-msgstr "Method"
+msgstr "方法"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Microsoft Teams の統合"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "最小 %d 文字"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "最小長さ"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "失敗するための最小重大度"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "パスワードの最小長 (8 ～ 32 文字)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "モード"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "モジュールコントロール"
 
 msgid "Modules"
 msgstr "モジュール"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "外部スクリプトの監視"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "監視モード（ログのみ）"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "プラグインファイルの変更を監視する"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "リアルタイムのサイトトラフィックを監視します。"
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "リアルタイムのトラフィックを監視する"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "リアルタイムのトラフィックと訪問者のアクティビティを監視します。"
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "訪問者の傾向、ページビュー、トラフィックパターンを長期にわたって監視します。"
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "監視とアラート"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "リアルタイムのトラフィックを監視します。安全 - 訪問のみを追跡します。"
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "毎月"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "最もアクティブなユーザー"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "疑わしいファイルを保護されたディレクトリに移動します。"
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM の依存関係"
 
 msgid "Name"
-msgstr "Name"
+msgstr "名前"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "サポートが必要ですか?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "決してしない"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "有効期限はありません"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "ネクシファイセキュリティ"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (組み込み)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyMy キャプチャのタイプ"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "NexifyMy セキュリティ"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security は、ファイルに対する不正な変更を検出しました。インストールを確認してください。"
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: 未読のセキュリティ アラートが %d 件あります。"
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "次回の更新"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "猶予期間なし"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "最近のアクティビティはありません"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "SRIなし"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "アクティビティはまだ記録されていません。ユーザーがアクションの実行を開始すると、アクティビティがここに表示されます。"
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "コンテンツの変更はまだ記録されていません。"
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "まだ国が選択されていません。"
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "利用可能なデータがありません"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "イベント データはまだありません。"
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "隔離されたファイルはありません。"
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "利用可能な地理データがありません"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "ログインアクティビティはまだ記録されていません。"
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "パスキーはまだ登録されていません。"
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "利用可能なレポートはありません。"
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "スキャンはまだ実行されていません"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "利用可能なスキャン結果はありません。 「スキャンの実行」をクリックして依存関係を分析します。"
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "利用可能なスキャン結果はありません。スキャンを実行して脆弱性をチェックします。"
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "現時点ではセキュリティに関する推奨事項はありません。あなたのサイトはしっかりと保護されています。"
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "利用可能な重大度データはありません。"
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "不審な IP は検出されませんでした。"
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "システム イベントはまだ記録されていません。"
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "まだ脅威は検出されていません。"
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "ユーザーアクティビティはまだ記録されていません。"
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "ユーザーのアクティビティはまだありません。"
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "アクティブではありません"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "有効ではありません"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "まだチェックされていません"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "予定されていません"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "注:"
 
 msgid "Notification Email"
 msgstr "通知メール"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "通知設定"
 
 msgid "Notifications"
 msgstr "通知"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "ロックアウト時に通知する"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "アカウントで 2FA が有効または無効になったときにユーザーに通知します。"
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "数字 (0 ～ 9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "バックアップコードの数"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "ユーザーごとに生成するバックアップ コードの数。"
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "ロックアウトされるまでに失敗したログイン試行の数。"
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "永久禁止されるまでのロックアウトの数。"
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "自動ブロックされるまでのルール違反の数。"
 
 msgid "Object"
-msgstr "Object"
+msgstr "オブジェクト"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "次回ログイン時にパスワード+6桁のコードを入力してください"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "週に一度"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "1 行に 1 つの IP"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "1 行に 1 つの IP。 X-Forwarded-For ヘッダーの送信を許可されるプロキシ IP (Cloudflare、ロードバランサーなど)。"
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "1 行に 1 つの IP。これらの IP はすべてのレート制限をバイパスします。"
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "1 行に 1 つの IP。これらの IP は直ちにブロックされます。例: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "1 行に 1 つの IP。これらの IP は WAF チェックをバイパスします。"
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "1 行に 1 つの IP。これらの IP はすべての WAF ルールをバイパスします。例: 192.168.1.1、10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "1 行に 1 つのパス。スキャンする追加ディレクトリへの絶対パス。"
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "1 行に 1 つのパス。スキャン中にスキップするディレクトリ。"
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "1 行に 1 つ。特定のユーザーエージェントをブロックします。例: 悪いボット、スクレイパー"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "1 行に 1 つ。このリストのユーザー エージェントは WAF チェックをバイパスします。例: Googlebot、good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "1 行に 1 つのユーザー名"
 
 msgid "Open Settings"
 msgstr "設定を開く"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "オペレーティング システム"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "動作モード"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "データベースの最適化"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "データベースを最適化して保護します。"
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "オプションの変更"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "すべてのユーザーのオプション"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "オプション: スキャン結果を CI/CD プラットフォームに送信します。"
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "元のパス"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "時代遅れ"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "オーバーヘッド"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "プラグイン インターフェイスの言語をオーバーライドします。サポートされている言語: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "概要"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHPのバージョン"
 
 msgid "Package"
-msgstr "Package"
+msgstr "パッケージ"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "1 分あたりのページリクエスト数"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "ページビュー"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "ページが見つかりません。"
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "パスキー認証"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "パスキー名 (例: MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "パスキーが登録されました！"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "このブラウザではパスキーがサポートされていません。"
 
 msgid "Password"
-msgstr "Password"
+msgstr "パスワード"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "パスワードの有効期限"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "パスワードポリシー"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "パスワードポリシー"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "パスワード要件"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "パスワード要件:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "パスワードリセットフォーム"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "パスワードのリセット"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "パスワードは少なくとも %d 文字の長さである必要があります。"
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "パスワードには少なくとも 1 つの小文字が含まれている必要があります。"
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "パスワードには少なくとも 1 つの数字が含まれている必要があります。"
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "パスワードには少なくとも 1 つの特殊文字が含まれている必要があります。"
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "パスワードには少なくとも 1 つの大文字が含まれている必要があります。"
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "パスワードポリシー"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "パスワードリセットフォーム"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "スキャンから除外するパス (WordPress ルートを基準としたパス)。 1 行に 1 つ。"
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "ピークアクティビティの洞察"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "ピーク時間帯"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "交通量のピーク時間帯"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "パフォーマンスモード"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "パフォーマンス設定"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "定期報告書"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "永久的"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "永久禁止の基準値"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "ファイルを永久に削除します。"
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "数学キャプチャを解いてください。"
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "プラグイン"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "プラグインとテーマの分析"
 
 msgid "Plugin Language"
 msgstr "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³è¨€èªž"
@@ -2915,220 +2915,220 @@ msgid "Plugin Last Updated"
 msgstr "プラグイン最終更新日"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "プラグインオプション"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "プラグインの自己保護"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "プラグインのバージョン"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "プラグインの脆弱性"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "プラグイン ファイルは WordPress では編集できません。"
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "プラグインの整合性"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "プラグインの保護"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "プラグイン/テーマの CVE"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "プラグイン/テーマのアクティブ化、更新、オプションの変更、およびエクスポート。"
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "プラグイン"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "プラグインが有効化されました"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "プラグインが無効化されました"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "プラグインが更新されました"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "投稿/ページの編集、公開、メディアのアップロード、およびコンテンツの削除。"
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "作成された投稿"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "公開された投稿"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "投稿が更新されました"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "潜在的なセキュリティ脅威が検出されました"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "XML-RPC 攻撃とブルート フォース攻撃を防止する"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Web ルート外のディレクトリへのアクセスを防止します。"
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "攻撃者がローカル サーバー ファイルを含めることを防ぎます。"
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "ブルートフォースを防ぐ"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "WordPress 管理画面でのコード編集を禁止する"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr ".htaccess によるディレクトリのリストを防止する"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "この期間内にアラートが重複しないようにします。"
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "この期間内にアラートが重複しないようにします。スロットリングを無効にするには、0 に設定します。"
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "WordPress エディターを介してプラグイン ファイルを編集できないようにする"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "URL パラメーターを介してリモート ファイルが含まれないようにします。"
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr ".htaccess を介してディレクトリの内容を一覧表示しないようにします。"
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "管理パネルからのプラグイン/テーマのインストールを禁止します。"
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "フロントエンドでのテキストの選択とコピーを禁止します。"
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "よく侵害されるパスワードの使用を防止する"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "/wp-json/wp/v2/users エンドポイント経由のユーザー検出を防止します。"
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "セキュリティプラグインファイルの不正な変更を防止します"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "セキュリティ警告のプライマリ電子メール アドレス。"
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "優先順位"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "プロアクティブなセキュリティの提案と自動強化の推奨事項。"
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "問題"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "プロフィールの更新"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "プロファイルの変更、ロールの変更、ユーザーの作成、および削除のイベント。"
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "プロジェクトキー"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "クロスサイトリクエストフォージェリから保護します。"
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "クロスサイト スクリプティング (XSS) 攻撃から保護します。"
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "GET/POST パラメータでの SQL インジェクション攻撃から保護します。"
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "SQL インジェクション、XSS、RFI、その他の攻撃から保護します。"
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "IP アドレスごとのリクエスト頻度を制限することで、ブルート フォース攻撃や DoS 攻撃から保護します。"
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "ログインおよび登録フォームを自動化されたボット攻撃から保護します。"
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "ログインおよび登録フォームを数学ベースのキャプチャで保護します。"
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "プラグインファイルを改ざんから保護します。"
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "セキュリティ プラグインを改ざんや不正な変更から保護します。"
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "ログイン ページをブルート フォース攻撃から保護します。"
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "悪意のあるトラフィックや攻撃からサイトを保護します。"
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "保護されたフォーム"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "保護レベル"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "保護モード"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "保護ルール"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "保護設定"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "JWT 認証、レート制限、CORS を使用して REST API を保護します。ヘッドレスWordPressには必須です。"
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "SQL インジェクション、XSS、悪意のあるリクエストから保護します。有効にしても安全 - 有害なトラフィックのみをブロックします。"
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "プラグインファイルを変更から保護します。安全 - 改ざんを防ぎます。"
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "プロバイダー"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "すべてのログをパージする"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "キャッシュのパージ"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "検疫"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "すぐに隔離する"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "隔離を推奨"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "隔離:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "隔離された"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "隔離されたファイル"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "クエリの複雑さが最大値 %d を超えています"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "クエリの深さは最大許容深さ %d を超えています"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "クイック"
 
 msgid "Quick Actions"
 msgstr "クイック操作"
@@ -3137,457 +3137,457 @@ msgid "Quick Scan"
 msgstr "クイックスキャン"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "クイックスキャンアクション"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "セキュリティ保守ツールに素早くアクセスできます。"
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "クイック: コア ファイルのみ。標準: コア + テーマ/プラグイン。深い: すべてのファイル。"
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST APIのセキュリティ"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "REST API ユーザー"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST APIの保護"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "このサイトでは RSS フィードが無効になっています。"
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "レート制限"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "レートリミッター"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "レート制限"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "レート制限の設定"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "リアルタイム監視"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "理由"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "脆弱性が検出された場合に電子メールでアラートを受信する"
 
 msgid "Recent Activity"
 msgstr "最近のアクティビティ"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "最近の脅威の検出"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "最近ブロックされた IP"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "受信者の電子メール"
 
 msgid "Recommendations"
 msgstr "推奨事項"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "おすすめ"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "推奨されるアクション"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "ブロックされたアクセスをリダイレクトする"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "ホームページにリダイレクト"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "不要な機能を無効にし、WordPress 構成を強化することで、攻撃対象領域を減らします。"
 
 msgid "Refresh"
 msgstr "更新"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "再生する"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "ベースラインを再生成"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "パスキーの登録"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "登録されたパスキー"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "パスキーを登録しています..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "登録フォーム"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "登録フォーム"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "デバイスを記憶する"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "期間を記憶"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "このデバイスを覚えておいてください"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "削除"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "ジェネレータタグの削除"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "ログインヒントを削除する"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "WordPress のバージョンをソースコードから削除する"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "すべてのページからジェネレーターのメタ タグを削除します。"
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "パスワードリセットのヒントと提案を削除します。"
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "HTML とフィードからバージョン情報を削除します。"
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "変更されたすべてのファイルを修復する"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "変更されたWordPressコアファイルを修復します。慎重に使用してください - 修復する前にバックアップしてください。"
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "破損したファイルをクリーンなバージョンに置き換えます"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "レポート履歴"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "レポートの保存期間 (日)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "報告スケジュール"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "リクエストの制限とフィルタリング"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "リクエストのサイズ制限"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "1 分あたりのリクエスト数"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "すべての管理者に 2FA を要求する"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "選択したユーザー ロールには 2FA が必要です。"
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "ログイン認証に 2 番目の要素を要求する"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "REST API アクセスにはログインが必要"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "ログインには 2 番目の要素が必要です。有効にする前に 2FA メソッドを構成します。"
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "リセット"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "すべての設定をリセット"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "学習をリセットする"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "すべての NexifyMy Security 設定をデフォルト値にリセットします。この操作は元に戻すことができません。"
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "デフォルトにリセット"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "リセット中..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "ブロック時の応答コード"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "復元"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "復元:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "REST APIを制限する"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "REST API アクセスを制限します。 REST APIを使用するプラグインに影響を与える可能性があります。"
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "保存期間"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "マルウェアが検出された場合はエラー コードを返します (CI/CD ビルドの失敗)。"
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "脆弱性が見つかった場合はエラーコードを返します。"
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "ファイルを元の場所に戻します。"
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "アラートを確認する ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "すぐに見直してください"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "セキュリティログを定期的に確認する"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "役割の変更"
 
 msgid "Run Full Security Scan"
 msgstr "フルセキュリティスキャンを実行"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "整合性チェックの実行"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "クイックチェックを実行する"
 
 msgid "Run Scan"
 msgstr "スキャン実行"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "脆弱性スキャンの実行"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "セキュリティ スキャンを実行して脆弱性を特定する"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "マルウェアの自動スキャンを毎日実行します。安全 - スキャンのみで、ファイルは変更されません。"
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "セキュリティ警告:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "すべてのプラグイン ファイルの SHA-256 ハッシュがベースラインとして保存されます。"
 
 msgid "SIEM"
-msgstr "SIEM"
+msgstr "シェムリアップ"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM統合"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEMプラットフォーム"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQLインジェクション"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQLインジェクション保護"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSLステータス"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL検証"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "詳細設定の保存"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "CI/CD 設定の保存"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Discord設定を保存する"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "メール設定の保存"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Jira 設定の保存"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "SIEM設定の保存"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "スキャナ設定の保存"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "ServiceNow 設定の保存"
 
 msgid "Save Settings"
 msgstr "è¨­å®šã‚’ä¿å­˜"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Slack 設定を保存する"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "チーム設定の保存"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "WAF設定の保存"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Webhook設定の保存"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "スキャン"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "スキャン完了"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "スキャンが完了しました"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "スキャン コンポーザーの依存関係"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "スキャン構成"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "スキャンコントロール"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "カスタムディレクトリをスキャンする"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "NPM の依存関係をスキャンする"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "スキャンプラグイン"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "認証アプリ (Google/Microsoft Authenticator) で QR コードをスキャンします"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "スキャン結果"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "スキャンスケジュール"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "スキャン感度"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "スキャン対象"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "スキャンテーマ"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "スキャンタイムアウト"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "スキャンアップロードディレクトリ"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "WordPress コアをスキャンする"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "インストールされているすべてのプラグインでマルウェアをスキャンします。"
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "インストールされているすべてのテーマでマルウェアをスキャンします。"
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "重要な領域のみをスキャンする"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "ファイルをスキャンしてマルウェアや疑わしいコードがないか確認します。"
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "プラグイン、テーマ、WordPress コアをスキャンして既知の脆弱性を探します。"
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "サイトをスキャンして、マルウェア、脆弱性、セキュリティの問題がないか確認します。"
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Web サイトをスキャンしてマルウェアやセキュリティの脆弱性を探します。"
 
 msgid "Scanner"
 msgstr "スキャナー"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "スキャナーの設定"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "スキャン中..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "ファイルをスキャンしてマルウェアや疑わしいコードを検出します。安全 - スキャンのみを行い、ファイルは変更しません。"
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "スケジュールスキャンモード"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "スケジュールされたスキャン"
 
 msgid "Score"
-msgstr "Score"
+msgstr "スコア"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "1 分あたりの検索リクエスト数"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "ユーザー名を検索..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "秘密鍵"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "安全なファイルアクセス"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "クエリの深さ制限、複雑さのチェック、レート制限により WPGraphQL を保護します。ヘッドレスセットアップでも安全です。"
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "セキュリティ警告"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "セキュリティ分析"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "セキュリティの強化"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "セキュリティヘッダー"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "セキュリティインシデント"
 
 msgid "Security Logs"
 msgstr "セキュリティログ"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "セキュリティモジュール"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "セキュリティ通知"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "セキュリティオプション"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "セキュリティに関する推奨事項"
 
 msgid "Security Score"
 msgstr "セキュリティスコア"
@@ -3596,791 +3596,1699 @@ msgid "Security Status"
 msgstr "セキュリティ状態"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "セキュリティツール"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "セキュリティの脆弱性"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "セキュリティ警告"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "セキュリティ イベントがここに表示されます。"
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "セキュリティの強化"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "セキュリティスキャンの実行が終了しました"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "セキュリティ設定が変更されました"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "国を選択してください:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "左から国を選択し、「リストに追加」をクリックして追加します。選択した国は、上記のモードに基づいてブロック (ブラックリスト) または許可 (ホワイトリスト) されます。"
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "チェックマークが付いた画像を選択します。"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "使用するキャプチャ サービスを選択します。"
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "選択した国:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "自己防衛"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "自己防衛"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "テストアラートを送信"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "テストメールを送信する"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "1 時間以内にこれほど多くの攻撃があった場合にアラートを送信します。"
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "毎日のメールダイジェストを送信する"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "IP がロックアウトされたときに電子メール通知を送信します。"
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "セキュリティ イベントの電子メール通知を送信する"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "重大な攻撃が検出された場合に電子メール通知を送信します。"
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "改ざん検知時にメール送信"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "脆弱性が見つかったらメールを送信"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "レポートを管理者の電子メールに送信する"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "各スキャン後にスキャン結果を電子メールで送信します。"
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "セキュリティ イベントを Splunk、Elasticsearch、またはその他の SIEM プラットフォームに送信して、一元的な監視と分析を行います。"
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "カスタム構成を使用してセキュリティ イベントを任意の HTTP エンドポイントに送信します。"
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "カスタム ヘッダーと認証を使用してセキュリティ イベントを任意の HTTP エンドポイントに送信します。"
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "確認コードを電子メールで送信します。"
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "セキュリティ イベントに関する電子メール アラートを送信します。安全 - 最初に電子メール設定を構成します。"
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNowの統合"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "安全なファイル権限を設定します。サーバーに問題がある場合は、手動での調整が必要になる場合があります。"
 
 msgid "Settings"
 msgstr "設定"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "設定が正常に保存されました"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "重大度"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "404ページを表示"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "ログイン失敗時に一般的なエラー メッセージを表示します。"
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "フォームに表示"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "%d 件中 %d 件のエントリを表示しています"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "未読の重大/警告イベントを表示します。完全な履歴についてはログを使用してください。"
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "パスキーを使用してサインインする"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "署名ステータス"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "シグネチャベースの検出"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "署名"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "サイトのデフォルト"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "サイトキー"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "サイトのセキュリティの健全性"
 
 msgid "Size"
-msgstr "Size"
+msgstr "サイズ"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "このサイズより大きいファイルはスキップします。"
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Slack の統合"
 
 msgid "Some improvements recommended"
 msgstr "改善を推奨します"
 
 msgid "Source"
-msgstr "Source"
+msgstr "ソース"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "特殊文字 (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (HTTP イベントコレクター)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "標準"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "標準 - バランスの取れた保護"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "標準スキャン"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "スキャンの開始"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "新しいスキャンを開始する"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "スキャンを開始する"
 
 msgid "Status"
-msgstr "Status"
+msgstr "ステータス"
 
 msgid "Story"
-msgstr "Story"
+msgstr "ストーリー"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "厳格 - 最大限のセキュリティ"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "強力なパスワード"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "強力なパスワード"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "成功率"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "ログイン成功"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "ログイン成功"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "スクリ"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "相撲ロジック"
 
 msgid "Supply Chain"
 msgstr "サプライチェーン"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "サプライチェーンのセキュリティ"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "サプライチェーンの設定"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Google Authenticator、Authyなどをサポートします。"
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "サポートされている:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "不審なコード"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "不審な IP"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "システムアクティビティ"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "システムイベント"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "システムステータス"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "TOTP認証アプリ"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "テーブル名"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "テーブル"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "改ざん検出:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "タスク"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "API レート制限を超える IP を一時的にブロックします。"
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "テスト接続"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "テスト通知"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "テキストマッチング"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI は、交通時間、地理的位置、ユーザー エージェント、リクエスト パターンなどの通常の行動パターンを継続的に学習します。このベースラインは、異常を検出するために使用されます。"
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF は、SQL インジェクション、XSS、悪意のあるボットなどの一般的な Web 攻撃からサイトを保護します。"
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "テーマスイッチ"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "この時間"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "今月"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "今週"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "これは一般的なパスワードです。"
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "ログイン フォームにキャプチャがどのように表示されるかは次のとおりです。"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "このパスワードは一般的すぎます。よりユニークなパスワードを選択してください。"
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "このクエリは許可されていません。"
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "これにより、AI の学習データと行動パターンがすべてリセットされます。続く？"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "脅威"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "脅威の内訳:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "脅威が検出されました"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "検出された脅威 (マルウェア、不審なファイル)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "脅威の検出とブロック - 過去 7 日間"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "脅威スコア"
 
 msgid "Threats Blocked"
 msgstr "ブロックした脅威"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "見つかった脅威"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "今日の脅威"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "スロットル期間"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "発券"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "発券システム"
 
 msgid "Time"
-msgstr "Time"
+msgstr "時間"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "時間枠 (秒)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "電子メール検証コードの有効期限が切れるまでの時間。"
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "失敗したログイン試行をカウントする時間枠。"
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "失敗したログイン試行をカウントするために使用される時間枠。"
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "現在まで"
 
 msgid "Today"
-msgstr "Today"
+msgstr "今日"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "失敗したログイン試行が多すぎます。 %d 分後に再試行してください。"
 
 msgid "Tools"
 msgstr "ツール"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "ツールとユーティリティ"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "トップカントリー"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "主な検出理由"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "上位のイベントの種類"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "トップページ"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "トップリファラー"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "イベント総数"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "合計ページビュー数"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "署名の総数"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "合計サイズ"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "トラフィック分析"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "交通状況の概要"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "セキュリティスキャンをトリガーする"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "トラストプロキシヘッダー"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "信頼できるプロキシ"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "1日2回"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "2 要素認証 (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "二要素認証"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "二要素認証"
 
 msgid "Type"
-msgstr "Type"
+msgstr "種類"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "単語を入力してください:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "アンインストール動作"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "固有の IP"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "ユニークユーザー"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "ユニークな訪問者"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "不明"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "未読のアラート"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "ログからの未読のセキュリティ警告。"
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "定義の更新"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "今すぐ定義を更新する"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "マルウェア定義の更新"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "今すぐアップデート"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "マルウェア検出シグネチャを更新します。"
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "大文字 (A ～ Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "緊急度レベル"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "CDN/プロキシ ヘッダーを使用して実際のクライアント IP を決定する"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Touch ID、Face ID、Windows Hello、またはハードウェア セキュリティ キーを使用します。"
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "IP 検出に X-Forwarded-For ヘッダーを使用します (CDN/プロキシの背後にある場合のみ)。"
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "マルウェア署名データベースを検出に使用します。"
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "このキーを使用して、CI/CD パイプラインからの API リクエストを認証します。"
 
 msgid "User"
-msgstr "User"
+msgstr "ユーザー"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "ユーザーアクティビティ"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "ユーザーエージェント"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "ユーザーイベント"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "ユーザーのロックアウト"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "ユーザー管理"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "ユーザー要件"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "不審なアクティビティによりユーザーまたは IP アドレスがロックアウトされた"
 
 msgid "Username"
-msgstr "Username"
+msgstr "ユーザー名"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "ユーザー名とパスワードが必要です。"
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "作成されたユーザー"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "削除されたユーザー"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "ユーザーはプロファイル設定で 2FA を有効にします"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "AI を使用して、動作分析を通じてゼロデイ脅威を検出します。正常なパターンを学習し、異常を報告します。安全 - 動作のみを監視します。"
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "検証セッションの有効期限が切れました。再度ログインしてください。"
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "検証する"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "コアファイルの検証"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "SSL 証明書を検証します (運用環境に推奨)。"
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "WordPress コアファイルを検証して修復します。"
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "コアファイルの検証と修復"
 
 msgid "Version"
-msgstr "Version"
+msgstr "バージョン"
 
 msgid "View All"
-msgstr "View All"
+msgstr "すべて見る"
 
 msgid "View Live Traffic"
 msgstr "ライブトラフィックを見る"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "すべてのセキュリティ イベントを表示します。"
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "隔離された脅威を表示および管理します。"
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "セキュリティの警告と通知を表示および管理します。"
 
 msgid "Views"
-msgstr "Views"
+msgstr "ビュー"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "訪問者の傾向 - 過去 30 日間"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "訪問者"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "今日の訪問数"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "脆弱性チェック"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "脆弱性スキャナー"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "脆弱な"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF 攻撃がブロックされました"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF ブロック (ファイアウォールによってブロックされた攻撃)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAFファイアウォール"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAFステータス"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WPバージョン"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL 保護"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan APIトークン"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "警告"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "警告:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "警告: インポートすると、現在の設定がすべて置き換えられます。最初に現在の設定をバックアップとしてエクスポートしてください。"
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "ウェブアプリケーションファイアウォール"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "ウェブアプリケーションファイアウォール（WAF）"
 
 msgid "Webhook URL"
 msgstr "Webhook URL"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "結果の Webhook URL"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Webhook"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "毎週"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "週次セキュリティレポート"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "ホワイトリスト (許可のみ)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "ホワイトリスト (選択したもののみを許可)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "ホワイトリストIP"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "ホワイトリストに登録されたIP"
 
 msgid "WordPress"
-msgstr "WordPress"
+msgstr "ワードプレス"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "WordPress コアファイルの検証"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "WordPress コアステータス"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "WordPress の強化"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "WordPress のバージョン"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "WordPress コアファイルが変更されました"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress が最新ではありません"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (スニフなし)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (クリックジャッキングの防止)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS 保護"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC コントロール"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS攻撃"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS 保護"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "デフォルトのログインスラッグを使用しています。ユニークなものに変更することを検討してください。"
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "REST API にアクセスするには、ログインする必要があります。"
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "あなたのサイトは HTTPS を使用していません。安全な接続のために SSL 証明書を有効にします。"
 
 msgid "Your site is well protected"
 msgstr "サイトは適切に保護されています"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "あなたの確認コードは: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "ウイルス定義が古くなっています。最大限の保護を得るために今すぐ更新してください。"
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ゾーンID"
 
 msgid "ago"
-msgstr "ago"
+msgstr "前に"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "時間当たりの攻撃力"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "試み"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "ブロックされました"
 
 msgid "characters"
-msgstr "characters"
+msgstr "キャラクター"
 
 msgid "days"
-msgstr "days"
+msgstr "日"
 
 msgid "events"
-msgstr "events"
+msgstr "イベント"
 
 msgid "fails"
-msgstr "fails"
+msgstr "失敗する"
 
 msgid "files"
-msgstr "files"
+msgstr "ファイル"
 
 msgid "from now"
-msgstr "from now"
+msgstr "今から"
 
 msgid "including:"
-msgstr "including:"
+msgstr "以下を含む："
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "小文字"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "分"
 
 msgid "modules"
 msgstr "モジュール"
 
 msgid "number"
-msgstr "number"
+msgstr "番号"
 
 msgid "or"
-msgstr "or"
+msgstr "または"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "毎分"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "秒"
 
 msgid "special character"
-msgstr "special character"
+msgstr "特殊文字"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "脅威が見つかりました"
 
 msgid "total records"
-msgstr "total records"
+msgstr "総記録"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "大文字"
 
 msgid "views"
-msgstr "views"
+msgstr "ビュー"
 
 msgid "violations"
-msgstr "violations"
+msgstr "違反"
 
 msgid "visits"
-msgstr "visits"
+msgstr "訪問"
+msgid "Deception"
+msgstr "欺瞞"
+
+msgid "P2P Intelligence"
+msgstr "P2P インテリジェンス"
+
+msgid "Sandbox Console"
+msgstr "サンドボックスコンソール"
+
+msgid "Temporary Access"
+msgstr "一時的なアクセス"
+
+msgid "Saving..."
+msgstr "保存中..."
+
+msgid "Settings saved. Reloading..."
+msgstr "設定が保存されました。再読み込み中..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "設定が正常に保存されました。再読み込み中..."
+
+msgid "Connection error"
+msgstr "接続エラー"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "セキュリティチェックに失敗しました。更新して再試行してください。"
+
+msgid "Settings handler not available."
+msgstr "設定ハンドラーは使用できません。"
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "すべての設定をデフォルトにリセットしますか?これを元に戻すことはできません。"
+
+msgid "Purge CDN cache now?"
+msgstr "今すぐ CDN キャッシュを削除しますか?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "設定の保存に失敗しました。もう一度試してください。"
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "設定がデフォルトにリセットされます。ページを再読み込み中..."
+
+msgid "Failed to load analytics data."
+msgstr "分析データのロードに失敗しました。"
+
+msgid "Devices"
+msgstr "デバイス"
+
+msgid "No data available for this range."
+msgstr "この範囲では利用可能なデータがありません。"
+
+msgid "Traffic trend chart"
+msgstr "トラフィック傾向グラフ"
+
+msgid "Distribution breakdown chart"
+msgstr "分布の内訳図"
+
+msgid "Total"
+msgstr "合計"
+
+msgid "Series"
+msgstr "シリーズ"
+
+msgid "Predictive Threat Hunting"
+msgstr "予測的脅威ハンティング"
+
+msgid "Forecast next attack vectors"
+msgstr "次の攻撃ベクトルを予測する"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "スタックのプロファイリングを行い、可能性のある攻撃ベクトルを予測し、プロアクティブな強化ガイダンスを提供します。"
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "隔離された脅威と回復可能な削除されたファイルを管理します。"
+
+msgid "Deleted Files (Recoverable)"
+msgstr "削除されたファイル (回復可能)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "ここに移動したファイルは、隔離に戻すか、完全に削除することができます。"
+
+msgid "Deleted"
+msgstr "削除されました"
+
+msgid "Loading deleted files..."
+msgstr "削除されたファイルを読み込んでいます..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "隔離されたファイルを回復可能な削除済みストレージに移動します。"
+
+msgid "Delete Permanently:"
+msgstr "完全に削除:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "削除されたストレージからファイルを永久に削除します。"
+
+msgid "Access denied from your region."
+msgstr "お住まいの地域からのアクセスが拒否されました。"
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "一時的にロックアウトされるまでに失敗したログイン試行の最大数。"
+
+msgid "Time window for counting failed attempts."
+msgstr "失敗した試行をカウントするための時間枠。"
+
+msgid "Open Tool"
+msgstr "オープンツール"
+
+msgid "Available Fix"
+msgstr "利用可能な修正"
+
+msgid "Preview Patch"
+msgstr "パッチのプレビュー"
+
+msgid "Apply Patch"
+msgstr "パッチを適用する"
+
+msgid "Honeytrap Configuration"
+msgstr "ハニートラップ構成"
+
+msgid "Enable Deception Module"
+msgstr "デセプションモジュールを有効にする"
+
+msgid "How Deception Works:"
+msgstr "欺瞞の仕組み:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "次の URL はサイトに存在しません。誰かがそれらにアクセスすると、 攻撃者として確認されて<strong>自動的にブロック</strong>されます。管理者はブロックされることはありませんが、警告が表示されます。"
+
+msgid "Custom Honeytrap Paths"
+msgstr "カスタムハニートラップパス"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "1 行に 1 つのパスを追加します (例: /my-secret-admin/、/old-backup.sql)。デフォルトはすでに有効になっています。"
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "デフォルトのハニートラップ パス (常にアクティブ)"
+
+msgid "Login Page Honeypot"
+msgstr "ログインページ ハニーポット"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "目に見えないフィールドがログイン/登録フォームに挿入されます。ボットのみがこれを入力し、即座に検出してブロックします。"
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "デセプション モジュールがアクティブな場合、この保護は常に有効になります。設定は必要ありません。"
+
+msgid "User Enumeration Trap"
+msgstr "ユーザー列挙トラップ"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "攻撃者が ?author=1、?author=2 などを介して有効なユーザー名をスキャンする偵察の試みを検出します。"
+
+msgid "Enable user enumeration detection"
+msgstr "ユーザー列挙検出を有効にする"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "列挙試行をハードブロックします (デフォルト: ホームページへのソフトリダイレクト)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "すべての作成者の列挙をブロックします (既存のユーザーであっても)"
+
+msgid "Save Changes"
+msgstr "変更を保存"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR 第 30 条 データマッピング"
+
+msgid "Refresh Map"
+msgstr "マップを更新"
+
+msgid "Export Data Map (PDF)"
+msgstr "エクスポートデータマップ (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "データベース テーブル全体にわたる自動 PII 検出、データ フロー マッピング、サードパーティ共有検出。"
+
+msgid "Data Element"
+msgstr "データ要素"
+
+msgid "Location"
+msgstr "場所"
+
+msgid "Purpose"
+msgstr "目的"
+
+msgid "Retention"
+msgstr "保持"
+
+msgid "Third-Party Sharing"
+msgstr "サードパーティの共有"
+
+msgid "Legal Basis"
+msgstr "法的根拠"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "PII レコードはまだ検出されていません。データ マップ スキャンを実行してレポートを作成します。"
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "忘れられるべき自動化"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "消去リクエストを送信し、データ削除を検証し、GDPR ワークフローのコンプライアンス ログを追跡します。"
+
+msgid "User ID"
+msgstr "ユーザーID"
+
+msgid "Comments"
+msgstr "コメント"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "匿名化せずにコメントを削除する"
+
+msgid "Run Erasure"
+msgstr "消去の実行"
+
+msgid "Verify Erasure"
+msgstr "消去の検証"
+
+msgid "GDPR Request Log"
+msgstr "GDPRリクエストログ"
+
+msgid "Request Type"
+msgstr "リクエストタイプ"
+
+msgid "Requested At"
+msgstr "リクエスト先"
+
+msgid "Completed At"
+msgstr "完了日"
+
+msgid "No GDPR requests logged yet."
+msgstr "GDPR リクエストはまだ記録されていません。"
+
+msgid "Shadow Runtime Sandbox"
+msgstr "シャドウ ランタイム サンドボックス"
+
+msgid "Enable Sandbox Module"
+msgstr "サンドボックスモジュールを有効にする"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "シャドウ ランタイム サンドボックス エンジンをロードします。"
+
+msgid "Enable Sandbox Console"
+msgstr "サンドボックスコンソールを有効にする"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "manage_options を持つ wp-admin ユーザーがサンドボックス コンソールでコードを実行できるようにします。"
+
+msgid "Sandbox Timeout"
+msgstr "サンドボックスのタイムアウト"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "実行タイムアウト (秒単位) (1 ～ 30)。"
+
+msgid "Dynamic Analysis"
+msgstr "動的解析"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "静的チェックに加えて動的実行分析を実行します。"
+
+msgid "Quarantine Policy"
+msgstr "検疫ポリシー"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "ほとんどのサイトでは手動隔離が推奨されます。自動隔離は、信頼性の高い確認されたマルウェアのみを隔離します。"
+
+msgid "Manual (Recommended)"
+msgstr "マニュアル（推奨）"
+
+msgid "Auto Quarantine"
+msgstr "自動隔離"
+
+msgid "Save Quarantine Policy"
+msgstr "隔離ポリシーの保存"
+
+msgid "AI Risk Controls"
+msgstr "AI リスク管理"
+
+msgid "Enable AI Detection Module"
+msgstr "AI 検出モジュールを有効にする"
+
+msgid "Enable Insider Threat Detection"
+msgstr "インサイダー脅威検出を有効にする"
+
+msgid "Insider Threat Threshold"
+msgstr "インサイダー脅威のしきい値"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "データ漏洩の監視を有効にする"
+
+msgid "Exfiltration Threshold"
+msgstr "漏洩のしきい値"
+
+msgid "Exfiltration Baseline Days"
+msgstr "抽出の基準日"
+
+msgid "Session Risk Threshold"
+msgstr "セッションリスクしきい値"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "継続的な認証再チェック間隔 (秒)"
+
+msgid "Risk Spike Threshold"
+msgstr "リスクスパイクしきい値"
+
+msgid "Save AI Settings"
+msgstr "AI設定の保存"
+
+msgid "Quarantine Mode"
+msgstr "隔離モード"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "手動モードの方が安全なのでお勧めします。自動モードでは、信頼性の高い確認済みのマルウェアのみが隔離されます。"
+
+msgid "Data Map"
+msgstr "データマップ"
+
+msgid "Privacy Requests"
+msgstr "プライバシーのリクエスト"
+
+msgid "Deception Technology"
+msgstr "欺瞞技術"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "ハニーポット、おとりアセット、攻撃者の欺瞞により、脅威が攻撃される前にそれを捕捉します。"
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "%2$d 件中 %1$d 件のエントリを表示しています"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P インテリジェンス モジュールがロードされていません。"
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P 脅威インテリジェンス"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "集団免疫のために脅威インテリジェンスを他の SentinelWP インストールと共有します。"
+
+msgid "P2P Settings"
+msgstr "P2P設定"
+
+msgid "Enable P2P Intelligence"
+msgstr "P2P インテリジェンスを有効にする"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "ピアノードとの協調的な脅威インテリジェンスの共有を可能にします。"
+
+msgid "My Node Key"
+msgstr "私のノードキー"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "このキーを、サイトに接続したいピアと共有します。"
+
+msgid "Broadcast Threats"
+msgstr "ブロードキャストの脅威"
+
+msgid "Share detected threats with registered peers."
+msgstr "検出された脅威を登録済みのピアと共有します。"
+
+msgid "Trust Threshold"
+msgstr "信頼しきい値"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "脅威スコアがこのしきい値以上の IP のみを自動ブロックします。値が低いほど、より積極的なブロックになります。"
+
+msgid "Registered Peers"
+msgstr "登録済みピア"
+
+msgid "Add Peer"
+msgstr "ピアの追加"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "まだピアが登録されていません。ピアを追加して脅威インテリジェンスの共有を開始します。"
+
+msgid "Label"
+msgstr "ラベル"
+
+msgid "Last Sync"
+msgstr "最終同期"
+
+msgid "Sent/Received"
+msgstr "送信/受信"
+
+msgid "Unnamed"
+msgstr "無名"
+
+msgid "%s ago"
+msgstr "%s前"
+
+msgid "Threats Sent"
+msgstr "送信された脅威"
+
+msgid "Threats Received"
+msgstr "受け取った脅威"
+
+msgid "Statistics"
+msgstr "統計"
+
+msgid "Connected Peers"
+msgstr "接続されたピア"
+
+msgid "Threats Received (24h)"
+msgstr "受信した脅威 (24 時間)"
+
+msgid "P2P Status"
+msgstr "P2Pステータス"
+
+msgid "Threat Intelligence Credits"
+msgstr "脅威インテリジェンス クレジット"
+
+msgid "Current Credit Balance"
+msgstr "現在のクレジット残高"
+
+msgid "Reputation Score"
+msgstr "評判スコア"
+
+msgid "Accuracy"
+msgstr "精度"
+
+msgid "Badges:"
+msgstr "バッジ:"
+
+msgid "No badges yet"
+msgstr "まだバッジはありません"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "評判スコアが 1000 を超えているため、プレミアム特典が無料でロック解除されます。"
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "評判スコアが 1000 を超えると、プレミアム特典を無料で利用できるようになります。"
+
+msgid "Top Contributors (Anonymous)"
+msgstr "トップレベルの投稿者 (匿名)"
+
+msgid "No contributor data available yet."
+msgstr "提供者のデータはまだありません。"
+
+msgid "Rank"
+msgstr "ランク"
+
+msgid "Anonymous Site ID"
+msgstr "匿名サイトID"
+
+msgid "Credits"
+msgstr "クレジット"
+
+msgid "Reputation"
+msgstr "評判"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Add New Peer"
+msgstr "新しいピアの追加"
+
+msgid "Peer URL"
+msgstr "ピア URL"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "ピア WordPress サイトの完全な URL (運用環境では HTTPS を使用する必要があります)。"
+
+msgid "Peer Node Key"
+msgstr "ピアノードキー"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "ピアのノード キー (P2P 設定ページからコピーできます)。"
+
+msgid "Label (Optional)"
+msgstr "ラベル (オプション)"
+
+msgid "My Production Server"
+msgstr "私の運用サーバー"
+
+msgid "A friendly name to identify this peer."
+msgstr "このピアを識別するためのフレンドリ名。"
+
+msgid "Unauthorized"
+msgstr "無許可"
+
+msgid "Sandbox module is not loaded."
+msgstr "サンドボックスモジュールがロードされていません。"
+
+msgid "Sandbox module is disabled."
+msgstr "サンドボックスモジュールが無効になっています。"
+
+msgid "Sandbox console is disabled."
+msgstr "サンドボックスコンソールが無効になっています。"
+
+msgid "No code provided."
+msgstr "コードは提供されていません。"
+
+msgid "Insufficient permissions."
+msgstr "権限が不十分です。"
+
+msgid "Sandbox Module Disabled"
+msgstr "サンドボックスモジュールが無効になっています"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "シャドウ ランタイム サンドボックスは現在無効になっています。コンソールを使用するには、設定で有効にしてください。"
+
+msgid "Go to Settings"
+msgstr "設定に移動"
+
+msgid "Sandbox Console Disabled"
+msgstr "サンドボックスコンソールが無効になっています"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "サンドボックス モジュールは有効ですが、管理コンソールは無効になっています。 wp-admin からコードを実行するためのコンソール設定を有効にします。"
+
+msgid "Danger Zone: Code Execution"
+msgstr "危険ゾーン: コードの実行"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "このコンソールは、分離されたサンドボックスで PHP コードを実行します。データベースの変更はすべて自動的にロールバックされます。疑わしいコードの分析またはテストにのみ使用してください。"
+
+msgid "PHP Code Editor"
+msgstr "PHPコードエディタ"
+
+msgid "Run Code"
+msgstr "コードを実行する"
+
+msgid "Analyze Only"
+msgstr "分析のみ"
+
+msgid "Timeout:"
+msgstr "タイムアウト:"
+
+msgid "Execution Results"
+msgstr "実行結果"
+
+msgid "STATIC ANALYSIS"
+msgstr "静的解析"
+
+msgid "OUTPUT"
+msgstr "出力"
+
+msgid "ERRORS"
+msgstr "エラー"
+
+msgid "DATABASE QUERIES"
+msgstr "データベースクエリ"
+
+msgid "Module not loaded"
+msgstr "モジュールがロードされていません"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "ライブトラフィック分析は利用できません。"
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "ジャストインタイム アクセスでは、自動有効期限付きのリクエストと承認のワークフローが使用されます。"
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "モジュールが無効になっているかロードされていないため、現在一時アクセスは利用できません。"
+
+msgid "Open settings"
+msgstr "設定を開く"
+
+msgid "Request Temporary Access"
+msgstr "一時的なアクセスをリクエストする"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "このリクエストは、現在ログインしているアカウントに適用されます。一時的な昇格アクセスが許可される前に、管理者がそれを承認する必要があります。"
+
+msgid "Requested Role"
+msgstr "要求された役割"
+
+msgid "Administrator"
+msgstr "管理者"
+
+msgid "Editor"
+msgstr "編集者"
+
+msgid "Duration (minutes)"
+msgstr "継続時間 (分)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "一時的な昇格アクセスが必要な理由を説明します。"
+
+msgid "Submit Request"
+msgstr "リクエストの送信"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "一時的なアクセスを許可する (管理者)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "ユーザー名または電子メールを使用して、特定のユーザーに期限付きの昇格アクセスを直接付与します。"
+
+msgid "Target User (Username or Email)"
+msgstr "対象ユーザー (ユーザー名またはメールアドレス)"
+
+msgid "username or user@example.com"
+msgstr "ユーザー名または user@example.com"
+
+msgid "Grant Role"
+msgstr "役割の付与"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "このユーザーに一時的な昇格アクセスが必要な理由を説明してください。"
+
+msgid "Grant Access"
+msgstr "アクセスを許可する"
+
+msgid "Pending and Active Requests"
+msgstr "保留中のリクエストとアクティブなリクエスト"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "保留中のリクエストを承認し、直接付与を確認し、このキューからアクティブな権限を取り消します。"
+
+msgid "Original Role"
+msgstr "本来の役割"
+
+msgid "Elevated Role"
+msgstr "高い役割"
+
+msgid "Granted"
+msgstr "確かに"
+
+msgid "Expires"
+msgstr "有効期限が切れます"
+
+msgid "Approved By"
+msgstr "承認者"
+
+msgid "Loading..."
+msgstr "読み込み中..."
+
+msgid "English (US)"
+msgstr "英語 (米国)"
+
+msgid "English (UK)"
+msgstr "英語(イギリス)"
+
+msgid "Espanol (Spanish)"
+msgstr "エスパニョール (スペイン語)"
+
+msgid "Francais (French)"
+msgstr "フランセ (フランス語)"
+
+msgid "Deutsch (German)"
+msgstr "ドイチュ (ドイツ語)"
+
+msgid "Italiano (Italian)"
+msgstr "イタリアーノ（イタリア語）"
+
+msgid "Portugues (Brazilian)"
+msgstr "ポルトガル語 (ブラジル)"
+
+msgid "Nederlands (Dutch)"
+msgstr "オランダ (オランダ語)"
+
+msgid "Russian"
+msgstr "ロシア語"
+
+msgid "Japanese"
+msgstr "日本語"
+
+msgid "Chinese (Simplified)"
+msgstr "中国語（簡体字）"
+
+msgid "Arabic"
+msgstr "アラビア語"
+
+msgid "Hindi"
+msgstr "ヒンディー語"
+
+msgid "Korean"
+msgstr "韓国人"
+
+msgid "Turkish"
+msgstr "トルコ語"
+
+msgid "Polski (Polish)"
+msgstr "ポルスキ (ポーランド語)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "インドネシア語 (インドネシア語)"
+
+msgid "Ukrainian"
+msgstr "ウクライナ語"
+
+msgid "Vietnamese"
+msgstr "ベトナム語"
+
+msgid "Thai"
+msgstr "タイ語"
+
+msgid "Svenska (Swedish)"
+msgstr "スヴェンスカ (スウェーデン語)"
+
+msgid "Dansk (Danish)"
+msgstr "ダンスク (デンマーク語)"
+
+msgid "Suomi (Finnish)"
+msgstr "スオミ (フィンランド語)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "ノルスク・ボクマル (ノルウェー語)"
+
+msgid "Cestina (Czech)"
+msgstr "セスティナ (チェコ語)"
+
+msgid "Greek"
+msgstr "ギリシャ語"
+
+msgid "Magyar (Hungarian)"
+msgstr "マジャール語 (ハンガリー語)"
+
+msgid "Romana (Romanian)"
+msgstr "ロマーナ (ルーマニア語)"
+
+msgid "Slovencina (Slovak)"
+msgstr "スロベシナ (スロバキア語)"
+
+msgid "Bulgarian"
+msgstr "ブルガリア語"
+
+msgid "Hrvatski (Croatian)"
+msgstr "フルヴァツキ (クロアチア語)"
+
+msgid "Serbian"
+msgstr "セルビア語"
+
+msgid "Hebrew"
+msgstr "ヘブライ語"
+
+msgid "Persian"
+msgstr "ペルシア語"
+
+msgid "Settings saved successfully."
+msgstr "設定が正常に保存されました。"
+
+msgid "Settings reset to defaults."
+msgstr "設定がデフォルトにリセットされます。"
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyMy セキュリティ ログ"
+
+msgid "No matching user found."
+msgstr "一致するユーザーが見つかりませんでした。"
+
+msgid "Security logs and related PII were anonymized."
+msgstr "セキュリティ ログと関連する PII は匿名化されました。"
+
+msgid "Invalid user ID."
+msgstr "無効なユーザーIDです。"
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "手動または Webhook ベースの消去リクエストがキューに入れられました。"
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp 削除リクエストが送信されました。"
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "ストライプ消去には、コンプライアンス記録を手動で API でフォローアップする必要があります。"
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analytics ユーザー削除 API リクエストは外部で構成する必要があります。"
+
+msgid "Privacy Preferences"
+msgstr "プライバシー設定"
+
+msgid "Select which optional processing categories you allow."
+msgstr "許可するオプションの処理カテゴリを選択します。"
+
+msgid "Save Preferences"
+msgstr "設定の保存"
+
+msgid "Consent Management"
+msgstr "同意管理"
+
+msgid "Given"
+msgstr "与えられた"
+
+msgid "Withdrawn"
+msgstr "撤回されました"
+
+msgid "No consent records found."
+msgstr "同意記録が見つかりませんでした。"
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>エラー</strong>: 問題が発生しました。後でもう一度試してください。"
+
+msgid "The peer URL is not valid."
+msgstr "ピア URL が無効です。"
+
+msgid "You cannot add your own site as a peer."
+msgstr "自分のサイトをピアとして追加することはできません。"
+
+msgid "API key must be at least 16 characters."
+msgstr "API キーは 16 文字以上である必要があります。"
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "ピアの最大数 (%d) に達しました。"
+
+msgid "Missing authentication header."
+msgstr "認証ヘッダーがありません。"
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "無効なノードキーです。ピアが認識されません。"
+
+msgid "Invalid request signature."
+msgstr "リクエストの署名が無効です。"
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "レート制限を超えました。後でもう一度試してください。"
+
+msgid "Invalid site identifier."
+msgstr "無効なサイト識別子です。"
+
+msgid "Unknown contribution type."
+msgstr "不明な貢献タイプ。"
+
+msgid "Unknown benefit type."
+msgstr "不明な特典タイプ。"
+
+msgid "Insufficient credits for this benefit."
+msgstr "この特典を利用するにはクレジットが不足しています。"
+
+msgid "Threat Forecast"
+msgstr "脅威予測"
+
+msgid "Your site profile:"
+msgstr "サイトのプロフィール:"
+
+msgid "Predicted threats this month:"
+msgstr "今月予測される脅威:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "信頼性の高いベクトルはまだ検出されていません。"
+
+msgid "Recommended actions:"
+msgstr "推奨されるアクション:"
+
+msgid "No immediate actions required."
+msgstr "直ちに対応する必要はありません。"
+
+msgid "Not logged in"
+msgstr "ログインしていません"
+
+msgid "A reason is required"
+msgstr "理由が必要です"
+
+msgid "Invalid requested role"
+msgstr "要求された役割が無効です"
+
+msgid "An active or pending request already exists for this role."
+msgstr "このロールにはアクティブなリクエストまたは保留中のリクエストがすでに存在します。"
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "アクセス要求が送信されました。管理者がリクエストを検討します。"
+
+msgid "Invalid request"
+msgstr "無効なリクエスト"
+
+msgid "Pending request not found"
+msgstr "保留中のリクエストが見つかりません"
+
+msgid "Request role is invalid"
+msgstr "リクエストのロールが無効です"
+
+msgid "Invalid approved role"
+msgstr "承認された役割が無効です"
+
+msgid "Access approved successfully"
+msgstr "アクセスが正常に承認されました"
+
+msgid "Target user (username or email) is required."
+msgstr "対象ユーザー (ユーザー名またはメールアドレス) は必須です。"
+
+msgid "A reason is required."
+msgstr "理由が必要です。"
+
+msgid "Invalid requested role."
+msgstr "要求された役割が無効です。"
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "対象のユーザーが見つかりません。既存のユーザー名または電子メールを使用します。"
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "ユーザーはすでにこの役割を持っています。一時的な上昇は必要ありません。"
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "このユーザーおよびロールには、アクティブまたは保留中の付与がすでに存在します。"
+
+msgid "Unable to grant temporary access."
+msgstr "一時的なアクセスを許可できません。"
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "一時的な %2$s アクセスが %1$s に %3$d 分間許可されました。"
+
+msgid "Invalid grant"
+msgstr "無効な付与"
+
+msgid "Grant not found or already revoked"
+msgstr "付与が見つからないか、すでに取り消されています"
+
+msgid "Permission revoked successfully"
+msgstr "許可が正常に取り消されました"
+
+msgid "Once Monthly"
+msgstr "毎月1回"
+
+msgid "Every 5 Minutes"
+msgstr "5分ごと"
 

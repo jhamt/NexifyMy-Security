@@ -8,1774 +8,1774 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d mối đe dọa được phát hiện trong lần quét cuối cùng"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Nói mã này để xác minh)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Cao"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 ngày"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 giờ"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 ngày"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 phút"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Trung bình"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 giờ"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "Phương pháp 2FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "Cài đặt 2FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Thấp"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 ngày"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 ngày"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 phút"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 ngày"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 bị cấm"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Không tìm thấy"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Quá nhiều yêu cầu (Khuyến nghị)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 phút"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "Dịch vụ 503 không khả dụng"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 giờ"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 ngày"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 ngày"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 ngày (liên tục)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 ngày"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 ngày"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "Trạng thái học tập AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "Trạng thái AI"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "Phát hiện mối đe dọa AI"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "Thiết lập lại dữ liệu học tập AI thành công."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "Yêu cầu AJAX mỗi phút"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API & Bảo mật không đầu"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API & Dịch vụ"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "Phụ cấp bùng nổ API"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "Điểm cuối API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "Khóa API"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "Giới hạn tỷ lệ API"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "Yêu cầu API mỗi phút"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "Bảo mật API"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "Mã thông báo API"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "Đã vượt quá giới hạn tốc độ API. Giới hạn: %d yêu cầu mỗi phút."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "Hạn chế API"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "Mã thông báo API, mã thông báo HEC hoặc khóa xác thực."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "bị bỏ rơi"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Giới thiệu về cách ly"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Truy cập bị từ chối"
 
 msgid "Action"
-msgstr "Action"
+msgstr "hành động"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "hành động"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Đang hoạt động"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Trang tổng quan hoạt động"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Nhật ký hoạt động"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Cài đặt nhật ký hoạt động"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Hoạt động từ những người dùng này sẽ không được ghi lại."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Nhật ký hoạt động cũ hơn sẽ tự động bị xóa."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Theo dõi hoạt động"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Thêm %d ký tự khác."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Thêm 2FA vào tài khoản người dùng để tăng cường bảo mật."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Thêm CAPTCHA để đăng nhập và biểu mẫu."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Thêm xác minh CAPTCHA vào biểu mẫu đăng nhập"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Thêm tiêu đề bảo mật HTTP (X-Frame-Options, CSP, v.v.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Thêm mật mã mới"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Thêm tiêu đề bảo mật"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Thêm Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Thêm X-Frame-Options, X-Content-Type-Options và các tiêu đề bảo mật khác."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Thêm tiêu đề X-Frame-Options, X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Thêm một lớp bảo mật bổ sung bằng cách yêu cầu hình thức xác thực thứ hai."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Thêm một lớp bảo mật bổ sung bằng cách yêu cầu hai hình thức xác thực cho thông tin đăng nhập của người dùng."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Thêm một lớp bảo mật bổ sung với 2FA dựa trên TOTP."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Thêm chữ thường."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Thêm số."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Thêm ký tự đặc biệt."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Thêm vào danh sách"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Thêm chữ in hoa."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Các biện pháp bảo mật đăng nhập bổ sung. Hoạt động với bộ giới hạn tốc độ."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Thêm CAPTCHA vào biểu mẫu đăng nhập. An toàn nhưng có thể ảnh hưởng đến trải nghiệm người dùng."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Thêm các thử thách Google reCAPTCHA, Cloudflare Turnstile hoặc toán học"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Thêm tiêu đề bảo mật HTTP (X-Frame-Options, CSP). An toàn - cải thiện bảo mật trình duyệt."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Thêm lớp bảo mật bổ sung với mã TOTP, Email hoặc SMS"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Đăng nhập quản trị viên (đăng nhập quản trị viên thành công)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Nâng cao"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Cài đặt tường lửa nâng cao"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Làm cứng nâng cao"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Tùy chọn làm cứng nâng cao"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Cài đặt đăng nhập nâng cao"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Tùy chọn nâng cao"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Tùy chọn máy quét nâng cao"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Chẩn đoán nâng cao"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Các tập tin bị ảnh hưởng:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Ngưỡng cảnh báo"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Các loại cảnh báo"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Cảnh báo"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Cảnh báo được gửi nếu plugin bị vô hiệu hóa."
 
 msgid "All"
-msgstr "All"
+msgstr "Tất cả"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Tất cả đều rõ ràng!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Tất cả sự kiện"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Tất cả mức độ nghiêm trọng"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Cho phép tất cả người dùng kích hoạt 2FA một cách tự nguyện."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Cho phép mã email làm phương thức sao lưu"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Cho phép các đợt bùng phát ngắn vượt quá giới hạn tốc độ."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Cho phép người dùng có thời gian thiết lập 2FA trước khi thực thi."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Cho phép người dùng kích hoạt 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Cho phép người dùng tạo mã dự phòng khẩn cấp."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Cho phép người dùng bỏ qua 2FA trên các thiết bị đáng tin cậy."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Tác nhân người dùng được phép"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "Phân tích"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "dị thường"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Bất kỳ mức độ nghiêm trọng nào"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Mọi sửa đổi đều kích hoạt thông báo email ngay lập tức."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Áp dụng cài đặt"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Áp dụng các phương pháp hay nhất về bảo mật WordPress."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Áp dụng các bản sửa lỗi bảo mật"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Áp dụng các biện pháp tăng cường bảo mật cho WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Áp dụng các biện pháp tăng cường bảo mật để bảo vệ cài đặt WordPress của bạn."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Bạn có chắc chắn muốn xóa mật mã này không?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Bạn có chắc chắn muốn tiếp tục không?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Bảo vệ tấn công"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Cửa sổ thử"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Âm thanh (Nói)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Đang xác thực..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Mã xác thực"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Sự kiện xác thực"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Mã xác thực"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Xác thực không thành công. Vui lòng thử lại."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Cần có xác thực để truy cập API."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Cần có xác thực để truy cập GraphQL."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Quét tác giả"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Thời lượng tự động chặn"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Tự động chặn người vi phạm nhiều lần"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Ngưỡng tự động chặn"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Tự động sửa lỗi"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Tự động tạo báo cáo"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Các mối đe dọa tự động cách ly"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Lịch trình quét tự động"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Tự động cập nhật"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Tự động cập nhật cài đặt"
 
 msgid "Auto-Updates"
 msgstr "Cập nhật tự động"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Tự động phát hiện"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Quét tự động"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Quét tự động"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Tự động đưa vào danh sách đen các IP kích hoạt quy tắc nhiều lần."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Tự động tạo vé Jira cho các sự cố và lỗ hổng bảo mật."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Tự động tạo phiếu xử lý sự cố bảo mật trong hệ thống quản lý dự án của bạn."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Tự động tạo báo cáo theo lịch trình"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Tự động di chuyển phần mềm độc hại được phát hiện để cách ly."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Tự động chạy quét ở chế độ nền."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Tự động cập nhật chữ ký phần mềm độc hại hàng ngày."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Các quốc gia có sẵn"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Sự kiện có sẵn"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Trung bình/Ngày"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Quét nền"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Sao lưu các tập tin bị hỏng trước khi thay thế"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Mã dự phòng"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Sao lưu, tối ưu hóa và bảo mật cơ sở dữ liệu của bạn."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Sao lưu và dọn dẹp"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Các bản sao lưu được lưu trữ trong wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Bot xấu"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Yêu cầu xấu"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Cân bằng (khuyên dùng)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Hồ sơ hành vi"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Phân tích hành vi"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Danh sách đen (Danh sách chặn)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Danh sách đen (đã chọn khối)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "IP danh sách đen"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Danh sách đen: Chặn các quốc gia được chọn. Danh sách trắng: Chỉ cho phép các quốc gia được chọn."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP bị liệt vào danh sách đen"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Chặn các Bot xấu"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Chặn các cuộc tấn công CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Chặn mật khẩu phổ biến"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Chặn truyền tải thư mục"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Thời lượng chặn"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Chặn tác nhân người dùng trống"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Chặn người dùng API quá mức"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Chặn trình chỉnh sửa tập tin"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Chặn bao gồm tệp cục bộ"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Chặn tin nhắn"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Chế độ chặn"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Chế độ chặn (Khuyến nghị)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Chế độ chặn: Chặn các yêu cầu độc hại. Chế độ giám sát: Ghi lại các mối đe dọa mà không chặn."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Chặn thực thi mã từ xa"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Chặn bao gồm tệp từ xa"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Chặn việc tiêm SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Chặn tải lên tệp đáng ngờ"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Chặn quyền truy cập XML-RPC (ngăn chặn hành vi bạo lực)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Chặn các cuộc tấn công XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Chặn quyền truy cập từ các quốc gia cụ thể."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Chặn các trình thu thập thông tin tích cực (tỷ lệ yêu cầu cao)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Chặn quét liệt kê tác giả (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Chặn chuỗi truy vấn quá dài."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Chặn các bot và trình thu thập dữ liệu xấu đã biết"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Chặn các bot và trình thu thập dữ liệu độc hại đã biết."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Chặn các yêu cầu không đúng định dạng và chuỗi truy vấn đáng ngờ"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Chặn các yêu cầu độc hại"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Chặn các yêu cầu và cuộc tấn công độc hại"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Chặn hoặc cho phép lưu lượng truy cập dựa trên quốc gia."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Chặn các yêu cầu lớn hơn kích thước này để ngăn chặn các cuộc tấn công DoS."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Chặn các yêu cầu với tác nhân người dùng trống (có thể chặn một số bot hợp pháp)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Chặn các yêu cầu không có tiêu đề Tác nhân người dùng."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Chặn các IP đáng ngờ"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Chặn tác nhân người dùng đáng ngờ"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Chặn lưu lượng truy cập từ các quốc gia cụ thể. Định cấu hình quốc gia trong cài đặt trước khi bật."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Chặn tải lên bằng các tiện ích mở rộng có thể thực thi được (.php, .exe, .sh, v.v.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Các cuộc tấn công bị chặn"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Phần mở rộng tệp bị chặn"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Yêu cầu bị chặn"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Tác nhân người dùng bị chặn"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Chặn các địa chỉ IP thể hiện hành vi nguy hiểm. An toàn - bạn có thể đưa IP của mình vào danh sách trắng."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Đánh dấu URL này để bạn luôn có thể truy cập trang đăng nhập của mình."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Bảo vệ Bot & Trình thu thập thông tin"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Bảo vệ bot và tác nhân người dùng"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Phòng chống bot"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Bảo vệ bot"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Trình duyệt"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Lực lượng vũ phu"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Bảo vệ vũ phu"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Bảo vệ lực lượng vũ phu và giới hạn số lần đăng nhập."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "Lỗi"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Ngày bận rộn nhất"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "Bảo vệ CAPTCHA"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "Tích hợp CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "Trạng thái CDN"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (Định dạng sự kiện chung)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "Đường ống CI/CD"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "Tích hợp đường ống CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Hủy bỏ"
 
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "hình ảnh xác thực"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Xem trước hình ảnh xác thực"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Nhà cung cấp hình ảnh xác thực"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Cài đặt hình ảnh xác thực"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Thay đổi tiền tố cơ sở dữ liệu"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Thay đổi tiền tố bảng cơ sở dữ liệu (yêu cầu cập nhật cơ sở dữ liệu thủ công)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Thay đổi URL đăng nhập mặc định để ngăn chặn các cuộc tấn công."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Thay đổi URL đăng nhập wp-admin mặc định để ngăn chặn các cuộc tấn công tự động."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Thay đổi URL đăng nhập từ /wp-admin thành slug tùy chỉnh để ngăn chặn các cuộc tấn công của bot"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "Kênh"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Yêu cầu về nhân vật"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Kiểm tra tính toàn vẹn cốt lõi"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Khoảng thời gian kiểm tra"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Kiểm tra và sửa chữa các tệp lõi WordPress bị hỏng bằng các nguồn chính thức."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Kiểm tra các tập tin cốt lõi để sửa đổi và phần mềm độc hại."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Kiểm tra cửa sau"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Kiểm tra sự xáo trộn"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Kiểm tra các lỗ hổng đã biết."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Kiểm tra các tập tin đã tải lên để tìm nội dung độc hại."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Kiểm tra web shell"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Kiểm tra các plugin/chủ đề để tìm các lỗ hổng đã biết. An toàn - chỉ kiểm tra các phiên bản."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Chọn một con sên độc đáo, khó đoán."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Chọn loại thử thách cho NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Làm sạch tập tin"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Làm sạch tập tin:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Làm sạch và tối ưu hóa cơ sở dữ liệu"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Dọn dẹp dữ liệu không cần thiết để cải thiện hiệu suất cơ sở dữ liệu."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Xóa nhật ký"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "Đám mây bùng phát"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare và hơn thế nữa"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cài đặt API Cloudflare"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Mã thông báo API Cloudflare (có quyền Vùng)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cửa quay Cloudflare"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Mã"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Hết hạn mã"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Vấn đề về chất lượng mã"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Danh sách các phần mở rộng tệp được phân tách bằng dấu phẩy để chặn tải lên."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Danh sách các phần mở rộng tệp được phân tách bằng dấu phẩy cần bỏ qua (ví dụ: jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Bình luận bị chặn"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Mẫu bình luận"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Tỷ lệ đăng bình luận"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Mẫu bình luận"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Truyền thông"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Nền tảng truyền thông"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "So sánh các tệp cốt lõi với tổng kiểm tra chính thức của WordPress."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "So sánh các tệp cốt lõi WordPress của bạn với tổng kiểm tra chính thức để phát hiện các sửa đổi."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "So sánh từng tệp lõi với hàm băm dự kiến"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Vô hiệu hóa hoàn toàn tất cả các nguồn cấp dữ liệu RSS và Atom."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Vô hiệu hóa hoàn toàn tất cả các sửa đổi tệp (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Tuân thủ"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Tuân thủ & Báo cáo"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Báo cáo tuân thủ và bảo mật"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Cài đặt tuân thủ"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Phụ thuộc của nhà soạn nhạc"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Phân tích toàn diện"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Theo dõi hoạt động người dùng toàn diện, giám sát đăng nhập và ghi nhật ký sự kiện hệ thống."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Cấu hình"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Định cấu hình 2FA để tăng cường bảo mật đăng nhập"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Định cấu hình CDN để bảo mật và hiệu suất."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Định cấu hình tích hợp CDN và quản lý bộ đệm."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Định cấu hình Tường lửa ứng dụng web (WAF) để bảo vệ trang web của bạn."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Định cấu hình cảnh báo và thông báo qua email."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Định cấu hình quy tắc tường lửa và cài đặt bảo vệ."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Định cấu hình hành vi quét phần mềm độc hại và các tùy chọn quét theo lịch trình."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Định cấu hình cài đặt và tùy chọn plugin."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Định cấu hình cài đặt plugin."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Định cấu hình cài đặt bảo mật của bạn."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Xác nhận"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Xác nhận hành động"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Phần mềm độc hại đã được xác nhận"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Kết nối giám sát bảo mật của bạn với các nền tảng SIEM, bán vé, liên lạc và CI/CD."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Hãy liên hệ với nhóm hỗ trợ của chúng tôi để được hỗ trợ về NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Nội dung"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Hoạt động nội dung"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Thay đổi nội dung"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Nội dung Sự kiện"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Bảo mật nội dung"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Sửa đổi tập tin cốt lõi"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Sửa chữa tập tin cốt lõi"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Sửa chữa lõi"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Tính toàn vẹn cốt lõi của WordPress"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Tính toàn vẹn của tập tin cốt lõi"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Đếm"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "Quốc gia"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Quốc gia"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Cài đặt chặn quốc gia"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Hạn chế của quốc gia"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Tạo bản sao lưu ngay"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Tạo bản sao lưu cơ sở dữ liệu WordPress của bạn. Các bản sao lưu được lưu trữ an toàn và có thể tải xuống."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Tạo sự cố trong ServiceNow cho các sự kiện bảo mật quan trọng."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Tạo webhook tại: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Tạo webhook trong Cài đặt máy chủ Discord > Tích hợp > Webhooks"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Tạo webhook: Nhóm > Kênh > Trình kết nối > Webhook đến"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Đã tạo"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Đã tạo: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Quan trọng"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Chỉ quan trọng"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "URL đăng nhập hiện tại"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Phiên bản hiện tại"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Hiện tại:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "URL đăng nhập tùy chỉnh"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "URL tùy chỉnh"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Webhook tùy chỉnh"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "hàng ngày"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Hàng ngày (Khuyến nghị)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Tóm tắt trạng thái hàng ngày"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Tóm tắt hàng ngày"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Trang tổng quan"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Lưu giữ dữ liệu"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Cơ sở dữ liệu"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Hành động cơ sở dữ liệu"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Sao lưu cơ sở dữ liệu"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Thông tin cơ sở dữ liệu"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Tối ưu hóa cơ sở dữ liệu"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Trình tối ưu hóa cơ sở dữ liệu"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Bảo mật cơ sở dữ liệu"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Kích thước cơ sở dữ liệu"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Sao lưu và tối ưu hóa cơ sở dữ liệu. Định cấu hình lịch sao lưu trước khi bật."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Kiểm tra bảo mật cơ sở dữ liệu"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "Cơ quan dữ liệu"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Ngày"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Ngày/Giờ"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Giám sát vô hiệu hóa:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Chế độ gỡ lỗi"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "sâu"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Quét sâu"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Chế độ quét mặc định"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Chế độ quét mặc định được sử dụng khi không có chế độ nào được chỉ định."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "định nghĩa"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Xóa"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Xóa tất cả dữ liệu plugin khi gỡ cài đặt"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Xóa:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Quét phụ thuộc, giám sát tập lệnh của bên thứ ba và xác minh tính toàn vẹn CDN."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Mô tả"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Thông tin chi tiết về lưu lượng truy cập trang web và các sự kiện bảo mật của bạn"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Thông tin chi tiết về hiệu suất bảo mật trang web của bạn."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Phát hiện và chặn các nỗ lực thực thi mã."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Phát hiện các tập lệnh và shell cửa hậu ẩn."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Phát hiện phần mềm độc hại, cửa hậu và mã đáng ngờ"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Phát hiện mối đe dọa"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Phát hiện các mối đe dọa chưa xác định bằng cách sử dụng phân tích hành vi."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Phương pháp phát hiện"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Loại thiết bị"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "độ khó"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Mức độ khó"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Mức độ khó cho các thử thách hình ảnh xác thực của NexifyMy."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "trực tiếp"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Truyền tải thư mục"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Bảo vệ truyền tải thư mục"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Vô hiệu hóa 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Vô hiệu hóa mật khẩu ứng dụng"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Vô hiệu hóa kho lưu trữ của tác giả"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Vô hiệu hóa duyệt thư mục"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Vô hiệu hóa nhúng"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Tắt trình chỉnh sửa tệp"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Tắt sửa đổi tệp"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Tắt thông báo lỗi đăng nhập"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Tắt Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Tắt Pingback"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Vô hiệu hóa cài đặt Plugin/Theme"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Tắt tính năng liệt kê người dùng API REST"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Tắt nguồn cấp dữ liệu RSS/Atom"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Tắt nhấp chuột phải"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Tắt lựa chọn văn bản"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Tắt Trackbacks"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Vô hiệu hóa trình soạn thảo WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Tắt XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Vô hiệu hóa XML-RPC (ngăn chặn vectơ lực lượng vũ phu phổ biến)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Vô hiệu hóa XML-RPC (ngăn chặn các cuộc tấn công pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Vô hiệu hóa XML-RPC (được sử dụng trong DDoS và các cuộc tấn công vũ phu)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Vô hiệu hóa các trang lưu trữ tác giả để ngăn chặn việc liệt kê tên người dùng."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Tắt chức năng oEmbed và điểm cuối API REST."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Tắt chức năng pingback để ngăn chặn DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Tắt chức năng pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Tắt trình chỉnh sửa tệp plugin/chủ đề trong quản trị viên WordPress."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Vô hiệu hóa việc liệt kê người dùng công cộng thông qua API REST"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Vô hiệu hóa menu ngữ cảnh nhấp chuột phải vào giao diện người dùng."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Vô hiệu hóa trình chỉnh sửa plugin và chủ đề tích hợp để ngăn chặn việc tiêm mã."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Tắt trình chỉnh sửa chủ đề và plugin"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Tắt trình chỉnh sửa chủ đề/plugin trong quản trị viên"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Tắt chức năng trackback."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Đã tắt"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Vô hiệu hóa XML-RPC để ngăn chặn các cuộc tấn công. An toàn trừ khi bạn sử dụng Jetpack hoặc ứng dụng di động."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Tắt trình chỉnh sửa chủ đề/plugin tích hợp. An toàn - ngăn chỉnh sửa mã trong quản trị viên."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Tắt tính năng chỉnh sửa tệp, XML-RPC và áp dụng các phương pháp hay nhất của WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Tích hợp bất hòa"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Tải xuống"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Tải xuống gói WordPress mới từ nguồn chính thức"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Dễ dàng"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Dễ dàng (chỉ bổ sung)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Chỉnh sửa tệp plugin NexifyMy Security bị vô hiệu hóa vì lý do bảo mật."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Trình chỉnh sửa & quyền truy cập tệp"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Chặn trình soạn thảo:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "Elaticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Cài đặt thông báo qua email"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "Cảnh báo qua email"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Sao lưu email"
 
 msgid "Email Notifications"
 msgstr "Thông báo qua Email"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "Báo cáo qua email"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Báo cáo quét email"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Xác minh email"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Tác nhân người dùng trống"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Kích hoạt"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Kích hoạt 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Kích hoạt mô-đun 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Bật ghi nhật ký hoạt động"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Bật cảnh báo"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Kích hoạt tính năng bảo vệ CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Kích hoạt tích hợp CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Kích hoạt tính năng CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Kích hoạt tích hợp CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Bật hình ảnh xác thực"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Bật Webhook tùy chỉnh"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Kích hoạt sự bất hòa"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Bật thông báo qua email"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Kích hoạt tường lửa"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Bật tính năng chặn địa lý"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Bật Ẩn đăng nhập"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Kích hoạt Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Bật bảo vệ"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Bật giới hạn tỷ lệ"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Kích hoạt tích hợp SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Kích hoạt SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Bật máy quét"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Kích hoạt mô-đun máy quét"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Bật quét theo lịch trình"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Kích hoạt dịch vụ ngay"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Kích hoạt Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Bật nhóm"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Kích hoạt xác thực hai yếu tố"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Bật WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Kích hoạt mô-đun WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Kích hoạt tính năng bảo vệ WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Kích hoạt tường lửa ứng dụng web"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Kích hoạt tính năng bảo vệ Tường lửa ứng dụng web."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Kích hoạt và cấu hình các mô-đun bảo mật cho trang web của bạn."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Kích hoạt và cấu hình các mô-đun bảo mật."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Kích hoạt tính năng bảo vệ captcha"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Bật tính năng chặn theo quốc gia"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Bật ghi nhật ký gỡ lỗi (chỉ để khắc phục sự cố)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Kích hoạt tính năng bảo vệ tường lửa để chặn các cuộc tấn công"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Bật giới hạn tốc độ đăng nhập"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Kích hoạt trình quét phần mềm độc hại"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Kích hoạt hoặc vô hiệu hóa các mô-đun bảo mật."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Bật hoặc tắt toàn bộ mô-đun WAF."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Bật hoặc tắt trình quét phần mềm độc hại."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Kích hoạt hoặc vô hiệu hóa mô-đun giới hạn tốc độ."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Bật hoặc tắt xác thực hai yếu tố."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Bật quét theo lịch trình"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Kích hoạt tính năng quét lỗ hổng"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Đã bật"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Điểm cuối"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "URL điểm cuối"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Thực thi mật khẩu mạnh"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Thực thi các yêu cầu mật khẩu mạnh"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Thực thi các yêu cầu mật khẩu mạnh cho tất cả người dùng."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Thực thi các yêu cầu mật khẩu mạnh."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Thực thi các yêu cầu mật khẩu mạnh cho người dùng. An toàn - chỉ ảnh hưởng đến mật khẩu mới."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Thực thi mật khẩu mạnh với độ dài tối thiểu, quy tắc phức tạp"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Nhập mã gồm 6 chữ số để xác minh thiết lập"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Nhập IP, mỗi IP một dòng"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Nhập câu trả lời"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Nhập mã:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Bảo mật WordPress cấp doanh nghiệp"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Lỗi"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Sự kiện"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Định dạng sự kiện"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Nhật ký sự kiện"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Mức độ nghiêm trọng của sự kiện"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Loại sự kiện"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Sự kiện"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Sự kiện (7 ngày)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Sự kiện để tạo vé"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Sự kiện để chuyển tiếp"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Sự kiện cần thông báo"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Ví dụ: Hành động GitHub"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Ví dụ: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Ví dụ: Đường ống Jenkins"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Tiện ích mở rộng bị loại trừ"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Các mẫu tệp bị loại trừ"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Đường dẫn bị loại trừ"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Người dùng bị loại trừ"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Loại trừ"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Quét tập tin toàn diện"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Bản sao lưu hiện có"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Xuất CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Xuất cài đặt"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Xuất cài đặt NexifyMy Security của bạn sang tệp JSON. Điều này bao gồm tất cả các cấu hình mô-đun, quy tắc tường lửa, danh sách IP và cài đặt quét."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Tập lệnh bên ngoài & tài nguyên CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Bảo mật đăng nhập bổ sung"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Lỗi xây dựng trên phần mềm độc hại"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Thất bại trong việc xây dựng các lỗ hổng"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "thất bại"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Các lần thử 2FA không thành công trước khi khóa tạm thời."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Đăng nhập thất bại"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Đăng nhập thất bại"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Đã phát hiện nỗ lực đăng nhập không thành công"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Không thể đăng ký mật mã."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Thực hiện nhanh"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Kiểm tra an ninh nhanh chóng"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Tìm nạp tổng kiểm tra tệp chính thức từ API WordPress.org"
 
 msgid "File"
-msgstr "File"
+msgstr "Tập tin"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Trình chỉnh sửa tập tin"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Băm tệp:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Bao gồm tập tin"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Bảo vệ bao gồm tập tin"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Kiểm tra tính toàn vẹn của tệp"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Giám sát tính toàn vẹn của tệp"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Quyền tập tin"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Tệp đã được cách ly"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Các phần mở rộng tệp để loại trừ khỏi quá trình quét (một phần mở rộng trên mỗi dòng, không có dấu chấm)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Tên tệp"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Tệp được quét"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Các tập tin được quét:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Các tập tin được so sánh định kỳ với đường cơ sở."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Các tệp trong vùng cách ly được lưu trữ an toàn và không thể thực thi."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Các tệp lớn hơn mức này sẽ bị bỏ qua trong quá trình quét."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "Lọc"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Tường lửa"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Tường lửa & Bảo vệ"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Cấu hình tường lửa"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Quy tắc tường lửa"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Cài đặt tường lửa"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Sửa các tập tin đã sửa đổi"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Gắn cờ mã bị mã hóa hoặc bị xáo trộn nhiều."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Buộc SSL cho quản trị viên"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Buộc SSL/HTTPS cho khu vực quản trị (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Lực lượng dành cho quản trị viên"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Định dạng:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Chuyển tiếp các sự kiện bảo mật tới nền tảng Quản lý sự kiện và thông tin bảo mật (SIEM) của bạn để ghi nhật ký và phân tích tập trung."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Tìm thấy trong bảng điều khiển Cloudflare trong phần Tổng quan"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Tìm thấy trong plugin an toàn đã biết - có khả năng sử dụng hợp pháp"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Tìm thấy trong thư mục hệ thống - có thể hợp pháp"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Từ ngày"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Từ email"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Từ tên"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "URL điểm cuối HTTP/HTTPS đầy đủ cho nền tảng SIEM của bạn."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Phân tích phần mềm độc hại đầy đủ"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Quét phần mềm độc hại đầy đủ"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Chữ ký phần mềm độc hại đầy đủ"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Phân tích trang web đầy đủ"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "Các mô-đun tuân thủ GDPR, CCPA, HIPAA và báo cáo kiểm tra bảo mật toàn diện."
 
 msgid "General"
-msgstr "General"
+msgstr "chung"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Giới hạn yêu cầu chung"
 
 msgid "General Settings"
 msgstr "Cài đặt chung"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Tạo báo cáo"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Tạo SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Tạo từ: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Đã tạo"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Điểm cuối HTTP chung"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Proxy chung"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Khối địa lý"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Chặn địa lý"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Phân bố địa lý"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Nhận mã thông báo API miễn phí từ wpscan.com để biết dữ liệu chi tiết về lỗ hổng bảo mật."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Nhận thông báo tức thì trên các kênh liên lạc nhóm của bạn khi xảy ra sự kiện bảo mật."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Nhận trạng thái quét mới nhất"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Nhận kết quả quét (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Nhận khóa của bạn từ bảng điều khiển Google reCAPTCHA hoặc Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Bắt đầu"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Thời gian ân hạn"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "lớp"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "Bảo mật GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "Tính năng xem xét nội tại của GraphQL bị vô hiệu hóa."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "Đã vượt quá giới hạn tốc độ GraphQL. Giới hạn: %d truy vấn mỗi phút."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "Tiêu đề bảo mật HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "Bảo mật truyền tải nghiêm ngặt HTTP (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "tiêu đề HTTP"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "xử lý"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Cứng"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Cứng (bao gồm phép nhân)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Trang web cứng lại"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Làm cứng"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Tùy chọn làm cứng"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Tiêu đề"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Trợ giúp & Tài liệu"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Phân tích kinh nghiệm"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Phát hiện mô hình heuristic"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Ẩn đăng nhập"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Ẩn trang đăng nhập"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Ẩn URL đăng nhập"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Ẩn URL đăng nhập:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Ẩn phiên bản WP"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Ẩn URL đăng nhập WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Ẩn phiên bản WordPress"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Ẩn phiên bản WordPress khỏi mã nguồn"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Ẩn URL đăng nhập mặc định"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Ẩn quản trị viên wp"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Ẩn wp-admin và wp-login.php khỏi những kẻ tấn công."
 
 msgid "High"
-msgstr "High"
+msgstr "Cao"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Cao (Phát hiện tối đa)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Bảo mật cao (kiểm tra nhiều hơn, chậm hơn)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Số lượng lớn các cuộc tấn công bị chặn gần đây"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Cao hoặc Trên"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Các mối đe dọa nghiêm trọng cao"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Chỉ những khu vực có nguy cơ cao"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Mối đe dọa có điểm cao được phát hiện bằng phân tích AI"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Độ nhạy cao hơn có thể tạo ra nhiều kết quả dương tính giả hơn."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Cao nhất"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Giữ Ctrl/Cmd để chọn nhiều quốc gia."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Máy chủ"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Hàng giờ"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "2FA hoạt động như thế nào"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Cách thức hoạt động của việc sửa chữa lõi"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Cách thức hoạt động của tính năng tự bảo vệ"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Bao lâu để chặn một IP sau khi vượt quá số lần thử."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Thời gian chặn IP sau khi vượt quá giới hạn tốc độ."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Thời gian lưu giữ báo cáo cũ (30-365 ngày)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "Kiểm soát truy cập IP"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "Địa chỉ IP"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "Chặn IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "Cấu hình IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "Khóa IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "Khóa IP (cố gắng bạo lực)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "Quản lý IP"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "Danh sách trắng IP"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP bỏ qua giới hạn tốc độ."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP sẽ luôn bị chặn."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP sẽ không bao giờ bị chặn."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Xác định các tập tin bị sửa đổi hoặc bị thiếu"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Lựa chọn hình ảnh"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Cần hành động ngay lập tức"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Mức độ tác động"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Cài đặt nhập"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Nhập cài đặt từ tệp JSON đã xuất trước đó. Điều này sẽ ghi đè cài đặt hiện tại của bạn."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "Nhập/Xuất"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Không hoạt động"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "sự cố"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Bao gồm kiểm tra GDPR"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Bao gồm danh sách trắng/danh sách đen IP"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Bao gồm các số liệu hiệu suất"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Bao gồm kiểm tra bảo mật"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Bao gồm Tóm tắt mối đe dọa"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Bao gồm kết quả quét cuối cùng"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Bao gồm nhật ký bảo mật (30 ngày qua)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Câu trả lời captcha không chính xác. Vui lòng quay lại và thử lại."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Câu trả lời captcha không chính xác. Vui lòng thử lại."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Tên chỉ mục hoặc mã định danh nguồn để phân loại sự kiện."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Chỉ mục/Nguồn"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Thông tin"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Công bố thông tin"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Đang khởi tạo..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Tên phiên bản"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Tích hợp chức năng quét bảo mật vào quy trình triển khai và tích hợp liên tục của bạn."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Tích hợp tính năng quét bảo mật vào quy trình triển khai của bạn với quyền truy cập webhook và API."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Tích hợp với các dịch vụ CDN. Định cấu hình thông tin xác thực CDN trước khi bật."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Tích hợp"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Kết quả kiểm tra tính toàn vẹn"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Kiểm tra tính toàn vẹn:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Trạng thái toàn vẹn"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Mã thông báo JWT không hợp lệ."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Thông tin xác thực không hợp lệ."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Mã xác minh không hợp lệ."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Cô lập các mối đe dọa"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Cô lập các tập tin đáng ngờ mà không xóa. An toàn - các tập tin có thể được khôi phục."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Loại vấn đề"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Đã tìm thấy sự cố"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "định dạng JSON. Ví dụ: {\"Ủy quyền\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "URL đám mây Jira"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Tích hợp Jira"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Giữ nhật ký của tất cả các yêu cầu bị chặn để phân tích."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Giữ nhật ký của tất cả các vi phạm giới hạn tỷ lệ để phân tích."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Luôn cập nhật chữ ký phần mềm độc hại của bạn để được bảo vệ tốt nhất."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Các quốc gia được biết đến"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "Lỗ hổng đã biết được tìm thấy trong plugin đã cài đặt"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (Định dạng mở rộng sự kiện nhật ký)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "30 ngày qua"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "30 ngày qua"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "7 ngày qua"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "90 ngày qua"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Học lần cuối"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Lần quét cuối cùng"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Lần quét cuối cùng:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Cập nhật lần cuối"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Lần sử dụng cuối cùng: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Phiên bản mới nhất"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Học tập - Chỉ đăng nhập, không chặn"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Thời gian học tập"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Học..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Để trống để sử dụng email quản trị viên."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Có khả năng an toàn - xác minh nếu cần"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Giới hạn quyền truy cập API REST đối với người dùng được xác thực"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Hạn chế gửi bình luận để ngăn chặn thư rác."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Hạn chế các yêu cầu quá mức từ một địa chỉ IP duy nhất."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Hạn chế số lần đăng nhập"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Hạn chế số lần đăng nhập để ngăn chặn các cuộc tấn công vũ phu"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Giới hạn tỷ lệ yêu cầu để ngăn chặn lạm dụng và tấn công DDoS."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Giới hạn tỷ lệ yêu cầu để ngăn chặn lạm dụng."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Giới hạn các nỗ lực đăng nhập để ngăn chặn các cuộc tấn công vũ phu. An toàn - chỉ ảnh hưởng đến những lần đăng nhập thất bại."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Liệt kê các lỗ hổng đã biết"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Giao thông trực tiếp"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "Giám sát giao thông trực tiếp"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Đang tải trạng thái CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Đang tải cảnh báo..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Đang tải dữ liệu phân tích..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Đang tải bản sao lưu..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Đang tải IP bị chặn..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Đang tải quốc gia..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Đang tải thông tin cơ sở dữ liệu..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Đang tải dữ liệu địa lý..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Đang tải nhật ký..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Đang tải thông báo..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Đang tải số liệu thống kê tối ưu hóa..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Đang tải trạng thái bảo vệ..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Đang tải các tập tin bị cách ly..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Đang tải người giới thiệu..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Đang tải phát hiện mối đe dọa..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Đang tải các trang hàng đầu..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Đang tải dữ liệu giao thông..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Khóa sau nhiều lần thử thất bại."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Thời lượng khóa"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Khoảng thời gian khóa sau lần thử 2FA không thành công tối đa."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Đăng nhập các yêu cầu được phép"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Ghi lại các yêu cầu bị chặn"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Đăng nhập các lần đăng nhập không thành công"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Đăng xuất Đăng xuất"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Đăng nhập tải lên phương tiện"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Nhật ký thay đổi tùy chọn"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Đăng nhập thay đổi plugin"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Đăng nhập thay đổi bài đăng/trang"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Đăng nhập thay đổi hồ sơ"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Vi phạm giới hạn tỷ lệ ghi nhật ký"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Lưu giữ nhật ký"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Đăng nhập thay đổi vai trò"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Đăng nhập các lần đăng nhập thành công"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Đăng nhập thay đổi chủ đề"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Đăng nhập tạo/xóa người dùng"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Ghi lại tất cả các yêu cầu vượt qua kiểm tra WAF (mức sử dụng đĩa cao)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Ghi nhật ký"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Ghi nhật ký & Giám sát"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Đăng nhập"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Đăng nhập & xác thực"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Hoạt động đăng nhập"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Cửa sổ thử đăng nhập"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Số lần đăng nhập"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Đăng nhập CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Đăng nhập hình ảnh xác thực"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Mẫu đăng nhập"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Thời gian khóa đăng nhập"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Bảo vệ đăng nhập"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Giới hạn tỷ lệ đăng nhập"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Bảo mật đăng nhập"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Đăng nhập Slug"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Cài đặt URL đăng nhập"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Mẫu đăng nhập"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Đăng xuất"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Đăng xuất"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Nhật ký"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Nhật ký cũ hơn này sẽ tự động bị xóa hàng ngày."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Ghi lại các sự kiện bảo mật để xem xét. An toàn - chỉ ghi lại hoạt động."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Thấp"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Thấp (Ít dương tính giả hơn)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Tác động thấp (kiểm tra ít hơn, nhanh hơn)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Chữ thường (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Công cụ bảo trì và chẩn đoán cho trang web của bạn."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Hãy nhớ nhớ URL đăng nhập tùy chỉnh của bạn!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Phần mềm độc hại & Quét"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Định nghĩa phần mềm độc hại"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Đã tìm thấy phần mềm độc hại"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Máy quét phần mềm độc hại"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Phát hiện phần mềm độc hại trong quá trình quét tệp"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Quản lý thông báo"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Quản lý các mối đe dọa bị cách ly. Xem lại, khôi phục hoặc xóa vĩnh viễn các tập tin."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Bắt buộc đối với vai trò"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Nên xem xét thủ công"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Đánh dấu tất cả đã đọc"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Đánh dấu tất cả là đã đọc"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Công tắc chính để bật hoặc tắt tất cả ghi nhật ký hoạt động."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Câu hỏi toán học"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Số lần thử tối đa"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Số lần thất bại tối đa"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Kích thước tệp tối đa"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Số lần đăng nhập tối đa"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Độ dài chuỗi truy vấn tối đa"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Kích thước yêu cầu tối đa"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Yêu cầu tối đa"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Yêu cầu AJAX tối đa mỗi phút cho mỗi IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Yêu cầu API tối đa mỗi phút cho mỗi IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Số lần đăng nhập thất bại tối đa trước khi khóa."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Số yêu cầu trang tối đa mỗi phút trên mỗi IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Kích thước cơ thể yêu cầu tối đa để quét. Những yêu cầu lớn hơn sẽ bị bỏ qua."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Yêu cầu tối đa được phép mỗi phút cho mỗi IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Yêu cầu tìm kiếm tối đa mỗi phút để tránh cạn kiệt cơ sở dữ liệu."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Thời gian tối đa cho một lần quét."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Thời gian tối đa để quét phần mềm độc hại trước khi hết thời gian chờ."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Tải lên phương tiện"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Trung bình"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Trung bình (Cân bằng)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Trung bình (cộng/trừ)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Trung bình hoặc cao hơn"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Giới hạn bộ nhớ"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Bộ nhớ được phân bổ cho các hoạt động quét."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Tin nhắn"
 
 msgid "Method"
-msgstr "Method"
+msgstr "phương pháp"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Tích hợp nhóm Microsoft"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Tối thiểu %d ký tự"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Độ dài tối thiểu"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Mức độ nghiêm trọng tối thiểu để thất bại"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Độ dài mật khẩu tối thiểu (8-32 ký tự)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Chế độ"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Điều khiển mô-đun"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Mô-đun"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Giám sát các tập lệnh bên ngoài"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Chế độ giám sát (Chỉ nhật ký)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Giám sát các tập tin plugin để thay đổi"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Giám sát lưu lượng truy cập trang web theo thời gian thực."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Giám sát lưu lượng truy cập thời gian thực"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Giám sát lưu lượng truy cập và hoạt động của khách truy cập theo thời gian thực."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Theo dõi xu hướng của khách truy cập, lượt xem trang và mô hình lưu lượng truy cập theo thời gian."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Giám sát & Cảnh báo"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Giám sát lưu lượng truy cập thời gian thực. An toàn - chỉ theo dõi lượt truy cập."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "hàng tháng"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Người dùng tích cực nhất"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Di chuyển các tập tin đáng ngờ vào một thư mục được bảo vệ."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "Phụ thuộc NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Tên"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Cần hỗ trợ?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "không bao giờ"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Không bao giờ hết hạn"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "Bảo mật Nexify"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (Tích hợp sẵn)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyLoại hình ảnh xác thực của tôi"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "NexifyBảo mật của tôi"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security đã phát hiện các sửa đổi trái phép đối với các tệp của nó. Vui lòng xác minh cài đặt của bạn."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Bạn có %d cảnh báo bảo mật chưa đọc."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Cập nhật tiếp theo"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Không có thời gian ân hạn"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Không có hoạt động gần đây"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Không có SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Chưa có hoạt động nào được ghi lại. Hoạt động sẽ xuất hiện ở đây khi người dùng bắt đầu thực hiện hành động."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Chưa có thay đổi nội dung nào được ghi lại."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Chưa có quốc gia nào được chọn."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Không có sẵn dữ liệu"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Chưa có dữ liệu sự kiện."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Không có tập tin nào trong vùng cách ly."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Không có sẵn dữ liệu địa lý"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Chưa có hoạt động đăng nhập nào được ghi lại."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Chưa có mật mã nào được đăng ký."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Không có báo cáo có sẵn."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Chưa có bản quét nào được chạy"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Không có kết quả quét nào. Nhấp vào \"Chạy quét\" để phân tích các phần phụ thuộc của bạn."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Không có kết quả quét nào. Chạy quét để kiểm tra các lỗ hổng."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Không có khuyến nghị bảo mật tại thời điểm này. Trang web của bạn được bảo vệ tốt."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Không có dữ liệu về mức độ nghiêm trọng."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Không phát hiện thấy IP đáng ngờ nào."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Chưa có sự kiện hệ thống nào được ghi lại."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Chưa phát hiện mối đe dọa nào."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Chưa có hoạt động nào của người dùng được ghi lại."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Chưa có hoạt động của người dùng."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Không hoạt động"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Chưa kích hoạt"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Chưa kiểm tra"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Chưa lên lịch"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Lưu ý:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Email thông báo"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Cài đặt thông báo"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Thông báo"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Thông báo về việc khóa"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Thông báo cho người dùng khi bật/tắt 2FA trên tài khoản của họ."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Số (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Số lượng mã dự phòng"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Số lượng mã dự phòng cần tạo cho mỗi người dùng."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Số lần đăng nhập không thành công trước khi khóa."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Số lần khóa trước khi bị cấm vĩnh viễn."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Số lần vi phạm quy tắc trước khi bị chặn tự động."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Sự vật"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Lần đăng nhập tiếp theo, nhập mật khẩu + mã gồm 6 chữ số"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Một lần mỗi tuần"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Một IP trên mỗi dòng"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Một IP trên mỗi dòng. IP proxy được phép gửi tiêu đề X-Forwarded-For (ví dụ: Cloudflare, bộ cân bằng tải)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Một IP trên mỗi dòng. Các IP này bỏ qua mọi giới hạn tốc độ."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Một IP trên mỗi dòng. Những IP này sẽ bị chặn ngay lập tức. Ví dụ: 123,45,67,89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Một IP trên mỗi dòng. Những IP này sẽ bỏ qua việc kiểm tra WAF."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Một IP trên mỗi dòng. Các IP này sẽ bỏ qua tất cả các quy tắc WAF. Ví dụ: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Một đường dẫn trên mỗi dòng. Đường dẫn tuyệt đối tới các thư mục bổ sung cần quét."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Một đường dẫn trên mỗi dòng. Các thư mục cần bỏ qua trong quá trình quét."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Một trên mỗi dòng. Chặn các tác nhân người dùng cụ thể. Ví dụ: bad-bot, Scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Một trên mỗi dòng. Tác nhân người dùng trong danh sách này sẽ bỏ qua việc kiểm tra WAF. Ví dụ: Googlebot, bot dịch vụ tốt"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Một tên người dùng trên mỗi dòng"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Mở cài đặt"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Hệ điều hành"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Chế độ hoạt động"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Tối ưu hóa cơ sở dữ liệu"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Tối ưu hóa và bảo mật cơ sở dữ liệu của bạn."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Thay đổi tùy chọn"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Tùy chọn cho tất cả người dùng"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Tùy chọn: Gửi kết quả quét tới nền tảng CI/CD của bạn."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Đường dẫn gốc"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "lỗi thời"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Chi phí chung"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Ghi đè ngôn ngữ cho giao diện plugin. Ngôn ngữ được hỗ trợ: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Tổng quan"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "Phiên bản PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Gói"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Số yêu cầu trang mỗi phút"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Lượt xem trang"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Không tìm thấy trang."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Xác thực mật mã"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Tên mật mã (ví dụ: MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Passkey đã đăng ký thành công!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Mật mã không được hỗ trợ trong trình duyệt này."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Mật khẩu"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Mật khẩu hết hạn"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Chính sách mật khẩu"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Chính sách mật khẩu"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Yêu cầu mật khẩu"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Yêu cầu về mật khẩu:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Biểu mẫu đặt lại mật khẩu"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Đặt lại mật khẩu"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Mật khẩu phải dài ít nhất %d ký tự."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Mật khẩu phải chứa ít nhất một chữ cái viết thường."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Mật khẩu phải chứa ít nhất một số."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Mật khẩu phải chứa ít nhất một ký tự đặc biệt."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Mật khẩu phải chứa ít nhất một chữ cái viết hoa."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Chính sách mật khẩu"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Mẫu đặt lại mật khẩu"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Đường dẫn để loại trừ khỏi quá trình quét (liên quan đến root WordPress). Một trên mỗi dòng."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Thông tin chi tiết về hoạt động cao điểm"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Giờ cao điểm"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Giờ giao thông cao điểm"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Chế độ hiệu suất"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Cài đặt hiệu suất"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Báo cáo định kỳ"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "vĩnh viễn"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Ngưỡng cấm vĩnh viễn"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Xóa vĩnh viễn tập tin."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Hãy giải mã captcha toán học."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Trình cắm"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Phân tích plugin & chủ đề"
 
 msgid "Plugin Language"
 msgstr "Ngôn ngữ Plugin"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Plugin Cập nhật lần cuối"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Tùy chọn plugin"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Plugin tự bảo vệ"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Phiên bản plugin"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Lỗ hổng plugin"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Các tập tin plugin không thể được chỉnh sửa thông qua WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Tính toàn vẹn của plugin"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Bảo vệ plugin"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "CVE plugin/chủ đề"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Kích hoạt plugin/chủ đề, cập nhật, thay đổi tùy chọn và xuất."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Plugin"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Plugin đã được kích hoạt"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Plugin đã bị vô hiệu hóa"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Đã cập nhật plugin"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Chỉnh sửa bài/trang, xuất bản, tải lên phương tiện và xóa nội dung."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Bài viết đã được tạo"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Bài đăng đã xuất bản"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Bài viết đã cập nhật"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Đã phát hiện mối đe dọa bảo mật tiềm ẩn"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Ngăn chặn các cuộc tấn công XML-RPC và các nỗ lực bạo lực"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Ngăn chặn truy cập vào các thư mục bên ngoài web root."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Ngăn chặn kẻ tấn công bao gồm các tệp máy chủ cục bộ."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Ngăn chặn vũ lực"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Ngăn chỉnh sửa mã trong quản trị viên WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Ngăn chặn danh sách thư mục qua .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Ngăn chặn các cảnh báo trùng lặp trong khoảng thời gian này."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Ngăn chặn cảnh báo trùng lặp trong khoảng thời gian này. Đặt thành 0 để tắt tính năng tiết lưu."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Ngăn chỉnh sửa tập tin plugin thông qua trình chỉnh sửa WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Ngăn chặn việc bao gồm các tập tin từ xa thông qua các tham số URL."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Ngăn chặn nội dung thư mục liệt kê thông qua .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Ngăn chặn cài đặt plugin/chủ đề từ bảng quản trị."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Ngăn chặn việc lựa chọn và sao chép văn bản trên giao diện người dùng."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Ngăn chặn việc sử dụng các mật khẩu thường bị vi phạm"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Ngăn chặn người dùng phát hiện thông qua điểm cuối /wp-json/wp/v2/users."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Ngăn chặn việc sửa đổi trái phép các tập tin plugin bảo mật"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Địa chỉ email chính để cảnh báo bảo mật."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Sự ưu tiên"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Đề xuất bảo mật chủ động và đề xuất tăng cường tự động."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "vấn đề"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Cập nhật hồ sơ"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Thay đổi hồ sơ, thay đổi vai trò, tạo và xóa người dùng."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Khóa dự án"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Bảo vệ chống giả mạo yêu cầu trên nhiều trang web."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Bảo vệ chống lại các cuộc tấn công Cross-Site Scripting (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Bảo vệ chống lại các cuộc tấn công tiêm nhiễm SQL trong các tham số GET/POST."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Bảo vệ chống lại việc tiêm SQL, XSS, RFI và các cuộc tấn công khác."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Bảo vệ chống lại các cuộc tấn công bạo lực và DoS bằng cách giới hạn tần suất yêu cầu trên mỗi địa chỉ IP."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Bảo vệ các hình thức đăng nhập và đăng ký khỏi các cuộc tấn công bot tự động."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Bảo vệ biểu mẫu đăng nhập và đăng ký bằng hình ảnh xác thực dựa trên toán học."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Bảo vệ các tập tin plugin khỏi bị giả mạo."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Bảo vệ plugin bảo mật khỏi bị giả mạo và sửa đổi trái phép."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Bảo vệ trang đăng nhập của bạn khỏi các cuộc tấn công vũ phu."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Bảo vệ trang web của bạn khỏi lưu lượng truy cập và các cuộc tấn công độc hại."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Biểu mẫu được bảo vệ"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Cấp độ bảo vệ"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Chế độ bảo vệ"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Quy tắc bảo vệ"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Cài đặt bảo vệ"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Bảo vệ API REST bằng xác thực JWT, giới hạn tốc độ và CORS. Cần thiết cho WordPress không đầu."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Bảo vệ chống lại việc tiêm SQL, XSS và các yêu cầu độc hại. An toàn để kích hoạt - chỉ chặn lưu lượng truy cập có hại."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Bảo vệ các tập tin plugin khỏi sửa đổi. An toàn - ngăn ngừa giả mạo."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "nhà cung cấp"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Xóa tất cả nhật ký"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Xóa bộ nhớ đệm"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Cách ly"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Cách ly ngay lập tức"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Khuyến nghị cách ly"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Cách ly:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "Cách ly"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Tệp bị cách ly"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Độ phức tạp của truy vấn vượt quá mức tối đa %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Độ sâu truy vấn vượt quá độ sâu tối đa cho phép là %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "nhanh chóng"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Thao tác nhanh"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Quét nhanh"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Hành động quét nhanh"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Truy cập nhanh vào các công cụ bảo trì bảo mật."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Nhanh: Chỉ các tệp cốt lõi. Tiêu chuẩn: Core + chủ đề/plugin. Sâu: Tất cả các tập tin."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "Bảo mật API REST"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "Người dùng API REST"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "Bảo vệ API REST"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "Nguồn cấp dữ liệu RSS bị vô hiệu hóa trên trang web này."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Giới hạn tỷ lệ"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Giới hạn tỷ lệ"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Giới hạn tỷ lệ"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Cài đặt giới hạn tỷ lệ"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Giám sát thời gian thực"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Lý do"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Nhận thông báo qua email khi phát hiện lỗ hổng"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Hoạt động gần đây"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Phát hiện mối đe dọa gần đây"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "IP bị chặn gần đây"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Email người nhận"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Khuyến nghị"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Được đề xuất"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Hành động được đề xuất"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Chuyển hướng truy cập bị chặn"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Chuyển hướng đến trang chủ"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Giảm bề mặt tấn công bằng cách vô hiệu hóa các tính năng không cần thiết và tăng cường cấu hình WordPress."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Làm mới"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "tái sinh"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Tái tạo đường cơ sở"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Đăng ký mật mã"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Mật khẩu đã đăng ký"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Đang đăng ký mật mã..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Mẫu đăng ký"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Mẫu đăng ký"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Ghi nhớ thiết bị"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Ghi nhớ thời lượng"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Hãy nhớ thiết bị này"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Xóa"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Xóa thẻ trình tạo"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Xóa gợi ý đăng nhập"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Xóa phiên bản WordPress khỏi mã nguồn"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Xóa thẻ meta trình tạo khỏi tất cả các trang."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Xóa gợi ý và đề xuất đặt lại mật khẩu."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Xóa thông tin phiên bản khỏi HTML và nguồn cấp dữ liệu."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Sửa chữa tất cả các tập tin đã sửa đổi"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Sửa chữa các tập tin lõi WordPress đã sửa đổi. Sử dụng cẩn thận - sao lưu trước khi sửa chữa."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Thay thế các tập tin bị hỏng bằng các phiên bản sạch"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Lịch sử báo cáo"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Lưu giữ báo cáo (ngày)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Lịch báo cáo"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Giới hạn yêu cầu & lọc"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Yêu cầu giới hạn kích thước"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Yêu cầu mỗi phút"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Yêu cầu 2FA cho tất cả quản trị viên"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Yêu cầu 2FA cho các vai trò người dùng đã chọn."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Yêu cầu yếu tố thứ hai để xác minh đăng nhập"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Yêu cầu đăng nhập để truy cập REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Yêu cầu yếu tố thứ hai để đăng nhập. Định cấu hình phương thức 2FA của bạn trước khi bật."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Đặt lại"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Đặt lại tất cả cài đặt"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Đặt lại việc học"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Đặt lại tất cả cài đặt NexifyMy Security về giá trị mặc định. Không thể hoàn tác hành động này."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Đặt lại về mặc định"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Đang đặt lại..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Mã phản hồi trên khối"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Khôi phục"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Khôi phục:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Hạn chế API REST"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Hạn chế quyền truy cập API REST. Có thể ảnh hưởng đến các plugin sử dụng API REST."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Thời gian lưu giữ"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Trả về mã lỗi nếu phát hiện thấy phần mềm độc hại (không tạo được CI/CD)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Trả về mã lỗi nếu tìm thấy lỗ hổng."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Trả tập tin về vị trí ban đầu của nó."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Xem lại Cảnh báo >"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Xem xét ngay lập tức"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Xem lại nhật ký bảo mật thường xuyên"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Thay đổi vai trò"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Chạy quét bảo mật toàn bộ"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Chạy kiểm tra tính toàn vẹn"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Chạy kiểm tra nhanh"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Chạy quét"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Chạy quét lỗ hổng"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Chạy quét bảo mật để xác định lỗ hổng"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Chạy quét phần mềm độc hại tự động hàng ngày. An toàn - chỉ quét, không thay đổi tập tin."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "CẢNH BÁO AN NINH:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Giá trị băm SHA-256 của tất cả các tệp plugin được lưu trữ làm đường cơ sở."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "Tích hợp SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "Nền tảng SIEM"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "Tiêm SQL"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "Bảo vệ tiêm SQL"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "Trạng thái SSL"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "Xác minh SSL"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Lưu cài đặt nâng cao"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Lưu cài đặt CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Lưu cài đặt Discord"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Lưu cài đặt email"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Lưu cài đặt Jira"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Lưu cài đặt SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Lưu cài đặt máy quét"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Lưu cài đặt ServiceNow"
 
 msgid "Save Settings"
 msgstr "Lưu cài đặt"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Lưu cài đặt Slack"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Lưu cài đặt nhóm"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Lưu cài đặt WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Lưu cài đặt Webhook"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Quét"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Quét hoàn tất"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Quét hoàn tất"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Phụ thuộc của trình soạn thảo quét"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Cấu hình quét"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Điều khiển quét"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Quét thư mục tùy chỉnh"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Quét phụ thuộc NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Quét plugin"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Quét mã QR bằng ứng dụng xác thực (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Kết quả quét"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Lịch quét"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Độ nhạy quét"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Quét mục tiêu"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Quét chủ đề"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Hết thời gian quét"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Quét thư mục tải lên"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Quét lõi WordPress"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Quét tất cả các plugin đã cài đặt để tìm phần mềm độc hại."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Quét tất cả các chủ đề đã cài đặt để tìm phần mềm độc hại."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Chỉ quét các khu vực quan trọng"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Quét các tập tin để tìm phần mềm độc hại và mã đáng ngờ."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Quét các plugin, chủ đề và lõi WordPress để tìm các lỗ hổng đã biết."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Quét trang web của bạn để tìm phần mềm độc hại, lỗ hổng và vấn đề bảo mật."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Quét trang web của bạn để tìm phần mềm độc hại và lỗ hổng bảo mật."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Máy quét"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Cài đặt máy quét"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Đang quét..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Quét các tập tin để tìm phần mềm độc hại và mã đáng ngờ. An toàn - chỉ quét, không sửa đổi tập tin."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Chế độ quét theo lịch trình"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Quét theo lịch trình"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Điểm"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Số yêu cầu tìm kiếm mỗi phút"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Tìm kiếm tên người dùng..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Khóa bí mật"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Truy cập tập tin an toàn"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Bảo mật WPGraphQL bằng các giới hạn độ sâu truy vấn, kiểm tra độ phức tạp và giới hạn tốc độ. An toàn cho các thiết lập không có đầu."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Cảnh báo bảo mật"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Phân tích bảo mật"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Tăng cường an ninh"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Tiêu đề bảo mật"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Sự cố an ninh"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Nhật ký bảo mật"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Mô-đun bảo mật"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Thông báo bảo mật"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Tùy chọn bảo mật"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Khuyến nghị bảo mật"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Điểm bảo mật"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Trạng thái bảo mật"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Công cụ bảo mật"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Lỗ hổng bảo mật"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Cảnh báo bảo mật"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Các sự kiện bảo mật sẽ xuất hiện ở đây."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Tăng cường an ninh"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Quét bảo mật đã thực hiện xong"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Cài đặt bảo mật đã được sửa đổi"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Chọn quốc gia:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Chọn các quốc gia từ bên trái, nhấp vào \"Thêm vào danh sách\" để thêm chúng. Các quốc gia được chọn sẽ bị chặn (Danh sách đen) hoặc được phép (Danh sách trắng) dựa trên chế độ trên."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Chọn hình ảnh có dấu kiểm:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Chọn dịch vụ captcha nào sẽ sử dụng."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Các quốc gia được chọn:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Tự bảo vệ"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Tự bảo vệ"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Gửi thông báo kiểm tra"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Gửi email kiểm tra"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Gửi cảnh báo sau nhiều cuộc tấn công trong một giờ."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Gửi email thông báo hàng ngày"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Gửi email thông báo khi IP bị khóa."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Gửi thông báo qua email cho các sự kiện bảo mật"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Gửi thông báo qua email khi phát hiện các cuộc tấn công nghiêm trọng."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Gửi email khi phát hiện giả mạo"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Gửi email khi tìm thấy lỗ hổng"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Gửi báo cáo tới email quản trị viên"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Gửi kết quả quét qua email sau mỗi lần quét."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Gửi các sự kiện bảo mật tới Splunk, Elaticsearch hoặc các nền tảng SIEM khác để giám sát và phân tích tập trung."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Gửi các sự kiện bảo mật tới bất kỳ điểm cuối HTTP nào có cấu hình tùy chỉnh."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Gửi các sự kiện bảo mật tới bất kỳ điểm cuối HTTP nào với tiêu đề và xác thực tùy chỉnh."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Gửi mã xác minh qua email."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Gửi thông báo qua email cho các sự kiện bảo mật. An toàn - trước tiên hãy định cấu hình cài đặt email."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "Tích hợp ServiceNow"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Đặt quyền truy cập tệp an toàn. Có thể yêu cầu điều chỉnh thủ công nếu máy chủ gặp sự cố."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Cài đặt"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Đã lưu cài đặt thành công"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Mức độ nghiêm trọng"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Hiển thị trang 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Hiển thị thông báo lỗi chung về lỗi đăng nhập."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Hiển thị trên biểu mẫu"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Đang hiển thị %d trong số %d mục nhập"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Hiển thị các sự kiện Quan trọng/Cảnh báo chưa đọc. Sử dụng Nhật ký để biết toàn bộ lịch sử."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Đăng nhập bằng mật mã"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Trạng thái chữ ký"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Phát hiện dựa trên chữ ký"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Chữ ký"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Trang web mặc định"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Khóa trang web"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Tình trạng bảo mật trang web"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Kích thước"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Bỏ qua các tập tin lớn hơn kích thước này."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Tích hợp lỏng lẻo"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Một số cải tiến được đề xuất"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Nguồn"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Ký tự đặc biệt (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (Trình thu thập sự kiện HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Tiêu chuẩn"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Tiêu chuẩn - Bảo vệ cân bằng"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Quét tiêu chuẩn"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Bắt đầu quét"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Bắt đầu một lần quét mới"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Bắt đầu quét"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Trạng thái"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Câu chuyện"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Nghiêm ngặt - Bảo mật tối đa"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Mật khẩu mạnh"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Mật khẩu mạnh"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Tỷ lệ thành công"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Đăng nhập thành công"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Đăng nhập thành công"
 
 msgid "Sucuri"
 msgstr "Sucuri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Logic Sumo"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Chuỗi cung ứng"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "An ninh chuỗi cung ứng"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Cài đặt chuỗi cung ứng"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Hỗ trợ Google Authenticator, Authy, v.v."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Được hỗ trợ:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Mã đáng ngờ"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "IP đáng ngờ"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Hoạt động hệ thống"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Sự kiện hệ thống"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Trạng thái hệ thống"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "Ứng dụng xác thực TOTP"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Tên bảng"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Bàn"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Phát hiện giả mạo:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Nhiệm vụ"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Tạm thời chặn các IP vượt quá giới hạn tốc độ API."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Kiểm tra kết nối"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Thông báo kiểm tra"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "So khớp văn bản"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI liên tục học các mẫu hành vi thông thường bao gồm giờ giao thông, vị trí địa lý, tác nhân người dùng và mẫu yêu cầu. Đường cơ sở này được sử dụng để phát hiện sự bất thường."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF bảo vệ trang web của bạn khỏi các cuộc tấn công web phổ biến bao gồm SQL SQL, XSS và bot độc hại."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Công tắc chủ đề"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Giờ này"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Tháng này"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Tuần này"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Đây là mật khẩu thông dụng."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Đây là cách hình ảnh xác thực sẽ xuất hiện trên biểu mẫu đăng nhập:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Mật khẩu này quá phổ biến. Vui lòng chọn một mật khẩu độc đáo hơn."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Truy vấn này không được phép."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Điều này sẽ thiết lập lại tất cả các mẫu hành vi và dữ liệu học tập AI. Tiếp tục?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Đe dọa"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Phân tích mối đe dọa:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Đã phát hiện mối đe dọa"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Đã phát hiện mối đe dọa (phần mềm độc hại, tệp đáng ngờ)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Phát hiện và chặn mối đe dọa - 7 ngày qua"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Điểm đe dọa"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Các mối đe dọa bị chặn"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Đã tìm thấy mối đe dọa"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Mối đe dọa ngày nay"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Thời kỳ ga"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Bán vé"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Hệ thống bán vé"
 
 msgid "Time"
-msgstr "Time"
+msgstr "thời gian"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Cửa sổ thời gian (giây)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Thời gian trước khi mã xác minh email hết hạn."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Cửa sổ thời gian để đếm số lần đăng nhập thất bại."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Cửa sổ thời gian được sử dụng để đếm số lần đăng nhập thất bại."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Đến ngày"
 
 msgid "Today"
-msgstr "Today"
+msgstr "hôm nay"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Quá nhiều lần đăng nhập không thành công. Vui lòng thử lại sau %d phút."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Công cụ"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Công cụ & Tiện ích"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Quốc gia hàng đầu"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Lý do phát hiện hàng đầu"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Các loại sự kiện hàng đầu"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Trang hàng đầu"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Người giới thiệu hàng đầu"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Tổng số sự kiện"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Tổng số lượt xem trang"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Tổng số chữ ký"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Tổng kích thước"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Phân tích lưu lượng truy cập"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Tổng quan về giao thông"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Kích hoạt quét bảo mật"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Tiêu đề proxy tin cậy"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Proxy đáng tin cậy"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Hai lần mỗi ngày"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Xác thực hai yếu tố (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Xác thực hai yếu tố"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Xác thực hai yếu tố"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Loại"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Nhập từ:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Hành vi gỡ cài đặt"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "IP duy nhất"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Người dùng duy nhất"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Số lượng khách truy cập"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Không xác định"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Cảnh báo chưa đọc"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Cảnh báo bảo mật chưa đọc từ nhật ký của bạn."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Cập nhật định nghĩa"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Cập nhật định nghĩa ngay"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Cập nhật định nghĩa phần mềm độc hại"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Cập nhật ngay"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Cập nhật chữ ký phát hiện phần mềm độc hại."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Chữ in hoa (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Mức độ khẩn cấp"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Sử dụng tiêu đề CDN/proxy để xác định IP máy khách thực"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Sử dụng Touch ID, Face ID, Windows Hello hoặc khóa bảo mật phần cứng."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Sử dụng tiêu đề X-Forwarded-For để phát hiện IP (chỉ khi ở phía sau CDN/proxy)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Sử dụng cơ sở dữ liệu chữ ký phần mềm độc hại để phát hiện."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Sử dụng khóa này để xác thực các yêu cầu API từ quy trình CI/CD của bạn."
 
 msgid "User"
-msgstr "User"
+msgstr "người dùng"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Hoạt động của người dùng"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Tác nhân người dùng"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Sự kiện của người dùng"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Khóa người dùng"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Quản lý người dùng"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Yêu cầu của người dùng"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Địa chỉ người dùng hoặc IP bị khóa do hoạt động đáng ngờ"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Tên người dùng"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Tên người dùng và mật khẩu được yêu cầu."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Người dùng đã tạo"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Người dùng đã bị xóa"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Người dùng kích hoạt 2FA trong cài đặt hồ sơ của họ"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Sử dụng AI để phát hiện các mối đe dọa zero-day thông qua phân tích hành vi. Tìm hiểu các mẫu bình thường và các cờ bất thường. An toàn - chỉ giám sát hành vi."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Phiên xác minh đã hết hạn. Vui lòng đăng nhập lại."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Xác minh"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Xác minh tập tin cốt lõi"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Xác minh chứng chỉ SSL (được khuyến nghị cho sản xuất)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Xác minh và sửa chữa các tập tin cốt lõi của WordPress."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Xác minh và sửa chữa các tập tin cốt lõi"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Phiên bản"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Xem tất cả"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Xem giao thông trực tiếp"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Xem tất cả các sự kiện bảo mật."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Xem và quản lý các mối đe dọa bị cách ly."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Xem và quản lý các cảnh báo và thông báo bảo mật."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Lượt xem"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Xu hướng của Khách truy cập - 30 ngày qua"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Du khách"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Lượt truy cập hôm nay"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Kiểm tra lỗ hổng"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Máy quét lỗ hổng"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "dễ bị tổn thương"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "Đã chặn cuộc tấn công WAF"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "Khối WAF (bị tấn công bởi tường lửa)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "Tường lửa WAF"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "Trạng thái WAF"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "Phiên bản WP"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "Bảo vệ WPGraphQL"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "Mã thông báo API WPScan"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Cảnh báo"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Cảnh báo:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Cảnh báo: Quá trình nhập sẽ thay thế tất cả cài đặt hiện tại. Trước tiên, hãy đảm bảo xuất cài đặt hiện tại của bạn làm bản sao lưu."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Tường lửa ứng dụng web"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Tường lửa ứng dụng web (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "URL webhook"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "URL webhook cho kết quả"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Webhook"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "hàng tuần"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Báo cáo bảo mật hàng tuần"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Danh sách trắng (Chỉ cho phép)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Danh sách trắng (chỉ cho phép được chọn)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "IP danh sách trắng"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "IP thuộc danh sách trắng"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Xác minh tệp lõi WordPress"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "Trạng thái cốt lõi của WordPress"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "Tăng cường WordPress"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "Phiên bản WordPress"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "Tệp lõi WordPress đã được sửa đổi"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress không cập nhật"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "Tùy chọn loại nội dung X (Không đánh hơi)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Ngăn chặn Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-Bảo vệ"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "Kiểm soát XML-RPC"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "Tấn công XSS"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "Bảo vệ XSS"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Bạn đang sử dụng sên đăng nhập mặc định. Hãy xem xét thay đổi nó thành một cái gì đó độc đáo."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Bạn phải đăng nhập để truy cập REST API."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Trang web của bạn không sử dụng HTTPS. Kích hoạt chứng chỉ SSL để kết nối an toàn."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Trang web của bạn được bảo vệ tốt"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Mã xác minh của bạn là: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Định nghĩa virus của bạn đã lỗi thời. Hãy cập nhật ngay để được bảo vệ tốt nhất."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ID vùng"
 
 msgid "ago"
-msgstr "ago"
+msgstr "trước đây"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "tấn công mỗi giờ"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "nỗ lực"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "bị chặn"
 
 msgid "characters"
-msgstr "characters"
+msgstr "nhân vật"
 
 msgid "days"
-msgstr "days"
+msgstr "ngày"
 
 msgid "events"
-msgstr "events"
+msgstr "sự kiện"
 
 msgid "fails"
-msgstr "fails"
+msgstr "thất bại"
 
 msgid "files"
-msgstr "files"
+msgstr "tập tin"
 
 msgid "from now"
-msgstr "from now"
+msgstr "từ bây giờ"
 
 msgid "including:"
-msgstr "including:"
+msgstr "bao gồm:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "chữ thường"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "phút"
 
 msgid "modules"
-msgstr "modules"
+msgstr "mô-đun"
 
 msgid "number"
-msgstr "number"
+msgstr "con số"
 
 msgid "or"
-msgstr "or"
+msgstr "hoặc"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "mỗi phút"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "giây"
 
 msgid "special character"
-msgstr "special character"
+msgstr "ký tự đặc biệt"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "mối đe dọa được tìm thấy"
 
 msgid "total records"
-msgstr "total records"
+msgstr "tổng số hồ sơ"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "chữ hoa"
 
 msgid "views"
-msgstr "views"
+msgstr "lượt xem"
 
 msgid "violations"
-msgstr "violations"
+msgstr "vi phạm"
 
 msgid "visits"
-msgstr "visits"
+msgstr "thăm"
+msgid "Deception"
+msgstr "Lừa dối"
+
+msgid "P2P Intelligence"
+msgstr "Thông minh P2P"
+
+msgid "Sandbox Console"
+msgstr "Bảng điều khiển hộp cát"
+
+msgid "Temporary Access"
+msgstr "Truy cập tạm thời"
+
+msgid "Saving..."
+msgstr "Đang lưu..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Đã lưu cài đặt. Đang tải lại..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Đã lưu cài đặt thành công! Đang tải lại..."
+
+msgid "Connection error"
+msgstr "Lỗi kết nối"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Kiểm tra bảo mật không thành công. Hãy làm mới và thử lại."
+
+msgid "Settings handler not available."
+msgstr "Trình xử lý cài đặt không có sẵn."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Đặt lại tất cả cài đặt về mặc định? Điều này không thể hoàn tác được."
+
+msgid "Purge CDN cache now?"
+msgstr "Xóa bộ đệm CDN ngay bây giờ?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Không lưu được cài đặt. Vui lòng thử lại."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Cài đặt lại về mặc định. Đang tải lại trang..."
+
+msgid "Failed to load analytics data."
+msgstr "Không tải được dữ liệu phân tích."
+
+msgid "Devices"
+msgstr "Thiết bị"
+
+msgid "No data available for this range."
+msgstr "Không có dữ liệu có sẵn cho phạm vi này."
+
+msgid "Traffic trend chart"
+msgstr "Biểu đồ xu hướng giao thông"
+
+msgid "Distribution breakdown chart"
+msgstr "Biểu đồ phân bổ phân phối"
+
+msgid "Total"
+msgstr "Tổng cộng"
+
+msgid "Series"
+msgstr "loạt"
+
+msgid "Predictive Threat Hunting"
+msgstr "Săn lùng mối đe dọa dự đoán"
+
+msgid "Forecast next attack vectors"
+msgstr "Dự báo các vectơ tấn công tiếp theo"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Lập hồ sơ ngăn xếp của bạn, dự đoán các vectơ tấn công có thể xảy ra và cung cấp hướng dẫn tăng cường chủ động."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Quản lý các mối đe dọa bị cách ly và các tập tin đã xóa có thể phục hồi."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Các tập tin đã xóa (Có thể phục hồi)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Các tập tin được di chuyển đến đây có thể được khôi phục trở lại vùng cách ly hoặc bị xóa vĩnh viễn."
+
+msgid "Deleted"
+msgstr "Đã xóa"
+
+msgid "Loading deleted files..."
+msgstr "Đang tải các tập tin đã xóa..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Di chuyển các tập tin bị cách ly sang bộ nhớ đã xóa có thể phục hồi."
+
+msgid "Delete Permanently:"
+msgstr "Xóa vĩnh viễn:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Xóa vĩnh viễn một tập tin khỏi bộ nhớ đã xóa."
+
+msgid "Access denied from your region."
+msgstr "Quyền truy cập bị từ chối từ khu vực của bạn."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Số lần đăng nhập thất bại tối đa trước khi khóa tạm thời."
+
+msgid "Time window for counting failed attempts."
+msgstr "Cửa sổ thời gian để đếm số lần thử thất bại."
+
+msgid "Open Tool"
+msgstr "Mở công cụ"
+
+msgid "Available Fix"
+msgstr "Bản sửa lỗi có sẵn"
+
+msgid "Preview Patch"
+msgstr "Xem trước bản vá"
+
+msgid "Apply Patch"
+msgstr "Áp dụng bản vá"
+
+msgid "Honeytrap Configuration"
+msgstr "Cấu hình bẫy mật"
+
+msgid "Enable Deception Module"
+msgstr "Kích hoạt mô-đun lừa dối"
+
+msgid "How Deception Works:"
+msgstr "Cách thức hoạt động của sự lừa dối:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Các URL sau không tồn tại trên trang web của bạn. Nếu bất kỳ ai truy cập chúng, họ sẽ <strong>tự động bị chặn</strong> vì được xác nhận là kẻ tấn công. Quản trị viên không bao giờ bị chặn nhưng sẽ thấy cảnh báo."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Đường dẫn Honeytrap tùy chỉnh"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Thêm một đường dẫn trên mỗi dòng (ví dụ: /my-secret-admin/, /old-backup.sql). Mặc định đã được kích hoạt."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Đường dẫn Honeytrap mặc định (Luôn hoạt động)"
+
+msgid "Login Page Honeypot"
+msgstr "Trang đăng nhập Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Một trường vô hình được đưa vào các biểu mẫu đăng nhập/đăng ký. Chỉ có bot mới điền vào, kích hoạt tính năng phát hiện và chặn ngay lập tức."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Tính năng bảo vệ này luôn được bật khi mô-đun Lừa dối đang hoạt động. Không cần cấu hình."
+
+msgid "User Enumeration Trap"
+msgstr "Bẫy liệt kê người dùng"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Phát hiện các nỗ lực trinh sát trong đó kẻ tấn công quét tên người dùng hợp lệ thông qua ?author=1, ?author=2, v.v."
+
+msgid "Enable user enumeration detection"
+msgstr "Cho phép phát hiện liệt kê người dùng"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Chặn cứng các lần thử liệt kê (mặc định: chuyển hướng mềm đến trang chủ)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Chặn TẤT CẢ liệt kê tác giả (ngay cả đối với người dùng hiện tại)"
+
+msgid "Save Changes"
+msgstr "Lưu thay đổi"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "Điều 30 của GDPR Ánh xạ dữ liệu"
+
+msgid "Refresh Map"
+msgstr "Làm mới bản đồ"
+
+msgid "Export Data Map (PDF)"
+msgstr "Xuất bản đồ dữ liệu (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Tự động phát hiện PII trên các bảng cơ sở dữ liệu, ánh xạ luồng dữ liệu và phát hiện chia sẻ của bên thứ ba."
+
+msgid "Data Element"
+msgstr "Phần tử dữ liệu"
+
+msgid "Location"
+msgstr "Vị trí"
+
+msgid "Purpose"
+msgstr "Mục đích"
+
+msgid "Retention"
+msgstr "giữ lại"
+
+msgid "Third-Party Sharing"
+msgstr "Chia sẻ của bên thứ ba"
+
+msgid "Legal Basis"
+msgstr "Cơ sở pháp lý"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Chưa phát hiện bản ghi PII nào. Chạy quét bản đồ dữ liệu để xây dựng báo cáo."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Tự động hóa đáng bị lãng quên"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Gửi yêu cầu xóa, xác minh việc xóa dữ liệu và theo dõi nhật ký tuân thủ cho quy trình làm việc GDPR."
+
+msgid "User ID"
+msgstr "ID người dùng"
+
+msgid "Comments"
+msgstr "Bình luận"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Xóa bình luận thay vì ẩn danh"
+
+msgid "Run Erasure"
+msgstr "Chạy xóa"
+
+msgid "Verify Erasure"
+msgstr "Xác minh xóa"
+
+msgid "GDPR Request Log"
+msgstr "Nhật ký yêu cầu GDPR"
+
+msgid "Request Type"
+msgstr "Loại yêu cầu"
+
+msgid "Requested At"
+msgstr "Yêu cầu tại"
+
+msgid "Completed At"
+msgstr "Hoàn thành vào lúc"
+
+msgid "No GDPR requests logged yet."
+msgstr "Chưa có yêu cầu GDPR nào được ghi lại."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Hộp cát thời gian chạy bóng"
+
+msgid "Enable Sandbox Module"
+msgstr "Kích hoạt mô-đun hộp cát"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Tải công cụ Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "Bật bảng điều khiển hộp cát"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Cho phép người dùng wp-admin có quản lý_options chạy mã trong bảng điều khiển hộp cát."
+
+msgid "Sandbox Timeout"
+msgstr "Hết thời gian chờ của hộp cát"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Thời gian chờ thực hiện tính bằng giây (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Phân tích động"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Chạy phân tích thực thi động bên cạnh kiểm tra tĩnh."
+
+msgid "Quarantine Policy"
+msgstr "Chính sách kiểm dịch"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Nên cách ly thủ công đối với hầu hết các địa điểm. Tự động cách ly chỉ cô lập phần mềm độc hại đã được xác nhận có độ tin cậy cao."
+
+msgid "Manual (Recommended)"
+msgstr "Hướng dẫn sử dụng (Khuyến nghị)"
+
+msgid "Auto Quarantine"
+msgstr "Kiểm dịch tự động"
+
+msgid "Save Quarantine Policy"
+msgstr "Lưu chính sách cách ly"
+
+msgid "AI Risk Controls"
+msgstr "Kiểm soát rủi ro AI"
+
+msgid "Enable AI Detection Module"
+msgstr "Kích hoạt mô-đun phát hiện AI"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Kích hoạt tính năng phát hiện mối đe dọa nội bộ"
+
+msgid "Insider Threat Threshold"
+msgstr "Ngưỡng đe dọa nội bộ"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Bật giám sát lọc dữ liệu"
+
+msgid "Exfiltration Threshold"
+msgstr "Ngưỡng lọc"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Ngày cơ bản lọc"
+
+msgid "Session Risk Threshold"
+msgstr "Ngưỡng rủi ro phiên"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Khoảng thời gian kiểm tra lại xác thực liên tục (giây)"
+
+msgid "Risk Spike Threshold"
+msgstr "Ngưỡng rủi ro tăng vọt"
+
+msgid "Save AI Settings"
+msgstr "Lưu cài đặt AI"
+
+msgid "Quarantine Mode"
+msgstr "Chế độ cách ly"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Chế độ thủ công an toàn hơn và được khuyên dùng. Chế độ tự động chỉ cách ly phần mềm độc hại được xác nhận có độ tin cậy cao."
+
+msgid "Data Map"
+msgstr "Bản đồ dữ liệu"
+
+msgid "Privacy Requests"
+msgstr "Yêu cầu về quyền riêng tư"
+
+msgid "Deception Technology"
+msgstr "Công nghệ lừa đảo"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypots, tài sản mồi nhử và sự lừa dối của kẻ tấn công để phát hiện các mối đe dọa trước khi chúng tấn công."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Đang hiển thị %1$d trong số %2$d mục nhập"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "Mô-đun thông minh P2P không được tải."
+
+msgid "P2P Threat Intelligence"
+msgstr "Thông tin về mối đe dọa P2P"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Chia sẻ thông tin về mối đe dọa với các cài đặt SentinelWP khác để có khả năng miễn dịch bầy đàn."
+
+msgid "P2P Settings"
+msgstr "Cài đặt P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "Kích hoạt thông minh P2P"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Cho phép chia sẻ thông tin về mối đe dọa cộng tác với các nút ngang hàng."
+
+msgid "My Node Key"
+msgstr "Khóa nút của tôi"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Chia sẻ khóa này với những người muốn kết nối với trang web của bạn."
+
+msgid "Broadcast Threats"
+msgstr "Các mối đe dọa phát sóng"
+
+msgid "Share detected threats with registered peers."
+msgstr "Chia sẻ các mối đe dọa được phát hiện với các đồng nghiệp đã đăng ký."
+
+msgid "Trust Threshold"
+msgstr "Ngưỡng tin cậy"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Chỉ tự động chặn các IP có điểm đe dọa >= ngưỡng này. Giá trị thấp hơn = chặn tích cực hơn."
+
+msgid "Registered Peers"
+msgstr "Đồng nghiệp đã đăng ký"
+
+msgid "Add Peer"
+msgstr "Thêm ngang hàng"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Chưa có đồng nghiệp nào đăng ký. Thêm một người ngang hàng để bắt đầu chia sẻ thông tin về mối đe dọa."
+
+msgid "Label"
+msgstr "Nhãn"
+
+msgid "Last Sync"
+msgstr "Đồng bộ hóa lần cuối"
+
+msgid "Sent/Received"
+msgstr "Đã gửi/đã nhận"
+
+msgid "Unnamed"
+msgstr "Chưa đặt tên"
+
+msgid "%s ago"
+msgstr "%s trước"
+
+msgid "Threats Sent"
+msgstr "Đe dọa đã gửi"
+
+msgid "Threats Received"
+msgstr "Các mối đe dọa đã nhận được"
+
+msgid "Statistics"
+msgstr "Thống kê"
+
+msgid "Connected Peers"
+msgstr "Đồng nghiệp được kết nối"
+
+msgid "Threats Received (24h)"
+msgstr "Các mối đe dọa đã nhận được (24h)"
+
+msgid "P2P Status"
+msgstr "Trạng thái P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "Tín dụng thông minh về mối đe dọa"
+
+msgid "Current Credit Balance"
+msgstr "Số dư Tín dụng Hiện tại"
+
+msgid "Reputation Score"
+msgstr "Điểm danh tiếng"
+
+msgid "Accuracy"
+msgstr "Độ chính xác"
+
+msgid "Badges:"
+msgstr "Huy hiệu:"
+
+msgid "No badges yet"
+msgstr "Chưa có huy hiệu"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Các lợi ích cao cấp được mở khóa miễn phí vì điểm danh tiếng của bạn trên 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Đạt điểm danh tiếng trên 1000 để nhận được các lợi ích cao cấp miễn phí."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Những người đóng góp hàng đầu (Ẩn danh)"
+
+msgid "No contributor data available yet."
+msgstr "Chưa có dữ liệu người đóng góp."
+
+msgid "Rank"
+msgstr "Xếp hạng"
+
+msgid "Anonymous Site ID"
+msgstr "ID trang web ẩn danh"
+
+msgid "Credits"
+msgstr "Tín dụng"
+
+msgid "Reputation"
+msgstr "Danh tiếng"
+
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Add New Peer"
+msgstr "Thêm ngang hàng mới"
+
+msgid "Peer URL"
+msgstr "URL ngang hàng"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "URL đầy đủ của trang WordPress ngang hàng (phải sử dụng HTTPS trong sản xuất)."
+
+msgid "Peer Node Key"
+msgstr "Khóa nút ngang hàng"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Khóa nút của ngang hàng (họ có thể sao chép nó từ trang cài đặt P2P của họ)."
+
+msgid "Label (Optional)"
+msgstr "Nhãn (Tùy chọn)"
+
+msgid "My Production Server"
+msgstr "Máy chủ sản xuất của tôi"
+
+msgid "A friendly name to identify this peer."
+msgstr "Một cái tên thân thiện để xác định đồng nghiệp này."
+
+msgid "Unauthorized"
+msgstr "trái phép"
+
+msgid "Sandbox module is not loaded."
+msgstr "Mô-đun hộp cát không được tải."
+
+msgid "Sandbox module is disabled."
+msgstr "Mô-đun hộp cát bị vô hiệu hóa."
+
+msgid "Sandbox console is disabled."
+msgstr "Bảng điều khiển hộp cát bị tắt."
+
+msgid "No code provided."
+msgstr "Không có mã được cung cấp."
+
+msgid "Insufficient permissions."
+msgstr "Không đủ quyền."
+
+msgid "Sandbox Module Disabled"
+msgstr "Mô-đun hộp cát bị vô hiệu hóa"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Shadow Runtime Sandbox hiện đã bị vô hiệu hóa. Kích hoạt nó trong Cài đặt để sử dụng bảng điều khiển."
+
+msgid "Go to Settings"
+msgstr "Đi tới Cài đặt"
+
+msgid "Sandbox Console Disabled"
+msgstr "Bảng điều khiển hộp cát bị vô hiệu hóa"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Mô-đun Sandbox được bật nhưng bảng điều khiển dành cho quản trị viên bị tắt. Kích hoạt cài đặt bảng điều khiển để chạy mã từ wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Vùng nguy hiểm: Thực thi mã"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Bảng điều khiển này thực thi mã PHP trong một hộp cát biệt lập. Tất cả các thay đổi cơ sở dữ liệu sẽ tự động được khôi phục. Chỉ sử dụng để phân tích mã hoặc thử nghiệm đáng ngờ."
+
+msgid "PHP Code Editor"
+msgstr "Trình soạn thảo mã PHP"
+
+msgid "Run Code"
+msgstr "Chạy mã"
+
+msgid "Analyze Only"
+msgstr "Chỉ phân tích"
+
+msgid "Timeout:"
+msgstr "Hết giờ:"
+
+msgid "Execution Results"
+msgstr "Kết quả thực hiện"
+
+msgid "STATIC ANALYSIS"
+msgstr "PHÂN TÍCH TĨNH"
+
+msgid "OUTPUT"
+msgstr "ĐẦU RA"
+
+msgid "ERRORS"
+msgstr "LỖI"
+
+msgid "DATABASE QUERIES"
+msgstr "TRUY VẤN CƠ SỞ DỮ LIỆU"
+
+msgid "Module not loaded"
+msgstr "Mô-đun không được tải"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Phân tích lưu lượng truy cập trực tiếp không có sẵn."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Quyền truy cập đúng lúc sử dụng quy trình yêu cầu và phê duyệt với thời gian hết hạn tự động."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Truy cập tạm thời hiện không khả dụng do mô-đun bị tắt hoặc không được tải."
+
+msgid "Open settings"
+msgstr "Mở cài đặt"
+
+msgid "Request Temporary Access"
+msgstr "Yêu cầu quyền truy cập tạm thời"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Yêu cầu này áp dụng cho tài khoản hiện đang đăng nhập của bạn. Quản trị viên phải phê duyệt trước khi cấp quyền truy cập nâng cao tạm thời."
+
+msgid "Requested Role"
+msgstr "Vai trò được yêu cầu"
+
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+msgid "Editor"
+msgstr "Biên tập viên"
+
+msgid "Duration (minutes)"
+msgstr "Thời lượng (phút)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Mô tả lý do tại sao cần có quyền truy cập nâng cao tạm thời."
+
+msgid "Submit Request"
+msgstr "Gửi yêu cầu"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Cấp quyền truy cập tạm thời (Quản trị viên)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Cấp quyền truy cập nâng cao có giới hạn thời gian trực tiếp cho một người dùng cụ thể theo tên người dùng hoặc email."
+
+msgid "Target User (Username or Email)"
+msgstr "Người dùng mục tiêu (Tên người dùng hoặc Email)"
+
+msgid "username or user@example.com"
+msgstr "tên người dùng hoặc user@example.com"
+
+msgid "Grant Role"
+msgstr "Cấp vai trò"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Mô tả lý do tại sao người dùng này yêu cầu quyền truy cập nâng cao tạm thời."
+
+msgid "Grant Access"
+msgstr "Cấp quyền truy cập"
+
+msgid "Pending and Active Requests"
+msgstr "Yêu cầu đang chờ xử lý và đang hoạt động"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Phê duyệt các yêu cầu đang chờ xử lý, xem xét các khoản trợ cấp trực tiếp và thu hồi các quyền đang hoạt động từ hàng đợi này."
+
+msgid "Original Role"
+msgstr "Vai trò ban đầu"
+
+msgid "Elevated Role"
+msgstr "Vai trò nâng cao"
+
+msgid "Granted"
+msgstr "Đã được cấp"
+
+msgid "Expires"
+msgstr "Hết hạn"
+
+msgid "Approved By"
+msgstr "Được phê duyệt bởi"
+
+msgid "Loading..."
+msgstr "Đang tải..."
+
+msgid "English (US)"
+msgstr "Tiếng Anh (Mỹ)"
+
+msgid "English (UK)"
+msgstr "Tiếng Anh (Anh)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (tiếng Tây Ban Nha)"
+
+msgid "Francais (French)"
+msgstr "Francais (tiếng Pháp)"
+
+msgid "Deutsch (German)"
+msgstr "Tiếng Đức (tiếng Đức)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (tiếng Ý)"
+
+msgid "Portugues (Brazilian)"
+msgstr "Bồ Đào Nha (Brazil)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Hà Lan (Hà Lan)"
+
+msgid "Russian"
+msgstr "tiếng Nga"
+
+msgid "Japanese"
+msgstr "tiếng Nhật"
+
+msgid "Chinese (Simplified)"
+msgstr "Tiếng Trung (Giản thể)"
+
+msgid "Arabic"
+msgstr "tiếng Ả Rập"
+
+msgid "Hindi"
+msgstr "Tiếng Hindi"
+
+msgid "Korean"
+msgstr "Tiếng Hàn"
+
+msgid "Turkish"
+msgstr "tiếng Thổ Nhĩ Kỳ"
+
+msgid "Polski (Polish)"
+msgstr "Tiếng Ba Lan (tiếng Ba Lan)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Tiếng Bahasa Indonesia (tiếng Indonesia)"
+
+msgid "Ukrainian"
+msgstr "tiếng Ukraina"
+
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+msgid "Thai"
+msgstr "tiếng Thái"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (Thụy Điển)"
+
+msgid "Dansk (Danish)"
+msgstr "Đan Mạch (Đan Mạch)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (Phần Lan)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (Na Uy)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Séc)"
+
+msgid "Greek"
+msgstr "tiếng Hy Lạp"
+
+msgid "Magyar (Hungarian)"
+msgstr "Tiếng Magyar (Hungary)"
+
+msgid "Romana (Romanian)"
+msgstr "Romana (tiếng Rumani)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovencina (tiếng Slovak)"
+
+msgid "Bulgarian"
+msgstr "tiếng Bungari"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (tiếng Croatia)"
+
+msgid "Serbian"
+msgstr "tiếng Serbia"
+
+msgid "Hebrew"
+msgstr "tiếng Do Thái"
+
+msgid "Persian"
+msgstr "tiếng Ba Tư"
+
+msgid "Settings saved successfully."
+msgstr "Đã lưu cài đặt thành công."
+
+msgid "Settings reset to defaults."
+msgstr "Cài đặt lại về mặc định."
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyNhật ký bảo mật của tôi"
+
+msgid "No matching user found."
+msgstr "Không tìm thấy người dùng phù hợp."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Nhật ký bảo mật và PII liên quan đã được ẩn danh."
+
+msgid "Invalid user ID."
+msgstr "ID người dùng không hợp lệ."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Yêu cầu xóa thủ công hoặc dựa trên webhook đã được xếp hàng đợi."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Yêu cầu xóa Mailchimp đã được gửi."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Việc xóa sọc yêu cầu phải theo dõi API thủ công đối với các hồ sơ tuân thủ."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Yêu cầu API xóa người dùng Google Analytics phải được định cấu hình bên ngoài."
+
+msgid "Privacy Preferences"
+msgstr "Tùy chọn quyền riêng tư"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Chọn danh mục xử lý tùy chọn mà bạn cho phép."
+
+msgid "Save Preferences"
+msgstr "Lưu tùy chọn"
+
+msgid "Consent Management"
+msgstr "Quản lý sự đồng ý"
+
+msgid "Given"
+msgstr "Cho"
+
+msgid "Withdrawn"
+msgstr "Đã rút"
+
+msgid "No consent records found."
+msgstr "Không tìm thấy hồ sơ đồng ý."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Lỗi</strong>: Đã xảy ra lỗi. Vui lòng thử lại sau."
+
+msgid "The peer URL is not valid."
+msgstr "URL ngang hàng không hợp lệ."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Bạn không thể thêm trang web của riêng bạn làm trang web ngang hàng."
+
+msgid "API key must be at least 16 characters."
+msgstr "Khóa API phải có ít nhất 16 ký tự."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Đã đạt đến số lượng ngang hàng tối đa (%d)."
+
+msgid "Missing authentication header."
+msgstr "Thiếu tiêu đề xác thực."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Khóa nút không hợp lệ. Ngang hàng không được công nhận."
+
+msgid "Invalid request signature."
+msgstr "Chữ ký yêu cầu không hợp lệ."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Đã vượt quá giới hạn tỷ lệ. Hãy thử lại sau."
+
+msgid "Invalid site identifier."
+msgstr "Mã định danh trang web không hợp lệ."
+
+msgid "Unknown contribution type."
+msgstr "Loại đóng góp không xác định."
+
+msgid "Unknown benefit type."
+msgstr "Loại lợi ích không xác định."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Tín dụng không đủ cho lợi ích này."
+
+msgid "Threat Forecast"
+msgstr "Dự báo mối đe dọa"
+
+msgid "Your site profile:"
+msgstr "Hồ sơ trang web của bạn:"
+
+msgid "Predicted threats this month:"
+msgstr "Các mối đe dọa được dự đoán trong tháng này:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Chưa phát hiện được vectơ có độ tin cậy cao nào."
+
+msgid "Recommended actions:"
+msgstr "Hành động được đề xuất:"
+
+msgid "No immediate actions required."
+msgstr "Không cần hành động ngay lập tức."
+
+msgid "Not logged in"
+msgstr "Chưa đăng nhập"
+
+msgid "A reason is required"
+msgstr "Cần phải có lý do"
+
+msgid "Invalid requested role"
+msgstr "Vai trò được yêu cầu không hợp lệ"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Đã tồn tại một yêu cầu đang hoạt động hoặc đang chờ xử lý cho vai trò này."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Đã gửi yêu cầu truy cập. Quản trị viên sẽ xem xét yêu cầu của bạn."
+
+msgid "Invalid request"
+msgstr "Yêu cầu không hợp lệ"
+
+msgid "Pending request not found"
+msgstr "Không tìm thấy yêu cầu đang chờ xử lý"
+
+msgid "Request role is invalid"
+msgstr "Vai trò yêu cầu không hợp lệ"
+
+msgid "Invalid approved role"
+msgstr "Vai trò được phê duyệt không hợp lệ"
+
+msgid "Access approved successfully"
+msgstr "Quyền truy cập được phê duyệt thành công"
+
+msgid "Target user (username or email) is required."
+msgstr "Người dùng mục tiêu (tên người dùng hoặc email) là bắt buộc."
+
+msgid "A reason is required."
+msgstr "Một lý do là cần thiết."
+
+msgid "Invalid requested role."
+msgstr "Vai trò được yêu cầu không hợp lệ."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Không tìm thấy người dùng mục tiêu. Sử dụng tên người dùng hoặc email hiện có."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Người dùng đã có vai trò này. Độ cao tạm thời là không cần thiết."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Đã tồn tại một khoản trợ cấp đang hoạt động hoặc đang chờ xử lý cho người dùng và vai trò này."
+
+msgid "Unable to grant temporary access."
+msgstr "Không thể cấp quyền truy cập tạm thời."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Quyền truy cập tạm thời %2$s được cấp cho %1$s trong %3$d phút."
+
+msgid "Invalid grant"
+msgstr "Cấp không hợp lệ"
+
+msgid "Grant not found or already revoked"
+msgstr "Không tìm thấy khoản trợ cấp hoặc đã bị thu hồi"
+
+msgid "Permission revoked successfully"
+msgstr "Đã thu hồi quyền thành công"
+
+msgid "Once Monthly"
+msgstr "Một lần hàng tháng"
+
+msgid "Every 5 Minutes"
+msgstr "Cứ sau 5 phút"
 

@@ -43,54 +43,6 @@ $strings = array();
 // Regex to capture translation functions.
 // Matches: __(), _e(), _x(), esc_html__(), esc_html_e(), esc_html_x(), esc_attr__(), esc_attr_e(), esc_attr_x(), _n(), _nx()
 // We need to capture the string and the context (for _x functions)
-$patterns = array(
-	// Single string functions: __( 'text', 'domain' )
-	'/auth_redirect|checked|disabled|selected|submit_button|__|_e|esc_html__|esc_html_e|esc_attr__|esc_attr_e/' => function ( $content ) use ( $text_domain, &$strings, $plugin_path, $file_path ) {
-		// This is a naive regex but works for most standard cases.
-		// It captures the function call, the first quote, the string, the second quote, comma, any whitespace, quote, domain, quote.
-		// NOTE: This cannot handle escaped quotes consistently in a complex way, but is good enough for 99% of WP plugins.
-		$regex = '/\b(__|_e|esc_html__|esc_html_e|esc_attr__|esc_attr_e)\s*\(\s*([\'"])(.*?)(?<!\\\\)\2\s*,\s*[\'"]' . preg_quote( $text_domain, '/' ) . '[\'"]\s*\)/s';
-		preg_match_all( $regex, $content, $matches, PREG_SET_ORDER );
-
-		foreach ( $matches as $match ) {
-			$string = stripslashes( $match[3] ); // Unescape \'
-			// Handle concatenation if possible? No, too complex for regex.
-
-			if ( ! isset( $strings[ $string ] ) ) {
-				$strings[ $string ] = array();
-			}
-			$rel_path = str_replace( $plugin_path . DIRECTORY_SEPARATOR, '', $file_path );
-			// Normalize slashes
-			$rel_path = str_replace( '\\', '/', $rel_path );
-
-			$strings[ $string ][] = $rel_path;
-		}
-	},
-	// Context functions: _x( 'text', 'context', 'domain' )
-	'/_x|esc_html_x|esc_attr_x/' => function ( $content ) use ( $text_domain, &$strings, $plugin_path, $file_path ) {
-		$regex = '/\b(_x|esc_html_x|esc_attr_x)\s*\(\s*([\'"])(.*?)(?<!\\\\)\2\s*,\s*([\'"])(.*?)(?<!\\\\)\4\s*,\s*[\'"]' . preg_quote( $text_domain, '/' ) . '[\'"]\s*\)/s';
-		preg_match_all( $regex, $content, $matches, PREG_SET_ORDER );
-
-		foreach ( $matches as $match ) {
-			$string = stripslashes( $match[3] );
-			$context = stripslashes( $match[5] );
-			$key = $string . 'ctxt' . $context; // Unique key for context
-
-			if ( ! isset( $strings[ $key ] ) ) {
-				$strings[ $key ] = array(
-					'original' => $string,
-					'context'  => $context,
-					'files'    => array(),
-				);
-			}
-			$rel_path = str_replace( $plugin_path . DIRECTORY_SEPARATOR, '', $file_path );
-			$rel_path = str_replace( '\\', '/', $rel_path );
-
-			$strings[ $key ]['files'][] = $rel_path;
-		}
-	},
-);
-
 foreach ( $php_files as $file_path ) {
 	$content = file_get_contents( $file_path );
 

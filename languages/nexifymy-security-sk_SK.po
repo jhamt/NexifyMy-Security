@@ -8,676 +8,676 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d hrozieb zistených pri poslednej kontrole"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(overenie vyslovením tohto kódu)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Vysoká"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 deň"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 hodina"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 dní"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 minút"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Stredná"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 hodín"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "Metódy 2FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "Nastavenia 2FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Nízka"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 dni"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 dní"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 minút"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 dní"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Zakázané"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Nenájdené"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Príliš veľa žiadostí (odporúčané)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 minút"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "Služba 503 nie je k dispozícii"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 hodín"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 dní"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 dní"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 dní (nepretržite)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 dní"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 dní"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "Stav učenia AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "Stav AI"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "Detekcia hrozieb AI"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "Údaje učenia AI boli úspešne resetované."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "AJAX požiadavky za minútu"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API a bezhlavé zabezpečenie"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API a služby"
 
 msgid "API Burst Allowance"
 msgstr "API Burst Allowance"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "Koncové body API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API kľúč"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "Obmedzenie rýchlosti API"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "Požiadavky API za minútu"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "Zabezpečenie API"
 
 msgid "API Token"
 msgstr "API Token"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "Prekročený limit rýchlosti API. Limit: %d žiadostí za minútu."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "Obmedzenia API"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "Token API, token HEC alebo autentifikačný kľúč."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Opustený"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "O karanténe"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Prístup odmietnutý"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Akcia"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Akcie"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktívne"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Panel aktivity"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Denník aktivít"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Nastavenia denníka aktivít"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Aktivita týchto používateľov sa nebude zaznamenávať."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Protokoly aktivít staršie ako tento sa automaticky odstránia."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Sledovanie aktivity"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Pridajte %d ďalších znakov."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Pridajte 2FA k používateľským účtom na zvýšenie bezpečnosti."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Pridajte CAPTCHA do prihlasovacích údajov a formulárov."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Pridajte overenie CAPTCHA do prihlasovacích formulárov"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Pridajte hlavičky zabezpečenia HTTP (X-Frame-Options, CSP atď.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Pridať nový prístupový kľúč"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Pridajte hlavičky zabezpečenia"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Pridať webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Pridajte X-Frame-Options, X-Content-Type-Options a ďalšie bezpečnostné hlavičky."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Pridajte hlavičky X-Frame-Options, X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Pridajte ďalšiu vrstvu zabezpečenia vyžadovaním druhej formy autentifikácie."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Pridajte ďalšiu vrstvu zabezpečenia vyžadovaním dvoch foriem autentifikácie pre prihlásenie používateľov."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Pridajte ďalšiu vrstvu zabezpečenia s 2FA na báze TOTP."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Pridajte malé písmená."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Pridajte čísla."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Pridajte špeciálne znaky."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Pridať do zoznamu"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Pridajte veľké písmená."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Ďalšie bezpečnostné opatrenia pri prihlásení. Pracuje s obmedzovačom rýchlosti."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Pridáva CAPTCHA do prihlasovacích formulárov. Bezpečné, ale môže ovplyvniť používateľskú skúsenosť."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Pridáva Google reCAPTCHA, Cloudflare Turnstile alebo matematické výzvy"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Pridáva hlavičky zabezpečenia HTTP (X-Frame-Options, CSP). Bezpečné – zlepšuje bezpečnosť prehliadača."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Pridáva ďalšiu bezpečnostnú vrstvu s kódmi TOTP, e-mailom alebo SMS"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Prihlásenia správcu (úspešné prihlásenia správcu)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Pokročilé"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Rozšírené nastavenia brány firewall"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Pokročilé kalenie"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Pokročilé možnosti kalenia"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Rozšírené nastavenia prihlásenia"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Rozšírené možnosti"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Rozšírené možnosti skenera"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Pokročilá heuristika"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Ovplyvnené súbory:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Prah výstrahy"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Typy upozornení"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Upozornenia"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Upozornenia sa odosielajú, ak je doplnok deaktivovaný."
 
 msgid "All"
-msgstr "All"
+msgstr "Všetky"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Všetko jasné!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Všetky udalosti"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Všetky závažnosti"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Povoliť všetkým používateľom dobrovoľné povolenie 2FA."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Povoliť e-mailový kód ako metódu zálohovania"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Povoliť krátke dávky nad limit frekvencie."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Poskytnite používateľom čas na nastavenie 2FA pred presadzovaním."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Povoliť používateľom povoliť 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Umožnite používateľom generovať núdzové záložné kódy."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Umožnite používateľom preskočiť 2FA na dôveryhodných zariadeniach."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Povolení User Agenti"
 
 msgid "Analytics"
 msgstr "Analytics"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anomálie"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Akákoľvek závažnosť"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Akékoľvek úpravy spúšťajú okamžité e-mailové upozornenia."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Použiť nastavenia"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Aplikujte osvedčené postupy zabezpečenia WordPress."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Použite bezpečnostné opravy"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Aplikujte na WordPress opatrenia na posilnenie zabezpečenia."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Aplikujte opatrenia na posilnenie zabezpečenia na ochranu vašej inštalácie WordPress."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Naozaj chcete odstrániť tento prístupový kľúč?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Naozaj chcete pokračovať?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Ochrana pred útokmi"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Okno pokusu"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Zvuk (hovorenie)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Prebieha overovanie..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Autentifikačný kód"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Udalosti overovania"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Autentifikačný token"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Autentifikácia zlyhala. Skúste to znova."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Pre prístup k API sa vyžaduje autentifikácia."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Pre prístup do GraphQL sa vyžaduje autentifikácia."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Autor skenuje"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Trvanie automatického blokovania"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Automatické blokovanie opakovaných páchateľov"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Prah automatického blokovania"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Automatická oprava"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Automaticky generovať prehľady"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Hrozby v autokaranténe"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Plán automatického skenovania"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Automatická aktualizácia"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Nastavenia automatickej aktualizácie"
 
 msgid "Auto-Updates"
-msgstr "Auto-Updates"
+msgstr "Automatické aktualizácie"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Automatická detekcia"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Automatické skenovanie"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Automatické skenovanie"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Automaticky zakázať adresy IP, ktoré spúšťajú pravidlá viackrát."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Automaticky vytvárajte lístky Jira pre bezpečnostné incidenty a zraniteľnosti."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Automaticky vytvárajte lístky pre bezpečnostné incidenty vo vašich systémoch riadenia projektov."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Automaticky generujte prehľady podľa plánu"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Automaticky presunúť zistený malvér do karantény."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Automaticky spúšťať kontroly na pozadí."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Denne automaticky aktualizujte podpisy malvéru."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Dostupné krajiny"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Dostupné udalosti"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Priem./deň"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Skenovanie pozadia"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Zálohuje poškodené súbory pred výmenou"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Záložné kódy"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Zálohujte, optimalizujte a zabezpečte svoju databázu."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Zálohovanie a čistenie"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Zálohy sú uložené vo wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Zlí roboti"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Zlé požiadavky"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Vyvážené (odporúčané)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Záznamy správania"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Behaviorálna analýza"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Čierna listina (zoznam blokovaných)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Čierna listina (vybratý blok)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "IP adresy na čiernu listinu"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Blacklist: Blokovanie vybraných krajín. Whitelist: Povoliť iba vybrané krajiny."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP adresy na čiernej listine"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Blokovať zlých robotov"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Blokujte útoky CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Blokovať bežné heslá"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Blokovať prechod cez adresár"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Trvanie bloku"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Blokovať prázdnych používateľských agentov"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Blokovať nadmerných používateľov rozhrania API"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Editor blokových súborov"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Blokovať zahrnutie lokálneho súboru"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Blokovať správu"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Režim blokovania"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Režim blokovania (odporúčané)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Režim blokovania: Blokuje škodlivé požiadavky. Režim monitorovania: Zaznamenáva hrozby bez blokovania."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Blokovať vzdialené spustenie kódu"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Blokovať vzdialené zahrnutie súboru"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Blokovať vstrekovanie SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Blokovať nahrávanie podozrivých súborov"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Blokovať prístup XML-RPC (zabraňuje hrubej sile)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Blokujte útoky XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Blokovať prístup z konkrétnych krajín."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Blokovanie agresívnych prehľadávačov (vysoká miera žiadostí)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Blokovať kontroly enumerácie autorov (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Blokujte príliš dlhé reťazce dopytov."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Blokujte známych zlých robotov a scraperov"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Blokujte známych škodlivých robotov a scraperov."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Blokujte chybné požiadavky a podozrivé reťazce dopytov"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Blokujte škodlivé žiadosti"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Blokujte škodlivé žiadosti a útoky"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Blokovať alebo povoliť premávku podľa krajiny."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Blokujte požiadavky väčšie ako táto veľkosť, aby ste predišli útokom DoS."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Blokovať požiadavky s prázdnym user-agentom (môže blokovať niektorých legitímnych robotov)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Blokovať požiadavky bez hlavičky User-Agent."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Blokovať podozrivé adresy IP"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Blokovať podozrivých User-Agentov"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Blokovať premávku z konkrétnych krajín. Pred povolením nakonfigurujte krajiny v nastaveniach."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Blokujte nahrávania pomocou spustiteľných rozšírení (.php, .exe, .sh atď.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Blokované útoky"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Blokované prípony súborov"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Blokované požiadavky"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Blokovaní agenti používateľa"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Blokuje adresy IP, ktoré vykazujú škodlivé správanie. Bezpečné – svoju IP môžete pridať na bielu listinu."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Uložte si túto adresu URL ako záložku, aby ste mali vždy prístup k svojej prihlasovacej stránke."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Ochrana robotov a prehľadávačov"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Ochrana robotov a používateľských agentov"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Prevencia bot"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Ochrana topánok"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Prehliadače"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Hrubá sila"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Ochrana hrubou silou"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Ochrana hrubou silou a limity pokusov o prihlásenie."
 
 msgid "Bug"
 msgstr "Bug"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Najrušnejší deň"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "Ochrana CAPTCHA"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "Integrácia CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "Stav CDN"
 
 msgid "CEF (Common Event Format)"
 msgstr "CEF (Common Event Format)"
@@ -686,592 +686,592 @@ msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "Potrubie CI/CD"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "Integrácia CI/CD potrubia"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Zrušiť"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Ukážka captcha"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Poskytovateľ captcha"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Nastavenia captcha"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Zmeniť predponu databázy"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Zmeniť predponu databázovej tabuľky (vyžaduje manuálnu aktualizáciu databázy)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Zmeňte predvolenú prihlasovaciu adresu URL, aby ste predišli útokom."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Zmeňte predvolenú prihlasovaciu adresu URL wp-admin, aby ste zabránili automatickým útokom."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Zmení prihlasovaciu adresu URL z /wp-admin na vlastný slug, aby sa zabránilo útokom botov"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "kanál"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Požiadavky na charakter"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Skontrolujte integritu jadra"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Kontrolný interval"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Skontrolujte a opravte poškodené základné súbory WordPress pomocou oficiálnych zdrojov."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Skontrolujte základné súbory, či neobsahujú modifikácie a škodlivý softvér."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Skontrolujte zadné vrátka"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Skontrolujte zmätok"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Skontrolujte známe zraniteľnosti."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Skontrolujte, či nahrané súbory neobsahujú škodlivý obsah."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Kontroluje webové škrupiny"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Kontroluje pluginy/témy na známe zraniteľnosti. Bezpečné – kontroluje iba verzie."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Vyberte si jedinečného, ​​ťažko uhádnuteľného slimáka."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Vyberte typ výzvy pre NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Vyčistiť súbory"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Vyčistiť súbory:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Vyčistite a optimalizujte databázu"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Vyčistite nepotrebné údaje, aby ste zlepšili výkon databázy."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Vymazať denníky"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare a ďalšie"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Nastavenia Cloudflare API"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API Token (s povoleniami zóny)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Turniket Cloudflare"
 
 msgid "Code"
-msgstr "Code"
+msgstr "kód"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Platnosť kódu"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Problémy s kvalitou kódu"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Čiarkami oddelený zoznam prípon súborov, ktoré sa majú blokovať pri nahrávaní."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Čiarkami oddelený zoznam prípon súborov, ktoré sa majú preskočiť (napr. jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Komentár zablokovaný"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Formulár komentárov"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Miera uverejňovania komentárov"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Formulár komentárov"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Komunikácia"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Komunikačné platformy"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Porovnajte základné súbory s oficiálnymi kontrolnými súčtami WordPress."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Porovnajte svoje základné súbory WordPress s oficiálnymi kontrolnými súčtami, aby ste zistili zmeny."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Porovná každý súbor jadra s očakávaným hashom"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Úplne zakážte všetky kanály RSS a Atom."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Úplne zakážte všetky úpravy súborov (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Súlad"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Súlad a podávanie správ"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Hlásenie o dodržiavaní a zabezpečení"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Nastavenia súladu"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Závislosti skladateľa"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Komplexná analýza"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Komplexné sledovanie aktivity používateľov, monitorovanie prihlásenia a zaznamenávanie systémových udalostí."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Konfigurovať"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Nakonfigurujte 2FA pre lepšie zabezpečenie prihlásenia"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Nakonfigurujte CDN pre zabezpečenie a výkon."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Nakonfigurujte integráciu CDN a správu vyrovnávacej pamäte."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Nakonfigurujte bránu firewall webových aplikácií (WAF) na ochranu vašej lokality."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Nakonfigurujte e-mailové upozornenia a upozornenia."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Nakonfigurujte pravidlá brány firewall a nastavenia ochrany."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Nakonfigurujte správanie skenera škodlivého softvéru a možnosti plánovaného skenovania."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Nakonfigurujte nastavenia a preferencie doplnku."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Nakonfigurujte nastavenia doplnku."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Nakonfigurujte nastavenia zabezpečenia."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Potvrďte"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Potvrďte akciu"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Potvrdený malvér"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Pripojte svoje bezpečnostné monitorovanie k platformám SIEM, ticketing, komunikácia a CI/CD."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Ak potrebujete pomoc s NexifyMy Security, kontaktujte náš tím podpory."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Obsah"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Obsahová aktivita"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Zmeny obsahu"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Obsahové udalosti"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Zabezpečenie obsahu"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Úpravy základných súborov"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Oprava základných súborov"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Oprava jadra"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Základná integrita WordPress"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Integrita základného súboru"
 
 msgid "Count"
-msgstr "Count"
+msgstr "počítať"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "krajiny"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Krajina"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Nastavenia blokovania krajiny"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Obmedzenia krajiny"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Vytvorte zálohu"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Vytvorte zálohu svojej databázy WordPress. Zálohy sú uložené bezpečne a možno ich stiahnuť."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Vytvorte incidenty v službe ServiceNow pre kritické bezpečnostné udalosti."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Vytvorte webhook na: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Vytvorte webhook v časti Nastavenia servera Discord > Integrácie > Webhook"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Vytvorenie webhooku: Tímy > Kanál > Konektory > Prichádzajúci webhook"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Vytvorené"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Vytvorené: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kritické"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Iba kritické"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Aktuálna prihlasovacia adresa URL"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Aktuálna verzia"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Aktuálne:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Vlastná prihlasovacia adresa URL"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Vlastná adresa URL"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Vlastné webhooky"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Denne"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Denne (odporúčané)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Denný súhrn stavu"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Denný súhrn"
 
 msgid "Dashboard"
 msgstr "Dashboard"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Uchovávanie údajov"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Databáza"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Akcie databázy"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Zálohovanie databázy"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Informácie o databáze"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Optimalizácia databázy"
 
 msgid "Database Optimizer"
 msgstr "Database Optimizer"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Zabezpečenie databázy"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Veľkosť databázy"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Zálohovanie a optimalizácia databázy. Pred povolením nakonfigurujte plán zálohovania."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Kontrola zabezpečenia databázy"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Dátum"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Dátum/čas"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Monitorovanie deaktivácie:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Režim ladenia"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Hlboký"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Hlboké skenovanie"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Predvolený režim skenovania"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Predvolený režim skenovania sa používa, keď nie je zadaný žiadny."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Definície"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Odstrániť"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Pri odinštalovaní odstráňte všetky údaje doplnku"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Odstrániť:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Skenovanie závislostí, monitorovanie skriptov tretích strán a overovanie integrity CDN."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Popis"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Podrobné informácie o návštevnosti vašich stránok a bezpečnostných udalostiach"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Podrobné informácie o výkone zabezpečenia vašich webových stránok."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Zistiť a zablokovať pokusy o spustenie kódu."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Zistiť skryté backdoor skripty a shelly."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Zistite malvér, zadné vrátka a podozrivý kód"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Odhaľovať hrozby"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Detekujte neznáme hrozby pomocou analýzy správania."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Detekčné metódy"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Typy zariadení"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Náročnosť"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Úroveň obtiažnosti"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Úroveň obtiažnosti pre výzvy NexifyMy captcha."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Priame"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Priebeh adresára"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Ochrana pred prechodom adresára"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Zakázať 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Zakázať heslá aplikácií"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Zakázať archívy autorov"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Zakázať prehliadanie adresárov"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Zakázať vloženia"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Zakázať editor súborov"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Zakázať úpravy súborov"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Zakázať chybové hlásenia pri prihlásení"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Zakázať Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Zakázať funkcie Pingbacks"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Zakázať inštaláciu doplnku/témy"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Zakázať zoznam používateľov REST API"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Zakázať informačné kanály RSS/Atom"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Zakázať kliknutie pravým tlačidlom myši"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Zakázať výber textu"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Zakázať funkcie Trackbacks"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Zakázať editor WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Zakázať XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Zakázať XML-RPC (zabraňuje bežnému vektoru hrubej sily)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Zakázať XML-RPC (zabraňuje útokom pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Zakázať XML-RPC (používa sa pri DDoS a útokoch hrubou silou)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Zakázať stránky archívu autorov, aby sa zabránilo enumerácii používateľských mien."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Zakázať funkciu oEmbed a koncové body REST API."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Vypnite funkciu pingback, aby ste zabránili DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Zakázať funkciu pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Zakážte editor súborov doplnku/témy v správcovi WordPress."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Zakázať verejné počítanie používateľov cez REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Zakázať kontextovú ponuku kliknutím pravým tlačidlom myši na klientskom rozhraní."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Zakážte vstavaný editor tém a doplnkov, aby ste zabránili vloženiu kódu."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Zakázať editor tém a doplnkov"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Zakázať editor tém/doplnkov v správcovi"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Zakázať funkciu spätného sledovania."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Zakázané"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Zakáže XML-RPC, aby sa zabránilo útokom. Bezpečné, pokiaľ nepoužívate Jetpack alebo mobilné aplikácie."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Zakáže vstavaný editor tém/doplnkov. Bezpečné - zabraňuje úprave kódu v admin."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Zakáže úpravu súborov, XML-RPC a použije osvedčené postupy WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Integrácia nesúladu"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Stiahnuť"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Stiahne nový balík WordPress z oficiálneho zdroja"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Jednoduché"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Jednoduché (iba doplnok)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Úprava súborov doplnku NexifyMy Security je z bezpečnostných dôvodov zakázaná."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Editor a prístup k súborom"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Blokovanie editora:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
@@ -1280,502 +1280,502 @@ msgid "Email"
 msgstr "Email"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Nastavenia e-mailových upozornení"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "E-mailové upozornenia"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Zálohovanie e-mailov"
 
 msgid "Email Notifications"
-msgstr "Email Notifications"
+msgstr "E-mailové upozornenia"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "E-mailové prehľady"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Správy o skenovaní e-mailov"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Overenie e-mailom"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Prázdny User Agent"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Povoliť"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Povoliť 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Povoliť modul 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Povoliť protokolovanie aktivity"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Povoliť upozornenia"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Povoliť ochranu CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Povoliť integráciu CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Povoliť funkcie CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Povoliť integráciu CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Povoliť Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Povoliť vlastné webhooky"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Povoliť Discord"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Povoliť e-mailové upozornenia"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Povoliť bránu firewall"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Povoliť geografické blokovanie"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Povoliť Skryť prihlásenie"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Povoliť Jiru"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Povoliť ochranu"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Povoliť obmedzenie rýchlosti"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Povoliť integráciu SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Povoliť SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Povoliť skener"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Povoliť modul skenera"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Povoliť plánované kontroly"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Povoliť službu ServiceNow"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Povoliť Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Povoliť tímy"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Povoliť dvojfaktorové overenie"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Povoliť WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Povoliť modul WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Povoliť ochranu WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Povoliť bránu firewall webových aplikácií"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Povoliť ochranu brány firewall webových aplikácií."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Povoľte a nakonfigurujte bezpečnostné moduly pre vašu lokalitu."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Povoľte a nakonfigurujte bezpečnostné moduly."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Povoliť ochranu captcha"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Povoliť blokovanie podľa krajiny"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Povoliť protokolovanie ladenia (iba na riešenie problémov)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Povoľte ochranu brány firewall na blokovanie útokov"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Povoliť obmedzenie rýchlosti prihlásenia"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Povoliť malvérový skener"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Povoliť alebo zakázať bezpečnostné moduly."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Povoliť alebo zakázať celý modul WAF."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Povoliť alebo zakázať malvérový skener."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Povoliť alebo zakázať modul obmedzenia rýchlosti."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Povoliť alebo zakázať dvojfaktorové overenie."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Povoliť plánované kontroly"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Povoliť funkcie skenera zraniteľnosti"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Povolené"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Koncový bod"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "Adresa URL koncového bodu"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Vynútiť silné heslá"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Presadzujte požiadavky na silné heslo"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Presadzujte požiadavky na silné heslo pre všetkých používateľov."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Presadzujte požiadavky na silné heslo."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Pre používateľov vyžaduje silné heslo. Bezpečné – ovplyvňuje iba nové heslá."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Vynucuje silné heslá s minimálnou dĺžkou a pravidlami zložitosti"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Zadajte 6-ciferný kód na overenie nastavenia"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Zadajte adresy IP, jednu na riadok"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Zadajte odpoveď"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Zadajte kód:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Zabezpečenie WordPress na podnikovej úrovni"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Chyba"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Udalosť"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Formát udalosti"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Denníky udalostí"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Závažnosť udalosti"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Typ udalosti"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Udalosti"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Udalosti (7 dní)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Udalosti na vytvorenie vstupeniek"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Udalosti na postúpenie"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Udalosti na upozornenie"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Príklad: GitHub Actions"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Príklad: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Príklad: Jenkins Pipeline"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Vylúčené rozšírenia"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Vylúčené vzory súborov"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Vylúčené cesty"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Vylúčení používatelia"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Vylúčenia"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Vyčerpávajúce skenovanie súborov"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Existujúce zálohy"
 
 msgid "Export CSV"
 msgstr "Export CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Nastavenia exportu"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Exportujte svoje nastavenia zabezpečenia NexifyMy do súboru JSON. To zahŕňa všetky konfigurácie modulov, pravidlá brány firewall, zoznamy IP adries a nastavenia skenovania."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Externé skripty a zdroje CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Extra zabezpečenie prihlásenia"
 
 msgid "Fail Build on Malware"
 msgstr "Fail Build on Malware"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Zlyhanie Stavte na zraniteľnosti"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Nepodarilo sa"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Neúspešné 2FA pokusy pred dočasným uzamknutím."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Prihlásenie zlyhalo"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Neúspešné prihlásenia"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Zistil sa neúspešný pokus o prihlásenie"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Nepodarilo sa zaregistrovať prístupový kľúč."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Rýchla realizácia"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Rýchla bezpečnostná kontrola"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Načítava oficiálne kontrolné súčty súborov z WordPress.org API"
 
 msgid "File"
-msgstr "File"
+msgstr "Súbor"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Editor súborov"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Hašovanie súborov:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Zahrnutie súboru"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Ochrana začlenenia súborov"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Kontrola integrity súboru"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Monitorovanie integrity súborov"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Povolenia súboru"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Súbor v karanténe"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Prípony súborov, ktoré sa majú vylúčiť z kontroly (jedna na riadok, bez bodiek)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Názov súboru"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Naskenované súbory"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Naskenované súbory:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Súbory sa pravidelne porovnávajú so základnou čiarou."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Súbory v karanténe sú bezpečne uložené a nemožno ich spustiť."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Súbory väčšie ako toto budú počas skenovania preskočené."
 
 msgid "Filter"
 msgstr "Filter"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "POŽARNE DVERE"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Firewall a ochrana"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Konfigurácia brány firewall"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Pravidlá brány firewall"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Nastavenia brány firewall"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Opravte upravené súbory"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Označte silne zahmlený alebo zakódovaný kód."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Vynútiť SSL pre správcu"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Vynútiť SSL/HTTPS pre oblasť správcu (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Sila pre správcov"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Formát:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Preposielajte udalosti zabezpečenia do platformy SIEM (Security Information and Event Management) na centralizované zaznamenávanie a analýzu."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Nachádza sa na hlavnom paneli Cloudflare v časti Prehľad"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Nájdené v známom bezpečnom doplnku – pravdepodobne legitímne použitie"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Nájdené v systémovom adresári – môže byť legitímne"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Od dátumu"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Z e-mailu"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Od Name"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "Úplná adresa URL koncového bodu HTTP/HTTPS pre vašu platformu SIEM."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Kompletná analýza škodlivého softvéru"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Úplná kontrola škodlivého softvéru"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Úplné podpisy škodlivého softvéru"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Kompletná analýza stránok"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "Moduly dodržiavania GDPR, CCPA, HIPAA a komplexné správy z bezpečnostného auditu."
 
 msgid "General"
-msgstr "General"
+msgstr "generál"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Obmedzenie všeobecných požiadaviek"
 
 msgid "General Settings"
-msgstr "General Settings"
+msgstr "Všeobecné nastavenia"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Generovať správu"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Generovať SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Generovať z: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Vygenerované"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Všeobecný koncový bod HTTP"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Generický proxy"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Geoblok"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Geoblokovanie"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Geografické rozdelenie"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Získajte bezplatný token API z wpscan.com pre podrobné údaje o zraniteľnosti."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Získajte okamžité upozornenia v komunikačných kanáloch vášho tímu, keď nastanú bezpečnostné udalosti."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Získajte najnovší stav skenovania"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Získať výsledky skenovania (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Získajte kľúče z panela Google reCAPTCHA alebo Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Začíname"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Ochranná lehota"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "stupeň"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "Bezpečnosť GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "Introspekcia GraphQL je zakázaná."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "Prekročený limit rýchlosti GraphQL. Limit: %d dopytov za minútu."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "Hlavičky zabezpečenia HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP hlavičky"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Rukoväť"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Ťažko"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Ťažké (vrátane násobenia)"
 
 msgid "Harden Site"
 msgstr "Harden Site"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Otužovanie"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Možnosti kalenia"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Hlavičky"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Pomocník a dokumentácia"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Heuristická analýza"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Heuristická detekcia vzorov"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Skryť prihlásenie"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Skryť prihlasovaciu stránku"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Skryť prihlasovaciu adresu URL"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Skryť prihlasovaciu adresu URL:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Skryť verziu WP"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Skryť prihlasovaciu webovú adresu WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Skryť verziu WordPress"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Skryť verziu WordPress zo zdrojového kódu"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Skryť predvolené prihlasovacie adresy URL"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Skryť wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Skryť wp-admin a wp-login.php pred útočníkmi."
 
 msgid "High"
-msgstr "High"
+msgstr "Vysoká"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Vysoká (maximálna detekcia)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Vysoká bezpečnosť (viac kontrol, pomalšie)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Vysoký počet zablokovaných útokov v poslednej dobe"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Vysoká alebo Nad"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Hrozby vysokej závažnosti"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Iba vysoko rizikové oblasti"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Hrozba s vysokým skóre zistená analýzou AI"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Vyššia citlivosť môže spôsobiť viac falošných poplachov."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Najvyššie"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Ak chcete vybrať viacero krajín, podržte kláves Ctrl/Cmd."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Hostiteľ"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Každú hodinu"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Ako funguje 2FA"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Ako funguje oprava jadra"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Ako funguje sebaochrana"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Ako dlho blokovať IP po prekročení počtu pokusov."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Ako dlho blokovať IP po prekročení limitu rýchlosti."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Ako dlho uchovávať staré prehľady (30 – 365 dní)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "Kontrola prístupu IP"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP adresa"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "Blokovanie IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "Konfigurácia IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "Blokovanie IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "Blokovanie IP (pokusy hrubej sily)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "Správa IP"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "Zoznam povolených IP adries"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "Adresy IP, ktoré obchádzajú obmedzenie rýchlosti."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP adresy, ktoré budú vždy blokované."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP adresy, ktoré nebudú nikdy zablokované."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Identifikuje zmenené alebo chýbajúce súbory"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Výber obrázka"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Vyžaduje sa okamžitý zásah"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Úroveň dopadu"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Nastavenia importu"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Importujte nastavenia z predtým exportovaného súboru JSON. Tým sa prepíšu vaše aktuálne nastavenia."
 
 msgid "Import/Export"
 msgstr "Import/Export"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Neaktívne"
 
 msgid "Incident"
 msgstr "Incident"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Zahrňte kontroly GDPR"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Zahrnúť zoznam povolených/čiernych adries IP"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Zahrňte metriky výkonnosti"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Zahrňte bezpečnostné kontroly"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Zahrnúť súhrn hrozieb"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Zahrnúť výsledky posledného skenovania"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Zahrnúť denníky zabezpečenia (posledných 30 dní)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Nesprávna odpoveď captcha. Vráťte sa späť a skúste to znova."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Nesprávna odpoveď captcha. Skúste to znova."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Indexový názov alebo identifikátor zdroja pre kategorizáciu udalosti."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Index/Zdroj"
 
 msgid "Info"
 msgstr "Info"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Zverejnenie informácií"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Inicializuje sa..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Názov inštancie"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Integrujte bezpečnostné skenovanie do svojich priebežných procesov integrácie a nasadenia."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Integrujte bezpečnostné skenovanie do svojho nasadenia pomocou webhookov a prístupu k API."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Integruje sa so službami CDN. Pred povolením nakonfigurujte poverenia CDN."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "integrácií"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Výsledky kontroly integrity"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Kontroly integrity:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Stav integrity"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Neplatný token JWT."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Neplatné poverenia."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Neplatný overovací kód."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Izolujte hrozby"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Izoluje podozrivé súbory bez odstránenia. Bezpečné - súbory je možné obnoviť."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Typ problému"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Nájdené problémy"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "formát JSON. Príklad: {\"Autorizácia\": \"Token na doručiteľa\", \"Typ obsahu\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "URL Jira Cloud"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Integrácia Jira"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Uchovávajte denníky všetkých zablokovaných požiadaviek na analýzu."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Uchovávajte si záznamy o všetkých prekročeniach limitov na analýzu."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Udržujte svoje podpisy malvéru aktuálne, aby ste získali najlepšiu ochranu."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Známe krajiny"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "V nainštalovanom doplnku sa našla známa zraniteľnosť"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (Rozšírený formát udalosti denníka)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Posledných 30 dní"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Posledných 30 dní"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Posledných 7 dní"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Posledných 90 dní"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Naposledy naučené"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Posledný sken"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Posledná kontrola:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Posledná aktualizácia"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Naposledy použité: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Najnovšia verzia"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Učenie - Len protokol, žiadne blokovanie"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Obdobie učenia"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Učenie..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Ak chcete použiť e-mail správcu, nechajte pole prázdne."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Pravdepodobne bezpečné – v prípade potreby overte"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Obmedzte prístup k REST API na overených používateľov"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Obmedzte odosielanie komentárov, aby ste zabránili spamu."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Obmedzte nadmerné požiadavky z jednej adresy IP."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Obmedzte pokusy o prihlásenie"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Obmedzte pokusy o prihlásenie, aby ste zabránili útokom hrubou silou"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Obmedzte počet žiadostí, aby ste zabránili zneužitiu a útokom DDoS."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Obmedzte počet žiadostí, aby ste zabránili zneužitiu."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Obmedzuje pokusy o prihlásenie, aby sa zabránilo útokom hrubou silou. Bezpečné – ovplyvňuje iba neúspešné pokusy o prihlásenie."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Uveďte zoznam známych zraniteľností"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Živá premávka"
 
 msgid "Live Traffic Monitor"
 msgstr "Live Traffic Monitor"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Načítava sa stav CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Načítavajú sa upozornenia..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Načítavajú sa analytické údaje..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Načítavajú sa zálohy..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Načítavajú sa blokované adresy IP..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Načítavajú sa krajiny..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Načítavajú sa informácie o databáze..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Načítavajú sa geografické údaje..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Načítavajú sa denníky..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Načítavajú sa upozornenia..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Načítavajú sa štatistiky optimalizácie..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Načítava sa stav ochrany..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Načítavajú sa súbory v karanténe..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Načítava sa sprostredkovateľov..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Načítavajú sa detekcie hrozieb..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Načítavajú sa hlavné stránky..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Načítavajú sa údaje o premávke..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Uzamknite sa po mnohých neúspešných pokusoch."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Trvanie blokovania"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Doba blokovania po maximálne neúspešných 2FA pokusoch."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Zaznamenať povolené požiadavky"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Zaznamenať zablokované požiadavky"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Prihlásenie zlyhalo pri pokusoch o prihlásenie"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Prihlásiť Odhlásenia"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Zaznamenať nahrávanie médií"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Zaznamenať zmeny možností"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Zaznamenať zmeny doplnku"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Zaznamenať zmeny príspevkov/stránok"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Zaznamenať zmeny profilu"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Zaznamenať porušenia limitu rýchlosti"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Uchovanie denníka"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Zaznamenať zmeny rolí"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Zaznamenať úspešné prihlásenia"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Zaznamenať zmeny témy"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Zaznamenať vytvorenie/vymazanie používateľa"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Zapíšte všetky požiadavky, ktoré prejdú kontrolami WAF (vysoké využitie disku)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Ťažba dreva"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Logovanie a monitorovanie"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Prihláste sa"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Prihlásenie a overenie"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Prihlasovacia aktivita"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Okno pokusu o prihlásenie"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Pokusy o prihlásenie"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Prihláste sa CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Prihláste sa Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Prihlasovací formulár"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Trvanie blokovania prihlásenia"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Ochrana prihlásenia"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Obmedzenie rýchlosti prihlásenia"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Zabezpečenie prihlásenia"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Prihláste sa Slug"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Nastavenia prihlasovacej adresy URL"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Prihlasovací formulár"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Odhlásiť sa"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Odhlásenia"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Denníky"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Protokoly staršie ako tento sa automaticky denne vymazávajú."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Zaznamenáva udalosti zabezpečenia na kontrolu. Bezpečné – zaznamenáva iba aktivitu."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Nízka"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Nízka (menej falošných poplachov)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Nízky vplyv (menej kontrol, rýchlejšie)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Malé písmeno (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Nástroje na údržbu a diagnostiku vášho webu."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Nezabudnite si zapamätať svoju vlastnú prihlasovaciu adresu URL!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Malvér a skenovanie"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Definície škodlivého softvéru"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Malvér nájdený"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Malvérový skener"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Malvér zistený počas skenovania súborov"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Spravovať upozornenia"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Spravujte hrozby v karanténe. Skontrolujte, obnovte alebo natrvalo odstráňte súbory."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Povinné pre roly"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Odporúča sa manuálna kontrola"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Označiť všetko prečítané"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Označiť všetko ako prečítané"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Hlavný prepínač na povolenie alebo zakázanie zaznamenávania všetkých aktivít."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Matematická otázka"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Maximálny počet pokusov"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Maximálny počet neúspešných pokusov"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Maximálna veľkosť súboru"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Maximálny počet pokusov o prihlásenie"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Maximálna dĺžka reťazca dopytu"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Maximálna veľkosť požiadavky"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Maximálny počet žiadostí"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Maximálny počet žiadostí AJAX za minútu na IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Maximálny počet žiadostí API za minútu na IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Maximálny počet neúspešných pokusov o prihlásenie pred uzamknutím."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Maximálny počet žiadostí o stránku za minútu na IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Maximálna veľkosť tela požiadavky na skenovanie. Väčšie požiadavky budú preskočené."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Maximálny povolený počet žiadostí za minútu na IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Maximálny počet požiadaviek na vyhľadávanie za minútu, aby sa zabránilo vyčerpaniu databázy."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Maximálny čas na jednu operáciu skenovania."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Maximálny čas na skenovanie škodlivého softvéru pred časovým limitom."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Nahrávanie médií"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Stredná"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Stredné (vyvážené)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Stredné (sčítanie/odčítanie)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Stredné alebo vyššie"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Limit pamäte"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Pamäť pridelená na operácie skenovania."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Správa"
 
 msgid "Method"
-msgstr "Method"
+msgstr "Metóda"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Integrácia Microsoft Teams"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Minimálne %d znakov"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Minimálna dĺžka"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Minimálna závažnosť zlyhania"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Minimálna dĺžka hesla (8-32 znakov)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Režim"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Ovládanie modulu"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Moduly"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Monitorujte externé skripty"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Režim monitora (iba denník)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Monitorujte zmeny v súboroch doplnkov"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Monitorujte návštevnosť stránok v reálnom čase."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Monitorujte premávku v reálnom čase"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Sledujte návštevnosť a aktivitu návštevníkov v reálnom čase."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Sledujte trendy návštevníkov, zobrazenia stránok a vzorce návštevnosti v priebehu času."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Monitorovanie a upozornenia"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Monitoruje premávku v reálnom čase. Bezpečné – sleduje iba návštevy."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Mesačne"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Najaktívnejší používatelia"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Presunie podozrivé súbory do chráneného adresára."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "Závislosti NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Meno"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Potrebujete podporu?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Nikdy"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Nikdy nevyprší"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "Zabezpečenie Nexify"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (vstavaná)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "Typ NexifyMy Captcha"
 
 msgid "NexifyMy Security"
 msgstr "NexifyMy Security"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security zistil neoprávnené úpravy svojich súborov. Overte svoju inštaláciu."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Máte %d neprečítaných bezpečnostných upozornení."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Ďalšia aktualizácia"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Bez ochrannej lehoty"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Žiadna nedávna aktivita"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Žiadne SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Zatiaľ nebola zaznamenaná žiadna aktivita. Aktivita sa tu zobrazí, keď používatelia začnú vykonávať akcie."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Zatiaľ neboli zaznamenané žiadne zmeny obsahu."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Zatiaľ nie sú vybraté žiadne krajiny."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Nie sú k dispozícii žiadne údaje"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Zatiaľ nie sú k dispozícii žiadne údaje o udalosti."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Žiadne súbory v karanténe."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Nie sú k dispozícii žiadne geografické údaje"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Zatiaľ nebola zaznamenaná žiadna prihlasovacia aktivita."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Zatiaľ nie sú zaregistrované žiadne prístupové kľúče."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Nie sú k dispozícii žiadne prehľady."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Zatiaľ nebolo spustené žiadne skenovanie"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Nie sú k dispozícii žiadne výsledky skenovania. Kliknite na „Spustiť skenovanie“ a analyzujte svoje závislosti."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Nie sú k dispozícii žiadne výsledky skenovania. Spustite skenovanie a skontrolujte zraniteľnosti."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Momentálne neexistujú žiadne bezpečnostné odporúčania. Vaša stránka je dobre chránená."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Nie sú k dispozícii žiadne údaje o závažnosti."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Nezistili sa žiadne podozrivé adresy IP."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Zatiaľ neboli zaznamenané žiadne systémové udalosti."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Zatiaľ neboli zistené žiadne hrozby."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Zatiaľ nebola zaznamenaná žiadna aktivita používateľa."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Zatiaľ žiadna aktivita používateľa."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Nie je aktívny"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Nie je povolené"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Zatiaľ nekontrolované"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Nie je naplánované"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Poznámka:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "E-mail s upozornením"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Nastavenia upozornení"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Upozornenia"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Upozorniť na uzamknutie"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Upozorniť používateľov na aktiváciu/zakázanie 2FA v ich účte."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Číslo (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Počet záložných kódov"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Počet záložných kódov, ktoré sa majú vygenerovať na používateľa."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Počet neúspešných pokusov o prihlásenie pred uzamknutím."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Počet výluk pred trvalým zákazom."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Počet porušení pravidiel pred automatickým blokovaním."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Objekt"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Pri ďalšom prihlásení zadajte heslo + 6-miestny kód"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Raz týždenne"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Jedna IP na riadok"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Jedna IP na riadok. Proxy IP majú povolené odosielať hlavičky X-Forwarded-For (napr. Cloudflare, load balancery)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Jedna IP na riadok. Tieto adresy IP obchádzajú všetky limity rýchlosti."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Jedna IP na riadok. Tieto adresy IP budú okamžite zablokované. Príklad: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Jedna IP na riadok. Tieto adresy IP obídu kontroly WAF."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Jedna IP na riadok. Tieto adresy IP obídu všetky pravidlá WAF. Príklad: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Jedna cesta na riadok. Absolútne cesty k ďalším adresárom na skenovanie."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Jedna cesta na riadok. Adresáre na preskočenie počas skenovania."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Jeden na riadok. Blokovať konkrétnych používateľských agentov. Príklad: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Jeden na riadok. Agenti používateľov v tomto zozname obídu kontroly WAF. Príklad: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Jedno používateľské meno na riadok"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Otvorte Nastavenia"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Operačné systémy"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Prevádzkový režim"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Optimalizácia databázy"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Optimalizujte a zabezpečte svoju databázu."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Zmeny možnosti"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Voliteľné pre všetkých používateľov"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Voliteľné: Odošlite výsledky skenovania na vašu platformu CI/CD."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Pôvodná cesta"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Zastarané"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Nad hlavou"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Prepísať jazyk rozhrania doplnku. Podporované jazyky: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Prehľad"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "Verzia PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Balíček"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Počet žiadostí o stránku za minútu"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Zobrazenia stránky"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Stránka sa nenašla."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Autentifikácia prístupovým kľúčom"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Názov prístupového kľúča (napr. MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Prístupový kľúč bol úspešne zaregistrovaný!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Prístupové kľúče nie sú v tomto prehliadači podporované."
 
 msgid "Password"
-msgstr "Password"
+msgstr "heslo"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Vypršanie platnosti hesla"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Zásady hesiel"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Zásady hesiel"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Požiadavky na heslo"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Požiadavky na heslo:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Formulár na obnovenie hesla"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Obnovenie hesla"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Heslo musí mať aspoň %d znakov."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Heslo musí obsahovať aspoň jedno malé písmeno."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Heslo musí obsahovať aspoň jedno číslo."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Heslo musí obsahovať aspoň jeden špeciálny znak."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Heslo musí obsahovať aspoň jedno veľké písmeno."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Zásady hesiel"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Formulár na obnovenie hesla"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Cesty, ktoré sa majú vylúčiť zo skenovania (vo vzťahu ku koreňu WordPress). Jeden na riadok."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Štatistiky vrcholovej aktivity"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Špičková hodina"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Maximálne hodiny premávky"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Režim výkonu"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Nastavenia výkonu"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Pravidelné správy"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Trvalé"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Prah trvalého zákazu"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Natrvalo odstráni súbor."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Prosím, vyriešte matematický captcha."
 
 msgid "Plugin"
 msgstr "Plugin"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Analýza pluginov a tém"
 
 msgid "Plugin Language"
-msgstr "Plugin Language"
+msgstr "Jazyk zásuvného modulu"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Doplnok bol naposledy aktualizovaný"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Možnosti doplnku"
 
 msgid "Plugin Self-Protection"
 msgstr "Plugin Self-Protection"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Verzia pluginu"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Chyby zabezpečenia"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Súbory doplnkov nie je možné upravovať cez WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Integrita doplnku"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Ochrana pluginov"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "Plugin/téma CVE"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Aktivácia doplnkov/tém, aktualizácie, zmeny možností a exporty."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Pluginy"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Pluginy sú aktivované"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Pluginy deaktivované"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Pluginy aktualizované"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Úpravy príspevkov/stránok, publikovanie, nahrávanie médií a odstraňovanie obsahu."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Príspevky vytvorené"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Príspevky boli zverejnené"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Príspevky aktualizované"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Zistená potenciálna bezpečnostná hrozba"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Zabráňte útokom XML-RPC a pokusom o hrubú silu"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Zabrániť prístupu k adresárom mimo webového koreňa."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Zabráňte útočníkom zahrnúť súbory lokálneho servera."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Zabráňte hrubej sile"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Zabráňte úpravám kódu v správcovi WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Zabrániť výpisu adresárov cez .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Zabráňte duplicitným upozorneniam počas tohto obdobia."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Zabráňte duplicitným upozorneniam počas tohto časového obdobia. Nastavte na 0, aby ste deaktivovali škrtenie."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Zabráňte úpravám súborov doplnkov pomocou editora WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Zabráňte zahrnutiu vzdialených súborov prostredníctvom parametrov adresy URL."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Zabrániť výpisu obsahu adresára cez .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Zabrániť inštalácii doplnku/témy z panela správcu."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Zabráňte výberu a kopírovaniu textu na frontende."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Zabráňte používaniu bežne porušovaných hesiel"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Zabráňte objaveniu používateľov prostredníctvom koncového bodu /wp-json/wp/v2/users."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Zabraňuje neoprávnenej úprave súborov bezpečnostných doplnkov"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Primárna e-mailová adresa pre bezpečnostné upozornenia."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Priorita"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Proaktívne bezpečnostné návrhy a automatické odporúčania na posilnenie."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "Problém"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Aktualizácie profilu"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Zmeny profilu, zmeny rolí, udalosti vytvorenia a odstránenia používateľov."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Projektový kľúč"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Chráňte sa pred falšovaním požiadaviek medzi stránkami."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Chráňte sa pred útokmi Cross-Site Scripting (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Chráňte sa pred útokmi SQL injection v parametroch GET/POST."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Chráňte sa pred SQL injection, XSS, RFI a inými útokmi."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Chráňte sa pred hrubou silou a DoS útokmi obmedzením frekvencie žiadostí na IP adresu."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Chráňte prihlasovacie a registračné formuláre pred automatickými útokmi botov."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Chráňte prihlasovacie a registračné formuláre pomocou matematických obrázkov captcha."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Chráňte súbory doplnkov pred manipuláciou."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Chráňte bezpečnostný doplnok pred manipuláciou a neoprávnenými úpravami."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Chráňte svoju prihlasovaciu stránku pred útokmi hrubou silou."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Chráňte svoje stránky pred škodlivou návštevnosťou a útokmi."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Chránené formuláre"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Úroveň ochrany"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Ochranný režim"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Pravidlá ochrany"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Nastavenia ochrany"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Chráni REST API s overením JWT, obmedzením rýchlosti a CORS. Nevyhnutné pre bezhlavý WordPress."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Chráni pred SQL injection, XSS a škodlivými požiadavkami. Bezpečné povolenie – blokuje iba škodlivú premávku."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Chráni súbory doplnkov pred zmenami. Bezpečné - zabraňuje manipulácii."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Poskytovateľ"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Vymazať všetky denníky"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Vymazať vyrovnávaciu pamäť"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Karanténa"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Okamžite karanténa"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Odporúča sa karanténa"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Karanténa:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "V karanténe"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Súbory v karanténe"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Zložitosť dopytu presahuje maximum %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Hĺbka dopytu presahuje maximálnu povolenú hĺbku %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "Rýchlo"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Rýchle akcie"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Rýchle skenovanie"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Rýchle akcie skenovania"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Rýchly prístup k nástrojom na údržbu zabezpečenia."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Rýchle: Iba základné súbory. Štandard: Core + témy/pluginy. Hlboké: Všetky súbory."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "Zabezpečenie REST API"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "Používatelia REST API"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "Ochrana REST API"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS kanály sú na tejto stránke zakázané."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Limit sadzby"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Obmedzovač rýchlosti"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Obmedzenie sadzieb"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Nastavenia obmedzenia rýchlosti"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Monitorovanie v reálnom čase"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Dôvod"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Dostávať e-mailové upozornenia, keď sa zistia zraniteľnosti"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Nedávna aktivita"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Nedávne zistenia hrozieb"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Nedávno zablokované adresy IP"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "E-mail príjemcu"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Odporúčania"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Odporúčané"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Odporúčané akcie"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Presmerovať blokovaný prístup"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Presmerovanie na domovskú stránku"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Znížte povrch útoku deaktiváciou nepotrebných funkcií a posilnením konfigurácie WordPress."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Obnoviť"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Regenerovať"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Obnoviť základnú líniu"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Zaregistrujte prístupový kľúč"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Registrované prístupové kľúče"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Registrácia prístupového kľúča..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Registračný formulár"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Registračný formulár"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Zapamätať si zariadenie"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Zapamätajte si Trvanie"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Zapamätajte si toto zariadenie"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Odstrániť"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Odstráňte štítky generátora"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Odstrániť tipy na prihlásenie"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Odstráňte verziu WordPress zo zdrojového kódu"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Odstráňte metaznačky generátora zo všetkých stránok."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Odstráňte rady a návrhy na obnovenie hesla."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Odstráňte informácie o verzii z kódu HTML a informačných kanálov."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Opravte všetky upravené súbory"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Opravuje upravené základné súbory WordPress. Používajte opatrne - pred opravou zálohujte."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Nahrádza poškodené súbory čistými verziami"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "História prehľadov"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Prehľad uchovávania (dni)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Harmonogram správ"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Limity požiadaviek a filtrovanie"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Limit veľkosti žiadosti"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Žiadosti za minútu"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Vyžadovať 2FA pre všetkých správcov"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Vyžadovať 2FA pre vybrané roly používateľa."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Vyžadovať druhý faktor na overenie prihlásenia"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Vyžadovať prihlásenie pre prístup k REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Vyžaduje druhý faktor na prihlásenie. Pred povolením nakonfigurujte svoju metódu 2FA."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Resetovať"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Obnoviť všetky nastavenia"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Obnoviť učenie"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Obnovte všetky nastavenia NexifyMy Security na ich predvolené hodnoty. Túto akciu nie je možné vrátiť späť."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Obnoviť predvolené nastavenia"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Resetovanie..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Kód odpovede na bloku"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Obnoviť"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Obnoviť:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Obmedziť REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Obmedzuje prístup k REST API. Môže ovplyvniť doplnky, ktoré používajú REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Doba uchovávania"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Vráti chybový kód, ak sa zistí malvér (zlyhá zostavenie CI/CD)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Ak sa zistia chyby zabezpečenia, vráti kód chyby."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Vráti súbor do pôvodného umiestnenia."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Upozornenia na recenzie ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Okamžite skontrolujte"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Pravidelne kontrolujte denníky zabezpečenia"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Zmeny rolí"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Spustite úplnú kontrolu zabezpečenia"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Spustite kontrolu integrity"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Spustite rýchlu kontrolu"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Spustite skenovanie"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Spustite kontrolu zraniteľnosti"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Spustite kontrolu zabezpečenia a identifikujte slabé miesta"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Denne spúšťa automatické skenovanie škodlivého softvéru. Bezpečné – iba skenovanie, žiadne zmeny súborov."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "BEZPEČNOSTNÉ UPOZORNENIE:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Hodnoty hash SHA-256 všetkých súborov doplnkov sú uložené ako základ."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "Integrácia SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "Platforma SIEM"
 
 msgid "SQL Injection"
 msgstr "SQL Injection"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "Ochrana pred vstrekovaním SQL"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "Stav SSL"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "Overenie SSL"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Uložiť rozšírené nastavenia"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Uložte nastavenia CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Uložiť nastavenia Discord"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Uložiť nastavenia e-mailu"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Uložte nastavenia Jira"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Uložte nastavenia SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Uložte nastavenia skenera"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Uložte nastavenia ServiceNow"
 
 msgid "Save Settings"
-msgstr "Save Settings"
+msgstr "Uložiť nastavenia"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Uložte nastavenia Slack"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Uložiť nastavenia Teams"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Uložte nastavenia WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Uložiť nastavenia webhooku"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "skenovať"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Skenovanie dokončené"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Skenovanie dokončené"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Skenovať závislosti skladateľa"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Konfigurácia skenovania"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Ovládanie skenovania"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Skenovať vlastné adresáre"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Skenovať závislosti NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Skenovať doplnky"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Naskenujte QR kód pomocou autentifikačnej aplikácie (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Výsledky skenovania"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Plán skenovania"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Citlivosť skenovania"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Skenovať ciele"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Skenovať motívy"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Časový limit skenovania"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Skenovať adresár nahrávania"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Skenujte jadro WordPress"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Skontrolujte všetky nainštalované doplnky na prítomnosť škodlivého softvéru."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Skontrolujte všetky nainštalované témy na prítomnosť škodlivého softvéru."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Skenujte iba kritické oblasti"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Skenujte súbory na prítomnosť škodlivého softvéru a podozrivého kódu."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Skenujte pluginy, témy a jadro WordPress, či neobsahuje známe zraniteľnosti."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Skenujte na svojom webe malvér, zraniteľné miesta a problémy so zabezpečením."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Skenujte svoje webové stránky na prítomnosť malvéru a bezpečnostných zraniteľností."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Skener"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Nastavenia skenera"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Skenuje sa..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Skenuje súbory na prítomnosť škodlivého softvéru a podozrivého kódu. Bezpečné – iba kontroluje, nemení súbory."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Režim plánovaného skenovania"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Plánované kontroly"
 
 msgid "Score"
-msgstr "Score"
+msgstr "skóre"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Vyhľadávacie požiadavky za minútu"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Hľadať používateľské meno..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Tajný kľúč"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Zabezpečený prístup k súborom"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Zabezpečuje WPGraphQL s obmedzeniami hĺbky dotazu, kontrolami zložitosti a obmedzením rýchlosti. Bezpečné pre bezhlavé nastavenia."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Bezpečnostné upozornenia"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Analýza bezpečnosti"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Bezpečnostné tvrdenie"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Bezpečnostné hlavičky"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Bezpečnostný incident"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Bezpečnostné denníky"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Bezpečnostné moduly"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Bezpečnostné upozornenia"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Možnosti zabezpečenia"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Bezpečnostné odporúčania"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Bezpečnostné skóre"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Stav zabezpečenia"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Bezpečnostné nástroje"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Chyby zabezpečenia"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Bezpečnostné upozornenia"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Tu sa zobrazia bezpečnostné udalosti."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Bezpečnostné tvrdenie"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Bezpečnostná kontrola bola dokončená"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Nastavenia zabezpečenia boli upravené"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Vyberte krajiny:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Vyberte krajiny zľava a pridajte ich kliknutím na „Pridať do zoznamu“. Vybrané krajiny budú zablokované (čierna listina) alebo povolené (biela listina) na základe vyššie uvedeného režimu."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Vyberte obrázok so začiarknutím:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Vyberte službu captcha, ktorú chcete použiť."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Vybrané krajiny:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Sebaochrana"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Sebaochrana"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Odoslať testovacie upozornenie"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Odoslať testovací e-mail"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Pošlite výstrahu po toľkých útokoch za jednu hodinu."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Odoslať denný súhrn e-mailov"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Odoslať e-mailové upozornenie, keď je IP zablokovaná."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Odosielajte e-mailové upozornenia na bezpečnostné udalosti"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Odosielať e-mailové upozornenia, keď sa zistia kritické útoky."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Odoslať e-mail, keď sa zistí manipulácia"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Odoslať e-mail, keď sa nájdu slabé miesta"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Posielajte prehľady na e-mail správcu"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Po každom skenovaní posielajte výsledky skenovania e-mailom."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Odosielajte bezpečnostné udalosti na platformy Splunk, Elasticsearch alebo iné platformy SIEM na centralizované monitorovanie a analýzu."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Odosielajte udalosti zabezpečenia do ľubovoľného koncového bodu HTTP s vlastnou konfiguráciou."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Odosielajte udalosti zabezpečenia do ľubovoľného koncového bodu HTTP s vlastnými hlavičkami a autentifikáciou."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Pošlite overovacie kódy e-mailom."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Posiela e-mailové upozornenia na bezpečnostné udalosti. Bezpečné – najprv nakonfigurujte nastavenia e-mailu."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "Integrácia ServiceNow"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Nastavuje povolenia pre zabezpečené súbory. Ak má server problémy, môže vyžadovať manuálne nastavenie."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Nastavenia"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Nastavenia boli úspešne uložené"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Závažnosť"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Zobraziť stránku 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Zobraziť všeobecnú chybovú správu pri zlyhaní prihlásenia."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Zobraziť vo formulároch"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Zobrazuje sa %d z %d záznamov"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Zobrazuje neprečítané kritické/varovné udalosti. Pre úplnú históriu použite protokoly."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Prihláste sa pomocou prístupového kľúča"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Stav podpisu"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Detekcia založená na podpise"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Podpisy"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Predvolené nastavenie lokality"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Kľúč lokality"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Stav zabezpečenia lokality"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Veľkosť"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Preskočte súbory väčšie ako táto veľkosť."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Slack integrácia"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Odporúča sa niekoľko vylepšení"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Zdroj"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Špeciálny znak (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (zberateľ udalostí HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Štandardné"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Štandard - Vyvážená ochrana"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Štandardné skenovanie"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Spustite skenovanie"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Spustite nové skenovanie"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Spustite skenovanie"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Stav"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Príbeh"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Prísne – maximálna bezpečnosť"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Silné heslá"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Silné heslá"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Miera úspešnosti"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Úspešné prihlásenie"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Úspešné prihlásenia"
 
 msgid "Sucuri"
 msgstr "Sucuri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Sumo logika"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Dodávateľský reťazec"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Zabezpečenie dodávateľského reťazca"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Nastavenia dodávateľského reťazca"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Podpora Google Authenticator, Authy atď."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Podporované:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Podozrivý kód"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Podozrivé adresy IP"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Aktivita systému"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Systémové udalosti"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Stav systému"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "Aplikácie TOTP Authenticator"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Názov tabuľky"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Tabuľky"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Detekcia manipulácie:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Úloha"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Dočasne zablokujte adresy IP, ktoré prekračujú limity rýchlosti API."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Test pripojenia"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Oznámenie o teste"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Zhoda textu"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI sa neustále učí bežné vzorce správania vrátane hodín premávky, geografických polôh, používateľských agentov a vzorcov požiadaviek. Táto základná línia sa používa na detekciu anomálií."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF chráni vašu stránku pred bežnými webovými útokmi vrátane SQL injection, XSS a škodlivých robotov."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Prepínače tém"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Túto hodinu"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Tento mesiac"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Tento týždeň"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Toto je bežné heslo."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Takto sa captcha zobrazí na prihlasovacích formulároch:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Toto heslo je príliš bežné. Zvoľte si prosím unikátnejšie heslo."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Tento dopyt nie je povolený."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Týmto sa resetujú všetky údaje o učení AI a vzorce správania. Pokračovať?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Hrozba"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Rozdelenie hrozieb:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Hrozba zistená"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Zistená hrozba (malvér, podozrivé súbory)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Detekcia a blokovanie hrozieb – posledných 7 dní"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Skóre ohrozenia"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Zablokované hrozby"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Nájdené hrozby"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Hrozby dnes"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Obdobie plynu"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Predaj lístkov"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Systémy predaja lístkov"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Čas"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Časové okno (s)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Čas do vypršania platnosti verifikačných kódov e-mailu."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Časové okno pre počítanie neúspešných pokusov o prihlásenie."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Časové okno používané na počítanie neúspešných pokusov o prihlásenie."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "K dnešnému dňu"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Dnes"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Príliš veľa neúspešných pokusov o prihlásenie. Skúste to znova o %d minút."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Nástroje"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Nástroje a pomôcky"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Top Krajina"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Hlavné dôvody detekcie"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Najlepšie typy udalostí"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Najlepšie stránky"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Najlepší refereri"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Celkový počet udalostí"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Celkový počet zobrazení stránky"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Celkový počet podpisov"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Celková veľkosť"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Analýza návštevnosti"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Prehľad premávky"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Spustite bezpečnostnú kontrolu"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Dôverujte hlavičkám proxy"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Dôveryhodní zástupcovia"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Dvakrát denne"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Dvojfaktorové overenie (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Dvojfaktorová autentifikácia"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Dvojfaktorové overenie"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Typ"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Napíšte slovo:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Odinštalovať Behavior"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Jedinečné adresy IP"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Jedineční používatelia"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Jedineční návštevníci"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Neznámy"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Neprečítané upozornenia"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Neprečítané bezpečnostné upozornenia z vašich denníkov."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Aktualizovať definície"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Aktualizujte definície"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Aktualizujte definície škodlivého softvéru"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Aktualizovať teraz"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Aktualizujte podpisy detekcie škodlivého softvéru."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Veľké písmeno (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Úroveň naliehavosti"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Na určenie skutočnej IP adresy klienta použite hlavičky CDN/proxy"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Použite Touch ID, Face ID, Windows Hello alebo hardvérový bezpečnostný kľúč."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Na detekciu IP použite hlavičku X-Forwarded-For (iba ak je za CDN/proxy)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Na detekciu použite databázu podpisov škodlivého softvéru."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Tento kľúč použite na overenie požiadaviek API z vášho kanála CI/CD."
 
 msgid "User"
-msgstr "User"
+msgstr "Používateľ"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Aktivita používateľa"
 
 msgid "User Agent"
 msgstr "User Agent"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Používateľské udalosti"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Uzamknutia používateľov"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Správa používateľov"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Požiadavky na používateľa"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Používateľ alebo adresa IP sú zablokované z dôvodu podozrivej aktivity"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Používateľské meno"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Vyžaduje sa používateľské meno a heslo."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Používatelia vytvorili"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Používatelia boli vymazaní"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Používatelia povolia 2FA v nastaveniach svojho profilu"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Používa AI na detekciu hrozieb zero-day prostredníctvom analýzy správania. Učí sa normálne vzory a označí anomálie. Bezpečné – iba monitoruje správanie."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Platnosť overovacej relácie vypršala. Prihláste sa znova."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Overiť"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Overte základné súbory"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Overte certifikáty SSL (odporúčané pre produkciu)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Overte a opravte základné súbory WordPress."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Overte a opravte základné súbory"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Verzia"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Zobraziť všetko"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Zobraziť aktuálnu premávku"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Pozrite si všetky bezpečnostné udalosti."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Zobrazenie a správa hrozieb v karanténe."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Zobrazenie a správa bezpečnostných upozornení a upozornení."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Zobrazenia"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Návštevnícke trendy – posledných 30 dní"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Návštevníci"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Návštevy dnes"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Kontrola zraniteľnosti"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Skener zraniteľností"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Zraniteľné"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "Útok WAF zablokovaný"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "Bloky WAF (napadnuté blokované firewallom)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "Firewall WAF"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "Stav WAF"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "Verzia WP"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "Ochrana WPGraphQL"
 
 msgid "WPScan API Token"
 msgstr "WPScan API Token"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Upozornenie"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Upozornenie:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Upozornenie: Import nahradí všetky aktuálne nastavenia. Nezabudnite najskôr exportovať svoje aktuálne nastavenia ako zálohu."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Firewall webových aplikácií"
 
 msgid "Web Application Firewall (WAF)"
 msgstr "Web Application Firewall (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "Webová adresa webhooku"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "Adresa URL webhooku pre výsledky"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Webhooky"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Týždenne"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Týždenná správa o bezpečnosti"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Whitelist (iba povoliť)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Biela listina (povoliť len vybraté)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Zoznam adries IP"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "IP adresy na bielej listine"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Overenie základného súboru WordPress"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "Základný stav WordPress"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "Spevnenie WordPressu"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "Verzia WordPress"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "Základný súbor WordPress bol upravený"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress nie je aktuálny"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (bez čuchania)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Prevencia Clickjackingu)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-ochrana"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "Kontrola XML-RPC"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS útok"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "Ochrana XSS"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Používate predvolený prihlasovací modul. Zvážte zmenu na niečo jedinečné."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Pre prístup k REST API musíte byť prihlásený."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Váš web nepoužíva HTTPS. Povoľte certifikát SSL pre zabezpečené pripojenia."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Vaša stránka je dobre chránená"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Váš overovací kód je: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Vaše definície vírusov sú zastarané. Aktualizujte teraz pre najlepšiu ochranu."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ID zóny"
 
 msgid "ago"
-msgstr "ago"
+msgstr "pred"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "útokov za hodinu"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "pokusov"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "zablokované"
 
 msgid "characters"
-msgstr "characters"
+msgstr "postavy"
 
 msgid "days"
-msgstr "days"
+msgstr "dní"
 
 msgid "events"
-msgstr "events"
+msgstr "udalosti"
 
 msgid "fails"
-msgstr "fails"
+msgstr "zlyhá"
 
 msgid "files"
-msgstr "files"
+msgstr "súbory"
 
 msgid "from now"
-msgstr "from now"
+msgstr "odteraz"
 
 msgid "including:"
-msgstr "including:"
+msgstr "vrátane:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "malé písmeno"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "minút"
 
 msgid "modules"
-msgstr "modules"
+msgstr "modulov"
 
 msgid "number"
-msgstr "number"
+msgstr "číslo"
 
 msgid "or"
-msgstr "or"
+msgstr "alebo"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "za minútu"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "sekúnd"
 
 msgid "special character"
-msgstr "special character"
+msgstr "zvláštny charakter"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "nájdené hrozby"
 
 msgid "total records"
-msgstr "total records"
+msgstr "celkové záznamy"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "veľké písmeno"
 
 msgid "views"
-msgstr "views"
+msgstr "názory"
 
 msgid "violations"
-msgstr "violations"
+msgstr "priestupkov"
 
 msgid "visits"
-msgstr "visits"
+msgstr "návštev"
+msgid "Deception"
+msgstr "Podvádzanie"
+
+msgid "P2P Intelligence"
+msgstr "P2P inteligencia"
+
+msgid "Sandbox Console"
+msgstr "Konzola Sandbox"
+
+msgid "Temporary Access"
+msgstr "Dočasný prístup"
+
+msgid "Saving..."
+msgstr "Ukladá sa..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Nastavenia boli uložené. Opätovné načítavanie..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Nastavenia boli úspešne uložené! Opätovné načítavanie..."
+
+msgid "Connection error"
+msgstr "Chyba pripojenia"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Bezpečnostná kontrola zlyhala. Obnovte a skúste to znova."
+
+msgid "Settings handler not available."
+msgstr "Obslužný program nastavení nie je k dispozícii."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Obnoviť všetky nastavenia na predvolené hodnoty? Toto sa nedá vrátiť späť."
+
+msgid "Purge CDN cache now?"
+msgstr "Chcete teraz vymazať vyrovnávaciu pamäť CDN?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Nastavenia sa nepodarilo uložiť. Skúste to znova."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Nastavenia sa obnovia na predvolené hodnoty. Opätovné načítavanie stránky..."
+
+msgid "Failed to load analytics data."
+msgstr "Nepodarilo sa načítať analytické údaje."
+
+msgid "Devices"
+msgstr "Zariadenia"
+
+msgid "No data available for this range."
+msgstr "Pre tento rozsah nie sú k dispozícii žiadne údaje."
+
+msgid "Traffic trend chart"
+msgstr "Graf trendu návštevnosti"
+
+msgid "Distribution breakdown chart"
+msgstr "Tabuľka rozdelenia"
+
+msgid "Total"
+msgstr "Celkom"
+
+msgid "Series"
+msgstr "séria"
+
+msgid "Predictive Threat Hunting"
+msgstr "Prediktívny lov hrozieb"
+
+msgid "Forecast next attack vectors"
+msgstr "Predpovedajte vektory ďalšieho útoku"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Profiluje váš zásobník, predpovedá pravdepodobné vektory útoku a poskytuje proaktívne usmernenie pri zosilňovaní."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Spravujte hrozby v karanténe a obnoviteľné odstránené súbory."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Odstránené súbory (obnoviteľné)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Súbory presunuté sem je možné obnoviť späť do karantény alebo natrvalo odstrániť."
+
+msgid "Deleted"
+msgstr "Odstránené"
+
+msgid "Loading deleted files..."
+msgstr "Načítavajú sa odstránené súbory..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Presúva súbory v karanténe do obnoviteľného vymazaného úložiska."
+
+msgid "Delete Permanently:"
+msgstr "Natrvalo odstrániť:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Natrvalo odstráni súbor z odstráneného úložiska."
+
+msgid "Access denied from your region."
+msgstr "Prístup odmietnutý z vášho regiónu."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Maximálny počet neúspešných pokusov o prihlásenie pred dočasným uzamknutím."
+
+msgid "Time window for counting failed attempts."
+msgstr "Časové okno pre počítanie neúspešných pokusov."
+
+msgid "Open Tool"
+msgstr "Otvoriť nástroj"
+
+msgid "Available Fix"
+msgstr "Dostupná oprava"
+
+msgid "Preview Patch"
+msgstr "Ukážka opravy"
+
+msgid "Apply Patch"
+msgstr "Použiť náplasť"
+
+msgid "Honeytrap Configuration"
+msgstr "Konfigurácia pasce na med"
+
+msgid "Enable Deception Module"
+msgstr "Povoliť modul klamania"
+
+msgid "How Deception Works:"
+msgstr "Ako funguje podvod:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Nasledujúce adresy URL neexistujú na vašej lokalite. Ak k nim niekto pristúpi, sú <strong>automaticky zablokovaní</strong> ako potvrdení útočníci. Správcovia nie sú nikdy zablokovaní, ale uvidia varovanie."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Vlastné medené cesty"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Pridajte jednu cestu na riadok (napr. /my-secret-admin/, /old-backup.sql). Predvolené nastavenia sú už aktívne."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Predvolené cesty pasce (vždy aktívne)"
+
+msgid "Login Page Honeypot"
+msgstr "Prihlasovacia stránka Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Do prihlasovacích/registračných formulárov sa vloží neviditeľné pole. Vyplnia ho iba roboty, čím sa spustí okamžitá detekcia a blokovanie."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Táto ochrana je zapnutá vždy, keď je aktívny modul Deception. Nevyžaduje sa žiadna konfigurácia."
+
+msgid "User Enumeration Trap"
+msgstr "Pasca na zoznam používateľov"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Zisťuje pokusy o prieskum, kde útočníci hľadajú platné používateľské mená cez ?author=1, ?author=2 atď."
+
+msgid "Enable user enumeration detection"
+msgstr "Povoliť zisťovanie enumerácie používateľov"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Pevný blok pri pokusoch o enumeráciu (predvolené: mäkké presmerovanie na domovskú stránku)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Blokovať VŠETKÝ zoznam autorov (aj pre existujúcich používateľov)"
+
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR článok 30 Mapovanie údajov"
+
+msgid "Refresh Map"
+msgstr "Obnoviť mapu"
+
+msgid "Export Data Map (PDF)"
+msgstr "Exportovať mapu údajov (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Automatizované zisťovanie PII v databázových tabuľkách, mapovanie toku údajov a detekcia zdieľania tretích strán."
+
+msgid "Data Element"
+msgstr "Dátový prvok"
+
+msgid "Location"
+msgstr "Poloha"
+
+msgid "Purpose"
+msgstr "Účel"
+
+msgid "Retention"
+msgstr "Udržanie"
+
+msgid "Third-Party Sharing"
+msgstr "Zdieľanie treťou stranou"
+
+msgid "Legal Basis"
+msgstr "Právny základ"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Zatiaľ neboli zistené žiadne záznamy PII. Spustite skenovanie mapy údajov a zostavte zostavu."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Automatizácia, na ktorú treba zabudnúť"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Odosielajte žiadosti o vymazanie, overujte odstránenie údajov a sledujte protokoly dodržiavania predpisov pre pracovné postupy GDPR."
+
+msgid "User ID"
+msgstr "ID používateľa"
+
+msgid "Comments"
+msgstr "Komentáre"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Namiesto anonymizácie komentáre odstráňte"
+
+msgid "Run Erasure"
+msgstr "Spustite Erasure"
+
+msgid "Verify Erasure"
+msgstr "Overte vymazanie"
+
+msgid "GDPR Request Log"
+msgstr "Protokol žiadostí GDPR"
+
+msgid "Request Type"
+msgstr "Typ požiadavky"
+
+msgid "Requested At"
+msgstr "Vyžiadané v"
+
+msgid "Completed At"
+msgstr "Dokončené o"
+
+msgid "No GDPR requests logged yet."
+msgstr "Zatiaľ nie sú zaznamenané žiadne požiadavky GDPR."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Shadow Runtime Sandbox"
+
+msgid "Enable Sandbox Module"
+msgstr "Povoliť modul karantény"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Načítava modul Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "Povoliť konzolu Sandbox"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Umožňuje používateľom wp-admin s manage_options spustiť kód v konzole karantény."
+
+msgid "Sandbox Timeout"
+msgstr "Časový limit karantény"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Časový limit vykonania v sekundách (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Dynamická analýza"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Okrem statických kontrol spustite aj dynamickú analýzu vykonávania."
+
+msgid "Quarantine Policy"
+msgstr "Karanténna politika"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Pre väčšinu stránok sa odporúča manuálna karanténa. Automatická karanténa izoluje iba overený malvér."
+
+msgid "Manual (Recommended)"
+msgstr "Manuálne (odporúčané)"
+
+msgid "Auto Quarantine"
+msgstr "Auto karanténa"
+
+msgid "Save Quarantine Policy"
+msgstr "Uložiť pravidlá karantény"
+
+msgid "AI Risk Controls"
+msgstr "AI Risk Controls"
+
+msgid "Enable AI Detection Module"
+msgstr "Povoliť modul detekcie AI"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Povoliť detekciu vnútorných hrozieb"
+
+msgid "Insider Threat Threshold"
+msgstr "Insider Threat Threshold"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Povoliť sledovanie úniku údajov"
+
+msgid "Exfiltration Threshold"
+msgstr "Exfiltračný prah"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Základné dni exfiltrácie"
+
+msgid "Session Risk Threshold"
+msgstr "Prah rizika relácie"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Interval opakovanej kontroly nepretržitej autorizácie (sekundy)"
+
+msgid "Risk Spike Threshold"
+msgstr "Risk Spike Threshold"
+
+msgid "Save AI Settings"
+msgstr "Uložiť nastavenia AI"
+
+msgid "Quarantine Mode"
+msgstr "Režim karantény"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Manuálny režim je bezpečnejší a odporúčaný. Automatický režim umiestňuje do karantény iba vysoko dôveryhodne potvrdený malvér."
+
+msgid "Data Map"
+msgstr "Dátová mapa"
+
+msgid "Privacy Requests"
+msgstr "Žiadosti o ochranu osobných údajov"
+
+msgid "Deception Technology"
+msgstr "Technológia podvodov"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypoty, návnady a klamanie útočníkov na zachytenie hrozieb skôr, ako zaútočia."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Zobrazuje sa %1$d z %2$d záznamov"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "Modul P2P Intelligence nie je načítaný."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P Threat Intelligence"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Zdieľajte informácie o hrozbách s ostatnými inštaláciami SentinelWP pre imunitu stáda."
+
+msgid "P2P Settings"
+msgstr "Nastavenia P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "Povoliť P2P Intelligence"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Povoliť spoločné zdieľanie informácií o hrozbách s partnerskými uzlami."
+
+msgid "My Node Key"
+msgstr "Môj kľúč uzla"
+
+msgid "Copy"
+msgstr "Kopírovať"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Zdieľajte tento kľúč s kolegami, ktorí sa chcú pripojiť k vašej lokalite."
+
+msgid "Broadcast Threats"
+msgstr "Vysielané hrozby"
+
+msgid "Share detected threats with registered peers."
+msgstr "Zdieľajte zistené hrozby s registrovanými partnermi."
+
+msgid "Trust Threshold"
+msgstr "Hranica dôvery"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Automaticky blokovať iba IP adresy so skóre ohrozenia >= tento prah. Nižšie hodnoty = agresívnejšie blokovanie."
+
+msgid "Registered Peers"
+msgstr "Registrovaní rovesníci"
+
+msgid "Add Peer"
+msgstr "Pridať Peer"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Zatiaľ nie sú zaregistrovaní žiadni rovesníci. Pridajte partnera a začnite zdieľať informácie o hrozbách."
+
+msgid "Label"
+msgstr "Označenie"
+
+msgid "Last Sync"
+msgstr "Posledná synchronizácia"
+
+msgid "Sent/Received"
+msgstr "Odoslané/prijaté"
+
+msgid "Unnamed"
+msgstr "Nemenovaný"
+
+msgid "%s ago"
+msgstr "pred %s"
+
+msgid "Threats Sent"
+msgstr "Odoslané hrozby"
+
+msgid "Threats Received"
+msgstr "Prijaté hrozby"
+
+msgid "Statistics"
+msgstr "Štatistiky"
+
+msgid "Connected Peers"
+msgstr "Pripojení rovesníci"
+
+msgid "Threats Received (24h)"
+msgstr "Prijaté hrozby (24 h)"
+
+msgid "P2P Status"
+msgstr "Stav P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "Kredity za spravodajstvo o hrozbách"
+
+msgid "Current Credit Balance"
+msgstr "Aktuálny kreditný zostatok"
+
+msgid "Reputation Score"
+msgstr "Skóre reputácie"
+
+msgid "Accuracy"
+msgstr "Presnosť"
+
+msgid "Badges:"
+msgstr "Odznaky:"
+
+msgid "No badges yet"
+msgstr "Zatiaľ žiadne odznaky"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Prémiové výhody sú odomknuté zadarmo, pretože vaše skóre reputácie je vyššie ako 1 000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Dosiahnite skóre reputácie nad 1 000 a odomknite prémiové výhody zadarmo."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Hlavní prispievatelia (anonymní)"
+
+msgid "No contributor data available yet."
+msgstr "Zatiaľ nie sú k dispozícii žiadne údaje o prispievateľoch."
+
+msgid "Rank"
+msgstr "Poradie"
+
+msgid "Anonymous Site ID"
+msgstr "ID anonymného webu"
+
+msgid "Credits"
+msgstr "Kredity"
+
+msgid "Reputation"
+msgstr "povesť"
+
+msgid "Close"
+msgstr "Zavrieť"
+
+msgid "Add New Peer"
+msgstr "Pridať nového partnera"
+
+msgid "Peer URL"
+msgstr "Adresa URL partnera"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "Úplná adresa URL partnerského webu WordPress (v produkcii musí používať HTTPS)."
+
+msgid "Peer Node Key"
+msgstr "Kľúč uzla rovnocenného uzla"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Kľúč uzla partnera (môže si ho skopírovať zo stránky nastavení P2P)."
+
+msgid "Label (Optional)"
+msgstr "Štítok (voliteľné)"
+
+msgid "My Production Server"
+msgstr "Môj produkčný server"
+
+msgid "A friendly name to identify this peer."
+msgstr "Priateľský názov na identifikáciu tohto rovesníka."
+
+msgid "Unauthorized"
+msgstr "Neoprávnené"
+
+msgid "Sandbox module is not loaded."
+msgstr "Modul karantény nie je načítaný."
+
+msgid "Sandbox module is disabled."
+msgstr "Modul karantény je zakázaný."
+
+msgid "Sandbox console is disabled."
+msgstr "Konzola karantény je zakázaná."
+
+msgid "No code provided."
+msgstr "Nebol poskytnutý žiadny kód."
+
+msgid "Insufficient permissions."
+msgstr "Nedostatočné povolenia."
+
+msgid "Sandbox Module Disabled"
+msgstr "Modul karantény je vypnutý"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Sandbox Shadow Runtime je momentálne vypnutý. Ak chcete používať konzolu, povoľte ju v Nastaveniach."
+
+msgid "Go to Settings"
+msgstr "Prejdite do časti Nastavenia"
+
+msgid "Sandbox Console Disabled"
+msgstr "Konzola karantény je zakázaná"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Modul Sandbox je povolený, ale správcovská konzola je zakázaná. Povoľte nastavenie konzoly na spustenie kódu z wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Nebezpečná zóna: Spustenie kódu"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Táto konzola spúšťa PHP kód v izolovanom karanténe. Všetky zmeny databázy sa automaticky vrátia späť. Používajte iba na analýzu podozrivého kódu alebo testovanie."
+
+msgid "PHP Code Editor"
+msgstr "PHP editor kódu"
+
+msgid "Run Code"
+msgstr "Spustiť kód"
+
+msgid "Analyze Only"
+msgstr "Iba analyzovať"
+
+msgid "Timeout:"
+msgstr "Časový limit:"
+
+msgid "Execution Results"
+msgstr "Výsledky vykonania"
+
+msgid "STATIC ANALYSIS"
+msgstr "STATICKÁ ANALÝZA"
+
+msgid "OUTPUT"
+msgstr "VÝSTUP"
+
+msgid "ERRORS"
+msgstr "CHYBY"
+
+msgid "DATABASE QUERIES"
+msgstr "DATABÁZOVÉ DOTAZY"
+
+msgid "Module not loaded"
+msgstr "Modul nie je načítaný"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Analýza aktuálnej návštevnosti nie je k dispozícii."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Just-in-time prístup využíva pracovný postup žiadostí a schvaľovania s automatickým vypršaním platnosti."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Dočasný prístup je momentálne nedostupný, pretože modul je zakázaný alebo nie je načítaný."
+
+msgid "Open settings"
+msgstr "Otvorte nastavenia"
+
+msgid "Request Temporary Access"
+msgstr "Požiadať o dočasný prístup"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Táto požiadavka sa vzťahuje na váš aktuálne prihlásený účet. Pred udelením dočasného zvýšeného prístupu ho musí schváliť správca."
+
+msgid "Requested Role"
+msgstr "Požadovaná rola"
+
+msgid "Administrator"
+msgstr "správca"
+
+msgid "Editor"
+msgstr "redaktor"
+
+msgid "Duration (minutes)"
+msgstr "Trvanie (minúty)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Popíšte, prečo je potrebný dočasný zvýšený prístup."
+
+msgid "Submit Request"
+msgstr "Odoslať žiadosť"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Udeliť dočasný prístup (správca)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Udeľte časovo obmedzený zvýšený prístup priamo konkrétnemu používateľovi prostredníctvom používateľského mena alebo e-mailu."
+
+msgid "Target User (Username or Email)"
+msgstr "Cieľový používateľ (používateľské meno alebo e-mail)"
+
+msgid "username or user@example.com"
+msgstr "username alebo user@example.com"
+
+msgid "Grant Role"
+msgstr "Grant Role"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Opíšte, prečo tento používateľ vyžaduje dočasný zvýšený prístup."
+
+msgid "Grant Access"
+msgstr "Udeliť prístup"
+
+msgid "Pending and Active Requests"
+msgstr "Nevybavené a aktívne požiadavky"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Schvaľujte čakajúce žiadosti, kontrolujte priame granty a odvolávajte aktívne povolenia z tohto frontu."
+
+msgid "Original Role"
+msgstr "Pôvodná rola"
+
+msgid "Elevated Role"
+msgstr "Zvýšená úloha"
+
+msgid "Granted"
+msgstr "Udelené"
+
+msgid "Expires"
+msgstr "Platnosť vyprší"
+
+msgid "Approved By"
+msgstr "Schválené používateľom"
+
+msgid "Loading..."
+msgstr "Načítava sa..."
+
+msgid "English (US)"
+msgstr "angličtina (USA)"
+
+msgid "English (UK)"
+msgstr "angličtina (Spojené kráľovstvo)"
+
+msgid "Espanol (Spanish)"
+msgstr "španielčina (španielčina)"
+
+msgid "Francais (French)"
+msgstr "Francais (francúzština)"
+
+msgid "Deutsch (German)"
+msgstr "nemčina (nemčina)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (taliančina)"
+
+msgid "Portugues (Brazilian)"
+msgstr "portugalčina (brazílska)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Holandsko (holandčina)"
+
+msgid "Russian"
+msgstr "ruský"
+
+msgid "Japanese"
+msgstr "japončina"
+
+msgid "Chinese (Simplified)"
+msgstr "čínština (zjednodušená)"
+
+msgid "Arabic"
+msgstr "arabčina"
+
+msgid "Hindi"
+msgstr "hindčina"
+
+msgid "Korean"
+msgstr "kórejský"
+
+msgid "Turkish"
+msgstr "turecký"
+
+msgid "Polski (Polish)"
+msgstr "polski (poľsky)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (indonézština)"
+
+msgid "Ukrainian"
+msgstr "Ukrajinčina"
+
+msgid "Vietnamese"
+msgstr "Vietnamci"
+
+msgid "Thai"
+msgstr "thajčina"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (švéd.)"
+
+msgid "Dansk (Danish)"
+msgstr "dánčina (dánčina)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (fínsky)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "norsk Bokmal (nórčina)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (česky)"
+
+msgid "Greek"
+msgstr "grécky"
+
+msgid "Magyar (Hungarian)"
+msgstr "maďarčina (maďarčina)"
+
+msgid "Romana (Romanian)"
+msgstr "Romana (rumunčina)"
+
+msgid "Slovencina (Slovak)"
+msgstr "slovenčina (slov.)"
+
+msgid "Bulgarian"
+msgstr "bulharčina"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (chorvátsky)"
+
+msgid "Serbian"
+msgstr "srbský"
+
+msgid "Hebrew"
+msgstr "hebrejčina"
+
+msgid "Persian"
+msgstr "perzský"
+
+msgid "Settings saved successfully."
+msgstr "Nastavenia boli úspešne uložené."
+
+msgid "Settings reset to defaults."
+msgstr "Nastavenia sa obnovia na predvolené hodnoty."
+
+msgid "NexifyMy Security Logs"
+msgstr "Denníky zabezpečenia NexifyMy"
+
+msgid "No matching user found."
+msgstr "Nenašiel sa žiadny zodpovedajúci používateľ."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Bezpečnostné denníky a súvisiace PII boli anonymizované."
+
+msgid "Invalid user ID."
+msgstr "Neplatné ID používateľa."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Požiadavka na manuálne vymazanie alebo vymazanie založená na webhooku bola zaradená do frontu."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Žiadosť o vymazanie Mailchimp odoslaná."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Vymazanie pruhov vyžaduje manuálne sledovanie API pre záznamy o súlade."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Žiadosť rozhrania API na odstránenie používateľa služby Google Analytics musí byť nakonfigurovaná externe."
+
+msgid "Privacy Preferences"
+msgstr "Predvoľby ochrany osobných údajov"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Vyberte, ktoré voliteľné kategórie spracovania povoľujete."
+
+msgid "Save Preferences"
+msgstr "Uložiť predvoľby"
+
+msgid "Consent Management"
+msgstr "Správa súhlasu"
+
+msgid "Given"
+msgstr "Dané"
+
+msgid "Withdrawn"
+msgstr "Stiahnuté"
+
+msgid "No consent records found."
+msgstr "Nenašli sa žiadne záznamy o súhlase."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Chyba</strong>: Niečo sa pokazilo. Skúste to znova neskôr."
+
+msgid "The peer URL is not valid."
+msgstr "Adresa URL partnera nie je platná."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Nemôžete pridať svoju vlastnú stránku ako peer."
+
+msgid "API key must be at least 16 characters."
+msgstr "API kľúč musí mať aspoň 16 znakov."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Dosiahli ste maximálny počet partnerov (%d)."
+
+msgid "Missing authentication header."
+msgstr "Chýba hlavička overenia."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Neplatný kľúč uzla. Peer nebol rozpoznaný."
+
+msgid "Invalid request signature."
+msgstr "Neplatný podpis žiadosti."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Prekročený limit sadzby. Skúste to znova neskôr."
+
+msgid "Invalid site identifier."
+msgstr "Neplatný identifikátor lokality."
+
+msgid "Unknown contribution type."
+msgstr "Neznámy typ príspevku."
+
+msgid "Unknown benefit type."
+msgstr "Neznámy typ benefitu."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Nedostatočné kredity na túto výhodu."
+
+msgid "Threat Forecast"
+msgstr "Predpoveď hrozieb"
+
+msgid "Your site profile:"
+msgstr "Váš profil stránky:"
+
+msgid "Predicted threats this month:"
+msgstr "Predpokladané hrozby tento mesiac:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Zatiaľ neboli zistené žiadne vysoko spoľahlivé vektory."
+
+msgid "Recommended actions:"
+msgstr "Odporúčané akcie:"
+
+msgid "No immediate actions required."
+msgstr "Nevyžadujú sa žiadne okamžité akcie."
+
+msgid "Not logged in"
+msgstr "Nie ste prihlásený"
+
+msgid "A reason is required"
+msgstr "Vyžaduje sa dôvod"
+
+msgid "Invalid requested role"
+msgstr "Neplatná požadovaná rola"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Pre túto rolu už existuje aktívna alebo čakajúca požiadavka."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Žiadosť o prístup bola odoslaná. Správca vašu žiadosť posúdi."
+
+msgid "Invalid request"
+msgstr "Neplatná požiadavka"
+
+msgid "Pending request not found"
+msgstr "Čakajúca žiadosť sa nenašla"
+
+msgid "Request role is invalid"
+msgstr "Rola požiadavky je neplatná"
+
+msgid "Invalid approved role"
+msgstr "Neplatná schválená rola"
+
+msgid "Access approved successfully"
+msgstr "Prístup bol úspešne schválený"
+
+msgid "Target user (username or email) is required."
+msgstr "Vyžaduje sa cieľový používateľ (používateľské meno alebo e-mail)."
+
+msgid "A reason is required."
+msgstr "Vyžaduje sa dôvod."
+
+msgid "Invalid requested role."
+msgstr "Neplatná požadovaná rola."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Cieľový používateľ sa nenašiel. Použite existujúce používateľské meno alebo e-mail."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Používateľ už túto rolu má. Dočasná nadmorská výška nie je potrebná."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Pre tohto používateľa a rolu už existuje aktívny alebo čakajúci grant."
+
+msgid "Unable to grant temporary access."
+msgstr "Nie je možné udeliť dočasný prístup."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Používateľovi %1$s bol na %3$d minút udelený dočasný prístup %2$s."
+
+msgid "Invalid grant"
+msgstr "Neplatný grant"
+
+msgid "Grant not found or already revoked"
+msgstr "Grant sa nenašiel alebo už bol odvolaný"
+
+msgid "Permission revoked successfully"
+msgstr "Povolenie bolo úspešne odvolané"
+
+msgid "Once Monthly"
+msgstr "Raz mesačne"
+
+msgid "Every 5 Minutes"
+msgstr "Každých 5 minút"
 

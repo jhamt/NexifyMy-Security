@@ -8,1774 +8,1774 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d ancaman terdeteksi pada pemindaian terakhir"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Ucapkan kode ini untuk memverifikasi)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Tinggi"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 hari"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 Jam"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 Hari"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 Menit"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Sedang"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 Jam"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "Metode 2FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "Pengaturan 2FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Rendah"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 hari"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 Hari"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 Menit"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 hari"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Dilarang"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Tidak Ditemukan"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Terlalu Banyak Permintaan (Disarankan)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 Menit"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Layanan Tidak Tersedia"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 Jam"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 hari"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 hari"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 hari (terus menerus)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 Hari"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 hari"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "Status Pembelajaran AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "Status AI"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "Deteksi Ancaman AI"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "Reset data pembelajaran AI berhasil."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "Permintaan AJAX per Menit"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API & Keamanan Tanpa Kepala"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API & Layanan"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "Tunjangan Ledakan API"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "Titik Akhir API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "Kunci API"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "Pembatasan Tingkat API"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "Permintaan API per Menit"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "Keamanan API"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "Token API"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "Batas laju API terlampaui. Batas: %d permintaan per menit."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "Pembatasan API"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "Token API, token HEC, atau kunci autentikasi."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Ditinggalkan"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Tentang Karantina"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Akses Ditolak"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Tindakan"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Tindakan"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktif"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Dasbor Aktivitas"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Catatan Aktivitas"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Pengaturan Log Aktivitas"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Aktivitas dari pengguna ini tidak akan dicatat."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Log aktivitas yang lebih lama dari ini akan dihapus secara otomatis."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Pelacakan aktivitas"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Tambahkan %d karakter lainnya."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Tambahkan 2FA ke akun pengguna untuk keamanan ekstra."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Tambahkan CAPTCHA ke login dan formulir."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Tambahkan verifikasi CAPTCHA ke formulir login"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Tambahkan header keamanan HTTP (X-Frame-Options, CSP, dll.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Tambahkan Kunci Sandi Baru"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Tambahkan Header Keamanan"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Tambahkan Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Tambahkan X-Frame-Options, X-Content-Type-Options, dan header keamanan lainnya."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Tambahkan header X-Frame-Options, X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Tambahkan lapisan keamanan ekstra dengan mewajibkan bentuk autentikasi kedua."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Tambahkan lapisan keamanan ekstra dengan mewajibkan dua bentuk autentikasi untuk login pengguna."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Tambahkan lapisan keamanan ekstra dengan 2FA berbasis TOTP."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Tambahkan huruf kecil."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Tambahkan angka."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Tambahkan karakter khusus."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Tambahkan ke Daftar"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Tambahkan huruf besar."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Langkah-langkah keamanan login tambahan. Bekerja dengan pembatas kecepatan."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Menambahkan CAPTCHA ke formulir login. Aman tetapi dapat memengaruhi pengalaman pengguna."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Menambahkan Google reCAPTCHA, Cloudflare Turnstile, atau tantangan matematika"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Menambahkan header keamanan HTTP (X-Frame-Options, CSP). Aman - meningkatkan keamanan browser."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Menambahkan lapisan keamanan ekstra dengan kode TOTP, Email, atau SMS"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Login Admin (login admin berhasil)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Lanjutan"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Pengaturan Firewall Tingkat Lanjut"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Pengerasan Tingkat Lanjut"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Opsi Pengerasan Tingkat Lanjut"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Pengaturan Masuk Lanjutan"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Opsi Lanjutan"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Opsi Pemindai Tingkat Lanjut"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Heuristik tingkat lanjut"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "File yang Terkena Dampak:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Ambang Peringatan"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Jenis Peringatan"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Peringatan"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Peringatan dikirim jika plugin dinonaktifkan."
 
 msgid "All"
-msgstr "All"
+msgstr "Semua"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Semua Jelas!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Semua Acara"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Semua Keparahan"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Izinkan semua pengguna untuk mengaktifkan 2FA secara sukarela."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Izinkan kode email sebagai metode cadangan"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Izinkan ledakan singkat di atas batas kecepatan."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Berikan waktu kepada pengguna untuk menyiapkan 2FA sebelum penerapannya."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Izinkan pengguna untuk mengaktifkan 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Izinkan pengguna membuat kode cadangan darurat."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Izinkan pengguna melewati 2FA di perangkat tepercaya."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Agen Pengguna yang Diizinkan"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "Analisis"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anomali"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Keparahan Apa Pun"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Modifikasi apa pun memicu peringatan email langsung."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Terapkan Pengaturan"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Terapkan praktik terbaik keamanan WordPress."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Terapkan perbaikan keamanan"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Terapkan langkah-langkah penguatan keamanan ke WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Terapkan langkah-langkah penguatan keamanan untuk melindungi instalasi WordPress Anda."
 
 msgid "ArcSight"
-msgstr "ArcSight"
+msgstr "Penglihatan Busur"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Apakah Anda yakin ingin menghapus kunci sandi ini?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Apakah Anda yakin ingin melanjutkan?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Perlindungan Serangan"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Jendela Percobaan"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Audio (Berbicara)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Mengautentikasi..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Kode Otentikasi"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Acara Otentikasi"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Token Otentikasi"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Otentikasi gagal. Silakan coba lagi."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Otentikasi diperlukan untuk akses API."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Otentikasi diperlukan untuk akses GraphQL."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Pemindaian Penulis"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Durasi Blokir Otomatis"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Blokir Otomatis Pelanggar Berulang"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Ambang Batas Blokir Otomatis"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Perbaiki Otomatis"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Laporan Hasilkan Otomatis"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Ancaman Karantina Otomatis"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Jadwal Pemindaian Otomatis"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Pembaruan Otomatis"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Pengaturan Pembaruan Otomatis"
 
 msgid "Auto-Updates"
 msgstr "Pembaruan Otomatis"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Deteksi otomatis"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Pemindaian otomatis"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Pemindaian Otomatis"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Secara otomatis memasukkan IP ke daftar hitam yang memicu aturan beberapa kali."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Secara otomatis membuat tiket Jira untuk insiden dan kerentanan keamanan."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Secara otomatis membuat tiket untuk insiden keamanan di sistem manajemen proyek Anda."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Secara otomatis menghasilkan laporan sesuai jadwal"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Secara otomatis memindahkan malware yang terdeteksi ke karantina."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Jalankan pemindaian secara otomatis di latar belakang."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Perbarui tanda tangan malware secara otomatis setiap hari."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Negara yang Tersedia"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Acara yang Tersedia"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Rata-rata/Hari"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Pemindaian Latar Belakang"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Cadangkan file yang rusak sebelum penggantian"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Kode Cadangan"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Cadangkan, optimalkan, dan amankan database Anda."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Pencadangan & pembersihan"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Cadangan disimpan di wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Bot Buruk"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Permintaan Buruk"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Seimbang (disarankan)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Catatan Perilaku"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Analisis perilaku"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Daftar Hitam (Daftar Blokir)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Daftar Hitam (blok dipilih)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "IP daftar hitam"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Daftar Hitam: Blokir negara yang dipilih. Daftar Putih: Hanya mengizinkan negara tertentu."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP yang masuk daftar hitam"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Blokir Bot Jahat"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Blokir Serangan CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Blokir Kata Sandi Umum"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Traversal Direktori Blok"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Durasi Blokir"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Blokir Agen Pengguna Kosong"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Blokir Pengguna API Berlebihan"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Blokir Editor File"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Blokir Penyertaan File Lokal"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Blokir Pesan"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Modus Blokir"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Mode Blokir (Disarankan)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Mode Blokir: Memblokir permintaan jahat. Mode Monitor: Mencatat ancaman tanpa pemblokiran."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Blokir Eksekusi Kode Jarak Jauh"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Blokir Penyertaan File Jarak Jauh"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Blokir Injeksi SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Blokir Unggahan File Mencurigakan"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Blokir akses XML-RPC (mencegah kekerasan)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Blokir Serangan XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Blokir akses dari negara tertentu."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Blokir perayap agresif (tingkat permintaan tinggi)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Blokir pemindaian enumerasi penulis (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Blokir string kueri yang terlalu panjang."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Blokir bot dan pencakar jahat yang diketahui"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Blokir bot dan pencakar berbahaya yang diketahui."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Blokir permintaan yang formatnya salah dan string kueri yang mencurigakan"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Blokir permintaan jahat"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Blokir permintaan dan serangan berbahaya"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Blokir atau izinkan lalu lintas berdasarkan negara."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Blokir permintaan yang lebih besar dari ukuran ini untuk mencegah serangan DoS."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Blokir permintaan dengan agen pengguna yang kosong (mungkin memblokir beberapa bot yang sah)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Blokir permintaan tanpa header Agen-Pengguna."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Blokir IP yang mencurigakan"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Blokir Agen Pengguna yang mencurigakan"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Blokir lalu lintas dari negara tertentu. Konfigurasikan negara dalam pengaturan sebelum mengaktifkan."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Blokir unggahan dengan ekstensi yang dapat dieksekusi (.php, .exe, .sh, dll.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Serangan yang Diblokir"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Ekstensi File yang Diblokir"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Permintaan yang Diblokir"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Agen Pengguna yang Diblokir"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Memblokir alamat IP yang menunjukkan perilaku jahat. Aman - Anda dapat memasukkan IP Anda ke dalam daftar putih."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Tandai URL ini sehingga Anda selalu dapat mengakses halaman login Anda."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Perlindungan Bot & Perayap"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Perlindungan Bot & Agen Pengguna"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Pencegahan bot"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Perlindungan bot"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Peramban"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Kekuatan Kasar"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Perlindungan Kekuatan Brute"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Perlindungan brute force dan batas upaya masuk."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "Serangga"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Hari Tersibuk"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "Perlindungan CAPTCHA"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "Integrasi CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "Status CDN"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (Format Acara Umum)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "Pipa CI/CD"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "Integrasi Saluran Pipa CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Batalkan"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Pratinjau Captcha"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Penyedia Captcha"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Pengaturan Captcha"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Ubah Awalan Basis Data"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Ubah awalan tabel database (memerlukan pembaruan database manual)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Ubah URL login default untuk mencegah serangan."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Ubah URL login wp-admin default untuk mencegah serangan otomatis."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Mengubah URL login dari /wp-admin menjadi slug khusus untuk mencegah serangan bot"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "Saluran"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Persyaratan Karakter"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Periksa Integritas Inti"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Periksa Interval"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Periksa dan perbaiki file inti WordPress yang rusak menggunakan sumber resmi."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Periksa file inti untuk modifikasi dan malware."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Periksa Pintu Belakang"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Periksa Kebingungan"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Periksa kerentanan yang diketahui."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Periksa file yang diunggah untuk menemukan konten berbahaya."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Memeriksa shell web"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Memeriksa plugin/tema untuk mengetahui kerentanan yang diketahui. Aman - hanya memeriksa versi."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Pilih siput yang unik dan sulit ditebak."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Pilih jenis tantangan untuk captcha NexifyMy."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Bersihkan File"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Bersihkan File:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Bersihkan dan optimalkan database"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Bersihkan data yang tidak perlu untuk meningkatkan kinerja database."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Hapus Log"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "awan suar"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare & lainnya"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Pengaturan API Cloudflare"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Token API Cloudflare (dengan izin Zona)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Pintu Putar Cloudflare"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Kode"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Kedaluwarsa Kode"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Masalah Kualitas Kode"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Daftar ekstensi file yang dipisahkan koma untuk diblokir dalam unggahan."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Daftar ekstensi file yang dipisahkan koma untuk dilewati (mis., jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Komentar Diblokir"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Formulir Komentar"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Tingkat Posting Komentar"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Formulir komentar"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Komunikasi"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Platform Komunikasi"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Bandingkan file inti dengan checksum resmi WordPress."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Bandingkan file inti WordPress Anda dengan checksum resmi untuk mendeteksi modifikasi."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Membandingkan setiap file inti dengan hash yang diharapkan"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Nonaktifkan sepenuhnya semua RSS dan Atom feed."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Nonaktifkan sepenuhnya semua modifikasi file (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Kepatuhan"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Kepatuhan & Pelaporan"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Pelaporan Kepatuhan & Keamanan"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Pengaturan Kepatuhan"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Ketergantungan Komposer"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Analisis komprehensif"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Pelacakan aktivitas pengguna yang komprehensif, pemantauan login, dan pencatatan peristiwa sistem."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Konfigurasikan"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Konfigurasikan 2FA untuk meningkatkan keamanan login"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Konfigurasikan CDN untuk keamanan dan kinerja."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Konfigurasikan integrasi CDN dan manajemen cache."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Konfigurasikan Web Application Firewall (WAF) untuk melindungi situs Anda."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Konfigurasikan peringatan dan pemberitahuan email."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Konfigurasikan aturan firewall dan pengaturan perlindungan."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Konfigurasikan perilaku pemindai malware dan opsi pemindaian terjadwal."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Konfigurasikan pengaturan dan preferensi plugin."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Konfigurasikan pengaturan plugin."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Konfigurasikan pengaturan keamanan Anda."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Konfirmasikan"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Konfirmasikan Tindakan"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Perangkat Lunak Jahat yang Dikonfirmasi"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Hubungkan pemantauan keamanan Anda ke platform SIEM, tiket, komunikasi, dan CI/CD."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Hubungi tim dukungan kami untuk bantuan dengan NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Konten"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Aktivitas Konten"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Perubahan Konten"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Acara Konten"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Keamanan Konten"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Modifikasi File Inti"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Perbaikan File Inti"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Perbaikan Inti"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Integritas inti WordPress"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Integritas file inti"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Hitung"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "Negara"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Negara"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Pengaturan Pemblokiran Negara"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Pembatasan negara"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Buat Cadangan Sekarang"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Buat cadangan database WordPress Anda. Cadangan disimpan dengan aman dan dapat diunduh."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Buat insiden di ServiceNow untuk peristiwa keamanan penting."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Buat webhook di: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Buat webhook di Pengaturan Server Discord > Integrasi > Webhook"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Buat webhook: Teams > Saluran > Konektor > Webhook Masuk"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Dibuat"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Dibuat: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kritis"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Hanya Kritis"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "URL Masuk Saat Ini"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Versi Saat Ini"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Saat ini:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "URL Masuk Khusus"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "URL khusus"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Webhook Khusus"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Setiap hari"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Setiap hari (Disarankan)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Ringkasan Status Harian"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Ringkasan Harian"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Dasbor"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Retensi Data"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Basis data"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Tindakan Basis Data"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Pencadangan Basis Data"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Informasi Basis Data"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Optimasi Basis Data"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Pengoptimal Basis Data"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Keamanan Basis Data"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Ukuran Basis Data"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Pencadangan dan pengoptimalan basis data. Konfigurasikan jadwal pencadangan sebelum mengaktifkan."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Pemeriksaan keamanan basis data"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "anjing data"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Tanggal"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Tanggal/Waktu"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Pemantauan Penonaktifan:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Modus Debug"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Dalam"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Pemindaian Mendalam"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Mode Pemindaian Default"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Mode pemindaian default digunakan ketika tidak ada yang ditentukan."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Definisi"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Hapus"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Hapus semua data plugin saat mencopot pemasangan"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Hapus:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Pemindaian ketergantungan, pemantauan skrip pihak ketiga, dan verifikasi integritas CDN."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Deskripsi"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Wawasan mendetail tentang lalu lintas situs dan peristiwa keamanan Anda"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Wawasan mendetail tentang kinerja keamanan situs web Anda."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Mendeteksi dan memblokir upaya eksekusi kode."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Deteksi skrip dan shell pintu belakang yang tersembunyi."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Deteksi malware, pintu belakang, dan kode mencurigakan"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Deteksi ancaman"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Deteksi ancaman yang tidak diketahui menggunakan analisis perilaku."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Metode Deteksi"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Jenis Perangkat"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Kesulitan"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Tingkat Kesulitan"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Tingkat kesulitan untuk tantangan captcha NexifyMy."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Langsung"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Penjelajahan Direktori"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Perlindungan Traversal Direktori"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Nonaktifkan 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Nonaktifkan Kata Sandi Aplikasi"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Nonaktifkan Arsip Penulis"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Nonaktifkan Penjelajahan Direktori"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Nonaktifkan Penyematan"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Nonaktifkan Editor File"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Nonaktifkan Modifikasi File"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Nonaktifkan Pesan Kesalahan Masuk"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Nonaktifkan Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Nonaktifkan Pingback"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Nonaktifkan Instalasi Plugin/Tema"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Nonaktifkan Enumerasi Pengguna REST API"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Nonaktifkan Umpan RSS/Atom"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Nonaktifkan Klik Kanan"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Nonaktifkan Pemilihan Teks"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Nonaktifkan Trackback"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Nonaktifkan editor WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Nonaktifkan XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Nonaktifkan XML-RPC (mencegah vektor brute force umum)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Nonaktifkan XML-RPC (mencegah serangan pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Nonaktifkan XML-RPC (digunakan dalam serangan DDoS dan brute force)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Nonaktifkan halaman arsip penulis untuk mencegah penghitungan nama pengguna."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Nonaktifkan fungsionalitas oEmbed dan titik akhir REST API."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Nonaktifkan fungsi pingback untuk mencegah DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Nonaktifkan fungsi pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Nonaktifkan editor file plugin/tema di admin WordPress."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Nonaktifkan enumerasi pengguna publik melalui REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Nonaktifkan menu konteks klik kanan di frontend."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Nonaktifkan editor tema dan plugin bawaan untuk mencegah injeksi kode."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Nonaktifkan editor tema dan plugin"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Nonaktifkan editor tema/plugin di admin"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Nonaktifkan fungsi lacak balik."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Dengan disabilitas"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Menonaktifkan XML-RPC untuk mencegah serangan. Aman kecuali Anda menggunakan Jetpack atau aplikasi seluler."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Menonaktifkan editor tema/plugin bawaan. Aman - mencegah pengeditan kode di admin."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Menonaktifkan pengeditan file, XML-RPC, dan menerapkan praktik terbaik WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Integrasi Perselisihan"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Unduh"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Mengunduh paket WordPress baru dari sumber resmi"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Mudah"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Mudah (hanya tambahan)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Pengeditan file plugin NexifyMy Security dinonaktifkan karena alasan keamanan."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Editor & Akses File"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Pemblokiran Editor:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "Pencarian elastis"
 
 msgid "Email"
-msgstr "Email"
+msgstr "Surel"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Pengaturan Peringatan Email"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "Peringatan Email"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Cadangan Email"
 
 msgid "Email Notifications"
 msgstr "Notifikasi Email"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "Laporan Email"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Laporan Pemindaian Email"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Verifikasi Email"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Agen Pengguna Kosong"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Aktifkan"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Aktifkan 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Aktifkan Modul 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Aktifkan Pencatatan Aktivitas"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Aktifkan Peringatan"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Aktifkan Perlindungan CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Aktifkan Integrasi CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Aktifkan fitur CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Aktifkan Integrasi CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Aktifkan Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Aktifkan Webhook Khusus"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Aktifkan Perselisihan"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Aktifkan Peringatan Email"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Aktifkan Firewall"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Aktifkan Pemblokiran Geo"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Aktifkan Sembunyikan Login"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Aktifkan Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Aktifkan Perlindungan"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Aktifkan Pembatasan Tarif"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Aktifkan Integrasi SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Aktifkan SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Aktifkan Pemindai"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Aktifkan Modul Pemindai"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Aktifkan Pemindaian Terjadwal"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Aktifkan Layanan Sekarang"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Aktifkan Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Aktifkan Tim"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Aktifkan Otentikasi Dua Faktor"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Aktifkan WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Aktifkan Modul WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Aktifkan perlindungan WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Aktifkan Firewall Aplikasi Web"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Aktifkan perlindungan Firewall Aplikasi Web."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Aktifkan dan konfigurasikan modul keamanan untuk situs Anda."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Mengaktifkan dan mengkonfigurasi modul keamanan."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Aktifkan perlindungan captcha"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Aktifkan pemblokiran berbasis negara"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Aktifkan pencatatan debug (hanya untuk pemecahan masalah)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Aktifkan perlindungan firewall untuk memblokir serangan"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Aktifkan pembatasan tingkat login"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Aktifkan pemindai malware"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Mengaktifkan atau menonaktifkan modul keamanan."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Mengaktifkan atau menonaktifkan seluruh modul WAF."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Mengaktifkan atau menonaktifkan pemindai malware."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Mengaktifkan atau menonaktifkan modul pembatas kecepatan."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Mengaktifkan atau menonaktifkan otentikasi dua faktor."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Aktifkan pemindaian terjadwal"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Aktifkan fitur pemindai kerentanan"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Diaktifkan"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Titik akhir"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "URL titik akhir"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Terapkan Kata Sandi yang Kuat"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Terapkan persyaratan kata sandi yang kuat"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Terapkan persyaratan kata sandi yang kuat untuk semua pengguna."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Terapkan persyaratan kata sandi yang kuat."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Menerapkan persyaratan kata sandi yang kuat untuk pengguna. Aman - hanya memengaruhi kata sandi baru."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Menerapkan kata sandi yang kuat dengan panjang minimum, aturan kompleksitas"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Masukkan kode 6 digit untuk memverifikasi pengaturan"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Masukkan IP, satu per baris"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Masukkan jawaban"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Masukkan kode:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Keamanan WordPress Tingkat Perusahaan"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Kesalahan"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Acara"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Format Acara"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Log Peristiwa"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Tingkat Keparahan Peristiwa"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Jenis Acara"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Acara"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Acara (7 hari)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Acara untuk Membuat Tiket"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Peristiwa yang Akan Diteruskan"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Acara untuk Diberitahukan"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Contoh: Tindakan GitHub"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Contoh: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Contoh: Pipa Jenkins"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Ekstensi yang Dikecualikan"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Pola File yang Dikecualikan"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Jalur yang Dikecualikan"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Pengguna yang Dikecualikan"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Pengecualian"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Pemindaian file lengkap"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Cadangan yang Ada"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Ekspor CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Pengaturan Ekspor"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Ekspor pengaturan Keamanan NexifyMy Anda ke file JSON. Ini mencakup semua konfigurasi modul, aturan firewall, daftar IP, dan pengaturan pemindaian."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Skrip Eksternal & Sumber Daya CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Keamanan masuk ekstra"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Gagal Membangun Malware"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Gagal Membangun Kerentanan"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Gagal"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Upaya 2FA yang gagal sebelum penguncian sementara."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Gagal Masuk"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Login Gagal"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Upaya login yang gagal terdeteksi"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Gagal mendaftarkan kunci sandi."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Eksekusi cepat"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Pemeriksaan keamanan cepat"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Mengambil checksum file resmi dari API WordPress.org"
 
 msgid "File"
-msgstr "File"
+msgstr "Mengajukan"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Penyunting Berkas"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Pencirian File:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Penyertaan File"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Perlindungan Penyertaan File"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Pemeriksaan Integritas File"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Pemantauan Integritas File"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Izin Berkas"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "File Dikarantina"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Ekstensi file yang dikecualikan dari pemindaian (satu per baris, tanpa titik)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Nama file"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "File Dipindai"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "File yang Dipindai:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "File secara berkala dibandingkan dengan data dasar."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "File di karantina disimpan dengan aman dan tidak dapat dijalankan."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "File yang lebih besar dari ini akan dilewati selama pemindaian."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "Menyaring"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "tembok api"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Firewall & Perlindungan"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Konfigurasi Firewall"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Aturan Firewall"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Pengaturan Firewall"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Perbaiki file yang dimodifikasi"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Tandai kode yang sangat dikaburkan atau dikodekan."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Paksa SSL untuk Admin"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Paksa SSL/HTTPS untuk area admin (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Paksa untuk Admin"
 
 msgid "Format:"
 msgstr "Format:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Meneruskan peristiwa keamanan ke platform Informasi Keamanan dan Manajemen Peristiwa (SIEM) Anda untuk pencatatan dan analisis terpusat."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Ditemukan di dasbor Cloudflare di bawah Ikhtisar"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Ditemukan di plugin aman yang diketahui - kemungkinan penggunaan sah"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Ditemukan di direktori sistem - mungkin sah"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Dari Tanggal"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Dari Surel"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Dari Nama"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "URL titik akhir HTTP/HTTPS lengkap untuk platform SIEM Anda."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Analisis malware lengkap"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Pemindaian malware lengkap"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Tanda tangan malware lengkap"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Analisis situs lengkap"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "Modul kepatuhan GDPR, CCPA, HIPAA, dan laporan audit keamanan komprehensif."
 
 msgid "General"
-msgstr "General"
+msgstr "Umum"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Pembatasan Permintaan Umum"
 
 msgid "General Settings"
 msgstr "Pengaturan Umum"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Hasilkan Laporan"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Hasilkan SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Hasilkan dari: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Dihasilkan"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Titik Akhir HTTP Generik"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Proksi Generik"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Blok Geo"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Pemblokiran Geo"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Distribusi Geografis"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Dapatkan token API gratis dari wpscan.com untuk mengetahui detail data kerentanan."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Dapatkan pemberitahuan instan di saluran komunikasi tim Anda ketika peristiwa keamanan terjadi."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Dapatkan status pemindaian terbaru"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Dapatkan hasil pemindaian (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Dapatkan kunci Anda dari dasbor Google reCAPTCHA atau Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Memulai"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Masa Tenggang"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Kelas"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "Keamanan GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "Introspeksi GraphQL dinonaktifkan."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "Batas kecepatan GraphQL terlampaui. Batas: %d kueri per menit."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "Header Keamanan HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "Keamanan Transportasi Ketat HTTP (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "Header HTTP"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Tangani"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Keras"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Sulit (termasuk perkalian)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Situs Pengerasan"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Pengerasan"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Opsi Pengerasan"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Header"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Bantuan & Dokumentasi"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Analisis Heuristik"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Deteksi pola heuristik"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Sembunyikan Masuk"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Sembunyikan Halaman Masuk"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Sembunyikan URL Masuk"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Sembunyikan URL Masuk:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Sembunyikan Versi WP"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Sembunyikan URL Masuk WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Sembunyikan Versi WordPress"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Sembunyikan versi WordPress dari kode sumber"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Sembunyikan URL login default"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Sembunyikan wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Sembunyikan wp-admin dan wp-login.php dari penyerang."
 
 msgid "High"
-msgstr "High"
+msgstr "Tinggi"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Tinggi (Deteksi maksimum)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Keamanan Tinggi (lebih banyak pemeriksaan, lebih lambat)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Tingginya jumlah serangan yang diblokir baru-baru ini"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Tinggi atau Di Atas"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Ancaman Tingkat Keparahan Tinggi"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Hanya di daerah berisiko tinggi"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Ancaman dengan skor tinggi terdeteksi oleh analisis AI"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Sensitivitas yang lebih tinggi dapat menghasilkan lebih banyak kesalahan positif."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Tertinggi"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Tahan Ctrl/Cmd untuk memilih beberapa negara."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Tuan rumah"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Setiap jam"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Bagaimana 2FA Bekerja"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Cara Kerja Perbaikan Inti"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Cara Kerja Perlindungan Diri"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Berapa lama untuk memblokir IP setelah upaya terlampaui."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Berapa lama untuk memblokir IP setelah batas kecepatan terlampaui."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Berapa lama untuk menyimpan laporan lama (30-365 hari)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "Kontrol Akses IP"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "Alamat IP"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "Pemblokiran IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "Konfigurasi IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "Penguncian IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "Penguncian IP (upaya kekerasan)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "Manajemen Kekayaan Intelektual"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "Daftar Putih IP"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP yang melewati batasan kecepatan."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP yang akan selalu diblokir."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP yang tidak akan pernah diblokir."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Mengidentifikasi file yang diubah atau hilang"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Pemilihan Gambar"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Diperlukan tindakan segera"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Tingkat Dampak"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Pengaturan Impor"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Impor pengaturan dari file JSON yang diekspor sebelumnya. Ini akan menimpa pengaturan Anda saat ini."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "Impor/Ekspor"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Tidak aktif"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "Insiden"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Sertakan Pemeriksaan GDPR"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Sertakan daftar putih/daftar hitam IP"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Sertakan Metrik Kinerja"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Sertakan Pemeriksaan Keamanan"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Sertakan Ringkasan Ancaman"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Sertakan hasil pemindaian terakhir"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Sertakan log keamanan (30 hari terakhir)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Jawaban captcha salah. Silakan kembali dan coba lagi."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Jawaban captcha salah. Silakan coba lagi."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Nama indeks atau pengidentifikasi sumber untuk kategorisasi peristiwa."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Indeks/Sumber"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Informasi"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Keterbukaan Informasi"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Menginisialisasi..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Nama Instance"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Integrasikan pemindaian keamanan ke dalam jalur integrasi dan penerapan berkelanjutan Anda."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Integrasikan pemindaian keamanan ke dalam alur penerapan Anda dengan webhook dan akses API."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Terintegrasi dengan layanan CDN. Konfigurasikan kredensial CDN sebelum mengaktifkan."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Integrasi"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Hasil Pemeriksaan Integritas"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Pemeriksaan Integritas:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Status Integritas"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Token JWT tidak valid."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Kredensial tidak valid."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Kode verifikasi tidak valid."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Isolasikan ancaman"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Mengisolasi file yang mencurigakan tanpa menghapus. Aman - file dapat dipulihkan."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Jenis Masalah"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Masalah Ditemukan"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "format JSON. Contoh: {\"Otorisasi\": \"Pembawa TOKEN\", \"Jenis Konten\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "URL Awan Jira"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Integrasi Jira"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Simpan log semua permintaan analisis yang diblokir."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Simpan catatan semua pelanggaran batas tarif untuk dianalisis."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Selalu perbarui tanda tangan malware Anda untuk perlindungan terbaik."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Negara yang Dikenal"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "Kerentanan yang diketahui ditemukan pada plugin yang diinstal"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (Format Perpanjangan Peristiwa Log)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "30 Hari Terakhir"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "30 hari terakhir"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "7 Hari Terakhir"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "90 Hari Terakhir"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Terakhir Dipelajari"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Pemindaian Terakhir"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Pemindaian Terakhir:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Terakhir Diperbarui"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Terakhir digunakan: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Versi Terbaru"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Belajar - Hanya log, tidak ada pemblokiran"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Masa Pembelajaran"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Belajar..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Biarkan kosong untuk menggunakan email admin."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Kemungkinan aman - verifikasi jika diperlukan"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Batasi akses REST API untuk pengguna yang diautentikasi"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Batasi pengiriman komentar untuk mencegah spam."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Batasi permintaan berlebihan dari satu alamat IP."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Batasi upaya masuk"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Batasi upaya login untuk mencegah serangan brute force"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Batasi tingkat permintaan untuk mencegah penyalahgunaan dan serangan DDoS."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Batasi tingkat permintaan untuk mencegah penyalahgunaan."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Membatasi upaya login untuk mencegah serangan brute force. Aman - hanya memengaruhi upaya login yang gagal."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Buat daftar kerentanan yang diketahui"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Lalu Lintas Langsung"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "Monitor Lalu Lintas Langsung"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Memuat status CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Memuat peringatan..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Memuat data analisis..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Memuat cadangan..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Memuat IP yang diblokir..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Memuat negara..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Memuat informasi basis data..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Memuat data geografis..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Memuat log..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Memuat notifikasi..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Memuat statistik pengoptimalan..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Memuat status perlindungan..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Memuat file yang dikarantina..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Memuat perujuk..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Memuat deteksi ancaman..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Memuat halaman teratas..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Memuat data lalu lintas..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Terkunci setelah banyak upaya yang gagal."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Durasi Penguncian"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Periode penguncian setelah upaya 2FA maksimal gagal."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Catat Permintaan yang Diizinkan"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Catat Permintaan yang Diblokir"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Catat Upaya Masuk yang Gagal"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Log Keluar"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Catat Unggahan Media"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Perubahan Opsi Log"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Catat Perubahan Plugin"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Catat Posting/Perubahan Halaman"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Perubahan Profil Log"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Pelanggaran Batas Nilai Log"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Retensi Log"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Catat Perubahan Peran"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Catat Login yang Berhasil"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Catat Perubahan Tema"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Pembuatan/Penghapusan Pengguna Log"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Catat semua permintaan yang lolos pemeriksaan WAF (penggunaan disk tinggi)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Pencatatan"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Pencatatan & Pemantauan"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Masuk"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Masuk & Otentikasi"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Aktivitas Masuk"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Jendela Percobaan Masuk"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Upaya Masuk"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Masuk CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Masuk Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Formulir Masuk"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Durasi Penguncian Masuk"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Perlindungan Masuk"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Pembatasan Kecepatan Masuk"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Keamanan Masuk"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Masuk Siput"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Pengaturan URL Masuk"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Formulir masuk"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Keluar"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Logout"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Log"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Log yang lebih lama dari ini secara otomatis dihapus setiap hari."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Mencatat peristiwa keamanan untuk ditinjau. Aman - hanya mencatat aktivitas."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Rendah"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Rendah (Lebih sedikit positif palsu)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Dampak Rendah (lebih sedikit pemeriksaan, lebih cepat)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Huruf kecil (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Alat pemeliharaan dan diagnostik untuk situs Anda."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Pastikan untuk mengingat URL login khusus Anda!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Perangkat Lunak Jahat & Pemindaian"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Definisi Perangkat Lunak Jahat"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Perangkat Lunak Jahat Ditemukan"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Pemindai Perangkat Lunak Jahat"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Malware terdeteksi selama pemindaian file"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Kelola Notifikasi"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Kelola ancaman yang dikarantina. Tinjau, pulihkan, atau hapus file secara permanen."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Wajib untuk Peran"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Tinjauan manual direkomendasikan"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Tandai Semua Telah Dibaca"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Tandai Semua sebagai Telah Dibaca"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Sakelar utama untuk mengaktifkan atau menonaktifkan semua pencatatan aktivitas."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Pertanyaan Matematika"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Upaya Maks"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Upaya Max yang Gagal"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Ukuran File Maks"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Upaya Masuk Maks"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Panjang String Kueri Maks"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Ukuran Permintaan Maks"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Permintaan Maks"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Permintaan AJAX maksimum per menit per IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Permintaan API maksimum per menit per IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Upaya login gagal maksimum sebelum lockout."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Permintaan halaman maksimum per menit per IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Ukuran tubuh permintaan maksimum untuk dipindai. Permintaan yang lebih besar akan dilewati."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Permintaan maksimum yang diperbolehkan per menit per IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Permintaan pencarian maksimum per menit untuk mencegah kehabisan database."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Waktu maksimum untuk satu operasi pemindaian."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Waktu maksimum untuk pemindaian malware sebelum batas waktu habis."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Unggahan Media"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Sedang"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Sedang (Seimbang)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Sedang (penjumlahan/pengurangan)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Sedang atau Di Atas"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Batas Memori"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Memori dialokasikan untuk operasi pemindaian."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Pesan"
 
 msgid "Method"
-msgstr "Method"
+msgstr "Metode"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Integrasi Tim Microsoft"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Minimal %d karakter"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Panjang Minimal"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Tingkat Keparahan Minimum untuk Gagal"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Panjang kata sandi minimum (8-32 karakter)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Modus"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Kontrol Modul"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Modul"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Pantau Skrip Eksternal"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Mode Monitor (Hanya Log)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Pantau file plugin untuk perubahan"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Pantau lalu lintas situs secara real-time."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Pantau lalu lintas waktu nyata"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Pantau lalu lintas dan aktivitas pengunjung secara real-time."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Pantau tren pengunjung, tampilan halaman, dan pola lalu lintas dari waktu ke waktu."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Pemantauan & Peringatan"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Memantau lalu lintas waktu nyata. Aman - hanya melacak kunjungan."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Bulanan"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Pengguna Paling Aktif"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Memindahkan file mencurigakan ke direktori yang dilindungi."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "Ketergantungan NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Nama"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Butuh Dukungan?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Tidak pernah"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Tidak pernah kadaluarsa"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "Keamanan Nexify"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "Nexify Captcha Saya (Bawaan)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyJenis Captcha Saya"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "Nexify Keamanan Saya"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security telah mendeteksi modifikasi tidak sah pada filenya. Harap verifikasi instalasi Anda."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Anda memiliki %d peringatan keamanan yang belum dibaca."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Pembaruan Berikutnya"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Tidak Ada Masa Tenggang"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Tidak Ada Aktivitas Terbaru"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Tidak ada SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Belum ada aktivitas yang tercatat. Aktivitas akan muncul di sini setelah pengguna mulai melakukan tindakan."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Belum ada perubahan konten yang dicatat."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Belum ada negara yang dipilih."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Tidak ada data yang tersedia"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Belum ada data peristiwa yang tersedia."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Tidak ada file di karantina."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Tidak ada data geografis yang tersedia"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Belum ada aktivitas login yang tercatat."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Belum ada kunci sandi yang didaftarkan."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Tidak ada laporan yang tersedia."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Belum ada pemindaian yang dijalankan"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Tidak ada hasil pemindaian yang tersedia. Klik \"Jalankan Pemindaian\" untuk menganalisis dependensi Anda."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Tidak ada hasil pemindaian yang tersedia. Jalankan pemindaian untuk memeriksa kerentanan."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Tidak ada rekomendasi keamanan saat ini. Situs Anda terlindungi dengan baik."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Tidak ada data tingkat keparahan yang tersedia."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Tidak ada IP mencurigakan yang terdeteksi."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Belum ada kejadian sistem yang tercatat."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Belum ada ancaman yang terdeteksi."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Belum ada aktivitas pengguna yang tercatat."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Belum ada aktivitas pengguna."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Tidak Aktif"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Tidak Diaktifkan"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Belum diperiksa"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Tidak dijadwalkan"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Catatan:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Email Pemberitahuan"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Pengaturan Pemberitahuan"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Pemberitahuan"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Beritahu saat Lockout"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Beri tahu pengguna ketika 2FA diaktifkan/dinonaktifkan di akun mereka."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Nomor (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Jumlah Kode Cadangan"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Jumlah kode cadangan yang akan dihasilkan per pengguna."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Jumlah upaya login yang gagal sebelum lockout."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Jumlah lockout sebelum pelarangan permanen."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Jumlah pelanggaran aturan sebelum pemblokiran otomatis."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Obyek"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Pada login berikutnya, masukkan kata sandi + kode 6 digit"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Sekali Mingguan"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Satu IP per baris"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Satu IP per baris. IP proxy diizinkan untuk mengirim header X-Forwarded-For (misalnya, Cloudflare, penyeimbang beban)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Satu IP per baris. IP ini melewati semua batas kecepatan."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Satu IP per baris. IP ini akan segera diblokir. Contoh: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Satu IP per baris. IP ini akan melewati pemeriksaan WAF."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Satu IP per baris. IP ini akan melewati semua aturan WAF. Contoh: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Satu jalur per baris. Jalur absolut ke direktori tambahan untuk dipindai."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Satu jalur per baris. Direktori untuk dilewati selama pemindaian."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Satu per baris. Blokir agen pengguna tertentu. Contoh: bot buruk, pengikis"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Satu per baris. Agen pengguna dalam daftar ini akan melewati pemeriksaan WAF. Contoh: Googlebot, bot pelayanan yang baik"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Satu nama pengguna per baris"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Buka Pengaturan"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Sistem Operasi"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Modus Operasi"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Optimalkan Basis Data"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Optimalkan dan amankan database Anda."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Perubahan Opsi"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Opsional untuk Semua Pengguna"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Opsional: Kirim hasil pemindaian ke platform CI/CD Anda."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Jalur Asli"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Kedaluwarsa"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Di atas"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Ganti bahasa untuk antarmuka plugin. Bahasa yang didukung: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Ikhtisar"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "Versi PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Paket"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Permintaan Halaman per Menit"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Tampilan Halaman"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Halaman tidak ditemukan."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Otentikasi Kunci Sandi"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Nama kunci sandi (misalnya, MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Kunci sandi berhasil didaftarkan!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Kunci sandi tidak didukung di browser ini."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Kata sandi"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Kata Sandi Kedaluwarsa"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Kebijakan Kata Sandi"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Kebijakan Kata Sandi"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Persyaratan Kata Sandi"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Persyaratan Kata Sandi:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Formulir Reset Kata Sandi"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Penyetelan Ulang Kata Sandi"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Kata sandi minimal harus %d karakter."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Kata sandi harus mengandung setidaknya satu huruf kecil."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Kata sandi harus mengandung setidaknya satu nomor."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Kata sandi harus mengandung setidaknya satu karakter khusus."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Kata sandi harus mengandung setidaknya satu huruf besar."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Kebijakan kata sandi"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Formulir pengaturan ulang kata sandi"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Jalur untuk dikecualikan dari pemindaian (relatif terhadap root WordPress). Satu per baris."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Wawasan Aktivitas Puncak"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Jam Puncak"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Jam Lalu Lintas Puncak"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Modus Kinerja"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Pengaturan Kinerja"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Laporan Berkala"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Permanen"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Ambang Larangan Permanen"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Menghapus file secara permanen."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Tolong selesaikan captcha matematikanya."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Pengaya"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Analisis Plugin & Tema"
 
 msgid "Plugin Language"
 msgstr "Bahasa Plugin"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Plugin Terakhir Diperbarui"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Opsi Pengaya"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Plugin Perlindungan Diri"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Versi Plugin"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Kerentanan Plugin"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "File plugin tidak dapat diedit melalui WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Integritas plugin"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Perlindungan plugin"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "CVE plugin/tema"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Aktivasi plugin/tema, pembaruan, perubahan opsi, dan ekspor."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Plugin"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Plugin Diaktifkan"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Plugin Dinonaktifkan"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Plugin Diperbarui"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Pengeditan postingan/halaman, penerbitan, pengunggahan media, dan penghapusan konten."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Postingan Dibuat"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Postingan Diterbitkan"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Postingan Diperbarui"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Potensi ancaman keamanan terdeteksi"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Cegah serangan XML-RPC dan upaya brute force"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Cegah akses ke direktori di luar root web."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Cegah penyerang memasukkan file server lokal."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Cegah kekerasan"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Cegah pengeditan kode di admin WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Cegah daftar direktori melalui .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Cegah peringatan duplikat dalam periode ini."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Cegah peringatan duplikat dalam jangka waktu ini. Setel ke 0 untuk menonaktifkan pembatasan."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Cegah pengeditan file plugin melalui editor WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Cegah penyertaan file jarak jauh melalui parameter URL."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Cegah daftar isi direktori melalui .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Cegah instalasi plugin/tema dari panel admin."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Cegah pemilihan dan penyalinan teks di frontend."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Cegah penggunaan kata sandi yang sering dilanggar"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Cegah penemuan pengguna melalui titik akhir /wp-json/wp/v2/users."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Mencegah modifikasi tidak sah pada file plugin keamanan"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Alamat email utama untuk peringatan keamanan."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Prioritas"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Saran keamanan proaktif dan rekomendasi pengerasan otomatis."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "Masalah"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Pembaruan Profil"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Perubahan profil, perubahan peran, pembuatan pengguna, dan peristiwa penghapusan."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Kunci Proyek"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Melindungi dari Pemalsuan Permintaan Lintas Situs."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Melindungi dari serangan Cross-Site Scripting (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Melindungi dari serangan injeksi SQL dalam parameter GET/POST."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Melindungi dari injeksi SQL, XSS, RFI, dan serangan lainnya."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Lindungi dari serangan brute force dan DoS dengan membatasi frekuensi permintaan per alamat IP."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Lindungi formulir login dan registrasi dari serangan bot otomatis."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Lindungi formulir login dan registrasi dengan captcha berbasis matematika."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Lindungi file plugin dari gangguan."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Lindungi plugin keamanan dari gangguan dan modifikasi yang tidak sah."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Lindungi halaman login Anda dari serangan brute force."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Lindungi situs Anda dari lalu lintas dan serangan berbahaya."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Formulir yang Dilindungi"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Tingkat Perlindungan"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Modus Perlindungan"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Aturan Perlindungan"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Pengaturan Perlindungan"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Melindungi REST API dengan autentikasi JWT, pembatasan kecepatan, dan CORS. Penting untuk WordPress tanpa kepala."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Melindungi dari injeksi SQL, XSS, dan permintaan jahat. Aman untuk diaktifkan - hanya memblokir lalu lintas berbahaya."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Melindungi file plugin dari modifikasi. Aman - mencegah gangguan."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Penyedia"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Bersihkan Semua Log"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Bersihkan Cache"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Karantina"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Segera karantina"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Karantina direkomendasikan"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Karantina:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "Dikarantina"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "File yang Dikarantina"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Kompleksitas kueri melebihi maksimum %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Kedalaman kueri melebihi kedalaman maksimum yang diperbolehkan sebesar %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "Cepat"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Tindakan Cepat"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Pemindaian Cepat"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Tindakan Pemindaian Cepat"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Akses cepat ke alat pemeliharaan keamanan."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Cepat: Hanya file inti. Standar: Inti + tema/plugin. Dalam: Semua file."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "Keamanan API REST"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "Pengguna REST API"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "Perlindungan REST API"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS feed dinonaktifkan di situs ini."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Batas Nilai"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Pembatas Nilai"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Pembatasan Nilai"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Pengaturan Pembatasan Nilai"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Pemantauan waktu nyata"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Alasan"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Terima peringatan email ketika kerentanan terdeteksi"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Aktivitas Terkini"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Deteksi Ancaman Terkini"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "IP yang Baru Diblokir"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Email Penerima"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Rekomendasi"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Direkomendasikan"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Tindakan yang Direkomendasikan"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Pengalihan Akses yang Diblokir"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Arahkan ulang ke beranda"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Kurangi permukaan serangan dengan menonaktifkan fitur yang tidak perlu dan memperkuat konfigurasi WordPress."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Segarkan"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Regenerasi"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Regenerasi Garis Dasar"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Daftarkan Kunci Sandi"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Kunci Sandi Terdaftar"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Mendaftarkan kunci sandi..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Formulir Pendaftaran"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Formulir pendaftaran"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Ingat Perangkat"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Ingat Durasi"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Ingat perangkat ini"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Hapus"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Hapus Tag Generator"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Hapus Petunjuk Masuk"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Hapus versi WordPress dari kode sumber"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Hapus tag meta generator dari semua halaman."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Hapus petunjuk dan saran pengaturan ulang kata sandi."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Hapus informasi versi dari HTML dan feed."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Perbaiki Semua File yang Dimodifikasi"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Memperbaiki file inti WordPress yang dimodifikasi. Gunakan dengan hati-hati - buat cadangan sebelum diperbaiki."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Mengganti file yang rusak dengan versi bersih"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Laporan Sejarah"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Retensi Laporan (hari)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Jadwal Laporan"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Batas Permintaan & Pemfilteran"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Batas Ukuran Permintaan"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Permintaan Per Menit"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Memerlukan 2FA untuk semua administrator"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Memerlukan 2FA untuk peran pengguna yang dipilih."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Memerlukan faktor kedua untuk verifikasi login"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Memerlukan login untuk akses REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Membutuhkan faktor kedua untuk login. Konfigurasikan metode 2FA Anda sebelum mengaktifkan."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Setel ulang"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Atur Ulang Semua Pengaturan"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Atur Ulang Pembelajaran"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Reset semua pengaturan NexifyMy Security ke nilai defaultnya. Tindakan ini tidak dapat dibatalkan."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Atur Ulang ke Default"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Menyetel ulang..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Kode Respon di Blok"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Pulihkan"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Pulihkan:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Batasi REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Membatasi akses REST API. Dapat memengaruhi plugin yang menggunakan REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Periode Retensi"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Kembalikan kode kesalahan jika malware terdeteksi (gagal dalam pembuatan CI/CD)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Kembalikan kode kesalahan jika ditemukan kerentanan."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Mengembalikan file ke lokasi aslinya."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Tinjau Peringatan ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Tinjau segera"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Tinjau log keamanan secara teratur"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Perubahan Peran"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Jalankan Pemindaian Keamanan Penuh"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Jalankan Pemeriksaan Integritas"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Jalankan Pemeriksaan Cepat"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Jalankan Pemindaian"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Jalankan Pemindaian Kerentanan"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Jalankan pemindaian keamanan untuk mengidentifikasi kerentanan"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Menjalankan pemindaian malware otomatis setiap hari. Aman - hanya pemindaian, tidak ada perubahan file."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "PERINGATAN KEAMANAN:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Hash SHA-256 dari semua file plugin disimpan sebagai garis dasar."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "Integrasi SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "Platform SIEM"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "Injeksi SQL"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "Perlindungan Injeksi SQL"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "Status SSL"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "Verifikasi SSL"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Simpan Pengaturan Lanjutan"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Simpan Pengaturan CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Simpan Pengaturan Perselisihan"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Simpan Pengaturan Email"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Simpan Pengaturan Jira"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Simpan Pengaturan SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Simpan Pengaturan Pemindai"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Simpan Pengaturan ServiceNow"
 
 msgid "Save Settings"
 msgstr "Simpan Pengaturan"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Simpan Pengaturan Slack"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Simpan Pengaturan Tim"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Simpan Pengaturan WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Simpan Pengaturan Webhook"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Pindai"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Pemindaian Selesai"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Pemindaian Selesai"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Pindai Ketergantungan Komposer"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Konfigurasi Pemindaian"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Kontrol Pemindaian"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Pindai Direktori Kustom"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Pindai Ketergantungan NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Pindai Plugin"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Pindai kode QR dengan aplikasi autentikator (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Hasil Pemindaian"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Jadwal Pemindaian"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Sensitivitas Pemindaian"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Pindai Target"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Pindai Tema"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Batas Waktu Pemindaian"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Pindai Direktori Unggahan"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Pindai Inti WordPress"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Pindai semua plugin yang diinstal untuk mencari malware."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Pindai semua tema yang diinstal untuk mencari malware."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Pindai area kritis saja"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Pindai file untuk mencari malware dan kode mencurigakan."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Pindai plugin, tema, dan inti WordPress untuk mengetahui kerentanan yang diketahui."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Pindai situs Anda untuk mencari malware, kerentanan, dan masalah keamanan."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Pindai situs web Anda untuk mencari malware dan kerentanan keamanan."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Pemindai"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Pengaturan Pemindai"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Memindai..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Memindai file untuk mencari malware dan kode mencurigakan. Aman - hanya memindai, tidak mengubah file."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Mode Pemindaian Terjadwal"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Pemindaian Terjadwal"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Skor"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Permintaan Pencarian per Menit"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Cari nama pengguna..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Kunci Rahasia"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Akses file aman"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Mengamankan WPGraphQL dengan batas kedalaman kueri, pemeriksaan kompleksitas, dan pembatasan kecepatan. Aman untuk pengaturan tanpa kepala."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Peringatan Keamanan"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Analisis Keamanan"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Pengerasan Keamanan"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Header Keamanan"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Insiden Keamanan"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Log Keamanan"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Modul Keamanan"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Pemberitahuan Keamanan"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Opsi Keamanan"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Rekomendasi Keamanan"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Skor Keamanan"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Status Keamanan"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Alat Keamanan"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Kerentanan Keamanan"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Peringatan keamanan"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Peristiwa keamanan akan muncul di sini."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Pengerasan keamanan"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Pemindaian keamanan telah selesai dijalankan"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Pengaturan keamanan telah diubah"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Pilih Negara:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Pilih negara dari kiri, klik \"Tambahkan ke Daftar\" untuk menambahkannya. Negara yang dipilih akan diblokir (Daftar Hitam) atau diizinkan (Daftar Putih) berdasarkan mode di atas."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Pilih gambar dengan tanda centang:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Pilih layanan captcha mana yang akan digunakan."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Negara Terpilih:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Perlindungan Diri"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Perlindungan Diri"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Kirim Peringatan Tes"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Kirim Email Uji"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Kirim peringatan setelah serangan sebanyak ini dalam satu jam."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Kirim intisari email harian"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Kirim pemberitahuan email ketika IP terkunci."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Kirim pemberitahuan email untuk peristiwa keamanan"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Kirim pemberitahuan email ketika serangan kritis terdeteksi."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Kirim email ketika gangguan terdeteksi"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Kirim email ketika kerentanan ditemukan"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Kirim laporan ke email admin"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Kirim hasil pemindaian melalui email setelah setiap pemindaian."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Kirim peristiwa keamanan ke Splunk, Elasticsearch, atau platform SIEM lainnya untuk pemantauan dan analisis terpusat."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Kirim peristiwa keamanan ke titik akhir HTTP mana pun dengan konfigurasi khusus."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Kirim peristiwa keamanan ke titik akhir HTTP mana pun dengan header dan autentikasi khusus."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Kirim kode verifikasi melalui email."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Mengirim peringatan email untuk peristiwa keamanan. Aman - konfigurasikan pengaturan email terlebih dahulu."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "Integrasi LayananSekarang"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Menetapkan izin file yang aman. Mungkin memerlukan penyesuaian manual jika server mengalami masalah."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Pengaturan"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Pengaturan berhasil disimpan"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Keparahan"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Tampilkan halaman 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Tampilkan pesan kesalahan umum pada kegagalan login."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Tunjukkan pada Formulir"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Menampilkan %d dari %d entri"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Menampilkan peristiwa Kritis/Peringatan yang belum dibaca. Gunakan Log untuk riwayat lengkap."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Masuk dengan Kunci Sandi"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Status Tanda Tangan"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Deteksi Berbasis Tanda Tangan"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Tanda tangan"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Bawaan Situs"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Kunci Situs"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Kesehatan Keamanan Situs"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Ukuran"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Lewati file yang lebih besar dari ukuran ini."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Integrasi Kendur"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Beberapa perbaikan direkomendasikan"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Sumber"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Karakter khusus (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (Kolektor Acara HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Standar"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Standar - Perlindungan seimbang"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Pemindaian Standar"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Mulai Pindai"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Mulai Pemindaian Baru"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Mulai Pemindaian"
 
 msgid "Status"
 msgstr "Status"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Cerita"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Ketat - Keamanan maksimal"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Kata Sandi yang Kuat"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Kata sandi yang kuat"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Tingkat Keberhasilan"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Masuk Berhasil"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Login Berhasil"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "Suc uri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Logika Sumo"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Rantai Pasokan"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Keamanan Rantai Pasokan"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Pengaturan Rantai Pasokan"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Mendukung Google Authenticator, Authy, dll."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Didukung:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Kode Mencurigakan"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "IP yang mencurigakan"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Aktivitas Sistem"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Peristiwa Sistem"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Status Sistem"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "Aplikasi Otentikator TOTP"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Nama Tabel"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Tabel"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Deteksi Kerusakan:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Tugas"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Blokir sementara IP yang melebihi batas laju API."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Uji Koneksi"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Pemberitahuan Tes"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Pencocokan Teks"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI terus mempelajari pola perilaku normal termasuk jam lalu lintas, lokasi geografis, agen pengguna, dan pola permintaan. Baseline ini digunakan untuk mendeteksi anomali."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF melindungi situs Anda dari serangan web umum termasuk injeksi SQL, XSS, dan bot jahat."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Peralihan Tema"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Jam ini"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Bulan ini"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Minggu ini"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Ini adalah kata sandi yang umum."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Berikut tampilan captcha pada form login:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Kata sandi ini terlalu umum. Silakan pilih kata sandi yang lebih unik."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Kueri ini tidak diperbolehkan."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Ini akan mengatur ulang semua data pembelajaran AI dan pola perilaku. Melanjutkan?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Ancaman"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Perincian Ancaman:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Ancaman Terdeteksi"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Ancaman Terdeteksi (malware, file mencurigakan)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Deteksi & Pemblokiran Ancaman - 7 Hari Terakhir"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Skor Ancaman"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Ancaman Diblokir"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Ancaman Ditemukan"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Ancaman Hari Ini"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Periode Pembatasan"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Tiket"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Sistem Tiket"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Waktu"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Jendela Waktu (detik)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Waktu sebelum kode verifikasi email kedaluwarsa."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Jendela waktu untuk menghitung upaya login yang gagal."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Jendela waktu yang digunakan untuk menghitung upaya login yang gagal."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Sampai saat ini"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Hari ini"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Terlalu banyak upaya login yang gagal. Silakan coba lagi dalam %d menit."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Alat"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Alat & Utilitas"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Negara Teratas"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Alasan Deteksi Teratas"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Jenis Acara Teratas"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Halaman Teratas"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Perujuk Teratas"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Jumlah Acara"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Total Tampilan Halaman"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Jumlah Tanda Tangan"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Ukuran Jumlah"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Analisis Lalu Lintas"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Ikhtisar Lalu Lintas"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Memicu pemindaian keamanan"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Percayai Header Proxy"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Proksi Tepercaya"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Dua Kali Sehari"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Otentikasi Dua Faktor (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Otentikasi Dua Faktor"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Otentikasi dua faktor"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Ketik"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Ketikkan kata:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Perilaku Copot Pemasangan"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "IP unik"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Pengguna Unik"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Pengunjung Unik"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Tidak diketahui"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Peringatan Belum Dibaca"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Peringatan keamanan yang belum dibaca dari log Anda."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Perbarui Definisi"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Perbarui Definisi Sekarang"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Perbarui Definisi Malware"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Perbarui Sekarang"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Perbarui tanda tangan deteksi malware."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Huruf besar (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Tingkat Urgensi"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Gunakan header CDN/proxy untuk menentukan IP klien sebenarnya"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Gunakan Touch ID, Face ID, Windows Hello, atau kunci keamanan perangkat keras."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Gunakan header X-Forwarded-For untuk deteksi IP (hanya jika berada di belakang CDN/proxy)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Gunakan basis data tanda tangan malware untuk deteksi."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Gunakan kunci ini untuk mengautentikasi permintaan API dari pipeline CI/CD Anda."
 
 msgid "User"
-msgstr "User"
+msgstr "Pengguna"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Aktivitas Pengguna"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Agen Pengguna"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Acara Pengguna"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Penguncian Pengguna"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Manajemen Pengguna"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Persyaratan Pengguna"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Alamat pengguna atau IP terkunci karena aktivitas mencurigakan"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Nama pengguna"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Nama pengguna dan kata sandi diperlukan."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Pengguna Dibuat"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Pengguna Dihapus"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Pengguna mengaktifkan 2FA di pengaturan profil mereka"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Menggunakan AI untuk mendeteksi ancaman zero-day melalui analisis perilaku. Mempelajari pola normal dan menandai anomali. Aman - hanya memantau perilaku."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Sesi verifikasi berakhir. Silakan masuk lagi."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Verifikasi"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Verifikasi File Inti"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Verifikasi sertifikat SSL (disarankan untuk produksi)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Verifikasi dan perbaiki file inti WordPress."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Verifikasi dan perbaiki file inti"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Versi"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Lihat Semua"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Lihat Lalu Lintas Langsung"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Lihat semua peristiwa keamanan."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Melihat dan mengelola ancaman yang dikarantina."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Lihat dan kelola peringatan dan pemberitahuan keamanan."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Tampilan"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Tren Pengunjung - 30 Hari Terakhir"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Pengunjung"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Kunjungan Hari Ini"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Pemeriksaan Kerentanan"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Pemindai Kerentanan"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Rentan"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "Serangan WAF Diblokir"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "Blok WAF (diserang diblokir oleh firewall)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "Firewall WAF"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "Status WAF"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "Versi WP"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "Perlindungan WPGraphQL"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "Token API WPScan"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Peringatan"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Peringatan:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Peringatan: Mengimpor akan menggantikan semua pengaturan saat ini. Pastikan untuk mengekspor pengaturan Anda saat ini terlebih dahulu sebagai cadangan."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Firewall Aplikasi Web"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Firewall Aplikasi Web (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "URL kait web"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "URL webhook untuk Hasil"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Webhook"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Mingguan"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Laporan Keamanan Mingguan"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Daftar Putih (Hanya Izinkan)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Daftar Putih (hanya izinkan yang dipilih)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Daftar putih IP"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "IP yang masuk daftar putih"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Verifikasi File Inti WordPress"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "Status Inti WordPress"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "Pengerasan WordPress"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "Versi WordPress"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "File inti WordPress telah dimodifikasi"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress tidak mutakhir"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "Opsi Tipe Konten X (Tanpa Sniff)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Mencegah Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-Perlindungan"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "Kontrol XML-RPC"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "Serangan XSS"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "Perlindungan XSS"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Anda menggunakan siput login default. Pertimbangkan untuk mengubahnya menjadi sesuatu yang unik."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Anda harus masuk untuk mengakses REST API."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Situs Anda tidak menggunakan HTTPS. Aktifkan sertifikat SSL untuk koneksi aman."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Situs Anda terlindungi dengan baik"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Kode verifikasi Anda adalah: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Definisi virus Anda sudah kedaluwarsa. Perbarui sekarang untuk perlindungan terbaik."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ID Zona"
 
 msgid "ago"
-msgstr "ago"
+msgstr "lalu"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "serangan per jam"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "upaya"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "diblokir"
 
 msgid "characters"
-msgstr "characters"
+msgstr "karakter"
 
 msgid "days"
-msgstr "days"
+msgstr "hari"
 
 msgid "events"
-msgstr "events"
+msgstr "acara"
 
 msgid "fails"
-msgstr "fails"
+msgstr "gagal"
 
 msgid "files"
-msgstr "files"
+msgstr "file"
 
 msgid "from now"
-msgstr "from now"
+msgstr "mulai sekarang"
 
 msgid "including:"
-msgstr "including:"
+msgstr "termasuk:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "huruf kecil"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "menit"
 
 msgid "modules"
-msgstr "modules"
+msgstr "modul"
 
 msgid "number"
-msgstr "number"
+msgstr "nomor"
 
 msgid "or"
-msgstr "or"
+msgstr "atau"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "per menit"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "detik"
 
 msgid "special character"
-msgstr "special character"
+msgstr "karakter khusus"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "ancaman ditemukan"
 
 msgid "total records"
-msgstr "total records"
+msgstr "catatan total"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "huruf besar"
 
 msgid "views"
-msgstr "views"
+msgstr "dilihat"
 
 msgid "violations"
-msgstr "violations"
+msgstr "pelanggaran"
 
 msgid "visits"
-msgstr "visits"
+msgstr "kunjungan"
+msgid "Deception"
+msgstr "Penipuan"
+
+msgid "P2P Intelligence"
+msgstr "Intelijen P2P"
+
+msgid "Sandbox Console"
+msgstr "Konsol Kotak Pasir"
+
+msgid "Temporary Access"
+msgstr "Akses Sementara"
+
+msgid "Saving..."
+msgstr "Menyimpan..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Pengaturan disimpan. Memuat ulang..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Pengaturan berhasil disimpan! Memuat ulang..."
+
+msgid "Connection error"
+msgstr "Kesalahan koneksi"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Pemeriksaan keamanan gagal. Segarkan dan coba lagi."
+
+msgid "Settings handler not available."
+msgstr "Pengendali pengaturan tidak tersedia."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Reset semua pengaturan ke default? Hal ini tidak dapat dibatalkan."
+
+msgid "Purge CDN cache now?"
+msgstr "Bersihkan cache CDN sekarang?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Gagal menyimpan pengaturan. Silakan coba lagi."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Pengaturan diatur ulang ke default. Memuat ulang halaman..."
+
+msgid "Failed to load analytics data."
+msgstr "Gagal memuat data analisis."
+
+msgid "Devices"
+msgstr "Perangkat"
+
+msgid "No data available for this range."
+msgstr "Tidak ada data yang tersedia untuk rentang ini."
+
+msgid "Traffic trend chart"
+msgstr "Grafik tren lalu lintas"
+
+msgid "Distribution breakdown chart"
+msgstr "Bagan rincian distribusi"
+
+msgid "Total"
+msgstr "Jumlah"
+
+msgid "Series"
+msgstr "Seri"
+
+msgid "Predictive Threat Hunting"
+msgstr "Perburuan Ancaman Prediktif"
+
+msgid "Forecast next attack vectors"
+msgstr "Perkiraan vektor serangan selanjutnya"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Membuat profil tumpukan Anda, memprediksi kemungkinan vektor serangan, dan memberikan panduan pengerasan proaktif."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Kelola ancaman yang dikarantina dan file terhapus yang dapat dipulihkan."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "File yang Dihapus (Dapat Dipulihkan)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "File yang dipindahkan ke sini dapat dikembalikan ke karantina atau dihapus secara permanen."
+
+msgid "Deleted"
+msgstr "Dihapus"
+
+msgid "Loading deleted files..."
+msgstr "Memuat file yang dihapus..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Memindahkan file yang dikarantina ke penyimpanan terhapus yang dapat dipulihkan."
+
+msgid "Delete Permanently:"
+msgstr "Hapus Secara Permanen:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Menghapus file secara permanen dari penyimpanan yang dihapus."
+
+msgid "Access denied from your region."
+msgstr "Akses ditolak dari wilayah Anda."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Upaya login gagal maksimum sebelum penguncian sementara."
+
+msgid "Time window for counting failed attempts."
+msgstr "Jendela waktu untuk menghitung upaya yang gagal."
+
+msgid "Open Tool"
+msgstr "Buka Alat"
+
+msgid "Available Fix"
+msgstr "Perbaikan yang Tersedia"
+
+msgid "Preview Patch"
+msgstr "Pratinjau Patch"
+
+msgid "Apply Patch"
+msgstr "Terapkan Tambalan"
+
+msgid "Honeytrap Configuration"
+msgstr "Konfigurasi Perangkap Madu"
+
+msgid "Enable Deception Module"
+msgstr "Aktifkan Modul Penipuan"
+
+msgid "How Deception Works:"
+msgstr "Cara Kerja Penipuan:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "URL berikut tidak ada di situs Anda. Jika ada yang mengaksesnya, mereka <strong>secara otomatis diblokir</strong> sebagai penyerang yang terkonfirmasi. Administrator tidak pernah diblokir tetapi akan melihat peringatan."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Jalur Perangkap Madu Khusus"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Tambahkan satu jalur per baris (mis., /my-secret-admin/, /old-backup.sql). Defaultnya sudah aktif."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Jalur Honeytrap Default (Selalu Aktif)"
+
+msgid "Login Page Honeypot"
+msgstr "Halaman Masuk Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Bidang tak kasat mata dimasukkan ke dalam formulir login/pendaftaran. Hanya bot yang mengisinya, memicu deteksi dan pemblokiran instan."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Perlindungan ini selalu diaktifkan ketika modul Deception aktif. Tidak diperlukan konfigurasi."
+
+msgid "User Enumeration Trap"
+msgstr "Perangkap Pencacahan Pengguna"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Mendeteksi upaya pengintaian saat penyerang memindai nama pengguna yang valid melalui ?author=1, ?author=2, dll."
+
+msgid "Enable user enumeration detection"
+msgstr "Aktifkan deteksi enumerasi pengguna"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Blokir keras pada upaya enumerasi (default: pengalihan lunak ke beranda)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Blokir SEMUA enumerasi penulis (bahkan untuk pengguna yang sudah ada)"
+
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "Pemetaan Data Pasal 30 GDPR"
+
+msgid "Refresh Map"
+msgstr "Segarkan Peta"
+
+msgid "Export Data Map (PDF)"
+msgstr "Ekspor Peta Data (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Penemuan PII otomatis di seluruh tabel database, pemetaan aliran data, dan deteksi berbagi pihak ketiga."
+
+msgid "Data Element"
+msgstr "Elemen Data"
+
+msgid "Location"
+msgstr "Lokasi"
+
+msgid "Purpose"
+msgstr "Tujuan"
+
+msgid "Retention"
+msgstr "Retensi"
+
+msgid "Third-Party Sharing"
+msgstr "Berbagi Pihak Ketiga"
+
+msgid "Legal Basis"
+msgstr "Dasar Hukum"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Belum ada data PII yang terdeteksi. Jalankan pemindaian peta data untuk membuat laporan."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Otomatisasi yang Benar untuk Dilupakan"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Kirimkan permintaan penghapusan, verifikasi penghapusan data, dan lacak log kepatuhan untuk alur kerja GDPR."
+
+msgid "User ID"
+msgstr "ID Pengguna"
+
+msgid "Comments"
+msgstr "Komentar"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Hapus komentar alih-alih menganonimkan"
+
+msgid "Run Erasure"
+msgstr "Jalankan Penghapusan"
+
+msgid "Verify Erasure"
+msgstr "Verifikasi Penghapusan"
+
+msgid "GDPR Request Log"
+msgstr "Log Permintaan GDPR"
+
+msgid "Request Type"
+msgstr "Jenis Permintaan"
+
+msgid "Requested At"
+msgstr "Diminta Pada"
+
+msgid "Completed At"
+msgstr "Selesai Pada"
+
+msgid "No GDPR requests logged yet."
+msgstr "Belum ada permintaan GDPR yang dicatat."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Kotak Pasir Waktu Proses Bayangan"
+
+msgid "Enable Sandbox Module"
+msgstr "Aktifkan Modul Sandbox"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Memuat mesin Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "Aktifkan Konsol Sandbox"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Mengizinkan pengguna wp-admin dengan manage_options menjalankan kode di konsol sandbox."
+
+msgid "Sandbox Timeout"
+msgstr "Batas Waktu Kotak Pasir"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Batas waktu eksekusi dalam hitungan detik (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Analisis Dinamis"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Jalankan analisis eksekusi dinamis selain pemeriksaan statis."
+
+msgid "Quarantine Policy"
+msgstr "Kebijakan Karantina"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Karantina manual direkomendasikan untuk sebagian besar situs. Karantina otomatis hanya mengisolasi malware yang terkonfirmasi dengan tingkat keyakinan tinggi."
+
+msgid "Manual (Recommended)"
+msgstr "Panduan (Disarankan)"
+
+msgid "Auto Quarantine"
+msgstr "Karantina Otomatis"
+
+msgid "Save Quarantine Policy"
+msgstr "Simpan Kebijakan Karantina"
+
+msgid "AI Risk Controls"
+msgstr "Pengendalian Risiko AI"
+
+msgid "Enable AI Detection Module"
+msgstr "Aktifkan Modul Deteksi AI"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Aktifkan Deteksi Ancaman Orang Dalam"
+
+msgid "Insider Threat Threshold"
+msgstr "Ambang Batas Ancaman Orang Dalam"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Aktifkan Pemantauan Eksfiltrasi Data"
+
+msgid "Exfiltration Threshold"
+msgstr "Ambang Eksfiltrasi"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Hari Dasar Eksfiltrasi"
+
+msgid "Session Risk Threshold"
+msgstr "Ambang Batas Risiko Sesi"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Interval Pemeriksaan Ulang Auth Berkelanjutan (detik)"
+
+msgid "Risk Spike Threshold"
+msgstr "Ambang Batas Lonjakan Risiko"
+
+msgid "Save AI Settings"
+msgstr "Simpan Pengaturan AI"
+
+msgid "Quarantine Mode"
+msgstr "Modus Karantina"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Mode manual lebih aman dan direkomendasikan. Mode otomatis hanya mengkarantina malware yang terkonfirmasi dengan tingkat keyakinan tinggi."
+
+msgid "Data Map"
+msgstr "Peta Data"
+
+msgid "Privacy Requests"
+msgstr "Permintaan Privasi"
+
+msgid "Deception Technology"
+msgstr "Teknologi Penipuan"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypot, aset umpan, dan penipuan penyerang untuk menangkap ancaman sebelum menyerang."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Menampilkan %1$d dari %2$d entri"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "Modul Intelijen P2P tidak dimuat."
+
+msgid "P2P Threat Intelligence"
+msgstr "Intelijen Ancaman P2P"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Bagikan intelijen ancaman dengan instalasi SentinelWP lainnya untuk kekebalan kelompok."
+
+msgid "P2P Settings"
+msgstr "Pengaturan P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "Aktifkan Kecerdasan P2P"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Aktifkan pembagian intelijen ancaman kolaboratif dengan node rekan."
+
+msgid "My Node Key"
+msgstr "Kunci Node Saya"
+
+msgid "Copy"
+msgstr "Salin"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Bagikan kunci ini dengan rekan yang ingin terhubung ke situs Anda."
+
+msgid "Broadcast Threats"
+msgstr "Ancaman Siaran"
+
+msgid "Share detected threats with registered peers."
+msgstr "Bagikan ancaman yang terdeteksi dengan rekan-rekan yang terdaftar."
+
+msgid "Trust Threshold"
+msgstr "Ambang Kepercayaan"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Hanya IP yang diblokir secara otomatis dengan skor ancaman >= ambang batas ini. Nilai yang lebih rendah = pemblokiran yang lebih agresif."
+
+msgid "Registered Peers"
+msgstr "Rekan Terdaftar"
+
+msgid "Add Peer"
+msgstr "Tambahkan Rekan"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Belum ada rekan yang mendaftar. Tambahkan rekan untuk mulai berbagi intelijen ancaman."
+
+msgid "Label"
+msgstr "Label"
+
+msgid "Last Sync"
+msgstr "Sinkronisasi Terakhir"
+
+msgid "Sent/Received"
+msgstr "Dikirim/Diterima"
+
+msgid "Unnamed"
+msgstr "Tanpa nama"
+
+msgid "%s ago"
+msgstr "%s yang lalu"
+
+msgid "Threats Sent"
+msgstr "Ancaman Dikirim"
+
+msgid "Threats Received"
+msgstr "Ancaman Diterima"
+
+msgid "Statistics"
+msgstr "Statistik"
+
+msgid "Connected Peers"
+msgstr "Rekan yang Terhubung"
+
+msgid "Threats Received (24h)"
+msgstr "Ancaman yang Diterima (24 jam)"
+
+msgid "P2P Status"
+msgstr "Status P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "Kredit Intelijen Ancaman"
+
+msgid "Current Credit Balance"
+msgstr "Saldo Kredit Saat Ini"
+
+msgid "Reputation Score"
+msgstr "Skor Reputasi"
+
+msgid "Accuracy"
+msgstr "Akurasi"
+
+msgid "Badges:"
+msgstr "Lencana:"
+
+msgid "No badges yet"
+msgstr "Belum ada lencana"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Manfaat premium dibuka secara gratis karena skor reputasi Anda di atas 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Raih skor reputasi di atas 1000 untuk mendapatkan manfaat premium secara gratis."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Kontributor Utama (Anonim)"
+
+msgid "No contributor data available yet."
+msgstr "Belum ada data kontributor yang tersedia."
+
+msgid "Rank"
+msgstr "Pangkat"
+
+msgid "Anonymous Site ID"
+msgstr "ID Situs Anonim"
+
+msgid "Credits"
+msgstr "Kredit"
+
+msgid "Reputation"
+msgstr "Reputasi"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Add New Peer"
+msgstr "Tambahkan Rekan Baru"
+
+msgid "Peer URL"
+msgstr "URL rekan"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "URL lengkap situs WordPress rekan (harus menggunakan HTTPS dalam produksi)."
+
+msgid "Peer Node Key"
+msgstr "Kunci Node Rekan"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Kunci simpul rekan (mereka dapat menyalinnya dari halaman pengaturan P2P)."
+
+msgid "Label (Optional)"
+msgstr "Label (Opsional)"
+
+msgid "My Production Server"
+msgstr "Server Produksi Saya"
+
+msgid "A friendly name to identify this peer."
+msgstr "Nama yang ramah untuk mengidentifikasi rekan ini."
+
+msgid "Unauthorized"
+msgstr "Tidak sah"
+
+msgid "Sandbox module is not loaded."
+msgstr "Modul Sandbox tidak dimuat."
+
+msgid "Sandbox module is disabled."
+msgstr "Modul Sandbox dinonaktifkan."
+
+msgid "Sandbox console is disabled."
+msgstr "Konsol Sandbox dinonaktifkan."
+
+msgid "No code provided."
+msgstr "Tidak ada kode yang disediakan."
+
+msgid "Insufficient permissions."
+msgstr "Izin tidak memadai."
+
+msgid "Sandbox Module Disabled"
+msgstr "Modul Sandbox Dinonaktifkan"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Kotak Pasir Shadow Runtime saat ini dinonaktifkan. Aktifkan di Pengaturan untuk menggunakan konsol."
+
+msgid "Go to Settings"
+msgstr "Buka Pengaturan"
+
+msgid "Sandbox Console Disabled"
+msgstr "Konsol Sandbox Dinonaktifkan"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Modul Sandbox diaktifkan, namun konsol admin dinonaktifkan. Aktifkan pengaturan konsol untuk menjalankan kode dari wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Zona Bahaya: Eksekusi Kode"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Konsol ini mengeksekusi kode PHP di kotak pasir yang terisolasi. Semua perubahan basis data secara otomatis dibatalkan. Gunakan hanya untuk menganalisis kode atau pengujian yang mencurigakan."
+
+msgid "PHP Code Editor"
+msgstr "Editor Kode PHP"
+
+msgid "Run Code"
+msgstr "Jalankan Kode"
+
+msgid "Analyze Only"
+msgstr "Analisis Saja"
+
+msgid "Timeout:"
+msgstr "Batas waktu:"
+
+msgid "Execution Results"
+msgstr "Hasil Eksekusi"
+
+msgid "STATIC ANALYSIS"
+msgstr "ANALISIS STATIS"
+
+msgid "OUTPUT"
+msgstr "KELUARAN"
+
+msgid "ERRORS"
+msgstr "KESALAHAN"
+
+msgid "DATABASE QUERIES"
+msgstr "PERTANYAAN DATABASE"
+
+msgid "Module not loaded"
+msgstr "Modul tidak dimuat"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Analisis Lalu Lintas Langsung tidak tersedia."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Akses just-in-time menggunakan alur kerja permintaan dan persetujuan dengan masa berlaku otomatis."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Akses Sementara saat ini tidak tersedia karena modul dinonaktifkan atau tidak dimuat."
+
+msgid "Open settings"
+msgstr "Buka pengaturan"
+
+msgid "Request Temporary Access"
+msgstr "Minta Akses Sementara"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Permintaan ini berlaku untuk akun Anda yang saat ini masuk. Administrator harus menyetujuinya sebelum akses sementara yang ditingkatkan diberikan."
+
+msgid "Requested Role"
+msgstr "Peran yang Diminta"
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Editor"
+msgstr "Penyunting"
+
+msgid "Duration (minutes)"
+msgstr "Durasi (menit)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Jelaskan mengapa akses sementara yang lebih tinggi diperlukan."
+
+msgid "Submit Request"
+msgstr "Kirim Permintaan"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Berikan Akses Sementara (Admin)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Berikan akses tambahan berbatas waktu langsung ke pengguna tertentu melalui nama pengguna atau email."
+
+msgid "Target User (Username or Email)"
+msgstr "Pengguna Target (Nama Pengguna atau Email)"
+
+msgid "username or user@example.com"
+msgstr "nama pengguna atau pengguna@example.com"
+
+msgid "Grant Role"
+msgstr "Peran Hibah"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Jelaskan mengapa pengguna ini memerlukan akses sementara yang lebih tinggi."
+
+msgid "Grant Access"
+msgstr "Berikan Akses"
+
+msgid "Pending and Active Requests"
+msgstr "Permintaan Tertunda dan Aktif"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Setujui permintaan yang tertunda, tinjau hibah langsung, dan cabut izin aktif dari antrean ini."
+
+msgid "Original Role"
+msgstr "Peran Asli"
+
+msgid "Elevated Role"
+msgstr "Peningkatan Peran"
+
+msgid "Granted"
+msgstr "Memang benar"
+
+msgid "Expires"
+msgstr "Kedaluwarsa"
+
+msgid "Approved By"
+msgstr "Disetujui Oleh"
+
+msgid "Loading..."
+msgstr "Memuat..."
+
+msgid "English (US)"
+msgstr "Inggris (AS)"
+
+msgid "English (UK)"
+msgstr "Bahasa Inggris (Inggris Raya)"
+
+msgid "Espanol (Spanish)"
+msgstr "Spanyol (Spanyol)"
+
+msgid "Francais (French)"
+msgstr "Francais (Perancis)"
+
+msgid "Deutsch (German)"
+msgstr "Jerman (Jerman)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (Italia)"
+
+msgid "Portugues (Brazilian)"
+msgstr "Portugis (Brasil)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Belanda (Belanda)"
+
+msgid "Russian"
+msgstr "Rusia"
+
+msgid "Japanese"
+msgstr "Jepang"
+
+msgid "Chinese (Simplified)"
+msgstr "Cina (Sederhana)"
+
+msgid "Arabic"
+msgstr "Arab"
+
+msgid "Hindi"
+msgstr "bahasa Hindi"
+
+msgid "Korean"
+msgstr "Korea"
+
+msgid "Turkish"
+msgstr "Turki"
+
+msgid "Polski (Polish)"
+msgstr "Polski (Polandia)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (Bahasa Indonesia)"
+
+msgid "Ukrainian"
+msgstr "Ukraina"
+
+msgid "Vietnamese"
+msgstr "Vietnam"
+
+msgid "Thai"
+msgstr "Thailand"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (Swedia)"
+
+msgid "Dansk (Danish)"
+msgstr "Dansk (Denmark)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (Finlandia)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (Norwegia)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Ceko)"
+
+msgid "Greek"
+msgstr "Yunani"
+
+msgid "Magyar (Hungarian)"
+msgstr "Magyar (Hongaria)"
+
+msgid "Romana (Romanian)"
+msgstr "Roma (Rumania)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovenia (Slowakia)"
+
+msgid "Bulgarian"
+msgstr "Bulgaria"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (Kroasia)"
+
+msgid "Serbian"
+msgstr "Serbia"
+
+msgid "Hebrew"
+msgstr "Ibrani"
+
+msgid "Persian"
+msgstr "Persia"
+
+msgid "Settings saved successfully."
+msgstr "Pengaturan berhasil disimpan."
+
+msgid "Settings reset to defaults."
+msgstr "Pengaturan diatur ulang ke default."
+
+msgid "NexifyMy Security Logs"
+msgstr "Log Keamanan NexifyMy"
+
+msgid "No matching user found."
+msgstr "Tidak ditemukan pengguna yang cocok."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Log keamanan dan PII terkait dianonimkan."
+
+msgid "Invalid user ID."
+msgstr "ID pengguna tidak valid."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Permintaan penghapusan manual atau berbasis webhook dimasukkan dalam antrean."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Permintaan penghapusan Mailchimp terkirim."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Penghapusan Stripe memerlukan tindak lanjut API manual untuk catatan kepatuhan."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Permintaan API penghapusan pengguna Google Analytics harus dikonfigurasi secara eksternal."
+
+msgid "Privacy Preferences"
+msgstr "Preferensi Privasi"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Pilih kategori pemrosesan opsional mana yang Anda izinkan."
+
+msgid "Save Preferences"
+msgstr "Simpan Preferensi"
+
+msgid "Consent Management"
+msgstr "Manajemen Persetujuan"
+
+msgid "Given"
+msgstr "Diberikan"
+
+msgid "Withdrawn"
+msgstr "Ditarik"
+
+msgid "No consent records found."
+msgstr "Tidak ada catatan persetujuan yang ditemukan."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Kesalahan</strong>: Ada yang tidak beres. Silakan coba lagi nanti."
+
+msgid "The peer URL is not valid."
+msgstr "URL rekan tidak valid."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Anda tidak dapat menambahkan situs Anda sendiri sebagai rekan."
+
+msgid "API key must be at least 16 characters."
+msgstr "Kunci API minimal harus terdiri dari 16 karakter."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Jumlah maksimum rekan (%d) tercapai."
+
+msgid "Missing authentication header."
+msgstr "Header autentikasi tidak ada."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Kunci simpul tidak valid. Rekan tidak dikenali."
+
+msgid "Invalid request signature."
+msgstr "Tanda tangan permintaan tidak valid."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Batas tarif terlampaui. Coba lagi nanti."
+
+msgid "Invalid site identifier."
+msgstr "Pengidentifikasi situs tidak valid."
+
+msgid "Unknown contribution type."
+msgstr "Jenis kontribusi tidak diketahui."
+
+msgid "Unknown benefit type."
+msgstr "Jenis manfaat tidak diketahui."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Kredit tidak mencukupi untuk manfaat ini."
+
+msgid "Threat Forecast"
+msgstr "Prakiraan Ancaman"
+
+msgid "Your site profile:"
+msgstr "Profil situs Anda:"
+
+msgid "Predicted threats this month:"
+msgstr "Ancaman yang diprediksi bulan ini:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Belum ada vektor berkeyakinan tinggi yang terdeteksi."
+
+msgid "Recommended actions:"
+msgstr "Tindakan yang disarankan:"
+
+msgid "No immediate actions required."
+msgstr "Tidak diperlukan tindakan segera."
+
+msgid "Not logged in"
+msgstr "Tidak masuk"
+
+msgid "A reason is required"
+msgstr "Diperlukan suatu alasan"
+
+msgid "Invalid requested role"
+msgstr "Peran yang diminta tidak valid"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Permintaan aktif atau tertunda sudah ada untuk peran ini."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Permintaan akses dikirimkan. Administrator akan meninjau permintaan Anda."
+
+msgid "Invalid request"
+msgstr "Permintaan tidak valid"
+
+msgid "Pending request not found"
+msgstr "Permintaan yang tertunda tidak ditemukan"
+
+msgid "Request role is invalid"
+msgstr "Peran permintaan tidak valid"
+
+msgid "Invalid approved role"
+msgstr "Peran yang disetujui tidak valid"
+
+msgid "Access approved successfully"
+msgstr "Akses berhasil disetujui"
+
+msgid "Target user (username or email) is required."
+msgstr "Pengguna target (nama pengguna atau email) wajib diisi."
+
+msgid "A reason is required."
+msgstr "Diperlukan suatu alasan."
+
+msgid "Invalid requested role."
+msgstr "Peran yang diminta tidak valid."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Pengguna target tidak ditemukan. Gunakan nama pengguna atau email yang ada."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Pengguna sudah memiliki peran ini. Ketinggian sementara tidak diperlukan."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Hibah aktif atau tertunda sudah ada untuk pengguna dan peran ini."
+
+msgid "Unable to grant temporary access."
+msgstr "Tidak dapat memberikan akses sementara."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Akses sementara %2$s diberikan kepada %1$s selama %3$d menit."
+
+msgid "Invalid grant"
+msgstr "Hibah tidak valid"
+
+msgid "Grant not found or already revoked"
+msgstr "Hibah tidak ditemukan atau sudah dicabut"
+
+msgid "Permission revoked successfully"
+msgstr "Izin berhasil dicabut"
+
+msgid "Once Monthly"
+msgstr "Sekali Bulanan"
+
+msgid "Every 5 Minutes"
+msgstr "Setiap 5 Menit"
 

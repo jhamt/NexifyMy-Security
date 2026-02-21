@@ -8,1774 +8,1774 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "Під час останнього сканування виявлено %d загроз"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Промовте цей код для підтвердження)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Високий"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 день"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 година"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 днів"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 хвилин"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Середній"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 години"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "Методи 2FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "Налаштування 2FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Низький"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 дні"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 днів"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 хвилин"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 днів"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Заборонено"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Не знайдено"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Забагато запитів (рекомендовано)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 хвилин"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Служба недоступна"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 годин"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 днів"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 днів"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 днів (безперервно)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 днів"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 днів"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "Статус навчання AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "Статус ШІ"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "Виявлення загроз AI"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "Дані навчання ШІ успішно скинуто."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "Кількість запитів AJAX за хвилину"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API і безпека без доступу"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API та служби"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "Вибух API Допомога"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "Кінцеві точки API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "Ключ API"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "Обмеження швидкості API"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "API запитів за хвилину"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "Безпека API"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "Маркер API"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "Перевищено ліміт швидкості API. Ліміт: %d запитів на хвилину."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "Обмеження API"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "Маркер API, маркер HEC або ключ автентифікації."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Покинутий"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Про карантин"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Доступ заборонено"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Дія"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Дії"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Активний"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Панель активності"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Журнал активності"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Налаштування журналу активності"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Діяльність цих користувачів не реєструватиметься."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Старіші журнали активності буде автоматично видалено."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Відстеження активності"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Додайте ще %d символів."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Додайте 2FA до облікових записів користувачів для додаткової безпеки."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Додайте CAPTCHA для входу та форм."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Додайте перевірку CAPTCHA до форм входу"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Додайте заголовки безпеки HTTP (X-Frame-Options, CSP тощо)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Додайте новий пароль"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Додайте заголовки безпеки"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Додати Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Додайте X-Frame-Options, X-Content-Type-Options та інші заголовки безпеки."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Додайте заголовки X-Frame-Options, X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Додайте додатковий рівень безпеки, вимагаючи другу форму автентифікації."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Додайте додатковий рівень безпеки, вимагаючи двох форм автентифікації для входу користувачів."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Додайте додатковий рівень безпеки за допомогою 2FA на основі TOTP."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Додайте малі літери."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Додайте числа."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Додайте спеціальні символи."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Додати до списку"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Додайте великі літери."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Додаткові заходи безпеки входу. Працює з обмежувачем швидкості."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Додає CAPTCHA до форм входу. Безпечно, але може вплинути на взаємодію з користувачем."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Додає Google reCAPTCHA, Cloudflare Turnstile або математичні завдання"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Додає заголовки безпеки HTTP (X-Frame-Options, CSP). Безпечний - покращує безпеку браузера."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Додає додатковий рівень безпеки за допомогою кодів TOTP, електронної пошти або SMS"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Вхід адміністратора (успішні входи адміністратора)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Просунутий"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Розширені налаштування брандмауера"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Розширене загартовування"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Розширені параметри зміцнення"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Розширені налаштування входу"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Додаткові параметри"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Розширені параметри сканера"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Розширена евристика"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Уражені файли:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Поріг сповіщення"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Типи сповіщень"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Оповіщення"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Сповіщення надсилаються, якщо плагін деактивовано."
 
 msgid "All"
-msgstr "All"
+msgstr "всі"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Все ясно!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Всі події"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Усі тяжкості"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Дозволити всім користувачам добровільно вмикати 2FA."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Дозволити код електронної пошти як резервний метод"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Дозволяйте короткі пакети вище ліміту швидкості."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Дайте користувачам час на налаштування 2FA перед застосуванням."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Дозволити користувачам увімкнути 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Дозволити користувачам генерувати екстрені резервні коди."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Дозволити користувачам пропускати 2FA на надійних пристроях."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Дозволені агенти користувача"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "Аналітика"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Аномалії"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Будь-який ступінь тяжкості"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Будь-які зміни викликають негайне сповіщення електронною поштою."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Застосувати налаштування"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Застосуйте найкращі методи безпеки WordPress."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Застосуйте виправлення безпеки"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Застосуйте заходи посилення безпеки до WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Застосуйте заходи посилення безпеки, щоб захистити свою інсталяцію WordPress."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Ви впевнені, що хочете видалити цей ключ?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Ви впевнені, що бажаєте продовжити?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Захист від атак"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Вікно спроби"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Аудіо (розмова)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Автентифікація..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Код автентифікації"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Події автентифікації"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Маркер автентифікації"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Помилка автентифікації. Спробуйте ще раз."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Для доступу до API потрібна автентифікація."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Для доступу до GraphQL потрібна автентифікація."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Авторські скани"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Тривалість автоматичного блокування"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Автоматичне блокування неодноразових порушників"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Порогове значення автоматичного блокування"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Автовиправлення"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Автоматичне створення звітів"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Загрози автокарантину"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Розклад автоматичного сканування"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Автоматичне оновлення"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Налаштування автоматичного оновлення"
 
 msgid "Auto-Updates"
 msgstr "Автооновлення"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Автоматичне визначення"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Автоматичне сканування"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Автоматичне сканування"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Автоматично додавати в чорний список IP-адреси, які кілька разів активують правила."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Автоматично створюйте заявки Jira для інцидентів безпеки та вразливостей."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Автоматично створюйте квитки для інцидентів безпеки у ваших системах керування проектами."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Автоматично створювати звіти за розкладом"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Автоматично переміщувати виявлені шкідливі програми в карантин."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Автоматично запускати сканування у фоновому режимі."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Щодня автоматично оновлювати сигнатури шкідливих програм."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Доступні країни"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Доступні події"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Сер./день"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Фонове сканування"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Резервне копіювання пошкоджених файлів перед заміною"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Резервні коди"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Резервне копіювання, оптимізація та захист вашої бази даних."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Резервне копіювання та очищення"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Резервні копії зберігаються в wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Погані боти"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Погані запити"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Збалансований (рекомендовано)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Записи поведінки"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Поведінковий аналіз"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Чорний список (заблокований список)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Чорний список (вибрано блокування)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "Чорний список IP-адрес"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Чорний список: заблокувати вибрані країни. Білий список: дозволити лише вибрані країни."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP-адреси в чорному списку"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Блокуйте поганих ботів"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Блокуйте атаки CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Блокувати загальні паролі"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Блокувати обхід каталогу"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Тривалість блоку"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Блокувати порожні агенти користувача"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Блокуйте надмірну кількість користувачів API"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Редактор блокових файлів"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Блокувати включення локальних файлів"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Заблокувати повідомлення"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Режим блокування"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Режим блокування (рекомендовано)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Режим блокування: блокує зловмисні запити. Режим моніторингу: реєструє загрози без блокування."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Блокувати віддалене виконання коду"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Блокувати віддалене включення файлів"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Блокувати впровадження SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Блокувати завантаження підозрілих файлів"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Заблокувати доступ до XML-RPC (запобігає грубому форсу)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Блокуйте атаки XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Заблокувати доступ із певних країн."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Блокування агресивних сканерів (висока частота запитів)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Заблокувати сканування переліку авторів (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Блокувати надто довгі рядки запиту."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Блокуйте відомих поганих ботів і скребків"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Блокуйте відомих шкідливих ботів і скребків."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Блокуйте неправильні запити та підозрілі рядки запитів"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Блокуйте зловмисні запити"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Блокуйте зловмисні запити та атаки"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Блокувати або дозволяти трафік залежно від країни."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Блокуйте запити, розмір яких перевищує цей розмір, щоб запобігти DoS-атакам."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Блокувати запити з порожнім агентом користувача (може блокувати деяких законних ботів)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Блокувати запити без заголовка User-Agent."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Блокуйте підозрілі IP-адреси"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Блокуйте підозрілі агенти користувача"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Блокуйте трафік із певних країн. Налаштуйте країни в налаштуваннях перед увімкненням."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Блокувати завантаження з виконуваними розширеннями (.php, .exe, .sh тощо)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Заблоковані атаки"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Заблоковані розширення файлів"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Заблоковані запити"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Заблоковані агенти користувача"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Блокує IP-адреси, які демонструють зловмисну поведінку. Безпечно – ви можете додати свій IP до білого списку."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Додайте цю URL-адресу в закладки, щоб завжди мати доступ до своєї сторінки входу."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Захист від ботів і сканерів"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Захист від ботів і агентів користувачів"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Профілактика ботів"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Захист від ботів"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Браузери"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Груба сила"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Захист від грубої сили"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Захист від грубої сили та обмеження на спроби входу."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "помилка"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Найбільш напружений день"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "Захист CAPTCHA"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "Інтеграція CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "Статус CDN"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (загальний формат подій)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "Конвеєр CI/CD"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "Інтеграція конвеєра CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Скасувати"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Попередній перегляд Captcha"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Провайдер Captcha"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Налаштування Captcha"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Змінити префікс бази даних"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Змінити префікс таблиці бази даних (потрібне ручне оновлення бази даних)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Змініть URL-адресу входу за замовчуванням, щоб запобігти атакам."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Змініть URL-адресу входу wp-admin за умовчанням, щоб запобігти автоматичним атакам."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Змінює URL-адресу для входу з /wp-admin на спеціальний slug, щоб запобігти атакам ботів"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "Канал"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Вимоги до персонажів"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Перевірте цілісність ядра"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Інтервал перевірки"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Перевірте та відновіть пошкоджені файли ядра WordPress за допомогою офіційних джерел."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Перевірте основні файли на наявність змін і зловмисного програмного забезпечення."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Перевірте наявність бекдорів"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Перевірка на обфускацію"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Перевірте відомі вразливості."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Перевірте завантажені файли на наявність шкідливого вмісту."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Перевіряє веб-оболонки"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Перевіряє плагіни/теми на відомі вразливості. Безпечно - перевіряє лише версії."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Виберіть унікального слимака, якого важко вгадати."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Виберіть тип завдання для NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Чисті файли"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Чисті файли:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Очистити та оптимізувати базу даних"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Очистіть непотрібні дані, щоб покращити продуктивність бази даних."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Очистити журнали"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare та інше"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Налаштування Cloudflare API"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Токен Cloudflare API (з дозволами на зону)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Турнікет Cloudflare"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Код"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Термін дії коду"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Проблеми з якістю коду"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Розділений комами список розширень файлів, які потрібно блокувати під час завантаження."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Список розширень файлів, розділених комами, які потрібно пропустити (наприклад, jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Коментар заблоковано"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Форма коментаря"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Рейтинг розміщення коментарів"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Форма коментаря"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "спілкування"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Комунікаційні платформи"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Порівняйте основні файли з офіційними контрольними сумами WordPress."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Порівняйте ваші основні файли WordPress з офіційними контрольними сумами, щоб виявити зміни."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Порівнює кожен файл ядра з очікуваним хешем"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Повністю вимкніть усі канали RSS і Atom."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Повністю вимкніть усі зміни файлів (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Відповідність"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Відповідність і звітність"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Звіти про відповідність і безпеку"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Параметри відповідності"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Залежності композитора"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Комплексний аналіз"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Комплексне відстеження активності користувачів, моніторинг входів і журнал системних подій."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Налаштувати"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Налаштуйте 2FA для покращеної безпеки входу"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Налаштуйте CDN для безпеки та продуктивності."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Налаштуйте інтеграцію CDN і керування кеш-пам’яттю."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Налаштуйте брандмауер веб-додатків (WAF), щоб захистити свій сайт."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Налаштуйте сповіщення та сповіщення електронною поштою."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Налаштуйте правила брандмауера та параметри захисту."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Налаштуйте поведінку сканера зловмисного програмного забезпечення та параметри сканування за розкладом."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Налаштування параметрів плагіна."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Налаштувати параметри плагіна."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Налаштуйте параметри безпеки."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Підтвердити"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Підтвердити дію"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Підтверджене зловмисне програмне забезпечення"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Підключіть моніторинг безпеки до платформ SIEM, продажу квитків, зв’язку та CI/CD."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Зверніться до нашої служби підтримки, щоб отримати допомогу щодо NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Зміст"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Контентна діяльність"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Зміни вмісту"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Контент Події"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Безпека вмісту"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Модифікації основного файлу"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Основне відновлення файлів"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Ремонт серцевини"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Основна цілісність WordPress"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Цілісність основного файлу"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Граф"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "Країни"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Країна"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Параметри блокування країни"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Обмеження країни"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Створіть резервну копію зараз"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Створіть резервну копію вашої бази даних WordPress. Резервні копії надійно зберігаються та можуть бути завантажені."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Створюйте інциденти в ServiceNow для критичних подій безпеки."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Створіть вебхук за адресою: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Створіть вебхук у розділі Параметри сервера Discord > Інтеграції > Вебхуки"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Створіть вебхук: Teams > Channel > Connectors > Incoming Webhook"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Створено"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Створено: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Критичний"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Тільки критично"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Поточна URL-адреса входу"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Поточна версія"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "поточний:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Спеціальна URL-адреса для входу"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Спеціальна URL-адреса"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Спеціальні веб-хуки"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Щодня"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Щодня (рекомендовано)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Щоденний підсумок стану"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Щоденний підсумок"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Приладова панель"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Зберігання даних"
 
 msgid "Database"
-msgstr "Database"
+msgstr "База даних"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Дії з базою даних"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Резервне копіювання бази даних"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Інформація про базу даних"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Оптимізація бази даних"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Оптимізатор бази даних"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Безпека бази даних"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Розмір бази даних"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Резервне копіювання та оптимізація бази даних. Перед увімкненням налаштуйте розклад резервного копіювання."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Перевірка безпеки бази даних"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Дата"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Дата/час"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Моніторинг дезактивації:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Режим налагодження"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Глибокий"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Глибоке сканування"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Стандартний режим сканування"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Режим сканування за замовчуванням використовується, якщо не вказано жодного."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "визначення"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Видалити"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Видалити всі дані плагіна під час видалення"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Видалити:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Сканування залежностей, моніторинг сценаріїв сторонніх розробників і перевірка цілісності CDN."
 
 msgid "Description"
-msgstr "Description"
+msgstr "опис"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Детальна статистика трафіку вашого сайту та подій безпеки"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Детальна інформація про безпеку вашого веб-сайту."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Виявляти та блокувати спроби виконання коду."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Виявляти приховані бекдор-скрипти та оболонки."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Виявляйте зловмисне програмне забезпечення, бекдори та підозрілий код"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Виявляти загрози"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Виявляйте невідомі загрози за допомогою аналізу поведінки."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Методи виявлення"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Типи пристроїв"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Складність"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Рівень складності"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Рівень складності для викликів NexifyMy captcha."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Прямий"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Обхід каталогу"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Захист від проходження каталогу"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Вимкніть 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Вимкніть паролі програм"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Вимкнути архіви авторів"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Вимкнути перегляд каталогу"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Вимкнути вбудовування"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Вимкнути редактор файлів"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Вимкнути модифікацію файлів"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Вимкнути повідомлення про помилки входу"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Вимкнути Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Вимкнути Pingbacks"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Вимкнути встановлення плагіна/теми"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Вимкнути перелік користувачів REST API"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Вимкнути канали RSS/Atom"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Вимкнути клацання правою кнопкою миші"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Вимкнути виділення тексту"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Вимкнути трекбеки"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Вимкнути редактор WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Вимкніть XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Вимкнути XML-RPC (запобігає звичайному вектору грубої сили)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Вимкнути XML-RPC (запобігає атакам pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Вимкніть XML-RPC (використовується в DDoS-атаках і атаках грубої сили)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Вимкніть сторінки архіву автора, щоб запобігти перерахуванню імен користувачів."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Вимкніть функцію oEmbed і кінцеві точки REST API."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Вимкніть функцію pingback, щоб запобігти DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Вимкнути функцію pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Вимкніть редактор файлів плагіна/теми в адміністраторі WordPress."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Вимкнути публічний перелік користувачів через REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Вимкнути контекстне меню правої кнопки миші на інтерфейсі."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Вимкніть вбудовану тему та редактор плагінів, щоб запобігти впровадженню коду."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Вимкнути редактор тем і плагінів"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Вимкніть редактор тем/плагінів в адмінці"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Вимкнути функцію відстеження."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Вимкнено"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Вимикає XML-RPC для запобігання атакам. Безпечно, якщо ви не використовуєте Jetpack або мобільні програми."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Вимикає вбудований редактор тем/плагінів. Безпечно - забороняє редагування коду в адмінці."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Вимикає редагування файлів, XML-RPC і застосовує передові практики WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Інтеграція Discord"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Завантажити"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Завантажує свіжий пакет WordPress з офіційного джерела"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "легко"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Легко (лише доповнення)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Редагування файлів плагіна NexifyMy Security вимкнено з міркувань безпеки."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Редактор і доступ до файлів"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Блокування редактора:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "Електронна пошта"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Налаштування сповіщень електронною поштою"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "Сповіщення електронною поштою"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Резервне копіювання електронної пошти"
 
 msgid "Email Notifications"
 msgstr "Email сповіщення"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "Звіти електронною поштою"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Звіти сканування електронної пошти"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Підтвердження електронної пошти"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Порожній агент користувача"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Увімкнути"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Увімкніть 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Увімкніть модуль 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Увімкнути журнал активності"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Увімкнути сповіщення"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Увімкніть захист CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Увімкнути інтеграцію CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Увімкнути функції CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Увімкнути інтеграцію CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Увімкнути Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Увімкнути користувацькі вебхуки"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Увімкніть Discord"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Увімкнути сповіщення електронною поштою"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Увімкнути брандмауер"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Увімкнути геоблокування"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Увімкніть «Приховати вхід»."
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Увімкніть Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Увімкнути захист"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Увімкнути обмеження швидкості"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Увімкнути інтеграцію SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Увімкніть SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Увімкнути сканер"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Увімкнути модуль сканера"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Увімкнути сканування за розкладом"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Увімкніть ServiceNow"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Увімкніть Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Увімкнути команди"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Увімкніть двофакторну автентифікацію"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Увімкнути WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Увімкнути модуль WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Увімкнути захист WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Увімкнути брандмауер веб-додатків"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Увімкніть захист веб-програми брандмауером."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Увімкніть і налаштуйте модулі безпеки для свого сайту."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Увімкніть і налаштуйте модулі безпеки."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Увімкніть захист від captcha"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Увімкнути блокування на основі країни"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Увімкнути журнал налагодження (лише для усунення несправностей)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Увімкніть захист брандмауера, щоб блокувати атаки"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Увімкнути обмеження кількості входів"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Увімкнути сканер шкідливих програм"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Увімкнути або вимкнути модулі безпеки."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Увімкнути або вимкнути весь модуль WAF."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Увімкніть або вимкніть сканер шкідливих програм."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Увімкніть або вимкніть модуль обмеження швидкості."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Увімкніть або вимкніть двофакторну автентифікацію."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Увімкнути сканування за розкладом"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Увімкніть функції сканера вразливостей"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Увімкнено"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Кінцева точка"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "URL кінцевої точки"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Застосовуйте надійні паролі"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Виконуйте вимоги до надійних паролів"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Дотримуватись вимог до надійних паролів для всіх користувачів."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Виконуйте вимоги до надійних паролів."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Вимагає суворих паролів для користувачів. Безпечний – стосується лише нових паролів."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Застосовує надійні паролі з мінімальною довжиною та правилами складності"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Введіть 6-значний код, щоб підтвердити налаштування"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Введіть IP-адреси, по одній на рядок"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Введіть відповідь"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Введіть код:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Безпека WordPress корпоративного рівня"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Помилка"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Подія"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Формат події"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Журнали подій"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Серйозність події"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Тип події"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Події"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Події (7 днів)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Події для створення квитків"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Події для пересилання"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Події для сповіщення"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Приклад: дії GitHub"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Приклад: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Приклад: Jenkins Pipeline"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Виключені розширення"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Виключені шаблони файлів"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Виключені шляхи"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Виключені користувачі"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Винятки"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Вичерпне сканування файлів"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Існуючі резервні копії"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Експорт CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Налаштування експорту"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Експортуйте налаштування безпеки NexifyMy у файл JSON. Це включає всі конфігурації модулів, правила брандмауера, списки IP-адрес і параметри сканування."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Зовнішні сценарії та ресурси CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Додаткова безпека входу"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Помилка збірки на шкідливих програмах"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Невдала збірка на вразливостях"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Не вдалося"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Невдалі спроби 2FA до тимчасового блокування."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Помилка входу"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Невдалі входи"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Виявлено невдалу спробу входу"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Не вдалося зареєструвати ключ доступу."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Швидке виконання"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Швидка перевірка безпеки"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Отримує офіційні контрольні суми файлів з API WordPress.org"
 
 msgid "File"
-msgstr "File"
+msgstr "Файл"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Редактор файлів"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Хешування файлів:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Включення файлу"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Захист включення файлів"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Перевірка цілісності файлу"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Моніторинг цілісності файлів"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Права доступу до файлів"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Файл на карантині"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Розширення файлів, які потрібно виключити зі сканування (по одному на рядок, без крапок)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Ім'я файлу"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Відскановані файли"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Відскановані файли:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Файли періодично порівнюються з базовою лінією."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Файли в карантині безпечно зберігаються і не можуть бути виконані."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Файли більшого розміру пропускатимуться під час сканування."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "фільтр"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Брандмауер"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Брандмауер і захист"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Конфігурація брандмауера"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Правила брандмауера"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Параметри брандмауера"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Виправити змінені файли"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Позначити сильно заплутаний або закодований код."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Примусово ввімкнути SSL для адміністратора"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Примусово використовувати SSL/HTTPS для області адміністратора (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Сила для адміністраторів"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Формат:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Пересилайте події безпеки на платформу безпеки та управління подіями (SIEM) для централізованого журналювання та аналізу."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Знайдено на інформаційній панелі Cloudflare у розділі «Огляд»."
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Знайдено у завідомо безпечному плагіні – ймовірно, законне використання"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Знайдено в системному каталозі - може бути законним"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "З дати"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "З електронної пошти"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Від імені"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "Повна URL-адреса кінцевої точки HTTP/HTTPS для вашої платформи SIEM."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Повний аналіз шкідливих програм"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Повна перевірка шкідливих програм"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Повні сигнатури шкідливих програм"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Повний аналіз сайту"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "Модулі відповідності GDPR, CCPA, HIPAA та комплексні звіти про аудит безпеки."
 
 msgid "General"
-msgstr "General"
+msgstr "Загальний"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Загальне обмеження запитів"
 
 msgid "General Settings"
 msgstr "Загальні налаштування"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Створити звіт"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Створити SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Згенерувати з: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Сформований"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Загальна кінцева точка HTTP"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Загальний проксі"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Геоблок"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Геоблокування"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Географічне поширення"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Отримайте безкоштовний маркер API від wpscan.com для детальних даних про вразливості."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Отримуйте миттєві сповіщення в каналах зв’язку вашої команди про події безпеки."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Отримати останній статус сканування"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Отримати результати сканування (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Отримайте свої ключі з інформаційної панелі Google reCAPTCHA або Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Початок роботи"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Пільговий період"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Оцінка"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "Безпека GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "Самоаналіз GraphQL вимкнено."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "Перевищено обмеження швидкості GraphQL. Ліміт: %d запитів на хвилину."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "Заголовки безпеки HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP заголовки"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Ручка"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "важко"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Складний (включає множення)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Сайт загартовування"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Загартовування"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Варіанти загартовування"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Заголовки"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Довідка та документація"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Евристичний аналіз"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Евристичне виявлення закономірностей"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Приховати логін"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Приховати сторінку входу"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Приховати URL-адресу входу"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Приховати URL-адресу входу:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Приховати версію WP"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Приховати URL-адресу для входу в WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Приховати версію WordPress"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Приховати версію WordPress від вихідного коду"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Приховати URL-адреси входу за умовчанням"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Приховати wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Приховайте wp-admin і wp-login.php від зловмисників."
 
 msgid "High"
-msgstr "High"
+msgstr "Високий"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Високий (максимальне виявлення)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Високий рівень безпеки (більше перевірок, повільніше)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Велика кількість заблокованих атак за останній час"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Високий або вище"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Загрози високого ступеня серйозності"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Лише зони підвищеного ризику"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Аналіз ШІ виявив загрозу з високою оцінкою"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Вища чутливість може викликати більше помилкових спрацьовувань."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Найвищий"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Утримуйте Ctrl/Cmd, щоб вибрати кілька країн."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Хост"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "щогодини"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Як працює 2FA"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Як працює Core Repair"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Як працює самозахист"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Як довго блокувати IP після перевищення кількості спроб."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Як довго блокувати IP після перевищення ліміту швидкості."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Як довго зберігати старі звіти (30-365 днів)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "Контроль IP доступу"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP-адреса"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "Блокування IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "Конфігурація IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "Блокування IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP Lockouts (спроби грубої сили)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "Управління IP"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "Білий список IP-адрес"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP-адреси, які обходять обмеження швидкості."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP-адреси, які завжди будуть заблоковані."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP-адреси, які ніколи не будуть заблоковані."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Ідентифікує змінені або відсутні файли"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Вибір зображення"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Потрібні негайні дії"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Рівень впливу"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Налаштування імпорту"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Імпортуйте налаштування з попередньо експортованого файлу JSON. Це перезапише ваші поточні налаштування."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "Імпорт/Експорт"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Неактивний"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "Інцидент"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Включіть перевірки GDPR"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Включити білий/чорний список IP-адрес"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Включіть показники ефективності"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Включити перевірки безпеки"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Включіть Зведення про загрози"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Включити результати останнього сканування"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Включити журнали безпеки (останні 30 днів)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Неправильна відповідь captcha. Будь ласка, поверніться та спробуйте ще раз."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Неправильна відповідь captcha. Спробуйте ще раз."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Назва індексу або ідентифікатор джерела для категоризації події."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Покажчик/Джерело"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Інформація"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Розкриття інформації"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Ініціалізація..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Ім'я екземпляра"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Інтегруйте сканування безпеки в конвеєри постійної інтеграції та розгортання."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Інтегруйте сканування безпеки у свій конвеєр розгортання за допомогою веб-хуків і доступу до API."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Інтегрується зі службами CDN. Налаштуйте облікові дані CDN перед увімкненням."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Інтеграції"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Результати перевірки цілісності"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Перевірки цілісності:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Статус цілісності"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Недійсний маркер JWT."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Недійсні облікові дані."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Недійсний код підтвердження."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Ізолюйте загрози"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Ізолює підозрілі файли без видалення. Безпечно - файли можна відновити."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Тип проблеми"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Виявлено проблеми"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "Формат JSON. Приклад: {\"Авторизація\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
 msgstr "Jira Cloud URL"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Інтеграція Jira"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Ведіть журнали всіх заблокованих запитів для аналізу."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Зберігайте журнали всіх порушень лімітів швидкості для аналізу."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Для найкращого захисту оновлюйте свої сигнатури шкідливих програм."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Відомі країни"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "У встановленому плагіні виявлено відому вразливість"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (розширений формат журналу подій)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Останні 30 днів"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Останні 30 днів"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Останні 7 днів"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Останні 90 днів"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Останній вивчений"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Останнє сканування"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Останнє сканування:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Останнє оновлення"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Останнє використання: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Остання версія"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Навчання - лише журнал, без блокування"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Період навчання"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "навчання..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Залиште поле порожнім, щоб використовувати електронну адресу адміністратора."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Ймовірно, безпечно - перевірте, якщо потрібно"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Обмежити доступ до REST API для автентифікованих користувачів"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Обмежте надсилання коментарів, щоб запобігти спаму."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Обмежте надмірні запити з однієї IP-адреси."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Обмежити спроби входу"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Обмежте спроби входу, щоб запобігти атакам грубої сили"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Обмежте частоту запитів, щоб запобігти зловживанням і DDoS-атакам."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Обмежте кількість запитів, щоб запобігти зловживанням."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Обмежує спроби входу, щоб запобігти атакам грубої сили. Безпечний - впливає лише на невдалі спроби входу."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Перелічіть відомі вразливості"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Живий трафік"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "Монітор руху в реальному часі"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Завантаження статусу CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Завантаження сповіщень..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Завантаження аналітичних даних..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Завантаження резервних копій..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Завантаження заблокованих IP-адрес..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Завантаження країн..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Завантаження інформації бази даних..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Завантаження географічних даних..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Завантаження журналів..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Завантаження сповіщень..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Завантаження статистики оптимізації..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Завантаження стану захисту..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Завантаження файлів на карантині..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Завантаження рефералів..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Завантаження виявлення загроз..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Завантаження перших сторінок..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Завантаження даних про дорожній рух..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Блокування після багатьох невдалих спроб."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Тривалість блокування"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Період блокування після максимум невдалих спроб 2FA."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Реєстрація дозволених запитів"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Реєстрація заблокованих запитів"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Реєстрація невдалих спроб входу"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Журнал виходу"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Журнал завантаження медіа"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Журнал змін параметрів"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Реєстрація змін плагіна"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Журнал публікації/зміни сторінки"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Журнал змін профілю"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Порушення обмеження швидкості журналу"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Зберігання журналу"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Журнал змін ролей"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Реєстрація успішних входів"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Журнал змін теми"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Створення/видалення користувача журналу"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Реєструйте всі запити, які проходять перевірку WAF (велике використання диска)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Лісозаготівля"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Ведення журналів і моніторинг"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Логін"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Вхід і автентифікація"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Активність входу"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Вікно спроби входу"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Спроби входу"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Вхід CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Логін Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Форма входу"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Тривалість блокування входу"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Захист входу"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Обмеження кількості входів"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Безпека входу"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Логін Slug"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Налаштування URL-адреси входу"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Форма входу"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Вийти"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Вийти з системи"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Журнали"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Старіші журнали щодня автоматично очищаються."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Журнали подій безпеки для перегляду. Безпечно - записує лише активність."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Низький"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Низький (менше помилкових спрацьовувань)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Низький вплив (менше перевірок, швидше)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Мала літера (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Засоби обслуговування та діагностики вашого сайту."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Обов’язково запам’ятайте свою спеціальну URL-адресу для входу!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Зловмисне програмне забезпечення та сканування"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Визначення шкідливих програм"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Знайдено зловмисне програмне забезпечення"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Сканер шкідливих програм"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Під час сканування файлів виявлено зловмисне програмне забезпечення"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Керувати сповіщеннями"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Керуйте загрозами на карантині. Перегляньте, відновіть або остаточно видаліть файли."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Обов'язковий для ролей"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Рекомендується перегляд вручну"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Позначити все як прочитане"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Позначити все як прочитане"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Головний перемикач, щоб увімкнути або вимкнути журналювання всіх дій."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Математичне питання"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Максимум спроб"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Максимум невдалих спроб"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Максимальний розмір файлу"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Максимальна кількість спроб входу"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Максимальна довжина рядка запиту"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Максимальний розмір запиту"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Макс запитів"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Максимальна кількість запитів AJAX за хвилину на IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Максимальна кількість запитів API за хвилину на IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Максимальна кількість невдалих спроб входу до блокування."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Максимальна кількість запитів сторінок за хвилину на IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Максимальний розмір тіла запиту для сканування. Більші запити будуть пропущені."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Максимальна дозволена кількість запитів за хвилину на IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Максимальна кількість запитів на пошук за хвилину, щоб запобігти вичерпанню бази даних."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Максимальний час для однієї операції сканування."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Максимальний час сканування зловмисного програмного забезпечення до тайм-ауту."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Завантаження медіа"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Середній"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Середній (збалансований)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Середній (додавання/віднімання)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Середній або вище"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Обмеження пам'яті"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Пам'ять, виділена для операцій сканування."
 
 msgid "Message"
-msgstr "Message"
+msgstr "повідомлення"
 
 msgid "Method"
-msgstr "Method"
+msgstr "метод"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Інтеграція Microsoft Teams"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Мінімум %d символів"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Мінімальна довжина"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Мінімальна серйозність до відмови"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Мінімальна довжина пароля (8-32 символи)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Режим"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Елементи керування модулем"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Модулі"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Монітор зовнішніх сценаріїв"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Режим моніторингу (лише журнал)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Слідкуйте за змінами файлів плагінів"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Відстежуйте трафік сайту в реальному часі."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Відстежуйте трафік у реальному часі"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Відстежуйте трафік і активність відвідувачів у реальному часі."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Моніторинг тенденцій відвідування, переглядів сторінок і моделей трафіку протягом тривалого часу."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Моніторинг і сповіщення"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Відстежує трафік у реальному часі. Безпечно - відстежує лише відвідування."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Щомісяця"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Найбільш активні користувачі"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Переміщує підозрілі файли в захищений каталог."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "Залежності NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Ім'я"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Потрібна підтримка?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Ніколи"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Ніколи не закінчується"
 
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (вбудований)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "Тип Captcha NexifyMy"
 
 msgid "NexifyMy Security"
 msgstr "NexifyMy Security"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security has detected unauthorized modifications to its files. Перевірте встановлення."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: у вас %d непрочитаних даних безпеки сповіщення."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Наступне оновлення"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Без пільгового періоду"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Немає останніх дій"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Немає SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Активність ще не зареєстрована. Activity will appear here once users start performing actions."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Змін вмісту ще не зареєстровано."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Країни ще не вибрано."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Немає даних"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Даних про подію ще немає."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Немає файлів на карантині."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Немає географічних даних"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Вхід ще не зареєстровано."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Ключі доступу ще не зареєстровані."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Немає звітів."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Сканування ще не виконано"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Немає результатів сканування. Натисніть «Запустити сканування», щоб проаналізувати свої залежності."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Немає результатів сканування. Запустіть сканування, щоб перевірити наявність уразливостей."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Наразі немає рекомендацій щодо безпеки. Ваш сайт добре захищений."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Немає даних про серйозність."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Підозрілих IP-адрес не виявлено."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Системних подій ще не зареєстровано."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Загроз ще не виявлено."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Активність користувачів ще не зареєстрована."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Ще немає дій користувачів."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Не активний"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Не ввімкнено"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Ще не позначено"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Не заплановано"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Примітка:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Електронна пошта для сповіщень"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Налаштування сповіщень"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Сповіщення"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Повідомити про блокування"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Сповіщати користувачів, коли в їхніх облікових записах увімкнено/вимкнено 2FA."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Число (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Кількість резервних кодів"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Кількість резервних кодів для створення на користувача."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Кількість невдалих спроб входу до блокування."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Кількість локаутів до постійного бану."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Номер правила порушення до автоматичного блокування."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Об'єкт"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Під час наступного входу в систему введіть пароль + 6-значний код"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Один раз на тиждень"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Один IP на рядок"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Один IP на рядок. IP-адреси проксі, яким дозволено надсилати заголовки X-Forwarded-For (наприклад, Cloudflare, балансувальники навантаження)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Один IP на рядок. Ці IP-адреси обходять усі обмеження швидкості."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Один IP на рядок. Ці IP-адреси будуть негайно заблоковані. Приклад: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Один IP на рядок. Ці IP-адреси обійдуть перевірку WAF."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Один IP на рядок. Ці IP обійдуть усі правила WAF. Приклад: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Один шлях на рядок. Абсолютні шляхи до додаткових каталогів для сканування."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Один шлях на рядок. Каталоги, які потрібно пропускати під час сканування."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "По одному на рядок. Блокувати певні агенти користувача. Приклад: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "По одному на рядок. Агенти користувача в цьому списку обходять перевірки WAF. Приклад: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Одне ім'я користувача на рядок"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Відкрийте налаштування"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Операційні системи"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Режим роботи"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Оптимізація бази даних"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Оптимізуйте та захистіть свою базу даних."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Зміни параметрів"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Додатково для всіх користувачів"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Додатково: надішліть результати сканування на вашу платформу CI/CD."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Оригінальний шлях"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Застаріла"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Накладні витрати"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Перевизначте мову для інтерфейсу плагіна. Підтримувані мови: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Огляд"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "Версія PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Пакет"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Запитів сторінок за хвилину"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Перегляди сторінок"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Сторінка не знайдена."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Автентифікація пароля"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Назва ключа доступу (наприклад, MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Ключ доступу успішно зареєстровано!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Ключі доступу не підтримуються в цьому браузері."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Пароль"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Термін дії пароля"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Політика паролів"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Політика паролів"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Вимоги до пароля"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Вимоги до пароля:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Форма скидання пароля"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Скидання пароля"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Пароль має містити щонайменше %d символів."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Пароль має містити принаймні одну малу літеру."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Пароль повинен містити хоча б одне число."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Пароль повинен містити хоча б один спеціальний символ."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Пароль має містити принаймні одну велику літеру."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Політика паролів"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Форма скидання пароля"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Шляхи, які потрібно виключити зі сканування (відносно кореня WordPress). По одному на рядок."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Статистика пікової активності"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Година пік"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Години пікового руху"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Режим продуктивності"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Параметри продуктивності"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Періодичні звіти"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Постійний"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Поріг постійної заборони"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Назавжди видаляє файл."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Будь ласка, розгадайте математичну капчу."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Плагін"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Аналіз плагінів і тем"
 
 msgid "Plugin Language"
 msgstr "Мова плагіна"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Плагін останнє оновлення"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Параметри плагіна"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Плагін Self-Protection"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Версія плагіна"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Уразливості плагінів"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Файли плагінів не можна редагувати через WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Цілісність плагіна"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Захист плагінів"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "Плагіни/теми CVE"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Активації плагінів/тем, оновлення, зміни опцій та експорт."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Плагіни"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Плагіни активовані"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Плагіни вимкнено"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Плагіни оновлено"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Редагування дописів/сторінок, публікація, завантаження медіа та видалення вмісту."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Публікації створено"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Публікації опубліковано"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Публікації оновлено"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Виявлено потенційну загрозу безпеці"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Запобігайте атакам XML-RPC і спробам грубої сили"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Заборонити доступ до каталогів поза кореневим веб-сайтом."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Запобігайте зловмисникам включати файли локального сервера."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Запобігайте грубій силі"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Заборонити редагування коду в адміністраторі WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Заборонити перелік каталогів через .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Запобігайте повторним сповіщенням протягом цього періоду."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Запобігайте повторним сповіщенням протягом цього періоду часу. Встановіть значення 0, щоб вимкнути регулювання."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Заборонити редагування файлів плагінів за допомогою редактора WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Заборонити включення віддалених файлів через параметри URL."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Заборонити перераховувати вміст каталогу через .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Заборонити встановлення плагіна/теми з панелі адміністратора."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Заборонити виділення та копіювання тексту на інтерфейсі."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Запобігайте використанню паролів, які часто зламуються"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Запобігання виявлення користувачів через кінцеву точку /wp-json/wp/v2/users."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Запобігає неавторизованій модифікації файлів модулів безпеки"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Основна електронна адреса для сповіщень безпеки."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Пріоритет"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Проактивні пропозиції безпеки та рекомендації щодо автоматичного посилення."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "проблема"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Оновлення профілю"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Зміни профілю, зміни ролей, події створення та видалення користувачів."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Ключ проекту"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Захист від підробки міжсайтових запитів."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Захист від атак міжсайтових сценаріїв (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Захист від атак SQL-ін’єкцій у параметрах GET/POST."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Захист від SQL-ін’єкції, XSS, RFI та інших атак."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Захистіть від грубої сили та DoS-атак, обмеживши частоту запитів для кожної IP-адреси."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Захистіть форми входу та реєстрації від автоматизованих атак ботів."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Захистіть форми входу та реєстрації за допомогою математичної перевірки капчі."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Захистіть файли плагінів від підробки."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Захистіть плагін безпеки від втручання та несанкціонованих змін."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Захистіть свою сторінку входу від атак грубою силою."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Захистіть свій сайт від зловмисного трафіку та атак."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Захищені форми"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Рівень захисту"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Режим захисту"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Правила охорони"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Параметри захисту"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Захищає REST API за допомогою авторизації JWT, обмеження швидкості та CORS. Необхідний для безголового WordPress."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Захищає від впровадження SQL, XSS і зловмисних запитів. Безпечно вмикати – блокує лише шкідливий трафік."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Захищає файли плагінів від модифікації. Безпечний - запобігає втручанню."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Провайдер"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Очистити всі журнали"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Очистити кеш"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Карантин"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Карантин негайно"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Рекомендований карантин"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Карантин:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "Карантин"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Файли на карантині"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Складність запиту перевищує максимум %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Глибина запиту перевищує максимально допустиму глибину %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "швидко"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Швидкі дії"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Швидке сканування"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Дії швидкого сканування"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Швидкий доступ до засобів підтримки безпеки."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Швидко: лише основні файли. Стандарт: ядро ​​+ теми/плагіни. Глибокий: усі файли."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "Безпека REST API"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "Користувачі REST API"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "Захист REST API"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS-канали вимкнено на цьому сайті."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Обмеження швидкості"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Обмежувач швидкості"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Обмеження швидкості"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Налаштування обмеження швидкості"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Моніторинг в реальному часі"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Причина"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Отримувати сповіщення електронною поштою про виявлення вразливостей"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Останні дії"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Останні виявлення загроз"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Нещодавно заблоковані IP-адреси"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Електронна адреса одержувача"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Рекомендації"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Рекомендовано"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Рекомендовані дії"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Перенаправлення заблокованого доступу"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Перенаправлення на головну сторінку"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Зменште площу атаки, вимкнувши непотрібні функції та посиливши конфігурацію WordPress."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Оновити"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Регенерувати"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Відновити базову лінію"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Зареєструвати пароль"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Зареєстровані ключі доступу"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Реєстрація ключа доступу..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Реєстраційна форма"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Реєстраційна форма"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Запам'ятати пристрій"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Запам'ятати тривалість"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Запам'ятайте цей пристрій"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "видалити"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Видалити теги генератора"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Видаліть підказки щодо входу"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Видаліть версію WordPress із вихідного коду"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Видаліть мета-теги генератора з усіх сторінок."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Видаліть підказки та пропозиції щодо скидання пароля."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Видаліть інформацію про версію з HTML і каналів."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Відновити всі змінені файли"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Відновлює змінені файли ядра WordPress. Використовуйте обережно - зробіть резервну копію перед ремонтом."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Замінює пошкоджені файли чистими версіями"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Історія звітів"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Зберігання звітів (днів)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Розклад звітів"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Обмеження запитів і фільтрація"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Обмеження розміру запиту"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Запитів за хвилину"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Вимагати 2FA для всіх адміністраторів"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Вимагати 2FA для вибраних ролей користувачів."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Вимагати другий фактор для підтвердження входу"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Вимагати вхід для доступу до REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Для входу потрібен другий фактор. Налаштуйте метод 2FA перед увімкненням."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Скинути"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Скинути всі налаштування"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Скинути навчання"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Скиньте всі налаштування безпеки NexifyMy до значень за замовчуванням. Цю дію не можна скасувати."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Скинути до значень за замовчуванням"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Скидання..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Код відповіді на блок"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Відновити"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Відновити:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Обмежити REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Обмежує доступ до REST API. Може впливати на плагіни, які використовують REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Період зберігання"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Повернути код помилки, якщо виявлено зловмисне програмне забезпечення (не вдалося створити CI/CD)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Повернути код помилки, якщо знайдено вразливі місця."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Повертає файл у вихідне розташування."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Огляд сповіщень ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Перегляньте негайно"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Регулярно переглядайте журнали безпеки"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Зміни ролей"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Запустіть повне сканування безпеки"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Запустіть перевірку цілісності"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Запустіть швидку перевірку"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Запустіть сканування"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Запустіть сканування вразливостей"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Запустіть перевірку безпеки, щоб виявити вразливі місця"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Щодня виконує автоматичне сканування шкідливих програм. Безпечно - тільки сканування, без змін файлів."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "ПОПЕРЕДЖЕННЯ БЕЗПЕКИ:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Хеші SHA-256 усіх файлів плагінів зберігаються як базова лінія."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "Інтеграція SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "Платформа SIEM"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL ін'єкція"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "Захист від впровадження SQL"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "Статус SSL"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "Перевірка SSL"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Зберегти додаткові налаштування"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Зберегти налаштування CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Зберегти налаштування Discord"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Зберегти налаштування електронної пошти"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Збережіть налаштування Jira"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Зберегти налаштування SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Зберегти налаштування сканера"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Зберегти налаштування ServiceNow"
 
 msgid "Save Settings"
 msgstr "Зберегти налаштування"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Збережіть налаштування Slack"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Зберегти налаштування команд"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Зберегти налаштування WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Зберегти налаштування Webhook"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Сканувати"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Сканування завершено"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Сканування завершено"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Сканувати залежності композитора"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Конфігурація сканування"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Елементи керування скануванням"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Сканувати спеціальні каталоги"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Сканувати залежності NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Плагіни сканування"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Відскануйте QR-код за допомогою програми автентифікації (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Результати сканування"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Розклад сканування"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Чутливість сканування"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Цілі сканування"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Теми сканування"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Час очікування сканування"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Сканувати каталог завантажень"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Сканувати ядро WordPress"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Перевірте всі встановлені плагіни на наявність шкідливих програм."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Перевірте всі встановлені теми на наявність шкідливих програм."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Скануйте лише критичні ділянки"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Сканувати файли на наявність зловмисного програмного забезпечення та підозрілого коду."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Скануйте плагіни, теми та ядро ​​WordPress на відомі вразливості."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Перевірте свій сайт на наявність зловмисного програмного забезпечення, вразливостей і проблем із безпекою."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Перевірте свій веб-сайт на наявність зловмисного програмного забезпечення та вразливостей у безпеці."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Сканер"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Налаштування сканера"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Сканування..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Сканує файли на наявність зловмисного програмного забезпечення та підозрілого коду. Безпечний - тільки сканує, не змінює файли."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Режим сканування за розкладом"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Сканування за розкладом"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Оцінка"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Пошукових запитів за хвилину"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Пошук імені користувача..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Секретний ключ"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Безпечний доступ до файлів"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Захищає WPGraphQL за допомогою обмежень глибини запитів, перевірки складності та обмеження швидкості. Безпечний для безголових установок."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Сповіщення безпеки"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Аналітика безпеки"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Посилення безпеки"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Заголовки безпеки"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Інцидент безпеки"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Журнали безпеки"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Модулі безпеки"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Сповіщення безпеки"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Параметри безпеки"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Рекомендації щодо безпеки"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Оцінка безпеки"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Статус безпеки"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Інструменти безпеки"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Вразливі місця безпеки"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Сповіщення безпеки"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Тут відображатимуться події безпеки."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Посилення безпеки"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Сканування безпеки завершено"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Налаштування безпеки змінено"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Виберіть країни:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Виберіть країни зліва, натисніть «Додати до списку», щоб додати їх. Вибрані країни буде заблоковано (Чорний список) або дозволено (Білий список) залежно від режиму вище."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Виберіть зображення галочкою:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Виберіть, який сервіс captcha використовувати."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Вибрані країни:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Самозахист"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Самозахист"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Надіслати тестове сповіщення"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Надіслати тестовий електронний лист"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Надіслати сповіщення після такої кількості атак протягом години."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Надсилайте щоденний дайджест електронною поштою"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Надсилати сповіщення електронною поштою, коли IP-адресу заблоковано."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Надсилати сповіщення електронною поштою про події безпеки"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Надсилати сповіщення електронною поштою при виявленні критичних атак."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Надсилати електронний лист, коли виявлено втручання"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Надсилати електронний лист, коли виявлені вразливості"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Надсилайте звіти на електронну адресу адміністратора"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Надсилайте результати сканування електронною поштою після кожного сканування."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Надсилайте події безпеки на Splunk, Elasticsearch або інші платформи SIEM для централізованого моніторингу та аналізу."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Надсилайте події безпеки на будь-яку кінцеву точку HTTP з індивідуальною конфігурацією."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Надсилайте події безпеки на будь-яку кінцеву точку HTTP за допомогою спеціальних заголовків і автентифікації."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Надсилайте коди підтвердження електронною поштою."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Надсилає сповіщення електронною поштою про події безпеки. Безпечно - спочатку налаштуйте параметри електронної пошти."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "Інтеграція ServiceNow"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Встановлює безпечні дозволи для файлів. Може знадобитися ручне налаштування, якщо сервер має проблеми."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Налаштування"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Налаштування успішно збережено"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Суворість"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Показати сторінку 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Показувати загальне повідомлення про помилку у разі помилки входу."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Показати на формах"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Показано %d із %d записів"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Показує непрочитані критичні/попереджувальні події. Використовуйте журнали для повної історії."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Увійдіть за допомогою пароля"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Статус підпису"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Виявлення на основі сигнатур"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Підписи"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Сайт за замовчуванням"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Ключ сайту"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Стан безпеки сайту"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Розмір"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Пропускати файли, розмір яких перевищує цей розмір."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Слабка інтеграція"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Рекомендовано деякі покращення"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Джерело"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Спеціальний символ (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (колектор подій HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Стандартний"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Стандарт - Збалансований захист"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Стандартне сканування"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Розпочати сканування"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Почніть нове сканування"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Розпочати сканування"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Статус"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Розповідь"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Строгий – максимальна безпека"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Надійні паролі"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Надійні паролі"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Коефіцієнт успішності"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Успішний вхід"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Успішні входи"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "Сукурі"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Логіка Сумо"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Ланцюг поставок"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Безпека ланцюга поставок"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Параметри ланцюга поставок"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Підтримка Google Authenticator, Authy тощо."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Підтримується:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Підозрілий код"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Підозрілі IP-адреси"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Системна активність"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Системні події"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Статус системи"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "Програми TOTP Authenticator"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Назва таблиці"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Таблиці"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Виявлення втручання:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "завдання"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Тимчасово блокувати IP-адреси, які перевищують обмеження швидкості API."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Тестове підключення"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Тестове сповіщення"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Відповідність тексту"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "Штучний інтелект постійно вивчає звичайні шаблони поведінки, включаючи години руху, географічне розташування, агентів користувачів і шаблони запитів. Ця базова лінія використовується для виявлення аномалій."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF захищає ваш сайт від поширених веб-атак, зокрема впровадження SQL, XSS і шкідливих ботів."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Перемикачі тем"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Ця година"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Цей місяць"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Цей тиждень"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Це звичайний пароль."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Ось як captcha відображатиметься у формах входу:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Цей пароль надто поширений. Виберіть більш унікальний пароль."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Цей запит заборонено."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Це призведе до скидання всіх даних навчання ШІ та моделей поведінки. Продовжити?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Загроза"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Розбивка загроз:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Виявлено загрозу"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Виявлено загрозу (зловмисне програмне забезпечення, підозрілі файли)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Виявлення та блокування загроз – останні 7 днів"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Оцінка загрози"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Загрози заблоковано"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Загрози знайдено"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Загрози сьогодні"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Дросельний період"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Продаж квитків"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Системи продажу квитків"
 
 msgid "Time"
-msgstr "Time"
+msgstr "час"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Часове вікно (с)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Час до закінчення терміну дії кодів підтвердження електронної пошти."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Часове вікно для підрахунку невдалих спроб входу."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Часове вікно, яке використовується для підрахунку невдалих спроб входу."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "На сьогоднішній день"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Сьогодні"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Забагато невдалих спроб входу. Повторіть спробу через %d хвилину(и)."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Інструменти"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Інструменти та утиліти"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Найкраща країна"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Основні причини виявлення"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Найпопулярніші типи подій"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Найпопулярніші сторінки"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Найпопулярніші реферери"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Загальна кількість подій"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Загальна кількість переглядів сторінок"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Всього підписів"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Загальний розмір"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Аналітика трафіку"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Огляд трафіку"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Запустити перевірку безпеки"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Довіряти заголовки проксі"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Довірені проксі"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Двічі на день"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Двофакторна авторизація (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Двофакторна автентифікація"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Двофакторна аутентифікація"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Тип"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Введіть слово:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Поведінка видалення"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Унікальні IP-адреси"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Унікальні користувачі"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Унікальні відвідувачі"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Невідомий"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Непрочитані сповіщення"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Непрочитані сповіщення безпеки з ваших журналів."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Оновити визначення"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Оновіть визначення зараз"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Оновити визначення шкідливих програм"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Оновити зараз"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Оновіть сигнатури виявлення шкідливих програм."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Велика літера (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Рівень терміновості"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Використовуйте заголовки CDN/проксі, щоб визначити реальну IP-адресу клієнта"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Використовуйте Touch ID, Face ID, Windows Hello або апаратний ключ безпеки."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Використовуйте заголовок X-Forwarded-For для виявлення IP (лише якщо за CDN/проксі)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Для виявлення використовуйте базу даних сигнатур шкідливих програм."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Використовуйте цей ключ для автентифікації запитів API від вашого конвеєра CI/CD."
 
 msgid "User"
-msgstr "User"
+msgstr "Користувач"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Активність користувача"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Агент користувача"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Події користувача"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Блокування користувачів"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Керування користувачами"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Вимоги до користувача"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Користувача або IP-адресу заблоковано через підозрілу активність"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Ім'я користувача"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Необхідно ім'я користувача та пароль."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Створено користувачів"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Користувачів видалено"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Користувачі вмикають 2FA у налаштуваннях свого профілю"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Використовує ШІ для виявлення загроз нульового дня за допомогою аналізу поведінки. Вивчає нормальні шаблони та позначає аномалії. Безпечно - стежить лише за поведінкою."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Сеанс перевірки закінчився. Будь ласка, увійдіть знову."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Підтвердити"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Перевірте основні файли"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Перевірте сертифікати SSL (рекомендовано для виробництва)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Перевірте та відновіть основні файли WordPress."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Перевірте та відновіть основні файли"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Версія"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Переглянути всі"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Дивіться поточний трафік"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Переглянути всі події безпеки."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Перегляд загроз на карантині та керування ними."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Перегляд сповіщень і сповіщень безпеки та керування ними."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Перегляди"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Тенденції відвідування - останні 30 днів"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Відвідувачі"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Відвідування сьогодні"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Перевірка вразливості"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Сканер вразливостей"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Вразливий"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "Атаку WAF заблоковано"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "Блокування WAF (атака заблокована брандмауером)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "Брандмауер WAF"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "Статус WAF"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "Версія WP"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "Захист WPGraphQL"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "Маркер WPScan API"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Попередження"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Попередження:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Попередження: імпортування замінить усі поточні налаштування. Обов’язково спершу експортуйте поточні налаштування як резервну копію."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Брандмауер веб-додатків"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Брандмауер веб-додатків (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "URL-адреса вебхуку"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "URL-адреса вебхуку для результатів"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Веб-хуки"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Щотижня"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Щотижневий звіт про безпеку"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Білий список (лише дозволено)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Білий список (дозволити лише вибраним)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Білий список IP-адрес"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "IP-адреси з білого списку"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Перевірка основного файлу WordPress"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "Статус ядра WordPress"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "Зміцнення WordPress"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "Версія WordPress"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "Основний файл WordPress було змінено"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress не оновлений"
 
 msgid "X-Content-Type-Options (No Sniff)"
 msgstr "X-Content-Type-Options (No Sniff)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (запобігання Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-захист"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "Контроль XML-RPC"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS атака"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "Захист XSS"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Ви використовуєте слаг входу за замовчуванням. Подумайте про те, щоб змінити його на щось унікальне."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Ви повинні увійти в систему, щоб отримати доступ до REST API."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Ваш сайт не використовує HTTPS. Увімкніть сертифікат SSL для безпечних з’єднань."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Ваш сайт добре захищений"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Ваш код підтвердження: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Ваші визначення вірусів застаріли. Оновіть зараз для найкращого захисту."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ID зони"
 
 msgid "ago"
-msgstr "ago"
+msgstr "тому"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "нападів на годину"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "спроби"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "заблоковано"
 
 msgid "characters"
-msgstr "characters"
+msgstr "персонажів"
 
 msgid "days"
-msgstr "days"
+msgstr "днів"
 
 msgid "events"
-msgstr "events"
+msgstr "події"
 
 msgid "fails"
-msgstr "fails"
+msgstr "не вдається"
 
 msgid "files"
-msgstr "files"
+msgstr "файли"
 
 msgid "from now"
-msgstr "from now"
+msgstr "відтепер"
 
 msgid "including:"
-msgstr "including:"
+msgstr "в тому числі:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "маленька літера"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "хвилин"
 
 msgid "modules"
-msgstr "modules"
+msgstr "модулі"
 
 msgid "number"
-msgstr "number"
+msgstr "номер"
 
 msgid "or"
-msgstr "or"
+msgstr "або"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "за хвилину"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "секунд"
 
 msgid "special character"
-msgstr "special character"
+msgstr "спеціальний символ"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "виявлено загрози"
 
 msgid "total records"
-msgstr "total records"
+msgstr "загальні записи"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "велика літера"
 
 msgid "views"
-msgstr "views"
+msgstr "погляди"
 
 msgid "violations"
-msgstr "violations"
+msgstr "порушення"
 
 msgid "visits"
-msgstr "visits"
+msgstr "відвідування"
+msgid "Deception"
+msgstr "Обман"
+
+msgid "P2P Intelligence"
+msgstr "Розвідка P2P"
+
+msgid "Sandbox Console"
+msgstr "Консоль пісочниці"
+
+msgid "Temporary Access"
+msgstr "Тимчасовий доступ"
+
+msgid "Saving..."
+msgstr "Збереження..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Налаштування збережено. Перезавантаження..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Налаштування успішно збережено! Перезавантаження..."
+
+msgid "Connection error"
+msgstr "Помилка підключення"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Помилка перевірки безпеки. Оновіть і повторіть спробу."
+
+msgid "Settings handler not available."
+msgstr "Обробник налаштувань недоступний."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Скинути всі налаштування до значень за замовчуванням? Це неможливо скасувати."
+
+msgid "Purge CDN cache now?"
+msgstr "Очистити кеш CDN зараз?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Не вдалося зберегти налаштування. Спробуйте ще раз."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Скидання налаштувань до значень за замовчуванням. Перезавантаження сторінки..."
+
+msgid "Failed to load analytics data."
+msgstr "Не вдалося завантажити дані аналітики."
+
+msgid "Devices"
+msgstr "Пристрої"
+
+msgid "No data available for this range."
+msgstr "Немає даних для цього діапазону."
+
+msgid "Traffic trend chart"
+msgstr "Графік тенденцій трафіку"
+
+msgid "Distribution breakdown chart"
+msgstr "Діаграма розбивки розподілу"
+
+msgid "Total"
+msgstr "Всього"
+
+msgid "Series"
+msgstr "Серія"
+
+msgid "Predictive Threat Hunting"
+msgstr "Прогнозне полювання на загрози"
+
+msgid "Forecast next attack vectors"
+msgstr "Прогноз наступних векторів атак"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Профілює ваш стек, передбачає ймовірні вектори атак і надає проактивні вказівки щодо захисту."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Керуйте загрозами в карантині та видаленими файлами, які можна відновити."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Видалені файли (з можливістю відновлення)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Переміщені сюди файли можна повернути в карантин або видалити назавжди."
+
+msgid "Deleted"
+msgstr "Видалено"
+
+msgid "Loading deleted files..."
+msgstr "Завантаження видалених файлів..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Переміщує файли з карантину до видаленого сховища, яке можна відновити."
+
+msgid "Delete Permanently:"
+msgstr "Видалити назавжди:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Назавжди видаляє файл із видаленого сховища."
+
+msgid "Access denied from your region."
+msgstr "Доступ заборонено з вашого регіону."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Максимальна кількість невдалих спроб входу до тимчасового блокування."
+
+msgid "Time window for counting failed attempts."
+msgstr "Часове вікно для підрахунку невдалих спроб."
+
+msgid "Open Tool"
+msgstr "Відкрити інструмент"
+
+msgid "Available Fix"
+msgstr "Доступне виправлення"
+
+msgid "Preview Patch"
+msgstr "Попередній перегляд патча"
+
+msgid "Apply Patch"
+msgstr "Застосувати патч"
+
+msgid "Honeytrap Configuration"
+msgstr "Конфігурація Honeytrap"
+
+msgid "Enable Deception Module"
+msgstr "Увімкнути модуль обману"
+
+msgid "How Deception Works:"
+msgstr "Як працює обман:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Наступні URL-адреси не існують на вашому сайті. Якщо хтось отримує до них доступ, вони <strong>автоматично блокуються</strong> як підтверджені зловмисники. Адміністратори ніколи не блокуються, але побачать попередження."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Індивідуальні шляхи Honeytrap"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Додайте один шлях на рядок (наприклад, /my-secret-admin/, /old-backup.sql). Стандартні параметри вже активні."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Шляхи Honeytrap за замовчуванням (завжди активні)"
+
+msgid "Login Page Honeypot"
+msgstr "Сторінка входу Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "У форми входу/реєстрації вставляється невидиме поле. Тільки боти заповнюють його, запускаючи миттєве виявлення та блокування."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Цей захист завжди вмикається, коли активний модуль Deception. Конфігурація не потрібна."
+
+msgid "User Enumeration Trap"
+msgstr "Пастка перерахування користувачів"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Виявляє спроби розвідки, коли зловмисники шукають дійсні імена користувачів через ?author=1, ?author=2 тощо."
+
+msgid "Enable user enumeration detection"
+msgstr "Увімкнути виявлення переліку користувачів"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Жорстке блокування спроб нумерації (за замовчуванням: м’яке перенаправлення на домашню сторінку)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Блокувати ВСІ переліки авторів (навіть для існуючих користувачів)"
+
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "Зіставлення даних, стаття 30 GDPR"
+
+msgid "Refresh Map"
+msgstr "Оновити карту"
+
+msgid "Export Data Map (PDF)"
+msgstr "Експорт карти даних (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Автоматичне виявлення ідентифікаційної інформації в таблицях бази даних, зіставлення потоків даних і виявлення спільного використання сторонніми особами."
+
+msgid "Data Element"
+msgstr "Елемент даних"
+
+msgid "Location"
+msgstr "Розташування"
+
+msgid "Purpose"
+msgstr "призначення"
+
+msgid "Retention"
+msgstr "Збереження"
+
+msgid "Third-Party Sharing"
+msgstr "Обмін сторонніми особами"
+
+msgid "Legal Basis"
+msgstr "Правова база"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Записів ідентифікаційної інформації ще не виявлено. Запустіть сканування карти даних, щоб створити звіт."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Автоматизація «Право на забуття»."
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Надсилайте запити на видалення, перевіряйте видалення даних і відстежуйте журнали відповідності для робочих процесів GDPR."
+
+msgid "User ID"
+msgstr "ID користувача"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Видаліть коментарі замість анонімізації"
+
+msgid "Run Erasure"
+msgstr "Запустіть Erasure"
+
+msgid "Verify Erasure"
+msgstr "Перевірте стирання"
+
+msgid "GDPR Request Log"
+msgstr "Журнал запитів GDPR"
+
+msgid "Request Type"
+msgstr "Тип запиту"
+
+msgid "Requested At"
+msgstr "Просив Ат"
+
+msgid "Completed At"
+msgstr "Виконано Ат"
+
+msgid "No GDPR requests logged yet."
+msgstr "Запитів GDPR ще не зареєстровано."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Пісочниця Shadow Runtime"
+
+msgid "Enable Sandbox Module"
+msgstr "Увімкнути модуль Sandbox"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Завантажує механізм Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "Увімкнути консоль Sandbox"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Дозволяє користувачам wp-admin з manage_options запускати код у консолі пісочниці."
+
+msgid "Sandbox Timeout"
+msgstr "Час очікування пісочниці"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Тайм-аут виконання в секундах (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Динамічний аналіз"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Запустіть динамічний аналіз виконання на додаток до статичних перевірок."
+
+msgid "Quarantine Policy"
+msgstr "Політика карантину"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Ручний карантин рекомендується для більшості сайтів. Автоматичний карантин ізолює лише надійно підтверджені шкідливі програми."
+
+msgid "Manual (Recommended)"
+msgstr "Вручну (рекомендовано)"
+
+msgid "Auto Quarantine"
+msgstr "Авто карантин"
+
+msgid "Save Quarantine Policy"
+msgstr "Політика збереження карантину"
+
+msgid "AI Risk Controls"
+msgstr "Контроль ризиків ШІ"
+
+msgid "Enable AI Detection Module"
+msgstr "Увімкнути модуль виявлення AI"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Увімкнути виявлення внутрішньої загрози"
+
+msgid "Insider Threat Threshold"
+msgstr "Поріг внутрішньої загрози"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Увімкнути моніторинг викрадання даних"
+
+msgid "Exfiltration Threshold"
+msgstr "Поріг ексфільтрації"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Базові дні ексфільтрації"
+
+msgid "Session Risk Threshold"
+msgstr "Поріг ризику сеансу"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Інтервал безперервної перевірки авторизації (секунди)"
+
+msgid "Risk Spike Threshold"
+msgstr "Порогове значення ризику"
+
+msgid "Save AI Settings"
+msgstr "Зберегти налаштування AI"
+
+msgid "Quarantine Mode"
+msgstr "Режим карантину"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Ручний режим безпечніший і рекомендований. Автоматичний режим поміщає в карантин лише зловмисне програмне забезпечення з високою надійністю."
+
+msgid "Data Map"
+msgstr "Карта даних"
+
+msgid "Privacy Requests"
+msgstr "Запити щодо конфіденційності"
+
+msgid "Deception Technology"
+msgstr "Технологія обману"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Приманки, активи-приманки та обман зловмисників, щоб уловити загрози, перш ніж вони завдадуть удару."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Показано %1$d із %2$d записів"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "Модуль P2P Intelligence не завантажується."
+
+msgid "P2P Threat Intelligence"
+msgstr "Розвідка загроз P2P"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Обмінюйтеся інформацією про загрози з іншими інсталяціями SentinelWP для колективного імунітету."
+
+msgid "P2P Settings"
+msgstr "Налаштування P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "Увімкнути P2P Intelligence"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Увімкніть спільний обмін інформацією про загрози з одноранговими вузлами."
+
+msgid "My Node Key"
+msgstr "Мій ключ вузла"
+
+msgid "Copy"
+msgstr "Копія"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Поділіться цим ключем з колегами, які хочуть підключитися до вашого сайту."
+
+msgid "Broadcast Threats"
+msgstr "Трансляція загроз"
+
+msgid "Share detected threats with registered peers."
+msgstr "Діліться виявленими загрозами з зареєстрованими колегами."
+
+msgid "Trust Threshold"
+msgstr "Поріг довіри"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Автоматично блокувати лише IP-адреси з показником загрози >= цього порогу. Менші значення = більш агресивне блокування."
+
+msgid "Registered Peers"
+msgstr "Зареєстровані колеги"
+
+msgid "Add Peer"
+msgstr "Додати Peer"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Ще немає зареєстрованих колег. Додайте партнера, щоб почати обмінюватися інформацією про загрози."
+
+msgid "Label"
+msgstr "Мітка"
+
+msgid "Last Sync"
+msgstr "Остання синхронізація"
+
+msgid "Sent/Received"
+msgstr "Надіслано/Отримано"
+
+msgid "Unnamed"
+msgstr "Без назви"
+
+msgid "%s ago"
+msgstr "%s тому"
+
+msgid "Threats Sent"
+msgstr "Погрози надіслано"
+
+msgid "Threats Received"
+msgstr "Отримано погрози"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Connected Peers"
+msgstr "Підключені однолітки"
+
+msgid "Threats Received (24h)"
+msgstr "Отримані погрози (24 години)"
+
+msgid "P2P Status"
+msgstr "Статус P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "Кредити аналізу загроз"
+
+msgid "Current Credit Balance"
+msgstr "Поточний кредитний баланс"
+
+msgid "Reputation Score"
+msgstr "Оцінка репутації"
+
+msgid "Accuracy"
+msgstr "Точність"
+
+msgid "Badges:"
+msgstr "Значки:"
+
+msgid "No badges yet"
+msgstr "Ще немає значків"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Преміальні переваги відкриваються безкоштовно, оскільки ваша репутація перевищує 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Досягніть оцінки репутації вище 1000, щоб безкоштовно розблокувати преміум-привілеї."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Найактивніші учасники (анонімні)"
+
+msgid "No contributor data available yet."
+msgstr "Даних про співавторів ще немає."
+
+msgid "Rank"
+msgstr "ранг"
+
+msgid "Anonymous Site ID"
+msgstr "Анонімний ідентифікатор сайту"
+
+msgid "Credits"
+msgstr "Кредити"
+
+msgid "Reputation"
+msgstr "Репутація"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Add New Peer"
+msgstr "Додати нового партнера"
+
+msgid "Peer URL"
+msgstr "Однорангова URL-адреса"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "Повна URL-адреса однорангового сайту WordPress (потрібно використовувати HTTPS у виробництві)."
+
+msgid "Peer Node Key"
+msgstr "Ключ однорангового вузла"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Ключ вузла однорангового вузла (вони можуть скопіювати його зі сторінки налаштувань P2P)."
+
+msgid "Label (Optional)"
+msgstr "Мітка (необов'язково)"
+
+msgid "My Production Server"
+msgstr "Мій виробничий сервер"
+
+msgid "A friendly name to identify this peer."
+msgstr "Зрозуміле ім’я для ідентифікації цього однолітка."
+
+msgid "Unauthorized"
+msgstr "Несанкціонований"
+
+msgid "Sandbox module is not loaded."
+msgstr "Модуль пісочниці не завантажується."
+
+msgid "Sandbox module is disabled."
+msgstr "Модуль пісочниці вимкнено."
+
+msgid "Sandbox console is disabled."
+msgstr "Консоль пісочниці вимкнено."
+
+msgid "No code provided."
+msgstr "Код не надано."
+
+msgid "Insufficient permissions."
+msgstr "Недостатньо дозволів."
+
+msgid "Sandbox Module Disabled"
+msgstr "Модуль пісочниці вимкнено"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Пісочниця Shadow Runtime наразі вимкнена. Увімкніть його в налаштуваннях, щоб використовувати консоль."
+
+msgid "Go to Settings"
+msgstr "Перейдіть до Налаштувань"
+
+msgid "Sandbox Console Disabled"
+msgstr "Консоль пісочниці вимкнено"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Модуль Sandbox увімкнено, але консоль адміністратора вимкнена. Увімкніть налаштування консолі для запуску коду з wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Небезпечна зона: виконання коду"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Ця консоль виконує код PHP в ізольованому програмному середовищі. Усі зміни бази даних автоматично відкочуються. Використовуйте лише для аналізу підозрілого коду або тестування."
+
+msgid "PHP Code Editor"
+msgstr "Редактор коду PHP"
+
+msgid "Run Code"
+msgstr "Виконати код"
+
+msgid "Analyze Only"
+msgstr "Тільки аналізувати"
+
+msgid "Timeout:"
+msgstr "Час очікування:"
+
+msgid "Execution Results"
+msgstr "Результати виконання"
+
+msgid "STATIC ANALYSIS"
+msgstr "СТАТИЧНИЙ АНАЛІЗ"
+
+msgid "OUTPUT"
+msgstr "ВИХІД"
+
+msgid "ERRORS"
+msgstr "ПОМИЛКИ"
+
+msgid "DATABASE QUERIES"
+msgstr "ЗАПИТ ДО БАЗИ ДАНИХ"
+
+msgid "Module not loaded"
+msgstr "Модуль не завантажено"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Аналітика трафіку в реальному часі недоступна."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Для своєчасного доступу використовується робочий процес запитів і затвердження з автоматичним закінченням терміну дії."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Тимчасовий доступ наразі недоступний, оскільки модуль вимкнено або не завантажується."
+
+msgid "Open settings"
+msgstr "Відкрийте налаштування"
+
+msgid "Request Temporary Access"
+msgstr "Запит на тимчасовий доступ"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Цей запит стосується вашого облікового запису, у який ви ввійшли. Адміністратор має схвалити його, перш ніж надати тимчасовий підвищений доступ."
+
+msgid "Requested Role"
+msgstr "Запитана роль"
+
+msgid "Administrator"
+msgstr "Адміністратор"
+
+msgid "Editor"
+msgstr "редактор"
+
+msgid "Duration (minutes)"
+msgstr "Тривалість (хв)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Опишіть, чому потрібен тимчасовий підвищений доступ."
+
+msgid "Submit Request"
+msgstr "Надіслати запит"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Надати тимчасовий доступ (адміністратор)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Надайте обмежений за часом підвищений доступ безпосередньо конкретному користувачеві за допомогою імені користувача або електронної пошти."
+
+msgid "Target User (Username or Email)"
+msgstr "Цільовий користувач (ім'я користувача або електронна пошта)"
+
+msgid "username or user@example.com"
+msgstr "ім'я користувача або user@example.com"
+
+msgid "Grant Role"
+msgstr "Надати роль"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Опишіть, чому цьому користувачеві потрібен тимчасовий підвищений доступ."
+
+msgid "Grant Access"
+msgstr "Надати доступ"
+
+msgid "Pending and Active Requests"
+msgstr "Очікуючі та активні запити"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Схвалювати запити, що очікують на розгляд, переглядати прямі надання та скасовувати активні дозволи з цієї черги."
+
+msgid "Original Role"
+msgstr "Оригінальна роль"
+
+msgid "Elevated Role"
+msgstr "Підвищена роль"
+
+msgid "Granted"
+msgstr "Зрозуміло"
+
+msgid "Expires"
+msgstr "Термін дії закінчується"
+
+msgid "Approved By"
+msgstr "Затверджено"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "English (US)"
+msgstr "англійська (США)"
+
+msgid "English (UK)"
+msgstr "англійська (Великобританія)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (іспанська)"
+
+msgid "Francais (French)"
+msgstr "Francais (французька)"
+
+msgid "Deutsch (German)"
+msgstr "Deutsch (німецька)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (італ.)"
+
+msgid "Portugues (Brazilian)"
+msgstr "Португальці (Бразилія)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Nederlands (голландська)"
+
+msgid "Russian"
+msgstr "російська"
+
+msgid "Japanese"
+msgstr "Японський"
+
+msgid "Chinese (Simplified)"
+msgstr "Китайська (спрощена)"
+
+msgid "Arabic"
+msgstr "арабська"
+
+msgid "Hindi"
+msgstr "Хінді"
+
+msgid "Korean"
+msgstr "корейська"
+
+msgid "Turkish"
+msgstr "турецька"
+
+msgid "Polski (Polish)"
+msgstr "Polski (Польський)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (індонезійська)"
+
+msgid "Ukrainian"
+msgstr "українська"
+
+msgid "Vietnamese"
+msgstr "в'єтнамська"
+
+msgid "Thai"
+msgstr "тайська"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (шведська)"
+
+msgid "Dansk (Danish)"
+msgstr "Dansk (датська)"
+
+msgid "Suomi (Finnish)"
+msgstr "суомі (фінська)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (норвезька)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Чехія)"
+
+msgid "Greek"
+msgstr "грецька"
+
+msgid "Magyar (Hungarian)"
+msgstr "угорська (угорська)"
+
+msgid "Romana (Romanian)"
+msgstr "Романа (румунська)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovencina (словацька)"
+
+msgid "Bulgarian"
+msgstr "Болгарська"
+
+msgid "Hrvatski (Croatian)"
+msgstr "хорватська (хорватська)"
+
+msgid "Serbian"
+msgstr "сербська"
+
+msgid "Hebrew"
+msgstr "іврит"
+
+msgid "Persian"
+msgstr "перська"
+
+msgid "Settings saved successfully."
+msgstr "Налаштування успішно збережено."
+
+msgid "Settings reset to defaults."
+msgstr "Скидання налаштувань до значень за замовчуванням."
+
+msgid "NexifyMy Security Logs"
+msgstr "Журнали безпеки NexifyMy"
+
+msgid "No matching user found."
+msgstr "Відповідного користувача не знайдено."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Журнали безпеки та відповідну ідентифікаційну інформацію було анонімно."
+
+msgid "Invalid user ID."
+msgstr "Недійсний ідентифікатор користувача."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Запит на стирання вручну або на основі веб-хука в черзі."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Запит на видалення Mailchimp надіслано."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Стирання смуг вимагає ручного контролю API для записів відповідності."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Запит API видалення користувача Google Analytics необхідно налаштувати зовні."
+
+msgid "Privacy Preferences"
+msgstr "Налаштування конфіденційності"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Виберіть, які додаткові категорії обробки ви дозволяєте."
+
+msgid "Save Preferences"
+msgstr "Зберегти налаштування"
+
+msgid "Consent Management"
+msgstr "Управління згодою"
+
+msgid "Given"
+msgstr "Дано"
+
+msgid "Withdrawn"
+msgstr "Вилучено"
+
+msgid "No consent records found."
+msgstr "Записів про згоду не знайдено."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Помилка</strong>: щось пішло не так. Спробуйте пізніше."
+
+msgid "The peer URL is not valid."
+msgstr "Однорангова URL-адреса недійсна."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Ви не можете додати свій власний сайт як одноранговий."
+
+msgid "API key must be at least 16 characters."
+msgstr "Ключ API має містити не менше 16 символів."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Досягнуто максимальної кількості однорангових пристроїв (%d)."
+
+msgid "Missing authentication header."
+msgstr "Відсутній заголовок автентифікації."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Недійсний ключ вузла. Рівний не розпізнано."
+
+msgid "Invalid request signature."
+msgstr "Недійсний підпис запиту."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Ліміт швидкості перевищено. Повторіть спробу пізніше."
+
+msgid "Invalid site identifier."
+msgstr "Недійсний ідентифікатор сайту."
+
+msgid "Unknown contribution type."
+msgstr "Невідомий тип внеску."
+
+msgid "Unknown benefit type."
+msgstr "Невідомий тип пільги."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Недостатньо кредитів для цієї пільги."
+
+msgid "Threat Forecast"
+msgstr "Прогноз загрози"
+
+msgid "Your site profile:"
+msgstr "Профіль вашого сайту:"
+
+msgid "Predicted threats this month:"
+msgstr "Прогнозовані загрози цього місяця:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Вектори з високою достовірністю ще не виявлено."
+
+msgid "Recommended actions:"
+msgstr "Рекомендовані дії:"
+
+msgid "No immediate actions required."
+msgstr "Негайних дій не потрібно."
+
+msgid "Not logged in"
+msgstr "Не ввійшли в систему"
+
+msgid "A reason is required"
+msgstr "Потрібна причина"
+
+msgid "Invalid requested role"
+msgstr "Запитана недійсна роль"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Для цієї ролі вже існує активний або незавершений запит."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Запит на доступ подано. Ваш запит розгляне адміністратор."
+
+msgid "Invalid request"
+msgstr "Недійсний запит"
+
+msgid "Pending request not found"
+msgstr "Запит, що очікує на розгляд, не знайдено"
+
+msgid "Request role is invalid"
+msgstr "Роль запиту недійсна"
+
+msgid "Invalid approved role"
+msgstr "Недійсна затверджена роль"
+
+msgid "Access approved successfully"
+msgstr "Доступ схвалено"
+
+msgid "Target user (username or email) is required."
+msgstr "Потрібно вказати цільового користувача (ім’я користувача або електронну адресу)."
+
+msgid "A reason is required."
+msgstr "Потрібна причина."
+
+msgid "Invalid requested role."
+msgstr "Запитана недійсна роль."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Цільовий користувач не знайдено. Використовуйте наявне ім'я користувача або електронну адресу."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Користувач уже має цю роль. Тимчасове підвищення не потрібно."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Для цього користувача та ролі вже існує активний або незавершений грант."
+
+msgid "Unable to grant temporary access."
+msgstr "Не вдалося надати тимчасовий доступ."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "%1$s надано тимчасовий доступ %2$s на %3$d хвилин."
+
+msgid "Invalid grant"
+msgstr "Недійсний грант"
+
+msgid "Grant not found or already revoked"
+msgstr "Грант не знайдено або вже скасовано"
+
+msgid "Permission revoked successfully"
+msgstr "Дозвіл успішно скасовано"
+
+msgid "Once Monthly"
+msgstr "Один раз на місяць"
+
+msgid "Every 5 Minutes"
+msgstr "Кожні 5 хвилин"
 

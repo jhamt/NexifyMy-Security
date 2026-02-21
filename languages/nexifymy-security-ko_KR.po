@@ -8,1924 +8,1924 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "마지막 검사에서 %d개의 위협이 감지되었습니다."
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(확인하려면 이 코드를 말하세요)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - 높음"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1일"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1시간"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14일"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15분"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - 중간"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24시간"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA 방법"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA 설정"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - 낮음"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3일"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30일"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30분"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30일"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 금지됨"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 찾을 수 없음"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 요청이 너무 많음(권장)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5분"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 서비스를 사용할 수 없습니다."
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6시간"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60일"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7일"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7일(계속)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90일"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90일"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "AI 학습 현황"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "AI 현황"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI 위협 탐지"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "AI 학습 데이터 재설정에 성공했습니다."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "분당 AJAX 요청"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API 및 헤드리스 보안"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API 및 서비스"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "API 버스트 허용량"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "API 엔드포인트"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API 키"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "API 속도 제한"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "분당 API 요청"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "API 보안"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "API 토큰"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "API 비율 제한을 초과했습니다. 제한: 분당 %d개의 요청."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "API 제한"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API 토큰, HEC 토큰 또는 인증 키."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "버려진"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "검역소 정보"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "액세스가 거부되었습니다."
 
 msgid "Action"
-msgstr "Action"
+msgstr "액션"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "작업"
 
 msgid "Active"
-msgstr "Active"
+msgstr "활성"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "활동 대시보드"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "활동 로그"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "활동 로그 설정"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "해당 사용자의 활동은 기록되지 않습니다."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "이보다 오래된 활동 로그는 자동으로 삭제됩니다."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "활동 추적"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "%d자를 더 추가하세요."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "보안을 강화하려면 사용자 계정에 2FA를 추가하세요."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "로그인 및 양식에 CAPTCHA를 추가하세요."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "로그인 양식에 CAPTCHA 확인 추가"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "HTTP 보안 헤더(X-Frame-Options, CSP 등) 추가"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "새 패스키 추가"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "보안 헤더 추가"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "웹훅 추가"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "X-Frame-Options, X-Content-Type-Options 및 기타 보안 헤더를 추가합니다."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "X-Frame-Options, X-XSS-Protection 헤더 추가"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "두 번째 인증 형식을 요구하여 추가 보안 계층을 추가합니다."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "사용자 로그인에 대해 두 가지 형태의 인증을 요구하여 추가 보안 계층을 추가합니다."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "TOTP 기반 2FA로 보안 계층을 추가하세요."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "소문자를 추가하세요."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "숫자를 추가하세요."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "특수 문자를 추가합니다."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "목록에 추가"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "대문자를 추가하세요."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "추가 로그인 보안 조치. 속도 제한기와 함께 작동합니다."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "로그인 양식에 CAPTCHA를 추가합니다. 안전하지만 사용자 경험에 영향을 미칠 수 있습니다."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Google reCAPTCHA, Cloudflare Turnstile 또는 수학 문제를 추가합니다."
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "HTTP 보안 헤더(X-Frame-Options, CSP)를 추가합니다. 안전 - 브라우저 보안을 향상시킵니다."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "TOTP, 이메일 또는 SMS 코드로 추가 보안 계층을 추가합니다."
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "관리자 로그인(성공적인 관리자 로그인)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "고급"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "고급 방화벽 설정"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "고급 강화"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "고급 강화 옵션"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "고급 로그인 설정"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "고급 옵션"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "고급 스캐너 옵션"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "고급 휴리스틱"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "영향을 받는 파일:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "경고 임계값"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "경고 유형"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "경고"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "플러그인이 비활성화되면 경고가 전송됩니다."
 
 msgid "All"
-msgstr "All"
+msgstr "모두"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "모두 클리어!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "모든 이벤트"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "모든 심각도"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "모든 사용자가 자발적으로 2FA를 활성화하도록 허용합니다."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "이메일 코드를 백업 방법으로 허용"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "속도 제한을 초과하는 짧은 버스트를 허용합니다."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "시행하기 전에 사용자에게 2FA를 설정할 시간을 허용하십시오."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "사용자가 2FA를 활성화하도록 허용"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "사용자가 긴급 백업 코드를 생성하도록 허용합니다."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "사용자가 신뢰할 수 있는 장치에서 2FA를 건너뛸 수 있도록 허용합니다."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "허용된 사용자 에이전트"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "분석"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "이상 현상"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "모든 심각도"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "수정 사항이 있으면 즉시 이메일 알림이 전송됩니다."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "설정 적용"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "WordPress 보안 모범 사례를 적용합니다."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "보안 수정사항 적용"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "WordPress에 보안 강화 조치를 적용합니다."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "WordPress 설치를 보호하기 위해 보안 강화 조치를 적용합니다."
 
 msgid "ArcSight"
-msgstr "ArcSight"
+msgstr "아크사이트"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "이 패스키를 삭제하시겠습니까?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "계속하시겠습니까?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "공격 보호"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "시도 창"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "오디오(말하기)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "인증 중..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "인증코드"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "인증 이벤트"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "인증 토큰"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "인증에 실패했습니다. 다시 시도해 주세요."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "API 액세스에는 인증이 필요합니다."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "GraphQL 액세스에는 인증이 필요합니다."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "작성자 스캔"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "자동 차단 기간"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "반복 위반자 자동 차단"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "자동 차단 임계값"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "자동 수정"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "보고서 자동 생성"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "자동 격리 위협"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "자동 스캔 일정"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "자동 업데이트"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "자동 업데이트 설정"
 
 msgid "Auto-Updates"
 msgstr "자동 업데이트"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "자동 감지"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "자동 스캐닝"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "자동 스캔"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "규칙을 여러 번 실행하는 IP를 자동으로 블랙리스트에 추가합니다."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "보안 사고 및 취약점에 대한 Jira 티켓을 자동으로 생성합니다."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "프로젝트 관리 시스템에서 보안 사고에 대한 티켓을 자동으로 생성합니다."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "일정에 따라 자동으로 보고서 생성"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "감지된 악성코드를 자동으로 격리 저장소로 이동합니다."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "백그라운드에서 자동으로 검사를 실행합니다."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "매일 맬웨어 서명을 자동으로 업데이트합니다."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "사용 가능한 국가"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "이용 가능한 이벤트"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "평균/일"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "백그라운드 스캔"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "교체하기 전에 손상된 파일을 백업합니다."
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "백업 코드"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "데이터베이스를 백업, 최적화 및 보호하세요."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "백업 및 정리"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "백업은 wp-content/nexifymy-backups/core/에 저장됩니다."
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "나쁜 봇"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "잘못된 요청"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "균형 잡힌(권장)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "행동 기록"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "행동 분석"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "블랙리스트(차단 목록)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "블랙리스트(차단이 선택됨)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "블랙리스트 IP"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "블랙리스트: 선택한 국가를 차단합니다. 화이트리스트: 선택한 국가만 허용합니다."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "블랙리스트에 등록된 IP"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "나쁜 봇 차단"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "CSRF 공격 차단"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "일반 비밀번호 차단"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "블록 디렉터리 탐색"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "블록 기간"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "빈 사용자 에이전트 차단"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "과도한 API 사용자 차단"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "블록 파일 편집기"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "로컬 파일 포함 차단"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "메시지 차단"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "차단 모드"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "차단 모드(권장)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "차단 모드: 악의적인 요청을 차단합니다. 모니터 모드: 위협을 차단하지 않고 기록합니다."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "원격 코드 실행 차단"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "원격 파일 포함 차단"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "SQL 주입 차단"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "의심스러운 파일 업로드 차단"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "XML-RPC 액세스 차단(무차별 공격 방지)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "XSS 공격 차단"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "특정 국가의 접근을 차단합니다."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "공격적인 크롤러 차단(높은 요청률)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "작성자 열거 검색 차단(?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "지나치게 긴 쿼리 문자열을 차단합니다."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "알려진 불량 봇 및 스크레이퍼 차단"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "알려진 악성 봇과 스크레이퍼를 차단합니다."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "잘못된 요청과 의심스러운 쿼리 문자열을 차단하세요."
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "악의적인 요청 차단"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "악의적인 요청 및 공격 차단"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "국가에 따라 트래픽을 차단하거나 허용합니다."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "DoS 공격을 방지하려면 이 크기보다 큰 요청을 차단하세요."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "빈 사용자 에이전트가 있는 요청 차단(일부 합법적인 봇을 차단할 수 있음)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "User-Agent 헤더가 없는 요청을 차단합니다."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "의심스러운 IP 차단"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "의심스러운 사용자 에이전트 차단"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "특정 국가의 트래픽을 차단합니다. 활성화하기 전에 설정에서 국가를 구성하세요."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "실행 가능한 확장자(.php, .exe, .sh 등)가 있는 업로드를 차단합니다."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "차단된 공격"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "차단된 파일 확장자"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "차단된 요청"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "차단된 사용자 에이전트"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "악의적인 행위를 보이는 IP 주소를 차단합니다. 안전 - IP를 화이트리스트에 추가할 수 있습니다."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "언제든지 로그인 페이지에 액세스할 수 있도록 이 URL을 북마크에 추가하세요."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "봇 및 크롤러 보호"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "봇 및 사용자 에이전트 보호"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "봇 예방"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "봇 보호"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "브라우저"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "무차별 대입"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "무차별 대입 보호"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "무차별 대입 보호 및 로그인 시도 제한."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "버그"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "가장 바쁜 날"
 
 msgid "CAPTCHA"
-msgstr "CAPTCHA"
+msgstr "보안 문자"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "보안 문자 보호"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDN 통합"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN 상태"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF(공통 이벤트 형식)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "CI/CD 파이프라인"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "CI/CD 파이프라인 통합"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "취소"
 
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "보안 문자"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "보안 문자 미리보기"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "보안 문자 제공자"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "보안 문자 설정"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "데이터베이스 접두사 변경"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "데이터베이스 테이블 접두사를 변경합니다(수동 데이터베이스 업데이트 필요)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "공격을 방지하려면 기본 로그인 URL을 변경하세요."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "자동 공격을 방지하려면 기본 wp-admin 로그인 URL을 변경하세요."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "봇 공격을 방지하기 위해 로그인 URL을 /wp-admin에서 사용자 정의 슬러그로 변경합니다."
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "채널"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "캐릭터 요구 사항"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "핵심 무결성 확인"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "확인 간격"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "공식 소스를 사용하여 손상된 WordPress 핵심 파일을 확인하고 복구하세요."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "수정 사항과 악성 코드가 있는지 핵심 파일을 확인하세요."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "백도어 확인"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "난독화 확인"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "알려진 취약점을 확인하세요."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "업로드된 파일에 악성 콘텐츠가 있는지 확인하세요."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "웹 셸 확인"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "알려진 취약점이 있는지 플러그인/테마를 확인합니다. 안전 - 버전만 확인합니다."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "독특하고 추측하기 어려운 슬러그를 선택하세요."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "NexifyMy captcha에 대한 챌린지 유형을 선택하세요."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "파일 정리"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "파일 정리:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "데이터베이스 정리 및 최적화"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "불필요한 데이터를 정리하여 데이터베이스 성능을 향상시킵니다."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "로그 지우기"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "클라우드플레어"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare 등"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API 설정"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API 토큰(영역 권한 포함)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare 개찰구"
 
 msgid "Code"
-msgstr "Code"
+msgstr "코드"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "코드 만료"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "코드 품질 문제"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "업로드를 차단할 파일 확장자의 쉼표로 구분된 목록입니다."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "건너뛸 파일 확장자의 쉼표로 구분된 목록입니다(예: jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "댓글이 차단되었습니다."
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "댓글 양식"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "댓글 게시율"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "댓글 양식"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "커뮤니케이션"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "커뮤니케이션 플랫폼"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "공식 WordPress 체크섬과 핵심 파일을 비교합니다."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "WordPress 핵심 파일을 공식 체크섬과 비교하여 수정 사항을 감지하세요."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "각 코어 파일을 예상 해시와 비교합니다."
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "모든 RSS 및 Atom 피드를 완전히 비활성화합니다."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "모든 파일 수정을 완전히 비활성화합니다(DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "규정 준수"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "규정 준수 및 보고"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "규정 준수 및 보안 보고"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "규정 준수 설정"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "작성기 종속성"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "종합적인 분석"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "포괄적인 사용자 활동 추적, 로그인 모니터링 및 시스템 이벤트 로깅."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "구성"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "향상된 로그인 보안을 위해 2FA 구성"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "보안 및 성능을 위해 CDN을 구성합니다."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "CDN 통합 및 캐시 관리를 구성합니다."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "사이트를 보호하려면 웹 애플리케이션 방화벽(WAF)을 구성하세요."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "이메일 경고 및 알림을 구성합니다."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "방화벽 규칙 및 보호 설정을 구성합니다."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "맬웨어 검사기 동작 및 예약 검사 옵션을 구성합니다."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "플러그인 설정 및 기본 설정을 구성합니다."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "플러그인 설정을 구성합니다."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "보안 설정을 구성합니다."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "확인"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "조치 확인"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "확인된 악성코드"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "보안 모니터링을 SIEM, 티켓팅, 커뮤니케이션, CI/CD 플랫폼에 연결하세요."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "NexifyMy Security에 대한 도움이 필요하면 지원팀에 문의하세요."
 
 msgid "Content"
-msgstr "Content"
+msgstr "내용"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "콘텐츠 활동"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "콘텐츠 변경"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "콘텐츠 이벤트"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "콘텐츠 보안"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "핵심 파일 수정"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "핵심 파일 복구"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "코어 수리"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "핵심 WordPress 무결성"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "코어 파일 무결성"
 
 msgid "Count"
-msgstr "Count"
+msgstr "개수"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "국가"
 
 msgid "Country"
-msgstr "Country"
+msgstr "국가"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "국가 차단 설정"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "국가 제한"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "지금 백업 생성"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "WordPress 데이터베이스의 백업을 만듭니다. 백업은 안전하게 저장되며 다운로드할 수 있습니다."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "중요한 보안 이벤트에 대해 ServiceNow에서 인시던트를 생성합니다."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "웹후크 생성: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Discord 서버 설정 > 통합 > 웹훅에서 웹훅을 생성하세요."
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "웹후크 만들기: 팀 > 채널 > 커넥터 > 들어오는 웹후크"
 
 msgid "Created"
-msgstr "Created"
+msgstr "생성됨"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "생성됨: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "심각"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "중요한 것만"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "현재 로그인 URL"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "현재 버전"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "현재:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "사용자 정의 로그인 URL"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "맞춤 URL"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "맞춤형 웹훅"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "매일"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "매일(권장)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "일일 현황 요약"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "일일 요약"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "대시보드"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "데이터 보존"
 
 msgid "Database"
-msgstr "Database"
+msgstr "데이터베이스"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "데이터베이스 작업"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "데이터베이스 백업"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "데이터베이스 정보"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "데이터베이스 최적화"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "데이터베이스 최적화"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "데이터베이스 보안"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "데이터베이스 크기"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "데이터베이스 백업 및 최적화. 활성화하기 전에 백업 일정을 구성하십시오."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "데이터베이스 보안 점검"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "데이터독"
 
 msgid "Date"
-msgstr "Date"
+msgstr "날짜"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "날짜/시간"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "비활성화 모니터링:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "디버그 모드"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "깊은"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "정밀 스캔"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "기본 스캔 모드"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "아무것도 지정되지 않은 경우 사용되는 기본 스캔 모드입니다."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "정의"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "삭제"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "제거 시 모든 플러그인 데이터 삭제"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "삭제:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "종속성 검색, 타사 스크립트 모니터링 및 CDN 무결성 확인."
 
 msgid "Description"
-msgstr "Description"
+msgstr "설명"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "사이트 트래픽 및 보안 이벤트에 대한 자세한 통찰력"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "웹사이트 보안 성능에 대한 자세한 통찰력."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "코드 실행 시도를 감지하고 차단합니다."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "숨겨진 백도어 스크립트와 쉘을 탐지합니다."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "맬웨어, 백도어, 의심스러운 코드 탐지"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "위협 감지"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "행동 분석을 통해 알려지지 않은 위협을 탐지합니다."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "탐지 방법"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "장치 유형"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "난이도"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "난이도"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "NexifyMy 보안 문자 챌린지의 난이도입니다."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "직접"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "디렉터리 탐색"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "디렉터리 탐색 보호"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "2FA 비활성화"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "애플리케이션 비밀번호 비활성화"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "작성자 아카이브 비활성화"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "디렉토리 탐색 비활성화"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "삽입 비활성화"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "파일 편집기 비활성화"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "파일 수정 비활성화"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "로그인 오류 메시지 비활성화"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "핑백 비활성화"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "핑백 비활성화"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "플러그인/테마 설치 비활성화"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "REST API 사용자 열거 비활성화"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "RSS/Atom 피드 비활성화"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "마우스 오른쪽 버튼 클릭 비활성화"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "텍스트 선택 비활성화"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "트랙백 비활성화"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "WP 편집기 비활성화"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "XML-RPC 비활성화"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "XML-RPC 비활성화(일반적인 무차별 공격 벡터 방지)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "XML-RPC 비활성화(핑백 공격 방지)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "XML-RPC를 비활성화합니다(DDoS 및 무차별 공격에 사용됨)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "사용자 이름 열거를 방지하려면 작성자 아카이브 페이지를 비활성화하세요."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "oEmbed 기능 및 REST API 엔드포인트를 비활성화합니다."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "DDoS를 방지하려면 핑백 기능을 비활성화하세요."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "핑백/트랙백 기능 비활성화"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "WordPress 관리자에서 플러그인/테마 파일 편집기를 비활성화합니다."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "REST API를 통해 공개 사용자 열거 비활성화"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "프런트엔드에서 마우스 오른쪽 버튼 클릭 상황에 맞는 메뉴를 비활성화합니다."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "코드 삽입을 방지하려면 내장 테마와 플러그인 편집기를 비활성화하세요."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "테마 및 플러그인 편집기 비활성화"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "관리자에서 테마/플러그인 편집기 비활성화"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "트랙백 기능을 비활성화합니다."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "장애인"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "공격을 방지하기 위해 XML-RPC를 비활성화합니다. Jetpack이나 모바일 앱을 사용하지 않는 한 안전합니다."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "내장 테마/플러그인 편집기를 비활성화합니다. 안전 - 관리자에서 코드 편집을 방지합니다."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "파일 편집, XML-RPC를 비활성화하고 WordPress 모범 사례를 적용합니다."
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "불일치 통합"
 
 msgid "Download"
-msgstr "Download"
+msgstr "다운로드"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "공식 소스에서 새로운 WordPress 패키지를 다운로드합니다."
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "쉬움"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "쉬움(덧셈만 가능)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "보안상의 이유로 NexifyMy Security 플러그인 파일 편집이 비활성화되어 있습니다."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "편집자 및 파일 액세스"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "편집자 차단:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "엘라스틱서치"
 
 msgid "Email"
-msgstr "Email"
+msgstr "이메일"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "이메일 알림 설정"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "이메일 알림"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "이메일 백업"
 
 msgid "Email Notifications"
 msgstr "이메일 알림"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "이메일 보고서"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "이메일 검사 보고서"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "이메일 확인"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "빈 사용자 에이전트"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "활성화"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "2FA 활성화"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "2FA 모듈 활성화"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "활동 로깅 활성화"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "경고 활성화"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "CAPTCHA 보호 활성화"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "CDN 통합 활성화"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "CDN 기능 활성화"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "CI/CD 통합 활성화"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "보안 문자 활성화"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "사용자 정의 웹후크 활성화"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "불일치 활성화"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "이메일 알림 활성화"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "방화벽 활성화"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "지역 차단 활성화"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "로그인 숨기기 활성화"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Jira 활성화"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "보호 활성화"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "속도 제한 활성화"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "SIEM 통합 활성화"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "SSL/HTTPS 활성화"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "스캐너 활성화"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "스캐너 모듈 활성화"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "예약 검색 활성화"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "ServiceNow 활성화"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Slack 활성화"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "팀 활성화"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "2단계 인증 활성화"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "WAF 활성화"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "WAF 모듈 활성화"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "WAF 보호 활성화"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "웹 애플리케이션 방화벽 활성화"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "웹 애플리케이션 방화벽 보호를 활성화합니다."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "사이트에 대한 보안 모듈을 활성화하고 구성합니다."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "보안 모듈을 활성화하고 구성합니다."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "보안 문자 보호 활성화"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "국가 기반 차단 활성화"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "디버그 로깅 활성화(문제 해결용으로만)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "공격을 차단하려면 방화벽 보호를 활성화하세요."
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "로그인 속도 제한 활성화"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "악성 코드 스캐너 활성화"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "보안 모듈을 활성화하거나 비활성화합니다."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "전체 WAF 모듈을 활성화하거나 비활성화합니다."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "맬웨어 스캐너를 활성화하거나 비활성화합니다."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "속도 제한 모듈을 활성화하거나 비활성화합니다."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "이중 인증을 활성화하거나 비활성화합니다."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "예약 검사 활성화"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "취약점 스캐너 기능 활성화"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "활성화됨"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "엔드포인트"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "엔드포인트 URL"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "강력한 비밀번호 시행"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "강력한 비밀번호 요구 사항 시행"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "모든 사용자에게 강력한 비밀번호 요구 사항을 적용합니다."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "강력한 비밀번호 요구사항을 시행하세요."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "사용자에게 강력한 비밀번호 요구 사항을 적용합니다. 안전함 - 새 비밀번호에만 영향을 미칩니다."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "최소 길이, 복잡성 규칙으로 강력한 비밀번호를 시행합니다."
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "6자리 코드를 입력하여 설정을 확인하세요."
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "IP를 한 줄에 하나씩 입력하세요."
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "답변을 입력하세요"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "코드를 입력하세요:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "엔터프라이즈급 WordPress 보안"
 
 msgid "Error"
-msgstr "Error"
+msgstr "오류"
 
 msgid "Event"
-msgstr "Event"
+msgstr "이벤트"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "이벤트 형식"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "이벤트 로그"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "이벤트 심각도"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "이벤트 유형"
 
 msgid "Events"
-msgstr "Events"
+msgstr "이벤트"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "이벤트(7일)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "티켓 생성 이벤트"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "전달할 이벤트"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "공지할 이벤트"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "예: GitHub 작업"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "예: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "예: 젠킨스 파이프라인"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "제외된 확장자"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "제외된 파일 패턴"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "제외된 경로"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "제외된 사용자"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "제외"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "철저한 파일 검사"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "기존 백업"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "CSV 내보내기"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "내보내기 설정"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "NexifyMy 보안 설정을 JSON 파일로 내보냅니다. 여기에는 모든 모듈 구성, ​​방화벽 규칙, IP 목록 및 검색 설정이 포함됩니다."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "외부 스크립트 및 CDN 리소스"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "추가 로그인 보안"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "악성코드 빌드 실패"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "취약점에 대한 빌드 실패"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "실패"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "임시 잠금 이전에 2FA 시도가 실패했습니다."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "로그인 실패"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "실패한 로그인"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "실패한 로그인 시도가 감지되었습니다."
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "비밀번호 등록에 실패했습니다."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "빠른 실행"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "빠른 보안 검색"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "WordPress.org API에서 공식 파일 체크섬을 가져옵니다."
 
 msgid "File"
-msgstr "File"
+msgstr "파일"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "파일 편집기"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "파일 해싱:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "파일 포함"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "파일 포함 보호"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "파일 무결성 검사"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "파일 무결성 모니터링"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "파일 권한"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "격리된 파일"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "검사에서 제외할 파일 확장자(점 없이 한 줄에 하나씩)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "파일 이름"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "검사된 파일"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "검사된 파일:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "파일은 기준선과 주기적으로 비교됩니다."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "격리된 파일은 안전하게 저장되며 실행할 수 없습니다."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "이보다 큰 파일은 검사 중에 건너뜁니다."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "필터"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "방화벽"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "방화벽 및 보호"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "방화벽 구성"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "방화벽 규칙"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "방화벽 설정"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "수정된 파일 수정"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "심하게 난독화되거나 인코딩된 코드에 플래그를 지정합니다."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "관리자에게 SSL 강제 적용"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "관리 영역(FORCE_SSL_ADMIN)에 대해 SSL/HTTPS를 강제합니다."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "관리자를 위한 강제"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "형식:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "중앙 집중식 로깅 및 분석을 위해 보안 이벤트를 SIEM(보안 정보 및 이벤트 관리) 플랫폼으로 전달하세요."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "개요 아래 Cloudflare 대시보드에서 확인 가능"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "알려진 안전한 플러그인에서 발견됨 - 합법적인 사용 가능성이 높음"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "시스템 디렉토리에서 발견됨 - 합법적일 수 있음"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "날짜부터"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "이메일에서"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "이름에서"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "SIEM 플랫폼의 전체 HTTP/HTTPS 엔드포인트 URL입니다."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "전체 악성 코드 분석"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "전체 악성코드 검사"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "전체 악성 코드 서명"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "전체 사이트 분석"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR, CCPA, HIPAA 규정 준수 모듈 및 포괄적인 보안 감사 보고서."
 
 msgid "General"
-msgstr "General"
+msgstr "일반"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "일반 요청 제한"
 
 msgid "General Settings"
 msgstr "일반 설정"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "보고서 생성"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "SRI 생성"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "생성 위치: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "생성됨"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "일반 HTTP 끝점"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "일반 프록시"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "지리적 블록"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "지리적 차단"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "지리적 분포"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "자세한 취약점 데이터를 보려면 wpscan.com에서 무료 API 토큰을 받으세요."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "보안 이벤트가 발생하면 팀 커뮤니케이션 채널에서 즉시 알림을 받으세요."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "최신 스캔 상태 가져오기"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "스캔 결과 가져오기(JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Google reCAPTCHA 또는 Cloudflare Turnstile 대시보드에서 키를 받으세요."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "시작하기"
 
 msgid "Google reCAPTCHA v2"
-msgstr "Google reCAPTCHA v2"
+msgstr "구글 reCAPTCHA v2"
 
 msgid "Google reCAPTCHA v3"
-msgstr "Google reCAPTCHA v3"
+msgstr "구글 reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "유예기간"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "등급"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQL 보안"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL 내부 검사가 비활성화되었습니다."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL 속도 제한을 초과했습니다. 제한: 분당 %d개 쿼리."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP 보안 헤더"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP 엄격한 전송 보안(HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP 헤더"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "손잡이"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "하드"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "어려움(곱셈 포함)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "강화 사이트"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "경화"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "강화 옵션"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "헤더"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "도움말 및 문서"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "휴리스틱 분석"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "휴리스틱 패턴 감지"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "로그인 숨기기"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "로그인 페이지 숨기기"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "로그인 URL 숨기기"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "로그인 URL 숨기기:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "WP 버전 숨기기"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "WordPress 로그인 URL 숨기기"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "WordPress 버전 숨기기"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "소스 코드에서 WordPress 버전 숨기기"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "기본 로그인 URL 숨기기"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "wp-admin 숨기기"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "공격자로부터 wp-admin 및 wp-login.php를 숨깁니다."
 
 msgid "High"
-msgstr "High"
+msgstr "높음"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "높음(최대 감지)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "높은 보안(검사 횟수가 많을수록 느려짐)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "최근 차단된 공격 수가 많아"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "높거나 그 이상"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "심각도가 높은 위협"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "고위험 지역에만 해당"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "AI 분석으로 탐지된 높은 점수의 위협"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "민감도가 높을수록 잘못된 긍정이 더 많이 발생할 수 있습니다."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "최고"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "여러 국가를 선택하려면 Ctrl/Cmd를 누르세요."
 
 msgid "Host"
-msgstr "Host"
+msgstr "호스트"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "시간별"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "2FA 작동 방식"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "코어 수리 작동 방식"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "자기 보호의 작동 방식"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "시도 횟수를 초과한 후 IP를 차단하는 데 걸리는 시간입니다."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "속도 제한을 초과한 후 IP를 차단하는 데 걸리는 시간입니다."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "이전 보고서를 보관하는 기간(30~365일)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "IP 접근 제어"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP 주소"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IP 차단"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP 구성"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IP 잠금"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP 잠금(무차별 대입 시도)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "IP 관리"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "IP 화이트리스트"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "속도 제한을 우회하는 IP입니다."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "항상 차단되는 IP입니다."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "절대로 차단되지 않는 IP입니다."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "수정되거나 누락된 파일을 식별합니다."
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "이미지 선택"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "즉각적인 조치가 필요함"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "영향 수준"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "가져오기 설정"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "이전에 내보낸 JSON 파일에서 설정을 가져옵니다. 현재 설정을 덮어쓰게 됩니다."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "가져오기/내보내기"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "비활성"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "사건"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "GDPR 검사 포함"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "IP 화이트리스트/블랙리스트 포함"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "성과 지표 포함"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "보안 검사 포함"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "위협 요약 포함"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "마지막 스캔 결과 포함"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "보안 로그 포함(지난 30일)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "보안 문자 답변이 잘못되었습니다. 돌아가서 다시 시도해 주세요."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "보안 문자 답변이 잘못되었습니다. 다시 시도해 주세요."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "이벤트 분류를 위한 인덱스 이름 또는 소스 식별자입니다."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "색인/소스"
 
 msgid "Info"
-msgstr "Info"
+msgstr "정보"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "정보공개"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "초기화 중..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "인스턴스 이름"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "지속적인 통합 및 배포 파이프라인에 보안 검색을 통합합니다."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "웹후크 및 API 액세스를 통해 보안 검사를 배포 파이프라인에 통합하세요."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "CDN 서비스와 통합됩니다. 활성화하기 전에 CDN 자격 증명을 구성하십시오."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "통합"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "무결성 검사 결과"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "무결성 검사:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "무결성 상태"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "JWT 토큰이 잘못되었습니다."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "자격 증명이 잘못되었습니다."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "인증 코드가 잘못되었습니다."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "위협 격리"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "의심스러운 파일을 삭제하지 않고 격리합니다. 안전 - 파일을 복원할 수 있습니다."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "이슈 유형"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "발견된 문제"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON 형식. 예: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "Jira 클라우드 URL"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Jira 통합"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "분석을 위해 차단된 모든 요청에 대한 로그를 보관합니다."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "분석을 위해 모든 비율 제한 위반에 대한 로그를 보관합니다."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "최상의 보호를 위해 맬웨어 서명을 최신 상태로 유지하세요."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "알려진 국가"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "설치된 플러그인에서 알려진 취약점이 발견되었습니다."
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF(로그 이벤트 확장 형식)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "지난 30일"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "지난 30일"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "지난 7일"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "지난 90일"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "마지막 학습"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "마지막 스캔"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "마지막 스캔:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "마지막 업데이트"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "마지막 사용: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "최신 버전"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "학습 - 기록만 가능, 차단 없음"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "학습기간"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "학습 중..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "관리자 이메일을 사용하려면 비워두세요."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "안전할 가능성이 높음 - 필요한 경우 확인"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "인증된 사용자에게 REST API 액세스 제한"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "스팸을 방지하려면 댓글 제출을 제한하세요."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "단일 IP 주소의 과도한 요청을 제한하세요."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "로그인 시도 제한"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "무차별 대입 공격을 방지하기 위해 로그인 시도 제한"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "남용 및 DDoS 공격을 방지하기 위해 요청 속도를 제한합니다."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "남용을 방지하기 위해 요청 속도를 제한하십시오."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "무차별 공격을 방지하기 위해 로그인 시도를 제한합니다. 안전 - 실패한 로그인 시도에만 영향을 미칩니다."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "알려진 취약점 나열"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "실시간 교통"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "실시간 교통 모니터"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "CDN 상태 로드 중..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "알림 로드 중..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "분석 데이터 로드 중..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "백업 로드 중..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "차단된 IP 로드 중..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "국가 로드 중..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "데이터베이스 정보 로드 중..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "지리 데이터 로드 중..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "로그 로드 중..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "알림 로드 중..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "최적화 통계 로드 중..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "보호 상태 로드 중..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "격리된 파일 로드 중..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "리퍼러 로드 중..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "위협 감지 로드 중..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "상위 페이지 로드 중..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "교통 데이터 로드 중..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "여러 번 시도에 실패하면 잠깁니다."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "잠금 기간"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "최대 2FA 시도 실패 후 잠금 기간."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "허용된 요청 기록"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "차단된 요청 기록"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "실패한 로그인 시도 기록"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "로그아웃 로그"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "로그 미디어 업로드"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "로그 옵션 변경 사항"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "플러그인 변경 사항 기록"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "게시물/페이지 변경 사항 기록"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "프로필 변경 사항 기록"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "로그 속도 제한 위반"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "로그 보존"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "역할 변경 사항 기록"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "성공적인 로그인 기록"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "로그 테마 변경 사항"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "로그 사용자 생성/삭제"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "WAF 검사(높은 디스크 사용량)를 통과한 모든 요청을 기록합니다."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "로깅"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "로깅 및 모니터링"
 
 msgid "Login"
-msgstr "Login"
+msgstr "로그인"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "로그인 및 인증"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "로그인 활동"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "로그인 시도 창"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "로그인 시도"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "로그인 보안 문자"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "로그인 보안 문자"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "로그인 양식"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "로그인 잠금 기간"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "로그인 보호"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "로그인 속도 제한"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "로그인 보안"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "로그인 슬러그"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "로그인 URL 설정"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "로그인 양식"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "로그아웃"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "로그아웃"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "로그"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "이보다 오래된 로그는 매일 자동으로 삭제됩니다."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "검토를 위해 보안 이벤트를 기록합니다. 안전 - 활동만 기록합니다."
 
 msgid "Low"
-msgstr "Low"
+msgstr "낮음"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "낮음(오탐률 감소)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "낮은 영향(검사 횟수가 적고 빠름)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "소문자(a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "귀하의 사이트를 위한 유지 관리 및 진단 도구입니다."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "사용자 정의 로그인 URL을 기억하세요!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "악성코드 및 검사"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "악성 코드 정의"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "악성코드 발견"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "악성 코드 스캐너"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "파일 검사 중 악성코드가 감지되었습니다"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "알림 관리"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "격리된 위협을 관리합니다. 파일을 검토, 복원 또는 영구적으로 삭제합니다."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "역할에 필수"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "직접 검토 권장"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "모두 읽은 것으로 표시"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "모두 읽음으로 표시"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "모든 활동 로깅을 활성화하거나 비활성화하는 마스터 스위치입니다."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "수학 문제"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "최대 시도 횟수"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "최대 시도 실패 횟수"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "최대 파일 크기"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "최대 로그인 시도 횟수"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "최대 쿼리 문자열 길이"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "최대 요청 크기"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "최대 요청"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "IP당 분당 최대 AJAX 요청입니다."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "IP당 분당 최대 API 요청 수입니다."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "잠금 전 최대 로그인 시도 실패 횟수입니다."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "IP당 분당 최대 페이지 요청 수입니다."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "스캔할 최대 요청 본문 크기입니다. 더 큰 요청은 건너뜁니다."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "IP당 분당 허용되는 최대 요청 수입니다."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "데이터베이스 고갈을 방지하기 위한 분당 최대 검색 요청 수입니다."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "단일 스캔 작업의 최대 시간입니다."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "시간 초과 전 맬웨어 검사의 최대 시간입니다."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "미디어 업로드"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "중간"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "중간(균형)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "중간(덧셈/뺄셈)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "중간 이상"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "메모리 제한"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "스캔 작업에 할당된 메모리입니다."
 
 msgid "Message"
-msgstr "Message"
+msgstr "메시지"
 
 msgid "Method"
-msgstr "Method"
+msgstr "방법"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Microsoft 팀 통합"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "최소 %d자"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "최소 길이"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "실패할 최소 심각도"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "최소 비밀번호 길이(8~32자)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "모드"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "모듈 제어"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "모듈"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "외부 스크립트 모니터링"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "모니터 모드(로그만)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "플러그인 파일의 변경 사항 모니터링"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "실시간 사이트 트래픽을 모니터링합니다."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "실시간 트래픽 모니터링"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "실시간 트래픽 및 방문자 활동을 모니터링합니다."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "시간 경과에 따른 방문자 추세, 페이지 조회수, 트래픽 패턴을 모니터링하세요."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "모니터링 및 경고"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "실시간 트래픽을 모니터링합니다. 안전 - 방문만 추적합니다."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "월간"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "가장 활동적인 사용자"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "의심스러운 파일을 보호된 디렉터리로 이동합니다."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM 종속성"
 
 msgid "Name"
-msgstr "Name"
+msgstr "이름"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "지원이 필요하십니까?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "절대로"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "만료되지 않음"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "넥시파이 시큐리티"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy 보안 문자(내장)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "Nexify내 보안 문자 유형"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "Nexify나의 보안"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security가 해당 파일에 대한 무단 수정을 감지했습니다. 설치를 확인하십시오."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy 보안: 읽지 않은 보안 경고가 %d개 있습니다."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "다음 업데이트"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "유예 기간 없음"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "최근 활동 없음"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "SRI 없음"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "아직 기록된 활동이 없습니다. 사용자가 작업 수행을 시작하면 여기에 활동이 표시됩니다."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "아직 기록된 콘텐츠 변경사항이 없습니다."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "아직 선택된 국가가 없습니다."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "데이터가 없습니다"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "아직 이벤트 데이터가 없습니다."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "격리된 파일이 없습니다."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "사용 가능한 지역 데이터가 없습니다."
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "아직 기록된 로그인 활동이 없습니다."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "아직 등록된 비밀번호가 없습니다."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "사용 가능한 보고서가 없습니다."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "아직 검사가 실행되지 않았습니다."
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "스캔 결과가 없습니다. 종속성을 분석하려면 \"검사 실행\"을 클릭하세요."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "스캔 결과가 없습니다. 스캔을 실행하여 취약점을 확인하세요."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "현재로서는 보안 권장 사항이 없습니다. 귀하의 사이트는 잘 보호되어 있습니다."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "심각도 데이터가 없습니다."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "의심스러운 IP가 감지되지 않았습니다."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "아직 기록된 시스템 이벤트가 없습니다."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "아직 감지된 위협이 없습니다."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "아직 기록된 사용자 활동이 없습니다."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "아직 사용자 활동이 없습니다."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "비활성"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "활성화되지 않음"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "아직 확인되지 않음"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "예정되지 않음"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "참고:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "알림 이메일"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "알림 설정"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "알림"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "잠금 알림"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "계정에서 2FA가 활성화/비활성화되면 사용자에게 알립니다."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "숫자(0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "백업 코드 수"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "사용자당 생성할 백업 코드 수입니다."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "잠금 전 실패한 로그인 시도 횟수입니다."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "영구 금지 전 잠금 횟수입니다."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "자동 차단 전 규칙 위반 횟수입니다."
 
 msgid "Object"
-msgstr "Object"
+msgstr "물체"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "다음 로그인 시 비밀번호 + 6자리 코드를 입력하세요."
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "매주 1회"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "한 줄에 하나의 IP"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "한 줄에 하나의 IP입니다. X-Forwarded-For 헤더(예: Cloudflare, 부하 분산 장치)를 보낼 수 있는 프록시 IP입니다."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "한 줄에 하나의 IP입니다. 이러한 IP는 모든 속도 제한을 우회합니다."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "한 줄에 하나의 IP입니다. 해당 IP는 즉시 차단됩니다. 예: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "한 줄에 하나의 IP입니다. 이러한 IP는 WAF 검사를 우회합니다."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "한 줄에 하나의 IP입니다. 이러한 IP는 모든 WAF 규칙을 우회합니다. 예: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "한 줄에 하나의 경로가 있습니다. 스캔할 추가 디렉터리에 대한 절대 경로입니다."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "한 줄에 하나의 경로가 있습니다. 스캔 중에 건너뛸 디렉터리입니다."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "한 줄에 하나씩. 특정 사용자 에이전트를 차단합니다. 예: 불량 봇, 스크레이퍼"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "한 줄에 하나씩. 이 목록의 사용자 에이전트는 WAF 검사를 우회합니다. 예: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "한 줄에 하나의 사용자 이름"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "설정 열기"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "운영 체제"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "작동 모드"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "데이터베이스 최적화"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "데이터베이스를 최적화하고 보호하세요."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "옵션 변경"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "모든 사용자에 대한 선택 사항"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "선택 사항: 스캔 결과를 CI/CD 플랫폼으로 보냅니다."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "원래 경로"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "구식"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "간접비"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "플러그인 인터페이스의 언어를 재정의합니다. 지원되는 언어: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "개요"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHP 버전"
 
 msgid "Package"
-msgstr "Package"
+msgstr "패키지"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "분당 페이지 요청"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "페이지 조회수"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "페이지를 찾을 수 없습니다."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "패스키 인증"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "암호 키 이름(예: MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "비밀번호가 성공적으로 등록되었습니다!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "이 브라우저에서는 암호 키가 지원되지 않습니다."
 
 msgid "Password"
-msgstr "Password"
+msgstr "비밀번호"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "비밀번호 만료"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "비밀번호 정책"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "비밀번호 정책"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "비밀번호 요구 사항"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "비밀번호 요구사항:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "비밀번호 재설정 양식"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "비밀번호 재설정"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "비밀번호는 %d자 이상이어야 합니다."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "비밀번호에는 소문자가 하나 이상 포함되어야 합니다."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "비밀번호에는 숫자가 하나 이상 포함되어야 합니다."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "비밀번호에는 특수 문자가 하나 이상 포함되어야 합니다."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "비밀번호에는 대문자가 하나 이상 포함되어야 합니다."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "비밀번호 정책"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "비밀번호 재설정 양식"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "검사에서 제외할 경로(WordPress 루트 기준) 한 줄에 하나씩."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "피크 활동 통찰력"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "피크시간"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "교통량이 가장 많은 시간"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "성능 모드"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "성능 설정"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "정기 보고서"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "영구"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "영구 금지 임계값"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "파일을 영구적으로 제거합니다."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "수학 보안문자를 풀어주세요."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "플러그인"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "플러그인 및 테마 분석"
 
 msgid "Plugin Language"
 msgstr "플러그인 언어"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "플러그인 마지막 업데이트"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "플러그인 옵션"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "플러그인 자체 보호"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "플러그인 버전"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "플러그인 취약점"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "플러그인 파일은 WordPress를 통해 편집할 수 없습니다."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "플러그인 무결성"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "플러그인 보호"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "플러그인/테마 CVE"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "플러그인/테마 활성화, 업데이트, 옵션 변경 및 내보내기."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "플러그인"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "플러그인 활성화됨"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "플러그인이 비활성화되었습니다."
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "플러그인 업데이트됨"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "게시물/페이지 편집, 게시, 미디어 업로드 및 콘텐츠 삭제."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "작성된 게시물"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "게시된 게시물"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "게시물이 업데이트되었습니다."
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "잠재적인 보안 위협이 감지되었습니다."
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "XML-RPC 공격 및 무차별 공격 시도 방지"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "웹 루트 외부 디렉터리에 대한 액세스를 방지합니다."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "공격자가 로컬 서버 파일을 포함하지 못하도록 방지합니다."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "무차별 대입 방지"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "WordPress 관리자에서 코드 편집 방지"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr ".htaccess를 통한 디렉토리 목록 방지"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "이 기간 내에 중복 알림을 방지하세요."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "이 기간 내에 중복 알림을 방지하세요. 제한을 비활성화하려면 0으로 설정합니다."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "WordPress 편집기를 통한 플러그인 파일 편집 방지"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "URL 매개변수를 통한 원격 파일 포함을 방지합니다."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr ".htaccess를 통해 디렉토리 내용 나열을 방지합니다."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "관리자 패널에서 플러그인/테마 설치를 방지합니다."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "프런트엔드에서 텍스트 선택 및 복사를 방지합니다."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "자주 위반되는 비밀번호의 사용 방지"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "/wp-json/wp/v2/users 엔드포인트를 통해 사용자 검색을 방지합니다."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "보안 플러그인 파일의 무단 수정을 방지합니다."
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "보안 경고를 위한 기본 이메일 주소입니다."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "우선 사항"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "사전 예방적인 보안 제안 및 자동화된 강화 권장 사항."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "문제"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "프로필 업데이트"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "프로필 변경, 역할 변경, 사용자 생성 및 삭제 이벤트."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "프로젝트 키"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "교차 사이트 요청 위조로부터 보호합니다."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "XSS(교차 사이트 스크립팅) 공격으로부터 보호합니다."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "GET/POST 매개변수에서 SQL 주입 공격으로부터 보호합니다."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "SQL 주입, XSS, RFI 및 기타 공격으로부터 보호합니다."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "IP 주소당 요청 빈도를 제한하여 무차별 대입 및 DoS 공격으로부터 보호합니다."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "자동화된 봇 공격으로부터 로그인 및 등록 양식을 보호합니다."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "수학 기반 보안 문자로 로그인 및 등록 양식을 보호하세요."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "플러그인 파일이 변조되지 않도록 보호하세요."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "변조 및 무단 수정으로부터 보안 플러그인을 보호하세요."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "무차별 대입 공격으로부터 로그인 페이지를 보호하세요."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "악의적인 트래픽과 공격으로부터 사이트를 보호하세요."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "보호된 양식"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "보호 수준"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "보호 모드"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "보호 규칙"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "보호 설정"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "JWT 인증, 속도 제한 및 CORS를 통해 REST API를 보호합니다. 헤드리스 WordPress에 필수적입니다."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "SQL 주입, XSS 및 악의적인 요청으로부터 보호합니다. 활성화해도 안전합니다. 유해한 트래픽만 차단합니다."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "플러그인 파일이 수정되지 않도록 보호합니다. 안전함 - 변조를 방지합니다."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "공급자"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "모든 로그 제거"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "캐시 제거"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "격리"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "즉시 격리"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "격리 권장"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "격리:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "격리됨"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "격리된 파일"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "쿼리 복잡성이 최대값인 %d을(를) 초과합니다."
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "쿼리 깊이가 최대 허용 깊이인 %d을(를) 초과했습니다."
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "빠른"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "빠른 작업"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "빠른 스캔"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "빠른 스캔 작업"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "보안 유지 관리 도구에 빠르게 액세스할 수 있습니다."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "신속: 핵심 파일만. 표준: 핵심 + 테마/플러그인. 깊은: 모든 파일."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST API 보안"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "REST API 사용자"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST API 보호"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "이 사이트에서는 RSS 피드가 비활성화되어 있습니다."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "비율 제한"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "속도 제한기"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "속도 제한"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "속도 제한 설정"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "실시간 모니터링"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "이유"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "취약점이 감지되면 이메일 알림 수신"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "최근 활동"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "최근 위협 탐지"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "최근 차단된 IP"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "수신자 이메일"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "권장 사항"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "추천"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "권장 조치"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "차단된 액세스 리디렉션"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "홈페이지로 리디렉션"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "불필요한 기능을 비활성화하고 WordPress 구성을 강화하여 공격 표면을 줄입니다."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "새로고침"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "재생성"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "기준선 재생성"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "패스키 등록"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "등록된 비밀번호"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "비밀번호 등록 중..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "등록 양식"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "등록 양식"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "장치 기억"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "기간 기억"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "이 장치를 기억하세요"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "제거"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "생성기 태그 제거"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "로그인 힌트 제거"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "소스 코드에서 WordPress 버전 제거"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "모든 페이지에서 생성기 메타 태그를 제거합니다."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "비밀번호 재설정 힌트 및 제안을 제거합니다."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "HTML 및 피드에서 버전 정보를 제거합니다."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "수정된 모든 파일 복구"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "수정된 WordPress 핵심 파일을 복구합니다. 주의해서 사용하세요. 수리하기 전에 백업하세요."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "손상된 파일을 깨끗한 버전으로 교체합니다."
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "신고 이력"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "보고서 보관 기간(일)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "보고 일정"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "요청 제한 및 필터링"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "요청 크기 제한"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "분당 요청"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "모든 관리자에게 2FA가 필요합니다."
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "선택한 사용자 역할에는 2FA가 필요합니다."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "로그인 확인을 위해 두 번째 요소가 필요합니다."
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "REST API에 액세스하려면 로그인이 필요합니다."
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "로그인하려면 두 번째 요소가 필요합니다. 활성화하기 전에 2FA 방법을 구성하세요."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "재설정"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "모든 설정 재설정"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "학습 재설정"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "모든 NexifyMy Security 설정을 기본값으로 재설정합니다. 이 작업은 취소할 수 없습니다."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "기본값으로 재설정"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "재설정 중..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "차단 시 응답 코드"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "복원"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "복원:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "REST API 제한"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "REST API 액세스를 제한합니다. REST API를 사용하는 플러그인에 영향을 미칠 수 있습니다."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "보유기간"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "맬웨어가 감지되면 오류 코드를 반환합니다(CI/CD 빌드 실패)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "취약점이 발견되면 오류 코드를 반환합니다."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "파일을 원래 위치로 되돌립니다."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "알림 검토 ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "즉시 검토"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "정기적으로 보안 로그 검토"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "역할 변경"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "전체 보안 검사 실행"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "무결성 검사 실행"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "빠른 확인 실행"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "스캔 실행"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "취약점 검사 실행"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "보안 스캔을 실행하여 취약점 식별"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "매일 자동 맬웨어 검사를 실행합니다. 안전 - 스캔만 가능하며 파일은 변경되지 않습니다."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "보안 경고:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "모든 플러그인 파일의 SHA-256 해시가 기준으로 저장됩니다."
 
 msgid "SIEM"
-msgstr "SIEM"
+msgstr "시엠"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM 통합"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEM 플랫폼"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL 주입"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQL 주입 방지"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSL 상태"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL 확인"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "고급 설정 저장"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "CI/CD 설정 저장"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "디스코드 설정 저장"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "이메일 설정 저장"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Jira 설정 저장"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "SIEM 설정 저장"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "스캐너 설정 저장"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "ServiceNow 설정 저장"
 
 msgid "Save Settings"
 msgstr "설정 저장"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Slack 설정 저장"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "팀 설정 저장"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "WAF 설정 저장"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "웹훅 설정 저장"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "스캔"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "스캔 완료"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "스캔 완료"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "스캔 작성기 종속성"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "스캔 구성"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "스캔 제어"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "사용자 정의 디렉토리 스캔"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "NPM 종속성 스캔"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "스캔 플러그인"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "인증 앱(Google/Microsoft Authenticator)으로 QR 코드 스캔"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "스캔 결과"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "스캔 일정"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "스캔 감도"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "스캔 대상"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "스캔 테마"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "스캔 시간 초과"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "스캔 업로드 디렉토리"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "WordPress 코어 스캔"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "설치된 모든 플러그인에서 악성 코드를 검사하세요."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "설치된 모든 테마에 악성 코드가 있는지 검사하세요."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "중요한 영역만 스캔"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "악성코드와 의심스러운 코드가 있는지 파일을 검사하세요."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "알려진 취약점이 있는지 플러그인, 테마 및 WordPress 코어를 스캔하세요."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "사이트에서 악성코드, 취약점, 보안 문제를 검사하세요."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "웹사이트에서 맬웨어 및 보안 취약점을 검사하세요."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "스캐너"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "스캐너 설정"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "스캔 중..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "악성 코드 및 의심스러운 코드가 있는지 파일을 검사합니다. 안전 - 검사만 수행하고 파일을 수정하지 않습니다."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "예약 검색 모드"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "예약된 검사"
 
 msgid "Score"
-msgstr "Score"
+msgstr "점수"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "분당 검색 요청"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "사용자 이름 검색..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "비밀키"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "안전한 파일 액세스"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "쿼리 깊이 제한, 복잡성 검사 및 속도 제한을 통해 WPGraphQL을 보호합니다. 헤드리스 설정에 안전합니다."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "보안 경고"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "보안 분석"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "보안 강화"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "보안 헤더"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "보안사고"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "보안 로그"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "보안 모듈"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "보안 알림"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "보안 옵션"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "보안 권장 사항"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "보안 점수"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "보안상태"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "보안 도구"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "보안 취약점"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "보안 경고"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "여기에 보안 이벤트가 표시됩니다."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "보안 강화"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "보안검사 실행이 완료되었습니다"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "보안 설정이 수정되었습니다."
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "국가 선택:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "왼쪽에서 국가를 선택하고 \"목록에 추가\"를 클릭하여 추가하세요. 선택한 국가는 위의 모드에 따라 차단(블랙리스트) 또는 허용(화이트리스트)됩니다."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "체크 표시가 있는 이미지를 선택하세요:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "사용할 보안문자 서비스를 선택하세요."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "선택된 국가:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "자기 보호"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "자기 보호"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "테스트 알림 보내기"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "테스트 이메일 보내기"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "한 시간 안에 이렇게 많은 공격이 발생하면 경고를 보냅니다."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "일일 이메일 요약 보내기"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "IP가 잠긴 경우 이메일 알림을 보냅니다."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "보안 이벤트에 대한 이메일 알림 보내기"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "심각한 공격이 감지되면 이메일 알림을 보냅니다."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "변조가 감지되면 이메일 보내기"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "취약점 발견 시 이메일 보내기"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "관리자 이메일로 보고서 보내기"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "각 스캔 후 이메일을 통해 스캔 결과를 보냅니다."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "중앙 집중식 모니터링 및 분석을 위해 보안 이벤트를 Splunk, Elasticsearch 또는 기타 SIEM 플랫폼으로 보냅니다."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "사용자 정의 구성을 사용하여 모든 HTTP 엔드포인트에 보안 이벤트를 보냅니다."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "사용자 정의 헤더와 인증을 사용하여 모든 HTTP 엔드포인트에 보안 이벤트를 보냅니다."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "이메일을 통해 인증 코드를 보냅니다."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "보안 이벤트에 대한 이메일 알림을 보냅니다. 안전 - 먼저 이메일 설정을 구성하세요."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNow 통합"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "보안 파일 권한을 설정합니다. 서버에 문제가 있는 경우 수동 조정이 필요할 수 있습니다."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "설정"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "설정이 성공적으로 저장되었습니다."
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "심각도"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "404 페이지 표시"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "로그인 실패 시 일반 오류 메시지를 표시합니다."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "양식에 표시"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "%d개 항목 중 %d개 표시 중"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "읽지 않은 위험/경고 이벤트를 표시합니다. 전체 기록을 보려면 로그를 사용하세요."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "암호키로 로그인"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "서명 상태"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "시그니처 기반 탐지"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "서명"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "사이트 기본값"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "사이트 키"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "사이트 보안 상태"
 
 msgid "Size"
-msgstr "Size"
+msgstr "크기"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "이 크기보다 큰 파일은 건너뛰세요."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "슬랙 통합"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "일부 개선 권장"
 
 msgid "Source"
-msgstr "Source"
+msgstr "소스"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "특수 문자(!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk(HTTP 이벤트 수집기)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "표준"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "표준 - 균형 잡힌 보호"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "표준 스캔"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "스캔 시작"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "새 스캔 시작"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "스캔 시작"
 
 msgid "Status"
-msgstr "Status"
+msgstr "상태"
 
 msgid "Story"
-msgstr "Story"
+msgstr "스토리"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "엄격 - 최대 보안"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "강력한 비밀번호"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "강력한 비밀번호"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "성공률"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "로그인 성공"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "성공적인 로그인"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "수쿠리"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "스모 로직"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "공급망"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "공급망 보안"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "공급망 설정"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Google Authenticator, Authy 등을 지원합니다."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "지원됨:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "의심스러운 코드"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "의심스러운 IP"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "시스템 활동"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "시스템 이벤트"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "시스템 상태"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "TOTP 인증 앱"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "테이블 이름"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "테이블"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "변조 감지:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "작업"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "API 속도 제한을 초과하는 IP를 일시적으로 차단합니다."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "연결 테스트"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "테스트 알림"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "텍스트 매칭"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI는 교통 시간, 지리적 위치, 사용자 에이전트 및 요청 패턴을 포함한 일반적인 행동 패턴을 지속적으로 학습합니다. 이 기준선은 이상 징후를 탐지하는 데 사용됩니다."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF는 SQL 주입, XSS, 악성 봇을 포함한 일반적인 웹 공격으로부터 사이트를 보호합니다."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "테마 스위치"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "이번 시간"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "이번 달"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "이번 주"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "일반 비밀번호입니다."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "보안 문자는 로그인 양식에 다음과 같이 표시됩니다."
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "이 비밀번호는 너무 일반적입니다. 좀 더 독특한 비밀번호를 선택해주세요."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "이 쿼리는 허용되지 않습니다."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "모든 AI 학습 데이터와 행동 패턴이 재설정됩니다. 계속하다?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "위협"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "위협 분석:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "위협이 감지됨"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "위협 감지됨(맬웨어, 의심스러운 파일)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "위협 탐지 및 차단 - 지난 7일"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "위협 점수"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "차단된 위협"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "발견된 위협"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "오늘날의 위협"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "스로틀 기간"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "발권"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "발권 시스템"
 
 msgid "Time"
-msgstr "Time"
+msgstr "시간"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "시간 창(초)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "이메일 확인 코드가 만료되기까지의 시간입니다."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "실패한 로그인 시도를 계산하는 기간입니다."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "실패한 로그인 시도를 계산하는 데 사용되는 기간입니다."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "현재까지"
 
 msgid "Today"
-msgstr "Today"
+msgstr "오늘"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "실패한 로그인 시도 횟수가 너무 많습니다. %d분 후에 다시 시도하십시오."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "도구"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "도구 및 유틸리티"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "상위 국가"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "주요 탐지 이유"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "주요 이벤트 유형"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "인기 페이지"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "상위 추천자"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "총 이벤트"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "총 페이지 조회수"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "총 서명"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "전체 크기"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "교통 분석"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "교통 개요"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "보안 검색 트리거"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "신뢰 프록시 헤더"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "신뢰할 수 있는 프록시"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "하루에 두 번"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "2단계 인증(2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "2단계 인증"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "이중 인증"
 
 msgid "Type"
-msgstr "Type"
+msgstr "유형"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "다음 단어를 입력하세요."
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "제거 동작"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "고유 IP"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "고유 사용자"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "고유 방문자"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "알 수 없음"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "읽지 않은 알림"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "로그에서 읽지 않은 보안 경고입니다."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "업데이트 정의"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "지금 정의 업데이트"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "악성 코드 정의 업데이트"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "지금 업데이트"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "맬웨어 탐지 서명을 업데이트합니다."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "대문자(A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "긴급 수준"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "CDN/프록시 헤더를 사용하여 실제 클라이언트 IP 확인"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Touch ID, Face ID, Windows Hello 또는 하드웨어 보안 키를 사용하세요."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "IP 감지를 위해 X-Forwarded-For 헤더를 사용합니다(CDN/프록시 뒤에 있는 경우에만)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "탐지를 위해 악성코드 서명 데이터베이스를 사용합니다."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "이 키를 사용하여 CI/CD 파이프라인의 API 요청을 인증하세요."
 
 msgid "User"
-msgstr "User"
+msgstr "사용자"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "사용자 활동"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "사용자 에이전트"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "사용자 이벤트"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "사용자 잠금"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "사용자 관리"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "사용자 요구사항"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "의심스러운 활동으로 인해 사용자 또는 IP 주소가 잠겼습니다."
 
 msgid "Username"
-msgstr "Username"
+msgstr "사용자 이름"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "사용자 이름과 비밀번호가 필요합니다."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "생성된 사용자"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "삭제된 사용자"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "사용자는 프로필 설정에서 2FA를 활성화합니다."
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "AI를 사용하여 행동 분석을 통해 제로데이 위협을 탐지합니다. 정상적인 패턴을 학습하고 이상 징후를 표시합니다. 안전 - 동작만 모니터링합니다."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "확인 세션이 만료되었습니다. 다시 로그인해주세요."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "확인"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "핵심 파일 확인"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "SSL 인증서를 확인합니다(프로덕션에 권장)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "WordPress 핵심 파일을 확인하고 복구합니다."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "코어 파일 확인 및 복구"
 
 msgid "Version"
-msgstr "Version"
+msgstr "버전"
 
 msgid "View All"
-msgstr "View All"
+msgstr "모두 보기"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "실시간 교통정보 보기"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "모든 보안 이벤트를 확인하세요."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "격리된 위협을 보고 관리합니다."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "보안 경고 및 알림을 보고 관리합니다."
 
 msgid "Views"
-msgstr "Views"
+msgstr "조회수"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "방문자 동향 - 지난 30일"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "방문자"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "오늘 방문"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "취약점 점검"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "취약점 스캐너"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "취약한"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF 공격 차단"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF 블록(방화벽에 의해 공격 차단됨)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF 방화벽"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAF 상태"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP 버전"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL 보호"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan API 토큰"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "경고"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "경고:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "경고: 가져오면 현재 설정이 모두 대체됩니다. 먼저 현재 설정을 백업으로 내보내십시오."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "웹 애플리케이션 방화벽"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "웹 애플리케이션 방화벽(WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "웹훅 URL"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "결과에 대한 웹훅 URL"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "웹훅"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "주간"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "주간 보안 보고서"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "화이트리스트(허용만)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "화이트리스트(선택한 항목만 허용)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "화이트리스트 IP"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "화이트리스트에 있는 IP"
 
 msgid "WordPress"
-msgstr "WordPress"
+msgstr "워드프레스"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "WordPress 핵심 파일 확인"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "WordPress 핵심 상태"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "워드프레스 강화"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "워드프레스 버전"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "WordPress 코어 파일이 수정되었습니다."
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress가 최신 상태가 아닙니다."
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-옵션(스니프 없음)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-프레임 옵션(클릭재킹 방지)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-보호"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC 제어"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS 공격"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS 보호"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "기본 로그인 슬러그를 사용하고 있습니다. 독특한 것으로 바꿔보세요."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "REST API에 액세스하려면 로그인해야 합니다."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "귀하의 사이트는 HTTPS를 사용하지 않습니다. 보안 연결을 위해 SSL 인증서를 활성화합니다."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "귀하의 사이트는 잘 보호되어 있습니다"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "귀하의 인증 코드는 다음과 같습니다: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "바이러스 정의가 오래되었습니다. 최상의 보호를 위해 지금 업데이트하세요."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "구역 ID"
 
 msgid "ago"
-msgstr "ago"
+msgstr "전"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "시간당 공격"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "시도"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "차단됨"
 
 msgid "characters"
-msgstr "characters"
+msgstr "문자"
 
 msgid "days"
-msgstr "days"
+msgstr "일"
 
 msgid "events"
-msgstr "events"
+msgstr "이벤트"
 
 msgid "fails"
-msgstr "fails"
+msgstr "실패하다"
 
 msgid "files"
-msgstr "files"
+msgstr "파일"
 
 msgid "from now"
-msgstr "from now"
+msgstr "지금부터"
 
 msgid "including:"
-msgstr "including:"
+msgstr "다음을 포함:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "소문자"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "분"
 
 msgid "modules"
-msgstr "modules"
+msgstr "모듈"
 
 msgid "number"
-msgstr "number"
+msgstr "번호"
 
 msgid "or"
-msgstr "or"
+msgstr "또는"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "분당"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "초"
 
 msgid "special character"
-msgstr "special character"
+msgstr "특수 문자"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "발견된 위협"
 
 msgid "total records"
-msgstr "total records"
+msgstr "총 기록"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "대문자"
 
 msgid "views"
-msgstr "views"
+msgstr "조회수"
 
 msgid "violations"
-msgstr "violations"
+msgstr "위반"
 
 msgid "visits"
-msgstr "visits"
+msgstr "방문"
+msgid "Deception"
+msgstr "속임수"
+
+msgid "P2P Intelligence"
+msgstr "P2P 인텔리전스"
+
+msgid "Sandbox Console"
+msgstr "샌드박스 콘솔"
+
+msgid "Temporary Access"
+msgstr "임시 액세스"
+
+msgid "Saving..."
+msgstr "저장 중..."
+
+msgid "Settings saved. Reloading..."
+msgstr "설정이 저장되었습니다. 새로고침 중..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "설정이 성공적으로 저장되었습니다! 새로고침 중..."
+
+msgid "Connection error"
+msgstr "연결 오류"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "보안 검사에 실패했습니다. 새로고침하고 다시 시도하세요."
+
+msgid "Settings handler not available."
+msgstr "설정 핸들러를 사용할 수 없습니다."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "모든 설정을 기본값으로 재설정하시겠습니까? 이 작업은 취소할 수 없습니다."
+
+msgid "Purge CDN cache now?"
+msgstr "지금 CDN 캐시를 삭제하시겠습니까?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "설정을 저장하지 못했습니다. 다시 시도해 주세요."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "설정이 기본값으로 재설정됩니다. 페이지를 새로고침하는 중..."
+
+msgid "Failed to load analytics data."
+msgstr "분석 데이터를 로드하지 못했습니다."
+
+msgid "Devices"
+msgstr "장치"
+
+msgid "No data available for this range."
+msgstr "이 범위에 대한 데이터가 없습니다."
+
+msgid "Traffic trend chart"
+msgstr "트래픽 동향 차트"
+
+msgid "Distribution breakdown chart"
+msgstr "분포 분석 차트"
+
+msgid "Total"
+msgstr "합계"
+
+msgid "Series"
+msgstr "시리즈"
+
+msgid "Predictive Threat Hunting"
+msgstr "예측 위협 사냥"
+
+msgid "Forecast next attack vectors"
+msgstr "다음 공격 벡터 예측"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "스택을 프로파일링하고, 가능한 공격 벡터를 예측하고, 사전 예방적 강화 지침을 제공합니다."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "격리된 위협과 복구 가능한 삭제 파일을 관리합니다."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "삭제된 파일(복구 가능)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "여기로 이동한 파일은 다시 격리 저장소로 복원하거나 영구적으로 삭제할 수 있습니다."
+
+msgid "Deleted"
+msgstr "삭제됨"
+
+msgid "Loading deleted files..."
+msgstr "삭제된 파일을 로드하는 중..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "격리된 파일을 복구 가능한 삭제된 저장소로 이동합니다."
+
+msgid "Delete Permanently:"
+msgstr "영구적으로 삭제:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "삭제된 저장소에서 파일을 영구적으로 제거합니다."
+
+msgid "Access denied from your region."
+msgstr "해당 지역에서 액세스가 거부되었습니다."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "임시 잠금 전 최대 로그인 시도 실패 횟수입니다."
+
+msgid "Time window for counting failed attempts."
+msgstr "실패한 시도를 계산하는 시간 창입니다."
+
+msgid "Open Tool"
+msgstr "도구 열기"
+
+msgid "Available Fix"
+msgstr "사용 가능한 수정 사항"
+
+msgid "Preview Patch"
+msgstr "미리보기 패치"
+
+msgid "Apply Patch"
+msgstr "패치 적용"
+
+msgid "Honeytrap Configuration"
+msgstr "허니트랩 구성"
+
+msgid "Enable Deception Module"
+msgstr "속임수 모듈 활성화"
+
+msgid "How Deception Works:"
+msgstr "속임수가 작동하는 방식:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "다음 URL은 귀하의 사이트에 존재하지 않습니다. 누구든지 해당 항목에 액세스하면 확인된 공격자로 <strong>자동으로 차단</strong>됩니다. 관리자는 차단되지 않지만 경고가 표시됩니다."
+
+msgid "Custom Honeytrap Paths"
+msgstr "맞춤형 허니트랩 경로"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "한 줄에 하나의 경로를 추가합니다(예: /my-secret-admin/, /old-backup.sql). 기본값은 이미 활성화되어 있습니다."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "기본 허니트랩 경로(항상 활성)"
+
+msgid "Login Page Honeypot"
+msgstr "로그인 페이지 허니팟"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "보이지 않는 필드가 로그인/등록 양식에 삽입됩니다. 봇만이 이를 채워 즉시 탐지 및 차단을 실행합니다."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "이 보호는 속임수 모듈이 활성화되면 항상 활성화됩니다. 구성이 필요하지 않습니다."
+
+msgid "User Enumeration Trap"
+msgstr "사용자 열거 트랩"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "공격자가 ?author=1, ?author=2 등을 통해 유효한 사용자 이름을 검색하는 정찰 시도를 탐지합니다."
+
+msgid "Enable user enumeration detection"
+msgstr "사용자 열거 감지 활성화"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "열거 시도 시 하드 차단(기본값: 홈페이지로 소프트 리디렉션)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "모든 작성자 열거 차단(기존 사용자의 경우에도)"
+
+msgid "Save Changes"
+msgstr "변경 사항 저장"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR 제30조 데이터 매핑"
+
+msgid "Refresh Map"
+msgstr "지도 새로고침"
+
+msgid "Export Data Map (PDF)"
+msgstr "데이터 맵 내보내기(PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "데이터베이스 테이블, 데이터 흐름 매핑 및 제3자 공유 감지 전반에 걸쳐 자동화된 PII 검색."
+
+msgid "Data Element"
+msgstr "데이터 요소"
+
+msgid "Location"
+msgstr "위치"
+
+msgid "Purpose"
+msgstr "목적"
+
+msgid "Retention"
+msgstr "보유"
+
+msgid "Third-Party Sharing"
+msgstr "제3자 공유"
+
+msgid "Legal Basis"
+msgstr "법적 근거"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "아직 감지된 PII 기록이 없습니다. 데이터 맵 스캔을 실행하여 보고서를 작성하십시오."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "잊혀질 권리의 자동화"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "삭제 요청을 제출하고, 데이터 제거를 확인하고, GDPR 워크플로에 대한 규정 준수 로그를 추적하세요."
+
+msgid "User ID"
+msgstr "사용자 ID"
+
+msgid "Comments"
+msgstr "댓글"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "익명처리 대신 댓글 삭제"
+
+msgid "Run Erasure"
+msgstr "삭제 실행"
+
+msgid "Verify Erasure"
+msgstr "삭제 확인"
+
+msgid "GDPR Request Log"
+msgstr "GDPR 요청 로그"
+
+msgid "Request Type"
+msgstr "요청 유형"
+
+msgid "Requested At"
+msgstr "요청 시간"
+
+msgid "Completed At"
+msgstr "완료 시간"
+
+msgid "No GDPR requests logged yet."
+msgstr "아직 기록된 GDPR 요청이 없습니다."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "섀도우 런타임 샌드박스"
+
+msgid "Enable Sandbox Module"
+msgstr "샌드박스 모듈 활성화"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Shadow Runtime Sandbox 엔진을 로드합니다."
+
+msgid "Enable Sandbox Console"
+msgstr "샌드박스 콘솔 활성화"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Manage_options가 있는 wp-admin 사용자가 샌드박스 콘솔에서 코드를 실행할 수 있습니다."
+
+msgid "Sandbox Timeout"
+msgstr "샌드박스 시간 초과"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "실행 시간 초과(1~30초)입니다."
+
+msgid "Dynamic Analysis"
+msgstr "동적 분석"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "정적 검사 외에 동적 실행 분석을 실행합니다."
+
+msgid "Quarantine Policy"
+msgstr "검역 정책"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "대부분의 사이트에는 수동 격리가 권장됩니다. 자동 격리는 신뢰도가 높은 것으로 확인된 악성코드만 격리합니다."
+
+msgid "Manual (Recommended)"
+msgstr "수동(권장)"
+
+msgid "Auto Quarantine"
+msgstr "자동 격리"
+
+msgid "Save Quarantine Policy"
+msgstr "격리 정책 저장"
+
+msgid "AI Risk Controls"
+msgstr "AI 위험 통제"
+
+msgid "Enable AI Detection Module"
+msgstr "AI 감지 모듈 활성화"
+
+msgid "Enable Insider Threat Detection"
+msgstr "내부자 위협 감지 활성화"
+
+msgid "Insider Threat Threshold"
+msgstr "내부자 위협 임계값"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "데이터 유출 모니터링 활성화"
+
+msgid "Exfiltration Threshold"
+msgstr "유출 임계값"
+
+msgid "Exfiltration Baseline Days"
+msgstr "유출 기준 일수"
+
+msgid "Session Risk Threshold"
+msgstr "세션 위험 임계값"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "지속적인 인증 재확인 간격(초)"
+
+msgid "Risk Spike Threshold"
+msgstr "위험 급증 임계값"
+
+msgid "Save AI Settings"
+msgstr "AI 설정 저장"
+
+msgid "Quarantine Mode"
+msgstr "격리 모드"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "수동 모드가 더 안전하며 권장됩니다. 자동 모드는 신뢰도가 높은 것으로 확인된 악성 코드만 격리합니다."
+
+msgid "Data Map"
+msgstr "데이터 맵"
+
+msgid "Privacy Requests"
+msgstr "개인정보 보호 요청"
+
+msgid "Deception Technology"
+msgstr "속임수 기술"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "허니팟, 미끼 자산, 공격자 속임수를 사용하여 위협이 공격하기 전에 포착합니다."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "%2$d개 항목 중 %1$d개 표시 중"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P Intelligence 모듈이 로드되지 않았습니다."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P 위협 인텔리전스"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "집단 면역을 위해 다른 SentinelWP 설치와 위협 인텔리전스를 공유합니다."
+
+msgid "P2P Settings"
+msgstr "P2P 설정"
+
+msgid "Enable P2P Intelligence"
+msgstr "P2P 인텔리전스 활성화"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "피어 노드와 공동 위협 인텔리전스 공유를 활성화합니다."
+
+msgid "My Node Key"
+msgstr "내 노드 키"
+
+msgid "Copy"
+msgstr "복사"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "귀하의 사이트에 연결하려는 동료와 이 키를 공유하십시오."
+
+msgid "Broadcast Threats"
+msgstr "브로드캐스트 위협"
+
+msgid "Share detected threats with registered peers."
+msgstr "감지된 위협을 등록된 피어와 공유하세요."
+
+msgid "Trust Threshold"
+msgstr "신뢰 임계값"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "위협 점수가 이 임계값보다 큰 IP만 자동 차단합니다. 값이 낮을수록 더 공격적으로 차단됩니다."
+
+msgid "Registered Peers"
+msgstr "등록된 피어"
+
+msgid "Add Peer"
+msgstr "피어 추가"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "아직 등록된 동료가 없습니다. 위협 인텔리전스 공유를 시작하려면 피어를 추가하세요."
+
+msgid "Label"
+msgstr "상표"
+
+msgid "Last Sync"
+msgstr "마지막 동기화"
+
+msgid "Sent/Received"
+msgstr "전송/수신"
+
+msgid "Unnamed"
+msgstr "이름 없음"
+
+msgid "%s ago"
+msgstr "%s 전"
+
+msgid "Threats Sent"
+msgstr "보낸 위협"
+
+msgid "Threats Received"
+msgstr "수신된 위협"
+
+msgid "Statistics"
+msgstr "통계"
+
+msgid "Connected Peers"
+msgstr "연결된 피어"
+
+msgid "Threats Received (24h)"
+msgstr "수신된 위협(24시간)"
+
+msgid "P2P Status"
+msgstr "P2P 상태"
+
+msgid "Threat Intelligence Credits"
+msgstr "위협 인텔리전스 크레딧"
+
+msgid "Current Credit Balance"
+msgstr "현재 크레딧 잔액"
+
+msgid "Reputation Score"
+msgstr "평판 점수"
+
+msgid "Accuracy"
+msgstr "정확도"
+
+msgid "Badges:"
+msgstr "배지:"
+
+msgid "No badges yet"
+msgstr "아직 배지가 없습니다."
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "평판 점수가 1000 이상이므로 프리미엄 혜택이 무료로 제공됩니다."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "1000 이상의 평판 점수에 도달하면 무료로 프리미엄 혜택을 누릴 수 있습니다."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "최우수 기여자(익명)"
+
+msgid "No contributor data available yet."
+msgstr "아직 기여자 데이터가 없습니다."
+
+msgid "Rank"
+msgstr "순위"
+
+msgid "Anonymous Site ID"
+msgstr "익명 사이트 ID"
+
+msgid "Credits"
+msgstr "크레딧"
+
+msgid "Reputation"
+msgstr "평판"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Add New Peer"
+msgstr "새 피어 추가"
+
+msgid "Peer URL"
+msgstr "피어 URL"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "피어 WordPress 사이트의 전체 URL(프로덕션에서는 HTTPS를 사용해야 함)"
+
+msgid "Peer Node Key"
+msgstr "피어 노드 키"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "피어의 노드 키(P2P 설정 페이지에서 복사할 수 있음)"
+
+msgid "Label (Optional)"
+msgstr "라벨(선택사항)"
+
+msgid "My Production Server"
+msgstr "내 프로덕션 서버"
+
+msgid "A friendly name to identify this peer."
+msgstr "이 피어를 식별하기 위한 친숙한 이름입니다."
+
+msgid "Unauthorized"
+msgstr "승인되지 않은"
+
+msgid "Sandbox module is not loaded."
+msgstr "샌드박스 모듈이 로드되지 않았습니다."
+
+msgid "Sandbox module is disabled."
+msgstr "샌드박스 모듈이 비활성화되었습니다."
+
+msgid "Sandbox console is disabled."
+msgstr "샌드박스 콘솔이 비활성화되었습니다."
+
+msgid "No code provided."
+msgstr "제공된 코드가 없습니다."
+
+msgid "Insufficient permissions."
+msgstr "권한이 부족합니다."
+
+msgid "Sandbox Module Disabled"
+msgstr "샌드박스 모듈 비활성화됨"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Shadow Runtime Sandbox는 현재 비활성화되어 있습니다. 콘솔을 사용하려면 설정에서 활성화하세요."
+
+msgid "Go to Settings"
+msgstr "설정으로 이동"
+
+msgid "Sandbox Console Disabled"
+msgstr "샌드박스 콘솔 비활성화됨"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "샌드박스 모듈은 활성화되어 있지만 관리 콘솔은 비활성화되어 있습니다. wp-admin에서 코드를 실행하려면 콘솔 설정을 활성화하세요."
+
+msgid "Danger Zone: Code Execution"
+msgstr "위험 지대: 코드 실행"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "이 콘솔은 격리된 샌드박스에서 PHP 코드를 실행합니다. 모든 데이터베이스 변경 사항은 자동으로 롤백됩니다. 의심스러운 코드 분석이나 테스트에만 사용하세요."
+
+msgid "PHP Code Editor"
+msgstr "PHP 코드 편집기"
+
+msgid "Run Code"
+msgstr "코드 실행"
+
+msgid "Analyze Only"
+msgstr "분석만"
+
+msgid "Timeout:"
+msgstr "시간 초과:"
+
+msgid "Execution Results"
+msgstr "실행 결과"
+
+msgid "STATIC ANALYSIS"
+msgstr "정적 분석"
+
+msgid "OUTPUT"
+msgstr "출력"
+
+msgid "ERRORS"
+msgstr "오류"
+
+msgid "DATABASE QUERIES"
+msgstr "데이터베이스 쿼리"
+
+msgid "Module not loaded"
+msgstr "모듈이 로드되지 않았습니다."
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "실시간 교통 분석을 사용할 수 없습니다."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Just-In-Time 액세스는 자동 만료 기능이 있는 요청 및 승인 워크플로를 사용합니다."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "모듈이 비활성화되었거나 로드되지 않았기 때문에 현재 임시 액세스를 사용할 수 없습니다."
+
+msgid "Open settings"
+msgstr "설정 열기"
+
+msgid "Request Temporary Access"
+msgstr "임시 액세스 요청"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "이 요청은 현재 로그인된 계정에 적용됩니다. 일시적으로 상승된 액세스 권한이 부여되기 전에 관리자가 이를 승인해야 합니다."
+
+msgid "Requested Role"
+msgstr "요청된 역할"
+
+msgid "Administrator"
+msgstr "관리자"
+
+msgid "Editor"
+msgstr "편집자"
+
+msgid "Duration (minutes)"
+msgstr "기간(분)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "임시로 높은 액세스 권한이 필요한 이유를 설명하세요."
+
+msgid "Submit Request"
+msgstr "요청 제출"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "임시 액세스 권한 부여(관리자)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "사용자 이름이나 이메일을 통해 특정 사용자에게 시간 제한이 있는 높은 액세스 권한을 직접 부여하세요."
+
+msgid "Target User (Username or Email)"
+msgstr "대상 사용자(사용자 이름 또는 이메일)"
+
+msgid "username or user@example.com"
+msgstr "사용자 이름 또는 user@example.com"
+
+msgid "Grant Role"
+msgstr "역할 부여"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "이 사용자에게 일시적으로 높은 액세스 권한이 필요한 이유를 설명하세요."
+
+msgid "Grant Access"
+msgstr "액세스 권한 부여"
+
+msgid "Pending and Active Requests"
+msgstr "보류 중인 요청과 활성 요청"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "보류 중인 요청을 승인하고, 직접 부여를 검토하고, 이 대기열에서 활성 권한을 취소합니다."
+
+msgid "Original Role"
+msgstr "원래 역할"
+
+msgid "Elevated Role"
+msgstr "승격된 역할"
+
+msgid "Granted"
+msgstr "승인됨"
+
+msgid "Expires"
+msgstr "만료"
+
+msgid "Approved By"
+msgstr "승인자"
+
+msgid "Loading..."
+msgstr "로드 중..."
+
+msgid "English (US)"
+msgstr "영어(미국)"
+
+msgid "English (UK)"
+msgstr "영어(영국)"
+
+msgid "Espanol (Spanish)"
+msgstr "스페인어(스페인어)"
+
+msgid "Francais (French)"
+msgstr "프랑세(프랑스어)"
+
+msgid "Deutsch (German)"
+msgstr "독일어(독일어)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano(이탈리아어)"
+
+msgid "Portugues (Brazilian)"
+msgstr "포르투갈어(브라질)"
+
+msgid "Nederlands (Dutch)"
+msgstr "네덜란드(네덜란드어)"
+
+msgid "Russian"
+msgstr "러시아어"
+
+msgid "Japanese"
+msgstr "일본어"
+
+msgid "Chinese (Simplified)"
+msgstr "중국어(간체)"
+
+msgid "Arabic"
+msgstr "아랍어"
+
+msgid "Hindi"
+msgstr "힌디어"
+
+msgid "Korean"
+msgstr "한국어"
+
+msgid "Turkish"
+msgstr "터키어"
+
+msgid "Polski (Polish)"
+msgstr "폴스키어(폴란드어)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "인도네시아어(인도네시아어)"
+
+msgid "Ukrainian"
+msgstr "우크라이나어"
+
+msgid "Vietnamese"
+msgstr "베트남어"
+
+msgid "Thai"
+msgstr "태국어"
+
+msgid "Svenska (Swedish)"
+msgstr "스벤스카(스웨덴어)"
+
+msgid "Dansk (Danish)"
+msgstr "단스크어(덴마크어)"
+
+msgid "Suomi (Finnish)"
+msgstr "수오미어(핀란드어)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "노르스크 복말(노르웨이어)"
+
+msgid "Cestina (Czech)"
+msgstr "세스티나(체코)"
+
+msgid "Greek"
+msgstr "그리스어"
+
+msgid "Magyar (Hungarian)"
+msgstr "마자르어(헝가리)"
+
+msgid "Romana (Romanian)"
+msgstr "로마나어(루마니아어)"
+
+msgid "Slovencina (Slovak)"
+msgstr "슬로베니아어(슬로바키아어)"
+
+msgid "Bulgarian"
+msgstr "불가리아어"
+
+msgid "Hrvatski (Croatian)"
+msgstr "흐르바츠키(크로아티아어)"
+
+msgid "Serbian"
+msgstr "세르비아어"
+
+msgid "Hebrew"
+msgstr "히브리어"
+
+msgid "Persian"
+msgstr "페르시아어"
+
+msgid "Settings saved successfully."
+msgstr "설정이 성공적으로 저장되었습니다."
+
+msgid "Settings reset to defaults."
+msgstr "설정이 기본값으로 재설정됩니다."
+
+msgid "NexifyMy Security Logs"
+msgstr "Nexify내 보안 로그"
+
+msgid "No matching user found."
+msgstr "일치하는 사용자가 없습니다."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "보안 로그 및 관련 PII는 익명화되었습니다."
+
+msgid "Invalid user ID."
+msgstr "잘못된 사용자 ID입니다."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "수동 또는 웹훅 기반 삭제 요청이 대기 중입니다."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp 삭제 요청이 전송되었습니다."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "스트라이프 삭제에는 규정 준수 기록에 대한 수동 API 후속 조치가 필요합니다."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analytics 사용자 삭제 API 요청은 외부에서 구성되어야 합니다."
+
+msgid "Privacy Preferences"
+msgstr "개인정보 보호 기본 설정"
+
+msgid "Select which optional processing categories you allow."
+msgstr "허용할 선택적 처리 범주를 선택하세요."
+
+msgid "Save Preferences"
+msgstr "환경설정 저장"
+
+msgid "Consent Management"
+msgstr "동의 관리"
+
+msgid "Given"
+msgstr "주어진"
+
+msgid "Withdrawn"
+msgstr "철회됨"
+
+msgid "No consent records found."
+msgstr "동의 기록이 없습니다."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>오류</strong>: 문제가 발생했습니다. 나중에 다시 시도해 주세요."
+
+msgid "The peer URL is not valid."
+msgstr "피어 URL이 유효하지 않습니다."
+
+msgid "You cannot add your own site as a peer."
+msgstr "자신의 사이트를 피어로 추가할 수 없습니다."
+
+msgid "API key must be at least 16 characters."
+msgstr "API 키는 16자 이상이어야 합니다."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "최대 피어 수(%d)에 도달했습니다."
+
+msgid "Missing authentication header."
+msgstr "인증 헤더가 누락되었습니다."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "노드 키가 잘못되었습니다. 피어가 인식되지 않습니다."
+
+msgid "Invalid request signature."
+msgstr "요청 서명이 잘못되었습니다."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "비율 제한을 초과했습니다. 나중에 다시 시도하세요."
+
+msgid "Invalid site identifier."
+msgstr "잘못된 사이트 식별자입니다."
+
+msgid "Unknown contribution type."
+msgstr "기여 유형을 알 수 없습니다."
+
+msgid "Unknown benefit type."
+msgstr "혜택 유형을 알 수 없습니다."
+
+msgid "Insufficient credits for this benefit."
+msgstr "이 혜택에 대한 크레딧이 부족합니다."
+
+msgid "Threat Forecast"
+msgstr "위협 예측"
+
+msgid "Your site profile:"
+msgstr "귀하의 사이트 프로필:"
+
+msgid "Predicted threats this month:"
+msgstr "이번 달 예상되는 위협:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "아직 신뢰도가 높은 벡터가 감지되지 않았습니다."
+
+msgid "Recommended actions:"
+msgstr "권장 조치:"
+
+msgid "No immediate actions required."
+msgstr "즉각적인 조치가 필요하지 않습니다."
+
+msgid "Not logged in"
+msgstr "로그인되지 않음"
+
+msgid "A reason is required"
+msgstr "이유를 입력하세요."
+
+msgid "Invalid requested role"
+msgstr "요청한 역할이 잘못되었습니다."
+
+msgid "An active or pending request already exists for this role."
+msgstr "이 역할에 대해 활성 또는 보류 중인 요청이 이미 존재합니다."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "액세스 요청이 제출되었습니다. 관리자가 귀하의 요청을 검토할 것입니다."
+
+msgid "Invalid request"
+msgstr "잘못된 요청"
+
+msgid "Pending request not found"
+msgstr "대기 중인 요청을 찾을 수 없습니다."
+
+msgid "Request role is invalid"
+msgstr "요청 역할이 잘못되었습니다."
+
+msgid "Invalid approved role"
+msgstr "승인된 역할이 잘못되었습니다."
+
+msgid "Access approved successfully"
+msgstr "액세스가 승인되었습니다."
+
+msgid "Target user (username or email) is required."
+msgstr "대상 사용자(사용자 이름 또는 이메일)가 필요합니다."
+
+msgid "A reason is required."
+msgstr "이유가 필요합니다."
+
+msgid "Invalid requested role."
+msgstr "요청한 역할이 잘못되었습니다."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "대상 사용자를 찾을 수 없습니다. 기존 사용자 이름이나 이메일을 사용하세요."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "사용자에게 이미 이 역할이 있습니다. 임시 고도는 필요하지 않습니다."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "이 사용자 및 역할에 대해 활성 또는 보류 중인 부여가 이미 존재합니다."
+
+msgid "Unable to grant temporary access."
+msgstr "임시 액세스 권한을 부여할 수 없습니다."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "%3$d분 동안 %1$s에 임시 %2$s 액세스 권한이 부여되었습니다."
+
+msgid "Invalid grant"
+msgstr "잘못된 부여"
+
+msgid "Grant not found or already revoked"
+msgstr "부여를 찾을 수 없거나 이미 취소되었습니다."
+
+msgid "Permission revoked successfully"
+msgstr "권한이 취소되었습니다."
+
+msgid "Once Monthly"
+msgstr "월 1회"
+
+msgid "Every 5 Minutes"
+msgstr "5분마다"
 

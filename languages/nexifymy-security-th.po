@@ -8,1744 +8,1744 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d ภัยคุกคามที่ตรวจพบในการสแกนครั้งล่าสุด"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(พูดรหัสนี้เพื่อตรวจสอบ)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - สูง"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 วัน"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 ชั่วโมง"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 วัน"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 นาที"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - ปานกลาง"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 ชั่วโมง"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2 วิธีการ FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2การตั้งค่า FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - ต่ำ"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 วัน"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 วัน"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 นาที"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 วัน"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 ถูกห้าม"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 ไม่พบ"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 คำขอมากเกินไป (แนะนำ)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 นาที"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 บริการไม่พร้อมใช้งาน"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 ชั่วโมง"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 วัน"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 วัน"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 วัน (ต่อเนื่อง)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 วัน"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 วัน"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "สถานะการเรียนรู้ AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "สถานะ AI"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "ภัยคุกคาม AI การตรวจจับ"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "รีเซ็ตข้อมูลการเรียนรู้ AI สำเร็จแล้ว"
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "คำขอ AJAX ต่อนาที"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API และความปลอดภัยแบบไร้หัว"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API และบริการ"
 
 msgid "API Burst Allowance"
 msgstr "API Burst Allowance"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "จุดสิ้นสุด API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API คีย์"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "การจำกัดอัตรา API"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "คำขอ API ต่อนาที"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "ความปลอดภัยของ API"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "โทเค็น API"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "เกินขีดจำกัดอัตรา API ขีดจำกัด: %d คำขอต่อนาที"
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "ข้อจำกัด API"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "โทเค็น API, โทเค็น HEC หรือคีย์การตรวจสอบสิทธิ์"
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "ละทิ้ง"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "เกี่ยวกับการกักกัน"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "การเข้าถึง ถูกปฏิเสธ"
 
 msgid "Action"
-msgstr "Action"
+msgstr "การดำเนินการ"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "การดำเนินการ"
 
 msgid "Active"
-msgstr "Active"
+msgstr "ใช้งานอยู่"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "แดชบอร์ดกิจกรรม"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "บันทึกกิจกรรม"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "การตั้งค่าบันทึกกิจกรรม"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "กิจกรรมจากผู้ใช้เหล่านี้จะไม่ถูก เข้าสู่ระบบแล้ว"
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "บันทึกกิจกรรมที่เก่ากว่านี้จะถูกลบโดยอัตโนมัติ"
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "การติดตามกิจกรรม"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "เพิ่มอักขระอีก %d ตัว"
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "เพิ่ม 2FA ไปยังบัญชีผู้ใช้เพื่อความปลอดภัยเป็นพิเศษ"
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "เพิ่ม CAPTCHA ในการเข้าสู่ระบบและแบบฟอร์ม"
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "เพิ่มการตรวจสอบ CAPTCHA เพื่อเข้าสู่ระบบแบบฟอร์ม"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "เพิ่มส่วนหัวความปลอดภัย HTTP (X-Frame-Options, CSP ฯลฯ)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "เพิ่มรหัสผ่านใหม่"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "เพิ่มส่วนหัวความปลอดภัย"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "เพิ่ม Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "เพิ่ม X-Frame-Options, X-Content-Type-Options และการรักษาความปลอดภัยอื่น ๆ ส่วนหัว"
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "เพิ่มส่วนหัว X-Frame-Options, X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "เพิ่มการรักษาความปลอดภัยอีกชั้นหนึ่งโดยกำหนดให้ต้องมีการตรวจสอบสิทธิ์รูปแบบที่สอง"
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "เพิ่มการรักษาความปลอดภัยอีกชั้นหนึ่งโดยกำหนดให้ต้องมีการตรวจสอบสิทธิ์สองรูปแบบสำหรับการเข้าสู่ระบบของผู้ใช้"
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "เพิ่มการรักษาความปลอดภัยอีกชั้นพิเศษด้วยการใช้ TOTP 2FA."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "เพิ่มตัวอักษรตัวพิมพ์เล็ก"
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "เพิ่มตัวเลข"
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "เพิ่มอักขระพิเศษ"
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "เพิ่มลงในรายการ"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "เพิ่มตัวอักษรตัวพิมพ์ใหญ่"
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "มาตรการรักษาความปลอดภัยการเข้าสู่ระบบเพิ่มเติม ใช้งานได้กับตัวจำกัดอัตรา"
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "เพิ่ม CAPTCHA ในแบบฟอร์มการเข้าสู่ระบบ ปลอดภัย แต่อาจส่งผลต่อประสบการณ์ของผู้ใช้"
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "เพิ่ม Google reCAPTCHA, Cloudflare Turnstile หรือการท้าทายทางคณิตศาสตร์"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "เพิ่มส่วนหัวความปลอดภัย HTTP (X-Frame-Options, CSP) ปลอดภัย - ปรับปรุงความปลอดภัยของเบราว์เซอร์"
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "เพิ่มชั้นความปลอดภัยพิเศษด้วยรหัส TOTP, อีเมล หรือ SMS"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "การเข้าสู่ระบบของผู้ดูแลระบบ (การเข้าสู่ระบบของผู้ดูแลระบบสำเร็จ)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "ขั้นสูง"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "การตั้งค่าไฟร์วอลล์ขั้นสูง"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "การเสริมความแข็งแกร่งขั้นสูง"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "ตัวเลือกการเสริมความแข็งแกร่งขั้นสูง"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "การตั้งค่าการเข้าสู่ระบบขั้นสูง"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "ขั้นสูง ตัวเลือก"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "ตัวเลือกสแกนเนอร์ขั้นสูง"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "การวิเคราะห์พฤติกรรมขั้นสูง"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "ไฟล์ที่ได้รับผลกระทบ:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "เกณฑ์การแจ้งเตือน"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "ประเภทการแจ้งเตือน"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "การแจ้งเตือน"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "การแจ้งเตือนที่ส่งหากปลั๊กอินถูก ปิดใช้งานแล้ว"
 
 msgid "All"
-msgstr "All"
+msgstr "ทั้งหมด"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "ทั้งหมดชัดเจน!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "เหตุการณ์ทั้งหมด"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "ทุกระดับความรุนแรง"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "อนุญาตให้ผู้ใช้ทั้งหมดเปิดใช้งาน 2FA โดยสมัครใจ"
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "อนุญาตให้ใช้รหัสอีเมลเป็นวิธีการสำรองข้อมูล"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "อนุญาตให้สั้น ระเบิดเกินขีดจำกัดอัตรา"
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "อนุญาตให้ผู้ใช้มีเวลาตั้งค่า 2FA ก่อนที่จะบังคับใช้"
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "อนุญาตให้ผู้ใช้เปิดใช้งาน 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "อนุญาตให้ผู้ใช้สร้างรหัสสำรองฉุกเฉิน"
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "อนุญาตให้ผู้ใช้ข้าม 2FA บนอุปกรณ์ที่เชื่อถือได้"
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "ผู้ใช้ที่ได้รับอนุญาต ตัวแทน"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "การวิเคราะห์"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "ความผิดปกติ"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "ความรุนแรงใด ๆ"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "การแก้ไขใด ๆ จะทำให้เกิดการแจ้งเตือนทางอีเมลทันที"
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "ใช้การตั้งค่า"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "ใช้แนวทางปฏิบัติที่ดีที่สุดด้านความปลอดภัยของ WordPress"
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "ใช้ความปลอดภัย การแก้ไข"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "ใช้มาตรการเสริมความปลอดภัยกับ WordPress"
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "ใช้มาตรการเสริมความปลอดภัยเพื่อปกป้องการติดตั้ง WordPress ของคุณ"
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบรหัสผ่านนี้?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "โจมตี การป้องกัน"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "หน้าต่างความพยายาม"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "เสียง (กำลังพูด)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "กำลังตรวจสอบความถูกต้อง..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "รหัสการตรวจสอบสิทธิ์"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "เหตุการณ์การตรวจสอบสิทธิ์"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "โทเค็นการรับรองความถูกต้อง"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "การตรวจสอบสิทธิ์ล้มเหลว โปรดลองอีกครั้ง"
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "ต้องมีการรับรองความถูกต้องสำหรับการเข้าถึง API"
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "ต้องมีการรับรองความถูกต้องสำหรับการเข้าถึง GraphQL"
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "การสแกนผู้เขียน"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "ระยะเวลาบล็อกอัตโนมัติ"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "บล็อกผู้กระทำความผิดซ้ำโดยอัตโนมัติ"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "บล็อกอัตโนมัติ เกณฑ์"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "แก้ไขอัตโนมัติ"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "สร้างรายงานอัตโนมัติ"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "ภัยคุกคามการกักกันอัตโนมัติ"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "กำหนดการสแกนอัตโนมัติ"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "อัปเดตอัตโนมัติ"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "อัปเดตอัตโนมัติ การตั้งค่า"
 
 msgid "Auto-Updates"
 msgstr "อัปเดตอัตโนมัติ"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "ตรวจจับอัตโนมัติ"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "การสแกนอัตโนมัติ"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "การสแกนอัตโนมัติ"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "ขึ้นบัญชีดำโดยอัตโนมัติ IP ที่เรียกใช้กฎหลายครั้ง"
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "สร้างตั๋ว Jira โดยอัตโนมัติสำหรับเหตุการณ์ด้านความปลอดภัยและช่องโหว่"
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "สร้างตั๋วเพื่อความปลอดภัยโดยอัตโนมัติ เหตุการณ์ในระบบการจัดการโครงการของคุณ"
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "สร้างรายงานโดยอัตโนมัติตามกำหนดเวลา"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "ย้ายมัลแวร์ที่ตรวจพบไปยังการกักกันโดยอัตโนมัติ"
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "เรียกใช้การสแกนโดยอัตโนมัติในเบื้องหลัง"
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "อัปเดตลายเซ็นมัลแวร์โดยอัตโนมัติทุกวัน"
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "พร้อมใช้งาน ประเทศ"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "เหตุการณ์ที่มีอยู่"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "เฉลี่ย/วัน"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "การสแกนพื้นหลัง"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "สำรองไฟล์ที่เสียหายก่อนการเปลี่ยน"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "รหัสสำรอง"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "สำรอง เพิ่มประสิทธิภาพ และรักษาความปลอดภัยฐานข้อมูลของคุณ"
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "การสำรองข้อมูล & cleanup"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "การสำรองข้อมูลจะถูกเก็บไว้ใน wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "บอทที่ไม่ดี"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "คำขอที่ไม่ถูกต้อง"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Balanced (แนะนำ)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "บันทึกพฤติกรรม"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "การวิเคราะห์พฤติกรรม"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "บัญชีดำ (รายการบล็อก)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "บัญชีดำ (เลือกบล็อก)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "บัญชีดำ IPs"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "บัญชีดำ: บล็อกประเทศที่เลือก รายการที่อนุญาต: อนุญาตเฉพาะประเทศที่เลือก"
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP ที่อยู่ในบัญชีดำ"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "บล็อกบอทที่ไม่ดี"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "บล็อกการโจมตี CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "บล็อกรหัสผ่านทั่วไป"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "บล็อกการข้ามผ่านไดเรกทอรี"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "บล็อก ระยะเวลา"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "บล็อก User Agent ที่ว่างเปล่า"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "บล็อกผู้ใช้ API ที่มากเกินไป"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "บล็อกตัวแก้ไขไฟล์"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "บล็อกการรวมไฟล์ในเครื่อง"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "บล็อกข้อความ"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "โหมดบล็อก"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "โหมดบล็อก (แนะนำ)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "โหมดบล็อก: บล็อกคำขอที่เป็นอันตราย โหมดการตรวจสอบ: บันทึกภัยคุกคามโดยไม่ปิดกั้น"
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "บล็อกการเรียกใช้โค้ดจากระยะไกล"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "บล็อกการรวมไฟล์ระยะไกล"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "บล็อกการฉีด SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "บล็อกการอัปโหลดไฟล์ที่น่าสงสัย"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "บล็อกการเข้าถึง XML-RPC (ป้องกันเดรัจฉาน บังคับ)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "บล็อกการโจมตี XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "บล็อกการเข้าถึงจากประเทศที่ระบุ"
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "บล็อกโปรแกรมรวบรวมข้อมูลเชิงรุก (อัตราการร้องขอสูง)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "บล็อกการสแกนการแจงนับผู้เขียน (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "บล็อกสตริงข้อความค้นหาที่ยาวเกินไป"
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "บล็อก บอทและเครื่องขูดที่รู้จัก"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "บล็อกบอทและเครื่องขูดที่เป็นอันตรายที่รู้จัก"
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "บล็อกคำขอที่มีรูปแบบไม่ถูกต้องและสตริงการสืบค้นที่น่าสงสัย"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "บล็อกคำขอที่เป็นอันตราย"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "บล็อกคำขอและการโจมตีที่เป็นอันตราย"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "บล็อกหรืออนุญาตการรับส่งข้อมูลตาม ประเทศ"
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "บล็อกคำขอที่มีขนาดใหญ่กว่าขนาดนี้เพื่อป้องกันการโจมตี DoS"
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "บล็อกคำขอด้วย user-agent ที่ว่างเปล่า (อาจบล็อกบอทที่ถูกต้องตามกฎหมายบางตัว)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "บล็อกคำขอโดยไม่มีส่วนหัว User-Agent"
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "บล็อก IP ที่น่าสงสัย"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "บล็อก User-Agents ที่น่าสงสัย"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "บล็อกการรับส่งข้อมูลจากประเทศใดประเทศหนึ่ง กำหนดค่าประเทศในการตั้งค่าก่อนเปิดใช้งาน"
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "บล็อกการอัปโหลดที่มีนามสกุลไฟล์ปฏิบัติการ (.php, .exe, .sh ฯลฯ)"
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "การโจมตีที่ถูกบล็อก"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "ส่วนขยายไฟล์ที่ถูกบล็อก"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "คำขอที่ถูกบล็อก"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "ผู้ใช้ที่ถูกบล็อก ตัวแทน"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "บล็อกที่อยู่ IP ที่แสดงพฤติกรรมที่เป็นอันตราย ปลอดภัย - คุณสามารถไวท์ลิสต์ IP ของคุณได้"
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "บุ๊กมาร์ก URL นี้เพื่อให้คุณสามารถเข้าถึงหน้าเข้าสู่ระบบได้ตลอดเวลา"
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "การป้องกันบอทและโปรแกรมรวบรวมข้อมูล"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "การป้องกันบอทและตัวแทนผู้ใช้"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "การป้องกันบอท"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "บอท การป้องกัน"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "เบราว์เซอร์"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "โหด บังคับ"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "การป้องกันแบบ Brute Force"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "การป้องกันแบบ Brute Force และการจำกัดความพยายามในการเข้าสู่ระบบ"
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "ข้อผิดพลาด"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "ยุ่งที่สุด วัน"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "การป้องกัน CAPTCHA"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "การรวม CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "สถานะ CDN"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (รูปแบบเหตุการณ์ทั่วไป)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "CI/CD ไปป์ไลน์"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "การรวมไปป์ไลน์ CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "ยกเลิก"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "แสดงตัวอย่าง Captcha"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "ผู้ให้บริการ Captcha"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "การตั้งค่า Captcha"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "เปลี่ยนฐานข้อมูล คำนำหน้า"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "เปลี่ยนคำนำหน้าตารางฐานข้อมูล (ต้องอัปเดตฐานข้อมูลด้วยตนเอง)"
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "เปลี่ยน URL การเข้าสู่ระบบเริ่มต้นเพื่อป้องกันการโจมตี"
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "เปลี่ยน URL การเข้าสู่ระบบ wp-admin เริ่มต้นเพื่อป้องกันการโจมตีอัตโนมัติ"
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "เปลี่ยน URL การเข้าสู่ระบบจาก /wp-admin เป็น slug ที่กำหนดเองเพื่อป้องกันบอท การโจมตี"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "ช่อง"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "ข้อกำหนดของตัวละคร"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "ตรวจสอบความสมบูรณ์ของคอร์"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "ตรวจสอบช่วงเวลา"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "ตรวจสอบและซ่อมแซมไฟล์หลักของ WordPress ที่เสียหายโดยใช้แหล่งที่มาอย่างเป็นทางการ"
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "ตรวจสอบไฟล์หลักเพื่อหาการแก้ไขและมัลแวร์"
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "ตรวจสอบ Backdoors"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "ตรวจสอบ Obfuscation"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "ตรวจสอบช่องโหว่ที่ทราบ"
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "ตรวจสอบไฟล์ที่อัปโหลดเพื่อหาอันตราย เนื้อหา"
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "ตรวจสอบเว็บเชลล์"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "ตรวจสอบปลั๊กอิน/ธีมเพื่อหาช่องโหว่ที่ทราบ ปลอดภัย - ตรวจสอบเวอร์ชันเท่านั้น"
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "เลือกทากที่ไม่ซ้ำใครและเดาได้ยาก"
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "เลือกประเภทความท้าทายสำหรับ NexifyMy captcha"
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "ล้างไฟล์"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "ล้างไฟล์:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "ล้างและเพิ่มประสิทธิภาพฐานข้อมูล"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "ล้างข้อมูลที่ไม่จำเป็น เพื่อปรับปรุงประสิทธิภาพของฐานข้อมูล"
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "ล้างบันทึก"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare และอีกมากมาย"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "การตั้งค่า Cloudflare API"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "โทเค็น Cloudflare API (พร้อมสิทธิ์โซน)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare ประตูหมุน"
 
 msgid "Code"
-msgstr "Code"
+msgstr "รหัส"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "การหมดอายุของโค้ด"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "ปัญหาคุณภาพของโค้ด"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "รายการส่วนขยายไฟล์ที่คั่นด้วยเครื่องหมายจุลภาคที่จะบล็อกในการอัปโหลด"
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "รายการส่วนขยายไฟล์ที่คั่นด้วยเครื่องหมายจุลภาคที่จะข้าม (เช่น jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "ความคิดเห็นถูกบล็อก"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "แบบฟอร์มความคิดเห็น"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "อัตราการโพสต์ความคิดเห็น"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "แบบฟอร์มความคิดเห็น"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "การสื่อสาร"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "แพลตฟอร์มการสื่อสาร"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "เปรียบเทียบไฟล์หลักกับ WordPress อย่างเป็นทางการ checksums"
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "เปรียบเทียบไฟล์หลัก WordPress ของคุณกับ checksums อย่างเป็นทางการเพื่อตรวจจับการแก้ไข"
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "เปรียบเทียบไฟล์หลักแต่ละไฟล์กับแฮชที่คาดหวัง"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "ปิดการใช้งานฟีด RSS และ Atom ทั้งหมดโดยสมบูรณ์"
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "ปิดการใช้งานการแก้ไขไฟล์ทั้งหมดโดยสมบูรณ์ (DISALLOW_FILE_MODS)"
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "การปฏิบัติตามข้อกำหนด"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "การปฏิบัติตามข้อกำหนดและการรายงาน"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "การรายงานการปฏิบัติตามข้อกำหนดและความปลอดภัย"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "การตั้งค่าการปฏิบัติตามข้อกำหนด"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "การพึ่งพาผู้แต่ง"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "การวิเคราะห์ที่ครอบคลุม"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "การติดตามกิจกรรมผู้ใช้ที่ครอบคลุม การตรวจสอบการเข้าสู่ระบบ และการบันทึกเหตุการณ์ของระบบ"
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "กำหนดค่า"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "กำหนดค่า 2FA เพื่อเพิ่มความปลอดภัยในการเข้าสู่ระบบ"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "กำหนดค่า CDN เพื่อความปลอดภัย และประสิทธิภาพ"
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "กำหนดค่าการรวม CDN และการจัดการแคช"
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "กำหนดค่าไฟร์วอลล์แอปพลิเคชันเว็บ (WAF) เพื่อปกป้องไซต์ของคุณ"
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "กำหนดค่าการแจ้งเตือนและการแจ้งเตือนทางอีเมล"
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "กำหนดค่ากฎไฟร์วอลล์และการตั้งค่าการป้องกัน"
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "กำหนดค่าลักษณะการทำงานของเครื่องสแกนมัลแวร์และการสแกนตามกำหนดเวลา ตัวเลือก"
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "กำหนดการตั้งค่าปลั๊กอินและการกำหนดลักษณะ"
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "กำหนดการตั้งค่าปลั๊กอิน"
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "กำหนดการตั้งค่าความปลอดภัยของคุณ"
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "ยืนยัน"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "ยืนยันการดำเนินการ"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "มัลแวร์ที่ยืนยันแล้ว"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "เชื่อมต่อการตรวจสอบความปลอดภัยของคุณกับ SIEM การจองตั๋ว การสื่อสาร และแพลตฟอร์ม CI/CD"
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "ติดต่อทีมสนับสนุนของเราเพื่อขอความช่วยเหลือเกี่ยวกับ NexifyMy Security"
 
 msgid "Content"
-msgstr "Content"
+msgstr "เนื้อหา"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "กิจกรรมเนื้อหา"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "การเปลี่ยนแปลงเนื้อหา"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "กิจกรรมเนื้อหา"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "ความปลอดภัยของเนื้อหา"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "แกนหลัก การแก้ไขไฟล์"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "การซ่อมแซมไฟล์หลัก"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "การซ่อมแซมแกนหลัก"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "ความสมบูรณ์ของ WordPress หลัก"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "ความสมบูรณ์ของไฟล์หลัก"
 
 msgid "Count"
-msgstr "Count"
+msgstr "นับ"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "ประเทศ"
 
 msgid "Country"
-msgstr "Country"
+msgstr "ประเทศ"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "การบล็อกประเทศ การตั้งค่า"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "ข้อจำกัดของประเทศ"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "สร้างการสำรองข้อมูลทันที"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "สร้างข้อมูลสำรองของฐานข้อมูล WordPress ของคุณ ข้อมูลสำรองจะถูกเก็บไว้อย่างปลอดภัยและสามารถดาวน์โหลดได้"
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "สร้างเหตุการณ์ใน ServiceNow สำหรับเหตุการณ์ด้านความปลอดภัยที่สำคัญ"
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "สร้าง webhook ที่: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "สร้าง webhook ในการตั้งค่าเซิร์ฟเวอร์ Discord > การรวมระบบ > Webhooks"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "สร้าง webhook: ทีม > ช่องทาง > ตัวเชื่อมต่อ > Webhook ที่เข้ามา"
 
 msgid "Created"
-msgstr "Created"
+msgstr "สร้างแล้ว"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "สร้างแล้ว: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "สำคัญ"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "สำคัญเท่านั้น"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "URL การเข้าสู่ระบบปัจจุบัน"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "ปัจจุบัน เวอร์ชัน"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "ปัจจุบัน:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "URL ล็อกอินแบบกำหนดเอง"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "URL แบบกำหนดเอง"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Webhooks แบบกำหนดเอง"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "รายวัน"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "รายวัน (แนะนำ)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "สถานะรายวัน สรุป"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "สรุปรายวัน"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "แดชบอร์ด"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "การเก็บรักษาข้อมูล"
 
 msgid "Database"
-msgstr "Database"
+msgstr "ฐานข้อมูล"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "การดำเนินการของฐานข้อมูล"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "การสำรองฐานข้อมูล"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "ข้อมูลฐานข้อมูล"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "ฐานข้อมูล การเพิ่มประสิทธิภาพ"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "เครื่องมือเพิ่มประสิทธิภาพฐานข้อมูล"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "ความปลอดภัยของฐานข้อมูล"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "ขนาดฐานข้อมูล"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "การสำรองฐานข้อมูลและการเพิ่มประสิทธิภาพ กำหนดตารางเวลาการสำรองข้อมูลก่อนเปิดใช้งาน"
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "การตรวจสอบความปลอดภัยของฐานข้อมูล"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "วันที่"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "วันที่/เวลา"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "การตรวจสอบการปิดใช้งาน:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "ดีบัก โหมด"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "ลึก"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "สแกนแบบลึก"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "โหมดสแกนเริ่มต้น"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "โหมดการสแกนเริ่มต้นที่ใช้เมื่อไม่มีการระบุ"
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "คำจำกัดความ"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "ลบ"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "ลบข้อมูลปลั๊กอินทั้งหมดเมื่อ ถอนการติดตั้ง"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "ลบ:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "การสแกนการพึ่งพา การตรวจสอบสคริปต์จากบุคคลที่สาม และการตรวจสอบความถูกต้องของ CDN"
 
 msgid "Description"
-msgstr "Description"
+msgstr "คำอธิบาย"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "ข้อมูลเชิงลึกโดยละเอียดเกี่ยวกับการเข้าชมไซต์และกิจกรรมด้านความปลอดภัยของคุณ"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "ข้อมูลเชิงลึกโดยละเอียดเกี่ยวกับประสิทธิภาพการรักษาความปลอดภัยของเว็บไซต์ของคุณ"
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "ตรวจจับและบล็อกความพยายามในการเรียกใช้โค้ด"
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "ตรวจจับสคริปต์ลับๆ ที่ซ่อนอยู่และ เชลล์"
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "ตรวจจับมัลแวร์ แบ็คดอร์ และโค้ดที่น่าสงสัย"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "ตรวจจับภัยคุกคาม"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "ตรวจจับภัยคุกคามที่ไม่รู้จักโดยใช้การวิเคราะห์พฤติกรรม"
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "วิธีการตรวจจับ"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "อุปกรณ์ ประเภท"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "ความยาก"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "ระดับความยาก"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "ระดับความยากสำหรับความท้าทาย NexifyMy captcha"
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "โดยตรง"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "ไดเรกทอรี Traversal"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Directory Traversal การป้องกัน"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "ปิดการใช้งาน 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "ปิดการใช้งานรหัสผ่านแอปพลิเคชัน"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "ปิดการใช้งานการเก็บถาวรผู้เขียน"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "ปิดการใช้งานการเรียกดูไดเรกทอรี"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "ปิดการใช้งานการฝัง"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "ปิดการใช้งานตัวแก้ไขไฟล์"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "ปิดการใช้งานไฟล์ การแก้ไข"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "ปิดการใช้งานข้อความแสดงข้อผิดพลาดในการเข้าสู่ระบบ"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "ปิดการใช้งาน Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "ปิดการใช้งาน Pingbacks"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "ปิดการใช้งานการติดตั้งปลั๊กอิน/ธีม"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "ปิดการใช้งานการแจงนับผู้ใช้ REST API"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "ปิดการใช้งาน RSS/Atom ฟีด"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "ปิดการใช้งานคลิกขวา"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "ปิดการใช้งานการเลือกข้อความ"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "ปิดการใช้งาน Trackbacks"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "ปิดการใช้งานโปรแกรมแก้ไข WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "ปิดการใช้งาน XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "ปิดการใช้งาน XML-RPC (ป้องกันการบังคับดุร้ายทั่วไป vector)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "ปิดใช้งาน XML-RPC (ป้องกันการโจมตีแบบ Pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "ปิดใช้งาน XML-RPC (ใช้ในการโจมตี DDoS และการโจมตีแบบ Brute Force)"
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "ปิดใช้งานหน้าเก็บถาวรของผู้เขียนเพื่อป้องกันการแจงนับชื่อผู้ใช้"
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "ปิดใช้งานฟังก์ชัน oEmbed และจุดสิ้นสุด REST API"
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "ปิดใช้งานฟังก์ชัน Pingback เพื่อป้องกัน DDoS"
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "ปิดใช้งานฟังก์ชัน Pingback/Trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "ปิดใช้งานตัวแก้ไขไฟล์ปลั๊กอิน/ธีมในผู้ดูแลระบบ WordPress"
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "ปิดใช้งานการแจงนับผู้ใช้สาธารณะผ่าน REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "ปิดใช้งานเมนูบริบทคลิกขวาบนส่วนหน้า"
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "ปิดใช้งานธีมในตัวและ ตัวแก้ไขปลั๊กอินเพื่อป้องกันการแทรกโค้ด"
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "ปิดใช้งานธีมและตัวแก้ไขปลั๊กอิน"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "ปิดใช้งานตัวแก้ไขธีม/ปลั๊กอินในผู้ดูแลระบบ"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "ปิดใช้งานฟังก์ชันการติดตามย้อนกลับ"
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "ปิดใช้งาน"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "ปิดใช้งาน XML-RPC เพื่อป้องกันการโจมตี ปลอดภัยเว้นแต่คุณจะใช้ Jetpack หรือแอปมือถือ"
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "ปิดใช้งานตัวแก้ไขธีม/ปลั๊กอินในตัว ปลอดภัย - ป้องกันการแก้ไขโค้ดในผู้ดูแลระบบ"
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "ปิดใช้งานการแก้ไขไฟล์, XML-RPC และใช้แนวทางปฏิบัติที่ดีที่สุดของ WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "การรวมความไม่ลงรอยกัน"
 
 msgid "Download"
-msgstr "Download"
+msgstr "ดาวน์โหลด"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "ดาวน์โหลดแพ็คเกจ WordPress ใหม่จากแหล่งที่มาอย่างเป็นทางการ"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "ง่าย"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "ง่าย (เพิ่มเติม เท่านั้น)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "การแก้ไขไฟล์ปลั๊กอิน NexifyMy Security ถูกปิดใช้งานด้วยเหตุผลด้านความปลอดภัย"
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "ตัวแก้ไขและการเข้าถึงไฟล์"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "การบล็อกตัวแก้ไข:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "อีเมล"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "การตั้งค่าการแจ้งเตือนอีเมล"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "อีเมล การแจ้งเตือน"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "การสำรองข้อมูลอีเมล"
 
 msgid "Email Notifications"
 msgstr "การแจ้งเตือนอีเมล"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "รายงานอีเมล"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "รายงานการสแกนอีเมล"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "การยืนยันอีเมล"
 
 msgid "Empty User Agent"
 msgstr "Empty User Agent"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "เปิดใช้งาน"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "เปิดใช้งาน 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "เปิดใช้งานโมดูล 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "เปิดใช้งานการบันทึกกิจกรรม"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "เปิดใช้งานการแจ้งเตือน"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "เปิดใช้งานการป้องกัน CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "เปิดใช้งานการรวม CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "เปิดใช้งานคุณสมบัติ CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "เปิดใช้งาน การรวม CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "เปิดใช้งาน Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "เปิดใช้งาน Webhooks แบบกำหนดเอง"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "เปิดใช้งาน Discord"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "เปิดใช้งานการแจ้งเตือนทางอีเมล"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "เปิดใช้งานไฟร์วอลล์"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "เปิดใช้งานการปิดกั้นทางภูมิศาสตร์"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "เปิดใช้งานซ่อนการเข้าสู่ระบบ"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "เปิดใช้งาน Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "เปิดใช้งาน การป้องกัน"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "เปิดใช้งานการจำกัดอัตรา"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "เปิดใช้งานการรวม SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "เปิดใช้งาน SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "เปิดใช้งานสแกนเนอร์"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "เปิดใช้งานโมดูลสแกนเนอร์"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "เปิดใช้งานการสแกนตามกำหนดการ"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "เปิดใช้งาน ServiceNow"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "เปิดใช้งาน Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "เปิดใช้งานทีม"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "เปิดใช้งานการตรวจสอบสิทธิ์แบบสองปัจจัย"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "เปิดใช้งาน WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "เปิดใช้งานโมดูล WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "เปิดใช้งานการป้องกัน WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "เปิดใช้งานแอปพลิเคชันเว็บ ไฟร์วอลล์"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "เปิดใช้งานการป้องกันไฟร์วอลล์แอปพลิเคชันเว็บ"
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "เปิดใช้งานและกำหนดค่าโมดูลความปลอดภัยสำหรับไซต์ของคุณ"
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "เปิดใช้งานและกำหนดค่าโมดูลความปลอดภัย"
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "เปิดใช้งานการป้องกัน captcha"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "เปิดใช้งานการบล็อกตามประเทศ"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "เปิดใช้งานการบันทึกการแก้ไขข้อบกพร่อง (สำหรับการแก้ไขปัญหา เท่านั้น)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "เปิดใช้งานการป้องกันไฟร์วอลล์เพื่อป้องกันการโจมตี"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "เปิดใช้งานการจำกัดอัตราการเข้าสู่ระบบ"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "เปิดใช้งานเครื่องสแกนมัลแวร์"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "เปิดใช้งานหรือปิดใช้งานโมดูลความปลอดภัย"
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "เปิดใช้งานหรือปิดใช้งานโมดูล WAF ทั้งหมด"
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "เปิดใช้งานหรือปิดใช้งานมัลแวร์ เครื่องสแกนเนอร์"
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "เปิดใช้งานหรือปิดใช้งานโมดูลจำกัดอัตรา"
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "เปิดใช้งานหรือปิดใช้งานการตรวจสอบสิทธิ์แบบสองปัจจัย"
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "เปิดใช้งานการสแกนตามกำหนดเวลา"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "เปิดใช้งานคุณสมบัติสแกนเนอร์ช่องโหว่"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "เปิดใช้งาน"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "จุดสิ้นสุด"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "URL ปลายทาง"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "บังคับใช้รหัสผ่านที่รัดกุม"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "บังคับใช้ข้อกำหนดรหัสผ่านที่รัดกุม"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "บังคับใช้ข้อกำหนดรหัสผ่านที่รัดกุมสำหรับผู้ใช้ทั้งหมด"
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "บังคับใช้ข้อกำหนดรหัสผ่านที่รัดกุม"
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "บังคับใช้ข้อกำหนดรหัสผ่านที่รัดกุมสำหรับผู้ใช้ ปลอดภัย - มีผลกับรหัสผ่านใหม่เท่านั้น"
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "บังคับใช้รหัสผ่านที่รัดกุมโดยมีความยาวขั้นต่ำและกฎที่ซับซ้อน"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "ป้อนรหัส 6 หลักเพื่อตรวจสอบการตั้งค่า"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "ป้อน IP หนึ่งรายการต่อบรรทัด"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "ป้อนคำตอบ"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "ป้อนรหัส:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "WordPress ระดับองค์กร ความปลอดภัย"
 
 msgid "Error"
-msgstr "Error"
+msgstr "ข้อผิดพลาด"
 
 msgid "Event"
-msgstr "Event"
+msgstr "เหตุการณ์"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "รูปแบบเหตุการณ์"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "บันทึกเหตุการณ์"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "ความรุนแรงของเหตุการณ์"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "ประเภทเหตุการณ์"
 
 msgid "Events"
-msgstr "Events"
+msgstr "เหตุการณ์"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "เหตุการณ์ (7 วัน)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "กิจกรรมเพื่อสร้างตั๋ว"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "กิจกรรมที่ต้องส่งต่อ"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "กิจกรรมที่ต้องแจ้งเตือน"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "ตัวอย่าง: การดำเนินการ GitHub"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "ตัวอย่าง: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "ตัวอย่าง: Jenkins ไปป์ไลน์"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "ส่วนขยายที่แยกออก"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "รูปแบบไฟล์ที่แยกออก"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "เส้นทางที่แยกออก"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "ผู้ใช้ที่แยกออก"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "การยกเว้น"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "การสแกนไฟล์อย่างละเอียด"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "ที่มีอยู่ การสำรองข้อมูล"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "ส่งออก CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "ส่งออกการตั้งค่า"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "ส่งออกการตั้งค่า NexifyMy Security ของคุณเป็นไฟล์ JSON ซึ่งรวมถึงการกำหนดค่าโมดูล กฎไฟร์วอลล์ รายการ IP และการตั้งค่าการสแกนทั้งหมด"
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "สคริปต์ภายนอกและทรัพยากร CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "การรักษาความปลอดภัยการเข้าสู่ระบบเพิ่มเติม"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Fail Build บนมัลแวร์"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Fail Build บนช่องโหว่"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "ล้มเหลว"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "ความพยายาม 2FA ล้มเหลวก่อนการล็อคเอาท์ชั่วคราว"
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "การเข้าสู่ระบบล้มเหลว"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "การเข้าสู่ระบบที่ล้มเหลว"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "ตรวจพบความพยายามในการเข้าสู่ระบบที่ล้มเหลว"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "ไม่สามารถลงทะเบียนรหัสผ่าน"
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "รวดเร็ว การดำเนินการ"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "การตรวจสอบความปลอดภัยที่รวดเร็ว"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "ดึงข้อมูลการตรวจสอบไฟล์อย่างเป็นทางการจาก WordPress.org API"
 
 msgid "File"
-msgstr "File"
+msgstr "ไฟล์"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "ตัวแก้ไขไฟล์"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "การแฮชไฟล์:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "การรวมไฟล์"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "การรวมไฟล์ การป้องกัน"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "การตรวจสอบความสมบูรณ์ของไฟล์"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "การตรวจสอบความสมบูรณ์ของไฟล์"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "การอนุญาตของไฟล์"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "การกักเก็บไฟล์"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "นามสกุลไฟล์ที่จะยกเว้นจากการสแกน (หนึ่งรายการต่อบรรทัด โดยไม่มี จุด)"
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "ชื่อไฟล์"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "ไฟล์ที่สแกน"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "ไฟล์ที่สแกน:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "ไฟล์จะถูกเปรียบเทียบเป็นระยะกับข้อมูลพื้นฐาน"
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "ไฟล์ในการกักกันจะถูกเก็บไว้อย่างปลอดภัยและไม่สามารถดำเนินการได้"
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "ไฟล์ที่ใหญ่กว่านี้จะถูกข้ามระหว่าง การสแกน"
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "ตัวกรอง"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "ไฟร์วอลล์"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "ไฟร์วอลล์และการป้องกัน"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "การกำหนดค่าไฟร์วอลล์"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "กฎไฟร์วอลล์"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "การตั้งค่าไฟร์วอลล์"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "แก้ไขแล้ว files"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "ตั้งค่าสถานะรหัสที่สร้างความสับสนอย่างมากหรือเข้ารหัส"
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "บังคับ SSL สำหรับผู้ดูแลระบบ"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "บังคับ SSL/HTTPS สำหรับพื้นที่ผู้ดูแลระบบ (FORCE_SSL_ADMIN)"
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "บังคับสำหรับผู้ดูแลระบบ"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "รูปแบบ:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "ส่งต่อ กิจกรรมด้านความปลอดภัยไปยังแพลตฟอร์มข้อมูลความปลอดภัยและการจัดการเหตุการณ์ (SIEM) ของคุณสำหรับการบันทึกและการวิเคราะห์แบบรวมศูนย์"
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "พบในแดชบอร์ด Cloudflare ใต้ภาพรวม"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "พบในปลั๊กอินที่ปลอดภัยที่รู้จัก - มีแนวโน้มที่จะใช้งานอย่างถูกกฎหมาย"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "พบในไดเร็กทอรีระบบ - อาจถูกต้องตามกฎหมาย"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "วันที่เริ่มต้น"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "จากอีเมล"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "จากชื่อ"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "URL ปลายทาง HTTP/HTTPS แบบเต็มสำหรับแพลตฟอร์ม SIEM ของคุณ"
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "การวิเคราะห์มัลแวร์แบบเต็ม"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "การสแกนมัลแวร์แบบเต็ม"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "มัลแวร์แบบเต็ม ลายเซ็น"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "การวิเคราะห์ไซต์แบบเต็ม"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "โมดูลการปฏิบัติตาม GDPR, CCPA, HIPAA และรายงานการตรวจสอบความปลอดภัยที่ครอบคลุม"
 
 msgid "General"
-msgstr "General"
+msgstr "ทั่วไป"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "การจำกัดคำขอทั่วไป"
 
 msgid "General Settings"
 msgstr "การตั้งค่าทั่วไป"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "สร้างรายงาน"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "สร้าง SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "สร้าง จาก: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "สร้าง"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "จุดสิ้นสุด HTTP ทั่วไป"
 
 msgid "Generic Proxy"
 msgstr "Generic Proxy"
@@ -1757,25 +1757,25 @@ msgid "Geo Blocking"
 msgstr "Geo Blocking"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "ทางภูมิศาสตร์ การกระจาย"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "รับโทเค็น API ฟรีจาก wpscan.com เพื่อดูข้อมูลช่องโหว่โดยละเอียด"
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "รับการแจ้งเตือนทันทีในช่องการสื่อสารในทีมของคุณเมื่อมีเหตุการณ์ด้านความปลอดภัยเกิดขึ้น"
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "รับสถานะการสแกนล่าสุด"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "รับผลการสแกน (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "รับกุญแจของคุณจาก Google reCAPTCHA หรือ Cloudflare Turnstile แดชบอร์ด"
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "เริ่มต้นใช้งาน"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "ระยะเวลาผ่อนผัน"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "เกรด"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "ความปลอดภัย GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "วิปัสสนา GraphQL คือ ปิดการใช้งาน"
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "เกินขีดจำกัดอัตรา GraphQL ขีดจำกัด: %d คำสั่งต่อนาที"
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "ส่วนหัวความปลอดภัย HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "ส่วนหัว HTTP"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "จัดการ"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "ยาก"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Hard (รวมการคูณ)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "แข็งขึ้น ไซต์"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "การแข็งตัว"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "ตัวเลือกการแข็งตัว"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "ส่วนหัว"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "ความช่วยเหลือและเอกสารประกอบ"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "การวิเคราะห์แบบ Heuristic"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "การตรวจจับรูปแบบการศึกษาแบบ Heuristic"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "ซ่อนการเข้าสู่ระบบ"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "ซ่อนการเข้าสู่ระบบ หน้า"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "ซ่อน URL การเข้าสู่ระบบ"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "ซ่อน URL การเข้าสู่ระบบ:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "ซ่อนเวอร์ชัน WP"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "ซ่อน URL การเข้าสู่ระบบ WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "ซ่อนเวอร์ชัน WordPress"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "ซ่อนเวอร์ชัน WordPress จากซอร์สโค้ด"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "ซ่อนการเข้าสู่ระบบเริ่มต้น URL"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "ซ่อน wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "ซ่อน wp-admin และ wp-login.php จากผู้โจมตี"
 
 msgid "High"
-msgstr "High"
+msgstr "สูง"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "สูง (การตรวจจับสูงสุด)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "ความปลอดภัยสูง (ตรวจสอบมากขึ้น ช้าลง)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "การโจมตีที่ถูกบล็อกจำนวนมาก เมื่อเร็วๆ นี้"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "ระดับสูงหรือสูงกว่า"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "ภัยคุกคามที่มีความรุนแรงสูง"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "พื้นที่ที่มีความเสี่ยงสูงเท่านั้น"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "ภัยคุกคามที่ได้คะแนนสูงซึ่งตรวจพบโดยการวิเคราะห์ AI"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "ความไวที่สูงขึ้นอาจทำให้เกิดความเท็จมากขึ้น ผลบวก"
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "สูงสุด"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "กด Ctrl/Cmd ค้างไว้เพื่อเลือกหลายประเทศ"
 
 msgid "Host"
-msgstr "Host"
+msgstr "โฮสต์"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "รายชั่วโมง"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "วิธีการทำงานของ 2FA"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "วิธีการซ่อมแซมแกนกลาง"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "การป้องกันตนเองอย่างไร ใช้งานได้"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "ระยะเวลาในการบล็อก IP หลังจากพยายามเกินขีดจำกัด"
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "ระยะเวลาในการบล็อก IP หลังจากเกินขีดจำกัดอัตรา"
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "ระยะเวลาในการเก็บรายงานเก่า (30-365 วัน)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1937,154 +1937,154 @@ msgid "IP Access Control"
 msgstr "IP Access Control"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "ที่อยู่ IP"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "การบล็อก IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "การกำหนดค่า IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "การล็อก IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "การล็อก IP (ความพยายามอย่างดุเดือด)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "การจัดการ IP"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "รายการที่อนุญาตของ IP"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP ที่อัตราบายพาส จำกัด"
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP ที่ถูกบล็อกเสมอ"
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP ที่จะไม่ถูกบล็อก"
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "ระบุไฟล์ที่แก้ไขหรือหายไป"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "การเลือกรูปภาพ"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "ต้องดำเนินการในทันที"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "ผลกระทบ ระดับ"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "นำเข้าการตั้งค่า"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "นำเข้าการตั้งค่าจากไฟล์ JSON ที่ส่งออกก่อนหน้านี้ การดำเนินการนี้จะเขียนทับการตั้งค่าปัจจุบันของคุณ"
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "นำเข้า/ส่งออก"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "ไม่ใช้งาน"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "เหตุการณ์"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "รวมการตรวจสอบ GDPR"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "รวม IP ที่อนุญาตพิเศษ/บัญชีดำ"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "รวมประสิทธิภาพ เมตริก"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "รวมการตรวจสอบความปลอดภัย"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "รวมสรุปภัยคุกคาม"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "รวมผลลัพธ์การสแกนล่าสุด"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "รวมบันทึกความปลอดภัย (30 วันล่าสุด)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "คำตอบ captcha ไม่ถูกต้อง โปรดกลับไปลองอีกครั้ง"
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "คำตอบ captcha ไม่ถูกต้อง โปรดลองอีกครั้ง"
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "ชื่อดัชนีหรือตัวระบุแหล่งที่มาสำหรับการจัดหมวดหมู่เหตุการณ์"
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "ดัชนี/แหล่งที่มา"
 
 msgid "Info"
-msgstr "Info"
+msgstr "ข้อมูล"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "การเปิดเผยข้อมูล"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "กำลังเริ่มต้น..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "อินสแตนซ์ ชื่อ"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "รวมการสแกนความปลอดภัยเข้ากับไปป์ไลน์การผสานรวมและการปรับใช้อย่างต่อเนื่องของคุณ"
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "รวมการสแกนการรักษาความปลอดภัยไว้ในไปป์ไลน์การปรับใช้ของคุณด้วย webhooks และการเข้าถึง API"
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "ผสานรวมกับบริการ CDN กำหนดค่าข้อมูลรับรอง CDN ก่อนเปิดใช้งาน"
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "บูรณาการ"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "ผลการตรวจสอบความสมบูรณ์"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "การตรวจสอบความสมบูรณ์:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "สถานะความสมบูรณ์"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "โทเค็น JWT ไม่ถูกต้อง"
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "ข้อมูลรับรองไม่ถูกต้อง"
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "รหัสยืนยันไม่ถูกต้อง"
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "แยกภัยคุกคาม"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "แยกไฟล์ที่น่าสงสัยโดยไม่ต้องลบ ปลอดภัย - สามารถกู้คืนไฟล์ได้"
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "ประเภทปัญหา"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "ปัญหาที่พบ"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "รูปแบบ JSON ตัวอย่าง: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
 msgstr "Jira Cloud URL"
@@ -2096,229 +2096,229 @@ msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "เก็บบันทึกของคำขอที่ถูกบล็อกทั้งหมดเพื่อการวิเคราะห์"
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "เก็บบันทึกการละเมิดขีดจำกัดอัตราทั้งหมด เพื่อการวิเคราะห์"
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "อัปเดตลายเซ็นมัลแวร์ของคุณให้ทันสมัยอยู่เสมอเพื่อการป้องกันที่ดีที่สุด"
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "ประเทศที่รู้จัก"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "พบช่องโหว่ที่ทราบในปลั๊กอินที่ติดตั้ง"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (บันทึกเหตุการณ์ขยาย รูปแบบ)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "30 วันที่ผ่านมา"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "30 วันที่ผ่านมา วัน"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "7 วันล่าสุด"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "90 วันล่าสุด"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "เรียนรู้ล่าสุด"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "สแกนล่าสุด"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "สแกนล่าสุด:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "อัปเดตล่าสุด"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "ใช้ล่าสุด: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "เวอร์ชันล่าสุด"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "การเรียนรู้ - บันทึกเท่านั้น ไม่มีการบล็อก"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "ระยะเวลาการเรียนรู้"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "การเรียนรู้..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "เว้นว่างไว้เพื่อใช้อีเมลของผู้ดูแลระบบ"
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "น่าจะปลอดภัย - ตรวจสอบหากจำเป็น"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "จำกัด REST การเข้าถึง API สำหรับผู้ใช้ที่ได้รับการรับรองความถูกต้อง"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "จำกัดการส่งความคิดเห็นเพื่อป้องกันสแปม"
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "จำกัดคำขอที่มากเกินไปจากที่อยู่ IP เดียว"
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "จำกัดความพยายามในการเข้าสู่ระบบ"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "จำกัดความพยายามในการเข้าสู่ระบบเพื่อป้องกันการโจมตีแบบ bruteforce"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "จำกัดอัตราการร้องขอเพื่อป้องกันการละเมิดและการโจมตี DDoS"
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "จำกัดอัตราการร้องขอเพื่อป้องกันการละเมิด"
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "จำกัดความพยายามในการเข้าสู่ระบบเพื่อป้องกันการโจมตีแบบดุร้าย ปลอดภัย - ส่งผลต่อความพยายามเข้าสู่ระบบที่ล้มเหลวเท่านั้น"
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "รายการช่องโหว่ที่ทราบ"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "การจราจรสด"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "การตรวจสอบการจราจรสด"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "กำลังโหลดสถานะ CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "กำลังโหลดการแจ้งเตือน..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "กำลังโหลดการวิเคราะห์ data..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "กำลังโหลดข้อมูลสำรอง..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "กำลังโหลด IP ที่ถูกบล็อก..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "กำลังโหลดประเทศ..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "กำลังโหลดข้อมูลฐานข้อมูล..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "กำลังโหลดข้อมูลทางภูมิศาสตร์..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "กำลังโหลด บันทึก..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "กำลังโหลดการแจ้งเตือน..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "กำลังโหลดสถิติการเพิ่มประสิทธิภาพ..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "กำลังโหลดสถานะการป้องกัน..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "กำลังโหลดไฟล์ที่ถูกกักกัน..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "กำลังโหลดผู้อ้างอิง..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "กำลังโหลดภัยคุกคาม การตรวจจับ..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "กำลังโหลดหน้าบนสุด..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "กำลังโหลดข้อมูลการรับส่งข้อมูล..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "ล็อกเอาต์หลังจากพยายามล้มเหลวหลายครั้ง"
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "ระยะเวลาล็อกเอาต์"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "ระยะเวลาล็อกเอาต์หลังจากความพยายาม 2FA ล้มเหลวสูงสุด"
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "อนุญาตให้บันทึก คำขอ"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "คำขอที่บล็อกบันทึก"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "ความพยายามในการเข้าสู่ระบบที่ล้มเหลว"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "การล็อกเอาต์ออกจากระบบ"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "การอัปโหลดสื่อบันทึก"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "การเปลี่ยนแปลงตัวเลือกบันทึก"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "การเปลี่ยนแปลงปลั๊กอินของบันทึก"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "โพสต์/เพจของบันทึก การเปลี่ยนแปลง"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "การเปลี่ยนแปลงโปรไฟล์บันทึก"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "การละเมิดขีดจำกัดอัตราการบันทึก"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "การเก็บรักษาบันทึก"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "การเปลี่ยนแปลงบทบาทบันทึก"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "บันทึกการเข้าสู่ระบบสำเร็จ"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "การเปลี่ยนแปลงธีมบันทึก"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "การสร้าง/การลบผู้ใช้บันทึก"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "บันทึกคำขอทั้งหมดที่ผ่านการตรวจสอบ WAF (การใช้งานดิสก์สูง)"
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "การบันทึก"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "การบันทึกและการตรวจสอบ"
 
 msgid "Login"
-msgstr "Login"
+msgstr "เข้าสู่ระบบ"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "เข้าสู่ระบบและการตรวจสอบสิทธิ์"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "กิจกรรมการเข้าสู่ระบบ"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "หน้าต่างความพยายามในการเข้าสู่ระบบ"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "เข้าสู่ระบบ ความพยายาม"
 
 msgid "Login CAPTCHA"
 msgstr "Login CAPTCHA"
@@ -2327,1477 +2327,1477 @@ msgid "Login Captcha"
 msgstr "Login Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "แบบฟอร์มเข้าสู่ระบบ"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "ระยะเวลาล็อคการเข้าสู่ระบบ"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "การป้องกันการเข้าสู่ระบบ"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "การจำกัดอัตราการเข้าสู่ระบบ"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Login ความปลอดภัย"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Slug การเข้าสู่ระบบ"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "การตั้งค่า URL การเข้าสู่ระบบ"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "แบบฟอร์มการเข้าสู่ระบบ"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "การออกจากระบบ"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "การออกจากระบบ"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "บันทึก"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "บันทึกที่เก่ากว่านี้จะถูกลบทิ้งโดยอัตโนมัติ ทุกวัน"
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "บันทึกเหตุการณ์ด้านความปลอดภัยเพื่อตรวจสอบ ปลอดภัย - บันทึกเฉพาะกิจกรรมเท่านั้น"
 
 msgid "Low"
-msgstr "Low"
+msgstr "ต่ำ"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "ต่ำ (ผลบวกลวงน้อยลง)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "ผลกระทบต่ำ (ตรวจสอบน้อยลง เร็วขึ้น)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "อักษรตัวพิมพ์เล็ก (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "เครื่องมือบำรุงรักษาและวินิจฉัยสำหรับคุณ site."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "อย่าลืมจำ URL สำหรับเข้าสู่ระบบที่คุณกำหนดเอง!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "มัลแวร์และการสแกน"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "คำจำกัดความของมัลแวร์"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "พบมัลแวร์"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "เครื่องสแกนมัลแวร์"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "มัลแวร์ที่ตรวจพบระหว่างการสแกนไฟล์"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "จัดการ การแจ้งเตือน"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "จัดการภัยคุกคามที่ถูกกักกัน ตรวจสอบ กู้คืน หรือลบไฟล์อย่างถาวร"
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "จำเป็นสำหรับบทบาท"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "แนะนำให้ตรวจสอบด้วยตนเอง"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "สวิตช์หลักเพื่อเปิดหรือปิดใช้งานการบันทึกกิจกรรมทั้งหมด"
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "คำถามทางคณิตศาสตร์"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "ความพยายามสูงสุด"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "ความพยายามสูงสุดที่ล้มเหลว"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "ขนาดไฟล์สูงสุด"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "การเข้าสู่ระบบสูงสุด ความพยายาม"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "ความยาวสตริงการสืบค้นสูงสุด"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "ขนาดคำขอสูงสุด"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "คำขอสูงสุด"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "คำขอ AJAX สูงสุดต่อนาทีต่อ IP"
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "คำขอ API สูงสุดต่อนาทีต่อ IP"
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "ความพยายามเข้าสู่ระบบสูงสุดที่ล้มเหลวก่อน การล็อก"
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "คำขอหน้าสูงสุดต่อนาทีต่อ IP"
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "ขนาดคำขอสูงสุดที่จะสแกน คำขอที่มีขนาดใหญ่กว่าจะถูกข้ามไป"
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "คำขอสูงสุดที่อนุญาตต่อนาทีต่อ IP"
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "คำขอการค้นหาสูงสุดต่อนาทีเพื่อป้องกันการหมดสิ้นของฐานข้อมูล"
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "เวลาสูงสุดสำหรับการดำเนินการสแกนครั้งเดียว"
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "เวลาสูงสุดสำหรับการสแกนมัลแวร์ก่อนหมดเวลา"
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "สื่อ การอัปโหลด"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "ปานกลาง"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "ปานกลาง (สมดุล)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "ปานกลาง (บวก/ลบ)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "ปานกลางหรือสูงกว่า"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "ขีดจำกัดหน่วยความจำ"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "หน่วยความจำที่จัดสรรไว้สำหรับการสแกน การดำเนินงาน"
 
 msgid "Message"
-msgstr "Message"
+msgstr "ข้อความ"
 
 msgid "Method"
-msgstr "Method"
+msgstr "วิธีการ"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "การรวมทีม Microsoft"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "อักขระขั้นต่ำ %d"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "ความยาวขั้นต่ำ"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "ความรุนแรงขั้นต่ำที่จะล้มเหลว"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "ความยาวรหัสผ่านขั้นต่ำ (8-32 ตัวอักษร)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "โหมด"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "การควบคุมโมดูล"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "โมดูล"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "ตรวจสอบสคริปต์ภายนอก"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "โหมดจอภาพ (บันทึกเท่านั้น)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "ตรวจสอบไฟล์ปลั๊กอินสำหรับการเปลี่ยนแปลง"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "ตรวจสอบไซต์แบบเรียลไทม์ การจราจร"
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "ตรวจสอบปริมาณการใช้ข้อมูลแบบเรียลไทม์"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "ตรวจสอบปริมาณการใช้ข้อมูลแบบเรียลไทม์และกิจกรรมของผู้เข้าชม"
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "ตรวจสอบแนวโน้มของผู้เข้าชม การดูหน้าเว็บ และรูปแบบการรับส่งข้อมูลในช่วงเวลาหนึ่ง"
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "การตรวจสอบและการแจ้งเตือน"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "ตรวจสอบปริมาณการใช้ข้อมูลแบบเรียลไทม์ ปลอดภัย - ติดตามเฉพาะการเข้าชมเท่านั้น"
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "รายเดือน"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "ผู้ใช้ที่ใช้งานมากที่สุด"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "ย้ายไฟล์ที่น่าสงสัยไปยังไดเร็กทอรีที่มีการป้องกัน"
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "การพึ่งพา NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "ชื่อ"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "ต้องการ การสนับสนุน?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "ไม่เคย"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "ไม่มีวันหมดอายุ"
 
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (ในตัว)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyMy Captcha ประเภท"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "NexifyMy ความปลอดภัย"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security ตรวจพบการแก้ไขไฟล์โดยไม่ได้รับอนุญาต โปรดตรวจสอบการติดตั้งของคุณ"
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: คุณมี %d การแจ้งเตือนความปลอดภัยที่ยังไม่ได้อ่าน"
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "อัปเดตถัดไป"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "ไม่มีระยะเวลาผ่อนผัน"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "ไม่มีกิจกรรมล่าสุด"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "ไม่มี SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "ยังไม่มีกิจกรรมที่บันทึกไว้ กิจกรรมจะปรากฏที่นี่เมื่อผู้ใช้เริ่มดำเนินการ"
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "ยังไม่มีการบันทึกการเปลี่ยนแปลงเนื้อหา"
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "ยังไม่มีการเลือกประเทศ"
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "ไม่มีข้อมูล"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "ยังไม่มีข้อมูลเหตุการณ์"
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "ยังไม่มีไฟล์ในการกักกัน"
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "ไม่มีข้อมูลทางภูมิศาสตร์ ใช้ได้"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "ยังไม่มีกิจกรรมการเข้าสู่ระบบ"
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "ยังไม่มีการลงทะเบียนรหัสผ่าน"
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "ไม่มีรายงาน"
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "ยังไม่มีการสแกน"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "ยังไม่มีผลการสแกน คลิก \"เรียกใช้การสแกน\" เพื่อวิเคราะห์การอ้างอิงของคุณ"
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "ไม่มีผลการสแกน เรียกใช้การสแกนเพื่อตรวจสอบช่องโหว่"
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "ไม่มีคำแนะนำด้านความปลอดภัยในขณะนี้ ไซต์ของคุณได้รับการปกป้องอย่างดี"
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "ไม่มีข้อมูลความรุนแรง"
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "ไม่พบ IP ที่น่าสงสัย"
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "ยังไม่มีการบันทึกกิจกรรมของระบบ"
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "ยังไม่พบภัยคุกคาม"
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "ยังไม่มีการบันทึกกิจกรรมของผู้ใช้"
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "ยังไม่มีกิจกรรมของผู้ใช้"
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "ไม่ทำงาน"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "ไม่ได้เปิดใช้งาน"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "ยังไม่ได้ตรวจสอบ"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "ไม่ใช่ กำหนดเวลา"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "หมายเหตุ:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "อีเมลการแจ้งเตือน"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "การตั้งค่าการแจ้งเตือน"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "การแจ้งเตือน"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "แจ้งเตือนเมื่อถูกล็อค"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "แจ้งเตือนผู้ใช้เมื่อ 2FA ถูกเปิด/ปิดใช้งานในบัญชีของพวกเขา"
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "หมายเลข (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "จำนวนรหัสสำรอง"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "จำนวนรหัสสำรองที่จะสร้างต่อผู้ใช้"
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "จำนวนความพยายามเข้าสู่ระบบที่ล้มเหลวก่อนการล็อคเอาต์"
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "จำนวนการล็อกเอาต์ก่อนการแบนถาวร"
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "จำนวนการละเมิดกฎก่อนการแบนอัตโนมัติ การปิดกั้น"
 
 msgid "Object"
 msgstr "Object"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "เมื่อเข้าสู่ระบบครั้งถัดไป ให้ป้อนรหัสผ่าน + รหัส 6 หลัก"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "สัปดาห์ละครั้ง"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "หนึ่ง IP ต่อบรรทัด"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "หนึ่ง IP ต่อบรรทัด IP พร็อกซีอนุญาตให้ส่งส่วนหัว X-Forwarded-For (เช่น Cloudflare, โหลดบาลานเซอร์)"
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "หนึ่ง IP ต่อบรรทัด IP เหล่านี้ข้ามขีดจำกัดอัตราทั้งหมด"
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "หนึ่ง IP ต่อบรรทัด IP เหล่านี้จะถูกบล็อกทันที ตัวอย่าง: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "หนึ่ง IP ต่อบรรทัด IP เหล่านี้จะข้ามการตรวจสอบ WAF"
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "หนึ่ง IP ต่อบรรทัด IP เหล่านี้จะข้ามกฎ WAF ทั้งหมด ตัวอย่าง: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "หนึ่งพาธต่อบรรทัด เส้นทางที่แน่นอนไปยังไดเร็กทอรีเพิ่มเติมที่จะสแกน"
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "หนึ่งเส้นทางต่อบรรทัด ไดเรกทอรีที่จะข้ามระหว่างการสแกน"
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "หนึ่งรายการต่อบรรทัด บล็อกตัวแทนผู้ใช้เฉพาะ ตัวอย่าง: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "หนึ่งรายการต่อบรรทัด ตัวแทนผู้ใช้ในรายชื่อนี้จะข้ามการตรวจสอบ WAF ตัวอย่าง: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "หนึ่งชื่อผู้ใช้ต่อบรรทัด"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "เปิดการตั้งค่า"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "ระบบปฏิบัติการ"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "โหมดการทำงาน"
 
 msgid "Optimize Database"
 msgstr "Optimize Database"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "เพิ่มประสิทธิภาพและรักษาความปลอดภัยฐานข้อมูลของคุณ"
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "ตัวเลือก การเปลี่ยนแปลง"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "เป็นทางเลือกสำหรับผู้ใช้ทั้งหมด"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "ทางเลือก: ส่งผลการสแกนไปยังแพลตฟอร์ม CI/CD ของคุณ"
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "เส้นทางดั้งเดิม"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "ล้าสมัย"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "โอเวอร์เฮด"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "แทนที่ภาษาสำหรับอินเทอร์เฟซปลั๊กอิน ภาษาที่รองรับ: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "ภาพรวม"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "เวอร์ชัน PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "แพ็คเกจ"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "คำขอเพจต่อนาที"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "การดูเพจ"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "ไม่พบเพจ"
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "รหัสผ่าน การตรวจสอบสิทธิ์"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "ชื่อรหัสผ่าน (เช่น MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "ลงทะเบียนรหัสผ่านสำเร็จแล้ว!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "เบราว์เซอร์นี้ไม่รองรับรหัสผ่าน"
 
 msgid "Password"
-msgstr "Password"
+msgstr "รหัสผ่าน"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "รหัสผ่านหมดอายุ"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "รหัสผ่าน นโยบาย"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "นโยบายรหัสผ่าน"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "ข้อกำหนดรหัสผ่าน"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "ข้อกำหนดรหัสผ่าน:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "แบบฟอร์มรีเซ็ตรหัสผ่าน"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "รีเซ็ตรหัสผ่าน"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "รหัสผ่านต้องมีความยาวอย่างน้อย %d ตัวอักษร"
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "รหัสผ่านจะต้อง มีอักษรตัวพิมพ์เล็กอย่างน้อยหนึ่งตัว"
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "รหัสผ่านต้องมีตัวเลขอย่างน้อยหนึ่งตัว"
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "รหัสผ่านต้องมีอักขระพิเศษอย่างน้อยหนึ่งตัว"
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อยหนึ่งตัว"
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "นโยบายรหัสผ่าน"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "รูปแบบรีเซ็ตรหัสผ่าน"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "เส้นทางที่จะยกเว้นจากการสแกน (สัมพันธ์กับรูทของ WordPress) หนึ่งรายการต่อบรรทัด"
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "ข้อมูลเชิงลึกของกิจกรรมสูงสุด"
 
 msgid "Peak Hour"
 msgstr "Peak Hour"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "ชั่วโมงการเข้าชมสูงสุด"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "โหมดประสิทธิภาพ"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "การตั้งค่าประสิทธิภาพ"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "เป็นระยะ รายงาน"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "ถาวร"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "เกณฑ์การแบนถาวร"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "ลบไฟล์อย่างถาวร"
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "โปรดแก้ captcha ทางคณิตศาสตร์"
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "ปลั๊กอิน"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "การวิเคราะห์ปลั๊กอินและธีม"
 
 msgid "Plugin Language"
 msgstr "ภาษาปลั๊กอิน"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "ปลั๊กอินอัปเดตล่าสุด"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "ตัวเลือกปลั๊กอิน"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "การป้องกันตนเองของปลั๊กอิน"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "เวอร์ชันปลั๊กอิน"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "ปลั๊กอิน ช่องโหว่"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "ไฟล์ปลั๊กอินไม่สามารถแก้ไขได้ผ่าน WordPress"
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "ความสมบูรณ์ของปลั๊กอิน"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "การป้องกันปลั๊กอิน"
 
 msgid "Plugin/theme CVEs"
 msgstr "Plugin/theme CVEs"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "การเปิดใช้งานปลั๊กอิน/ธีม การอัปเดต การเปลี่ยนแปลงตัวเลือก และ ส่งออก"
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "ปลั๊กอิน"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "เปิดใช้งานปลั๊กอินแล้ว"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "ปิดใช้งานปลั๊กอินแล้ว"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "อัปเดตปลั๊กอินแล้ว"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "แก้ไขโพสต์/เพจ การเผยแพร่ การอัปโหลดสื่อ และการลบเนื้อหา"
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "โพสต์ สร้างแล้ว"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "โพสต์ที่เผยแพร่"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "อัปเดตโพสต์แล้ว"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "ตรวจพบภัยคุกคามความปลอดภัยที่อาจเกิดขึ้น"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "ป้องกันการโจมตี XML-RPC และความพยายามแบบเดรัจฉาน"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "ป้องกันการเข้าถึงไดเรกทอรีภายนอกรูทเว็บ"
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "ป้องกันผู้โจมตีจากการรวมเซิร์ฟเวอร์ท้องถิ่น ไฟล์"
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "ป้องกันการบังคับดุร้าย"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "ป้องกันการแก้ไขโค้ดในผู้ดูแลระบบ WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "ป้องกันรายการไดเรกทอรีผ่าน .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "ป้องกันการแจ้งเตือนซ้ำภายในระยะเวลานี้"
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "ป้องกันการแจ้งเตือนซ้ำภายในช่วงเวลานี้ ตั้งค่าเป็น 0 เพื่อปิดใช้งานการควบคุมปริมาณ"
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "ป้องกันการแก้ไขไฟล์ปลั๊กอินผ่านตัวแก้ไข WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "ป้องกันการรวมไฟล์ระยะไกลผ่านพารามิเตอร์ URL"
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "ป้องกันการแสดงรายการเนื้อหาไดเรกทอรีผ่าน .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "ป้องกันการติดตั้งปลั๊กอิน/ธีมจากแผงผู้ดูแลระบบ"
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "ป้องกันการเลือกข้อความและการคัดลอกบน ส่วนหน้า"
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "ป้องกันการใช้รหัสผ่านที่ถูกละเมิดโดยทั่วไป"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "ป้องกันการค้นพบผู้ใช้ผ่านทางจุดปลาย /wp-json/wp/v2/users"
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "ป้องกันการแก้ไขไฟล์ปลั๊กอินความปลอดภัยโดยไม่ได้รับอนุญาต"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "ที่อยู่อีเมลหลักสำหรับการแจ้งเตือนความปลอดภัย"
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "ลำดับความสำคัญ"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "คำแนะนำด้านความปลอดภัยเชิงรุกและคำแนะนำในการเพิ่มความปลอดภัยอัตโนมัติ"
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "ปัญหา"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "การอัปเดตโปรไฟล์"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "การเปลี่ยนแปลงโปรไฟล์ การเปลี่ยนแปลงบทบาท การสร้างผู้ใช้ และเหตุการณ์การลบ"
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "รหัสโครงการ"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "ป้องกันการปลอมแปลงคำขอข้ามไซต์"
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "ป้องกันการปลอมแปลงคำขอข้ามไซต์ การโจมตีด้วยสคริปต์ข้ามไซต์ (XSS)"
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "ป้องกันการโจมตีแบบแทรก SQL ในพารามิเตอร์ GET/POST"
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "ป้องกันการแทรก SQL, XSS, RFI และการโจมตีอื่นๆ"
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "ป้องกันการโจมตีแบบ Brute Force และ DoS โดยการจำกัดความถี่คำขอต่อที่อยู่ IP"
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "ปกป้องแบบฟอร์มการเข้าสู่ระบบและการลงทะเบียนจากบอทอัตโนมัติ การโจมตี"
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "ปกป้องแบบฟอร์มการเข้าสู่ระบบและการลงทะเบียนด้วย captcha ตามคณิตศาสตร์"
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "ปกป้องไฟล์ปลั๊กอินจากการปลอมแปลง"
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "ปกป้องปลั๊กอินความปลอดภัยจากการปลอมแปลงและการแก้ไขที่ไม่ได้รับอนุญาต"
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "ปกป้องหน้าเข้าสู่ระบบของคุณจากการโจมตีแบบดุร้าย"
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "ปกป้องเว็บไซต์ของคุณจากการรับส่งข้อมูลที่เป็นอันตรายและ การโจมตี"
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "แบบฟอร์มที่ได้รับการป้องกัน"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "ระดับการป้องกัน"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "โหมดการป้องกัน"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "กฎการป้องกัน"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "การตั้งค่าการป้องกัน"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "ปกป้อง REST API ด้วยการตรวจสอบสิทธิ์ JWT การจำกัดอัตรา และ CORS จำเป็นสำหรับ WordPress ที่ไม่มีส่วนหัว"
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "ป้องกันการแทรก SQL, XSS และคำขอที่เป็นอันตราย ปลอดภัยในการเปิดใช้งาน - บล็อกเฉพาะการรับส่งข้อมูลที่เป็นอันตราย"
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "ปกป้องไฟล์ปลั๊กอินจากการแก้ไข ปลอดภัย - ป้องกันการปลอมแปลง"
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "ผู้ให้บริการ"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "ล้างบันทึกทั้งหมด"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "ล้างแคช"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "กักกัน"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "กักกันทันที"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "กักกัน แนะนำ"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "กักกัน:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "กักกัน"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "ไฟล์ที่ถูกกักกัน"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "ความซับซ้อนของแบบสอบถามเกินค่าสูงสุด %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "ความลึกของแบบสอบถามเกินความลึกสูงสุดที่อนุญาตของ %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "ด่วน"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "ด่วน การดำเนินการ"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "สแกนด่วน"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "ดำเนินการสแกนด่วน"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "เข้าถึงเครื่องมือบำรุงรักษาความปลอดภัยอย่างรวดเร็ว"
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "ด่วน: ไฟล์หลักเท่านั้น มาตรฐาน: Core + ธีม/ปลั๊กอิน ลึก: ไฟล์ทั้งหมด"
 
 msgid "REST API Security"
 msgstr "REST API Security"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "ผู้ใช้ REST API"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "การป้องกัน REST API"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "ฟีด RSS ถูกปิดใช้งานบนไซต์นี้"
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "จำกัดอัตรา"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "ตัวจำกัดอัตรา"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "อัตรา การจำกัด"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "การตั้งค่าการจำกัดอัตรา"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "การตรวจสอบแบบเรียลไทม์"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "เหตุผล"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "รับการแจ้งเตือนทางอีเมลเมื่อตรวจพบช่องโหว่"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "กิจกรรมล่าสุด"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "การตรวจจับภัยคุกคามล่าสุด"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "ล่าสุด IP ที่ถูกบล็อก"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "อีเมลผู้รับ"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "คำแนะนำ"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "แนะนำ"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "การดำเนินการที่แนะนำ"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "เปลี่ยนเส้นทางการเข้าถึงที่ถูกบล็อก"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "เปลี่ยนเส้นทางไปยังหน้าแรก"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "ลดพื้นที่การโจมตีโดยการปิดใช้งาน คุณสมบัติที่ไม่จำเป็นและทำให้การกำหนดค่า WordPress แข็งแกร่งขึ้น"
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "รีเฟรช"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "สร้างใหม่"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "สร้างพื้นฐานใหม่"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "รหัสผ่านการลงทะเบียน"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "รหัสผ่านที่ลงทะเบียน"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "กำลังลงทะเบียนรหัสผ่าน..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "การลงทะเบียน แบบฟอร์ม"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "แบบฟอร์มการลงทะเบียน"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "จดจำอุปกรณ์"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "จดจำระยะเวลา"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "จดจำอุปกรณ์นี้"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "ลบ"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "ลบแท็กตัวสร้าง"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "ลบการเข้าสู่ระบบ คำแนะนำ"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "ลบเวอร์ชัน WordPress ออกจากซอร์สโค้ด"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "ลบเมตาแท็กตัวสร้างออกจากทุกหน้า"
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "ลบคำแนะนำและคำแนะนำในการรีเซ็ตรหัสผ่าน"
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "ลบข้อมูลเวอร์ชันออกจาก HTML และฟีด"
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "ซ่อมแซมไฟล์ที่แก้ไขทั้งหมด"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "ซ่อมแซมไฟล์หลักของ WordPress ที่แก้ไข ใช้อย่างระมัดระวัง - สำรองข้อมูลก่อนการซ่อมแซม"
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "แทนที่ไฟล์ที่เสียหายด้วยเวอร์ชันใหม่ทั้งหมด"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "ประวัติรายงาน"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Retention Retention (days)"
 
 msgid "Report Schedule"
 msgstr "Report Schedule"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "คำขอจำกัด & การกรอง"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Report Size ขีดจำกัด"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "คำขอต่อนาที"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "ต้องมี 2FA สำหรับผู้ดูแลระบบทั้งหมด"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "ต้องการ 2FA สำหรับบทบาทผู้ใช้ที่เลือก"
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "ต้องมีปัจจัยที่สองสำหรับการตรวจสอบการเข้าสู่ระบบ"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "ต้องมีการเข้าสู่ระบบสำหรับการเข้าถึง REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "ต้องมีปัจจัยที่สองสำหรับ เข้าสู่ระบบ กำหนดค่าวิธี 2FA ของคุณก่อนเปิดใช้งาน"
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "รีเซ็ต"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "รีเซ็ตการตั้งค่าทั้งหมด"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "รีเซ็ตการเรียนรู้"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "รีเซ็ตการตั้งค่า NexifyMy Security ทั้งหมดเป็นค่าเริ่มต้น การดำเนินการนี้ไม่สามารถยกเลิกได้"
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "รีเซ็ตเป็นค่าเริ่มต้น"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "กำลังรีเซ็ต..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "รหัสตอบกลับบนบล็อก"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "กู้คืน"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "กู้คืน:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "จำกัด REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "จำกัดการเข้าถึง REST API อาจส่งผลต่อปลั๊กอินที่ใช้ REST API"
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "ระยะเวลาการเก็บรักษา"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "ส่งคืนรหัสข้อผิดพลาดหากตรวจพบมัลแวร์ (บิลด์ CI/CD ล้มเหลว)"
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "ส่งคืนรหัสข้อผิดพลาดหากพบช่องโหว่"
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "ส่งคืนไฟล์ไปยังตำแหน่งดั้งเดิม"
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "ตรวจสอบการแจ้งเตือน ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "ตรวจสอบทันที"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "ตรวจสอบบันทึกความปลอดภัยเป็นประจำ"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "การเปลี่ยนแปลงบทบาท"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "เรียกใช้การสแกนความปลอดภัยแบบเต็ม"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "เรียกใช้การตรวจสอบความสมบูรณ์"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "เรียกใช้การตรวจสอบอย่างรวดเร็ว"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "เรียกใช้การสแกน"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Run การสแกนช่องโหว่"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "เรียกใช้การสแกนความปลอดภัยเพื่อระบุช่องโหว่"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "เรียกใช้การสแกนมัลแวร์อัตโนมัติทุกวัน ปลอดภัย - สแกนอย่างเดียว ไม่มีการเปลี่ยนแปลงไฟล์"
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "การแจ้งเตือนความปลอดภัย:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "แฮช SHA-256 ของไฟล์ปลั๊กอินทั้งหมดจะถูกจัดเก็บเป็นพื้นฐาน"
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "การรวม SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "แพลตฟอร์ม SIEM"
 
 msgid "SQL Injection"
 msgstr "SQL Injection"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQL Injection การป้องกัน"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "สถานะ SSL"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "การยืนยัน SSL"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "บันทึกการตั้งค่าขั้นสูง"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "บันทึกการตั้งค่า CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "บันทึกการตั้งค่าความไม่ลงรอยกัน"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "บันทึกการตั้งค่าอีเมล"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "บันทึก Jira การตั้งค่า"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "บันทึกการตั้งค่า SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "บันทึกการตั้งค่าสแกนเนอร์"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "บันทึกการตั้งค่า ServiceNow"
 
 msgid "Save Settings"
 msgstr "บันทึกการตั้งค่า"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "บันทึกการตั้งค่า Slack"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "บันทึกการตั้งค่าทีม"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "บันทึกการตั้งค่า WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "บันทึก Webhook การตั้งค่า"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "สแกน"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "สแกนเสร็จสมบูรณ์"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "สแกนเสร็จสมบูรณ์"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "สแกนการพึ่งพาผู้แต่ง"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "การกำหนดค่าการสแกน"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "การควบคุมการสแกน"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "สแกนแบบกำหนดเอง ไดเรกทอรี"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "สแกนการพึ่งพา NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "สแกนปลั๊กอิน"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "สแกนรหัส QR ด้วยแอปตรวจสอบสิทธิ์ (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "ผลลัพธ์การสแกน"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "กำหนดการสแกน"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "สแกน ความไว"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "เป้าหมายการสแกน"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "สแกนธีม"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "หมดเวลาการสแกน"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "สแกนไดเรกทอรีอัปโหลด"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "สแกน WordPress Core"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "สแกนปลั๊กอินที่ติดตั้งทั้งหมดเพื่อหามัลแวร์"
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "สแกนธีมที่ติดตั้งทั้งหมดเพื่อหามัลแวร์"
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "สแกนเฉพาะพื้นที่ที่สำคัญเท่านั้น"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "สแกนไฟล์เพื่อหามัลแวร์และโค้ดที่น่าสงสัย"
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "สแกนปลั๊กอิน ธีม และแกน WordPress เพื่อหาช่องโหว่ที่ทราบ"
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "สแกนเว็บไซต์ของคุณเพื่อหามัลแวร์ ช่องโหว่ และปัญหาด้านความปลอดภัย"
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "สแกนเว็บไซต์ของคุณ สำหรับมัลแวร์และช่องโหว่ด้านความปลอดภัย"
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "สแกนเนอร์"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "การตั้งค่าสแกนเนอร์"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "การสแกน..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "สแกนไฟล์เพื่อหามัลแวร์และรหัสที่น่าสงสัย ปลอดภัย - สแกนเฉพาะเท่านั้น ไม่สามารถแก้ไขไฟล์ได้"
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "การสแกนตามกำหนดเวลา โหมด"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "การสแกนตามกำหนดเวลา"
 
 msgid "Score"
-msgstr "Score"
+msgstr "คะแนน"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "คำขอค้นหาต่อนาที"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "ชื่อผู้ใช้การค้นหา..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "รหัสลับ"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Secure การเข้าถึงไฟล์"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "รักษาความปลอดภัย WPGraphQL ด้วยขีดจำกัดความลึกของคิวรี การตรวจสอบความซับซ้อน และการจำกัดอัตรา ปลอดภัยสำหรับการตั้งค่าแบบไม่มีหัว"
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "การแจ้งเตือนความปลอดภัย"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "การวิเคราะห์ความปลอดภัย"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "การเสริมความปลอดภัย"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "ส่วนหัวด้านความปลอดภัย"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "เหตุการณ์ด้านความปลอดภัย"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "บันทึกความปลอดภัย"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "ความปลอดภัย โมดูล"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "การแจ้งเตือนความปลอดภัย"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "ตัวเลือกความปลอดภัย"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "คำแนะนำด้านความปลอดภัย"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "คะแนนความปลอดภัย"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "สถานะความปลอดภัย"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "เครื่องมือความปลอดภัย"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "ความปลอดภัย ช่องโหว่"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "การแจ้งเตือนด้านความปลอดภัย"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "เหตุการณ์ด้านความปลอดภัยจะปรากฏขึ้นที่นี่"
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "การเสริมความปลอดภัย"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "การสแกนความปลอดภัยเสร็จสิ้นการดำเนินการ"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "การตั้งค่าความปลอดภัยได้รับการแก้ไขแล้ว"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "เลือก ประเทศ:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "เลือกประเทศจากด้านซ้าย คลิก \"เพิ่มลงในรายการ\" เพื่อเพิ่ม ประเทศที่เลือกจะถูกบล็อก (บัญชีดำ) หรืออนุญาต (บัญชีขาว) ตามโหมดด้านบน"
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "เลือกภาพที่มีเครื่องหมายถูก:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "เลือกบริการ captcha ที่จะใช้"
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "ประเทศที่เลือก:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "การป้องกันตนเอง"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "การป้องกันตนเอง"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "ส่งการแจ้งเตือนการทดสอบ"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "ส่งอีเมลทดสอบ"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "ส่งการแจ้งเตือนหลังจากการโจมตีหลายครั้งนี้ในที่เดียว ชั่วโมง"
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "ส่งอีเมลแจ้งเตือนรายวัน"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "ส่งการแจ้งเตือนทางอีเมลเมื่อ IP ถูกล็อค"
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "ส่งการแจ้งเตือนทางอีเมลสำหรับเหตุการณ์ด้านความปลอดภัย"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "ส่งการแจ้งเตือนทางอีเมลเมื่อตรวจพบการโจมตีที่สำคัญ"
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "ส่งอีเมลเมื่อตรวจพบการปลอมแปลง"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "ส่งอีเมลเมื่อ พบช่องโหว่"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "ส่งรายงานไปยังอีเมลของผู้ดูแลระบบ"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "ส่งผลการสแกนผ่านอีเมลหลังจากการสแกนแต่ละครั้ง"
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "ส่งกิจกรรมความปลอดภัยไปยัง Splunk, Elasticsearch หรือแพลตฟอร์ม SIEM อื่น ๆ สำหรับการตรวจสอบและวิเคราะห์แบบรวมศูนย์"
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "ส่งกิจกรรมความปลอดภัยไปยังตำแหน่งข้อมูล HTTP ใด ๆ ด้วยการกำหนดค่าที่กำหนดเอง"
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "ส่ง กิจกรรมด้านความปลอดภัยไปยังปลายทาง HTTP ใด ๆ ด้วยส่วนหัวที่กำหนดเองและการตรวจสอบสิทธิ์"
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "ส่งรหัสยืนยันทางอีเมล"
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "ส่งการแจ้งเตือนทางอีเมลสำหรับกิจกรรมด้านความปลอดภัย ปลอดภัย - กำหนดการตั้งค่าอีเมลก่อน"
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "การรวมบริการตอนนี้"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "ตั้งค่าการอนุญาตไฟล์ที่ปลอดภัย อาจต้องมีการปรับเปลี่ยนด้วยตนเองหากเซิร์ฟเวอร์มีปัญหา"
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "การตั้งค่า"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "บันทึกการตั้งค่าเรียบร้อยแล้ว"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "ความรุนแรง"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "แสดงหน้า 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "แสดงข้อความแสดงข้อผิดพลาดทั่วไปเมื่อเข้าสู่ระบบล้มเหลว"
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "แสดงบนแบบฟอร์ม"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "กำลังแสดง %d จาก %d รายการ"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "แสดงเหตุการณ์สำคัญ/คำเตือนที่ยังไม่ได้อ่าน ใช้บันทึกเพื่อดูประวัติทั้งหมด"
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "ลงชื่อเข้าใช้ด้วยรหัสผ่าน"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "สถานะลายเซ็น"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "การตรวจจับตามลายเซ็น"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "ลายเซ็น"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "ค่าเริ่มต้นของไซต์"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "คีย์ของไซต์"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "ความปลอดภัยของไซต์ ความสมบูรณ์"
 
 msgid "Size"
-msgstr "Size"
+msgstr "ขนาด"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "ข้ามไฟล์ที่มีขนาดใหญ่กว่าขนาดนี้"
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Slack บูรณาการ"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "แนะนำให้ปรับปรุงบางอย่าง"
 
 msgid "Source"
-msgstr "Source"
+msgstr "แหล่งที่มา"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "อักขระพิเศษ (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (ตัวรวบรวมเหตุการณ์ HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "มาตรฐาน"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "มาตรฐาน - การป้องกันที่สมดุล"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "การสแกนมาตรฐาน"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "เริ่ม สแกน"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "เริ่มการสแกนใหม่"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "เริ่มการสแกน"
 
 msgid "Status"
-msgstr "Status"
+msgstr "สถานะ"
 
 msgid "Story"
-msgstr "Story"
+msgstr "เรื่องราว"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "เข้มงวด - ความปลอดภัยสูงสุด"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "รหัสผ่านที่แข็งแกร่ง"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "แข็งแกร่ง รหัสผ่าน"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "อัตราความสำเร็จ"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "เข้าสู่ระบบสำเร็จ"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "เข้าสู่ระบบสำเร็จ"
 
 msgid "Sucuri"
 msgstr "Sucuri"
@@ -3806,472 +3806,472 @@ msgid "Sumo Logic"
 msgstr "Sumo Logic"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "ห่วงโซ่อุปทาน"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "ห่วงโซ่อุปทาน ความปลอดภัย"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "การตั้งค่าห่วงโซ่อุปทาน"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "รองรับ Google Authenticator, Authy ฯลฯ"
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "รองรับ:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "รหัสที่น่าสงสัย"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "IP ที่น่าสงสัย"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "กิจกรรมของระบบ"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "เหตุการณ์ของระบบ"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "ระบบ สถานะ"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "แอป TOTP Authenticator"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "ชื่อตาราง"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "ตาราง"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "การตรวจจับการงัดแงะ:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "งาน"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "บล็อก IP ชั่วคราวที่เกินขีดจำกัดอัตรา API"
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "ทดสอบ การเชื่อมต่อ"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "การทดสอบการแจ้งเตือน"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "การจับคู่ข้อความ"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI เรียนรู้รูปแบบพฤติกรรมปกติอย่างต่อเนื่อง รวมถึงชั่วโมงการจราจร ที่ตั้งทางภูมิศาสตร์ ตัวแทนผู้ใช้ และรูปแบบคำขอ ข้อมูลพื้นฐานนี้ใช้เพื่อตรวจจับความผิดปกติ"
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF ปกป้องไซต์ของคุณจากการโจมตีเว็บทั่วไป รวมถึง SQL insert, XSS และบอตที่เป็นอันตราย"
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "สวิตช์ธีม"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "ชั่วโมงนี้"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "เดือนนี้"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "สัปดาห์นี้"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "นี่คือรหัสผ่านทั่วไป"
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "นี่คือลักษณะที่ captcha จะปรากฏบน แบบฟอร์มเข้าสู่ระบบ:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "รหัสผ่านนี้ใช้บ่อยเกินไป โปรดเลือกรหัสผ่านที่ไม่ซ้ำใครมากกว่านี้"
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "ไม่อนุญาตให้ใช้คำค้นหานี้"
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "การดำเนินการนี้จะรีเซ็ตข้อมูลการเรียนรู้ AI และรูปแบบพฤติกรรมทั้งหมด ดำเนินการต่อหรือไม่"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "ภัยคุกคาม"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "รายละเอียดภัยคุกคาม:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "ตรวจพบภัยคุกคามแล้ว"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "ตรวจพบภัยคุกคาม (มัลแวร์ ไฟล์ที่น่าสงสัย)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "การตรวจจับและการบล็อกภัยคุกคาม - 7 วันล่าสุด"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "ภัยคุกคาม คะแนน"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "ภัยคุกคามที่ถูกบล็อก"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "ภัยคุกคามที่พบ"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "ภัยคุกคามวันนี้"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "ระยะเวลาคันเร่ง"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "การออกตั๋ว"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "ระบบการออกตั๋ว"
 
 msgid "Time"
-msgstr "Time"
+msgstr "เวลา"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "กรอบเวลา (วินาที)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "เวลาก่อนที่รหัสยืนยันอีเมลจะหมดอายุ"
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "กรอบเวลาสำหรับการนับความพยายามเข้าสู่ระบบที่ล้มเหลว"
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "กรอบเวลาที่ใช้ในการนับความพยายามเข้าสู่ระบบที่ล้มเหลว"
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "ถึงวันที่"
 
 msgid "Today"
-msgstr "Today"
+msgstr "วันนี้"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "ความพยายามเข้าสู่ระบบล้มเหลวมากเกินไป โปรดลองอีกครั้งใน %d นาที"
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "เครื่องมือ"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "เครื่องมือและยูทิลิตี้"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "ประเทศยอดนิยม"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "เหตุผลในการตรวจจับสูงสุด"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "ประเภทเหตุการณ์ยอดนิยม"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "หน้ายอดนิยม"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "ด้านบน ผู้อ้างอิง"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "เหตุการณ์ทั้งหมด"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "การดูเพจทั้งหมด"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "ลายเซ็นทั้งหมด"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "ขนาดรวม"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "การวิเคราะห์การรับส่งข้อมูล"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "ภาพรวมการรับส่งข้อมูล"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "ทริกเกอร์การสแกนความปลอดภัย"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "เชื่อถือส่วนหัวของพร็อกซี"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "เชื่อถือได้ พร็อกซี"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "สองครั้ง รายวัน"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "การตรวจสอบสิทธิ์แบบสองปัจจัย (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "การตรวจสอบสิทธิ์แบบสองปัจจัย"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "การตรวจสอบสิทธิ์แบบสองปัจจัย"
 
 msgid "Type"
-msgstr "Type"
+msgstr "ประเภท"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "พิมพ์คำ:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "ถอนการติดตั้ง พฤติกรรม"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "IP ที่ไม่ซ้ำ"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "ผู้ใช้ที่ไม่ซ้ำ"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "ผู้เยี่ยมชมที่ไม่ซ้ำ"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "ไม่ทราบ"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "การแจ้งเตือนที่ยังไม่ได้อ่าน"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "การแจ้งเตือนความปลอดภัยที่ยังไม่ได้อ่านจากบันทึกของคุณ"
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "อัปเดต คำจำกัดความ"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "อัปเดตคำจำกัดความทันที"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "อัปเดตคำจำกัดความของมัลแวร์"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "อัปเดตทันที"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "อัปเดตลายเซ็นการตรวจจับมัลแวร์"
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "ตัวพิมพ์ใหญ่ (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "ระดับเร่งด่วน"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "ใช้ CDN/พรอกซี ส่วนหัวเพื่อกำหนด IP ไคลเอ็นต์จริง"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "ใช้ Touch ID, Face ID, Windows Hello หรือคีย์ความปลอดภัยของฮาร์ดแวร์"
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "ใช้ส่วนหัว X-Forwarded-For สำหรับการตรวจจับ IP (หากอยู่หลัง CDN/พร็อกซีเท่านั้น)"
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "ใช้ฐานข้อมูลลายเซ็นมัลแวร์เพื่อการตรวจจับ"
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "ใช้คีย์นี้เพื่อตรวจสอบสิทธิ์คำขอ API จาก CI/CD ของคุณ ไปป์ไลน์"
 
 msgid "User"
-msgstr "User"
+msgstr "ผู้ใช้"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "กิจกรรมของผู้ใช้"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "ตัวแทนผู้ใช้"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "เหตุการณ์ผู้ใช้"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "การล็อคผู้ใช้"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "การจัดการผู้ใช้"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "ข้อกำหนดของผู้ใช้"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "ผู้ใช้หรือที่อยู่ IP ถูกล็อคเนื่องจาก กิจกรรมที่น่าสงสัย"
 
 msgid "Username"
-msgstr "Username"
+msgstr "ชื่อผู้ใช้"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "ต้องใช้ชื่อผู้ใช้และรหัสผ่าน"
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "ผู้ใช้สร้าง"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "ผู้ใช้ถูกลบ"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "ผู้ใช้เปิดใช้งาน 2FA ในการตั้งค่าโปรไฟล์"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "ใช้ AI เพื่อตรวจจับภัยคุกคามซีโร่เดย์ผ่านการวิเคราะห์พฤติกรรม เรียนรู้รูปแบบปกติและความผิดปกติของแฟล็ก ปลอดภัย - ตรวจสอบเฉพาะพฤติกรรมเท่านั้น"
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "เซสชันการยืนยันหมดอายุ โปรดเข้าสู่ระบบอีกครั้ง"
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "ตรวจสอบ"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "ตรวจสอบไฟล์หลัก"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "ตรวจสอบใบรับรอง SSL (แนะนำสำหรับการผลิต)"
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "ตรวจสอบและซ่อมแซมไฟล์หลักของ WordPress"
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "ตรวจสอบและซ่อมแซมแกนหลัก files"
 
 msgid "Version"
-msgstr "Version"
+msgstr "เวอร์ชัน"
 
 msgid "View All"
-msgstr "View All"
+msgstr "ดูทั้งหมด"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "ดูการจราจรสด"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "ดูเหตุการณ์ด้านความปลอดภัยทั้งหมด"
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "ดูและจัดการภัยคุกคามที่ถูกกักกัน"
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "ดูและจัดการการแจ้งเตือนความปลอดภัยและ การแจ้งเตือน"
 
 msgid "Views"
-msgstr "Views"
+msgstr "จำนวนการดู"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "แนวโน้มผู้เข้าชม - 30 วันล่าสุด"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "ผู้เยี่ยมชม"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "การเข้าชมวันนี้"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "การตรวจสอบช่องโหว่"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "ช่องโหว่ เครื่องสแกนเนอร์"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "มีช่องโหว่"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "การโจมตี WAF ถูกบล็อก"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "บล็อก WAF (ถูกโจมตีถูกบล็อกโดยไฟร์วอลล์)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "ไฟร์วอลล์ WAF"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "สถานะ WAF"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP เวอร์ชัน"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "การป้องกัน WPGraphQL"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "โทเค็น WPScan API"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "คำเตือน"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "คำเตือน:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "คำเตือน: การนำเข้าจะแทนที่การตั้งค่าปัจจุบันทั้งหมด ตรวจสอบให้แน่ใจว่าได้ส่งออกการตั้งค่าปัจจุบันของคุณเป็นข้อมูลสำรองก่อน"
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "ไฟร์วอลล์แอปพลิเคชันเว็บ"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "ไฟร์วอลล์แอปพลิเคชันเว็บ (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "URL ของ Webhook"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "URL ของ Webhook สำหรับผลลัพธ์"
 
 msgid "Webhooks"
 msgstr "Webhooks"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "รายสัปดาห์"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "รายงานความปลอดภัยรายสัปดาห์"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "รายการที่อนุญาต (อนุญาตเท่านั้น)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "รายการที่อนุญาต (อนุญาตเฉพาะที่เลือก)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "รายการที่อนุญาต IPs"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "รายการที่อนุญาต IPs"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "การตรวจสอบไฟล์ WordPress Core"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "สถานะ WordPress Core"
 
 msgid "WordPress Hardening"
 msgstr "WordPress Hardening"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "เวอร์ชัน WordPress"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "ไฟล์หลักของ WordPress ได้รับการ แก้ไขแล้ว"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress ไม่ทันสมัย"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (ไม่ใช่ ดมกลิ่น)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (ป้องกัน Clickjacking)"
 
 msgid "X-XSS-Protection"
 msgstr "X-XSS-Protection"
@@ -4289,98 +4289,1006 @@ msgid "XSS Protection"
 msgstr "XSS Protection"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "คุณกำลังใช้ล็อกอินเริ่มต้น ลองเปลี่ยนเป็นสิ่งที่ไม่ซ้ำใคร"
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "คุณต้องเข้าสู่ระบบเพื่อเข้าถึง REST API"
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "เว็บไซต์ของคุณไม่ได้ใช้ HTTPS เปิดใช้งานใบรับรอง SSL สำหรับการเชื่อมต่อที่ปลอดภัย"
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "เว็บไซต์ของคุณได้รับการปกป้องอย่างดี"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "รหัสยืนยันของคุณคือ: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "คำจำกัดความของไวรัสของคุณล้าสมัย อัปเดตทันทีเพื่อการป้องกันที่ดีที่สุด"
 
 msgid "Zone ID"
 msgstr "Zone ID"
 
 msgid "ago"
-msgstr "ago"
+msgstr "ที่ผ่านมา"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "การโจมตีต่อ ชั่วโมง"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "ความพยายาม"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "ถูกบล็อก"
 
 msgid "characters"
-msgstr "characters"
+msgstr "อักขระ"
 
 msgid "days"
-msgstr "days"
+msgstr "วัน"
 
 msgid "events"
-msgstr "events"
+msgstr "เหตุการณ์"
 
 msgid "fails"
-msgstr "fails"
+msgstr "ล้มเหลว"
 
 msgid "files"
-msgstr "files"
+msgstr "ไฟล์"
 
 msgid "from now"
-msgstr "from now"
+msgstr "จาก ตอนนี้"
 
 msgid "including:"
-msgstr "including:"
+msgstr "รวมถึง:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "อักษรตัวพิมพ์เล็ก"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "นาที"
 
 msgid "modules"
-msgstr "modules"
+msgstr "โมดูล"
 
 msgid "number"
-msgstr "number"
+msgstr "หมายเลข"
 
 msgid "or"
-msgstr "or"
+msgstr "หรือ"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "ต่อนาที"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "วินาที"
 
 msgid "special character"
-msgstr "special character"
+msgstr "อักขระพิเศษ"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "ภัยคุกคามที่พบ"
 
 msgid "total records"
-msgstr "total records"
+msgstr "ทั้งหมด บันทึก"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "ตัวพิมพ์ใหญ่"
 
 msgid "views"
-msgstr "views"
+msgstr "มุมมอง"
 
 msgid "violations"
-msgstr "violations"
+msgstr "การละเมิด"
 
 msgid "visits"
-msgstr "visits"
+msgstr "การเข้าชม"
+msgid "Deception"
+msgstr "การหลอกลวง"
+
+msgid "P2P Intelligence"
+msgstr "P2P หน่วยสืบราชการลับ"
+
+msgid "Sandbox Console"
+msgstr "คอนโซล Sandbox"
+
+msgid "Temporary Access"
+msgstr "ชั่วคราว เข้าถึง"
+
+msgid "Saving..."
+msgstr "กำลังบันทึก..."
+
+msgid "Settings saved. Reloading..."
+msgstr "บันทึกการตั้งค่าแล้ว กำลังโหลดซ้ำ..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "บันทึกการตั้งค่าเรียบร้อยแล้ว! กำลังโหลดซ้ำ..."
+
+msgid "Connection error"
+msgstr "ข้อผิดพลาดในการเชื่อมต่อ"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "การตรวจสอบความปลอดภัยล้มเหลว รีเฟรชแล้วลองอีกครั้ง"
+
+msgid "Settings handler not available."
+msgstr "ตัวจัดการการตั้งค่าไม่พร้อมใช้งาน"
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "รีเซ็ตการตั้งค่าทั้งหมดเป็นค่าเริ่มต้นหรือไม่ การดำเนินการนี้ไม่สามารถยกเลิกได้"
+
+msgid "Purge CDN cache now?"
+msgstr "ล้างแคช CDN ทันทีหรือไม่"
+
+msgid "Failed to save settings. Please try again."
+msgstr "ไม่สามารถบันทึกการตั้งค่า โปรดลองอีกครั้ง"
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "การตั้งค่ารีเซ็ตเป็นค่าเริ่มต้น กำลังโหลดหน้าซ้ำ..."
+
+msgid "Failed to load analytics data."
+msgstr "ไม่สามารถโหลดข้อมูลการวิเคราะห์"
+
+msgid "Devices"
+msgstr "อุปกรณ์"
+
+msgid "No data available for this range."
+msgstr "ไม่มีข้อมูลสำหรับช่วงนี้"
+
+msgid "Traffic trend chart"
+msgstr "แผนภูมิแนวโน้มการเข้าชม"
+
+msgid "Distribution breakdown chart"
+msgstr "รายละเอียดการกระจาย แผนภูมิ"
+
+msgid "Total"
+msgstr "ทั้งหมด"
+
+msgid "Series"
+msgstr "ซีรีส์"
+
+msgid "Predictive Threat Hunting"
+msgstr "การตามล่าภัยคุกคามแบบคาดการณ์"
+
+msgid "Forecast next attack vectors"
+msgstr "คาดการณ์การโจมตีครั้งถัดไป"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "สร้างโปรไฟล์สแต็กของคุณ คาดการณ์เวกเตอร์การโจมตีที่อาจเกิดขึ้น และให้คำแนะนำในการป้องกันเชิงรุก"
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "จัดการภัยคุกคามที่ถูกกักกันและลบแล้วที่กู้คืนได้ files."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "ไฟล์ที่ถูกลบ (กู้คืนได้)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "ไฟล์ที่ย้ายที่นี่สามารถกู้คืนกลับไปสู่การกักกันหรือลบออกอย่างถาวร"
+
+msgid "Deleted"
+msgstr "ลบแล้ว"
+
+msgid "Loading deleted files..."
+msgstr "กำลังโหลดไฟล์ที่ถูกลบ..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "ย้ายไฟล์ที่ถูกกักกันไปยังพื้นที่เก็บข้อมูลที่ถูกลบที่สามารถกู้คืนได้"
+
+msgid "Delete Permanently:"
+msgstr "ลบอย่างถาวร:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "ลบไฟล์ออกจากที่เก็บข้อมูลที่ถูกลบอย่างถาวร"
+
+msgid "Access denied from your region."
+msgstr "การเข้าถึงถูกปฏิเสธจากภูมิภาคของคุณ"
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "การเข้าสู่ระบบล้มเหลวสูงสุด ความพยายามก่อนที่จะล็อกเอาต์ชั่วคราว"
+
+msgid "Time window for counting failed attempts."
+msgstr "กรอบเวลาสำหรับการนับความพยายามที่ล้มเหลว"
+
+msgid "Open Tool"
+msgstr "เครื่องมือเปิด"
+
+msgid "Available Fix"
+msgstr "แก้ไขที่พร้อมใช้งาน"
+
+msgid "Preview Patch"
+msgstr "ดูตัวอย่างแพทช์"
+
+msgid "Apply Patch"
+msgstr "ใช้แพทช์"
+
+msgid "Honeytrap Configuration"
+msgstr "การกำหนดค่า Honeytrap"
+
+msgid "Enable Deception Module"
+msgstr "เปิดใช้งานการหลอกลวง โมดูล"
+
+msgid "How Deception Works:"
+msgstr "วิธีการหลอกลวงทำงาน:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "ไม่มี URL ต่อไปนี้บนไซต์ของคุณ หากใครก็ตามเข้าถึงพวกเขา พวกเขาจะถูก <strong>บล็อกโดยอัตโนมัติ</strong> ในฐานะผู้โจมตีที่ได้รับการยืนยัน ผู้ดูแลระบบจะไม่ถูกบล็อกแต่จะเห็นคำเตือน"
+
+msgid "Custom Honeytrap Paths"
+msgstr "เส้นทาง Honeytrap แบบกำหนดเอง"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "เพิ่มหนึ่งเส้นทางต่อบรรทัด (เช่น /my-secret-admin/, /old-backup.sql) ค่าเริ่มต้นใช้งานได้แล้ว"
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "เส้นทาง Honeytrap เริ่มต้น (ใช้งานอยู่เสมอ)"
+
+msgid "Login Page Honeypot"
+msgstr "หน้าเข้าสู่ระบบ Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "ฟิลด์ที่มองไม่เห็นจะถูกแทรกลงในแบบฟอร์มการเข้าสู่ระบบ/การลงทะเบียน มีเพียงบอทเท่านั้นที่กรอกข้อมูลดังกล่าว เพื่อกระตุ้นการตรวจจับและการบล็อกทันที"
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "การป้องกันนี้จะเปิดใช้งานเสมอเมื่อโมดูล Deception ทำงานอยู่ ไม่จำเป็นต้องกำหนดค่า"
+
+msgid "User Enumeration Trap"
+msgstr "กับดักการแจงนับผู้ใช้"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "ตรวจจับความพยายามในการลาดตระเวนที่ผู้โจมตีสแกนหาชื่อผู้ใช้ที่ถูกต้องผ่าน ?author=1, ?author=2 ฯลฯ"
+
+msgid "Enable user enumeration detection"
+msgstr "เปิดใช้งานการตรวจจับการแจงนับผู้ใช้"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "ฮาร์ดบล็อกในการพยายามแจงนับ (ค่าเริ่มต้น: เปลี่ยนเส้นทางแบบนุ่มนวลไปยัง หน้าแรก)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "บล็อกการแจงนับผู้เขียนทั้งหมด (แม้แต่สำหรับผู้ใช้ที่มีอยู่แล้ว)"
+
+msgid "Save Changes"
+msgstr "บันทึกการเปลี่ยนแปลง"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "การแมปข้อมูล GDPR Article 30"
+
+msgid "Refresh Map"
+msgstr "รีเฟรชแผนที่"
+
+msgid "Export Data Map (PDF)"
+msgstr "ส่งออก Data Map (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "การค้นพบ PII อัตโนมัติในตารางฐานข้อมูล ข้อมูล การแมปโฟลว์และการตรวจจับการแชร์ของบุคคลที่สาม"
+
+msgid "Data Element"
+msgstr "องค์ประกอบข้อมูล"
+
+msgid "Location"
+msgstr "ตำแหน่ง"
+
+msgid "Purpose"
+msgstr "วัตถุประสงค์"
+
+msgid "Retention"
+msgstr "การเก็บรักษา"
+
+msgid "Third-Party Sharing"
+msgstr "การแชร์ของบุคคลที่สาม"
+
+msgid "Legal Basis"
+msgstr "พื้นฐานทางกฎหมาย"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "ยังไม่ตรวจพบบันทึก PII เรียกใช้การสแกนแผนที่ข้อมูลเพื่อสร้างรายงาน"
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "ระบบอัตโนมัติที่จะถูกลืม"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "ส่งคำขอลบ ตรวจสอบการลบข้อมูล และติดตามบันทึกการปฏิบัติตามข้อกำหนดสำหรับเวิร์กโฟลว์ GDPR"
+
+msgid "User ID"
+msgstr "รหัสผู้ใช้"
+
+msgid "Comments"
+msgstr "ความคิดเห็น"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "ลบความคิดเห็นแทนการลบข้อมูลระบุตัวตน"
+
+msgid "Run Erasure"
+msgstr "เรียกใช้การลบข้อมูล"
+
+msgid "Verify Erasure"
+msgstr "ตรวจสอบการลบข้อมูล"
+
+msgid "GDPR Request Log"
+msgstr "คำขอ GDPR บันทึก"
+
+msgid "Request Type"
+msgstr "ประเภทคำขอ"
+
+msgid "Requested At"
+msgstr "ร้องขอที่"
+
+msgid "Completed At"
+msgstr "เสร็จสมบูรณ์เมื่อ"
+
+msgid "No GDPR requests logged yet."
+msgstr "ยังไม่มีการร้องขอ GDPR ที่บันทึกไว้"
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Shadow Runtime Sandbox"
+
+msgid "Enable Sandbox Module"
+msgstr "เปิดใช้งานโมดูล Sandbox"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "โหลด Shadow Runtime Sandbox engine."
+
+msgid "Enable Sandbox Console"
+msgstr "เปิดใช้งาน Sandbox Console"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "อนุญาตให้ผู้ใช้ wp-admin ที่มี Manage_options สามารถเรียกใช้โค้ดในคอนโซล Sandbox"
+
+msgid "Sandbox Timeout"
+msgstr "การหมดเวลาของ Sandbox"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "การหมดเวลาการดำเนินการในไม่กี่วินาที (1-30)"
+
+msgid "Dynamic Analysis"
+msgstr "Dynamic การวิเคราะห์"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "เรียกใช้การวิเคราะห์การดำเนินการแบบไดนามิกนอกเหนือจากการตรวจสอบแบบคงที่"
+
+msgid "Quarantine Policy"
+msgstr "นโยบายการกักกัน"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "แนะนำให้ใช้การกักกันด้วยตนเองสำหรับไซต์ส่วนใหญ่ การกักกันอัตโนมัติจะแยกเฉพาะมัลแวร์ที่ได้รับการยืนยันว่ามีความมั่นใจสูงเท่านั้น"
+
+msgid "Manual (Recommended)"
+msgstr "ด้วยตนเอง (แนะนำ)"
+
+msgid "Auto Quarantine"
+msgstr "การกักกันอัตโนมัติ"
+
+msgid "Save Quarantine Policy"
+msgstr "บันทึกนโยบายการกักกัน"
+
+msgid "AI Risk Controls"
+msgstr "การควบคุมความเสี่ยงของ AI"
+
+msgid "Enable AI Detection Module"
+msgstr "เปิดใช้งานโมดูลการตรวจจับ AI"
+
+msgid "Enable Insider Threat Detection"
+msgstr "เปิดใช้งานภัยคุกคามจากภายใน การตรวจจับ"
+
+msgid "Insider Threat Threshold"
+msgstr "เกณฑ์ภัยคุกคามภายใน"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "เปิดใช้งานการตรวจสอบการกรองข้อมูล"
+
+msgid "Exfiltration Threshold"
+msgstr "เกณฑ์การกรองข้อมูล"
+
+msgid "Exfiltration Baseline Days"
+msgstr "จำนวนวันพื้นฐานการกรอง"
+
+msgid "Session Risk Threshold"
+msgstr "เกณฑ์ความเสี่ยงเซสชัน"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "ช่วงเวลาตรวจสอบการตรวจสอบสิทธิ์ซ้ำอย่างต่อเนื่อง (วินาที)"
+
+msgid "Risk Spike Threshold"
+msgstr "Risk Spike Threshold"
+
+msgid "Save AI Settings"
+msgstr "บันทึกการตั้งค่า AI"
+
+msgid "Quarantine Mode"
+msgstr "โหมดกักกัน"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "โหมด Manual ปลอดภัยกว่าและแนะนำ โหมดอัตโนมัติกักกันเฉพาะมัลแวร์ที่ได้รับการยืนยันว่ามีความมั่นใจสูงเท่านั้น"
+
+msgid "Data Map"
+msgstr "แผนที่ข้อมูล"
+
+msgid "Privacy Requests"
+msgstr "คำขอความเป็นส่วนตัว"
+
+msgid "Deception Technology"
+msgstr "เทคโนโลยีการหลอกลวง"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypots ทรัพย์สินล่อ และการหลอกลวงของผู้โจมตีเพื่อตรวจจับภัยคุกคามก่อนที่จะโจมตี"
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "กำลังแสดง %1$d จาก %2$d รายการ"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "ไม่ได้โหลดโมดูล P2P Intelligence"
+
+msgid "P2P Threat Intelligence"
+msgstr "ภัยคุกคาม P2P หน่วยสืบราชการลับ"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "แชร์ข้อมูลภัยคุกคามกับผู้อื่น การติดตั้ง SentinelWP สำหรับภูมิคุ้มกันหมู่"
+
+msgid "P2P Settings"
+msgstr "การตั้งค่า P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "เปิดใช้งาน P2P Intelligence"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "เปิดใช้งานการแบ่งปันข่าวกรองภัยคุกคามที่ทำงานร่วมกันกับโหนดเพียร์"
+
+msgid "My Node Key"
+msgstr "คีย์โหนดของฉัน"
+
+msgid "Copy"
+msgstr "คัดลอก"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "แชร์คีย์นี้กับเพื่อนที่ต้องการเชื่อมต่อ ไปยังไซต์ของคุณ"
+
+msgid "Broadcast Threats"
+msgstr "ภัยคุกคามการออกอากาศ"
+
+msgid "Share detected threats with registered peers."
+msgstr "แชร์ภัยคุกคามที่ตรวจพบกับเพื่อนที่ลงทะเบียน"
+
+msgid "Trust Threshold"
+msgstr "เกณฑ์ความน่าเชื่อถือ"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "บล็อก IP อัตโนมัติเท่านั้นที่มีคะแนนภัยคุกคาม >= เกณฑ์นี้ ค่าที่ต่ำกว่า = การบล็อกที่เข้มงวดมากขึ้น"
+
+msgid "Registered Peers"
+msgstr "เพียร์ที่ลงทะเบียนแล้ว"
+
+msgid "Add Peer"
+msgstr "เพิ่มเพียร์"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "ยังไม่มีเพียร์ที่ลงทะเบียนเลย เพิ่มเพียร์เพื่อเริ่มแชร์ข้อมูลภัยคุกคาม"
+
+msgid "Label"
+msgstr "ป้ายกำกับ"
+
+msgid "Last Sync"
+msgstr "ซิงค์ล่าสุด"
+
+msgid "Sent/Received"
+msgstr "ส่ง/รับ"
+
+msgid "Unnamed"
+msgstr "ไม่มีชื่อ"
+
+msgid "%s ago"
+msgstr "%s ที่แล้ว"
+
+msgid "Threats Sent"
+msgstr "ภัยคุกคามที่ส่งแล้ว"
+
+msgid "Threats Received"
+msgstr "ภัยคุกคาม ได้รับ"
+
+msgid "Statistics"
+msgstr "สถิติ"
+
+msgid "Connected Peers"
+msgstr "เพียร์ที่เชื่อมต่อ"
+
+msgid "Threats Received (24h)"
+msgstr "ภัยคุกคามที่ได้รับ (24 ชม.)"
+
+msgid "P2P Status"
+msgstr "สถานะ P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "เครดิตหน่วยสืบราชการลับภัยคุกคาม"
+
+msgid "Current Credit Balance"
+msgstr "ยอดเครดิตปัจจุบัน"
+
+msgid "Reputation Score"
+msgstr "ชื่อเสียง คะแนน"
+
+msgid "Accuracy"
+msgstr "ความแม่นยำ"
+
+msgid "Badges:"
+msgstr "ป้าย:"
+
+msgid "No badges yet"
+msgstr "ยังไม่มีป้าย"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "สิทธิประโยชน์ระดับพรีเมียมจะถูกปลดล็อคฟรีเนื่องจากคะแนนชื่อเสียงของคุณสูงกว่า 1,000"
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "ถึงคะแนนชื่อเสียงที่สูงกว่า 1,000 เพื่อปลดล็อคสิทธิประโยชน์ระดับพรีเมียมสำหรับ ฟรี"
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Top Contributor (ไม่ระบุชื่อ)"
+
+msgid "No contributor data available yet."
+msgstr "ยังไม่มีข้อมูลผู้ร่วมให้ข้อมูล"
+
+msgid "Rank"
+msgstr "อันดับ"
+
+msgid "Anonymous Site ID"
+msgstr "รหัสไซต์ที่ไม่ระบุตัวตน"
+
+msgid "Credits"
+msgstr "เครดิต"
+
+msgid "Reputation"
+msgstr "ชื่อเสียง"
+
+msgid "Close"
+msgstr "ปิด"
+
+msgid "Add New Peer"
+msgstr "เพิ่ม Peer ใหม่"
+
+msgid "Peer URL"
+msgstr "Peer URL"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "URL แบบเต็มของไซต์ WordPress เพียร์ (ต้องใช้ HTTPS ใน การผลิต)."
+
+msgid "Peer Node Key"
+msgstr "คีย์โหนดเพียร์"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "คีย์โหนดของเพียร์ (สามารถคัดลอกได้จากหน้าการตั้งค่า P2P)"
+
+msgid "Label (Optional)"
+msgstr "ฉลาก (ไม่บังคับ)"
+
+msgid "My Production Server"
+msgstr "เซิร์ฟเวอร์การผลิตของฉัน"
+
+msgid "A friendly name to identify this peer."
+msgstr "ชื่อที่จำง่ายเพื่อระบุสิ่งนี้ peer."
+
+msgid "Unauthorized"
+msgstr "ไม่ได้รับอนุญาต"
+
+msgid "Sandbox module is not loaded."
+msgstr "โมดูล Sandbox ไม่ได้โหลด"
+
+msgid "Sandbox module is disabled."
+msgstr "โมดูล Sandbox ถูกปิดใช้งาน"
+
+msgid "Sandbox console is disabled."
+msgstr "คอนโซล Sandbox ถูกปิดใช้งาน"
+
+msgid "No code provided."
+msgstr "ไม่มีรหัสที่ให้ไว้"
+
+msgid "Insufficient permissions."
+msgstr "ไม่เพียงพอ สิทธิ์"
+
+msgid "Sandbox Module Disabled"
+msgstr "โมดูล Sandbox ปิดใช้งานแล้ว"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Shadow Runtime Sandbox ถูกปิดใช้งานอยู่ในขณะนี้ เปิดใช้งานในการตั้งค่าเพื่อใช้คอนโซล"
+
+msgid "Go to Settings"
+msgstr "ไปที่การตั้งค่า"
+
+msgid "Sandbox Console Disabled"
+msgstr "คอนโซล Sandbox ปิดใช้งานแล้ว"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "โมดูล Sandbox เปิดใช้งานอยู่ แต่คอนโซลผู้ดูแลระบบปิดใช้งานอยู่ เปิดใช้งานการตั้งค่าคอนโซลเพื่อเรียกใช้โค้ดจาก wp-admin"
+
+msgid "Danger Zone: Code Execution"
+msgstr "โซนอันตราย: การเรียกใช้โค้ด"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "คอนโซลนี้รันโค้ด PHP ในแซนด์บ็อกซ์แบบแยก การเปลี่ยนแปลงฐานข้อมูลทั้งหมดจะถูกย้อนกลับโดยอัตโนมัติ ใช้สำหรับการวิเคราะห์โค้ดหรือการทดสอบที่น่าสงสัยเท่านั้น"
+
+msgid "PHP Code Editor"
+msgstr "ตัวแก้ไขโค้ด PHP"
+
+msgid "Run Code"
+msgstr "เรียกใช้โค้ด"
+
+msgid "Analyze Only"
+msgstr "วิเคราะห์เท่านั้น"
+
+msgid "Timeout:"
+msgstr "หมดเวลา:"
+
+msgid "Execution Results"
+msgstr "ผลลัพธ์การดำเนินการ"
+
+msgid "STATIC ANALYSIS"
+msgstr "STATIC การวิเคราะห์"
+
+msgid "OUTPUT"
+msgstr "เอาต์พุต"
+
+msgid "ERRORS"
+msgstr "ข้อผิดพลาด"
+
+msgid "DATABASE QUERIES"
+msgstr "ฐานข้อมูล คำถาม"
+
+msgid "Module not loaded"
+msgstr "ไม่ได้โหลดโมดูล"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "การวิเคราะห์การรับส่งข้อมูลแบบสดไม่พร้อมใช้งาน"
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "การเข้าถึงแบบทันเวลาใช้เวิร์กโฟลว์การร้องขอและการอนุมัติโดยอัตโนมัติ การหมดอายุ"
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "การเข้าถึงชั่วคราวไม่พร้อมใช้งานในขณะนี้เนื่องจากโมดูลถูกปิดใช้งานหรือไม่ได้โหลด"
+
+msgid "Open settings"
+msgstr "เปิดการตั้งค่า"
+
+msgid "Request Temporary Access"
+msgstr "ร้องขอการเข้าถึงชั่วคราว"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "คำขอนี้ใช้กับบัญชีที่เข้าสู่ระบบในปัจจุบันของคุณ ผู้ดูแลระบบต้องอนุมัติก่อนที่จะให้สิทธิ์การเข้าถึงแบบยกระดับชั่วคราว"
+
+msgid "Requested Role"
+msgstr "บทบาทที่ร้องขอ"
+
+msgid "Administrator"
+msgstr "ผู้ดูแลระบบ"
+
+msgid "Editor"
+msgstr "ตัวแก้ไข"
+
+msgid "Duration (minutes)"
+msgstr "ระยะเวลา (นาที)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "อธิบายว่าทำไมจึงต้องมีการเข้าถึงแบบยกระดับชั่วคราว"
+
+msgid "Submit Request"
+msgstr "ส่ง คำขอ"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "ให้สิทธิ์การเข้าถึงชั่วคราว (ผู้ดูแลระบบ)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "ให้สิทธิ์การเข้าถึงระดับสูงแบบจำกัดเวลาแก่ผู้ใช้ที่ระบุโดยตรงด้วยชื่อผู้ใช้หรืออีเมล"
+
+msgid "Target User (Username or Email)"
+msgstr "ผู้ใช้เป้าหมาย (ชื่อผู้ใช้หรืออีเมล)"
+
+msgid "username or user@example.com"
+msgstr "ชื่อผู้ใช้หรือ user@example.com"
+
+msgid "Grant Role"
+msgstr "บทบาทการให้สิทธิ์"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "อธิบาย สาเหตุที่ผู้ใช้รายนี้ต้องการการเข้าถึงระดับสูงชั่วคราว"
+
+msgid "Grant Access"
+msgstr "ให้สิทธิ์การเข้าถึง"
+
+msgid "Pending and Active Requests"
+msgstr "คำขอที่รอดำเนินการและที่ใช้งานอยู่"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "อนุมัติคำขอที่รอดำเนินการ ตรวจสอบการให้สิทธิ์โดยตรง และเพิกถอนสิทธิ์ที่ใช้งานอยู่จากคิวนี้"
+
+msgid "Original Role"
+msgstr "บทบาทดั้งเดิม"
+
+msgid "Elevated Role"
+msgstr "ยกระดับแล้ว บทบาท"
+
+msgid "Granted"
+msgstr "ได้รับสิทธิ์"
+
+msgid "Expires"
+msgstr "หมดอายุ"
+
+msgid "Approved By"
+msgstr "อนุมัติโดย"
+
+msgid "Loading..."
+msgstr "กำลังโหลด..."
+
+msgid "English (US)"
+msgstr "อังกฤษ (US)"
+
+msgid "English (UK)"
+msgstr "อังกฤษ (UK)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (สเปน)"
+
+msgid "Francais (French)"
+msgstr "ฝรั่งเศส (ฝรั่งเศส)"
+
+msgid "Deutsch (German)"
+msgstr "เยอรมัน (เยอรมัน)"
+
+msgid "Italiano (Italian)"
+msgstr "อิตาลี (อิตาลี)"
+
+msgid "Portugues (Brazilian)"
+msgstr "โปรตุเกส (บราซิล)"
+
+msgid "Nederlands (Dutch)"
+msgstr "เนเธอร์แลนด์ (ดัตช์)"
+
+msgid "Russian"
+msgstr "รัสเซีย"
+
+msgid "Japanese"
+msgstr "ญี่ปุ่น"
+
+msgid "Chinese (Simplified)"
+msgstr "จีน (ตัวย่อ)"
+
+msgid "Arabic"
+msgstr "อาหรับ"
+
+msgid "Hindi"
+msgstr "ฮินดี"
+
+msgid "Korean"
+msgstr "เกาหลี"
+
+msgid "Turkish"
+msgstr "ตุรกี"
+
+msgid "Polski (Polish)"
+msgstr "โปแลนด์ (โปแลนด์)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "บาฮาซาอินโดนีเซีย (อินโดนีเซีย)"
+
+msgid "Ukrainian"
+msgstr "ยูเครน"
+
+msgid "Vietnamese"
+msgstr "เวียดนาม"
+
+msgid "Thai"
+msgstr "ไทย"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (สวีเดน)"
+
+msgid "Dansk (Danish)"
+msgstr "Dansk (เดนมาร์ก)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (ฟินแลนด์)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (นอร์เวย์)"
+
+msgid "Cestina (Czech)"
+msgstr "เชสตินา (เช็ก)"
+
+msgid "Greek"
+msgstr "กรีก"
+
+msgid "Magyar (Hungarian)"
+msgstr "แมกยาร์ (ฮังการี)"
+
+msgid "Romana (Romanian)"
+msgstr "โรมานา (โรมาเนีย)"
+
+msgid "Slovencina (Slovak)"
+msgstr "สโลวีนา (สโลวัก)"
+
+msgid "Bulgarian"
+msgstr "บัลแกเรีย"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (โครเอเชีย)"
+
+msgid "Serbian"
+msgstr "เซอร์เบีย"
+
+msgid "Hebrew"
+msgstr "ฮิบรู"
+
+msgid "Persian"
+msgstr "เปอร์เซีย"
+
+msgid "Settings saved successfully."
+msgstr "บันทึกการตั้งค่าสำเร็จแล้ว"
+
+msgid "Settings reset to defaults."
+msgstr "รีเซ็ตการตั้งค่าเป็น ค่าเริ่มต้น"
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyMy Security Logs"
+
+msgid "No matching user found."
+msgstr "ไม่พบผู้ใช้ที่ตรงกัน"
+
+msgid "Security logs and related PII were anonymized."
+msgstr "บันทึกความปลอดภัยและ PII ที่เกี่ยวข้องไม่ได้รับการเปิดเผยชื่อ"
+
+msgid "Invalid user ID."
+msgstr "รหัสผู้ใช้ไม่ถูกต้อง"
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "คำขอลบแบบแมนนวลหรือแบบเว็บฮุคอยู่ในคิว"
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp ส่งคำขอลบแล้ว"
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "การลบแถบต้องมีการติดตามผล API ด้วยตนเองสำหรับบันทึกการปฏิบัติตามข้อกำหนด"
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "คำขอ API การลบผู้ใช้ Google Analytics ต้องได้รับการกำหนดค่าภายนอก"
+
+msgid "Privacy Preferences"
+msgstr "การตั้งค่าความเป็นส่วนตัว"
+
+msgid "Select which optional processing categories you allow."
+msgstr "เลือกหมวดหมู่การประมวลผลเพิ่มเติมที่คุณอนุญาต"
+
+msgid "Save Preferences"
+msgstr "บันทึก การตั้งค่า"
+
+msgid "Consent Management"
+msgstr "การจัดการคำยินยอม"
+
+msgid "Given"
+msgstr "ที่ได้รับ"
+
+msgid "Withdrawn"
+msgstr "ถอนออก"
+
+msgid "No consent records found."
+msgstr "ไม่พบบันทึกคำยินยอม"
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>ข้อผิดพลาด</strong>: มีบางอย่างผิดพลาด โปรดลองอีกครั้งในภายหลัง"
+
+msgid "The peer URL is not valid."
+msgstr "URL เพียร์ไม่ถูกต้อง"
+
+msgid "You cannot add your own site as a peer."
+msgstr "คุณไม่สามารถเพิ่มไซต์ของคุณเองเป็นเพียร์ได้"
+
+msgid "API key must be at least 16 characters."
+msgstr "คีย์ API ต้องมีอักขระอย่างน้อย 16 ตัว"
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "ถึงจำนวนสูงสุดของเพียร์ (%d) แล้ว"
+
+msgid "Missing authentication header."
+msgstr "ไม่มีส่วนหัวการตรวจสอบสิทธิ์"
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "คีย์โหนดไม่ถูกต้อง ไม่รู้จักเพียร์"
+
+msgid "Invalid request signature."
+msgstr "ลายเซ็นคำขอไม่ถูกต้อง"
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "เกินขีดจำกัดอัตราแล้ว ลองอีกครั้งในภายหลัง"
+
+msgid "Invalid site identifier."
+msgstr "ตัวระบุไซต์ไม่ถูกต้อง"
+
+msgid "Unknown contribution type."
+msgstr "ประเภทการสนับสนุนที่ไม่รู้จัก"
+
+msgid "Unknown benefit type."
+msgstr "ประเภทสิทธิประโยชน์ที่ไม่รู้จัก"
+
+msgid "Insufficient credits for this benefit."
+msgstr "เครดิตไม่เพียงพอสำหรับสิทธิประโยชน์นี้"
+
+msgid "Threat Forecast"
+msgstr "การคาดการณ์ภัยคุกคาม"
+
+msgid "Your site profile:"
+msgstr "เว็บไซต์ของคุณ โปรไฟล์:"
+
+msgid "Predicted threats this month:"
+msgstr "ภัยคุกคามที่คาดการณ์ไว้ในเดือนนี้:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "ยังไม่ตรวจพบเวกเตอร์ที่มีความมั่นใจสูง"
+
+msgid "Recommended actions:"
+msgstr "การดำเนินการที่แนะนำ:"
+
+msgid "No immediate actions required."
+msgstr "ไม่จำเป็นต้องดำเนินการในทันที"
+
+msgid "Not logged in"
+msgstr "ไม่ได้เข้าสู่ระบบ"
+
+msgid "A reason is required"
+msgstr "มีเหตุผลคือ จำเป็น"
+
+msgid "Invalid requested role"
+msgstr "บทบาทที่ร้องขอไม่ถูกต้อง"
+
+msgid "An active or pending request already exists for this role."
+msgstr "มีคำขอที่ใช้งานอยู่หรือรอดำเนินการอยู่แล้วสำหรับบทบาทนี้"
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "ส่งคำขอเข้าถึงแล้ว ผู้ดูแลระบบจะตรวจสอบคำขอของคุณ"
+
+msgid "Invalid request"
+msgstr "คำขอไม่ถูกต้อง"
+
+msgid "Pending request not found"
+msgstr "ไม่พบคำขอที่รอดำเนินการ"
+
+msgid "Request role is invalid"
+msgstr "บทบาทของคำขอไม่ถูกต้อง"
+
+msgid "Invalid approved role"
+msgstr "บทบาทที่ได้รับอนุมัติไม่ถูกต้อง"
+
+msgid "Access approved successfully"
+msgstr "การเข้าถึงได้รับอนุมัติเรียบร้อยแล้ว"
+
+msgid "Target user (username or email) is required."
+msgstr "ผู้ใช้เป้าหมาย (ชื่อผู้ใช้หรืออีเมล) คือ จำเป็น"
+
+msgid "A reason is required."
+msgstr "จำเป็นต้องระบุเหตุผล"
+
+msgid "Invalid requested role."
+msgstr "บทบาทที่ร้องขอไม่ถูกต้อง"
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "ไม่พบผู้ใช้เป้าหมาย ใช้ชื่อผู้ใช้หรืออีเมลที่มีอยู่"
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "ผู้ใช้มีบทบาทนี้แล้ว ไม่จำเป็นต้องทำการยกระดับชั่วคราว"
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "มีการอนุญาตที่ใช้งานอยู่หรือรอดำเนินการอยู่แล้วสำหรับผู้ใช้และบทบาทนี้"
+
+msgid "Unable to grant temporary access."
+msgstr "ไม่สามารถให้สิทธิ์การเข้าถึงชั่วคราวได้"
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "ให้สิทธิ์การเข้าถึง %2$s ชั่วคราวแก่ %1$s เป็นเวลา %3$d นาที"
+
+msgid "Invalid grant"
+msgstr "การให้สิทธิ์ไม่ถูกต้อง"
+
+msgid "Grant not found or already revoked"
+msgstr "ไม่พบการให้สิทธิ์ หรือเพิกถอนแล้ว"
+
+msgid "Permission revoked successfully"
+msgstr "เพิกถอนการอนุญาตเรียบร้อยแล้ว"
+
+msgid "Once Monthly"
+msgstr "เดือนละครั้ง"
+
+msgid "Every 5 Minutes"
+msgstr "ทุก 5 นาที"
 

@@ -8,4379 +8,5287 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "अंतिम स्कैन में %d खतरों का पता चला"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(सत्यापित करने के लिए यह कोड बोलें)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - उच्च"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 दिन"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 घंटा"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 दिन"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 मिनट"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - मध्यम"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 घंटे"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2एफए तरीके"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2एफए सेटिंग्स"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - निम्न"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 दिन"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 दिन"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 मिनट"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 दिन"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 निषिद्ध"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 नहीं मिला"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 बहुत अधिक अनुरोध (अनुशंसित)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 मिनट"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 सेवा अनुपलब्ध"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 घंटे"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 दिन"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 दिन"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 दिन (निरंतर)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 दिन"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 दिन"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "एआई सीखने की स्थिति"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "एआई स्थिति"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "एआई ख़तरे का पता लगाना"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "एआई लर्निंग डेटा सफलतापूर्वक रीसेट हो गया।"
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "AJAX अनुरोध प्रति मिनट"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "एपीआई और हेडलेस सुरक्षा"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "एपीआई और सेवाएँ"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "एपीआई बर्स्ट भत्ता"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "एपीआई समापन बिंदु"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "एपीआई कुंजी"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "एपीआई दर सीमित करना"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "प्रति मिनट एपीआई अनुरोध"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "एपीआई सुरक्षा"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "एपीआई टोकन"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "एपीआई दर सीमा पार हो गई. सीमा: %d अनुरोध प्रति मिनट."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "एपीआई प्रतिबंध"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "एपीआई टोकन, एचईसी टोकन, या प्रमाणीकरण कुंजी।"
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "छोड़ दिया गया"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "संगरोध के बारे में"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "प्रवेश अस्वीकृत"
 
 msgid "Action"
-msgstr "Action"
+msgstr "कार्रवाई"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "क्रियाएँ"
 
 msgid "Active"
-msgstr "Active"
+msgstr "सक्रिय"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "गतिविधि डैशबोर्ड"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "गतिविधि लॉग"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "गतिविधि लॉग सेटिंग्स"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "इन उपयोगकर्ताओं की गतिविधि लॉग नहीं की जाएगी."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "इससे पुराने गतिविधि लॉग स्वचालित रूप से हटा दिए जाएंगे।"
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "गतिविधि ट्रैकिंग"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "%d और अक्षर जोड़ें."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "अतिरिक्त सुरक्षा के लिए उपयोगकर्ता खातों में 2FA जोड़ें।"
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "लॉगिन और फॉर्म में कैप्चा जोड़ें।"
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "लॉगिन फॉर्म में कैप्चा सत्यापन जोड़ें"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "HTTP सुरक्षा हेडर जोड़ें (एक्स-फ़्रेम-विकल्प, सीएसपी, आदि)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "नई पासकी जोड़ें"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "सुरक्षा शीर्षलेख जोड़ें"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "वेबहुक जोड़ें"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "एक्स-फ़्रेम-विकल्प, एक्स-सामग्री-प्रकार-विकल्प और अन्य सुरक्षा शीर्षलेख जोड़ें।"
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "एक्स-फ़्रेम-विकल्प, एक्स-एक्सएसएस-प्रोटेक्शन हेडर जोड़ें"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "प्रमाणीकरण के दूसरे रूप की आवश्यकता के द्वारा सुरक्षा की एक अतिरिक्त परत जोड़ें।"
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "उपयोगकर्ता लॉगिन के लिए दो प्रकार के प्रमाणीकरण की आवश्यकता के द्वारा सुरक्षा की एक अतिरिक्त परत जोड़ें।"
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "TOTP-आधारित 2FA के साथ सुरक्षा की एक अतिरिक्त परत जोड़ें।"
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "छोटे अक्षर जोड़ें."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "संख्याएँ जोड़ें."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "विशेष वर्ण शामिल करें।"
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "सूची में जोड़ें"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "बड़े अक्षर जोड़ें."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "अतिरिक्त लॉगिन सुरक्षा उपाय. दर सीमक के साथ काम करता है."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "लॉगिन फॉर्म में कैप्चा जोड़ता है। सुरक्षित लेकिन उपयोगकर्ता अनुभव को प्रभावित कर सकता है।"
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Google reCAPTCHA, क्लाउडफ़ेयर टर्नस्टाइल, या गणित चुनौतियाँ जोड़ता है"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "HTTP सुरक्षा हेडर (एक्स-फ़्रेम-विकल्प, सीएसपी) जोड़ता है। सुरक्षित - ब्राउज़र सुरक्षा में सुधार करता है।"
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "TOTP, ईमेल या एसएमएस कोड के साथ अतिरिक्त सुरक्षा परत जोड़ता है"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "व्यवस्थापक लॉगिन (सफल व्यवस्थापक लॉगिन)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "उन्नत"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "उन्नत फ़ायरवॉल सेटिंग्स"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "उन्नत सख्तीकरण"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "उन्नत हार्डनिंग विकल्प"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "उन्नत लॉगिन सेटिंग्स"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "उन्नत विकल्प"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "उन्नत स्कैनर विकल्प"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "उन्नत अनुमान"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "प्रभावित फ़ाइलें:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "चेतावनी सीमा"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "चेतावनी प्रकार"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "अलर्ट"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "प्लगइन निष्क्रिय होने पर अलर्ट भेजा जाता है।"
 
 msgid "All"
-msgstr "All"
+msgstr "सब"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "सब साफ़!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "सभी घटनाएँ"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "सभी गंभीरता"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "सभी उपयोगकर्ताओं को स्वेच्छा से 2FA सक्षम करने की अनुमति दें।"
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "ईमेल कोड को बैकअप विधि के रूप में अनुमति दें"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "दर सीमा से ऊपर शॉर्ट बर्स्ट की अनुमति दें।"
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "प्रवर्तन से पहले उपयोगकर्ताओं को 2FA सेट करने का समय दें।"
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "उपयोगकर्ताओं को 2FA सक्षम करने की अनुमति दें"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "उपयोगकर्ताओं को आपातकालीन बैकअप कोड उत्पन्न करने की अनुमति दें।"
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "उपयोगकर्ताओं को विश्वसनीय उपकरणों पर 2FA छोड़ने की अनुमति दें।"
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "अनुमत उपयोगकर्ता एजेंट"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "विश्लेषिकी"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "विसंगतियाँ"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "कोई भी गंभीरता"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "कोई भी संशोधन तत्काल ईमेल अलर्ट ट्रिगर करता है।"
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "सेटिंग्स लागू करें"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "वर्डप्रेस सुरक्षा सर्वोत्तम अभ्यास लागू करें।"
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "सुरक्षा सुधार लागू करें"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "वर्डप्रेस पर सुरक्षा सख्त उपाय लागू करें।"
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "अपने वर्डप्रेस इंस्टॉलेशन की सुरक्षा के लिए सुरक्षा सख्त उपाय लागू करें।"
 
 msgid "ArcSight"
-msgstr "ArcSight"
+msgstr "आर्कसाइट"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "क्या आप वाकई इस पासकी को हटाना चाहते हैं?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "क्या आप सुनिश्चित रूप से आगे बढ़ना चाहते हैं?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "आक्रमण सुरक्षा"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "विंडो का प्रयास करें"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "ऑडियो (बोलना)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "प्रमाणित किया जा रहा है..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "प्रमाणीकरण कोड"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "प्रमाणीकरण घटनाएँ"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "प्रमाणीकरण टोकन"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "प्रमाणीकरण विफल रहा. कृपया पुन: प्रयास करें।"
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "एपीआई एक्सेस के लिए प्रमाणीकरण आवश्यक है।"
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "ग्राफक्यूएल एक्सेस के लिए प्रमाणीकरण आवश्यक है।"
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "लेखक स्कैन"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "ऑटो-ब्लॉक अवधि"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "बार-बार अपराध करने वालों को ऑटो-ब्लॉक करें"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "ऑटो-ब्लॉक थ्रेशोल्ड"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "स्वतः ठीक करें"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "स्वचालित रूप से रिपोर्ट जनरेट करें"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "स्वतः-संगरोध की धमकियाँ"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "ऑटो-स्कैन शेड्यूल"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "स्वतः अद्यतन"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "स्वतः अद्यतन सेटिंग्स"
 
 msgid "Auto-Updates"
 msgstr "स्वचालित अपडेट"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "स्वतः पता लगाएं"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "स्वचालित स्कैनिंग"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "स्वचालित स्कैन"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "कई बार नियमों को ट्रिगर करने वाले आईपी को स्वचालित रूप से ब्लैकलिस्ट करें।"
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "सुरक्षा घटनाओं और कमजोरियों के लिए स्वचालित रूप से जीरा टिकट बनाएं।"
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "अपने प्रोजेक्ट प्रबंधन सिस्टम में सुरक्षा घटनाओं के लिए स्वचालित रूप से टिकट बनाएं।"
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "शेड्यूल पर स्वचालित रूप से रिपोर्ट तैयार करें"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "स्वचालित रूप से पाए गए मैलवेयर को संगरोध में ले जाएं।"
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "पृष्ठभूमि में स्वचालित रूप से स्कैन चलाएँ।"
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "मैलवेयर हस्ताक्षरों को प्रतिदिन स्वचालित रूप से अपडेट करें।"
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "उपलब्ध देश"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "उपलब्ध घटनाएँ"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "औसत/दिन"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "पृष्ठभूमि स्कैन"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "प्रतिस्थापन से पहले दूषित फ़ाइलों का बैकअप लेता है"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "बैकअप कोड"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "अपने डेटाबेस का बैकअप, अनुकूलन और सुरक्षित करें।"
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "बैकअप और सफ़ाई"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "बैकअप wp-content/nexifymy-backups/core/ में संग्रहित होते हैं"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "ख़राब बॉट्स"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "ख़राब अनुरोध"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "संतुलित (अनुशंसित)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "व्यवहार अभिलेख"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "व्यवहार विश्लेषण"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "ब्लैकलिस्ट (ब्लॉक सूचीबद्ध)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "ब्लैकलिस्ट (ब्लॉक चयनित)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "आईपी को ब्लैकलिस्ट करें"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "ब्लैकलिस्ट: चयनित देशों को ब्लॉक करें। श्वेतसूची: केवल चयनित देशों को अनुमति दें।"
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "ब्लैकलिस्टेड आईपी"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "ख़राब बॉट्स को ब्लॉक करें"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "सीएसआरएफ हमलों को रोकें"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "सामान्य पासवर्ड ब्लॉक करें"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "ब्लॉक डायरेक्टरी ट्रैवर्सल"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "ब्लॉक अवधि"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "खाली उपयोगकर्ता एजेंटों को ब्लॉक करें"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "अत्यधिक एपीआई उपयोगकर्ताओं को ब्लॉक करें"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "फ़ाइल संपादक को ब्लॉक करें"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "स्थानीय फ़ाइल समावेशन को ब्लॉक करें"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "संदेश को ब्लॉक करें"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "ब्लॉक मोड"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "ब्लॉक मोड (अनुशंसित)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "ब्लॉक मोड: दुर्भावनापूर्ण अनुरोधों को ब्लॉक करता है। मॉनिटर मोड: बिना अवरोध किए खतरों को लॉग करता है।"
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "रिमोट कोड निष्पादन को ब्लॉक करें"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "दूरस्थ फ़ाइल समावेशन को ब्लॉक करें"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "SQL इंजेक्शन को ब्लॉक करें"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "संदिग्ध फ़ाइल अपलोड को ब्लॉक करें"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "XML-RPC एक्सेस को ब्लॉक करें (क्रूर बल को रोकता है)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "XSS हमलों को रोकें"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "विशिष्ट देशों से पहुंच अवरुद्ध करें."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "आक्रामक क्रॉलर को ब्लॉक करें (उच्च अनुरोध दर)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "ब्लॉक लेखक गणना स्कैन (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "अत्यधिक लंबी क्वेरी स्ट्रिंग्स को ब्लॉक करें."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "ज्ञात ख़राब बॉट्स और स्क्रेपर्स को ब्लॉक करें"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "ज्ञात दुर्भावनापूर्ण बॉट और स्क्रेपर्स को ब्लॉक करें।"
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "विकृत अनुरोधों और संदिग्ध क्वेरी स्ट्रिंग्स को ब्लॉक करें"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "दुर्भावनापूर्ण अनुरोधों को रोकें"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "दुर्भावनापूर्ण अनुरोधों और हमलों को रोकें"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "देश के आधार पर यातायात को अवरुद्ध करें या अनुमति दें।"
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "DoS हमलों को रोकने के लिए इस आकार से बड़े अनुरोधों को ब्लॉक करें।"
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "खाली उपयोगकर्ता-एजेंट के साथ अनुरोधों को ब्लॉक करें (कुछ वैध बॉट्स को ब्लॉक कर सकते हैं)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "उपयोगकर्ता-एजेंट हेडर के बिना अनुरोधों को ब्लॉक करें।"
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "संदिग्ध आईपी को ब्लॉक करें"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "संदिग्ध उपयोगकर्ता-एजेंटों को ब्लॉक करें"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "विशिष्ट देशों से यातायात अवरुद्ध करें. सक्षम करने से पहले सेटिंग्स में देशों को कॉन्फ़िगर करें।"
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "निष्पादन योग्य एक्सटेंशन (.php, .exe, .sh, आदि) के साथ अपलोड को ब्लॉक करें।"
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "अवरुद्ध हमले"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "अवरुद्ध फ़ाइल एक्सटेंशन"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "अवरुद्ध अनुरोध"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "अवरुद्ध उपयोगकर्ता एजेंट"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "दुर्भावनापूर्ण व्यवहार दिखाने वाले आईपी पते को ब्लॉक करता है। सुरक्षित - आप अपने आईपी को श्वेतसूची में डाल सकते हैं।"
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "इस यूआरएल को बुकमार्क करें ताकि आप हमेशा अपने लॉगिन पेज तक पहुंच सकें।"
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "बॉट और क्रॉलर सुरक्षा"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "बॉट और उपयोगकर्ता एजेंट सुरक्षा"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "बॉट रोकथाम"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "बॉट सुरक्षा"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "ब्राउज़र्स"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "क्रूर बल"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "क्रूर बल संरक्षण"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "क्रूर बल सुरक्षा और लॉगिन प्रयास सीमाएँ।"
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "बग"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "सबसे व्यस्त दिन"
 
 msgid "CAPTCHA"
-msgstr "CAPTCHA"
+msgstr "कैप्चा"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "कैप्चा सुरक्षा"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "सीडीएन एकीकरण"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "सीडीएन स्थिति"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "सीईएफ (सामान्य इवेंट प्रारूप)"
 
 msgid "CI/CD"
-msgstr "CI/CD"
+msgstr "सीआई/सीडी"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "सीआई/सीडी पाइपलाइन"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "सीआई/सीडी पाइपलाइन एकीकरण"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "रद्द करें"
 
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "कैप्चा"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "कैप्चा पूर्वावलोकन"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "कैप्चा प्रदाता"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "कैप्चा सेटिंग्स"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "डेटाबेस उपसर्ग बदलें"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "डेटाबेस तालिका उपसर्ग बदलें (मैन्युअल डेटाबेस अद्यतन की आवश्यकता है)।"
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "हमलों को रोकने के लिए डिफ़ॉल्ट लॉगिन यूआरएल बदलें।"
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "स्वचालित हमलों को रोकने के लिए डिफ़ॉल्ट wp-admin लॉगिन URL बदलें।"
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "बॉट हमलों को रोकने के लिए लॉगिन यूआरएल को /wp-admin से कस्टम स्लग में बदलता है"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "चैनल"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "चरित्र आवश्यकताएँ"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "कोर इंटीग्रिटी की जाँच करें"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "अंतराल की जाँच करें"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "आधिकारिक स्रोतों का उपयोग करके दूषित वर्डप्रेस कोर फ़ाइलों की जाँच करें और मरम्मत करें।"
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "संशोधनों और मैलवेयर के लिए मुख्य फ़ाइलों की जाँच करें।"
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "पिछले दरवाज़ों की जाँच करें"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "अस्पष्टता की जाँच करें"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "ज्ञात कमजोरियों की जाँच करें।"
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "दुर्भावनापूर्ण सामग्री के लिए अपलोड की गई फ़ाइलों की जाँच करें।"
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "वेब शैलों की जाँच करता है"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "ज्ञात कमजोरियों के लिए प्लगइन/थीम की जाँच करता है। सुरक्षित - केवल संस्करणों की जाँच करता है।"
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "एक अनोखा, अनुमान लगाने में कठिन स्लग चुनें।"
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "NexifyMy कैप्चा के लिए चुनौती का प्रकार चुनें।"
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "फ़ाइलें साफ़ करें"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "फ़ाइलें साफ़ करें:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "डेटाबेस को साफ़ और अनुकूलित करें"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "डेटाबेस प्रदर्शन को बेहतर बनाने के लिए अनावश्यक डेटा साफ़ करें।"
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "लॉग साफ़ करें"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "बादल भड़कना"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "क्लाउडफ्लेयर और बहुत कुछ"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "क्लाउडफ्लेयर एपीआई सेटिंग्स"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "क्लाउडफ्लेयर एपीआई टोकन (ज़ोन अनुमतियों के साथ)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "क्लाउडफ्लेयर टर्नस्टाइल"
 
 msgid "Code"
-msgstr "Code"
+msgstr "कोड"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "कोड समाप्ति"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "कोड गुणवत्ता संबंधी समस्याएं"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "अपलोड में अवरोधित करने के लिए फ़ाइल एक्सटेंशन की अल्पविराम से अलग की गई सूची।"
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "छोड़ने के लिए फ़ाइल एक्सटेंशन की अल्पविराम से अलग की गई सूची (उदाहरण के लिए, जेपीजी, पीएनजी, पीडीएफ)।"
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "टिप्पणी अवरुद्ध"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "टिप्पणी प्रपत्र"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "टिप्पणी पोस्ट करने की दर"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "टिप्पणी प्रपत्र"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "संचार"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "संचार प्लेटफार्म"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "आधिकारिक वर्डप्रेस चेकसम के साथ कोर फ़ाइलों की तुलना करें।"
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "संशोधनों का पता लगाने के लिए आधिकारिक चेकसम के साथ अपनी वर्डप्रेस कोर फ़ाइलों की तुलना करें।"
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "अपेक्षित हैश के विरुद्ध प्रत्येक कोर फ़ाइल की तुलना करता है"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "सभी RSS और एटम फ़ीड को पूरी तरह से अक्षम करें।"
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "सभी फ़ाइल संशोधनों को पूर्णतः अक्षम करें (DISALLOW_FILE_MODS)।"
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "अनुपालन"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "अनुपालन एवं रिपोर्टिंग"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "अनुपालन एवं सुरक्षा रिपोर्टिंग"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "अनुपालन सेटिंग्स"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "संगीतकार निर्भरता"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "व्यापक विश्लेषण"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "व्यापक उपयोगकर्ता गतिविधि ट्रैकिंग, लॉगिन मॉनिटरिंग और सिस्टम इवेंट लॉगिंग।"
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "कॉन्फ़िगर करें"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "उन्नत लॉगिन सुरक्षा के लिए 2FA कॉन्फ़िगर करें"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "सुरक्षा और प्रदर्शन के लिए CDN कॉन्फ़िगर करें."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "सीडीएन एकीकरण और कैश प्रबंधन कॉन्फ़िगर करें।"
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "अपनी साइट की सुरक्षा के लिए वेब एप्लिकेशन फ़ायरवॉल (WAF) कॉन्फ़िगर करें।"
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "ईमेल अलर्ट और सूचनाएं कॉन्फ़िगर करें."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "फ़ायरवॉल नियम और सुरक्षा सेटिंग्स कॉन्फ़िगर करें।"
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "मैलवेयर स्कैनर व्यवहार और निर्धारित स्कैनिंग विकल्प कॉन्फ़िगर करें।"
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "प्लगइन सेटिंग्स और प्राथमिकताएँ कॉन्फ़िगर करें."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "प्लगइन सेटिंग्स कॉन्फ़िगर करें."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "अपनी सुरक्षा सेटिंग्स कॉन्फ़िगर करें."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "पुष्टि करें"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "कार्रवाई की पुष्टि करें"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "मैलवेयर की पुष्टि की गई"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "अपनी सुरक्षा निगरानी को एसआईईएम, टिकटिंग, संचार और सीआई/सीडी प्लेटफॉर्म से कनेक्ट करें।"
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "NexifyMy Security में सहायता के लिए हमारी सहायता टीम से संपर्क करें।"
 
 msgid "Content"
-msgstr "Content"
+msgstr "सामग्री"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "सामग्री गतिविधि"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "सामग्री परिवर्तन"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "सामग्री घटनाएँ"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "सामग्री सुरक्षा"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "कोर फ़ाइल संशोधन"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "कोर फ़ाइल मरम्मत"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "कोर मरम्मत"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "कोर वर्डप्रेस अखंडता"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "कोर फ़ाइल अखंडता"
 
 msgid "Count"
-msgstr "Count"
+msgstr "गिनती"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "देश"
 
 msgid "Country"
-msgstr "Country"
+msgstr "देश"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "देश अवरोधन सेटिंग्स"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "देश प्रतिबंध"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "अभी बैकअप बनाएं"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "अपने वर्डप्रेस डेटाबेस का बैकअप बनाएं। बैकअप सुरक्षित रूप से संग्रहीत हैं और डाउनलोड किए जा सकते हैं।"
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "महत्वपूर्ण सुरक्षा घटनाओं के लिए ServiceNow में घटनाएँ बनाएँ।"
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "यहां वेबहुक बनाएं: https://api.slack.com/messageing/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "डिस्कॉर्ड सर्वर सेटिंग्स > इंटीग्रेशन > वेबहुक में वेबहुक बनाएं"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "वेबहुक बनाएं: टीमें > चैनल > कनेक्टर्स > इनकमिंग वेबहुक"
 
 msgid "Created"
-msgstr "Created"
+msgstr "बनाया गया"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "बनाया गया: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "गंभीर"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "केवल गंभीर"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "वर्तमान लॉगिन यूआरएल"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "वर्तमान संस्करण"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "वर्तमान:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "कस्टम लॉगिन यूआरएल"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "कस्टम यूआरएल"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "कस्टम वेबहुक"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "दैनिक"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "दैनिक (अनुशंसित)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "दैनिक स्थिति सारांश"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "दैनिक सारांश"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "डैशबोर्ड"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "डेटा प्रतिधारण"
 
 msgid "Database"
-msgstr "Database"
+msgstr "डेटाबेस"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "डेटाबेस क्रियाएँ"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "डेटाबेस बैकअप"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "डेटाबेस सूचना"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "डेटाबेस अनुकूलन"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "डेटाबेस अनुकूलक"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "डेटाबेस सुरक्षा"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "डेटाबेस का आकार"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "डेटाबेस बैकअप और अनुकूलन. सक्षम करने से पहले बैकअप शेड्यूल कॉन्फ़िगर करें."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "डेटाबेस सुरक्षा जांच"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "डेटाडॉग"
 
 msgid "Date"
-msgstr "Date"
+msgstr "दिनांक"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "दिनांक/समय"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "निष्क्रियकरण निगरानी:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "डिबग मोड"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "गहरा"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "गहन स्कैन"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "डिफ़ॉल्ट स्कैन मोड"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "कोई भी निर्दिष्ट न होने पर डिफ़ॉल्ट स्कैन मोड का उपयोग किया जाता है।"
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "परिभाषाएँ"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "हटाएँ"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "अनइंस्टॉल करते समय सभी प्लगइन डेटा हटा दें"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "हटाएँ:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "निर्भरता स्कैनिंग, तृतीय-पक्ष स्क्रिप्ट निगरानी और सीडीएन अखंडता सत्यापन।"
 
 msgid "Description"
-msgstr "Description"
+msgstr "विवरण"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "आपकी साइट के ट्रैफ़िक और सुरक्षा घटनाओं की विस्तृत जानकारी"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "आपकी वेबसाइट सुरक्षा प्रदर्शन की विस्तृत जानकारी।"
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "कोड निष्पादन प्रयासों का पता लगाएं और उन्हें ब्लॉक करें।"
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "छिपी हुई पिछले दरवाज़े की स्क्रिप्ट और शेल का पता लगाएं।"
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "मैलवेयर, बैकडोर और संदिग्ध कोड का पता लगाएं"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "खतरों का पता लगाएं"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "व्यवहार विश्लेषण का उपयोग करके अज्ञात खतरों का पता लगाएं।"
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "पता लगाने के तरीके"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "डिवाइस के प्रकार"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "कठिनाई"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "कठिनाई स्तर"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "NexifyMy कैप्चा चुनौतियों के लिए कठिनाई स्तर।"
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "प्रत्यक्ष"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "निर्देशिका ट्रैवर्सल"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "निर्देशिका ट्रैवर्सल सुरक्षा"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "2FA अक्षम करें"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "एप्लिकेशन पासवर्ड अक्षम करें"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "लेखक पुरालेख अक्षम करें"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "निर्देशिका ब्राउज़िंग अक्षम करें"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "एम्बेड अक्षम करें"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "फ़ाइल संपादक अक्षम करें"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "फ़ाइल संशोधन अक्षम करें"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "लॉगिन त्रुटि संदेश अक्षम करें"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "पिंगबैक अक्षम करें"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "पिंगबैक अक्षम करें"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "प्लगइन/थीम इंस्टालेशन अक्षम करें"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "REST API उपयोगकर्ता गणना अक्षम करें"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "RSS/एटम फ़ीड अक्षम करें"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "राइट-क्लिक अक्षम करें"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "पाठ चयन अक्षम करें"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "ट्रैकबैक अक्षम करें"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "WP संपादक अक्षम करें"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "एक्सएमएल-आरपीसी अक्षम करें"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "XML-RPC अक्षम करें (सामान्य क्रूर बल वेक्टर को रोकता है)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "XML-RPC अक्षम करें (पिंगबैक हमलों को रोकता है)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "XML-RPC को अक्षम करें (DDoS और क्रूर बल हमलों में प्रयुक्त)।"
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "उपयोगकर्ता नाम गणना को रोकने के लिए लेखक संग्रह पृष्ठों को अक्षम करें।"
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "oEmbed कार्यक्षमता और REST API एंडपॉइंट अक्षम करें।"
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "DDoS को रोकने के लिए पिंगबैक कार्यक्षमता अक्षम करें।"
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "पिंगबैक/ट्रैकबैक कार्यक्षमता अक्षम करें"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "वर्डप्रेस एडमिन में प्लगइन/थीम फ़ाइल एडिटर को अक्षम करें।"
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "REST API के माध्यम से सार्वजनिक उपयोगकर्ता गणना अक्षम करें"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "फ्रंटएंड पर राइट-क्लिक संदर्भ मेनू अक्षम करें।"
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "कोड इंजेक्शन को रोकने के लिए अंतर्निहित थीम और प्लगइन संपादक को अक्षम करें।"
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "थीम और प्लगइन संपादक अक्षम करें"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "व्यवस्थापक में थीम/प्लगइन संपादक अक्षम करें"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "ट्रैकबैक कार्यक्षमता अक्षम करें."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "विकलांग"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "हमलों को रोकने के लिए XML-RPC को अक्षम करता है। जब तक आप जेटपैक या मोबाइल ऐप्स का उपयोग नहीं करते तब तक सुरक्षित।"
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "अंतर्निहित थीम/प्लगइन संपादक को अक्षम करता है। सुरक्षित - व्यवस्थापक में कोड संपादन को रोकता है।"
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "फ़ाइल संपादन, XML-RPC को अक्षम करता है, और वर्डप्रेस सर्वोत्तम प्रथाओं को लागू करता है"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "कलह एकीकरण"
 
 msgid "Download"
-msgstr "Download"
+msgstr "डाउनलोड करें"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "आधिकारिक स्रोत से ताज़ा वर्डप्रेस पैकेज डाउनलोड करें"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "आसान"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "आसान (केवल अतिरिक्त)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "सुरक्षा कारणों से NexifyMy Security प्लगइन फ़ाइलों का संपादन अक्षम है।"
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "संपादक एवं फ़ाइल पहुंच"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "संपादक को अवरुद्ध करना:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "लोचदार खोज"
 
 msgid "Email"
-msgstr "Email"
+msgstr "ईमेल"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "ईमेल अलर्ट सेटिंग्स"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "ईमेल अलर्ट"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "ईमेल बैकअप"
 
 msgid "Email Notifications"
 msgstr "ईमेल सूचनाएं"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "ईमेल रिपोर्ट"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "ईमेल स्कैन रिपोर्ट"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "ईमेल सत्यापन"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "खाली उपयोगकर्ता एजेंट"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "सक्षम करें"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "2FA सक्षम करें"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "2एफए मॉड्यूल सक्षम करें"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "गतिविधि लॉगिंग सक्षम करें"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "अलर्ट सक्षम करें"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "कैप्चा सुरक्षा सक्षम करें"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "सीडीएन एकीकरण सक्षम करें"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "सीडीएन सुविधाएँ सक्षम करें"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "सीआई/सीडी एकीकरण सक्षम करें"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "कैप्चा सक्षम करें"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "कस्टम वेबहुक सक्षम करें"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "कलह सक्षम करें"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "ईमेल अलर्ट सक्षम करें"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "फ़ायरवॉल सक्षम करें"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "जियो ब्लॉकिंग सक्षम करें"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "लॉगिन छिपाएँ सक्षम करें"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "जीरा सक्षम करें"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "सुरक्षा सक्षम करें"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "दर सीमित सक्षम करें"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "सिएम एकीकरण सक्षम करें"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "एसएसएल/एचटीटीपीएस सक्षम करें"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "स्कैनर सक्षम करें"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "स्कैनर मॉड्यूल सक्षम करें"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "अनुसूचित स्कैन सक्षम करें"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "ServiceNow सक्षम करें"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "स्लैक सक्षम करें"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "टीमों को सक्षम करें"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "दो-कारक प्रमाणीकरण सक्षम करें"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "WAF सक्षम करें"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "WAF मॉड्यूल सक्षम करें"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "WAF सुरक्षा सक्षम करें"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "वेब एप्लिकेशन फ़ायरवॉल सक्षम करें"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "वेब एप्लिकेशन फ़ायरवॉल सुरक्षा सक्षम करें।"
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "अपनी साइट के लिए सुरक्षा मॉड्यूल सक्षम और कॉन्फ़िगर करें।"
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "सुरक्षा मॉड्यूल सक्षम और कॉन्फ़िगर करें."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "कैप्चा सुरक्षा सक्षम करें"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "देश-आधारित अवरोधन सक्षम करें"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "डिबग लॉगिंग सक्षम करें (केवल समस्या निवारण के लिए)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "हमलों को रोकने के लिए फ़ायरवॉल सुरक्षा सक्षम करें"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "लॉगिन दर सीमित करना सक्षम करें"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "मैलवेयर स्कैनर सक्षम करें"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "सुरक्षा मॉड्यूल सक्षम या अक्षम करें."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "संपूर्ण WAF मॉड्यूल को सक्षम या अक्षम करें।"
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "मैलवेयर स्कैनर को सक्षम या अक्षम करें।"
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "दर सीमित करने वाले मॉड्यूल को सक्षम या अक्षम करें।"
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "दो-कारक प्रमाणीकरण सक्षम या अक्षम करें।"
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "निर्धारित स्कैन सक्षम करें"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "भेद्यता स्कैनर सुविधाएँ सक्षम करें"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "सक्षम"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "समापन बिंदु"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "समापन बिंदु यूआरएल"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "मजबूत पासवर्ड लागू करें"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "मजबूत पासवर्ड आवश्यकताएँ लागू करें"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "सभी उपयोगकर्ताओं के लिए मजबूत पासवर्ड आवश्यकताएँ लागू करें।"
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "मजबूत पासवर्ड आवश्यकताएँ लागू करें."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "उपयोगकर्ताओं के लिए मजबूत पासवर्ड आवश्यकताओं को लागू करता है। सुरक्षित - केवल नए पासवर्ड को प्रभावित करता है।"
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "न्यूनतम लंबाई, जटिलता नियमों के साथ मजबूत पासवर्ड लागू करता है"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "सेटअप सत्यापित करने के लिए 6-अंकीय कोड दर्ज करें"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "आईपी दर्ज करें, प्रति पंक्ति एक"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "उत्तर दर्ज करें"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "कोड दर्ज करें:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "एंटरप्राइज़-ग्रेड वर्डप्रेस सुरक्षा"
 
 msgid "Error"
-msgstr "Error"
+msgstr "त्रुटि"
 
 msgid "Event"
-msgstr "Event"
+msgstr "घटना"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "घटना प्रारूप"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "इवेंट लॉग"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "घटना की गंभीरता"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "इवेंट प्रकार"
 
 msgid "Events"
-msgstr "Events"
+msgstr "घटनाएँ"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "घटनाएँ (7 दिन)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "टिकट बनाने के लिए घटनाक्रम"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "अग्रेषित करने के लिए घटनाएँ"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "सूचित करने योग्य घटनाएँ"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "उदाहरण: GitHub क्रियाएँ"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "उदाहरण: गिटलैब सीआई"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "उदाहरण: जेनकींस पाइपलाइन"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "बहिष्कृत एक्सटेंशन"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "बहिष्कृत फ़ाइल पैटर्न"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "बहिष्कृत पथ"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "बहिष्कृत उपयोगकर्ता"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "बहिष्करण"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "विस्तृत फ़ाइल स्कैन"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "मौजूदा बैकअप"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "सीएसवी निर्यात करें"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "निर्यात सेटिंग्स"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "अपनी NexifyMy सुरक्षा सेटिंग्स को JSON फ़ाइल में निर्यात करें। इसमें सभी मॉड्यूल कॉन्फ़िगरेशन, फ़ायरवॉल नियम, आईपी सूचियाँ और स्कैन सेटिंग्स शामिल हैं।"
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "बाहरी स्क्रिप्ट और सीडीएन संसाधन"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "अतिरिक्त लॉगिन सुरक्षा"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "मैलवेयर पर विफल निर्माण"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "कमजोरियों पर असफल निर्माण"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "असफल"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "अस्थायी तालाबंदी से पहले 2FA प्रयास विफल।"
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "लॉगिन विफल"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "विफल लॉगिन"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "विफल लॉगिन प्रयास का पता चला"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "पासकी पंजीकृत करने में विफल."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "शीघ्र निष्पादन"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "त्वरित सुरक्षा जांच"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "WordPress.org API से आधिकारिक फ़ाइल चेकसम प्राप्त करता है"
 
 msgid "File"
-msgstr "File"
+msgstr "फ़ाइल"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "फ़ाइल संपादक"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "फ़ाइल हैशिंग:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "फ़ाइल समावेशन"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "फ़ाइल समावेशन सुरक्षा"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "फ़ाइल सत्यनिष्ठा जाँच"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "फ़ाइल अखंडता निगरानी"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "फ़ाइल अनुमतियाँ"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "फ़ाइल संगरोधित"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "स्कैनिंग से बाहर करने के लिए फ़ाइल एक्सटेंशन (प्रति पंक्ति एक, बिंदुओं के बिना)।"
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "फ़ाइलनाम"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "फ़ाइलें स्कैन की गईं"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "स्कैन की गई फ़ाइलें:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "फ़ाइलों की समय-समय पर आधार रेखा से तुलना की जाती है।"
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "संगरोध में फ़ाइलें सुरक्षित रूप से संग्रहीत की जाती हैं और निष्पादित नहीं की जा सकतीं।"
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "इससे बड़ी फ़ाइलें स्कैनिंग के दौरान छोड़ दी जाएंगी."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "फ़िल्टर करें"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "फ़ायरवॉल"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "फ़ायरवॉल और सुरक्षा"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "फ़ायरवॉल कॉन्फ़िगरेशन"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "फ़ायरवॉल नियम"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "फ़ायरवॉल सेटिंग्स"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "संशोधित फ़ाइलें ठीक करें"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "अत्यधिक अस्पष्ट या एन्कोडेड कोड को चिह्नित करें।"
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "व्यवस्थापक के लिए एसएसएल को बाध्य करें"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "व्यवस्थापक क्षेत्र के लिए SSL/HTTPS को बाध्य करें (FORCE_SSL_ADMIN)।"
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "व्यवस्थापकों के लिए बल"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "प्रारूप:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "केंद्रीकृत लॉगिंग और विश्लेषण के लिए सुरक्षा घटनाओं को अपने सुरक्षा सूचना और इवेंट प्रबंधन (एसआईईएम) प्लेटफॉर्म पर अग्रेषित करें।"
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "क्लाउडफ़ेयर डैशबोर्ड में अवलोकन के अंतर्गत पाया गया"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "ज्ञात सुरक्षित प्लगइन में पाया गया - संभावित वैध उपयोग"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "सिस्टम निर्देशिका में पाया गया - वैध हो सकता है"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "दिनांक से"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "ईमेल से"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "नाम से"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "आपके सिएम प्लेटफ़ॉर्म के लिए पूर्ण HTTP/HTTPS एंडपॉइंट URL।"
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "पूर्ण मैलवेयर विश्लेषण"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "पूर्ण मैलवेयर स्कैन"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "पूर्ण मैलवेयर हस्ताक्षर"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "संपूर्ण साइट विश्लेषण"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "जीडीपीआर, सीसीपीए, एचआईपीएए अनुपालन मॉड्यूल और व्यापक सुरक्षा ऑडिट रिपोर्ट।"
 
 msgid "General"
-msgstr "General"
+msgstr "सामान्य"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "सामान्य अनुरोध सीमा"
 
 msgid "General Settings"
 msgstr "सामान्य सेटिंग्स"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "रिपोर्ट तैयार करें"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "एसआरआई उत्पन्न करें"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "यहां से जेनरेट करें: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "उत्पन्न"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "जेनेरिक HTTP समापन बिंदु"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "जेनेरिक प्रॉक्सी"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "जियो ब्लॉक"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "जियो ब्लॉकिंग"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "भौगोलिक वितरण"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "विस्तृत भेद्यता डेटा के लिए wpscan.com से निःशुल्क एपीआई टोकन प्राप्त करें।"
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "सुरक्षा घटनाएँ घटित होने पर अपनी टीम के संचार चैनलों में तुरंत सूचनाएं प्राप्त करें।"
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "नवीनतम स्कैन स्थिति प्राप्त करें"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "स्कैन परिणाम प्राप्त करें (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "अपनी कुंजियाँ Google reCAPTCHA या Cloudflare टर्नस्टाइल डैशबोर्ड से प्राप्त करें।"
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "आरंभ करना"
 
 msgid "Google reCAPTCHA v2"
-msgstr "Google reCAPTCHA v2"
+msgstr "गूगल रीकैप्चा v2"
 
 msgid "Google reCAPTCHA v3"
-msgstr "Google reCAPTCHA v3"
+msgstr "गूगल रीकैप्चा v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "अनुग्रह अवधि"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "ग्रेड"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "ग्राफक्यूएल सुरक्षा"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "ग्राफक्यूएल आत्मनिरीक्षण अक्षम है।"
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "ग्राफक्यूएल दर सीमा पार हो गई। सीमा: %d प्रश्न प्रति मिनट।"
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP सुरक्षा शीर्षलेख"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP सख्त परिवहन सुरक्षा (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP हेडर"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "संभाल"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "कठिन"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "कठिन (गुणा शामिल है)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "कठोर स्थल"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "सख्त होना"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "सख्त करने के विकल्प"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "हेडर"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "सहायता एवं दस्तावेज़ीकरण"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "अनुमानी विश्लेषण"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "अनुमानी पैटर्न का पता लगाना"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "लॉगिन छिपाएँ"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "लॉगिन पेज छिपाएँ"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "लॉगिन यूआरएल छुपाएं"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "लॉगिन यूआरएल छुपाएं:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "WP संस्करण छिपाएँ"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "वर्डप्रेस लॉगिन यूआरएल छुपाएं"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "वर्डप्रेस संस्करण छुपाएं"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "वर्डप्रेस संस्करण को सोर्स कोड से छुपाएं"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "डिफ़ॉल्ट लॉगिन यूआरएल छुपाएं"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "WP-एडमिन छुपाएं"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "हमलावरों से wp-admin और wp-login.php छिपाएँ।"
 
 msgid "High"
-msgstr "High"
+msgstr "ऊँचा"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "उच्च (अधिकतम पहचान)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "उच्च सुरक्षा (अधिक जाँच, धीमी)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "हाल ही में बड़ी संख्या में अवरुद्ध हमले हुए हैं"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "ऊँचा या ऊपर"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "उच्च-गंभीरता वाले खतरे"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "केवल उच्च जोखिम वाले क्षेत्र"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "एआई विश्लेषण द्वारा उच्च स्कोरिंग खतरे का पता लगाया गया"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "उच्च संवेदनशीलता अधिक गलत सकारात्मक परिणाम उत्पन्न कर सकती है।"
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "उच्चतम"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "एकाधिक देशों का चयन करने के लिए Ctrl/Cmd दबाए रखें।"
 
 msgid "Host"
-msgstr "Host"
+msgstr "मेज़बान"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "प्रति घंटा"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "2FA कैसे काम करता है"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "कोर रिपेयर कैसे काम करता है"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "आत्म-सुरक्षा कैसे काम करती है"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "प्रयासों से अधिक होने के बाद आईपी को कितने समय तक ब्लॉक करना है।"
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "दर सीमा पार होने के बाद आईपी को कितने समय तक ब्लॉक करना है।"
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "पुरानी रिपोर्ट कब तक रखें (30-365 दिन)"
 
 msgid "IBM QRadar"
-msgstr "IBM QRadar"
+msgstr "आईबीएम क्यूराडार"
 
 msgid "IP"
-msgstr "IP"
+msgstr "आईपी"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "आईपी ​​अभिगम नियंत्रण"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "आईपी पता"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "आईपी ब्लॉकिंग"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "आईपी ​​कॉन्फ़िगरेशन"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "आईपी लॉकआउट"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "आईपी लॉकआउट (क्रूर बल प्रयास)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "आईपी प्रबंधन"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "आईपी श्वेतसूची"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "आईपी जो दर सीमा को बायपास करते हैं।"
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "आईपी ​​जो हमेशा ब्लॉक रहेंगे."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "आईपी ​​जो कभी ब्लॉक नहीं होंगे."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "संशोधित या अनुपलब्ध फ़ाइलों की पहचान करता है"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "छवि चयन"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "तत्काल कार्रवाई की आवश्यकता है"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "प्रभाव स्तर"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "सेटिंग्स आयात करें"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "पहले से निर्यात की गई JSON फ़ाइल से सेटिंग्स आयात करें। यह आपकी वर्तमान सेटिंग्स को अधिलेखित कर देगा."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "आयात/निर्यात"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "निष्क्रिय"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "घटना"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "जीडीपीआर जांच शामिल करें"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "आईपी ​​श्वेतसूची/ब्लैकलिस्ट शामिल करें"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "प्रदर्शन मेट्रिक्स शामिल करें"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "सुरक्षा जांच शामिल करें"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "ख़तरे का सारांश शामिल करें"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "अंतिम स्कैन परिणाम शामिल करें"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "सुरक्षा लॉग शामिल करें (पिछले 30 दिन)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "गलत कैप्चा उत्तर. कृपया पीछे जाएं और दोबारा कोशिश करें।"
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "गलत कैप्चा उत्तर. कृपया पुन: प्रयास करें।"
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "घटना वर्गीकरण के लिए सूचकांक नाम या स्रोत पहचानकर्ता।"
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "सूचकांक/स्रोत"
 
 msgid "Info"
-msgstr "Info"
+msgstr "जानकारी"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "सूचना प्रकटीकरण"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "प्रारंभ किया जा रहा है..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "उदाहरण का नाम"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "अपनी सतत एकीकरण और परिनियोजन पाइपलाइनों में सुरक्षा स्कैनिंग को एकीकृत करें।"
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "वेबहुक और एपीआई एक्सेस के साथ अपनी तैनाती पाइपलाइन में सुरक्षा स्कैनिंग को एकीकृत करें।"
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "सीडीएन सेवाओं के साथ एकीकृत होता है। सक्षम करने से पहले CDN क्रेडेंशियल कॉन्फ़िगर करें."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "एकीकरण"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "सत्यनिष्ठा जाँच परिणाम"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "सत्यनिष्ठा जाँच:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "सत्यनिष्ठा स्थिति"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "अमान्य JWT टोकन."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "अवैध प्रत्यय पत्र।"
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "अवैध सत्यापन संकेत।"
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "धमकियों को अलग करें"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "संदिग्ध फ़ाइलों को बिना हटाए अलग करता है। सुरक्षित - फ़ाइलें पुनर्स्थापित की जा सकती हैं।"
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "समस्या प्रकार"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "मुद्दे मिले"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON प्रारूप. उदाहरण: {\"प्राधिकरण\": \"बेयरर टोकन\", \"सामग्री-प्रकार\": \"एप्लिकेशन/जेसन\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "जिरा क्लाउड यूआरएल"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "जीरा एकीकरण"
 
 msgid "KB"
-msgstr "KB"
+msgstr "के.बी"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "विश्लेषण के लिए सभी अवरुद्ध अनुरोधों के लॉग रखें।"
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "विश्लेषण के लिए सभी दर सीमा उल्लंघनों का लॉग रखें।"
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "सर्वोत्तम सुरक्षा के लिए अपने मैलवेयर हस्ताक्षरों को अद्यतन रखें।"
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "ज्ञात देश"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "स्थापित प्लगइन में ज्ञात भेद्यता पाई गई"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "एलईईएफ (लॉग इवेंट विस्तारित प्रारूप)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "पिछले 30 दिन"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "पिछले 30 दिन"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "पिछले 7 दिन"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "पिछले 90 दिन"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "आखिरी बार सीखा"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "अंतिम स्कैन"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "अंतिम स्कैन:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "अंतिम अद्यतन"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "अंतिम बार उपयोग किया गया: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "नवीनतम संस्करण"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "सीखना - केवल लॉग इन करें, कोई अवरोध नहीं"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "सीखने की अवधि"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "सीखना..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "व्यवस्थापक ईमेल का उपयोग करने के लिए खाली छोड़ दें."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "संभवतः सुरक्षित - यदि आवश्यक हो तो सत्यापित करें"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "प्रमाणित उपयोगकर्ताओं तक REST API पहुंच सीमित करें"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "स्पैम को रोकने के लिए टिप्पणी सबमिशन सीमित करें।"
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "एक ही आईपी पते से अत्यधिक अनुरोधों को सीमित करें।"
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "लॉगिन प्रयास सीमित करें"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "क्रूर बल के हमलों को रोकने के लिए लॉगिन प्रयासों को सीमित करें"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "दुरुपयोग और DDoS हमलों को रोकने के लिए अनुरोध दरों को सीमित करें।"
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "दुरुपयोग को रोकने के लिए अनुरोध दरों को सीमित करें।"
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "क्रूर बल के हमलों को रोकने के लिए लॉगिन प्रयासों को सीमित करता है। सुरक्षित - केवल विफल लॉगिन प्रयासों को प्रभावित करता है।"
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "ज्ञात कमजोरियों की सूची बनाएं"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "लाइव ट्रैफिक"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "लाइव ट्रैफिक मॉनिटर"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "सीडीएन स्थिति लोड हो रही है..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "अलर्ट लोड हो रहा है..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "विश्लेषणात्मक डेटा लोड हो रहा है..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "बैकअप लोड हो रहा है..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "अवरुद्ध आईपी लोड हो रहा है..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "देश लोड हो रहे हैं..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "डेटाबेस जानकारी लोड हो रही है..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "भौगोलिक डेटा लोड हो रहा है..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "लॉग लोड हो रहे हैं..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "सूचनाएं लोड हो रही हैं..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "अनुकूलन आँकड़े लोड हो रहे हैं..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "सुरक्षा स्थिति लोड हो रही है..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "संगरोधित फ़ाइलें लोड हो रही हैं..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "सन्दर्भकर्ता लोड हो रहे हैं..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "खतरे का पता लगाने वाला लोड हो रहा है..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "शीर्ष पृष्ठ लोड हो रहे हैं..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "ट्रैफ़िक डेटा लोड हो रहा है..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "इसके बाद कई असफल प्रयासों के बाद ताला लगा दिया गया।"
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "तालाबंदी की अवधि"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "अधिकतम 2FA प्रयासों के विफल होने के बाद तालाबंदी की अवधि।"
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "स्वीकृत अनुरोध लॉग करें"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "अवरोधित अनुरोध लॉग करें"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "लॉग विफल लॉगिन प्रयास"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "लॉग लॉगआउट"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "लॉग मीडिया अपलोड"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "लॉग विकल्प परिवर्तन"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "लॉग प्लगइन परिवर्तन"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "लॉग पोस्ट/पेज परिवर्तन"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "लॉग प्रोफ़ाइल परिवर्तन"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "लॉग दर सीमा का उल्लंघन"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "लॉग प्रतिधारण"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "लॉग भूमिका परिवर्तन"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "सफल लॉगिन लॉग इन करें"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "लॉग थीम परिवर्तन"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "उपयोगकर्ता निर्माण/हटाना लॉग करें"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "WAF जांच (उच्च डिस्क उपयोग) पास करने वाले सभी अनुरोधों को लॉग करें।"
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "लॉगिंग"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "लॉगिंग एवं निगरानी"
 
 msgid "Login"
-msgstr "Login"
+msgstr "लॉग इन करें"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "लॉगिन एवं प्रमाणीकरण"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "लॉगिन गतिविधि"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "लॉगिन प्रयास विंडो"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "लॉगिन प्रयास"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "कैप्चा लॉगिन करें"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "कैप्चा लॉगिन करें"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "लॉगिन फॉर्म"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "लॉगिन लॉकआउट अवधि"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "लॉगिन सुरक्षा"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "लॉगिन दर सीमित करना"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "लॉगिन सुरक्षा"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "लॉगइन स्लग"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "यूआरएल सेटिंग्स लॉगिन करें"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "लॉगिन फॉर्म"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "लॉगआउट करें"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "लॉगआउट"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "लॉग"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "इससे पुराने लॉग स्वचालित रूप से प्रतिदिन शुद्ध हो जाते हैं।"
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "समीक्षा के लिए सुरक्षा ईवेंट लॉग करता है. सुरक्षित - केवल गतिविधि रिकॉर्ड करता है।"
 
 msgid "Low"
-msgstr "Low"
+msgstr "नीचा"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "कम (कम गलत सकारात्मक)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "कम प्रभाव (कम जाँच, तेज़)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "लोअरकेस अक्षर (ए-जेड)"
 
 msgid "MB"
-msgstr "MB"
+msgstr "एमबी"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "आपकी साइट के लिए रखरखाव और निदान उपकरण।"
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "अपना कस्टम लॉगिन यूआरएल याद रखना सुनिश्चित करें!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "मैलवेयर और स्कैनिंग"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "मैलवेयर परिभाषाएँ"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "मैलवेयर मिला"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "मैलवेयर स्कैनर"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "फ़ाइल स्कैनिंग के दौरान मैलवेयर का पता चला"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "सूचनाएं प्रबंधित करें"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "पृथक किए गए खतरों को प्रबंधित करें। फ़ाइलों की समीक्षा करें, पुनर्स्थापित करें या स्थायी रूप से हटाएँ।"
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "भूमिकाओं के लिए अनिवार्य"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "मैन्युअल समीक्षा की अनुशंसा की गई"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "सभी पढ़े हुए को चिह्नित करें"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "सभी को पढ़ा हुआ के रूप में चिह्नित करें"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "सभी गतिविधि लॉगिंग को सक्षम या अक्षम करने के लिए मास्टर स्विच।"
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "गणित प्रश्न"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "अधिकतम प्रयास"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "अधिकतम असफल प्रयास"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "अधिकतम फ़ाइल आकार"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "अधिकतम लॉगिन प्रयास"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "अधिकतम क्वेरी स्ट्रिंग लंबाई"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "अधिकतम अनुरोध आकार"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "अधिकतम अनुरोध"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "अधिकतम AJAX अनुरोध प्रति मिनट प्रति आईपी।"
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "अधिकतम एपीआई अनुरोध प्रति मिनट प्रति आईपी।"
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "तालाबंदी से पहले अधिकतम विफल लॉगिन प्रयास।"
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "प्रति आईपी प्रति मिनट अधिकतम पेज अनुरोध।"
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "स्कैन करने के लिए अधिकतम अनुरोध बॉडी आकार। बड़े अनुरोध छोड़ दिए जाएंगे."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "प्रति आईपी प्रति मिनट अधिकतम अनुमत अनुरोध।"
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "डेटाबेस समाप्ति को रोकने के लिए प्रति मिनट अधिकतम खोज अनुरोध।"
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "एकल स्कैन ऑपरेशन के लिए अधिकतम समय."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "टाइमआउट से पहले मैलवेयर स्कैन के लिए अधिकतम समय।"
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "मीडिया अपलोड"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "मध्यम"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "मध्यम (संतुलित)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "मध्यम (जोड़/घटाव)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "मध्यम या ऊपर"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "मेमोरी सीमा"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "स्कैनिंग कार्यों के लिए मेमोरी आवंटित की गई।"
 
 msgid "Message"
-msgstr "Message"
+msgstr "संदेश"
 
 msgid "Method"
-msgstr "Method"
+msgstr "विधि"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "माइक्रोसॉफ्ट टीम एकीकरण"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "न्यूनतम %d अक्षर"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "न्यूनतम लंबाई"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "विफल होने के लिए न्यूनतम गंभीरता"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "न्यूनतम पासवर्ड लंबाई (8-32 अक्षर)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "मोड"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "मॉड्यूल नियंत्रण"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "मॉड्यूल"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "बाहरी स्क्रिप्ट की निगरानी करें"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "मॉनिटर मोड (केवल लॉग इन करें)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "परिवर्तनों के लिए प्लगइन फ़ाइलों की निगरानी करें"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "वास्तविक समय साइट ट्रैफ़िक की निगरानी करें।"
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "वास्तविक समय में यातायात की निगरानी करें"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "वास्तविक समय में यातायात और आगंतुक गतिविधि की निगरानी करें।"
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "समय के साथ विज़िटर रुझान, पृष्ठ दृश्य और ट्रैफ़िक पैटर्न पर नज़र रखें।"
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "निगरानी एवं अलर्ट"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "वास्तविक समय में यातायात पर नज़र रखता है। सुरक्षित - केवल विज़िट ट्रैक करता है।"
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "मासिक"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "सर्वाधिक सक्रिय उपयोगकर्ता"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "संदिग्ध फ़ाइलों को संरक्षित निर्देशिका में ले जाता है।"
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "एनपीएम निर्भरताएँ"
 
 msgid "Name"
-msgstr "Name"
+msgstr "नाम"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "समर्थन चाहिए?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "कभी नहीं"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "कभी समाप्त नहीं होता"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "नेक्सिफाई सुरक्षा"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy कैप्चा (अंतर्निहित)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyMy कैप्चा प्रकार"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "नेक्सिफाइमाय सिक्योरिटी"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security ने अपनी फ़ाइलों में अनधिकृत संशोधनों का पता लगाया है। कृपया अपनी स्थापना सत्यापित करें."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy सुरक्षा: आपके पास %d अपठित सुरक्षा चेतावनी है।"
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "अगला अपडेट"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "कोई अनुग्रह अवधि नहीं"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "कोई हालिया गतिविधि नहीं"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "कोई एसआरआई नहीं"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "अभी तक कोई गतिविधि दर्ज नहीं की गई. जैसे ही उपयोगकर्ता कार्रवाई करना शुरू करेंगे, गतिविधि यहां दिखाई देगी."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "अभी तक कोई सामग्री परिवर्तन रिकॉर्ड नहीं किया गया."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "अभी तक कोई देश नहीं चुना गया."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "कोई डेटा उपलब्ध नहीं है"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "अभी तक कोई इवेंट डेटा उपलब्ध नहीं है."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "संगरोध में कोई फ़ाइल नहीं."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "कोई भौगोलिक डेटा उपलब्ध नहीं है"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "अभी तक कोई लॉगिन गतिविधि दर्ज नहीं की गई है."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "अभी तक कोई पासकी पंजीकृत नहीं है."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "कोई रिपोर्ट उपलब्ध नहीं है."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "अभी तक कोई स्कैन नहीं चलाया गया है"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "कोई स्कैन परिणाम उपलब्ध नहीं है. अपनी निर्भरता का विश्लेषण करने के लिए \"रन स्कैन\" पर क्लिक करें।"
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "कोई स्कैन परिणाम उपलब्ध नहीं है. कमजोरियों की जाँच के लिए एक स्कैन चलाएँ।"
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "इस समय कोई सुरक्षा अनुशंसाएँ नहीं. आपकी साइट अच्छी तरह से सुरक्षित है."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "कोई गंभीरता डेटा उपलब्ध नहीं है."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "कोई संदिग्ध आईपी नहीं मिला."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "अभी तक कोई सिस्टम इवेंट रिकॉर्ड नहीं किया गया."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "अभी तक किसी खतरे का पता नहीं चला है."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "अभी तक कोई उपयोगकर्ता गतिविधि रिकॉर्ड नहीं की गई."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "अभी तक कोई उपयोगकर्ता गतिविधि नहीं."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "सक्रिय नहीं"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "सक्षम नहीं"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "अभी तक जाँच नहीं हुई"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "अनुसूचित नहीं"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "ध्यान दें:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "अधिसूचना ईमेल"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "अधिसूचना सेटिंग्स"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "सूचनाएं"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "तालाबंदी पर सूचित करें"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "उपयोगकर्ताओं को उनके खाते पर 2FA सक्षम/अक्षम होने पर सूचित करें।"
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "संख्या (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "बैकअप कोड की संख्या"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "प्रति उपयोगकर्ता जनरेट किए जाने वाले बैकअप कोड की संख्या."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "तालाबंदी से पहले विफल लॉगिन प्रयासों की संख्या।"
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "स्थायी प्रतिबंध से पहले तालाबंदी की संख्या."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "स्वचालित अवरोधन से पहले नियम उल्लंघनों की संख्या."
 
 msgid "Object"
-msgstr "Object"
+msgstr "वस्तु"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "अगले लॉगिन पर, पासवर्ड + 6-अंकीय कोड दर्ज करें"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "सप्ताह में एक बार"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "प्रति पंक्ति एक आईपी"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "प्रति पंक्ति एक आईपी. प्रॉक्सी आईपी को एक्स-फॉरवर्डेड-फॉर हेडर (उदाहरण के लिए, क्लाउडफ्लेयर, लोड बैलेंसर्स) भेजने की अनुमति है।"
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "प्रति पंक्ति एक आईपी. ये आईपी सभी दर सीमाओं को बायपास करते हैं।"
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "प्रति पंक्ति एक आईपी. ये आईपी तुरंत ब्लॉक कर दिए जाएंगे. उदाहरण: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "प्रति पंक्ति एक आईपी. ये आईपी WAF जांच को बायपास कर देंगे।"
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "प्रति पंक्ति एक आईपी. ये IP सभी WAF नियमों को बायपास कर देंगे। उदाहरण: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "प्रति पंक्ति एक पथ. स्कैन करने के लिए अतिरिक्त निर्देशिकाओं के लिए पूर्ण पथ।"
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "प्रति पंक्ति एक पथ. स्कैन के दौरान छोड़ी जाने वाली निर्देशिकाएँ।"
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "प्रति पंक्ति एक। विशिष्ट उपयोगकर्ता एजेंटों को ब्लॉक करें. उदाहरण: बैड-बॉट, स्क्रेपर"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "प्रति पंक्ति एक. इस सूची में उपयोगकर्ता एजेंट WAF जांच को बायपास कर देंगे। उदाहरण: Googlebot, अच्छी-सेवा-बॉट"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "प्रति पंक्ति एक उपयोगकर्ता नाम"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "सेटिंग्स खोलें"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "ऑपरेटिंग सिस्टम"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "ऑपरेशन मोड"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "डेटाबेस का अनुकूलन करें"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "अपने डेटाबेस को अनुकूलित और सुरक्षित करें।"
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "विकल्प परिवर्तन"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "सभी उपयोगकर्ताओं के लिए वैकल्पिक"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "वैकल्पिक: स्कैन परिणाम अपने सीआई/सीडी प्लेटफॉर्म पर भेजें।"
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "मूल पथ"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "पुराना"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "उपरि"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "प्लगइन इंटरफ़ेस के लिए भाषा को ओवरराइड करें। समर्थित भाषाएँ: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "सिंहावलोकन"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "पीएचपी संस्करण"
 
 msgid "Package"
-msgstr "Package"
+msgstr "पैकेज"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "प्रति मिनट पेज अनुरोध"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "पृष्ठ दृश्य"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "पेज नहीं मिला."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "पासकी प्रमाणीकरण"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "पासकी नाम (जैसे, मैकबुक टच आईडी)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "पासकी सफलतापूर्वक पंजीकृत!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "इस ब्राउज़र में पासकीज़ समर्थित नहीं हैं."
 
 msgid "Password"
-msgstr "Password"
+msgstr "पासवर्ड"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "पासवर्ड समाप्ति"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "पासवर्ड नीतियाँ"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "पासवर्ड नीति"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "पासवर्ड आवश्यकताएँ"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "पासवर्ड आवश्यकताएँ:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "पासवर्ड रीसेट फॉर्म"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "पासवर्ड रीसेट"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "पासवर्ड कम से कम %d अक्षर लंबा होना चाहिए."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "पासवर्ड में कम से कम एक लोअरकेस अक्षर होना चाहिए।"
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "सांकेतिक शब्द में कम से कम एक संख्या शामिल होना चाहिए।"
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "पासवर्ड में कम से कम एक विशेष अक्षर अवश्य होना चाहिए।"
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "पासवर्ड में कम से कम एक बड़ा अक्षर होना चाहिए."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "पासवर्ड नीति"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "पासवर्ड रीसेट फॉर्म"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "स्कैनिंग से बाहर करने के पथ (वर्डप्रेस रूट के सापेक्ष)। प्रति पंक्ति एक।"
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "चरम गतिविधि अंतर्दृष्टि"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "पीक ऑवर"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "व्यस्ततम यातायात घंटे"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "प्रदर्शन मोड"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "प्रदर्शन सेटिंग्स"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "आवधिक रिपोर्ट"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "स्थाई"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "स्थायी प्रतिबंध सीमा"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "फ़ाइल को स्थायी रूप से हटा देता है."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "कृपया गणित कैप्चा को हल करें।"
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "प्लगइन"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "प्लगइन और थीम विश्लेषण"
 
 msgid "Plugin Language"
 msgstr "प्लगइन भाषा"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "प्लगइन अंतिम अद्यतन"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "प्लगइन विकल्प"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "प्लगइन स्व-सुरक्षा"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "प्लगइन संस्करण"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "प्लगइन कमजोरियाँ"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "प्लगइन फ़ाइलों को वर्डप्रेस के माध्यम से संपादित नहीं किया जा सकता है।"
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "प्लगइन अखंडता"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "प्लगइन सुरक्षा"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "प्लगइन/थीम सीवीई"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "प्लगइन/थीम सक्रियण, अपडेट, विकल्प परिवर्तन और निर्यात।"
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "प्लगइन्स"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "प्लगइन्स सक्रिय"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "प्लगइन्स निष्क्रिय"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "प्लगइन्स अद्यतन"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "पोस्ट/पेज संपादन, प्रकाशन, मीडिया अपलोड, और सामग्री हटाना।"
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "पोस्ट सृजित"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "पोस्ट प्रकाशित"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "पोस्ट अपडेट की गईं"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "संभावित सुरक्षा ख़तरे का पता चला"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "XML-RPC हमलों और क्रूर बल प्रयासों को रोकें"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "वेब रूट के बाहर निर्देशिकाओं तक पहुंच रोकें।"
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "हमलावरों को स्थानीय सर्वर फ़ाइलों को शामिल करने से रोकें।"
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "पाशविक बल को रोकें"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "वर्डप्रेस एडमिन में कोड संपादन रोकें"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr ".htaccess के माध्यम से निर्देशिका सूचीकरण को रोकें"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "इस अवधि के भीतर डुप्लिकेट अलर्ट रोकें।"
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "इस समयावधि के भीतर डुप्लिकेट अलर्ट रोकें। थ्रॉटलिंग अक्षम करने के लिए 0 पर सेट करें।"
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "वर्डप्रेस संपादक के माध्यम से प्लगइन फ़ाइलों को संपादित करने से रोकें"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "यूआरएल पैरामीटर के माध्यम से दूरस्थ फ़ाइलों को शामिल करने से रोकें।"
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr ".htaccess के माध्यम से निर्देशिका सामग्री को सूचीबद्ध करने से रोकें।"
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "व्यवस्थापक पैनल से प्लगइन/थीम इंस्टॉलेशन को रोकें।"
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "टेक्स्ट चयन और फ्रंटएंड पर प्रतिलिपि बनाने से रोकें।"
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "आमतौर पर उल्लंघन किए गए पासवर्ड का उपयोग रोकें"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "/wp-json/wp/v2/users एंडपॉइंट के माध्यम से उपयोगकर्ता खोज को रोकें।"
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "सुरक्षा प्लगइन फ़ाइलों के अनधिकृत संशोधन को रोकता है"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "सुरक्षा अलर्ट के लिए प्राथमिक ईमेल पता."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "प्राथमिकता"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "सक्रिय सुरक्षा सुझाव और स्वचालित सख्त सिफ़ारिशें।"
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "समस्या"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "प्रोफ़ाइल अपडेट"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "प्रोफ़ाइल परिवर्तन, भूमिका परिवर्तन, उपयोगकर्ता निर्माण और विलोपन घटनाएँ।"
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "प्रोजेक्ट कुंजी"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "क्रॉस-साइट अनुरोध जालसाजी से बचाव करें।"
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "क्रॉस-साइट स्क्रिप्टिंग (XSS) हमलों से बचाएं।"
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "GET/POST पैरामीटर में SQL इंजेक्शन हमलों से बचाव करें।"
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "SQL इंजेक्शन, XSS, RFI और अन्य हमलों से सुरक्षित रखें।"
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "प्रति आईपी पते पर अनुरोध आवृत्ति को सीमित करके क्रूर बल और DoS हमलों से बचाव करें।"
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "स्वचालित बॉट हमलों से लॉगिन और पंजीकरण फॉर्म को सुरक्षित रखें।"
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "गणित-आधारित कैप्चा के साथ लॉगिन और पंजीकरण फॉर्म को सुरक्षित रखें।"
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "प्लगइन फ़ाइलों को छेड़छाड़ से बचाएं।"
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "सुरक्षा प्लगइन को छेड़छाड़ और अनधिकृत संशोधनों से सुरक्षित रखें।"
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "अपने लॉगिन पेज को क्रूर बल के हमलों से सुरक्षित रखें।"
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "अपनी साइट को दुर्भावनापूर्ण ट्रैफ़िक और हमलों से सुरक्षित रखें।"
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "संरक्षित प्रपत्र"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "सुरक्षा स्तर"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "सुरक्षा मोड"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "संरक्षण नियम"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "सुरक्षा सेटिंग्स"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "JWT प्रमाणीकरण, दर सीमित करने और CORS के साथ REST API की सुरक्षा करता है। हेडलेस वर्डप्रेस के लिए आवश्यक।"
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "SQL इंजेक्शन, XSS और दुर्भावनापूर्ण अनुरोधों से बचाता है। सक्षम करने के लिए सुरक्षित - केवल हानिकारक ट्रैफ़िक को रोकता है।"
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "प्लगइन फ़ाइलों को संशोधन से बचाता है। सुरक्षित - छेड़छाड़ रोकता है."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "प्रदाता"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "सभी लॉग्स को शुद्ध करें"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "कैश को शुद्ध करें"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "संगरोध"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "तुरंत क्वारंटाइन करें"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "संगरोध की सिफारिश की गई"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "संगरोध:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "क्वारंटाइन किया गया"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "संगरोधित फ़ाइलें"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "क्वेरी जटिलता अधिकतम %d से अधिक है"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "क्वेरी की गहराई %d की अधिकतम अनुमत गहराई से अधिक है"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "जल्दी"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "त्वरित कार्रवाई"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "त्वरित स्कैन"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "त्वरित स्कैन क्रियाएँ"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "सुरक्षा रखरखाव उपकरणों तक त्वरित पहुंच।"
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "त्वरित: केवल कोर फ़ाइलें। मानक: कोर + थीम/प्लगइन्स। गहरा: सभी फ़ाइलें."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "बाकी एपीआई सुरक्षा"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "बाकी एपीआई उपयोगकर्ता"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "बाकी एपीआई सुरक्षा"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "इस साइट पर RSS फ़ीड अक्षम हैं."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "दर सीमा"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "दर सीमक"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "दर सीमित करना"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "दर सीमित सेटिंग्स"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "वास्तविक समय की निगरानी"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "कारण"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "कमजोरियों का पता चलने पर ईमेल अलर्ट प्राप्त करें"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "हाल की गतिविधि"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "हाल ही में खतरे का पता लगाना"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "हाल ही में ब्लॉक किए गए आईपी"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "प्राप्तकर्ता ईमेल"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "सिफ़ारिशें"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "अनुशंसित"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "अनुशंसित कार्रवाइयां"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "अवरुद्ध पहुंच को पुनर्निर्देशित करें"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "मुखपृष्ठ पर पुनः निर्देशित करें"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "अनावश्यक सुविधाओं को अक्षम करके और वर्डप्रेस कॉन्फ़िगरेशन को सख्त करके हमले की सतह को कम करें।"
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "ताज़ा करें"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "पुनर्जीवित करें"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "बेसलाइन पुन: उत्पन्न करें"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "पासकी पंजीकृत करें"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "पंजीकृत पासकी"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "पासकी पंजीकृत की जा रही है..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "पंजीकरण प्रपत्र"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "पंजीकरण प्रपत्र"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "डिवाइस याद रखें"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "अवधि याद रखें"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "इस डिवाइस को याद रखें"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "हटाओ"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "जेनरेटर टैग हटाएँ"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "लॉगिन संकेत हटाएँ"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "स्रोत कोड से वर्डप्रेस संस्करण हटाएं"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "सभी पेजों से जेनरेटर मेटा टैग हटाएँ।"
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "पासवर्ड रीसेट संकेत और सुझाव हटाएँ।"
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "HTML और फ़ीड से संस्करण जानकारी हटाएँ."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "सभी संशोधित फ़ाइलों की मरम्मत करें"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "संशोधित वर्डप्रेस कोर फ़ाइलों की मरम्मत करता है। सावधानी से उपयोग करें - मरम्मत से पहले बैकअप लें।"
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "दूषित फ़ाइलों को साफ़ संस्करणों से बदल देता है"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "रिपोर्ट इतिहास"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "रिपोर्ट अवधारण (दिन)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "रिपोर्ट अनुसूची"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "सीमा और फ़िल्टरिंग का अनुरोध करें"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "आकार सीमा का अनुरोध करें"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "प्रति मिनट अनुरोध"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "सभी प्रशासकों के लिए 2FA की आवश्यकता है"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "चयनित उपयोगकर्ता भूमिकाओं के लिए 2FA की आवश्यकता है।"
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "लॉगिन सत्यापन के लिए दूसरे कारक की आवश्यकता है"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "REST API एक्सेस के लिए लॉगिन की आवश्यकता है"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "लॉगिन के लिए दूसरे कारक की आवश्यकता है। सक्षम करने से पहले अपनी 2FA विधि कॉन्फ़िगर करें।"
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "रीसेट करें"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "सभी सेटिंग्स रीसेट करें"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "सीखना रीसेट करें"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "सभी NexifyMy सुरक्षा सेटिंग्स को उनके डिफ़ॉल्ट मानों पर रीसेट करें। इस एक्शन को वापस नहीं किया जा सकता।"
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "डिफ़ॉल्ट पर रीसेट करें"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "रीसेट किया जा रहा है..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "ब्लॉक पर प्रतिक्रिया कोड"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "पुनर्स्थापित करें"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "पुनर्स्थापित करें:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "REST API को प्रतिबंधित करें"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "REST API एक्सेस को प्रतिबंधित करता है। REST API का उपयोग करने वाले प्लगइन्स को प्रभावित कर सकता है।"
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "अवधारण अवधि"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "यदि मैलवेयर का पता चलता है (सीआई/सीडी निर्माण विफल रहता है) तो त्रुटि कोड लौटाएँ।"
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "यदि कमजोरियाँ पाई जाती हैं तो त्रुटि कोड लौटाएँ।"
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "फ़ाइल को उसके मूल स्थान पर लौटाता है."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "समीक्षा अलर्ट ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "तुरंत समीक्षा करें"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "सुरक्षा लॉग की नियमित रूप से समीक्षा करें"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "भूमिका परिवर्तन"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "पूर्ण सुरक्षा स्कैन चलाएँ"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "सत्यनिष्ठा जाँच चलाएँ"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "त्वरित जाँच चलाएँ"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "स्कैन चलाएँ"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "भेद्यता स्कैन चलाएँ"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "कमजोरियों की पहचान करने के लिए एक सुरक्षा स्कैन चलाएँ"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "प्रतिदिन स्वचालित मैलवेयर स्कैन चलाता है। सुरक्षित - केवल स्कैनिंग, कोई फ़ाइल परिवर्तन नहीं।"
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "सुरक्षा चेतावनी:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "सभी प्लगइन फ़ाइलों के SHA-256 हैश को बेसलाइन के रूप में संग्रहीत किया जाता है।"
 
 msgid "SIEM"
-msgstr "SIEM"
+msgstr "सिएम"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "सिएम एकीकरण"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "सिएम प्लेटफार्म"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "एसक्यूएल इंजेक्शन"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "एसक्यूएल इंजेक्शन सुरक्षा"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "एसएसएल स्थिति"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "एसएसएल सत्यापन"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "उन्नत सेटिंग्स सहेजें"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "सीआई/सीडी सेटिंग्स सहेजें"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "कलह सेटिंग्स सहेजें"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "ईमेल सेटिंग सहेजें"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "जीरा सेटिंग्स सहेजें"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "सिएम सेटिंग्स सहेजें"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "स्कैनर सेटिंग्स सहेजें"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "ServiceNow सेटिंग्स सहेजें"
 
 msgid "Save Settings"
 msgstr "सेटिंग्स सहेजें"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "स्लैक सेटिंग्स सहेजें"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "टीम सेटिंग्स सहेजें"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "WAF सेटिंग्स सहेजें"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "वेबहुक सेटिंग्स सहेजें"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "स्कैन करें"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "स्कैन पूर्ण"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "स्कैन पूरा हुआ"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "संगीतकार निर्भरताएँ स्कैन करें"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "स्कैन कॉन्फ़िगरेशन"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "स्कैन नियंत्रण"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "कस्टम निर्देशिकाएँ स्कैन करें"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "एनपीएम निर्भरता को स्कैन करें"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "प्लगइन्स स्कैन करें"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "ऑथेंटिकेटर ऐप (Google/Microsoft ऑथेंटिकेटर) से QR कोड स्कैन करें"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "स्कैन परिणाम"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "स्कैन शेड्यूल"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "स्कैन संवेदनशीलता"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "लक्ष्य स्कैन करें"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "थीम स्कैन करें"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "स्कैन टाइमआउट"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "अपलोड निर्देशिका को स्कैन करें"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "वर्डप्रेस कोर को स्कैन करें"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "मैलवेयर के लिए सभी इंस्टॉल किए गए प्लगइन्स को स्कैन करें।"
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "मैलवेयर के लिए सभी स्थापित थीम को स्कैन करें।"
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "केवल महत्वपूर्ण क्षेत्रों को ही स्कैन करें"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "मैलवेयर और संदिग्ध कोड के लिए फ़ाइलें स्कैन करें।"
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "ज्ञात कमजोरियों के लिए प्लगइन्स, थीम और वर्डप्रेस कोर को स्कैन करें।"
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "मैलवेयर, कमजोरियों और सुरक्षा समस्याओं के लिए अपनी साइट को स्कैन करें।"
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "मैलवेयर और सुरक्षा कमजोरियों के लिए अपनी वेबसाइट को स्कैन करें।"
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "स्कैनर"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "स्कैनर सेटिंग्स"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "स्कैन किया जा रहा है..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "मैलवेयर और संदिग्ध कोड के लिए फ़ाइलों को स्कैन करता है। सुरक्षित - केवल स्कैन करता है, फ़ाइलों को संशोधित नहीं करता।"
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "अनुसूचित स्कैन मोड"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "अनुसूचित स्कैन"
 
 msgid "Score"
-msgstr "Score"
+msgstr "स्कोर"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "प्रति मिनट खोज अनुरोध"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "उपयोक्तानाम खोजें..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "गुप्त कुंजी"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "सुरक्षित फ़ाइल पहुंच"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "क्वेरी गहराई सीमा, जटिलता जांच और दर सीमित करके WPGraphQL को सुरक्षित करता है। हेडलेस सेटअप के लिए सुरक्षित."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "सुरक्षा अलर्ट"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "सुरक्षा विश्लेषण"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "सुरक्षा सख्त करना"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "सुरक्षा शीर्षलेख"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "सुरक्षा घटना"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "सुरक्षा लॉग"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "सुरक्षा मॉड्यूल"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "सुरक्षा सूचनाएं"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "सुरक्षा विकल्प"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "सुरक्षा सिफ़ारिशें"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "सुरक्षा स्कोर"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "सुरक्षा स्थिति"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "सुरक्षा उपकरण"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "सुरक्षा कमजोरियाँ"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "सुरक्षा अलर्ट"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "सुरक्षा कार्यक्रम यहां दिखाई देंगे."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "सुरक्षा कड़ी करना"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "सुरक्षा स्कैन का निष्पादन पूरा हो गया है"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "सुरक्षा सेटिंग्स संशोधित कर दी गई हैं"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "देश चुनें:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "बाईं ओर से देशों का चयन करें, उन्हें जोड़ने के लिए \"सूची में जोड़ें\" पर क्लिक करें। उपरोक्त मोड के आधार पर चयनित देशों को अवरुद्ध (ब्लैकलिस्ट) या अनुमति (श्वेतसूची) दी जाएगी।"
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "चेकमार्क के साथ छवि का चयन करें:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "चुनें कि किस कैप्चा सेवा का उपयोग करना है।"
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "चयनित देश:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "आत्म सुरक्षा"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "आत्मरक्षा"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "परीक्षण चेतावनी भेजें"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "परीक्षण ईमेल भेजें"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "एक घंटे में इतने हमले के बाद भेजें अलर्ट!"
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "दैनिक ईमेल डाइजेस्ट भेजें"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "जब कोई आईपी लॉक हो जाए तो ईमेल सूचना भेजें।"
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "सुरक्षा घटनाओं के लिए ईमेल सूचनाएं भेजें"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "गंभीर हमलों का पता चलने पर ईमेल सूचनाएं भेजें."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "छेड़छाड़ का पता चलने पर ईमेल भेजें"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "कमज़ोरियाँ पाए जाने पर ईमेल भेजें"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "व्यवस्थापक ईमेल पर रिपोर्ट भेजें"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "प्रत्येक स्कैन के बाद ईमेल के माध्यम से स्कैन परिणाम भेजें।"
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "केंद्रीकृत निगरानी और विश्लेषण के लिए स्प्लंक, इलास्टिक्सर्च, या अन्य एसआईईएम प्लेटफार्मों पर सुरक्षा कार्यक्रम भेजें।"
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "कस्टम कॉन्फ़िगरेशन के साथ किसी भी HTTP एंडपॉइंट पर सुरक्षा ईवेंट भेजें।"
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "कस्टम हेडर और प्रमाणीकरण के साथ किसी भी HTTP एंडपॉइंट पर सुरक्षा ईवेंट भेजें।"
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "ईमेल के माध्यम से सत्यापन कोड भेजें."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "सुरक्षा घटनाओं के लिए ईमेल अलर्ट भेजता है। सुरक्षित - पहले ईमेल सेटिंग्स कॉन्फ़िगर करें।"
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNow एकीकरण"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "सुरक्षित फ़ाइल अनुमतियाँ सेट करता है। यदि सर्वर में समस्या है तो मैन्युअल समायोजन की आवश्यकता हो सकती है।"
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "सेटिंग्स"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "सेटिंग्स सफलतापूर्वक सहेजी गईं"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "गंभीरता"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "404 पृष्ठ दिखाएँ"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "लॉगिन विफलता पर सामान्य त्रुटि संदेश दिखाएँ।"
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "प्रपत्रों पर दिखाएँ"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "%d प्रविष्टियों में से %d दिखाया जा रहा है"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "अपठित महत्वपूर्ण/चेतावनी घटनाएँ दिखाता है। संपूर्ण इतिहास के लिए लॉग्स का उपयोग करें."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "पासकी से साइन इन करें"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "हस्ताक्षर स्थिति"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "हस्ताक्षर-आधारित जांच"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "हस्ताक्षर"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "साइट डिफ़ॉल्ट"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "साइट कुंजी"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "साइट सुरक्षा स्वास्थ्य"
 
 msgid "Size"
-msgstr "Size"
+msgstr "आकार"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "इस आकार से बड़ी फ़ाइलें छोड़ें."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "सुस्त एकीकरण"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "कुछ सुधारों की अनुशंसा की गई"
 
 msgid "Source"
-msgstr "Source"
+msgstr "स्रोत"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "विशेष वर्ण (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "स्प्लंक (HTTP इवेंट कलेक्टर)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "मानक"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "मानक - संतुलित सुरक्षा"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "मानक स्कैन"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "स्कैन प्रारंभ करें"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "एक नया स्कैन प्रारंभ करें"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "स्कैन प्रारंभ करें"
 
 msgid "Status"
-msgstr "Status"
+msgstr "स्थिति"
 
 msgid "Story"
-msgstr "Story"
+msgstr "कहानी"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "सख्त - अधिकतम सुरक्षा"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "मजबूत पासवर्ड"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "मजबूत पासवर्ड"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "सफलता दर"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "सफल लॉगिन"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "सफल लॉगिन"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "सुकुरी"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "सूमो तर्क"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "आपूर्ति शृंखला"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "आपूर्ति श्रृंखला सुरक्षा"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "आपूर्ति श्रृंखला सेटिंग्स"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Google प्रमाणक, ऑथी आदि का समर्थन करें।"
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "समर्थित:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "संदिग्ध कोड"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "संदिग्ध आईपी"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "सिस्टम गतिविधि"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "सिस्टम इवेंट"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "सिस्टम स्थिति"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "टीओटीपी प्रमाणक ऐप्स"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "तालिका का नाम"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "टेबल्स"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "छेड़छाड़ का पता लगाना:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "कार्य"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "एपीआई दर सीमा से अधिक आईपी को अस्थायी रूप से ब्लॉक करें।"
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "परीक्षण कनेक्शन"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "परीक्षण अधिसूचना"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "पाठ मिलान"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "एआई लगातार ट्रैफ़िक घंटे, भौगोलिक स्थान, उपयोगकर्ता एजेंट और अनुरोध पैटर्न सहित सामान्य व्यवहार पैटर्न सीखता है। इस आधार रेखा का उपयोग विसंगतियों का पता लगाने के लिए किया जाता है।"
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF आपकी साइट को SQL इंजेक्शन, XSS और दुर्भावनापूर्ण बॉट्स सहित सामान्य वेब हमलों से बचाता है।"
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "थीम स्विच"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "इस घंटे"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "इस महीने"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "इस सप्ताह"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "यह एक सामान्य पासवर्ड है."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "लॉगिन फॉर्म पर कैप्चा इस प्रकार दिखाई देगा:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "यह पासवर्ड बहुत सामान्य है. कृपया अधिक अद्वितीय पासवर्ड चुनें."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "इस क्वेरी की अनुमति नहीं है."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "यह सभी AI शिक्षण डेटा और व्यवहार पैटर्न को रीसेट कर देगा। जारी रखना?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "धमकी"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "ख़तरा टूटना:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "ख़तरे का पता चला"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "खतरे का पता चला (मैलवेयर, संदिग्ध फ़ाइलें)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "ख़तरे का पता लगाना और अवरुद्ध करना - पिछले 7 दिन"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "ख़तरा स्कोर"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "धमकियाँ अवरुद्ध"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "धमकियाँ मिलीं"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "आज धमकी"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "थ्रॉटल अवधि"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "टिकटिंग"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "टिकट प्रणाली"
 
 msgid "Time"
-msgstr "Time"
+msgstr "समय"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "समय विंडो (सेकंड)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "ईमेल सत्यापन कोड समाप्त होने से पहले का समय."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "विफल लॉगिन प्रयासों की गिनती के लिए समय विंडो।"
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "विफल लॉगिन प्रयासों को गिनने के लिए समय विंडो का उपयोग किया जाता है।"
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "आज तक"
 
 msgid "Today"
-msgstr "Today"
+msgstr "आज"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "बहुत सारे विफल लॉगिन प्रयास. कृपया %d मिनट में पुनः प्रयास करें।"
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "उपकरण"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "उपकरण एवं उपयोगिताएँ"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "शीर्ष देश"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "शीर्ष पता लगाने के कारण"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "शीर्ष इवेंट प्रकार"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "शीर्ष पृष्ठ"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "शीर्ष रेफ़रलकर्ता"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "कुल घटनाएँ"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "कुल पृष्ठ दृश्य"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "कुल हस्ताक्षर"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "कुल आकार"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "यातायात विश्लेषिकी"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "यातायात अवलोकन"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "एक सुरक्षा स्कैन ट्रिगर करें"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "प्रॉक्सी हेडर पर भरोसा करें"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "विश्वसनीय प्रॉक्सी"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "प्रतिदिन दो बार"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "दो-कारक प्रामाणिक (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "दो-कारक प्रमाणीकरण"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "दो-कारक प्रमाणीकरण"
 
 msgid "Type"
-msgstr "Type"
+msgstr "प्रकार"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "शब्द टाइप करें:"
 
 msgid "URL"
-msgstr "URL"
+msgstr "यूआरएल"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "व्यवहार को अनइंस्टॉल करें"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "अद्वितीय आईपी"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "अद्वितीय उपयोगकर्ता"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "अद्वितीय आगंतुक"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "अज्ञात"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "अपठित अलर्ट"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "आपके लॉग से अपठित सुरक्षा अलर्ट."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "परिभाषाएँ अद्यतन करें"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "अभी परिभाषाएँ अपडेट करें"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "मैलवेयर परिभाषाओं को अद्यतन करें"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "अभी अपडेट करें"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "मैलवेयर पहचान हस्ताक्षर अपडेट करें."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "अपरकेस अक्षर (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "अत्यावश्यकता स्तर"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "वास्तविक क्लाइंट आईपी निर्धारित करने के लिए सीडीएन/प्रॉक्सी हेडर का उपयोग करें"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "टच आईडी, फेस आईडी, विंडोज हैलो या हार्डवेयर सुरक्षा कुंजी का उपयोग करें।"
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "आईपी ​​डिटेक्शन के लिए एक्स-फॉरवर्डेड-फॉर हेडर का उपयोग करें (केवल अगर सीडीएन/प्रॉक्सी के पीछे हो)।"
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "पता लगाने के लिए मैलवेयर हस्ताक्षर डेटाबेस का उपयोग करें।"
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "अपने सीआई/सीडी पाइपलाइन से एपीआई अनुरोधों को प्रमाणित करने के लिए इस कुंजी का उपयोग करें।"
 
 msgid "User"
-msgstr "User"
+msgstr "उपयोगकर्ता"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "उपयोगकर्ता गतिविधि"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "उपयोगकर्ता एजेंट"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "उपयोगकर्ता घटनाएँ"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "उपयोगकर्ता तालाबंदी"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "उपयोगकर्ता प्रबंधन"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "उपयोगकर्ता आवश्यकताएँ"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "संदिग्ध गतिविधि के कारण उपयोगकर्ता या आईपी पता लॉक कर दिया गया है"
 
 msgid "Username"
-msgstr "Username"
+msgstr "उपयोगकर्ता नाम"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "उपयोगकर्ता नाम और पासवर्ड आवश्यक है."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "उपयोगकर्ता बनाए गए"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "उपयोगकर्ता हटा दिए गए"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग में 2FA सक्षम करते हैं"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "व्यवहार विश्लेषण के माध्यम से शून्य-दिन के खतरों का पता लगाने के लिए एआई का उपयोग करता है। सामान्य पैटर्न सीखता है और विसंगतियों को चिन्हित करता है। सुरक्षित - केवल व्यवहार पर नज़र रखता है।"
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "सत्यापन सत्र समाप्त हो गया. कृपया फिर भाग लें।"
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "सत्यापित करें"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "कोर फ़ाइलें सत्यापित करें"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "एसएसएल प्रमाणपत्र सत्यापित करें (उत्पादन के लिए अनुशंसित)।"
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "वर्डप्रेस कोर फ़ाइलों को सत्यापित और मरम्मत करें।"
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "कोर फ़ाइलों को सत्यापित और सुधारें"
 
 msgid "Version"
-msgstr "Version"
+msgstr "संस्करण"
 
 msgid "View All"
-msgstr "View All"
+msgstr "सभी देखें"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "लाइव ट्रैफ़िक देखें"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "सभी सुरक्षा कार्यक्रम देखें."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "पृथक किए गए खतरों को देखें और प्रबंधित करें।"
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "सुरक्षा अलर्ट और सूचनाएं देखें और प्रबंधित करें।"
 
 msgid "Views"
-msgstr "Views"
+msgstr "दृश्य"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "आगंतुक रुझान - पिछले 30 दिन"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "आगंतुक"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "आज का दौरा"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "भेद्यता जाँच"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "भेद्यता स्कैनर"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "असुरक्षित"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF आक्रमण अवरुद्ध"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF ब्लॉक (फ़ायरवॉल द्वारा अवरुद्ध हमला)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF फ़ायरवॉल"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "डब्ल्यूएएफ स्थिति"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP संस्करण"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL सुरक्षा"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan एपीआई टोकन"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "चेतावनी"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "चेतावनी:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "चेतावनी: आयात करने से सभी मौजूदा सेटिंग्स बदल जाएंगी। पहले अपनी वर्तमान सेटिंग्स को बैकअप के रूप में निर्यात करना सुनिश्चित करें।"
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "वेब अनुप्रयोग फ़ायरवॉल"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "वेब एप्लिकेशन फ़ायरवॉल (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "वेबहुक यूआरएल"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "परिणामों के लिए वेबहुक यूआरएल"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "वेबहुक"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "साप्ताहिक"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "साप्ताहिक सुरक्षा रिपोर्ट"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "श्वेतसूची (केवल अनुमति दें)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "श्वेतसूची (केवल चयनित को अनुमति दें)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "श्वेतसूची आईपी"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "श्वेतसूचीबद्ध आईपी"
 
 msgid "WordPress"
-msgstr "WordPress"
+msgstr "वर्डप्रेस"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "वर्डप्रेस कोर फ़ाइल सत्यापन"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "वर्डप्रेस कोर स्थिति"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "वर्डप्रेस हार्डनिंग"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "वर्डप्रेस संस्करण"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "वर्डप्रेस कोर फ़ाइल को संशोधित किया गया है"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "वर्डप्रेस अद्यतित नहीं है"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "एक्स-सामग्री-प्रकार-विकल्प (कोई सूंघ नहीं)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "एक्स-फ़्रेम-विकल्प (क्लिकजैकिंग रोकें)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "एक्स-एक्सएसएस-संरक्षण"
 
 msgid "XML-RPC"
-msgstr "XML-RPC"
+msgstr "एक्सएमएल-आरपीसी"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "एक्सएमएल-आरपीसी नियंत्रण"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "एक्सएसएस हमला"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "एक्सएसएस सुरक्षा"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "आप डिफ़ॉल्ट लॉगिन स्लग का उपयोग कर रहे हैं. इसे किसी अनोखी चीज़ में बदलने पर विचार करें."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "REST API तक पहुंचने के लिए आपको लॉग इन होना होगा।"
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "आपकी साइट HTTPS का उपयोग नहीं कर रही है. सुरक्षित कनेक्शन के लिए एसएसएल प्रमाणपत्र सक्षम करें।"
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "आपकी साइट अच्छी तरह से सुरक्षित है"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "आपका सत्यापन कोड है: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "आपकी वायरस परिभाषाएँ पुरानी हो चुकी हैं। सर्वोत्तम सुरक्षा के लिए अभी अपडेट करें."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "जोन आईडी"
 
 msgid "ago"
-msgstr "ago"
+msgstr "पहले"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "प्रति घंटे हमले"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "प्रयास"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "अवरुद्ध"
 
 msgid "characters"
-msgstr "characters"
+msgstr "अक्षर"
 
 msgid "days"
-msgstr "days"
+msgstr "दिन"
 
 msgid "events"
-msgstr "events"
+msgstr "घटनाएँ"
 
 msgid "fails"
-msgstr "fails"
+msgstr "विफल रहता है"
 
 msgid "files"
-msgstr "files"
+msgstr "फ़ाइलें"
 
 msgid "from now"
-msgstr "from now"
+msgstr "अभी से"
 
 msgid "including:"
-msgstr "including:"
+msgstr "इसमें शामिल हैं:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "लोअरकेस अक्षर"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "मिनट"
 
 msgid "modules"
-msgstr "modules"
+msgstr "मॉड्यूल"
 
 msgid "number"
-msgstr "number"
+msgstr "संख्या"
 
 msgid "or"
-msgstr "or"
+msgstr "या"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "प्रति मिनट"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "सेकंड"
 
 msgid "special character"
-msgstr "special character"
+msgstr "विशेष पात्र"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "धमकियाँ मिलीं"
 
 msgid "total records"
-msgstr "total records"
+msgstr "कुल रिकार्ड"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "बड़े अक्षर"
 
 msgid "views"
-msgstr "views"
+msgstr "विचार"
 
 msgid "violations"
-msgstr "violations"
+msgstr "उल्लंघन"
 
 msgid "visits"
-msgstr "visits"
+msgstr "दौरा"
+msgid "Deception"
+msgstr "धोखा"
+
+msgid "P2P Intelligence"
+msgstr "पी2पी इंटेलिजेंस"
+
+msgid "Sandbox Console"
+msgstr "सैंडबॉक्स कंसोल"
+
+msgid "Temporary Access"
+msgstr "अस्थायी प्रवेश"
+
+msgid "Saving..."
+msgstr "सहेजा जा रहा है..."
+
+msgid "Settings saved. Reloading..."
+msgstr "सेटिंग्स सहेजी गईं. पुनः लोड हो रहा है..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "सेटिंग्स सफलतापूर्वक सहेजी गईं! पुनः लोड हो रहा है..."
+
+msgid "Connection error"
+msgstr "कनेक्शन त्रुटि"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "सुरक्षा जांच विफल. ताज़ा करें और पुनः प्रयास करें."
+
+msgid "Settings handler not available."
+msgstr "सेटिंग्स हैंडलर उपलब्ध नहीं है."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "सभी सेटिंग्स को डिफ़ॉल्ट पर रीसेट करें? इसे असंपादित नहीं किया जा सकता है।"
+
+msgid "Purge CDN cache now?"
+msgstr "अब सीडीएन कैश को शुद्ध करें?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "सेटिंग्स सहेजने में विफल. कृपया पुन: प्रयास करें।"
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "सेटिंग्स डिफ़ॉल्ट पर रीसेट हो गईं। पेज पुनः लोड हो रहा है..."
+
+msgid "Failed to load analytics data."
+msgstr "विश्लेषणात्मक डेटा लोड करने में विफल."
+
+msgid "Devices"
+msgstr "उपकरण"
+
+msgid "No data available for this range."
+msgstr "इस श्रेणी के लिए कोई डेटा उपलब्ध नहीं है."
+
+msgid "Traffic trend chart"
+msgstr "यातायात प्रवृत्ति चार्ट"
+
+msgid "Distribution breakdown chart"
+msgstr "वितरण विश्लेषण चार्ट"
+
+msgid "Total"
+msgstr "कुल"
+
+msgid "Series"
+msgstr "शृंखला"
+
+msgid "Predictive Threat Hunting"
+msgstr "पूर्वानुमानित ख़तरे का शिकार"
+
+msgid "Forecast next attack vectors"
+msgstr "अगले आक्रमण वैक्टर का पूर्वानुमान लगाएं"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "आपके स्टैक को प्रोफाइल करता है, संभावित आक्रमण वैक्टर की भविष्यवाणी करता है, और सक्रिय सख्त मार्गदर्शन प्रदान करता है।"
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "पृथक किए गए खतरों और पुनर्प्राप्त करने योग्य हटाई गई फ़ाइलों को प्रबंधित करें।"
+
+msgid "Deleted Files (Recoverable)"
+msgstr "हटाई गई फ़ाइलें (पुनर्प्राप्ति योग्य)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "यहां स्थानांतरित की गई फ़ाइलों को वापस संगरोध में पुनर्स्थापित किया जा सकता है या स्थायी रूप से हटाया जा सकता है।"
+
+msgid "Deleted"
+msgstr "हटा दिया गया"
+
+msgid "Loading deleted files..."
+msgstr "हटाई गई फ़ाइलें लोड हो रही हैं..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "पुनर्प्राप्त करने योग्य हटाए गए संग्रहण में संगरोधित फ़ाइलों को ले जाता है।"
+
+msgid "Delete Permanently:"
+msgstr "स्थायी रूप से हटाएँ:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "हटाए गए संग्रहण से किसी फ़ाइल को स्थायी रूप से हटा देता है।"
+
+msgid "Access denied from your region."
+msgstr "आपके क्षेत्र से प्रवेश अस्वीकृत."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "अस्थायी लॉकआउट से पहले अधिकतम विफल लॉगिन प्रयास।"
+
+msgid "Time window for counting failed attempts."
+msgstr "विफल प्रयासों की गिनती के लिए समय विंडो."
+
+msgid "Open Tool"
+msgstr "टूल खोलें"
+
+msgid "Available Fix"
+msgstr "उपलब्ध फिक्स"
+
+msgid "Preview Patch"
+msgstr "पूर्वावलोकन पैच"
+
+msgid "Apply Patch"
+msgstr "पैच लगाएं"
+
+msgid "Honeytrap Configuration"
+msgstr "हनीट्रैप कॉन्फ़िगरेशन"
+
+msgid "Enable Deception Module"
+msgstr "धोखेबाज़ मॉड्यूल सक्षम करें"
+
+msgid "How Deception Works:"
+msgstr "धोखा कैसे काम करता है:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "निम्नलिखित URL आपकी साइट पर मौजूद नहीं हैं. यदि कोई उन तक पहुंचता है, तो उन्हें पुष्टि किए गए हमलावरों के रूप में <strong>स्वचालित रूप से ब्लॉक कर दिया जाता है। प्रशासकों को कभी भी अवरुद्ध नहीं किया जाता है लेकिन उन्हें एक चेतावनी दिखाई देगी।"
+
+msgid "Custom Honeytrap Paths"
+msgstr "कस्टम हनीट्रैप पथ"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "प्रति पंक्ति एक पथ जोड़ें (जैसे, /my-secret-admin/, /old-backup.sql)। डिफ़ॉल्ट पहले से ही सक्रिय हैं."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "डिफ़ॉल्ट हनीट्रैप पथ (हमेशा सक्रिय)"
+
+msgid "Login Page Honeypot"
+msgstr "लॉगिन पेज हनीपॉट"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "एक अदृश्य फ़ील्ड को लॉगिन/पंजीकरण फॉर्म में इंजेक्ट किया जाता है। केवल बॉट्स ही इसे भरते हैं, जिससे तुरंत पता लगाया जा सकता है और ब्लॉक किया जा सकता है।"
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "डिसेप्शन मॉड्यूल सक्रिय होने पर यह सुरक्षा हमेशा सक्षम होती है। किसी कॉन्फ़िगरेशन की आवश्यकता नहीं है."
+
+msgid "User Enumeration Trap"
+msgstr "उपयोगकर्ता गणना जाल"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "टोही प्रयासों का पता लगाता है जहां हमलावर ?author=1, ?author=2, आदि के माध्यम से वैध उपयोगकर्ता नामों को स्कैन करते हैं।"
+
+msgid "Enable user enumeration detection"
+msgstr "उपयोगकर्ता गणना पहचान सक्षम करें"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "गणना प्रयासों पर हार्ड ब्लॉक (डिफ़ॉल्ट: होमपेज पर सॉफ्ट रीडायरेक्ट)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "सभी लेखक गणना को ब्लॉक करें (मौजूदा उपयोगकर्ताओं के लिए भी)"
+
+msgid "Save Changes"
+msgstr "परिवर्तन सहेजें"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "जीडीपीआर अनुच्छेद 30 डेटा मैपिंग"
+
+msgid "Refresh Map"
+msgstr "मानचित्र ताज़ा करें"
+
+msgid "Export Data Map (PDF)"
+msgstr "निर्यात डेटा मानचित्र (पीडीएफ)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "डेटाबेस तालिकाओं में स्वचालित PII खोज, डेटा प्रवाह मैपिंग और तृतीय-पक्ष साझाकरण पहचान।"
+
+msgid "Data Element"
+msgstr "डेटा तत्व"
+
+msgid "Location"
+msgstr "स्थान"
+
+msgid "Purpose"
+msgstr "प्रयोजन"
+
+msgid "Retention"
+msgstr "प्रतिधारण"
+
+msgid "Third-Party Sharing"
+msgstr "तृतीय-पक्ष साझाकरण"
+
+msgid "Legal Basis"
+msgstr "कानूनी आधार"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "अभी तक कोई PII रिकॉर्ड नहीं मिला. रिपोर्ट बनाने के लिए डेटा मैप स्कैन चलाएँ।"
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "भूल जाने का अधिकार स्वचालन"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "मिटाने के अनुरोध सबमिट करें, डेटा निष्कासन को सत्यापित करें, और जीडीपीआर वर्कफ़्लो के लिए अनुपालन लॉग को ट्रैक करें।"
+
+msgid "User ID"
+msgstr "उपयोगकर्ता आईडी"
+
+msgid "Comments"
+msgstr "टिप्पणियाँ"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "गुमनाम करने के बजाय टिप्पणियाँ हटाएँ"
+
+msgid "Run Erasure"
+msgstr "मिटाएँ चलाएँ"
+
+msgid "Verify Erasure"
+msgstr "मिटाने की पुष्टि करें"
+
+msgid "GDPR Request Log"
+msgstr "जीडीपीआर अनुरोध लॉग"
+
+msgid "Request Type"
+msgstr "अनुरोध प्रकार"
+
+msgid "Requested At"
+msgstr "पर अनुरोध किया गया"
+
+msgid "Completed At"
+msgstr "पर पूरा हुआ"
+
+msgid "No GDPR requests logged yet."
+msgstr "अभी तक कोई जीडीपीआर अनुरोध लॉग नहीं किया गया है।"
+
+msgid "Shadow Runtime Sandbox"
+msgstr "छाया रनटाइम सैंडबॉक्स"
+
+msgid "Enable Sandbox Module"
+msgstr "सैंडबॉक्स मॉड्यूल सक्षम करें"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "शैडो रनटाइम सैंडबॉक्स इंजन को लोड करता है।"
+
+msgid "Enable Sandbox Console"
+msgstr "सैंडबॉक्स कंसोल सक्षम करें"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "मैनेज_ऑप्शंस वाले wp-एडमिन उपयोगकर्ताओं को सैंडबॉक्स कंसोल में कोड चलाने की अनुमति देता है।"
+
+msgid "Sandbox Timeout"
+msgstr "सैंडबॉक्स टाइमआउट"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "निष्पादन समय समाप्ति सेकंड में (1-30)।"
+
+msgid "Dynamic Analysis"
+msgstr "गतिशील विश्लेषण"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "स्थैतिक जांच के अलावा गतिशील निष्पादन विश्लेषण चलाएँ।"
+
+msgid "Quarantine Policy"
+msgstr "संगरोध नीति"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "अधिकांश साइटों के लिए मैन्युअल संगरोध की अनुशंसा की जाती है। ऑटो संगरोध केवल उच्च-विश्वास वाले पुष्टि किए गए मैलवेयर को अलग करता है।"
+
+msgid "Manual (Recommended)"
+msgstr "मैनुअल (अनुशंसित)"
+
+msgid "Auto Quarantine"
+msgstr "ऑटो संगरोध"
+
+msgid "Save Quarantine Policy"
+msgstr "संगरोध नीति सहेजें"
+
+msgid "AI Risk Controls"
+msgstr "एआई जोखिम नियंत्रण"
+
+msgid "Enable AI Detection Module"
+msgstr "एआई डिटेक्शन मॉड्यूल सक्षम करें"
+
+msgid "Enable Insider Threat Detection"
+msgstr "अंदरूनी खतरे का पता लगाने को सक्षम करें"
+
+msgid "Insider Threat Threshold"
+msgstr "अंदरूनी ख़तरे की सीमा"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "डेटा एक्सफ़िल्ट्रेशन मॉनिटरिंग सक्षम करें"
+
+msgid "Exfiltration Threshold"
+msgstr "निष्कासन दहलीज"
+
+msgid "Exfiltration Baseline Days"
+msgstr "निष्कासन बेसलाइन दिन"
+
+msgid "Session Risk Threshold"
+msgstr "सत्र जोखिम सीमा"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "सतत प्रामाणिक पुन: जाँच अंतराल (सेकंड)"
+
+msgid "Risk Spike Threshold"
+msgstr "जोखिम स्पाइक सीमा"
+
+msgid "Save AI Settings"
+msgstr "एआई सेटिंग्स सहेजें"
+
+msgid "Quarantine Mode"
+msgstr "संगरोध मोड"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "मैनुअल मोड अधिक सुरक्षित और अनुशंसित है। ऑटो मोड केवल उच्च-विश्वास पुष्ट मैलवेयर को संगरोधित करता है।"
+
+msgid "Data Map"
+msgstr "डेटा मानचित्र"
+
+msgid "Privacy Requests"
+msgstr "गोपनीयता अनुरोध"
+
+msgid "Deception Technology"
+msgstr "धोखे की तकनीक"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "हनीपोट, फर्जी परिसंपत्तियां, और हमला करने से पहले खतरों को पकड़ने के लिए हमलावर का धोखा।"
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "%2$d में से %1$d प्रविष्टियाँ दिखाई जा रही हैं"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "पी2पी इंटेलिजेंस मॉड्यूल लोड नहीं हुआ है।"
+
+msgid "P2P Threat Intelligence"
+msgstr "पी2पी खतरा खुफिया"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "झुंड प्रतिरक्षा के लिए अन्य सेंटिनलडब्ल्यूपी इंस्टॉलेशन के साथ खतरे की खुफिया जानकारी साझा करें।"
+
+msgid "P2P Settings"
+msgstr "पी2पी सेटिंग्स"
+
+msgid "Enable P2P Intelligence"
+msgstr "पी2पी इंटेलिजेंस सक्षम करें"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "सहकर्मी नोड्स के साथ सहयोगात्मक खतरे की खुफिया जानकारी साझा करना सक्षम करें।"
+
+msgid "My Node Key"
+msgstr "मेरी नोड कुंजी"
+
+msgid "Copy"
+msgstr "प्रतिलिपि"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "इस कुंजी को उन साथियों के साथ साझा करें जो आपकी साइट से जुड़ना चाहते हैं।"
+
+msgid "Broadcast Threats"
+msgstr "प्रसारण की धमकियाँ"
+
+msgid "Share detected threats with registered peers."
+msgstr "पंजीकृत साथियों के साथ पता लगाए गए खतरों को साझा करें।"
+
+msgid "Trust Threshold"
+msgstr "विश्वास की दहलीज"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "केवल ख़तरे वाले स्कोर >= इस सीमा वाले आईपी को ऑटो-ब्लॉक करें। निम्न मान = अधिक आक्रामक अवरोधन।"
+
+msgid "Registered Peers"
+msgstr "पंजीकृत सहकर्मी"
+
+msgid "Add Peer"
+msgstr "सहकर्मी जोड़ें"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "अभी तक किसी सहकर्मी ने पंजीकरण नहीं कराया है. खतरे की खुफिया जानकारी साझा करना शुरू करने के लिए एक सहकर्मी जोड़ें।"
+
+msgid "Label"
+msgstr "लेबल"
+
+msgid "Last Sync"
+msgstr "अंतिम सिंक"
+
+msgid "Sent/Received"
+msgstr "भेजा/प्राप्त किया गया"
+
+msgid "Unnamed"
+msgstr "अनाम"
+
+msgid "%s ago"
+msgstr "%s पहले"
+
+msgid "Threats Sent"
+msgstr "धमकियाँ भेजी गईं"
+
+msgid "Threats Received"
+msgstr "धमकियाँ मिलीं"
+
+msgid "Statistics"
+msgstr "सांख्यिकी"
+
+msgid "Connected Peers"
+msgstr "जुड़े हुए साथी"
+
+msgid "Threats Received (24h)"
+msgstr "धमकियाँ प्राप्त हुईं (24 घंटे)"
+
+msgid "P2P Status"
+msgstr "पी2पी स्थिति"
+
+msgid "Threat Intelligence Credits"
+msgstr "ख़तरे की ख़ुफ़िया जानकारी का श्रेय"
+
+msgid "Current Credit Balance"
+msgstr "वर्तमान क्रेडिट शेष"
+
+msgid "Reputation Score"
+msgstr "प्रतिष्ठा स्कोर"
+
+msgid "Accuracy"
+msgstr "सटीकता"
+
+msgid "Badges:"
+msgstr "बैज:"
+
+msgid "No badges yet"
+msgstr "अभी तक कोई बैज नहीं"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "प्रीमियम लाभ मुफ़्त में अनलॉक किए जाते हैं क्योंकि आपका प्रतिष्ठा स्कोर 1000 से ऊपर है।"
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "प्रीमियम लाभों को निःशुल्क अनलॉक करने के लिए 1000 से ऊपर प्रतिष्ठा स्कोर तक पहुंचें।"
+
+msgid "Top Contributors (Anonymous)"
+msgstr "शीर्ष योगदानकर्ता (गुमनाम)"
+
+msgid "No contributor data available yet."
+msgstr "अभी तक कोई योगदानकर्ता डेटा उपलब्ध नहीं है."
+
+msgid "Rank"
+msgstr "पद"
+
+msgid "Anonymous Site ID"
+msgstr "अनाम साइट आईडी"
+
+msgid "Credits"
+msgstr "श्रेय"
+
+msgid "Reputation"
+msgstr "प्रतिष्ठा"
+
+msgid "Close"
+msgstr "बंद करें"
+
+msgid "Add New Peer"
+msgstr "नया सहकर्मी जोड़ें"
+
+msgid "Peer URL"
+msgstr "सहकर्मी यूआरएल"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "सहकर्मी वर्डप्रेस साइट का पूरा यूआरएल (उत्पादन में HTTPS का उपयोग करना चाहिए)।"
+
+msgid "Peer Node Key"
+msgstr "पीयर नोड कुंजी"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "सहकर्मी की नोड कुंजी (वे इसे अपने पी2पी सेटिंग पृष्ठ से कॉपी कर सकते हैं)।"
+
+msgid "Label (Optional)"
+msgstr "लेबल (वैकल्पिक)"
+
+msgid "My Production Server"
+msgstr "मेरा प्रोडक्शन सर्वर"
+
+msgid "A friendly name to identify this peer."
+msgstr "इस सहकर्मी की पहचान के लिए एक अनुकूल नाम."
+
+msgid "Unauthorized"
+msgstr "अनाधिकृत"
+
+msgid "Sandbox module is not loaded."
+msgstr "सैंडबॉक्स मॉड्यूल लोड नहीं हुआ है."
+
+msgid "Sandbox module is disabled."
+msgstr "सैंडबॉक्स मॉड्यूल अक्षम है."
+
+msgid "Sandbox console is disabled."
+msgstr "सैंडबॉक्स कंसोल अक्षम है."
+
+msgid "No code provided."
+msgstr "कोई कोड नहीं दिया गया."
+
+msgid "Insufficient permissions."
+msgstr "अपर्याप्त अनुमतियाँ."
+
+msgid "Sandbox Module Disabled"
+msgstr "सैंडबॉक्स मॉड्यूल अक्षम"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "शैडो रनटाइम सैंडबॉक्स वर्तमान में अक्षम है। कंसोल का उपयोग करने के लिए इसे सेटिंग्स में सक्षम करें।"
+
+msgid "Go to Settings"
+msgstr "सेटिंग्स पर जाएं"
+
+msgid "Sandbox Console Disabled"
+msgstr "सैंडबॉक्स कंसोल अक्षम"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "सैंडबॉक्स मॉड्यूल सक्षम है, लेकिन एडमिन कंसोल अक्षम है। WP-एडमिन से कोड चलाने के लिए कंसोल सेटिंग सक्षम करें।"
+
+msgid "Danger Zone: Code Execution"
+msgstr "ख़तरा क्षेत्र: कोड निष्पादन"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "यह कंसोल एक अलग सैंडबॉक्स में PHP कोड निष्पादित करता है। सभी डेटाबेस परिवर्तन स्वचालित रूप से वापस ले लिए जाते हैं। केवल संदिग्ध कोड का विश्लेषण करने या परीक्षण के लिए उपयोग करें।"
+
+msgid "PHP Code Editor"
+msgstr "PHP कोड संपादक"
+
+msgid "Run Code"
+msgstr "कोड चलाएँ"
+
+msgid "Analyze Only"
+msgstr "केवल विश्लेषण करें"
+
+msgid "Timeout:"
+msgstr "समय समाप्ति:"
+
+msgid "Execution Results"
+msgstr "निष्पादन परिणाम"
+
+msgid "STATIC ANALYSIS"
+msgstr "स्थैतिक विश्लेषण"
+
+msgid "OUTPUT"
+msgstr "आउटपुट"
+
+msgid "ERRORS"
+msgstr "त्रुटियाँ"
+
+msgid "DATABASE QUERIES"
+msgstr "डेटाबेस प्रश्न"
+
+msgid "Module not loaded"
+msgstr "मॉड्यूल लोड नहीं हुआ"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "लाइव ट्रैफ़िक विश्लेषण उपलब्ध नहीं है."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "जस्ट-इन-टाइम एक्सेस स्वचालित समाप्ति के साथ अनुरोध और अनुमोदन वर्कफ़्लो का उपयोग करता है।"
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "अस्थायी पहुंच वर्तमान में अनुपलब्ध है क्योंकि मॉड्यूल अक्षम है या लोड नहीं हुआ है।"
+
+msgid "Open settings"
+msgstr "खुली सेटिंग"
+
+msgid "Request Temporary Access"
+msgstr "अस्थायी पहुंच का अनुरोध करें"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "यह अनुरोध आपके वर्तमान में लॉग-इन खाते पर लागू होता है। अस्थायी उन्नत पहुंच प्रदान करने से पहले एक प्रशासक को इसे अनुमोदित करना होगा।"
+
+msgid "Requested Role"
+msgstr "अनुरोधित भूमिका"
+
+msgid "Administrator"
+msgstr "प्रशासक"
+
+msgid "Editor"
+msgstr "संपादक"
+
+msgid "Duration (minutes)"
+msgstr "अवधि (मिनट)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "बताएं कि अस्थायी उन्नत पहुंच की आवश्यकता क्यों है।"
+
+msgid "Submit Request"
+msgstr "अनुरोध सबमिट करें"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "अस्थायी पहुँच प्रदान करें (प्रशासन)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "उपयोगकर्ता नाम या ईमेल द्वारा किसी विशिष्ट उपयोगकर्ता को सीधे समय-सीमित उन्नत पहुंच प्रदान करें।"
+
+msgid "Target User (Username or Email)"
+msgstr "लक्षित उपयोगकर्ता (उपयोगकर्ता नाम या ईमेल)"
+
+msgid "username or user@example.com"
+msgstr "उपयोगकर्ता नाम या user@example.com"
+
+msgid "Grant Role"
+msgstr "अनुदान भूमिका"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "बताएं कि इस उपयोगकर्ता को अस्थायी उन्नत पहुंच की आवश्यकता क्यों है।"
+
+msgid "Grant Access"
+msgstr "पहुंच प्रदान करें"
+
+msgid "Pending and Active Requests"
+msgstr "लंबित और सक्रिय अनुरोध"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "लंबित अनुरोधों को स्वीकृत करें, सीधे अनुदान की समीक्षा करें और इस कतार से सक्रिय अनुमतियाँ रद्द करें।"
+
+msgid "Original Role"
+msgstr "मूल भूमिका"
+
+msgid "Elevated Role"
+msgstr "उन्नत भूमिका"
+
+msgid "Granted"
+msgstr "मान लिया"
+
+msgid "Expires"
+msgstr "समाप्त हो रहा है"
+
+msgid "Approved By"
+msgstr "द्वारा अनुमोदित"
+
+msgid "Loading..."
+msgstr "लोड हो रहा है..."
+
+msgid "English (US)"
+msgstr "अंग्रेज़ी (यूएस)"
+
+msgid "English (UK)"
+msgstr "अंग्रेज़ी (यूके)"
+
+msgid "Espanol (Spanish)"
+msgstr "एस्पानोल (स्पेनिश)"
+
+msgid "Francais (French)"
+msgstr "फ़्रैन्कैस (फ़्रेंच)"
+
+msgid "Deutsch (German)"
+msgstr "जर्मन (जर्मन)"
+
+msgid "Italiano (Italian)"
+msgstr "इटालियनो (इतालवी)"
+
+msgid "Portugues (Brazilian)"
+msgstr "पुर्तगाली (ब्राज़ीलियाई)"
+
+msgid "Nederlands (Dutch)"
+msgstr "नीदरलैंड (डच)"
+
+msgid "Russian"
+msgstr "रूसी"
+
+msgid "Japanese"
+msgstr "जापानी"
+
+msgid "Chinese (Simplified)"
+msgstr "चीनी (सरलीकृत)"
+
+msgid "Arabic"
+msgstr "अरबी"
+
+msgid "Hindi"
+msgstr "हिंदी"
+
+msgid "Korean"
+msgstr "कोरियाई"
+
+msgid "Turkish"
+msgstr "तुर्की"
+
+msgid "Polski (Polish)"
+msgstr "पोल्स्की (पोलिश)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "बहासा इंडोनेशिया (इंडोनेशियाई)"
+
+msgid "Ukrainian"
+msgstr "यूक्रेनी"
+
+msgid "Vietnamese"
+msgstr "वियतनामी"
+
+msgid "Thai"
+msgstr "थाई"
+
+msgid "Svenska (Swedish)"
+msgstr "स्वेन्स्का (स्वीडिश)"
+
+msgid "Dansk (Danish)"
+msgstr "डांस्क (डेनिश)"
+
+msgid "Suomi (Finnish)"
+msgstr "सुओमी (फिनिश)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "कोरियाई बोकमल (नार्वेजियन)"
+
+msgid "Cestina (Czech)"
+msgstr "सेस्टिना (चेक)"
+
+msgid "Greek"
+msgstr "यूनानी"
+
+msgid "Magyar (Hungarian)"
+msgstr "मग्यार (हंगेरियन)"
+
+msgid "Romana (Romanian)"
+msgstr "रोमाना (रोमानियाई)"
+
+msgid "Slovencina (Slovak)"
+msgstr "स्लोवेनसीना (स्लोवाक)"
+
+msgid "Bulgarian"
+msgstr "बल्गेरियाई"
+
+msgid "Hrvatski (Croatian)"
+msgstr "ह्रवत्स्की (क्रोएशियाई)"
+
+msgid "Serbian"
+msgstr "सर्बियाई"
+
+msgid "Hebrew"
+msgstr "हिब्रू"
+
+msgid "Persian"
+msgstr "फ़ारसी"
+
+msgid "Settings saved successfully."
+msgstr "सेटिंग्स सफलतापूर्वक सहेजी गईं."
+
+msgid "Settings reset to defaults."
+msgstr "सेटिंग्स डिफ़ॉल्ट पर रीसेट हो गईं।"
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyMy सुरक्षा लॉग"
+
+msgid "No matching user found."
+msgstr "कोई मेल खाता उपयोगकर्ता नहीं मिला."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "सुरक्षा लॉग और संबंधित पीआईआई को अज्ञात रखा गया था।"
+
+msgid "Invalid user ID."
+msgstr "अमान्य उपयोगकर्ता आइ डी।"
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "मैनुअल या वेबहुक-आधारित मिटाने का अनुरोध कतारबद्ध।"
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp हटाने का अनुरोध भेजा गया."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "स्ट्राइप इरेज़र के लिए अनुपालन रिकॉर्ड के लिए मैन्युअल एपीआई फॉलो-अप की आवश्यकता होती है।"
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analytics उपयोगकर्ता विलोपन API अनुरोध को बाह्य रूप से कॉन्फ़िगर किया जाना चाहिए।"
+
+msgid "Privacy Preferences"
+msgstr "गोपनीयता प्राथमिकताएँ"
+
+msgid "Select which optional processing categories you allow."
+msgstr "चुनें कि आप किन वैकल्पिक प्रसंस्करण श्रेणियों की अनुमति देते हैं।"
+
+msgid "Save Preferences"
+msgstr "प्राथमिकताएँ सहेजें"
+
+msgid "Consent Management"
+msgstr "सहमति प्रबंधन"
+
+msgid "Given"
+msgstr "दिया गया"
+
+msgid "Withdrawn"
+msgstr "वापस ले लिया गया"
+
+msgid "No consent records found."
+msgstr "कोई सहमति रिकॉर्ड नहीं मिला."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>त्रुटि</strong>: कुछ गलत हो गया। कृपया बाद में पुन: प्रयास करें।"
+
+msgid "The peer URL is not valid."
+msgstr "समकक्ष यूआरएल मान्य नहीं है."
+
+msgid "You cannot add your own site as a peer."
+msgstr "आप अपनी साइट को सहकर्मी के रूप में नहीं जोड़ सकते."
+
+msgid "API key must be at least 16 characters."
+msgstr "एपीआई कुंजी कम से कम 16 अक्षर की होनी चाहिए।"
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "साथियों की अधिकतम संख्या (%d) तक पहुंच गई."
+
+msgid "Missing authentication header."
+msgstr "प्रमाणीकरण शीर्षलेख गुम है."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "अमान्य नोड कुंजी. सहकर्मी पहचाना नहीं गया."
+
+msgid "Invalid request signature."
+msgstr "अमान्य अनुरोध हस्ताक्षर."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "दर सीमा पार हो गई. बाद में पुन: प्रयास।"
+
+msgid "Invalid site identifier."
+msgstr "अमान्य साइट पहचानकर्ता."
+
+msgid "Unknown contribution type."
+msgstr "अज्ञात योगदान प्रकार."
+
+msgid "Unknown benefit type."
+msgstr "अज्ञात लाभ प्रकार."
+
+msgid "Insufficient credits for this benefit."
+msgstr "इस लाभ के लिए अपर्याप्त क्रेडिट."
+
+msgid "Threat Forecast"
+msgstr "ख़तरे का पूर्वानुमान"
+
+msgid "Your site profile:"
+msgstr "आपकी साइट प्रोफ़ाइल:"
+
+msgid "Predicted threats this month:"
+msgstr "इस महीने अनुमानित खतरे:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "अभी तक कोई उच्च-आत्मविश्वास वाले वेक्टर का पता नहीं चला है।"
+
+msgid "Recommended actions:"
+msgstr "अनुशंसित कार्रवाइयां:"
+
+msgid "No immediate actions required."
+msgstr "तत्काल कार्रवाई की आवश्यकता नहीं है."
+
+msgid "Not logged in"
+msgstr "लॉग इन नहीं है"
+
+msgid "A reason is required"
+msgstr "एक कारण आवश्यक है"
+
+msgid "Invalid requested role"
+msgstr "अमान्य अनुरोधित भूमिका"
+
+msgid "An active or pending request already exists for this role."
+msgstr "इस भूमिका के लिए एक सक्रिय या लंबित अनुरोध पहले से मौजूद है।"
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "प्रवेश अनुरोध सबमिट किया गया. एक व्यवस्थापक आपके अनुरोध की समीक्षा करेगा."
+
+msgid "Invalid request"
+msgstr "अमान्य अनुरोध"
+
+msgid "Pending request not found"
+msgstr "लंबित अनुरोध नहीं मिला"
+
+msgid "Request role is invalid"
+msgstr "अनुरोध भूमिका अमान्य है"
+
+msgid "Invalid approved role"
+msgstr "अमान्य स्वीकृत भूमिका"
+
+msgid "Access approved successfully"
+msgstr "प्रवेश सफलतापूर्वक स्वीकृत"
+
+msgid "Target user (username or email) is required."
+msgstr "लक्ष्य उपयोगकर्ता (उपयोगकर्ता नाम या ईमेल) आवश्यक है."
+
+msgid "A reason is required."
+msgstr "एक कारण आवश्यक है."
+
+msgid "Invalid requested role."
+msgstr "अमान्य अनुरोधित भूमिका."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "लक्षित उपयोगकर्ता नहीं मिला. किसी मौजूदा उपयोगकर्ता नाम या ईमेल का उपयोग करें."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "उपयोगकर्ता के पास पहले से ही यह भूमिका है. अस्थायी उन्नयन की आवश्यकता नहीं है."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "इस उपयोगकर्ता और भूमिका के लिए एक सक्रिय या लंबित अनुदान पहले से मौजूद है।"
+
+msgid "Unable to grant temporary access."
+msgstr "अस्थायी पहुँच प्रदान करने में असमर्थ."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "%3$d मिनट के लिए %1$s को अस्थायी %2$s पहुंच प्रदान की गई।"
+
+msgid "Invalid grant"
+msgstr "अमान्य अनुदान"
+
+msgid "Grant not found or already revoked"
+msgstr "अनुदान नहीं मिला या पहले ही रद्द कर दिया गया है"
+
+msgid "Permission revoked successfully"
+msgstr "अनुमति सफलतापूर्वक रद्द कर दी गई"
+
+msgid "Once Monthly"
+msgstr "मासिक एक बार"
+
+msgid "Every 5 Minutes"
+msgstr "हर 5 मिनट में"
 

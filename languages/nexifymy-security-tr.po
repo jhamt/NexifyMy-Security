@@ -8,679 +8,679 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "Son taramada %d tehdit algılandı"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Doğrulamak için bu kodu söyleyin)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Yüksek"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 Gün"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 Saat"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 Gün"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 Dakika"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Orta"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 Saat"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA Yöntemleri"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA Ayarları"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Düşük"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 Gün"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 Gün"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 Dakika"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 gün"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Yasak"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Bulunamadı"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Çok Fazla İstek (Önerilen)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 Dakika"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Hizmet Kullanılamıyor"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 Saat"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 gün"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 Gün"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 gün (sürekli)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 Gün"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 gün"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "AI Öğrenme Durumu"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "AI Durumu"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI Tehdit Algılama"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "AI öğrenme verileri başarıyla sıfırlandı."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "Dakika Başına AJAX İstekleri"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API ve Başsız Güvenlik"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API ve Hizmetler"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "API Ani Artış İzinleri"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "API Uç Noktaları"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API Anahtarı"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "API Hız Sınırlaması"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "Dakika Başına API İstekleri"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "API Güvenliği"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "API Jetonu"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "API hız limiti aşıldı. Sınır: Dakikada %d istek."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "API kısıtlamaları"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API jetonu, HEC jetonu veya kimlik doğrulama anahtarı."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Terk edildi"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Karantina Hakkında"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Erişim Reddedildi"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Eylem"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Eylemler"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktif"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Etkinlik Kontrol Paneli"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Etkinlik Günlüğü"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Etkinlik Günlüğü Ayarları"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Bu kullanıcıların etkinlikleri, günlüğe kaydedildi."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Bundan daha eski etkinlik günlükleri otomatik olarak silinecek."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Etkinlik izleme"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "%d karakter daha ekleyin."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Ekstra güvenlik için kullanıcı hesaplarına 2FA ekleyin."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Giriş yapmak için CAPTCHA ekleyin ve formlar."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Giriş formlarına CAPTCHA doğrulaması ekleyin"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "HTTP güvenlik başlıkları ekleyin (X-Frame-Options, CSP, vb.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Yeni Parola Ekle"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Güvenlik Başlıkları Ekleyin"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Ekle Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "X-Frame-Options, X-Content-Type-Options ve diğer güvenlik başlıklarını ekleyin."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "X-Frame-Options, X-XSS-Protection başlıklarını ekleyin"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "İkinci bir kimlik doğrulama biçimi gerektirerek ekstra bir güvenlik katmanı ekleyin."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Bir kullanıcı oturum açma işlemleri için iki kimlik doğrulama biçimi gerektirerek ekstra güvenlik katmanı."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "TOTP tabanlı 2FA ile ekstra bir güvenlik katmanı ekleyin."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Küçük harfler ekleyin."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Sayılar ekleyin."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Özel karakterler ekleyin."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Ekle Listele"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Büyük harfler ekle."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Ek giriş güvenliği önlemleri. Hız sınırlayıcıyla çalışır."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Giriş formlarına CAPTCHA ekler. Güvenli ancak kullanıcı deneyimini etkileyebilir."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Google reCAPTCHA, Cloudflare Turnstile veya matematik zorlukları ekler"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "HTTP güvenlik başlıkları ekler (X-Frame-Options, CSP). Güvenli - tarayıcı güvenliğini artırır."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "TOTP, E-posta veya SMS kodlarıyla ekstra güvenlik katmanı ekler"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Yönetici Oturum Açma İşlemleri (başarılı yönetici oturum açma işlemleri)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Gelişmiş"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Gelişmiş Güvenlik Duvarı Ayarları"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Gelişmiş Sağlamlaştırma"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Gelişmiş Sağlamlaştırma Seçenekleri"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Gelişmiş Oturum Açma Ayarlar"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Gelişmiş Seçenekler"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Gelişmiş Tarayıcı Seçenekleri"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Gelişmiş buluşsal yöntemler"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Etkilenen Dosyalar:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Uyarı Eşiği"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Uyarı Türler"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Uyarılar"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Eklenti devre dışı bırakılırsa gönderilen uyarılar."
 
 msgid "All"
-msgstr "All"
+msgstr "Tümü"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Hepsi Temizle!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Tüm Etkinlikler"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Tüm Önem Dereceleri"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Tüm kullanıcıların etkinleştirmesine izin ver Gönüllü olarak 2FA."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Yedekleme yöntemi olarak e-posta koduna izin ver"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Hız sınırının üzerinde kısa patlamalara izin ver."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Kullanıcılara, uygulamadan önce 2FA kurmaları için zaman tanıyın."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Kullanıcıların 2FA'yı etkinleştirmesine izin ver"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Kullanıcıların acil durum yedeklemesi oluşturmasına izin ver kodlar."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Kullanıcıların güvenilir cihazlarda 2FA'yı atlamalarına izin ver."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "İzin Verilen Kullanıcı Aracıları"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "Analitikler"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anormallikler"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Herhangi Bir Önem Derecesi"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Herhangi bir değişiklik anında e-postayı tetikler uyarılar."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Ayarları Uygula"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "WordPress güvenliğiyle ilgili en iyi uygulamaları uygulayın."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Güvenlik düzeltmelerini uygulayın"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "WordPress'e güvenliği güçlendirme önlemlerini uygulayın."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "WordPress'inizi korumak için güvenliği güçlendirme önlemlerini uygulayın kurulumu."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Bu şifreyi silmek istediğinizden emin misiniz?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Devam etmek istediğinizden emin misiniz?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Saldırı Koruması"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Deneme Penceresi"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Ses (Konuşma)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Kimlik Doğrulanıyor..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Kimlik Doğrulama Kodu"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Kimlik Doğrulama Olayları"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Kimlik Doğrulama Jetonu"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Kimlik doğrulama başarısız oldu. Lütfen tekrar deneyin."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "API erişimi için kimlik doğrulama gerekiyor."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "GraphQL erişimi için kimlik doğrulama gerekiyor."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Yazar Taramaları"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Otomatik Engelleme Süresi"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Otomatik Engelleme Tekrarlandı Suçlular"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Otomatik Engelleme Eşiği"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Otomatik Düzeltme"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Otomatik Raporlar Oluştur"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Otomatik Karantina Tehditleri"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Otomatik Tarama Planla"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Otomatik Güncelleme"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Otomatik Güncelleme Ayarları"
 
 msgid "Auto-Updates"
 msgstr "Otomatik Güncellemeler"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Otomatik algılama"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Otomatik tarama"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Otomatik Taramalar"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Birden fazla kuralı tetikleyen IP'leri otomatik olarak kara listeye alın kez."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Güvenlik olayları ve güvenlik açıkları için otomatik olarak Jira biletleri oluşturun."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Proje yönetim sistemlerinizdeki güvenlik olayları için otomatik olarak bildirimler oluşturun."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Planlandığı şekilde otomatik olarak raporlar oluşturun"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Algılanan kötü amaçlı yazılımları otomatik olarak karantinaya taşıyın."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Taramaları otomatik olarak çalıştırın arka plan."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Kötü amaçlı yazılım imzalarını günlük olarak otomatik olarak güncelleyin."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Kullanılabilir Ülkeler"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Kullanılabilir Etkinlikler"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Ort/Gün"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Arka Plan Taramaları"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Kullanımdan önce bozuk dosyaları yedekler değiştirme"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Yedekleme Kodları"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Veritabanınızı yedekleyin, optimize edin ve güvenliğini sağlayın."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Yedeklemeler ve temizleme"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Yedeklemeler wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Kötü konumda depolanır Botlar"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Kötü İstekler"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Dengeli (önerilen)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Davranış Kayıtları"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Davranış analizi"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Kara liste (Engellenenler)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Kara liste (engellenen bloklar)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "Kara liste IP'leri"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Kara liste: Seçilen ülkeleri engelle. Beyaz liste: Yalnızca seçilen ülkelere izin ver."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "Kara Listeye Alınan IP'ler"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Kötü Botları Engelle"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "CSRF Saldırılarını Engelle"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Genel Parolaları Engelle"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Dizin Geçişini Engelle"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Engelle Süre"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Boş Kullanıcı Aracılarını Engelle"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Aşırı API Kullanıcılarını Engelle"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Dosya Düzenleyiciyi Engelle"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Yerel Dosya Eklemeyi Engelle"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Mesajı Engelle"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Engelle Mod"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Engelleme Modu (Önerilen)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Engelleme Modu: Kötü niyetli istekleri engeller. İzleme Modu: Tehditleri engellemeden günlüğe kaydeder."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Uzaktan Kod Yürütmeyi Engelle"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Uzaktan Dosya Eklemeyi Engelle"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "SQL Eklemeyi Engelle"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Şüpheli Dosya Yüklemelerini Engelle"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "XML-RPC erişimini engelle (kaba saldırıyı önler) force)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "XSS Saldırılarını Engelleyin"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Belirli ülkelerden erişimi engelleyin."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Agresif tarayıcıları engelleyin (yüksek istek oranı)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Yazar numaralandırma taramalarını engelleyin (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Aşırı uzun sorguyu engelleyin dizeleri."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Bilinen kötü botları ve kazıyıcıları engelleyin"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Bilinen kötü amaçlı botları ve kazıyıcıları engelleyin."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Kötü biçimlendirilmiş istekleri ve şüpheli sorgu dizelerini engelleyin"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Kötü niyetli istekleri engelleyin"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Kötü niyetli istekleri ve saldırıları engelleyin"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Engelleyin veya ülkeye göre trafiğe izin ver."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "DoS saldırılarını önlemek için bu boyuttan büyük istekleri engelleyin."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Boş kullanıcı aracısıyla istekleri engelleyin (bazı meşru botları engelleyebilir)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Kullanıcı Aracısı başlığı olmadan istekleri engelleyin."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Şüpheli IP'leri engelle"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Şüpheli Kullanıcı Aracılarını engelleyin"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Belirli ülkelerden gelen trafiği engelleyin. Etkinleştirmeden önce ayarlarda ülkeleri yapılandırın."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Yürütülebilir uzantılara sahip yüklemeleri engelleyin (.php, .exe, .sh, vb.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Engellenen Saldırılar"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Engellenen Dosya Uzantıları"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Engellenen İstekler"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Engellenen Kullanıcı Aracılar"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Kötü amaçlı davranış gösteren IP adreslerini engeller. Güvenli - IP'nizi beyaz listeye ekleyebilirsiniz."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Giriş sayfanıza her zaman erişebilmek için bu URL'yi yer imlerine ekleyin."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Bot ve Tarayıcı Koruması"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Bot ve Kullanıcı Aracısı Koruması"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Bot önleme"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Bot koruma"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Tarayıcılar"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Kaba Kuvvet"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Kaba Kuvvet Koruması"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Kaba kuvvet koruması ve oturum açma girişimi sınırları."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "Hata"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "En yoğun Gün"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "CAPTCHA Koruması"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDN Entegrasyonu"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN Durumu"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (Ortak Etkinlik Formatı)"
 
 msgid "CI/CD"
 msgstr "CI/CD"
@@ -689,1093 +689,1093 @@ msgid "CI/CD Pipeline"
 msgstr "CI/CD Pipeline"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "CI/CD Pipeline Entegrasyonu"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "İptal"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Captcha Önizlemesi"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Captcha Sağlayıcısı"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Captcha Ayarları"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Veritabanını Değiştir Önek"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Veritabanı tablosu önekini değiştirin (manuel veritabanı güncellemesi gerektirir)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Saldırıları önlemek için varsayılan oturum açma URL'sini değiştirin."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Otomatik saldırıları önlemek için varsayılan wp-admin oturum açma URL'sini değiştirin."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Bot'u önlemek için oturum açma URL'sini /wp-admin'den özel bilgi olarak değiştirir. saldırılar"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "Kanal"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Karakter Gereksinimleri"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Çekirdek Bütünlüğünü Kontrol Edin"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Aralığı Kontrol Et"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Resmi kaynakları kullanarak bozuk WordPress çekirdek dosyalarını kontrol edin ve onarın."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Çekirdek dosyalarda değişiklik ve kötü amaçlı yazılım olup olmadığını kontrol edin."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Arka Kapıları Kontrol Edin"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Kontrol edin Gizleme"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Bilinen güvenlik açıklarını kontrol edin."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Yüklenen dosyalarda kötü amaçlı içerik olup olmadığını kontrol edin."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Web kabuklarını kontrol eder"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Bilinen güvenlik açıkları için eklentileri/temaları kontrol eder. Güvenli - yalnızca sürümleri kontrol eder."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Benzersiz, tahmin edilmesi zor bir bilgi seçin."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "NexifyMy captcha için meydan okuma türünü seçin."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Dosyaları Temizleyin"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Dosyaları Temizleyin:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Temizleyin ve optimize edin veritabanı"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Veritabanı performansını iyileştirmek için gereksiz verileri temizleyin."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Günlükleri Temizle"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare ve daha fazlası"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API Ayarları"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API Jetonu (Zone ile) izinleri)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare Turnike"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Kod"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Kod Son Kullanma Tarihi"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Kod Kalitesi Sorunları"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Yüklemelerde engellenecek dosya uzantılarının virgülle ayrılmış listesi."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Virgülle ayrılmış liste atlanacak dosya uzantılarının sayısı (ör. jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Yorum Engellendi"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Yorum Formu"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Yorum Gönderme Oranı"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Yorum formu"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "İletişim"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "İletişim Platformlar"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Çekirdek dosyaları resmi WordPress sağlama toplamlarıyla karşılaştırın."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Değişiklikleri tespit etmek için WordPress çekirdek dosyalarınızı resmi sağlama toplamlarıyla karşılaştırın."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Her çekirdek dosyayı beklenen karmayla karşılaştırır"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Tüm RSS ve Atom'u tamamen devre dışı bırakın beslemeler."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Tüm dosya değişikliklerini tamamen devre dışı bırakın (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Uyumluluk"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Uyumluluk ve Raporlama"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Uyumluluk ve Güvenlik Raporlaması"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Uyumluluk Ayarları"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Besleyici Bağımlılıkları"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Kapsamlı analiz"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Kapsamlı kullanıcı etkinliği izleme, oturum açma izleme ve sistem olay günlüğü kaydı."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Yapılandırın"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Yapılandır Gelişmiş oturum açma güvenliği için 2FA"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Güvenlik ve performans için CDN'yi yapılandırın."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "CDN entegrasyonunu ve önbellek yönetimini yapılandırın."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Sitenizi korumak için Web Uygulaması Güvenlik Duvarı'nı (WAF) yapılandırın."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "E-posta uyarılarını ve bildirimlerini yapılandırın."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Güvenlik duvarı kurallarını yapılandırın ve koruma ayarları."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Kötü amaçlı yazılım tarayıcı davranışını ve planlanmış tarama seçeneklerini yapılandırın."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Eklenti ayarlarını ve tercihlerini yapılandırın."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Eklenti ayarlarını yapılandırın."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Güvenlik ayarlarınızı yapılandırın."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Onayla"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Onayla Eylem"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Onaylanmış Kötü Amaçlı Yazılım"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Güvenlik izlemenizi SIEM, biletleme, iletişim ve CI/CD platformlarına bağlayın."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "NexifyMy Security ile ilgili yardım için destek ekibimizle iletişime geçin."
 
 msgid "Content"
-msgstr "Content"
+msgstr "İçerik"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "İçerik Etkinlik"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "İçerik Değişiklikleri"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "İçerik Etkinlikleri"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "İçerik Güvenliği"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Çekirdek Dosya Değişiklikleri"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Çekirdek Dosya Onarımı"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Çekirdek Onarımı"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Çekirdek WordPress bütünlük"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Çekirdek dosya bütünlüğü"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Sayı"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "Ülkeler"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Ülke"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Ülke Engelleme Ayarları"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Ülke kısıtlamaları"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Yedek Oluştur Şimdi"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "WordPress veritabanınızın bir yedeğini oluşturun. Yedeklemeler güvenli bir şekilde saklanır ve indirilebilir."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Kritik güvenlik olayları için ServiceNow'da olaylar oluşturun."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Web kancasını şu adreste oluşturun: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Discord Sunucu Ayarları > Entegrasyonlar > Web Kancaları'nda web kancası oluşturun"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Web kancası oluşturun: Ekipler > Kanal > Bağlayıcılar > Gelen Web Kancası"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Oluşturuldu"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Oluşturuldu: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kritik"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Kritik Yalnızca"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Geçerli Giriş URL'si"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Geçerli Sürüm"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Geçerli:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Özel Oturum Açma URL'si"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Özel URL"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Özel Web Kancaları"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Günlük"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Günlük (Önerilen)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Günlük Durum Özeti"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Günlük Özet"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Kontrol Paneli"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Veriler Saklama"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Veritabanı"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Veritabanı Eylemleri"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Veritabanı Yedekleme"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Veritabanı Bilgileri"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Veritabanı Optimizasyonu"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Veritabanı Optimize Edici"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Veritabanı Güvenlik"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Veritabanı Boyutu"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Veritabanı yedekleme ve optimizasyonu. Etkinleştirmeden önce yedekleme zamanlamasını yapılandırın."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Veritabanı güvenlik kontrolü"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Tarih"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Tarih/Saat"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Devre Dışı Bırakma İzleme:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Hata Ayıkla Mod"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Derin"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Derin Tarama"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Varsayılan Tarama Modu"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Hiçbiri belirtilmediğinde kullanılan varsayılan tarama modu."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Tanımlar"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Sil"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Şu durumda tüm eklenti verilerini sil: kaldırma"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Sil:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Bağımlılık taraması, üçüncü taraf komut dosyası izleme ve CDN bütünlük doğrulaması."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Açıklama"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Site trafiğinize ve güvenlik etkinliklerinize ilişkin ayrıntılı bilgiler"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Web sitenizin güvenlik performansına ilişkin ayrıntılı bilgiler."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Kod yürütmeyi tespit edin ve engelleyin girişimleri."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Gizli arka kapı komut dosyalarını ve kabukları tespit edin."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Kötü amaçlı yazılımları, arka kapıları ve şüpheli kodları tespit edin"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Tehditleri tespit edin"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Davranışsal analiz kullanarak bilinmeyen tehditleri tespit edin."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Algılama Yöntemleri"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Cihaz Türler"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Zorluk"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Zorluk Seviyesi"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "NexifyMy captcha zorlukları için zorluk seviyesi."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Doğrudan"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Dizin Geçişi"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Dizin Geçişi Koruma"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "2FA'yı Devre Dışı Bırak"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Uygulama Şifrelerini Devre Dışı Bırak"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Yazar Arşivlerini Devre Dışı Bırak"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Dizin Gözatmayı Devre Dışı Bırak"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Yerleştirmeleri Devre Dışı Bırak"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Dosya Düzenleyiciyi Devre Dışı Bırak"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Devre Dışı Bırak Dosya Değişiklikleri"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Oturum Açma Hata Mesajlarını Devre Dışı Bırak"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Geri Ping'i Devre Dışı Bırak"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Geri Pingleri Devre Dışı Bırak"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Eklenti/Tema Kurulumunu Devre Dışı Bırak"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "REST API Kullanıcı Numaralandırmasını Devre Dışı Bırak"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "RSS/Atom'u Devre Dışı Bırak Beslemeler"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Sağ Tıklamayı Devre Dışı Bırak"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Metin Seçimini Devre Dışı Bırak"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Geri İzlemeleri Devre Dışı Bırak"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "WP düzenleyiciyi devre dışı bırak"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "XML-RPC'yi devre dışı bırak"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "XML-RPC'yi devre dışı bırak (ortak kaba kuvveti önler) vektör)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "XML-RPC'yi devre dışı bırakın (geri ping saldırılarını önler)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "XML-RPC'yi devre dışı bırakın (DDoS ve kaba kuvvet saldırılarında kullanılır)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Kullanıcı adı numaralandırmasını önlemek için yazar arşiv sayfalarını devre dışı bırakın."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "oEmbed işlevini ve REST API uç noktalarını devre dışı bırakın."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "DDoS'yi önlemek için geri ping işlevini devre dışı bırakın."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Geri izleme/geri izleme işlevini devre dışı bırakın"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "WordPress yöneticisinde eklenti/tema dosyası düzenleyicisini devre dışı bırakın."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "REST aracılığıyla genel kullanıcı numaralandırmasını devre dışı bırakın API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Ön uçta sağ tıklama bağlam menüsünü devre dışı bırakın."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Kod enjeksiyonunu önlemek için yerleşik temayı ve eklenti düzenleyiciyi devre dışı bırakın."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Tema ve eklenti düzenleyiciyi devre dışı bırakın"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Yöneticide tema/eklenti düzenleyiciyi devre dışı bırakın"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Geri izlemeyi devre dışı bırakın işlevselliği."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Devre Dışı"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Saldırıları önlemek için XML-RPC'yi devre dışı bırakır. Jetpack veya mobil uygulama kullanmadığınız sürece güvenlidir."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Yerleşik tema/eklenti düzenleyiciyi devre dışı bırakır. Güvenli - yöneticide kod düzenlemeyi önler."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Dosya düzenlemeyi, XML-RPC'yi devre dışı bırakır ve WordPress'in en iyi uygulamalarını uygular"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Discord Entegrasyonu"
 
 msgid "Download"
-msgstr "Download"
+msgstr "İndir"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Yeni WordPress paketini resmi siteden indirir source"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Kolay"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Kolay (yalnızca ekleme)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "NexifyMy Security eklenti dosyalarını düzenleme, güvenlik nedeniyle devre dışı bırakıldı."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Düzenleyici ve Dosya Erişimi"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Düzenleyici Engelleme:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "E-posta"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "E-posta Uyarı Ayarları"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "E-posta Uyarıları"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "E-posta Yedekleme"
 
 msgid "Email Notifications"
 msgstr "E-posta Bildirimleri"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "E-posta Raporları"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "E-posta Taraması Raporlar"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "E-posta Doğrulaması"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Kullanıcı Aracısını Boşalt"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Etkinleştir"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "2FA'yı Etkinleştir"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "2FA Modülünü Etkinleştir"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Etkinlik Günlüğünü Etkinleştir"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Etkinleştir Uyarılar"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "CAPTCHA Korumasını Etkinleştir"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "CDN Entegrasyonunu Etkinleştir"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "CDN özelliklerini etkinleştir"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "CI/CD Entegrasyonunu Etkinleştir"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Captcha'yı Etkinleştir"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Özel Web Kancalarını Etkinleştir"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Discord'u Etkinleştir"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "E-posta Uyarılarını Etkinleştir"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Güvenlik Duvarını Etkinleştir"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Coğrafi Engellemeyi Etkinleştir"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Gizlemeyi Etkinleştir Oturum Açın"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Jira'yı Etkinleştir"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Korumayı Etkinleştir"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Hız Sınırlandırmayı Etkinleştir"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "SIEM Entegrasyonunu Etkinleştir"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "SSL/HTTPS'yi Etkinleştir"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Etkinleştir Tarayıcı"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Tarayıcı Modülünü Etkinleştir"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Zamanlanmış Taramaları Etkinleştir"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "ServiceNow'u Etkinleştir"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Slack'i Etkinleştir"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Ekipleri Etkinleştir"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "İki Faktörlü Etkinleştir Kimlik Doğrulama"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "WAF'yi Etkinleştir"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "WAF Modülünü Etkinleştir"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "WAF korumasını etkinleştir"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Web Uygulaması Güvenlik Duvarını Etkinleştir"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Web Uygulaması Güvenlik Duvarı korumasını etkinleştirin."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Web Uygulamanız için güvenlik modüllerini etkinleştirin ve yapılandırın sitesi."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Güvenlik modüllerini etkinleştirin ve yapılandırın."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Captcha korumasını etkinleştirin"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Ülke bazlı engellemeyi etkinleştirin"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Hata ayıklama günlüğünü etkinleştirin (yalnızca sorun giderme için)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Saldırıları engellemek için güvenlik duvarı korumasını etkinleştirin"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Oturum açma oranını etkinleştirin sınırlama"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Kötü amaçlı yazılım tarayıcısını etkinleştirin"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Güvenlik modüllerini etkinleştirin veya devre dışı bırakın."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "WAF modülünün tamamını etkinleştirin veya devre dışı bırakın."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Kötü amaçlı yazılım tarayıcısını etkinleştirin veya devre dışı bırakın."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Hız sınırlama modülünü etkinleştirin veya devre dışı bırakın."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Etkinleştirin veya devre dışı bırakın iki faktörlü kimlik doğrulama."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Zamanlanmış taramaları etkinleştir"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Güvenlik açığı tarayıcı özelliklerini etkinleştir"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Etkin"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Uç nokta"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "Uç Nokta URL'si"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Güçlü Şifreleri Zorunluleştirin"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Güçlü şifre gereksinimlerini zorunlu kılın"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Tüm kullanıcılar için güçlü şifre gerekliliklerini zorunlu kılın."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Güçlü şifre gerekliliklerini zorunlu kılın."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Kullanıcılar için güçlü şifre gerekliliklerini zorunlu kılar. Güvenli - yalnızca yeni şifreleri etkiler."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Minimum uzunluk ve karmaşıklık kurallarına sahip güçlü şifreleri zorunlu kılar"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Kurulumu doğrulamak için 6 haneli kodu girin"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Her satıra bir tane olacak şekilde IP'leri girin"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Cevabı girin"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Cevabı girin code:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Kurumsal Düzeyde WordPress Güvenliği"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Hata"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Olay"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Etkinlik Formatı"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Olay Günlükleri"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Olay Önem Derecesi"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Olay Tür"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Etkinlikler"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Etkinlikler (7 gün)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Bilet Oluşturulacak Etkinlikler"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "İletilecek Etkinlikler"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Bildirilecek Etkinlikler"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Örnek: GitHub Eylemler"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Örnek: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Örnek: Jenkins Pipeline"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Hariç Tutulan Uzantılar"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Hariç Tutulan Dosya Desenleri"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Hariç Tutulan Yollar"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Hariç Tutulan Kullanıcılar"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Hariç Tutulanlar"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Kapsamlı dosya taraması"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Mevcut Yedeklemeler"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "CSV'yi Dışa Aktar"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Ayarları Dışa Aktar"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "NexifyMy Security ayarlarınızı bir JSON dosyasına aktarın. Buna tüm modül yapılandırmaları, güvenlik duvarı kuralları, IP listeleri ve tarama ayarları dahildir."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Harici Komut Dosyaları ve CDN Kaynakları"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Ekstra oturum açma güvenliği"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Kötü Amaçlı Yazılım Üzerinde Oluşturma Başarısızlığı"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Güvenlik Açıkları Üzerine Oluşturma Başarısız"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Başarısız"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Geçici kilitlemeden önce başarısız 2FA girişimleri."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Oturum Açma Başarısız"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Oturum Açma Başarısız"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Başarısız oturum açma denemesi algılandı"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Başarısız şifreyi kaydedin."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Hızlı yürütme"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Hızlı güvenlik kontrolü"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "WordPress.org API'sinden resmi dosya sağlama toplamlarını getirir"
 
 msgid "File"
-msgstr "File"
+msgstr "Dosya"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Dosya Düzenleyici"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Dosya Karma:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Dosya Ekleme"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Dosya Ekleme Koruması"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Dosya Bütünlüğü Kontrolü"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Dosya Bütünlüğü İzleme"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Dosya İzinleri"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Dosya Karantinaya alındı"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Taramanın dışında tutulacak dosya uzantıları (satır başına bir tane, nokta olmadan)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Dosya adı"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Taranan Dosyalar"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Taranan Dosyalar:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Dosyalar periyodik olarak temel."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Karantinadaki dosyalar güvenli bir şekilde saklanır ve yürütülemez."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Bundan daha büyük dosyalar tarama sırasında atlanır."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "Filtre"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Güvenlik Duvarı"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Güvenlik Duvarı ve Koruma"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Güvenlik Duvarı Yapılandırma"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Güvenlik Duvarı Kuralları"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Güvenlik Duvarı Ayarları"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Değiştirilen dosyaları düzeltin"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Çok karmaşık veya kodlanmış kodu işaretleyin."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Yönetici için SSL'yi zorunlu kılın"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Yönetici alanı için SSL/HTTPS'yi zorunlu kılın (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
 msgstr "Force for Admins"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Biçim:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Merkezi günlük kaydı ve analiz için güvenlik olaylarını Güvenlik Bilgileri ve Olay Yönetimi (SIEM) platformunuza iletin."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Cloudflare kontrol panelinde Genel Bakış altında bulunur"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Bilinen güvenli eklentide bulundu - muhtemelen meşru kullanım"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Sistem dizininde bulundu - meşru olabilir"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Başlangıç Tarihi"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "E-postadan"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Addan"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "SIEM'iniz için tam HTTP/HTTPS uç noktası URL'si platformu."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Tam kötü amaçlı yazılım analizi"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Tam kötü amaçlı yazılım taraması"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Tam kötü amaçlı yazılım imzaları"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Tam site analizi"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR, CCPA, HIPAA uyumluluk modülleri ve kapsamlı güvenlik denetimi raporlar."
 
 msgid "General"
-msgstr "General"
+msgstr "Genel"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Genel İstek Sınırlama"
 
 msgid "General Settings"
 msgstr "Genel Ayarlar"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Rapor Oluştur"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "SRI Oluştur"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Şundan oluştur: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Oluşturulan"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Genel HTTP Uç Noktası"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Genel Proxy"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Coğrafi Blok"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Coğrafi Engelleme"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Coğrafi Dağıtım"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Ayrıntılı güvenlik açığı verileri için wpscan.com'dan ücretsiz bir API belirteci alın."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Güvenlik olayları meydana geldiğinde ekibinizin iletişim kanallarınızda anında bildirim alın."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "En son tarama durumunu alın"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Tarama sonuçlarını alın (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Anahtarlarınızı Google reCAPTCHA veya Cloudflare Turnstile kontrol panelinden alın."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Başlarken"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Grace Dönem"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Not"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQL Güvenliği"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL iç gözlemi devre dışı."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL hız limiti aşıldı. Sınır: Dakikada %d sorgu."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP Güvenlik Başlıkları"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP Sıkı Aktarım Güvenliği (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP başlıkları"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Tanıma"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Sabit"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Sert (çarpma dahil)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Siteyi Sertleştirme"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Sertleştirme"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Sertleştirme Seçenekleri"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Başlıklar"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Yardım ve Dokümantasyon"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Sezgisel Yöntem Analiz"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Sezgisel model algılama"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Oturum Açmayı Gizle"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Giriş Sayfasını Gizle"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Giriş URL'sini Gizle"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Giriş URL'sini Gizle:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "WP Sürümünü Gizle"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "WordPress'i Gizle Oturum Açma URL'si"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "WordPress Sürümünü Gizle"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "WordPress sürümünü kaynak kodundan gizle"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Varsayılan giriş URL'lerini gizle"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Wp-admin'i gizle"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Wp-admin ve wp-login.php'yi saldırganlardan gizleyin."
 
 msgid "High"
-msgstr "High"
+msgstr "Yüksek"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Yüksek (Maksimum algılama)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Yüksek Güvenlik (daha fazla kontrol, daha yavaş)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Son zamanlarda çok sayıda engellenen saldırı"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Yüksek veya Üzeri"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Yüksek Derecede Tehditler"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Yalnızca yüksek riskli alanlar"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Yapay zeka analiziyle yüksek puanlı tehdit tespit edildi"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Daha yüksek hassasiyet daha fazla yanlış pozitif sonuç üretebilir."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "En yüksek"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Birden fazla ülke seçmek için Ctrl/Cmd tuşunu basılı tutun."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Ev sahibi"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Saatlik"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "2FA Nasıl Çalışır?"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Çekirdek Onarımı Nasıl Çalışır?"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Kendini Koruma Nasıl Çalışır?"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Denemeler aşıldıktan sonra bir IP'nin ne kadar süreyle engelleneceği."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Hız sınırı aşıldıktan sonra bir IP'nin ne kadar süreyle engelleneceği."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Eski raporlar ne kadar süreyle saklanır (30-365 gün)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "IP Erişim Kontrolü"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP Adresi"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IP Engelleme"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP Yapılandırması"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IP Kilitleme"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP Kilitlemeler (kaba kuvvet girişimleri)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "IP Yönetimi"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "IP Beyaz Listesi"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "hızı atlayan IP'ler sınırlama."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "Her zaman engellenecek IP'ler."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "Hiçbir zaman engellenmeyecek IP'ler."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Değiştirilmiş veya eksik dosyaları tanımlar"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Görüntü Seçimi"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Hemen eylem gerekli"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Etki Seviye"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Ayarları İçe Aktar"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Daha önce dışa aktarılan bir JSON dosyasından ayarları içe aktarın. Bu, mevcut ayarlarınızın üzerine yazacaktır."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "İçe/Dışa Aktar"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Aktif Değil"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "Olay"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "GDPR Kontrollerini Dahil Et"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "IP beyaz listesini/kara listesini ekle"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Performansı Ekle Metrikler"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Güvenlik Kontrollerini Dahil Et"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Tehdit Özetini Dahil Et"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Son tarama sonuçlarını dahil et"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Güvenlik günlüklerini dahil et (son 30 gün)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Yanlış captcha yanıtı. Lütfen geri dönüp tekrar deneyin."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Yanlış captcha yanıtı. Lütfen tekrar deneyin."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Olay kategorizasyonu için dizin adı veya kaynak tanımlayıcı."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Dizin/Kaynak"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Bilgi"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Bilgi Açıklaması"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Başlatılıyor..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Örnek Ad"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Güvenlik taramasını sürekli entegrasyon ve dağıtım hatlarınıza entegre edin."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Güvenlik taramasını web kancaları ve API erişimi ile dağıtım hattınıza entegre edin."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "CDN hizmetleriyle entegre olur. Etkinleştirmeden önce CDN kimlik bilgilerini yapılandırın."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Entegrasyonlar"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Bütünlük Denetimi Sonuçları"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Bütünlük Denetimleri:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Bütünlük Durumu"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Geçersiz JWT jetonu."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Geçersiz kimlik bilgileri."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Geçersiz doğrulama kodu."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Tehditleri izole et"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Şüpheli dosyaları silmeden izole eder. Güvenli - dosyalar geri yüklenebilir."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Sorun Türü"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Bulunan Sorunlar"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON biçimi. Örnek: {\"Yetkilendirme\": \"Taşıyıcı TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "Jira Cloud URL'si"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Jira Entegrasyonu"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Tüm engellenen isteklerin günlüklerini tutun analiz."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Analiz için tüm hız sınırı ihlallerinin günlüklerini tutun."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "En iyi koruma için kötü amaçlı yazılım imzalarınızı güncel tutun."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Bilinen Ülkeler"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "Yüklü eklentide bulunan bilinen güvenlik açığı"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (Log Event Extended) Format)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Son 30 Gün"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Son 30 gün"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Son 7 Gün"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Son 90 Gün"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Son Öğrenilen"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Son Tara"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Son Tarama:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Son Güncelleme"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Son kullanılan: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Son Sürüm"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Öğrenme - Yalnızca günlük kaydı, engelleme yok"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Öğrenme Dönem"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Öğreniliyor..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Yönetici e-postasını kullanmak için boş bırakın."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Muhtemelen güvenli - gerekirse doğrulayın"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Kimliği doğrulanmış kullanıcılarla REST API erişimini sınırlayın"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Spam'i önlemek için yorum gönderimlerini sınırlayın."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Şirketlerden gelen aşırı istekleri sınırlayın tek bir IP adresi."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Giriş yapma girişimlerini sınırlayın"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Kaba kuvvet saldırılarını önlemek için oturum açma girişimlerini sınırlayın"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Kötüye kullanımı ve DDoS saldırılarını önlemek için istek oranlarını sınırlayın."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Kötüye kullanımı önlemek için istek oranlarını sınırlayın."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Kaba kuvvet saldırılarını önlemek için oturum açma girişimlerini sınırlandırır. Güvenli - yalnızca başarısız giriş denemelerini etkiler."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Bilinen güvenlik açıklarını listeleyin"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Live Trafik"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "Canlı Trafik Monitörü"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "CDN durumu yükleniyor..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Uyarılar yükleniyor..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Analizler yükleniyor veriler..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Yedeklemeler yükleniyor..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Engellenen IP'ler yükleniyor..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Ülkeler yükleniyor..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Veritabanı bilgileri yükleniyor..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Coğrafi veriler yükleniyor..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Yükleniyor günlükler..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Bildirimler yükleniyor..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Optimizasyon istatistikleri yükleniyor..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Koruma durumu yükleniyor..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Karantinaya alınmış dosyalar yükleniyor..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Yönlendirenler yükleniyor..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Tehdit yükleniyor algılamalar..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "En popüler sayfalar yükleniyor..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Trafik verileri yükleniyor..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Bu kadar çok sayıda başarısız denemeden sonra kilitlen."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Kilitleme Süresi"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Maksimum başarısız 2FA denemesinden sonra kilitlenme süresi."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Günlüğe İzin Verildi İstekler"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Engellenen İstekleri Günlüğe Kaydet"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Günlükte Başarısız Oturum Açma Denemeleri"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Oturumdan Çıkışlar"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Medya Yüklemelerini Günlük"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Günlük Seçeneği Değişiklikleri"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Günlük Eklentisi Değişiklikler"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Günlük Gönderisi/Sayfa Değişiklikleri"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Günlük Profili Değişiklikleri"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Günlük Hızı Sınırı İhlalleri"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Günlük Tutma"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Günlük Rolü Değişiklikleri"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Günlük Başarılı Oturum Açmalar"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Günlük Teması Değişiklikleri"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Günlük Kullanıcısı Oluşturma/Silme"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "WAF kontrollerini geçen tüm istekleri günlüğe kaydedin (yüksek disk kullanımı)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Günlüğe Kaydetme"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Günlüğe Kaydetme ve İzleme"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Oturum Açma"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Giriş Yapma ve Kimlik Doğrulama"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Oturum Açma Etkinliği"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Oturum Açma Denemesi Pencere"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Oturum Açma Denemeleri"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Giriş CAPTCHA'sı"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Giriş Captcha'sı"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Giriş Formu"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Oturum Açma Kilitleme Süresi"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Oturum Açma Koruması"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Oturum Açma Hızı Sınırlama"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Giriş Güvenliği"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Giriş Bilgisi"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Giriş URL'si Ayarları"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Giriş form"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Çıkış"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Çıkışlar"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Günlükler"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Bundan daha eski olan günlükler günlük olarak otomatik olarak temizlenir."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Güvenlik olaylarını incelenmek üzere günlüğe kaydeder. Güvenli - yalnızca etkinliği kaydeder."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Düşük"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Düşük (Daha az yanlış pozitif)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Düşük Etki (daha az kontrol, daha hızlı)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Küçük harf (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Bakım ve teşhis siteniz için araçlar."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Özel giriş URL'nizi hatırladığınızdan emin olun!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Kötü Amaçlı Yazılım ve Tarama"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Kötü Amaçlı Yazılım Tanımları"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Kötü Amaçlı Yazılım Bulundu"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Kötü Amaçlı Yazılım Tarayıcısı"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Dosyalama sırasında kötü amaçlı yazılım algılandı tarama"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Bildirimleri Yönet"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Karantinaya alınan tehditleri yönetin. Dosyaları inceleyin, geri yükleyin veya kalıcı olarak silin."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Roller için zorunludur"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Manuel inceleme önerilir"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Tümünü Okundu Olarak İşaretle"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Tümünü Okundu Olarak İşaretle"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Tüm etkinlik günlüğünü etkinleştirmek veya devre dışı bırakmak için ana anahtar."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Matematik Sorusu"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Maksimum Deneme Sayısı"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Maksimum Başarısız Deneme Sayısı"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Maksimum Dosya Boyutu"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Maksimum Giriş Denemeler"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Maksimum Sorgu Dizesi Uzunluğu"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Maksimum İstek Boyutu"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Maksimum İstekler"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "IP başına dakika başına maksimum AJAX istekleri."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "IP başına dakika başına maksimum API istekleri."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Maksimum kilitlemeden önce başarısız oturum açma girişimleri."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "IP başına dakika başına maksimum sayfa isteği."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Taranacak maksimum istek gövde boyutu. Daha büyük istekler atlanacaktır."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "IP başına dakika başına izin verilen maksimum istek."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Veritabanının tükenmesini önlemek için dakika başına maksimum arama isteği."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Tek bir tarama işlemi için maksimum süre."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Önceki kötü amaçlı yazılım taramaları için maksimum süre. zaman aşımı."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Medya Yüklemeleri"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Orta"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Orta (Dengeli)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Orta (toplama/çıkarma)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Orta veya Üzeri"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Bellek Sınır"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Tarama işlemleri için ayrılan bellek."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Mesaj"
 
 msgid "Method"
-msgstr "Method"
+msgstr "Yöntem"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Microsoft Teams Entegrasyonu"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Minimum %d karakter"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Minimum Uzunluk"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Başarısızlık için Minimum Önem Derecesi"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Minimum şifre uzunluğu (8-32 karakter)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Mod"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Modül Kontrolleri"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Modüller"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Harici Monitör Komut Dosyaları"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "İzleme Modu (Yalnızca Günlük)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Eklenti dosyalarını değişikliklere karşı izleyin"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Gerçek zamanlı site trafiğini izleyin."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Gerçek zamanlı trafiği izleyin"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Gerçek zamanlı trafiği ve ziyaretçi etkinliğini izleyin."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Zaman içindeki ziyaretçi eğilimlerini, sayfa görüntülemelerini ve trafik modellerini izleyin."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "İzleme ve Uyarılar"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Gerçek zamanlı trafiği izler. Güvenli - yalnızca ziyaretleri izler."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Aylık"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "En Aktif Kullanıcılar"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Şüpheli dosyaları korumalı bir dizine taşır."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM Bağımlılıkları"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Ad"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Gerekir Destekleniyor mu?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Hiçbir zaman"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Hiçbir zaman sona ermez"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "Nexify Güvenliği"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (Yerleşik)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "NexifyMy Captcha Türü"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "NexifyMy Güvenlik"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security, dosyalarında yetkisiz değişiklikler tespit etti. Lütfen kurulumunuzu doğrulayın."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: %d okunmamış güvenlik uyarınız var."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Sonraki Güncelleme"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Yetkisiz Kullanım Süresi Yok"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Son Etkinlik Yok"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "SRI Yok"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Henüz kaydedilen etkinlik yok. Kullanıcılar işlem yapmaya başladığında etkinlik burada görünecek."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Henüz kaydedilen içerik değişikliği yok."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Henüz ülke seçilmedi."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Veri yok"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Henüz etkinlik verisi yok."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Karantinada dosya yok."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Coğrafi veri yok mevcut"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Henüz kayıtlı giriş etkinliği yok."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Henüz kayıtlı şifre yok."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Rapor yok."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Henüz tarama yapılmadı"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Tarama sonucu yok. Bağımlılıklarınızı analiz etmek için \"Taramayı Çalıştır\"a tıklayın."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Tarama sonucu yok. Güvenlik açıklarını kontrol etmek için bir tarama çalıştırın."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Şu anda herhangi bir güvenlik önerisi yok. Siteniz iyi korunuyor."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Önem derecesi verisi yok."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Şüpheli IP algılanmadı."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Henüz kaydedilen sistem olayı yok."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Henüz herhangi bir tehdit algılanmadı."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Henüz kayıtlı kullanıcı etkinliği yok."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Henüz kullanıcı etkinliği yok."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Aktif Değil"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Etkin Değil"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Henüz kontrol edilmedi"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Henüz kontrol edilmedi planlanmış"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Not:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Bildirim E-postası"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Bildirim Ayarları"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Bildirimler"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Kilitlemede Bildir"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "2FA'nın kendi cihazlarında etkinleştirildiği/devre dışı bırakıldığı zaman kullanıcıları bilgilendir hesabı."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Sayı (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Yedek Kod Sayısı"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Kullanıcı başına oluşturulacak yedek kod sayısı."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Kilitlemeden önceki başarısız oturum açma denemelerinin sayısı."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Kalıcı olarak kilitlenmeden önceki kilitlenmelerin sayısı ban."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Otomatik engellemeden önceki kural ihlali sayısı."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Nesne"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Bir sonraki oturum açma işleminde, şifre + 6 haneli kodu girin"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Haftada Bir"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Satır başına bir IP"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Satır başına bir IP. Proxy IP'lerinin X-Forwarded-For başlıklarını göndermesine izin verilir (ör. Cloudflare, yük dengeleyiciler)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Satır başına bir IP. Bu IP'ler tüm hız sınırlarını atlar."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Satır başına bir IP. Bu IP'ler derhal engellenecektir. Örnek: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Satır başına bir IP. Bu IP'ler WAF kontrollerini atlayacaktır."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Satır başına bir IP. Bu IP'ler tüm WAF kurallarını atlayacaktır. Örnek: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Satır başına bir yol. Taranacak ek dizinlere giden mutlak yollar."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Satır başına bir yol. Taramalar sırasında atlanacak dizinler."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Satır başına bir tane. Belirli kullanıcı aracılarını engelleyin. Örnek: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Satır başına bir tane. Bu listedeki kullanıcı aracıları WAF kontrollerini atlayacaktır. Örnek: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Satır başına bir kullanıcı adı"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Ayarları Aç"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "İşletim Sistemleri"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "İşletim Modu"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Veritabanını Optimize Et"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Veritabanınızı optimize edin ve güvenliğini sağlayın veritabanı."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Seçenek Değişiklikleri"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Tüm Kullanıcılar için İsteğe Bağlı"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "İsteğe bağlı: Tarama sonuçlarını CI/CD platformunuza gönderin."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Orijinal Yol"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Modası geçmiş"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Tepegöz"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Eklenti arayüzünün dilini geçersiz kılın. Desteklenen diller: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Genel Bakış"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHP Sürümü"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Paket"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Dakika Başına Sayfa İsteği"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Sayfa Görünümleri"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Sayfa bulunamadı."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Geçiş Anahtarı Kimlik Doğrulaması"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Parola adı (ör. MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Geçiş anahtarı başarıyla kaydedildi!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Bu tarayıcıda şifre anahtarları desteklenmiyor."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Şifre"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Şifre Sona Erme Tarihi"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Şifre Politikaları"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Şifre Politikası"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Şifre Gereksinimleri"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Şifre Gereksinimleri:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Şifre Sıfırlama Formu"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Şifre Sıfırlamaları"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Şifre en az %d karakter uzunluğunda olmalıdır."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Şifre en az bir küçük harf içermelidir."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Şifre en az bir rakam içermelidir."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Şifre en az bir özel karakter içermelidir."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Şifre en az bir büyük harf içermelidir."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Şifre politikası"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Şifre sıfırlama formu"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Taramanın dışında tutulacak yollar (WordPress köküne göre). Her satıra bir tane."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "En Yüksek Etkinlik Analizleri"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Yoğun Saat"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Trafik Yoğun Saatleri"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Performans Modu"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Performans Ayarları"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Periyodik Raporlar"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Kalıcı"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Kalıcı Yasaklanma Eşiği"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Dosyayı kalıcı olarak kaldırır."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Lütfen matematik captcha'sını çözün."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Eklenti"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Eklenti ve Tema analizi"
 
 msgid "Plugin Language"
 msgstr "Eklenti Dili"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Eklenti Son Güncelleme"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Eklenti Seçenekleri"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Eklenti Kendini Koruma"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Eklenti Sürüm"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Eklenti Güvenlik Açıkları"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Eklenti dosyaları WordPress aracılığıyla düzenlenemez."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Eklenti bütünlüğü"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Eklenti koruması"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "Eklenti/tema CVE'leri"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Eklenti/tema etkinleştirmeleri, güncellemeler, seçenek değişiklikleri ve dışa aktarmalar."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Eklentiler"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Eklentiler Etkinleştirildi"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Eklentiler Devre Dışı Bırakıldı"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Eklentiler Güncellendi"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Yazı/sayfa düzenlemeleri, yayınlama, medya yüklemeleri ve içerik silme."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Oluşturulan Gönderiler"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Yayınlanan Gönderiler"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Yayınlar Güncellendi"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Potansiyel güvenlik tehdidi algılandı"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "XML-RPC saldırılarını ve kaba kuvvet girişimlerini önleyin"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Web dışındaki dizinlere erişimi önleyin root."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Saldırganların yerel sunucu dosyalarını eklemesini önleyin."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Kaba kuvveti önleyin"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "WordPress yöneticisinde kod düzenlemeyi önleyin"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr ".htaccess yoluyla dizin listelemeyi önleyin"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Bu süre içinde yinelenen uyarıları önleyin."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Yinelenen uyarıları önleyin Bu süre içinde uyarı verir. Kısıtlamayı devre dışı bırakmak için 0 olarak ayarlayın."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "WordPress düzenleyici aracılığıyla eklenti dosyalarının düzenlenmesini önleyin"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Uzak dosyaların URL parametreleri aracılığıyla eklenmesini önleyin."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Dizin içeriklerinin .htaccess aracılığıyla listelenmesini önleyin."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Yönetici panelinden eklenti/tema kurulumunu önleyin."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Metin seçimini ve ön uca kopyalama."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Yaygın olarak ihlal edilen şifrelerin kullanımını önleyin"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "/wp-json/wp/v2/users uç noktası aracılığıyla kullanıcının keşfedilmesini önleyin."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Güvenlik eklentisi dosyalarında izinsiz değişiklik yapılmasını önler"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Güvenlik için birincil e-posta adresi uyarılar."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Öncelik"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Proaktif güvenlik önerileri ve otomatik sağlamlaştırma önerileri."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "Sorun"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Profil Güncellemeleri"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Profil değişiklikleri, rol değişiklikleri, kullanıcı oluşturma ve silme etkinlikleri."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Proje Anahtarı"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Siteler Arası İsteğe karşı koruma Sahtecilik."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Siteler Arası Komut Dosyası Çalıştırma (XSS) saldırılarına karşı koruma sağlayın."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "GET/POST parametrelerinde SQL enjeksiyon saldırılarına karşı koruma sağlayın."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "SQL enjeksiyonuna, XSS, RFI ve diğer saldırılara karşı koruma sağlayın."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "İstek sıklığını sınırlandırarak kaba kuvvete ve DoS saldırılarına karşı koruma sağlayın IP adresi başına."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Giriş yapma ve kayıt formlarını otomatik bot saldırılarından koruyun."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Giriş yapma ve kayıt formlarını matematik tabanlı captcha ile koruyun."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Eklenti dosyalarını kurcalamaya karşı koruyun."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Güvenlik eklentisini kurcalamaya ve yetkisiz kullanıma karşı koruyun değişiklikler."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Giriş sayfanızı kaba kuvvet saldırılarına karşı koruyun."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Sitenizi kötü niyetli trafik ve saldırılara karşı koruyun."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Korunan Formlar"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Koruma Düzeyi"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Koruma Modu"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Koruma Kurallar"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Koruma Ayarları"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "JWT kimlik doğrulaması, hız sınırlama ve CORS ile REST API'yi korur. Başsız WordPress için gereklidir."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "SQL enjeksiyonuna, XSS'ye ve kötü niyetli isteklere karşı koruma sağlar. Etkinleştirilmesi güvenlidir - yalnızca zararlı trafiği engeller."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Eklenti dosyalarını değiştirilmeye karşı korur. Güvenli - kurcalamayı önler."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Sağlayıcı"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Tüm Günlükleri Temizle"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Önbelleği Temizle"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Karantinaya al"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Hemen karantinaya al"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Karantinaya al önerilir"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Karantina:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "Karantinaya alındı"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Karantinaya Alınan Dosyalar"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Sorgu karmaşıklığı maksimum %d değerini aşıyor"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Sorgu derinliği izin verilen maksimum derinliği aşıyor %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "Hızlı"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Hızlı Eylemler"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Hızlı Tarama"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Hızlı Tarama Eylemleri"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Güvenlik bakım araçlarına hızlı erişim."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Hızlı: Yalnızca çekirdek dosyalar. Standart: Temel + temalar/eklentiler. Derin: Tüm dosyalar."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST API Güvenliği"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "REST API Kullanıcıları"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST API koruması"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS beslemeleri bu sitede devre dışı bırakıldı."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Hız Sınırı"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Oran Sınırlayıcı"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Hız Sınırlama"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Hız Sınırlama Ayarları"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Gerçek zamanlı izleme"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Sebep"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Güvenlik açıkları tespit edildiğinde e-posta uyarıları alın"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "En son Etkinlik"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Son Tehdit Algılamaları"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Son Engellenen IP'ler"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Alıcı E-postası"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Öneriler"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Önerilen"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Önerilen Eylemler"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Yönlendirme Engellendi Erişim"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Ana sayfaya yönlendir"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Gereksiz özellikleri devre dışı bırakarak ve WordPress yapılandırmasını sertleştirerek saldırı yüzeyini azaltın."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Yenile"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Yeniden oluştur"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Temel Çizgiyi Yeniden Oluştur"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Kaydol Şifre"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Kayıtlı Şifre Anahtarları"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Şifre kaydediliyor..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Kayıt Formu"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Kayıt formu"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Cihazı Hatırla"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Hatırla Süre"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Bu cihazı hatırla"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Kaldır"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Jeneratör Etiketlerini Kaldır"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Oturum Açma İpuçlarını Kaldır"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "WordPress sürümünü kaynak kodundan kaldır"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Jeneratör meta etiketlerini tümünden kaldır sayfalar."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Şifre sıfırlama ipuçlarını ve önerilerini kaldırın."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "HTML'den ve yayınlardan sürüm bilgilerini kaldırın."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Değiştirilen Tüm Dosyaları Onar"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Değiştirilen WordPress çekirdek dosyalarını onarır. Dikkatli kullanın - onarmadan önce yedekler."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Bozuk dosyaları temiz sürümlerle değiştirir"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Rapor Geçmişi"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Rapor Saklama (gün)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Rapor Planı"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "İstek Sınırları ve Filtreleme"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "İstek Boyutu Sınır"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Dakika Başına İstek Sayısı"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Tüm yöneticiler için 2FA gerektir"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Seçili kullanıcı rolleri için 2FA gerektir."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Giriş doğrulaması için ikinci bir faktör gerektir"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "REST API erişimi için giriş yapılmasını gerektir"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Giriş yapmak için ikinci faktör gerektirir. Etkinleştirmeden önce 2FA yönteminizi yapılandırın."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Sıfırla"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Tüm Ayarları Sıfırla"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Öğrenmeyi Sıfırla"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Tüm NexifyMy Security ayarlarını varsayılan değerlerine sıfırlayın. Bu eylem geri alınamaz."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Varsayılanlara Sıfırla"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Sıfırlanıyor..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Blokta Yanıt Kodu"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Geri Yükle"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Geri Yükle:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "REST'i Kısıtla API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "REST API erişimini kısıtlar. REST API kullanan eklentileri etkileyebilir."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Saklama Süresi"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Kötü amaçlı yazılım tespit edilirse hata kodunu döndürür (CI/CD oluşturmada başarısız olur)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Güvenlik açıkları bulunursa hata kodunu döndürür."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Dosyayı orijinal konumuna döndürür."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "İncele Uyarılar ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Hemen inceleyin"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Güvenlik günlüklerini düzenli olarak inceleyin"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Rol Değişiklikleri"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Tam Güvenlik Taramasını çalıştırın"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Bütünlük Denetimini çalıştırın"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Hızlı Çalıştırın İşaretle"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Taramayı Çalıştır"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Güvenlik Açığı Taramasını Çalıştır"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Güvenlik açıklarını belirlemek için bir güvenlik taraması gerçekleştir"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Günlük olarak otomatik kötü amaçlı yazılım taramaları çalıştırır. Güvenli - yalnızca tarama, dosya değişikliği yok."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "GÜVENLİK UYARISI:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Tüm eklenti dosyalarının SHA-256 karmaları temel olarak depolanır."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM Entegrasyonu"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEM Platformu"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL Enjeksiyonu"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQL Enjeksiyon Koruması"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSL Durumu"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL Doğrulaması"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Gelişmiş Ayarları Kaydet"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "CI/CD Ayarlarını Kaydet"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Discord Ayarlarını Kaydet"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "E-posta Ayarlarını Kaydet"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Kaydet Jira Ayarları"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "SIEM Ayarlarını Kaydet"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Tarayıcı Ayarlarını Kaydet"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "ServiceNow Ayarlarını Kaydet"
 
 msgid "Save Settings"
 msgstr "Ayarları Kaydet"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Slack Ayarlarını Kaydet"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Ekip Ayarlarını Kaydet"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "WAF'yi Kaydet Ayarlar"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Web Kancası Ayarlarını Kaydet"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Tarama"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Tarama Tamamlandı"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Tarama Tamamlandı"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Tarama Oluşturucu Bağımlılıkları"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Tarama Yapılandırması"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Tarama Kontroller"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Özel Dizinleri Tara"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "NPM Bağımlılıklarını Tara"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Eklentileri Tara"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Kimlik doğrulayıcı uygulamasıyla QR kodunu tarayın (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Tarama Sonuçları"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Tara Planla"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Tarama Hassasiyeti"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Tarama Hedefleri"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Tarama Temaları"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Tarama Zaman Aşımı"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Yükleme Dizinini Tara"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "WordPress Çekirdeğini Tara"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Şunlar için yüklü tüm eklentileri tara: kötü amaçlı yazılım."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Yüklü tüm temaları kötü amaçlı yazılımlara karşı tarayın."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Yalnızca kritik alanları tarayın"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Dosyaları kötü amaçlı yazılımlara ve şüpheli kodlara karşı tarayın."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Bilinen güvenlik açıklarına karşı eklentileri, temaları ve WordPress çekirdeğini tarayın."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Sitenizi kötü amaçlı yazılımlara, güvenlik açıklarına ve güvenliğe karşı tarayın. sorunlar."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Web sitenizi kötü amaçlı yazılım ve güvenlik açıklarına karşı tarayın."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Tarayıcı"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Tarayıcı Ayarları"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Tarama..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Dosyaları kötü amaçlı yazılımlara ve şüpheli kodlara karşı tarar. Güvenli - yalnızca tarar, dosyaları değiştirmez."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Zamanlanmış Tarama Modu"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Zamanlanmış Taramalar"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Puan"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Dakika Başına Arama İsteği"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Kullanıcı adını ara..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Gizli Anahtar"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Güvenli dosya erişimi"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Sorgu derinliği sınırları, karmaşıklık kontrolleri ve hız sınırlamasıyla WPGraphQL'in güvenliğini sağlar. Başsız kurulumlar için güvenli."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Güvenlik Uyarıları"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Güvenlik Analizi"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Güvenliği Güçlendirme"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Güvenlik Başlıkları"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Güvenlik Olayı"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Güvenlik Günlükler"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Güvenlik Modülleri"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Güvenlik Bildirimleri"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Güvenlik Seçenekleri"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Güvenlik Önerileri"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Güvenlik Puanı"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Güvenlik Durumu"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Güvenlik Araçlar"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Güvenlik Açıkları"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Güvenlik uyarıları"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Güvenlik olayları burada görünecek."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Güvenliği güçlendirme"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Güvenlik taramasının yürütülmesi tamamlandı"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Güvenlik ayarları yapıldı değiştirildi"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Ülkeleri Seçin:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Soldan ülkeleri seçin, eklemek için \"Listeye Ekle\"yi tıklayın. Yukarıdaki moda bağlı olarak seçilen ülkeler engellenecek (Kara liste) veya izin verilecek (Beyaz liste)."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Onay işaretli resmi seçin:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Hangi captcha hizmetinin kullanılacağını seçin."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Seçili Ülkeler:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Kendini Koruma"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Kendini Koruma"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Test Uyarısı Gönder"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Test E-postası Gönder"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Bu kadar çok saldırıdan sonra uyarıyı tek seferde gönder saat."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Günlük e-posta özeti gönder"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Bir IP kilitlendiğinde e-posta bildirimi gönder."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Güvenlik olayları için e-posta bildirimleri gönder"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Kritik saldırılar tespit edildiğinde e-posta bildirimleri gönder."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Kurcalama yapıldığında e-posta gönder algılandı"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Güvenlik açıkları bulunduğunda e-posta gönder"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Yönetici e-postasına rapor gönder"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Her taramadan sonra tarama sonuçlarını e-postayla gönder."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Merkezi izleme ve analiz için güvenlik olaylarını Splunk, Elasticsearch veya diğer SIEM platformlarına gönder."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Güvenlik olaylarını herhangi bir yere gönder Özel yapılandırmaya sahip HTTP uç noktası."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Özel başlıklara ve kimlik doğrulamaya sahip herhangi bir HTTP uç noktasına güvenlik olayları gönderin."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Doğrulama kodlarını e-postayla gönderin."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Güvenlik olayları için e-posta uyarıları gönderir. Güvenli - önce e-posta ayarlarını yapılandırın."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNow Entegrasyonu"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Güvenli dosya izinlerini ayarlar. Sunucuda sorunlar varsa manuel ayarlama gerekebilir."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Ayarlar"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Ayarlar başarıyla kaydedildi"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Önem Düzeyi"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "404 sayfasını göster"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Oturum açma hatasında genel hata mesajını göster."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Göster Formlar"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "%d girişten %d tanesi gösteriliyor"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Okunmamış Kritik/Uyarı olaylarını gösteriyor. Geçmişin tamamı için Günlükleri kullanın."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Parolayla Oturum Açın"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "İmza Durumu"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "İmzaya Dayalı Algılama"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "İmzalar"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Site Varsayılanı"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Site Anahtar"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Site Güvenliği Durumu"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Boyut"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Bu boyuttan daha büyük dosyaları atlayın."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Gevşek Entegrasyon"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Bazı iyileştirmeler önerilir"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Kaynak"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Özel karakter (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (HTTP Olay Toplayıcı)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Standart"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Standart - Dengeli koruma"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Standart Tara"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Taramayı Başlat"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Yeni Bir Tarama Başlat"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Tarama Başlat"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Durum"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Hikaye"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Katı - Maksimum güvenlik"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Güçlü Şifreler"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Güçlü şifreler"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Başarı Oranı"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Başarılı Giriş"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Başarılı Girişler"
 
 msgid "Sucuri"
 msgstr "Sucuri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Sumo Mantık"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Tedarik Zincir"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Tedarik Zinciri Güvenliği"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Tedarik Zinciri Ayarları"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Google Authenticator, Authy vb. Desteği"
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Desteklenen:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Şüpheli Kod"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Şüpheli IP'ler"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Sistem Etkinliği"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Sistem Olayları"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Sistem Durumu"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "TOTP Kimlik Doğrulayıcı Uygulamaları"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Tablo Adı"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Tablolar"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Sabotaj Algılama:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Görev"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "API hız sınırlarını aşan IP'leri geçici olarak engeller."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Bağlantıyı Test Et"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Test Bildirimi"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Metin Eşleştirme"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "Yapay zeka, trafik saatleri, coğrafi konumlar, kullanıcı aracıları ve istek kalıpları. Bu taban çizgisi anormallikleri tespit etmek için kullanılır."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF, sitenizi SQL enjeksiyonu, XSS ve kötü amaçlı botlar dahil yaygın web saldırılarına karşı korur."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Tema Anahtarları"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Bu Saat"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Bu Ay"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Bu Hafta"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Bu yaygın bir şifredir."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Captcha şu şekildedir: Giriş formlarında görünecek:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Bu şifre çok yaygın. Lütfen daha benzersiz bir şifre seçin."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Bu sorguya izin verilmiyor."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Bu, tüm AI öğrenme verilerini ve davranış kalıplarını sıfırlayacaktır. Devam edilsin mi?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Tehdit"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Tehdit Dağılımı:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Tehdit Algılandı"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Tehdit Algılandı (kötü amaçlı yazılım, şüpheli dosyalar)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Tehdit Algılama ve Engelleme - Son 7 Gün"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Tehdit Puan"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Tehditler Engellendi"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Tehditler Bulundu"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Bugünkü Tehditler"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Kısıtlama Dönemi"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Biletleme"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Biletleme Sistemler"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Zaman"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Zaman Penceresi (sn)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "E-posta doğrulama kodlarının süresi dolmadan önceki süre."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Başarısız oturum açma girişimlerini saymak için zaman penceresi."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Başarısız oturum açma girişimlerini saymak için kullanılan zaman penceresi."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Kime Tarih"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Bugün"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Çok fazla başarısız oturum açma girişimi. Lütfen %d dakika sonra tekrar deneyin."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Araçlar"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Araçlar ve Yardımcı Programlar"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "En Popüler Ülke"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "En Önemli Tespit Nedenleri"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "En Popüler Etkinlik Türleri"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "En İyi Sayfalar"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "En Çok Yönlendirenler"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Toplam Etkinlikler"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Toplam Sayfa Görüntülemeleri"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Toplam İmzalar"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Toplam Boyut"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Trafik Analizi"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Trafiğe Genel Bakış"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Bir güvenlik taraması tetikleyin"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Proxy Başlıklarına Güven"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Güvenilen Proxy'ler"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "İki kez Günlük"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "İki Faktörlü Kimlik Doğrulama (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "İki Faktörlü Kimlik Doğrulama"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "İki faktörlü kimlik doğrulama"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Tür"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Türü yazın word:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Kaldırma Davranışı"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Benzersiz IP'ler"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Benzersiz Kullanıcılar"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Benzersiz Ziyaretçiler"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Bilinmeyen"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Okunmamış Uyarılar"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Günlüklerinizden okunmamış güvenlik uyarıları."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Tanımları Güncelleyin"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Tanımları Şimdi Güncelleyin"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Kötü Amaçlı Yazılım Tanımlarını Güncelleyin"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Şimdi Güncelleyin"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Kötü amaçlı yazılım algılamayı güncelleyin imzalar."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Büyük harf (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Aciliyet Düzeyi"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Gerçek istemci IP'sini belirlemek için CDN/proxy başlıklarını kullanın"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Touch ID, Face ID, Windows Hello veya bir donanım güvenlik anahtarı kullanın."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Acil durum için X-Forwarded-For başlığını kullanın IP algılama (yalnızca CDN/proxy arkasındaysa)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Algılama için kötü amaçlı yazılım imza veritabanını kullanın."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "CI/CD hattınızdan gelen API isteklerini doğrulamak için bu anahtarı kullanın."
 
 msgid "User"
-msgstr "User"
+msgstr "Kullanıcı"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Kullanıcı Etkinliği"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Kullanıcı Aracı"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Kullanıcı Etkinlikleri"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Kullanıcı Kilitlemeleri"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Kullanıcı Yönetimi"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Kullanıcı Gereksinimleri"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Şüpheli etkinlik nedeniyle kullanıcı veya IP adresi kilitlendi"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Kullanıcı Adı"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Kullanıcı adı ve şifre gerekli."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Oluşturulan Kullanıcılar"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Silinen Kullanıcılar"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Kullanıcılar profil ayarlarında 2FA'yı etkinleştirir"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Davranışsal analiz aracılığıyla sıfır gün tehditlerini tespit etmek için yapay zekayı kullanır. Normal kalıpları öğrenir ve anormallikleri işaretler. Güvenli - yalnızca davranışı izler."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Doğrulama oturumunun süresi doldu. Lütfen tekrar giriş yapın."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Doğrulayın"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Çekirdek Dosyaları doğrulayın"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "SSL sertifikalarını doğrulayın (üretim için önerilir)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "WordPress çekirdek dosyalarını doğrulayın ve onarın."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Çekirdeği doğrulayın ve onarın dosyalar"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Sürüm"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Tümünü Görüntüle"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Canlı Trafiği Görüntüle"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Tüm güvenlik etkinliklerini görüntüleyin."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Karantinaya alınan tehditleri görüntüleyin ve yönetin."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Güvenlik uyarılarını görüntüleyin ve yönetin ve bildirimler."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Görüntülemeler"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Ziyaretçi Eğilimleri - Son 30 Gün"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Ziyaretçiler"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Bugünkü Ziyaretler"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Güvenlik Açığı Kontrolü"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Güvenlik Açığı Tarayıcı"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Hassas"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF Saldırısı Engellendi"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF Blokları (güvenlik duvarı tarafından saldırı engellendi)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF Güvenlik Duvarı"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAF Durumu"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP Sürüm"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL koruması"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan API Jetonu"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Uyarı"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Uyarı:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Uyarı: İçe aktarma tüm mevcut ayarların yerini alacaktır. Öncelikle mevcut ayarlarınızı yedek olarak dışa aktardığınızdan emin olun."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Web Uygulaması Güvenlik Duvarı"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Web Uygulaması Güvenlik Duvarı (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "Web Kancası URL'si"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "Sonuçlar için Web Kancası URL'si"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Web kancaları"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Haftalık"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Haftalık Güvenlik Raporu"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Beyaz liste (Yalnızca İzin Ver)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Beyaz liste (yalnızca seçilenlere izin ver)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Beyaz liste IP'leri"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "Beyaz listeye alındı IP'ler"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "WordPress Çekirdek Dosya Doğrulaması"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "WordPress Çekirdek Durumu"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "WordPress Sağlamlaştırma"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "WordPress Sürümü"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "WordPress çekirdek dosyası değiştirildi"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress güncel değil"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (Sniff Yok)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Önle) Tıklama)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-Koruma"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC Kontrolü"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS Saldırısı"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS Koruması"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Varsayılan oturum açma bilgisini kullanıyorsunuz. Bunu benzersiz bir şeyle değiştirmeyi düşünün."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "REST API'ye erişmek için oturum açmalısınız."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Siteniz HTTPS kullanmıyor. Güvenli bağlantılar için SSL sertifikasını etkinleştirin."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Siteniz iyi korunuyor"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Doğrulama kodunuz: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Virüs tanımlarınız güncel değil. En iyi koruma için şimdi güncelleyin."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "Bölge Kimliği"
 
 msgid "ago"
-msgstr "ago"
+msgstr "önceki"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "saldırı başına saat"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "denemeler"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "engellendi"
 
 msgid "characters"
-msgstr "characters"
+msgstr "karakterler"
 
 msgid "days"
-msgstr "days"
+msgstr "günler"
 
 msgid "events"
-msgstr "events"
+msgstr "olaylar"
 
 msgid "fails"
-msgstr "fails"
+msgstr "dosyalar"
 
 msgid "files"
-msgstr "files"
+msgstr "başarısız oldu"
 
 msgid "from now"
-msgstr "from now"
+msgstr "şimdi"
 
 msgid "including:"
-msgstr "including:"
+msgstr "dahil:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "küçük harf"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "dakika"
 
 msgid "modules"
-msgstr "modules"
+msgstr "modüller"
 
 msgid "number"
-msgstr "number"
+msgstr "sayı"
 
 msgid "or"
-msgstr "or"
+msgstr "veya"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "dakika başına"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "saniye"
 
 msgid "special character"
-msgstr "special character"
+msgstr "özel karakter"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "bulunan tehditler"
 
 msgid "total records"
-msgstr "total records"
+msgstr "toplam kayıtlar"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "büyük harf"
 
 msgid "views"
-msgstr "views"
+msgstr "görüntülemeler"
 
 msgid "violations"
-msgstr "violations"
+msgstr "ihlaller"
 
 msgid "visits"
-msgstr "visits"
+msgstr "ziyaretler"
+msgid "Deception"
+msgstr "Aldatma"
+
+msgid "P2P Intelligence"
+msgstr "P2P İstihbaratı"
+
+msgid "Sandbox Console"
+msgstr "Korumalı Alan Konsol"
+
+msgid "Temporary Access"
+msgstr "Geçici Erişim"
+
+msgid "Saving..."
+msgstr "Kaydediliyor..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Ayarlar kaydedildi. Yeniden yükleniyor..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Ayarlar başarıyla kaydedildi! Yeniden yükleniyor..."
+
+msgid "Connection error"
+msgstr "Bağlantı hatası"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Güvenlik kontrolü başarısız oldu. Yenileyin ve tekrar deneyin."
+
+msgid "Settings handler not available."
+msgstr "Ayar işleyicisi kullanılamıyor."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Tüm ayarlar varsayılanlara sıfırlansın mı? Bu geri alınamaz."
+
+msgid "Purge CDN cache now?"
+msgstr "CDN önbelleği şimdi temizlensin mi?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Ayarlar kaydedilemedi. Lütfen tekrar deneyin."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Ayarlar varsayılanlara sıfırlandı. Sayfa yeniden yükleniyor..."
+
+msgid "Failed to load analytics data."
+msgstr "Analitik verileri yüklenemedi."
+
+msgid "Devices"
+msgstr "Cihazlar"
+
+msgid "No data available for this range."
+msgstr "Bu aralık için veri yok."
+
+msgid "Traffic trend chart"
+msgstr "Trafik eğilim grafiği"
+
+msgid "Distribution breakdown chart"
+msgstr "Dağıtım dökümü grafik"
+
+msgid "Total"
+msgstr "Toplam"
+
+msgid "Series"
+msgstr "Seri"
+
+msgid "Predictive Threat Hunting"
+msgstr "Tahmin Edici Tehdit Avcılığı"
+
+msgid "Forecast next attack vectors"
+msgstr "Sonraki saldırı vektörlerini tahmin eder"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Yığınınızın profilini çıkarır, olası saldırı vektörlerini tahmin eder ve proaktif güçlendirme rehberliği sağlar."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Karantinaya alınan tehditleri yönetin ve kurtarılabilir silinmiş dosyalar."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Silinen Dosyalar (Kurtarılabilir)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Buraya taşınan dosyalar tekrar karantinaya alınabilir veya kalıcı olarak silinebilir."
+
+msgid "Deleted"
+msgstr "Silindi"
+
+msgid "Loading deleted files..."
+msgstr "Silinen dosyalar yükleniyor..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Karantinaya alınan dosyaları kurtarılabilir silinmiş depolama alanına taşır."
+
+msgid "Delete Permanently:"
+msgstr "Kalıcı Olarak Sil:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Bir dosyayı silinen depolama alanından kalıcı olarak kaldırır."
+
+msgid "Access denied from your region."
+msgstr "Bilgisayarınızdan erişim reddedildi bölge."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Geçici kilitlenmeden önce maksimum başarısız oturum açma denemesi."
+
+msgid "Time window for counting failed attempts."
+msgstr "Başarısız girişimleri saymak için zaman penceresi."
+
+msgid "Open Tool"
+msgstr "Aracı Aç"
+
+msgid "Available Fix"
+msgstr "Mevcut Düzeltme"
+
+msgid "Preview Patch"
+msgstr "Önizleme Yaması"
+
+msgid "Apply Patch"
+msgstr "Uygula Yama"
+
+msgid "Honeytrap Configuration"
+msgstr "Bal Tuzağı Yapılandırması"
+
+msgid "Enable Deception Module"
+msgstr "Aldatma Modülünü Etkinleştir"
+
+msgid "How Deception Works:"
+msgstr "Aldatma Nasıl Çalışır:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Aşağıdaki URL'ler sitenizde mevcut değil. Herhangi biri bunlara erişirse, onaylanmış saldırganlar olarak <strong>otomatik olarak engellenir</strong>. Yöneticiler hiçbir zaman engellenmez ancak bir uyarı görürler."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Özel Bal Tuzağı Yolları"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Satır başına bir yol ekleyin (ör. /my-secret-admin/, /old-backup.sql). Varsayılanlar zaten etkindir."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Varsayılan Bal Tuzağı Yolları (Her Zaman Etkin)"
+
+msgid "Login Page Honeypot"
+msgstr "Giriş Sayfası Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Giriş yapma/kayıt formlarına görünmez bir alan eklenir. Bunu yalnızca botlar doldurarak anında algılamayı ve engellemeyi tetikler."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Bu koruma, Aldatma modülü aktif olduğunda her zaman etkindir. Yapılandırma gerekmez."
+
+msgid "User Enumeration Trap"
+msgstr "Kullanıcı Numaralandırma Tuzağı"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Saldırganların ?author=1, ?author=2 vb. aracılığıyla geçerli kullanıcı adlarını taradığı keşif girişimlerini algılar."
+
+msgid "Enable user enumeration detection"
+msgstr "Kullanıcı numaralandırma tespitini etkinleştirin"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Numaralandırma girişimlerinde sert engelleme (varsayılan: yumuşak yönlendirme) ana sayfa)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "TÜM yazar numaralandırmasını engelle (mevcut kullanıcılar için bile)"
+
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR Madde 30 Veri Eşleme"
+
+msgid "Refresh Map"
+msgstr "Haritayı Yenile"
+
+msgid "Export Data Map (PDF)"
+msgstr "Veri Haritasını Dışa Aktar (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Otomatik Veritabanı tablolarında PII keşfi, veri akışı eşleme ve üçüncü taraf paylaşım tespiti."
+
+msgid "Data Element"
+msgstr "Veri Öğesi"
+
+msgid "Location"
+msgstr "Konum"
+
+msgid "Purpose"
+msgstr "Amaç"
+
+msgid "Retention"
+msgstr "Saklama"
+
+msgid "Third-Party Sharing"
+msgstr "Üçüncü Taraf Paylaşımı"
+
+msgid "Legal Basis"
+msgstr "Yasal Temel"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Henüz hiçbir PII kaydı algılanmadı. Raporu oluşturmak için bir veri haritası taraması çalıştırın."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Unutulma Hakkı Otomasyonu"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "GDPR iş akışları için silme istekleri gönderin, veri kaldırmayı doğrulayın ve uyumluluk günlüklerini izleyin."
+
+msgid "User ID"
+msgstr "Kullanıcı Kimliği"
+
+msgid "Comments"
+msgstr "Yorumlar"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Anonimleştirmek yerine yorumları silin"
+
+msgid "Run Erasure"
+msgstr "Silme işlemini çalıştırın"
+
+msgid "Verify Erasure"
+msgstr "Doğrulayın Silme"
+
+msgid "GDPR Request Log"
+msgstr "GDPR İstek Günlüğü"
+
+msgid "Request Type"
+msgstr "İstek Türü"
+
+msgid "Requested At"
+msgstr "İstenme Tarihi:"
+
+msgid "Completed At"
+msgstr "Tamamlanma Tarihi:"
+
+msgid "No GDPR requests logged yet."
+msgstr "Henüz hiçbir GDPR isteği günlüğe kaydedilmedi."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Gölge Çalışma Zamanı Korumalı Alanı"
+
+msgid "Enable Sandbox Module"
+msgstr "Etkinleştir Sandbox Modülü"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Gölge Çalışma Zamanı Sandbox motorunu yükler."
+
+msgid "Enable Sandbox Console"
+msgstr "Sandbox Konsolunu Etkinleştir"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Manage_options'a sahip wp-admin kullanıcılarının sandbox konsolunda kod çalıştırmasına izin verir."
+
+msgid "Sandbox Timeout"
+msgstr "Sandbox Zaman Aşımı"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Saniye cinsinden yürütme zaman aşımı (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Dinamik Analiz"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Statik kontrollere ek olarak dinamik yürütme analizi çalıştırın."
+
+msgid "Quarantine Policy"
+msgstr "Karantina Politikası"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Çoğu site için manuel karantina önerilir. Otomatik karantina yalnızca güvenilirliği yüksek olan kötü amaçlı yazılımları izole eder."
+
+msgid "Manual (Recommended)"
+msgstr "Manuel (Önerilen)"
+
+msgid "Auto Quarantine"
+msgstr "Otomatik Karantina"
+
+msgid "Save Quarantine Policy"
+msgstr "Karantina Politikasını Kaydet"
+
+msgid "AI Risk Controls"
+msgstr "Yapay Zeka Risk Kontrolleri"
+
+msgid "Enable AI Detection Module"
+msgstr "Yapay Zeka Tespitini Etkinleştir Modül"
+
+msgid "Enable Insider Threat Detection"
+msgstr "İçeriden Tehdit Algılamayı Etkinleştir"
+
+msgid "Insider Threat Threshold"
+msgstr "İçeriden Tehdit Eşiği"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Veri Sızıntısı İzlemeyi Etkinleştir"
+
+msgid "Exfiltration Threshold"
+msgstr "Sızıntı Eşiği"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Sızıntı Temel Günleri"
+
+msgid "Session Risk Threshold"
+msgstr "Oturum Riski Eşik"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Sürekli Kimlik Doğrulama Yeniden Kontrol Aralığı (saniye)"
+
+msgid "Risk Spike Threshold"
+msgstr "Ani Risk Eşiği"
+
+msgid "Save AI Settings"
+msgstr "AI Ayarlarını Kaydet"
+
+msgid "Quarantine Mode"
+msgstr "Karantina Modu"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Manuel mod daha güvenlidir ve önerilir. Otomatik mod yalnızca güvenliği yüksek olduğu onaylanmış kötü amaçlı yazılımları karantinaya alır."
+
+msgid "Data Map"
+msgstr "Veri Haritası"
+
+msgid "Privacy Requests"
+msgstr "Gizlilik İstekleri"
+
+msgid "Deception Technology"
+msgstr "Aldatma Teknolojisi"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Tehditleri saldırmadan önce yakalamak için bal küpleri, tuzak varlıklar ve saldırgan aldatmacası."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "%2$d girişten %1$d tanesi gösteriliyor"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P İstihbarat modülü yüklü değil."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P Tehdit İstihbaratı"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Tehdit istihbaratını paylaş sürü bağışıklığı için diğer SentinelWP kurulumlarıyla."
+
+msgid "P2P Settings"
+msgstr "P2P Ayarları"
+
+msgid "Enable P2P Intelligence"
+msgstr "P2P İstihbaratını Etkinleştir"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Eş düğümlerle işbirliğine dayalı tehdit istihbaratı paylaşımını etkinleştir."
+
+msgid "My Node Key"
+msgstr "Düğüm Anahtarım"
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Bu anahtarı şununla paylaş: sitenize bağlanmak isteyen eşler."
+
+msgid "Broadcast Threats"
+msgstr "Yayın Tehditleri"
+
+msgid "Share detected threats with registered peers."
+msgstr "Algılanan tehditleri kayıtlı eşlerle paylaşın."
+
+msgid "Trust Threshold"
+msgstr "Güven Eşiği"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Yalnızca tehdit puanı >= bu eşiğe sahip IP'leri otomatik olarak engelle. Daha düşük değerler = daha agresif engelleme."
+
+msgid "Registered Peers"
+msgstr "Kayıtlı Eşler"
+
+msgid "Add Peer"
+msgstr "Eş Ekle"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Henüz kayıtlı eş yok. Tehdit istihbaratını paylaşmaya başlamak için bir eş ekleyin."
+
+msgid "Label"
+msgstr "Etiket"
+
+msgid "Last Sync"
+msgstr "Son Senkronizasyon"
+
+msgid "Sent/Received"
+msgstr "Gönderildi/Alındı"
+
+msgid "Unnamed"
+msgstr "Adsız"
+
+msgid "%s ago"
+msgstr "%s önce"
+
+msgid "Threats Sent"
+msgstr "Tehditler Gönderilen"
+
+msgid "Threats Received"
+msgstr "Alınan Tehditler"
+
+msgid "Statistics"
+msgstr "İstatistikler"
+
+msgid "Connected Peers"
+msgstr "Bağlı Eşler"
+
+msgid "Threats Received (24h)"
+msgstr "Alınan Tehditler (24 saat)"
+
+msgid "P2P Status"
+msgstr "P2P Durumu"
+
+msgid "Threat Intelligence Credits"
+msgstr "Tehdit İstihbaratı Kredi"
+
+msgid "Current Credit Balance"
+msgstr "Mevcut Kredi Bakiyesi"
+
+msgid "Reputation Score"
+msgstr "İtibar Puanı"
+
+msgid "Accuracy"
+msgstr "Doğruluk"
+
+msgid "Badges:"
+msgstr "Rozetler:"
+
+msgid "No badges yet"
+msgstr "Henüz rozet yok"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "İtibar puanınız yukarıda olduğundan premium avantajların kilidi ücretsiz olarak açılıyor 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Ücretsiz olarak premium avantajların kilidini açmak için 1000'in üzerinde bir itibar puanına ulaşın."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "En Çok Katkıda Bulunanlar (Anonim)"
+
+msgid "No contributor data available yet."
+msgstr "Henüz katkıda bulunan verisi yok."
+
+msgid "Rank"
+msgstr "Derece"
+
+msgid "Anonymous Site ID"
+msgstr "Anonim Site Kimliği"
+
+msgid "Credits"
+msgstr "Kredi"
+
+msgid "Reputation"
+msgstr "İtibar"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Add New Peer"
+msgstr "Yeni Eş Ekle"
+
+msgid "Peer URL"
+msgstr "Eş URL'si"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "Eş WordPress sitesinin tam URL'si (üretimde HTTPS kullanılmalıdır)."
+
+msgid "Peer Node Key"
+msgstr "Eş Düğüm Anahtarı"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Eşin düğüm anahtarı (bunu P2P ayarları sayfasından kopyalayabilirler)."
+
+msgid "Label (Optional)"
+msgstr "Etiket (İsteğe bağlı)"
+
+msgid "My Production Server"
+msgstr "Üretim Sunucum"
+
+msgid "A friendly name to identify this peer."
+msgstr "Bunu tanımlamak için kolay bir ad eş."
+
+msgid "Unauthorized"
+msgstr "Yetkisiz"
+
+msgid "Sandbox module is not loaded."
+msgstr "Sandbox modülü yüklenmedi."
+
+msgid "Sandbox module is disabled."
+msgstr "Sandbox modülü devre dışı."
+
+msgid "Sandbox console is disabled."
+msgstr "Sandbox konsolu devre dışı."
+
+msgid "No code provided."
+msgstr "Kod sağlanmadı."
+
+msgid "Insufficient permissions."
+msgstr "Yetersiz izinler."
+
+msgid "Sandbox Module Disabled"
+msgstr "Korumalı Alan Modülü Devre Dışı"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Gölge Çalışma Zamanı Korumalı Alanı şu anda devre dışı. Konsolu kullanmak için bunu Ayarlar'da etkinleştirin."
+
+msgid "Go to Settings"
+msgstr "Ayarlar'a gidin"
+
+msgid "Sandbox Console Disabled"
+msgstr "Sandbox Konsolu Devre Dışı"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Sandbox modülü etkinleştirildi, ancak yönetici konsolu devre dışı bırakıldı. wp-admin'den kod çalıştırmak için konsol ayarını etkinleştirin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Danger Zone: Kod Yürütme"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Bu konsol, PHP kodunu yalıtılmış bir sanal alanda çalıştırır. Tüm veritabanı değişiklikleri otomatik olarak geri alınır. Yalnızca şüpheli kodu analiz etmek veya test etmek için kullanın."
+
+msgid "PHP Code Editor"
+msgstr "PHP Kod Düzenleyicisi"
+
+msgid "Run Code"
+msgstr "Kodu Çalıştır"
+
+msgid "Analyze Only"
+msgstr "Yalnızca Analiz Et"
+
+msgid "Timeout:"
+msgstr "Zaman Aşımı:"
+
+msgid "Execution Results"
+msgstr "Yürütme Sonuçları"
+
+msgid "STATIC ANALYSIS"
+msgstr "STATIC ANALİZ"
+
+msgid "OUTPUT"
+msgstr "ÇIKTI"
+
+msgid "ERRORS"
+msgstr "HATALAR"
+
+msgid "DATABASE QUERIES"
+msgstr "VERİTABANI SORGULARI"
+
+msgid "Module not loaded"
+msgstr "Modül yüklenmedi"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Canlı Trafik analizi kullanılamıyor."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Tam zamanında erişim, istek ve onay iş akışını kullanır. otomatik süre sonu."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Modül devre dışı olduğundan veya yüklenmediğinden Geçici Erişim şu anda kullanılamıyor."
+
+msgid "Open settings"
+msgstr "Ayarları aç"
+
+msgid "Request Temporary Access"
+msgstr "Geçici Erişim Talebi"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Bu istek, şu anda oturum açmış olan hesabınız için geçerlidir. Geçici yükseltilmiş erişim verilmeden önce bir yöneticinin bunu onaylaması gerekir."
+
+msgid "Requested Role"
+msgstr "İstenen Rol"
+
+msgid "Administrator"
+msgstr "Yönetici"
+
+msgid "Editor"
+msgstr "Düzenleyici"
+
+msgid "Duration (minutes)"
+msgstr "Süre (dakika)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Geçici yükseltilmiş erişimin neden gerekli olduğunu açıklayın."
+
+msgid "Submit Request"
+msgstr "Gönder Talep"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Geçici Erişim Ver (Yönetici)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Kullanıcı adı veya e-posta yoluyla belirli bir kullanıcıya doğrudan zaman sınırlı yükseltilmiş erişim verin."
+
+msgid "Target User (Username or Email)"
+msgstr "Hedef Kullanıcı (Kullanıcı Adı veya E-posta)"
+
+msgid "username or user@example.com"
+msgstr "kullanıcı adı veya kullanıcı@example.com"
+
+msgid "Grant Role"
+msgstr "Ver Rol"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Bu kullanıcının neden geçici olarak yükseltilmiş erişime ihtiyaç duyduğunu açıklayın."
+
+msgid "Grant Access"
+msgstr "Erişim Ver"
+
+msgid "Pending and Active Requests"
+msgstr "Bekleyen ve Etkin İstekler"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Bekleyen istekleri onaylayın, doğrudan izinleri inceleyin ve bu kuyruktaki etkin izinleri iptal edin."
+
+msgid "Original Role"
+msgstr "Orijinal Rol"
+
+msgid "Elevated Role"
+msgstr "Yükseltilmiş Rol"
+
+msgid "Granted"
+msgstr "Verildi"
+
+msgid "Expires"
+msgstr "Süresi Doluyor"
+
+msgid "Approved By"
+msgstr "Onaylayan"
+
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+msgid "English (US)"
+msgstr "İngilizce (ABD)"
+
+msgid "English (UK)"
+msgstr "İngilizce (İngiltere)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (İspanyolca)"
+
+msgid "Francais (French)"
+msgstr "Francais (Fransızca)"
+
+msgid "Deutsch (German)"
+msgstr "Deutsch (Almanca)"
+
+msgid "Italiano (Italian)"
+msgstr "İtalyanca (İtalyanca)"
+
+msgid "Portugues (Brazilian)"
+msgstr "Portekizce (Brezilya)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Hollanda (Hollandaca)"
+
+msgid "Russian"
+msgstr "Rusça"
+
+msgid "Japanese"
+msgstr "Japonca"
+
+msgid "Chinese (Simplified)"
+msgstr "Çince (Basitleştirilmiş)"
+
+msgid "Arabic"
+msgstr "Arapça"
+
+msgid "Hindi"
+msgstr "Hintçe"
+
+msgid "Korean"
+msgstr "Korece"
+
+msgid "Turkish"
+msgstr "Türkçe"
+
+msgid "Polski (Polish)"
+msgstr "Polski (Lehçe)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Endonezcesi (Endonezya dili)"
+
+msgid "Ukrainian"
+msgstr "Ukraynaca"
+
+msgid "Vietnamese"
+msgstr "Vietnamca"
+
+msgid "Thai"
+msgstr "Taylandlı"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (İsveççe)"
+
+msgid "Dansk (Danish)"
+msgstr "Dansk (Danimarka)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (Fince)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (Norveççe)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Çekçe)"
+
+msgid "Greek"
+msgstr "Yunanca"
+
+msgid "Magyar (Hungarian)"
+msgstr "Magyar (Macarca)"
+
+msgid "Romana (Romanian)"
+msgstr "Romana (Romence)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovenya (Slovakça)"
+
+msgid "Bulgarian"
+msgstr "Bulgarca"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (Hırvatça)"
+
+msgid "Serbian"
+msgstr "Sırpça"
+
+msgid "Hebrew"
+msgstr "İbranice"
+
+msgid "Persian"
+msgstr "Farsça"
+
+msgid "Settings saved successfully."
+msgstr "Ayarlar kaydedildi başarıyla."
+
+msgid "Settings reset to defaults."
+msgstr "Ayarlar varsayılanlara sıfırlandı."
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyGüvenlik Günlüklerim"
+
+msgid "No matching user found."
+msgstr "Eşleşen kullanıcı bulunamadı."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Güvenlik günlükleri ve ilgili PII anonimleştirildi."
+
+msgid "Invalid user ID."
+msgstr "Geçersiz kullanıcı kimliği."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Manuel veya webhook tabanlı silme isteği sıraya alındı."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp silme isteği gönderildi."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Şerit silme, uyumluluk kayıtları için manuel API takibi gerektirir."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analytics kullanıcı silme API isteği harici olarak yapılandırılmalıdır."
+
+msgid "Privacy Preferences"
+msgstr "Gizlilik Tercihleri"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Seçin hangi isteğe bağlı işleme kategorilerine izin veriyorsunuz."
+
+msgid "Save Preferences"
+msgstr "Kaydetme Tercihleri"
+
+msgid "Consent Management"
+msgstr "Rıza Yönetimi"
+
+msgid "Given"
+msgstr "Verildi"
+
+msgid "Withdrawn"
+msgstr "Geri çekildi"
+
+msgid "No consent records found."
+msgstr "Rıza kaydı bulunamadı."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Hata</strong>: Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin."
+
+msgid "The peer URL is not valid."
+msgstr "Eş URL'si geçerli değil."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Kendi sitenizi eş olarak ekleyemezsiniz."
+
+msgid "API key must be at least 16 characters."
+msgstr "API anahtarı en az 16 karakter olmalıdır."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Maksimum eş sayısına (%d) ulaşıldı."
+
+msgid "Missing authentication header."
+msgstr "Kimlik doğrulama başlığı eksik."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Geçersiz düğüm anahtarı. Eş tanınmadı."
+
+msgid "Invalid request signature."
+msgstr "Geçersiz istek imzası."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Hız limiti aşıldı. Daha sonra tekrar deneyin."
+
+msgid "Invalid site identifier."
+msgstr "Geçersiz site tanımlayıcı."
+
+msgid "Unknown contribution type."
+msgstr "Bilinmeyen katkı türü."
+
+msgid "Unknown benefit type."
+msgstr "Bilinmeyen fayda türü."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Bu avantaj için yetersiz kredi."
+
+msgid "Threat Forecast"
+msgstr "Tehdit Tahmini"
+
+msgid "Your site profile:"
+msgstr "Siteniz profil:"
+
+msgid "Predicted threats this month:"
+msgstr "Bu ay tahmin edilen tehditler:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Henüz yüksek güvenirliğe sahip vektör algılanmadı."
+
+msgid "Recommended actions:"
+msgstr "Önerilen eylemler:"
+
+msgid "No immediate actions required."
+msgstr "Acil eylem gerekli değil."
+
+msgid "Not logged in"
+msgstr "Oturum açılmadı"
+
+msgid "A reason is required"
+msgstr "Bunun bir nedeni: gerekli"
+
+msgid "Invalid requested role"
+msgstr "Geçersiz istenen rol"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Bu rol için etkin veya bekleyen bir istek zaten mevcut."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Erişim isteği gönderildi. Bir yönetici isteğinizi inceleyecek."
+
+msgid "Invalid request"
+msgstr "Geçersiz istek"
+
+msgid "Pending request not found"
+msgstr "Beklemedeki istek bulunamadı"
+
+msgid "Request role is invalid"
+msgstr "İstek rolü geçersiz"
+
+msgid "Invalid approved role"
+msgstr "Geçersiz onaylanmış rol"
+
+msgid "Access approved successfully"
+msgstr "Erişim başarıyla onaylandı"
+
+msgid "Target user (username or email) is required."
+msgstr "Hedef kullanıcı (kullanıcı adı veya e-posta) gerekli."
+
+msgid "A reason is required."
+msgstr "Bir neden gerekli."
+
+msgid "Invalid requested role."
+msgstr "Geçersiz istenen rol."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Hedef kullanıcı bulunamadı. Mevcut bir kullanıcı adını veya e-posta adresini kullanın."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Kullanıcı zaten bu role sahip. Geçici yükseltme gerekli değil."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Bu kullanıcı ve rol için etkin veya bekleyen bir izin zaten mevcut."
+
+msgid "Unable to grant temporary access."
+msgstr "Geçici erişim verilemiyor."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "%1$s öğesine %3$d dakika boyunca geçici %2$s erişimi verildi."
+
+msgid "Invalid grant"
+msgstr "Geçersiz izin"
+
+msgid "Grant not found or already revoked"
+msgstr "Ver bulunamadı veya zaten iptal edildi"
+
+msgid "Permission revoked successfully"
+msgstr "İzin başarıyla iptal edildi"
+
+msgid "Once Monthly"
+msgstr "Ayda Bir"
+
+msgid "Every 5 Minutes"
+msgstr "Her 5 Dakikada Bir"
 

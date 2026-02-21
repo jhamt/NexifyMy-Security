@@ -8,649 +8,649 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d hot upptäcktes i den senaste genomsökningen"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Säg den här koden för att verifiera)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Hög"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 dag"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 timme"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 dagar"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 minuter"
 
 msgid "2 - Medium"
 msgstr "2 - Medium"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 timmar"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA-metoder"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA-inställningar"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Låg"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 dagar"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 dagar"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 minuter"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 dagar"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Förbjudet"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Hittade inte"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 för många förfrågningar (rekommenderas)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 minuter"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Tjänst ej tillgänglig"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 timmar"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 dagar"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 dagar"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 dagar (kontinuerlig)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 dagar"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 dagar"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "AI-inlärningsstatus"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "AI-status"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI-hotdetektering"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "AI-inlärningsdata har återställts."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "AJAX-förfrågningar per minut"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API och huvudlös säkerhet"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API och tjänster"
 
 msgid "API Burst Allowance"
 msgstr "API Burst Allowance"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "API-slutpunkter"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API-nyckel"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "API-hastighetsbegränsning"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "API-förfrågningar per minut"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "API-säkerhet"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "API-token"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "API-hastighetsgränsen har överskridits. Gräns: %d förfrågningar per minut."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "API-begränsningar"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API-token, HEC-token eller autentiseringsnyckel."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Övergiven"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Om karantän"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Åtkomst nekad"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Åtgärd"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Åtgärder"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktiv"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Aktivitetsinstrumentpanel"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Aktivitetslogg"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Inställningar för aktivitetslogg"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Aktivitet från dessa användare kommer inte att loggas."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Aktivitetsloggar som är äldre än så här raderas automatiskt."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Aktivitetsspårning"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Lägg till %d tecken till."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Lägg till 2FA till användarkonton för extra säkerhet."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Lägg till CAPTCHA för inloggning och formulär."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Lägg till CAPTCHA-verifiering till inloggningsformulär"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Lägg till HTTP-säkerhetsrubriker (X-Frame-Options, CSP, etc.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Lägg till ny lösenord"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Lägg till säkerhetsrubriker"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Lägg till Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Lägg till X-Frame-Options, X-Content-Type-Options och andra säkerhetsrubriker."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Lägg till X-Frame-Options, X-XSS-Protection rubriker"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Lägg till ett extra lager av säkerhet genom att kräva en andra form av autentisering."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Lägg till ett extra lager av säkerhet genom att kräva två former av autentisering för användarinloggningar."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Lägg till ett extra lager av säkerhet med TOTP-baserad 2FA."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Lägg till gemener."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Lägg till siffror."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Lägg till specialtecken."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Lägg till i listan"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Lägg till versaler."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Ytterligare säkerhetsåtgärder för inloggning. Fungerar med hastighetsbegränsare."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Lägger till CAPTCHA till inloggningsformulär. Säkert men kan påverka användarupplevelsen."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Lägger till Google reCAPTCHA, Cloudflare Turnstile eller matematiska utmaningar"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Lägger till HTTP-säkerhetsrubriker (X-Frame-Options, CSP). Säker - förbättrar webbläsarsäkerheten."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Lägger till extra säkerhetslager med TOTP-, e-post- eller SMS-koder"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Admininloggningar (lyckade admininloggningar)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Avancerat"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Avancerade brandväggsinställningar"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Avancerad härdning"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Avancerade härdningsalternativ"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Avancerade inloggningsinställningar"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Avancerade alternativ"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Avancerade skanneralternativ"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Avancerad heuristik"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Berörda filer:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Varningströskel"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Varningstyper"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Varningar"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Varningar skickas om plugin är avaktiverat."
 
 msgid "All"
-msgstr "All"
+msgstr "Alla"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Allt klart!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Alla evenemang"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Alla svårigheter"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Tillåt alla användare att aktivera 2FA frivilligt."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Tillåt e-postkod som backupmetod"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Tillåt korta skurar över hastighetsgränsen."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Ge användarna tid att ställa in 2FA innan verkställighet."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Tillåt användare att aktivera 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Tillåt användare att generera reservkoder för nödsituationer."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Tillåt användare att hoppa över 2FA på betrodda enheter."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Tillåtna användaragenter"
 
 msgid "Analytics"
 msgstr "Analytics"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anomalier"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Vilken svårighetsgrad som helst"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Alla ändringar utlöser omedelbara e-postvarningar."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Använd inställningar"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Tillämpa bästa metoder för WordPress-säkerhet."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Tillämpa säkerhetskorrigeringar"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Tillämpa säkerhetshärdande åtgärder på WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Använd säkerhetshärdande åtgärder för att skydda din WordPress-installation."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Är du säker på att du vill ta bort denna lösenordsnyckel?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Är du säker på att du vill fortsätta?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Attackskydd"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Försöksfönster"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Ljud (talar)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Autentiserar..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Autentiseringskod"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Autentiseringshändelser"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Autentiseringstoken"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Autentiseringen misslyckades. Försök igen."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Autentisering krävs för API-åtkomst."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Autentisering krävs för GraphQL-åtkomst."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Författarskanningar"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Varaktighet för automatisk blockering"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Auto-blockera upprepade lagöverträdare"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Tröskel för automatisk blockering"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Auto-fix"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Generera rapporter automatiskt"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Auto-karantän hot"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Schema för automatisk skanning"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Automatisk uppdatering"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Inställningar för automatisk uppdatering"
 
 msgid "Auto-Updates"
 msgstr "Automatiska Uppdateringar"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Automatisk upptäckt"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Automatisk skanning"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Automatiska skanningar"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Svartlista automatiskt IP-adresser som utlöser regler flera gånger."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Skapa automatiskt Jira-biljetter för säkerhetsincidenter och sårbarheter."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Skapa automatiskt biljetter för säkerhetsincidenter i dina projektledningssystem."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Generera automatiskt rapporter enligt schema"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Flytta automatiskt upptäckt skadlig programvara till karantän."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Kör automatiskt skanningar i bakgrunden."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Uppdatera automatiskt skadliga signaturer dagligen."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Tillgängliga länder"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Tillgängliga evenemang"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Genomsnittlig/dag"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Bakgrundsskanningar"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Säkerhetskopierar skadade filer innan de ersätts"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Säkerhetskopieringskoder"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Säkerhetskopiera, optimera och säkra din databas."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Säkerhetskopiering och städning"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Säkerhetskopieringar lagras i wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Dåliga bots"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Dåliga förfrågningar"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Balanserad (rekommenderas)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Beteenderekord"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Beteendeanalys"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Svartlista (blocklistad)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Svartlista (block valt)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "Svartlista IP-adresser"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Svartlista: Blockera valda länder. Vitlista: Tillåt endast utvalda länder."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "Svartlistade IP-adresser"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Blockera dåliga bots"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Blockera CSRF-attacker"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Blockera vanliga lösenord"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Blockera kataloggenomgång"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Blockeringstid"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Blockera tomma användaragenter"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Blockera för många API-användare"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Blockera filredigerare"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Blockera lokal filinkludering"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Blockera meddelande"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Blockläge"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Blockläge (rekommenderas)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Blockläge: Blockerar skadliga förfrågningar. Övervakningsläge: Loggar hot utan att blockera."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Blockera fjärrutförande av kod"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Blockera fjärrfilinkludering"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Blockera SQL-injektion"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Blockera misstänkta filuppladdningar"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Blockera XML-RPC-åtkomst (förhindrar brute force)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Blockera XSS-attacker"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Blockera åtkomst från specifika länder."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Blockera aggressiva sökrobotar (hög begärandefrekvens)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Blockera genomsökningar av författareuppräkningar (?författare=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Blockera för långa frågesträngar."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Blockera kända dåliga bots och skrapor"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Blockera kända skadliga bots och skrapor."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Blockera felaktiga förfrågningar och misstänkta frågesträngar"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Blockera skadliga förfrågningar"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Blockera skadliga förfrågningar och attacker"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Blockera eller tillåt trafik baserat på land."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Blockera förfrågningar större än denna storlek för att förhindra DoS-attacker."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Blockera förfrågningar med tom användaragent (kan blockera vissa legitima bots)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Blockera förfrågningar utan en User-Agent-rubrik."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Blockera misstänkta IP-adresser"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Blockera misstänkta användaragenter"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Blockera trafik från specifika länder. Konfigurera länder i inställningarna innan du aktiverar."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Blockera uppladdningar med körbara tillägg (.php, .exe, .sh, etc.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Blockerade attacker"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Blockerade filtillägg"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Blockerade förfrågningar"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Blockerade användaragenter"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Blockerar IP-adresser som visar skadligt beteende. Säkert - du kan vitlista din IP."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Bokmärk denna URL så att du alltid kan komma åt din inloggningssida."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Bot- och sökrobotskydd"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Bot- och användaragentskydd"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Bot förebyggande"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Bot skydd"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Webbläsare"
 
 msgid "Brute Force"
 msgstr "Brute Force"
@@ -659,25 +659,25 @@ msgid "Brute Force Protection"
 msgstr "Brute Force Protection"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Gränser för brute force-skydd och inloggningsförsök."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "Bugga"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Bästa dagen"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "CAPTCHA-skydd"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDN-integration"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN-status"
 
 msgid "CEF (Common Event Format)"
 msgstr "CEF (Common Event Format)"
@@ -692,1090 +692,1090 @@ msgid "CI/CD Pipeline Integration"
 msgstr "CI/CD Pipeline Integration"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Avbryt"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Captcha förhandsgranskning"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Captcha-leverantör"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Captcha-inställningar"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Ändra databasprefix"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Ändra databastabellprefix (kräver manuell databasuppdatering)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Ändra standardinloggnings-URL för att förhindra attacker."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Ändra standardinloggningsadressen för wp-admin för att förhindra automatiska attacker."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Ändrar inloggningsadress från /wp-admin till anpassad slug för att förhindra botattacker"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "Kanal"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Karaktärskrav"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Kontrollera Core Integrity"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Kontrollera intervall"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Kontrollera och reparera skadade WordPress-kärnfiler med hjälp av officiella källor."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Kontrollera kärnfilerna för ändringar och skadlig programvara."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Kolla efter bakdörrar"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Kontrollera för obfuscation"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Kontrollera om det finns kända sårbarheter."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Kontrollera uppladdade filer för skadligt innehåll."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Kontrollerar efter webbskal"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Kontrollerar plugins/teman för kända sårbarheter. Säker - kontrollerar endast versioner."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Välj en unik, svår gissa snigel."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Välj typ av utmaning för NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Rensa filer"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Rensa filer:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Rensa och optimera databasen"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Rensa upp onödiga data för att förbättra databasens prestanda."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Rensa loggar"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare och mer"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API-inställningar"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API-token (med zonbehörighet)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare vändkors"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Kod"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Kodens utgång"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Kodkvalitetsproblem"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Kommaseparerad lista över filtillägg att blockera vid uppladdningar."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Kommaseparerad lista över filtillägg att hoppa över (t.ex. jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Kommentar blockerad"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Kommentarsformulär"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Kommentar Postningshastighet"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Kommentarsformulär"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Kommunikation"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Kommunikationsplattformar"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Jämför kärnfiler med officiella WordPress-kontrollsummor."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Jämför dina WordPress-kärnfiler med de officiella kontrollsummorna för att upptäcka ändringar."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Jämför varje kärnfil mot den förväntade hashen"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Inaktivera alla RSS- och Atom-flöden helt."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Inaktivera fullständigt alla filändringar (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Efterlevnad"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Efterlevnad och rapportering"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Efterlevnads- och säkerhetsrapportering"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Efterlevnadsinställningar"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Kompositörsberoenden"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Omfattande analys"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Omfattande spårning av användaraktivitet, inloggningsövervakning och systemhändelseloggning."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Konfigurera"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Konfigurera 2FA för förbättrad inloggningssäkerhet"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Konfigurera CDN för säkerhet och prestanda."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Konfigurera CDN-integration och cachehantering."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Konfigurera Web Application Firewall (WAF) för att skydda din webbplats."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Konfigurera e-postvarningar och aviseringar."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Konfigurera brandväggsregler och skyddsinställningar."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Konfigurera skanningsbeteende för skadlig programvara och schemalagda genomsökningsalternativ."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Konfigurera plugin-inställningar och inställningar."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Konfigurera plugin-inställningar."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Konfigurera dina säkerhetsinställningar."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Bekräfta"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Bekräfta åtgärd"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Bekräftad skadlig programvara"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Anslut din säkerhetsövervakning till SIEM, biljettförsäljning, kommunikation och CI/CD-plattformar."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Kontakta vårt supportteam för hjälp med NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Innehåll"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Innehållsaktivitet"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Innehållsförändringar"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Innehållshändelser"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Innehållssäkerhet"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Kärnfilsändringar"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Core File Reparation"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Kärnreparation"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Grundläggande WordPress-integritet"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Kärnfilintegritet"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Räkna"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "Länder"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Land"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Landsblockeringsinställningar"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Landsrestriktioner"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Skapa säkerhetskopia nu"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Skapa en säkerhetskopia av din WordPress-databas. Säkerhetskopieringar lagras säkert och kan laddas ner."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Skapa incidenter i ServiceNow för kritiska säkerhetshändelser."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Skapa webhook på: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Skapa webhook i Discord Server Settings > Integrations > Webhooks"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Skapa webhook: Teams > Kanal > Connectors > Incoming Webhook"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Skapad"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Skapad: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kritisk"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Endast kritisk"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Aktuell inloggnings-URL"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Aktuell version"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Aktuell:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Anpassad inloggningsadress"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Anpassad webbadress"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Anpassade Webhooks"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Dagligen"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Dagligen (rekommenderas)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Daglig statusöversikt"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Daglig sammanfattning"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Instrumentbräda"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Datalagring"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Databas"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Databasåtgärder"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Databas backup"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Databasinformation"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Databasoptimering"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Databasoptimerare"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Databassäkerhet"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Databasstorlek"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Databas backup och optimering. Konfigurera säkerhetskopieringsschemat innan du aktiverar."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Databassäkerhetskontroll"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Datum"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Datum/tid"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Avaktiveringsövervakning:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Felsökningsläge"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Djupt"
 
 msgid "Deep Scan"
 msgstr "Deep Scan"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Standard skanningsläge"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Standard skanningsläge används när ingen är angiven."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Definitioner"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Ta bort"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Ta bort all plugin-data när du avinstallerar"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Ta bort:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Beroendeskanning, skriptövervakning från tredje part och verifiering av CDN-integritet."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Beskrivning"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Detaljerade insikter om din webbplatstrafik och säkerhetshändelser"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Detaljerade insikter om din webbplatssäkerhetsprestanda."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Upptäck och blockera kodexekveringsförsök."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Upptäck dolda bakdörrsskript och skal."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Upptäck skadlig kod, bakdörrar och misstänkt kod"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Upptäck hot"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Upptäck okända hot med hjälp av beteendeanalys."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Detektionsmetoder"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Enhetstyper"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Svårighet"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Svårighetsgrad"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Svårighetsgrad för NexifyMy captcha-utmaningar."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Direkt"
 
 msgid "Directory Traversal"
 msgstr "Directory Traversal"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Katalogpasseringsskydd"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Inaktivera 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Inaktivera programlösenord"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Inaktivera författararkiv"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Inaktivera katalogbläddring"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Inaktivera inbäddningar"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Inaktivera filredigeraren"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Inaktivera filändringar"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Inaktivera inloggningsfelmeddelanden"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Inaktivera Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Inaktivera Pingbacks"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Inaktivera installation av plugin-/tema"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Inaktivera REST API-användaruppräkning"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Inaktivera RSS/Atom-flöden"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Inaktivera högerklicka"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Inaktivera textval"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Inaktivera Trackbacks"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Inaktivera WP-editor"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Inaktivera XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Inaktivera XML-RPC (förhindrar vanlig brute force-vektor)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Inaktivera XML-RPC (förhindrar pingbackattacker)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Inaktivera XML-RPC (används i DDoS och brute force-attacker)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Inaktivera författarens arkivsidor för att förhindra uppräkning av användarnamn."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Inaktivera oEmbed-funktionalitet och REST API-slutpunkter."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Inaktivera pingback-funktionalitet för att förhindra DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Inaktivera pingback/trackback-funktionalitet"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Inaktivera plugin-/temafilredigerare i WordPress admin."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Inaktivera offentlig användaruppräkning via REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Inaktivera högerklickskontextmenyn på frontend."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Inaktivera det inbyggda temat och pluginredigeraren för att förhindra kodinjektion."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Inaktivera tema- och pluginredigerare"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Inaktivera tema-/pluginredigerare i admin"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Inaktivera trackback-funktioner."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Inaktiverad"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Inaktiverar XML-RPC för att förhindra attacker. Säkert om du inte använder Jetpack eller mobilappar."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Inaktiverar inbyggd tema-/pluginredigerare. Säker - förhindrar kodredigering i admin."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Inaktiverar filredigering, XML-RPC och tillämpar WordPress bästa praxis"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Discord integration"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Ladda ner"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Laddar ner nytt WordPress-paket från officiell källa"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Lätt"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Enkelt (endast tillägg)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Redigering av NexifyMy Security-pluginfiler är inaktiverat av säkerhetsskäl."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Redaktör och filåtkomst"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Redaktörsblockering:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "E-post"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "E-postvarningsinställningar"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "E-postvarningar"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Säkerhetskopiering av e-post"
 
 msgid "Email Notifications"
 msgstr "E-postaviseringar"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "E-postrapporter"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "E-postskanningsrapporter"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "E-postverifiering"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Töm användaragent"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Aktivera"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Aktivera 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Aktivera 2FA-modulen"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Aktivera aktivitetsloggning"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Aktivera varningar"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Aktivera CAPTCHA-skydd"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Aktivera CDN-integration"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Aktivera CDN-funktioner"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Aktivera CI/CD-integration"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Aktivera Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Aktivera Custom Webhooks"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Aktivera Discord"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Aktivera e-postvarningar"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Aktivera brandvägg"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Aktivera geoblockering"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Aktivera Dölj inloggning"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Aktivera Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Aktivera skydd"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Aktivera hastighetsbegränsning"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Aktivera SIEM-integration"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Aktivera SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Aktivera skanner"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Aktivera skannermodul"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Aktivera schemalagda skanningar"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Aktivera ServiceNow"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Aktivera Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Aktivera Teams"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Aktivera tvåfaktorsautentisering"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Aktivera WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Aktivera WAF-modul"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Aktivera WAF-skydd"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Aktivera brandvägg för webbapplikationer"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Aktivera brandvägg för webbapplikationer."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Aktivera och konfigurera säkerhetsmoduler för din webbplats."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Aktivera och konfigurera säkerhetsmoduler."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Aktivera captcha-skydd"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Aktivera landsbaserad blockering"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Aktivera felsökningsloggning (endast för felsökning)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Aktivera brandväggsskydd för att blockera attacker"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Aktivera begränsning av inloggningshastighet"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Aktivera skanning av skadlig programvara"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Aktivera eller inaktivera säkerhetsmoduler."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Aktivera eller inaktivera hela WAF-modulen."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Aktivera eller inaktivera skadlig programvara."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Aktivera eller inaktivera den hastighetsbegränsande modulen."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Aktivera eller inaktivera tvåfaktorsautentisering."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Aktivera schemalagda skanningar"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Aktivera sårbarhetsskannerfunktioner"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Aktiverad"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Slutpunkt"
 
 msgid "Endpoint URL"
 msgstr "Endpoint URL"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Framtvinga starka lösenord"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Genomför krav på starka lösenord"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Genomför starka lösenordskrav för alla användare."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Genomför krav på starka lösenord."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Upprätthåller starka lösenordskrav för användare. Säker - påverkar endast nya lösenord."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Upprätthåller starka lösenord med minsta längd, komplexitetsregler"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Ange 6-siffrig kod för att verifiera installationen"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Ange IP-adresser, en per rad"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Ange svar"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Ange koden:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "WordPress-säkerhet i företagsklass"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Fel"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Händelse"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Händelseformat"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Händelseloggar"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Händelsens svårighetsgrad"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Händelsetyp"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Händelser"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Händelser (7 dagar)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Evenemang för att skapa biljetter"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Händelser att vidarebefordra"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Händelser att meddela"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Exempel: GitHub Actions"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Exempel: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Exempel: Jenkins Pipeline"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Exkluderade tillägg"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Exkluderade filmönster"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Uteslutna vägar"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Uteslutna användare"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Uteslutningar"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Uttömmande filskanning"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Befintliga säkerhetskopior"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Exportera CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Exportinställningar"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Exportera dina NexifyMy Security-inställningar till en JSON-fil. Detta inkluderar alla modulkonfigurationer, brandväggsregler, IP-listor och skanningsinställningar."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Externa skript & CDN-resurser"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Extra inloggningssäkerhet"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Misslyckas Bygg på skadlig programvara"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Misslyckas Bygg på sårbarheter"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Misslyckades"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Misslyckade 2FA-försök före tillfällig lockout."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Misslyckad inloggning"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Misslyckade inloggningar"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Misslyckat inloggningsförsök upptäcktes"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Det gick inte att registrera lösenordet."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Snabbt utförande"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Snabb säkerhetskontroll"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Hämtar officiella filkontrollsummor från WordPress.org API"
 
 msgid "File"
-msgstr "File"
+msgstr "Arkiv"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Filredigerare"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Filhashing:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Filinkludering"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Skydd för filinkludering"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Filintegritetskontroll"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Övervakning av filintegritet"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Filbehörigheter"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Fil i karantän"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Filtillägg att utesluta från skanning (en per rad, utan punkter)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Filnamn"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Filer skannade"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Skannade filer:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Filer jämförs med jämna mellanrum mot baslinjen."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Filer i karantän lagras säkert och kan inte köras."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Filer som är större än detta kommer att hoppas över under skanning."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "Filtrera"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Brandvägg"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Brandvägg och skydd"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Brandväggskonfiguration"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Brandväggsregler"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Brandväggsinställningar"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Fixa ändrade filer"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Flagga kraftigt obfuskerad eller kodad kod."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Tvinga SSL för admin"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Tvinga SSL/HTTPS för administratörsområdet (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Force för administratörer"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Formatera:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Vidarebefordra säkerhetshändelser till din SIEM-plattform (Security Information and Event Management) för centraliserad loggning och analys."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Finns i Cloudflares instrumentpanel under Översikt"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Finns i känd säker plugin - sannolikt legitim användning"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Finns i systemkatalogen - kan vara legitimt"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Från datum"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Från e-post"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Från Namn"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "Fullständig HTTP/HTTPS-slutpunkts-URL för din SIEM-plattform."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Fullständig analys av skadlig programvara"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Fullständig genomsökning av skadlig programvara"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Fullständiga signaturer för skadlig programvara"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Fullständig analys av webbplatsen"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR, CCPA, HIPAA efterlevnadsmoduler och omfattande säkerhetsrevisionsrapporter."
 
 msgid "General"
-msgstr "General"
+msgstr "Allmänt"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Allmän begränsning av begäran"
 
 msgid "General Settings"
 msgstr "Allmänna Inställningar"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Skapa rapport"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Generera SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Generera från: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Genererad"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Generisk HTTP-slutpunkt"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Generisk proxy"
 
 msgid "Geo Block"
 msgstr "Geo Block"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Geoblockering"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Geografisk distribution"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Få en gratis API-token från wpscan.com för detaljerad sårbarhetsdata."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Få omedelbara meddelanden i dina teamkommunikationskanaler när säkerhetshändelser inträffar."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Få senaste skanningsstatus"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Få skanningsresultat (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Få dina nycklar från Google reCAPTCHA eller Cloudflare Turnstile-instrumentpanel."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Komma igång"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Nådperiod"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Betyg"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQL säkerhet"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL-introspektion är inaktiverad."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL-hastighetsgränsen har överskridits. Gräns: %d frågor per minut."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP-säkerhetsrubriker"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP-rubriker"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Handtag"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Hårt"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Hårt (inkluderar multiplikation)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Härda webbplats"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Härdning"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Härdningsalternativ"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Rubriker"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Hjälp & dokumentation"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Heuristisk analys"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Heuristisk mönsterdetektering"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Dölj inloggning"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Dölj inloggningssida"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Dölj inloggningsadress"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Dölj inloggningsadress:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Dölj WP-version"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Dölj inloggningsadress för WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Dölj WordPress-versionen"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Dölj WordPress-versionen från källkoden"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Dölj standardinloggningsadresser"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Göm wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Dölj wp-admin och wp-login.php från angripare."
 
 msgid "High"
-msgstr "High"
+msgstr "Hög"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Hög (maximal upptäckt)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Hög säkerhet (fler kontroller, långsammare)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Högt antal blockerade attacker nyligen"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Högt eller över"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Hot med hög allvarlighet"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Endast högriskområden"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Högt rankade hot upptäckts av AI-analys"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Högre känslighet kan ge fler falska positiva resultat."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Högst"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Håll ned Ctrl/Cmd för att välja flera länder."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Värd"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Varje timme"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Hur 2FA fungerar"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Hur Core Repair fungerar"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Hur självskydd fungerar"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Hur länge man ska blockera en IP efter överskridande försök."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Hur länge man ska blockera en IP efter att hastighetsgränsen har överskridits."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Hur länge ska gamla rapporter sparas (30-365 dagar)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,157 +1934,157 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "IP-åtkomstkontroll"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP-adress"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IP-blockering"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP-konfiguration"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IP-låsning"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP Lockouts (brute force-försök)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "IP-hantering"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "IP vitlista"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP-adresser som kringgår hastighetsbegränsning."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP-adresser som alltid kommer att blockeras."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP-adresser som aldrig kommer att blockeras."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Identifierar ändrade eller saknade filer"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Bildval"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Omedelbar åtgärd krävs"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Effektnivå"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Importera inställningar"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Importera inställningar från en tidigare exporterad JSON-fil. Detta kommer att skriva över dina nuvarande inställningar."
 
 msgid "Import/Export"
 msgstr "Import/Export"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Inaktiv"
 
 msgid "Incident"
 msgstr "Incident"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Inkludera GDPR-kontroller"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Inkludera IP vitlista/svarta lista"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Inkludera prestandastatistik"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Inkludera säkerhetskontroller"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Inkludera hotsammanfattning"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Inkludera senaste skanningsresultat"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Inkludera säkerhetsloggar (senaste 30 dagarna)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Felaktigt captcha-svar. Gå tillbaka och försök igen."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Felaktigt captcha-svar. Försök igen."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Indexnamn eller källidentifierare för händelsekategorisering."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Index/Källa"
 
 msgid "Info"
 msgstr "Info"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Informationsutlämnande"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Initierar..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Instansnamn"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Integrera säkerhetsskanning i dina kontinuerliga integrations- och distributionspipelines."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Integrera säkerhetsskanning i din distributionspipeline med webhooks och API-åtkomst."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Integreras med CDN-tjänster. Konfigurera CDN-uppgifter innan du aktiverar."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Integrationer"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Resultat av integritetskontroll"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Integritetskontroller:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Integritetsstatus"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Ogiltig JWT-token."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Ogiltiga användaruppgifter."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Ogiltig verifieringskod."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Isolera hot"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Isolerar misstänkta filer utan att radera. Säker - filer kan återställas."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Problemtyp"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Hittade problem"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON-format. Exempel: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
 msgstr "Jira Cloud URL"
@@ -2096,490 +2096,490 @@ msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Håll loggar över alla blockerade förfrågningar för analys."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Håll loggar över alla hastighetsgränsöverträdelser för analys."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Håll dina skadeprogramssignaturer uppdaterade för bästa skydd."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Kända länder"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "Känd sårbarhet hittades i installerat plugin"
 
 msgid "LEEF (Log Event Extended Format)"
 msgstr "LEEF (Log Event Extended Format)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Senaste 30 dagarna"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Senaste 30 dagarna"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Senaste 7 dagarna"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Senaste 90 dagarna"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Senast lärde"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Senaste skanningen"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Senaste skanning:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Senast uppdaterad"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Senast använd: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Senaste versionen"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Inlärning - Endast logg, ingen blockering"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Inlärningsperiod"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Lär sig..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Lämna tomt för att använda admin-e-post."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Troligtvis säkert - verifiera om det behövs"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Begränsa REST API-åtkomst till autentiserade användare"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Begränsa kommentarer för att förhindra spam."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Begränsa överdrivna förfrågningar från en enda IP-adress."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Begränsa inloggningsförsök"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Begränsa inloggningsförsök för att förhindra brute force-attacker"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Begränsa begäranden för att förhindra missbruk och DDoS-attacker."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Begränsa antalet förfrågningar för att förhindra missbruk."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Begränsar inloggningsförsök för att förhindra brute force-attacker. Säker - påverkar endast misslyckade inloggningsförsök."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Lista kända sårbarheter"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Live trafik"
 
 msgid "Live Traffic Monitor"
 msgstr "Live Traffic Monitor"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Laddar CDN-status..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Laddar varningar..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Läser in analysdata..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Laddar säkerhetskopior..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Laddar blockerade IP-adresser..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Laddar länder..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Laddar databasinformation..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Laddar geografisk data..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Laddar loggar..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Läser in aviseringar..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Läser in optimeringsstatistik..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Laddar skyddsstatus..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Laddar filer i karantän..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Läser in referenser..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Laddar hotdetektioner..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Laddar toppsidor..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Läser in trafikdata..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Lock out efter så här många misslyckade försök."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Lockoutens varaktighet"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Lockoutperiod efter max misslyckade 2FA-försök."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Logga tillåtna förfrågningar"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Logga blockerade förfrågningar"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Logga misslyckade inloggningsförsök"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Logga utloggningar"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Logga mediauppladdningar"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Loggalternativändringar"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Logga insticksändringar"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Logga Post/Sidändringar"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Logga profiländringar"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Logga hastighetsgränsöverträdelser"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Logglagring"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Logga rolländringar"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Logga framgångsrika inloggningar"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Logga temaändringar"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Logga skapande/radering av användare"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Logga alla förfrågningar som klarar WAF-kontroller (hög diskanvändning)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Loggning"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Loggning & övervakning"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Logga in"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Inloggning och autentisering"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Inloggningsaktivitet"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Fönster för inloggningsförsök"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Inloggningsförsök"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Logga in CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Logga in Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Inloggningsformulär"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Inloggningslåsningstid"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Inloggningsskydd"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Begränsning av inloggningshastighet"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Inloggningssäkerhet"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Logga in Slug"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "URL-inställningar för inloggning"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Inloggningsformulär"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Logga ut"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Loggar ut"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Loggar"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Loggar som är äldre än detta rensas automatiskt dagligen."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Loggar säkerhetshändelser för granskning. Säker - registrerar endast aktivitet."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Låg"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Låg (mindre falskt positiva)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Låg effekt (färre kontroller, snabbare)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Små bokstäver (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Underhåll och diagnostikverktyg för din webbplats."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Se till att komma ihåg din anpassade inloggningsadress!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Skadlig programvara och skanning"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Definitioner av skadlig programvara"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Skadlig programvara hittades"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Skanner för skadlig programvara"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Skadlig programvara upptäcktes under filsökning"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Hantera aviseringar"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Hantera hot i karantän. Granska, återställ eller radera filer permanent."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Obligatorisk för roller"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Manuell granskning rekommenderas"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Markera allt som läst"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Markera alla som lästa"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Huvudströmbrytare för att aktivera eller inaktivera all aktivitetsloggning."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Matematisk fråga"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Max försök"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Max misslyckade försök"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Max filstorlek"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Max inloggningsförsök"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Max längd på frågesträng"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Max storlek på begäran"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Max förfrågningar"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Maximalt AJAX-begäran per minut per IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Maximalt API-begäran per minut per IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Maximalt antal misslyckade inloggningsförsök före lockout."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Maximalt antal sidförfrågningar per minut per IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Maximal begäran om kroppsstorlek för att skanna. Större förfrågningar kommer att hoppas över."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Maximalt tillåtna förfrågningar per minut och IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Maximalt antal sökförfrågningar per minut för att förhindra databasutmattning."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Maximal tid för en enda skanningsoperation."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Maximal tid för skadlig programvara före timeout."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Mediauppladdningar"
 
 msgid "Medium"
 msgstr "Medium"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Medium (balanserad)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Medium (addition/subtraktion)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Medium eller över"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Minnesgräns"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Minne tilldelat för skanningsoperationer."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Meddelande"
 
 msgid "Method"
-msgstr "Method"
+msgstr "Metod"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Microsoft Teams-integration"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Minst %d tecken"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Minsta längd"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Minsta svårighetsgrad för att misslyckas"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Minsta lösenordslängd (8-32 tecken)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Läge"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Modulkontroller"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Moduler"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Övervaka externa skript"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Monitorläge (endast logg)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Övervaka plugin-filer för ändringar"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Övervaka webbplatstrafik i realtid."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Övervaka trafik i realtid"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Övervaka trafik och besökares aktivitet i realtid."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Övervaka besökartrender, sidvisningar och trafikmönster över tid."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Övervakning och varningar"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Övervakar trafik i realtid. Säker - spårar endast besök."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Månadsvis"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Mest aktiva användare"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Flyttar misstänkta filer till en skyddad katalog."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM-beroenden"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Namn"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Behöver du support?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Aldrig"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Går aldrig ut"
 
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (inbyggd)"
 
 msgid "NexifyMy Captcha Type"
 msgstr "NexifyMy Captcha Type"
@@ -2588,1171 +2588,1171 @@ msgid "NexifyMy Security"
 msgstr "NexifyMy Security"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security har upptäckt obehöriga ändringar av sina filer. Vänligen verifiera din installation."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Du har %d olästa säkerhetsvarningar."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Nästa uppdatering"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Ingen resningsperiod"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Ingen senaste aktivitet"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Ingen SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Ingen aktivitet registrerad ännu. Aktivitet visas här när användare börjar utföra åtgärder."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Inga innehållsändringar har registrerats ännu."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Inga länder har valts ännu."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Inga data tillgängliga"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Ingen händelseinformation tillgänglig ännu."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Inga filer i karantän."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Inga geografiska data tillgängliga"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Ingen inloggningsaktivitet registrerad ännu."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Inga lösenord registrerade ännu."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Inga rapporter tillgängliga."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Ingen skanning har körts ännu"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Inga skanningsresultat tillgängliga. Klicka på \"Kör skanning\" för att analysera dina beroenden."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Inga skanningsresultat tillgängliga. Kör en skanning för att leta efter sårbarheter."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Inga säkerhetsrekommendationer för närvarande. Din webbplats är väl skyddad."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Inga allvarlighetsdata tillgängliga."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Inga misstänkta IP-adresser upptäcktes."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Inga systemhändelser har registrerats ännu."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Inga hot har upptäckts ännu."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Ingen användaraktivitet registrerad ännu."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Ingen användaraktivitet ännu."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Inte aktiv"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Inte aktiverat"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Inte kontrollerat ännu"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Inte schemalagt"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Obs:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "E-postmeddelande"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Aviseringsinställningar"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Aviseringar"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Meddela vid Lockout"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Meddela användare när 2FA är aktiverat/inaktiverat på deras konto."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Antal (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Antal säkerhetskopieringskoder"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Antal reservkoder att generera per användare."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Antal misslyckade inloggningsförsök före lockout."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Antal lockouter före permanent förbud."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Antal regelöverträdelser före automatisk blockering."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Objekt"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Vid nästa inloggning anger du lösenord + 6-siffrig kod"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "En gång i veckan"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "En IP per rad"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "En IP per rad. Proxy-IP:er får skicka X-Forwarded-For-rubriker (t.ex. Cloudflare, lastbalanserare)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "En IP per rad. Dessa IP-adresser kringgår alla hastighetsgränser."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "En IP per rad. Dessa IP-adresser kommer att blockeras omedelbart. Exempel: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "En IP per rad. Dessa IP-adresser kommer att kringgå WAF-kontroller."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "En IP per rad. Dessa IP-adresser kommer att kringgå alla WAF-regler. Exempel: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "En bana per linje. Absoluta vägar till ytterligare kataloger att skanna."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "En bana per linje. Kataloger att hoppa över under skanningar."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "En per rad. Blockera specifika användaragenter. Exempel: bad-bot, skrapa"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "En per rad. Användaragenter i den här listan kommer att kringgå WAF-kontroller. Exempel: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Ett användarnamn per rad"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Öppna Inställningar"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Operativsystem"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Driftläge"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Optimera databasen"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Optimera och säkra din databas."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Alternativ Ändringar"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Valfritt för alla användare"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Valfritt: Skicka skanningsresultat till din CI/CD-plattform."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Ursprunglig väg"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Föråldrad"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Över huvudet"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Åsidosätt språket för plugin-gränssnittet. Språk som stöds: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Översikt"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHP-version"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Paket"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Sidförfrågningar per minut"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Sidvisningar"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Sidan hittades inte."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Autentisering med lösenord"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Nyckelnamn (t.ex. MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Nyckeln har registrerats!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Lösenord stöds inte i den här webbläsaren."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Lösenord"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Lösenordet löper ut"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Lösenordspolicyer"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Lösenordspolicy"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Lösenordskrav"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Lösenordskrav:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Lösenordsåterställningsformulär"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Lösenordsåterställer"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Lösenordet måste vara minst %d tecken långt."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Lösenordet måste innehålla minst en liten bokstav."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Lösenordet måste innehålla minst ett nummer."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Lösenordet måste innehålla minst ett specialtecken."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Lösenordet måste innehålla minst en stor bokstav."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Lösenordspolicy"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Blankett för återställning av lösenord"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Sökvägar att utesluta från skanning (relativt WordPress root). En per rad."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Toppaktivitetsinsikter"
 
 msgid "Peak Hour"
 msgstr "Peak Hour"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Högtrafiktimmar"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Prestandaläge"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Prestandainställningar"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Periodiska rapporter"
 
 msgid "Permanent"
 msgstr "Permanent"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Permanent förbudströskel"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Tar bort filen permanent."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Vänligen lös den matematiska captchaen."
 
 msgid "Plugin"
 msgstr "Plugin"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Plugin- och temaanalys"
 
 msgid "Plugin Language"
 msgstr "Dinsticksprogram Språk"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Plugin senast uppdaterad"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Plugin-alternativ"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Plugin självskydd"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Plugin-version"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Plugin sårbarheter"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Pluginfiler kan inte redigeras via WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Plugin integritet"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Plugin skydd"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "Plugin/tema CVEs"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Plugin-/temaaktiveringar, uppdateringar, alternativändringar och exporter."
 
 msgid "Plugins"
 msgstr "Plugins"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Plugins aktiverade"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Plugins inaktiverade"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Plugins uppdaterade"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Redigering av inlägg/sidor, publicering, mediauppladdningar och radering av innehåll."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Inlägg skapade"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Publicerade inlägg"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Inlägg uppdaterade"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Potentiellt säkerhetshot har upptäckts"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Förhindra XML-RPC-attacker och brute force-försök"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Förhindra åtkomst till kataloger utanför webbroten."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Förhindra angripare från att inkludera lokala serverfiler."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Förhindra brute force"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Förhindra kodredigering i WordPress admin"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Förhindra kataloglistning via .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Förhindra dubbletter av varningar inom denna period."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Förhindra dubbletter av varningar inom denna tidsperiod. Ställ in på 0 för att inaktivera gasreglaget."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Förhindra redigering av plugin-filer via WordPress-redigerare"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Förhindra inkludering av fjärrfiler via URL-parametrar."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Förhindra listning av kataloginnehåll via .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Förhindra installation av plugin/tema från adminpanelen."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Förhindra textval och kopiering på frontend."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Förhindra användning av vanliga lösenord som bryter mot"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Förhindra användarupptäckt via /wp-json/wp/v2/users slutpunkt."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Förhindrar obehörig modifiering av säkerhetspluginfiler"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Primär e-postadress för säkerhetsvarningar."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Prioritet"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Proaktiva säkerhetsförslag och automatiserade rekommendationer för hårdnande."
 
 msgid "Problem"
 msgstr "Problem"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Profiluppdateringar"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Profiländringar, rolländringar, användarskapande och borttagningshändelser."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Projektnyckel"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Skydda mot förfalskning av förfrågningar på flera webbplatser."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Skydda mot Cross-Site Scripting (XSS) attacker."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Skydda mot SQL-injektionsattacker i GET/POST-parametrar."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Skydda mot SQL-injektion, XSS, RFI och andra attacker."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Skydda mot brute force och DoS-attacker genom att begränsa begäranden per IP-adress."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Skydda inloggnings- och registreringsformulär från automatiserade botattacker."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Skydda inloggnings- och registreringsformulär med matematikbaserad captcha."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Skydda plugin-filer från manipulering."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Skydda säkerhetsplugin från manipulering och obehöriga ändringar."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Skydda din inloggningssida från brute force-attacker."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Skydda din webbplats från skadlig trafik och attacker."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Skyddade former"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Skyddsnivå"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Skyddsläge"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Skyddsregler"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Skyddsinställningar"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Skyddar REST API med JWT-auth, hastighetsbegränsning och CORS. Viktigt för huvudlöst WordPress."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Skyddar mot SQL-injektion, XSS och skadliga förfrågningar. Säkert att aktivera - blockerar bara skadlig trafik."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Skyddar plugin-filer från modifiering. Säker - förhindrar manipulering."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Leverantör"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Rensa alla loggar"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Rensa cache"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Karantän"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Karantän omedelbart"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Karantän rekommenderas"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Karantän:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "I karantän"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Filer i karantän"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Frågans komplexitet överstiger maximalt %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Frågans djup överskrider det maximala tillåtna djupet på %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "Snabbt"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Snabba åtgärder"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Snabbskanning"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Snabbsökningsåtgärder"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Snabb åtkomst till verktyg för säkerhetsunderhåll."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Snabb: Endast kärnfiler. Standard: Core + teman/plugins. Deep: Alla filer."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST API-säkerhet"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "REST API-användare"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST API-skydd"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS-flöden är inaktiverade på denna webbplats."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Prisgräns"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Prisbegränsare"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Prisbegränsande"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Prisbegränsande inställningar"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Realtidsövervakning"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Anledning"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Få e-postvarningar när sårbarheter upptäcks"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Senaste aktivitet"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Senaste hotdetektioner"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Nyligen blockerade IP-adresser"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Mottagarens e-post"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Rekommendationer"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Rekommenderas"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Rekommenderade åtgärder"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Omdirigera blockerad åtkomst"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Omdirigera till hemsidan"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Minska attackytan genom att inaktivera onödiga funktioner och hårdna WordPress-konfigurationen."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Uppdatera"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Återskapa"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Regenerera baslinje"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Registrera lösenord"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Registrerade lösenord"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Registrerar lösenord..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Registreringsformulär"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Anmälningsformulär"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Kom ihåg enhet"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Kom ihåg varaktighet"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Kom ihåg den här enheten"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Ta bort"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Ta bort Generator Tags"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Ta bort inloggningstips"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Ta bort WordPress-versionen från källkoden"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Ta bort generatormetataggar från alla sidor."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Ta bort tips och förslag på lösenordsåterställning."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Ta bort versionsinformation från HTML och flöden."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Reparera alla modifierade filer"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Reparerar modifierade WordPress-kärnfiler. Använd försiktigt - säkerhetskopiera före reparation."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Ersätter skadade filer med rena versioner"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Rapporthistorik"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Rapportlagring (dagar)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Rapportschema"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Begäran gränser och filtrering"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Begär storleksgräns"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Förfrågningar per minut"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Kräv 2FA för alla administratörer"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Kräv 2FA för valda användarroller."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Kräv en andra faktor för inloggningsverifiering"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Kräv inloggning för REST API-åtkomst"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Kräver en andra faktor för inloggning. Konfigurera din 2FA-metod innan du aktiverar."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Återställ"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Återställ alla inställningar"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Återställ inlärning"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Återställ alla NexifyMy Security-inställningar till deras standardvärden. Denna åtgärd kan inte ångras."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Återställ till standardvärden"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Återställer..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Svarskod på block"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Återställ"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Återställ:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Begränsa REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Begränsar REST API-åtkomst. Kan påverka plugins som använder REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Lagringsperiod"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Returnera felkod om skadlig programvara upptäcks (misslyckas med CI/CD-bygget)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Returnera felkod om sårbarheter hittas."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Returnerar filen till sin ursprungliga plats."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Granska varningar ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Granska omedelbart"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Granska säkerhetsloggar regelbundet"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Rollbyten"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Kör Full Security Scan"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Kör integritetskontroll"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Kör snabbkontroll"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Kör Scan"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Kör sårbarhetssökning"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Kör en säkerhetsskanning för att identifiera sårbarheter"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Kör automatisk skanning av skadlig programvara dagligen. Säkert - endast skanning, inga filändringar."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "SÄKERHETSVARNING:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "SHA-256-hashar för alla plugin-filer lagras som en baslinje."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM-integration"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEM-plattform"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL-injektion"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQL-injektionsskydd"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSL-status"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL-verifiering"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Spara avancerade inställningar"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Spara CI/CD-inställningar"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Spara Discord-inställningar"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Spara e-postinställningar"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Spara Jira-inställningar"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Spara SIEM-inställningar"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Spara skannerinställningar"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Spara ServiceNow-inställningar"
 
 msgid "Save Settings"
 msgstr "Spara Inställningar"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Spara Slack-inställningar"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Spara Teams-inställningar"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Spara WAF-inställningar"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Spara Webhook-inställningar"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Skanna"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Genomsökningen är klar"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Skanning slutförd"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Skanna kompositörsberoenden"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Skanna konfiguration"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Skanna kontroller"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Skanna anpassade kataloger"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Skanna NPM-beroenden"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Skanna plugins"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Skanna QR-kod med autentiseringsappen (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Skanningsresultat"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Skanningsschema"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Skanningskänslighet"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Skanna mål"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Skanna teman"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Skanningstidsgräns"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Skanna uppladdningskatalog"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Skanna WordPress Core"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Skanna alla installerade plugins efter skadlig programvara."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Skanna alla installerade teman efter skadlig programvara."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Skanna endast kritiska områden"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Skanna filer efter skadlig kod och misstänkt kod."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Skanna plugins, teman och WordPress-kärna för kända sårbarheter."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Skanna din webbplats efter skadlig programvara, sårbarheter och säkerhetsproblem."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Skanna din webbplats efter skadlig programvara och säkerhetsbrister."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Skanner"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Skannerinställningar"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Skannar..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Skannar filer efter skadlig kod och misstänkt kod. Säker - skannar endast, ändrar inte filer."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Schemalagt skanningsläge"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Schemalagda skanningar"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Betyg"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Sökförfrågningar per minut"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Sök användarnamn..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Hemlig nyckel"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Säker filåtkomst"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Säkrar WPGraphQL med gränser för frågedjup, komplexitetskontroller och hastighetsbegränsning. Säker för huvudlösa inställningar."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Säkerhetsvarningar"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Säkerhetsanalys"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Säkerhetshärdning"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Säkerhetsrubriker"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Säkerhetsincident"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Säkerhetsloggar"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Säkerhetsmoduler"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Säkerhetsmeddelanden"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Säkerhetsalternativ"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Säkerhetsrekommendationer"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Säkerhetspoäng"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Säkerhetsstatus"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Säkerhetsverktyg"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Säkerhetssårbarheter"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Säkerhetsvarningar"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Säkerhetshändelser kommer att visas här."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Säkerhetshärdning"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Säkerhetsskanningen har slutförts"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Säkerhetsinställningarna har ändrats"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Välj länder:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Välj länder från vänster, klicka på \"Lägg till i lista\" för att lägga till dem. Utvalda länder kommer att blockeras (svartlista) eller tillåtna (vitlista) baserat på läget ovan."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Välj bilden med en bock:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Välj vilken captcha-tjänst du vill använda."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Utvalda länder:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Självskydd"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Självskydd"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Skicka testvarning"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Skicka testmail"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Skicka larm efter så många attacker på en timme."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Skicka daglig e-postsammanfattning"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Skicka e-postmeddelande när en IP är utelåst."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Skicka e-postmeddelanden för säkerhetshändelser"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Skicka e-postmeddelanden när kritiska attacker upptäcks."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Skicka e-post när manipulation upptäcks"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Skicka e-post när sårbarheter hittas"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Skicka rapporter till administratörens e-post"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Skicka skanningsresultat via e-post efter varje skanning."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Skicka säkerhetshändelser till Splunk, Elasticsearch eller andra SIEM-plattformar för centraliserad övervakning och analys."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Skicka säkerhetshändelser till valfri HTTP-slutpunkt med anpassad konfiguration."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Skicka säkerhetshändelser till valfri HTTP-slutpunkt med anpassade rubriker och autentisering."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Skicka verifieringskoder via e-post."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Skickar e-postvarningar för säkerhetshändelser. Säkert - konfigurera e-postinställningar först."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNow-integration"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Ställer in säkra filbehörigheter. Kan kräva manuell justering om servern har problem."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Inställningar"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Inställningarna har sparats"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Allvarlighet"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Visa sidan 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Visa allmänt felmeddelande vid inloggningsfel."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Visa på Formulär"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Visar %d av %d poster"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Visar olästa kritiska/varningshändelser. Använd loggar för fullständig historik."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Logga in med lösenord"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Signaturstatus"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Signaturbaserad detektion"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Signaturer"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Webbplats som standard"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Webbplatsnyckel"
 
 msgid "Site Security Health"
 msgstr "Site Security Health"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Storlek"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Hoppa över filer som är större än denna storlek."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Slack integration"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Vissa förbättringar rekommenderas"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Källa"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Specialtecken (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
 msgstr "Splunk (HTTP Event Collector)"
@@ -3761,43 +3761,43 @@ msgid "Standard"
 msgstr "Standard"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Standard - Balanserat skydd"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Standardskanning"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Starta skanning"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Starta en ny skanning"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Starta en skanning"
 
 msgid "Status"
 msgstr "Status"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Berättelse"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Strikt - Maximal säkerhet"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Starka lösenord"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Starka lösenord"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Framgångsfrekvens"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Lyckad inloggning"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Lyckade inloggningar"
 
 msgid "Sucuri"
 msgstr "Sucuri"
@@ -3812,409 +3812,409 @@ msgid "Supply Chain Security"
 msgstr "Supply Chain Security"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Supply Chain-inställningar"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Stöd Google Authenticator, Authy, etc."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Stöds:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Misstänkt kod"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Misstänkta IP-adresser"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Systemaktivitet"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Systemhändelser"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Systemstatus"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "TOTP Authenticator-appar"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Tabellnamn"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Tabeller"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Sabotagedetektering:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Uppgift"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Blockera tillfälligt IP-adresser som överskrider API-hastighetsgränserna."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Testa anslutningen"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Testmeddelande"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Textmatchning"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI:n lär sig kontinuerligt normala beteendemönster inklusive trafiktimmar, geografiska platser, användaragenter och förfrågningsmönster. Denna baslinje används för att upptäcka anomalier."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF skyddar din webbplats från vanliga webbattacker inklusive SQL-injektion, XSS och skadliga bots."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Temaomkopplare"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Denna timme"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Denna månad"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Denna vecka"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Detta är ett vanligt lösenord."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Så här kommer captcha att se ut på inloggningsformulär:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Det här lösenordet är för vanligt. Välj ett mer unikt lösenord."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Den här frågan är inte tillåten."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Detta kommer att återställa alla AI-inlärningsdata och beteendemönster. Fortsätta?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Hot"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Hotfördelning:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Hot upptäckt"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Hot upptäckt (skadlig programvara, misstänkta filer)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Hotdetektion och -blockering - senaste 7 dagarna"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Hotresultat"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Hot blockerade"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Hot hittade"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Hot idag"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Spjällperiod"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Biljettförsäljning"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Biljettsystem"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Tid"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Tidsfönster (sek)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Tid innan e-postverifieringskoder löper ut."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Tidsfönster för räkning av misslyckade inloggningsförsök."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Tidsfönster som används för att räkna misslyckade inloggningsförsök."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Till datum"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Idag"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "För många misslyckade inloggningsförsök. Försök igen om %d minut(er)."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Verktyg"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Verktyg och verktyg"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Topp land"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "De främsta skälen för upptäckt"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "De bästa evenemangstyperna"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Toppsidor"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Topphänvisare"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Totalt antal händelser"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Totalt antal sidvisningar"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Totala signaturer"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Total storlek"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Trafikanalys"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Trafiköversikt"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Utlösa en säkerhetsskanning"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Lita på proxyhuvuden"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Pålitliga proxyservrar"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Två gånger dagligen"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Tvåfaktorsautentisering (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Tvåfaktorsautentisering"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Tvåfaktorsautentisering"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Typ"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Skriv ordet:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Avinstallera Beteende"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Unika IP-adresser"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Unika användare"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Unika besökare"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Okänd"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Olästa varningar"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Olästa säkerhetsvarningar från dina loggar."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Uppdatera definitioner"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Uppdatera definitioner nu"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Uppdatera definitioner av skadlig programvara"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Uppdatera nu"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Uppdatera signaturer för upptäckt av skadlig programvara."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Stor bokstav (A–Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Brådskande nivå"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Använd CDN/proxy-huvuden för att bestämma verklig klient-IP"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Använd Touch ID, Face ID, Windows Hello eller en hårdvarusäkerhetsnyckel."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Använd X-Forwarded-For header för IP-detektering (endast om bakom CDN/proxy)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Använd signaturdatabas för skadlig programvara för upptäckt."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Använd den här nyckeln för att autentisera API-förfrågningar från din CI/CD-pipeline."
 
 msgid "User"
-msgstr "User"
+msgstr "Användare"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Användaraktivitet"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Användaragent"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Användarhändelser"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Användarlåsning"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Användarhantering"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Användarkrav"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Användare eller IP-adress låst på grund av misstänkt aktivitet"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Användarnamn"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Användarnamn och lösenord krävs."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Användare skapade"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Användare raderade"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Användare aktiverar 2FA i sina profilinställningar"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Använder AI för att upptäcka nolldagshot genom beteendeanalys. Lär sig normala mönster och flaggar anomalier. Säker - övervakar endast beteende."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Verifieringssessionen har löpt ut. Logga in igen."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Verifiera"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Verifiera kärnfiler"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Verifiera SSL-certifikat (rekommenderas för produktion)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Verifiera och reparera WordPress-kärnfiler."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Verifiera och reparera kärnfiler"
 
 msgid "Version"
 msgstr "Version"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Visa alla"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Visa livetrafik"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Visa alla säkerhetshändelser."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Visa och hantera hot i karantän."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Visa och hantera säkerhetsvarningar och aviseringar."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Visningar"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Besökartrender - senaste 30 dagarna"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Besökare"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Besök idag"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Sårbarhetskontroll"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Sårbarhetsskanner"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Sårbar"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF-attack blockerad"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF Blocks (attackerad blockerad av brandvägg)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF-brandvägg"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAF-status"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP-version"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL-skydd"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan API-token"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Varning"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Varning:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Varning: Importering ersätter alla nuvarande inställningar. Se till att exportera dina nuvarande inställningar först som en säkerhetskopia."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Webbapplikationsbrandvägg"
 
 msgid "Web Application Firewall (WAF)"
 msgstr "Web Application Firewall (WAF)"
@@ -4223,164 +4223,1072 @@ msgid "Webhook URL"
 msgstr "Webhook URL"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "Webhook URL för resultat"
 
 msgid "Webhooks"
 msgstr "Webhooks"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Varje vecka"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Veckovis säkerhetsrapport"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Vitlista (endast tillåt)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Vitlista (tillåt endast valda)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Vitlista IP-adresser"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "Vitlistade IP-adresser"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Verifiering av WordPress kärnfil"
 
 msgid "WordPress Core Status"
 msgstr "WordPress Core Status"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "WordPress härdning"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "WordPress version"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "WordPress kärnfil har ändrats"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress är inte uppdaterat"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (ingen sniff)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Förhindra Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-skydd"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC-kontroll"
 
 msgid "XSS Attack"
 msgstr "XSS Attack"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS-skydd"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Du använder standardinloggningssluggen. Överväg att ändra det till något unikt."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Du måste vara inloggad för att komma åt REST API."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Din webbplats använder inte HTTPS. Aktivera SSL-certifikat för säkra anslutningar."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Din webbplats är väl skyddad"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Din verifieringskod är: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Dina virusdefinitioner är inaktuella. Uppdatera nu för bästa skydd."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "Zon-ID"
 
 msgid "ago"
-msgstr "ago"
+msgstr "sedan"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "attacker per timme"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "försök"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "blockerad"
 
 msgid "characters"
-msgstr "characters"
+msgstr "tecken"
 
 msgid "days"
-msgstr "days"
+msgstr "dagar"
 
 msgid "events"
-msgstr "events"
+msgstr "händelser"
 
 msgid "fails"
-msgstr "fails"
+msgstr "misslyckas"
 
 msgid "files"
-msgstr "files"
+msgstr "filer"
 
 msgid "from now"
-msgstr "from now"
+msgstr "från och med nu"
 
 msgid "including:"
-msgstr "including:"
+msgstr "inklusive:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "gemen bokstav"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "minuter"
 
 msgid "modules"
-msgstr "modules"
+msgstr "moduler"
 
 msgid "number"
-msgstr "number"
+msgstr "nummer"
 
 msgid "or"
-msgstr "or"
+msgstr "eller"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "per minut"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "sekunder"
 
 msgid "special character"
-msgstr "special character"
+msgstr "speciell karaktär"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "hot hittas"
 
 msgid "total records"
-msgstr "total records"
+msgstr "totala rekord"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "stor bokstav"
 
 msgid "views"
-msgstr "views"
+msgstr "vyer"
 
 msgid "violations"
-msgstr "violations"
+msgstr "kränkningar"
 
 msgid "visits"
-msgstr "visits"
+msgstr "besök"
+msgid "Deception"
+msgstr "Bedrägeri"
+
+msgid "P2P Intelligence"
+msgstr "P2P intelligens"
+
+msgid "Sandbox Console"
+msgstr "Sandlådekonsol"
+
+msgid "Temporary Access"
+msgstr "Tillfällig åtkomst"
+
+msgid "Saving..."
+msgstr "Sparar..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Inställningar sparade. Laddar om..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Inställningarna har sparats! Laddar om..."
+
+msgid "Connection error"
+msgstr "Anslutningsfel"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Säkerhetskontrollen misslyckades. Uppdatera och försök igen."
+
+msgid "Settings handler not available."
+msgstr "Inställningshanteraren är inte tillgänglig."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Återställa alla inställningar till standardvärden? Detta kan inte ångras."
+
+msgid "Purge CDN cache now?"
+msgstr "Rensa CDN-cache nu?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Det gick inte att spara inställningarna. Försök igen."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Inställningarna återställs till standardinställningarna. Laddar om sidan..."
+
+msgid "Failed to load analytics data."
+msgstr "Det gick inte att läsa in analysdata."
+
+msgid "Devices"
+msgstr "Enheter"
+
+msgid "No data available for this range."
+msgstr "Ingen data tillgänglig för detta intervall."
+
+msgid "Traffic trend chart"
+msgstr "Trafiktrenddiagram"
+
+msgid "Distribution breakdown chart"
+msgstr "Fördelningsdiagram"
+
+msgid "Total"
+msgstr "Totalt"
+
+msgid "Series"
+msgstr "Serie"
+
+msgid "Predictive Threat Hunting"
+msgstr "Förutsägande hotjakt"
+
+msgid "Forecast next attack vectors"
+msgstr "Prognostisera nästa attackvektorer"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Profilerar din stack, förutsäger troliga attackvektorer och ger proaktiv härdningsvägledning."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Hantera hot i karantän och återställbara raderade filer."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Raderade filer (återställbara)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Filer som flyttas hit kan återställas till karantän eller raderas permanent."
+
+msgid "Deleted"
+msgstr "Raderad"
+
+msgid "Loading deleted files..."
+msgstr "Laddar raderade filer..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Flyttar filer i karantän till återställbart raderade lagringsutrymme."
+
+msgid "Delete Permanently:"
+msgstr "Ta bort permanent:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Tar permanent bort en fil från raderad lagring."
+
+msgid "Access denied from your region."
+msgstr "Åtkomst nekad från din region."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Maximalt antal misslyckade inloggningsförsök före tillfällig lockout."
+
+msgid "Time window for counting failed attempts."
+msgstr "Tidsfönster för räkning av misslyckade försök."
+
+msgid "Open Tool"
+msgstr "Öppna Verktyg"
+
+msgid "Available Fix"
+msgstr "Tillgänglig Fix"
+
+msgid "Preview Patch"
+msgstr "Förhandsgranska Patch"
+
+msgid "Apply Patch"
+msgstr "Applicera patch"
+
+msgid "Honeytrap Configuration"
+msgstr "Honeytrap-konfiguration"
+
+msgid "Enable Deception Module"
+msgstr "Aktivera Deception Module"
+
+msgid "How Deception Works:"
+msgstr "Hur bedrägeri fungerar:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Följande webbadresser finns inte på din webbplats. Om någon kommer åt dem <strong>blockeras de automatiskt</strong> som bekräftade angripare. Administratörer blockeras aldrig men kommer att se en varning."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Anpassade Honeytrap-vägar"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Lägg till en sökväg per rad (t.ex. /my-secret-admin/, /old-backup.sql). Standardinställningarna är redan aktiva."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Standardbanor för honungsfälla (alltid aktiv)"
+
+msgid "Login Page Honeypot"
+msgstr "Inloggningssida Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Ett osynligt fält injiceras i inloggnings-/registreringsformulär. Endast bots fyller i det, vilket utlöser omedelbar upptäckt och blockering."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Detta skydd är alltid aktiverat när Deception-modulen är aktiv. Ingen konfiguration krävs."
+
+msgid "User Enumeration Trap"
+msgstr "Användaruppräkningsfälla"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Upptäcker spaningsförsök där angripare söker efter giltiga användarnamn via ?author=1, ?author=2, etc."
+
+msgid "Enable user enumeration detection"
+msgstr "Aktivera identifiering av användaruppräkning"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Hård blockering vid uppräkningsförsök (standard: mjuk omdirigering till hemsidan)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Blockera ALL författaruppräkning (även för befintliga användare)"
+
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR Artikel 30 Datakartläggning"
+
+msgid "Refresh Map"
+msgstr "Uppdatera karta"
+
+msgid "Export Data Map (PDF)"
+msgstr "Exportera datakarta (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Automatiserad PII-upptäckt över databastabeller, dataflödeskartläggning och detektering av tredje part."
+
+msgid "Data Element"
+msgstr "Dataelement"
+
+msgid "Location"
+msgstr "Plats"
+
+msgid "Purpose"
+msgstr "Syfte"
+
+msgid "Retention"
+msgstr "Retention"
+
+msgid "Third-Party Sharing"
+msgstr "Tredjepartsdelning"
+
+msgid "Legal Basis"
+msgstr "Rättslig grund"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Inga PII-poster har upptäckts ännu. Kör en datakartaskanning för att skapa rapporten."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Rätt att bli glömd Automation"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Skicka raderingsförfrågningar, verifiera borttagning av data och spåra efterlevnadsloggar för GDPR-arbetsflöden."
+
+msgid "User ID"
+msgstr "Användar-ID"
+
+msgid "Comments"
+msgstr "Kommentarer"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Ta bort kommentarer istället för att anonymisera"
+
+msgid "Run Erasure"
+msgstr "Kör radering"
+
+msgid "Verify Erasure"
+msgstr "Verifiera radering"
+
+msgid "GDPR Request Log"
+msgstr "GDPR-förfrågningslogg"
+
+msgid "Request Type"
+msgstr "Typ av begäran"
+
+msgid "Requested At"
+msgstr "Begärd kl"
+
+msgid "Completed At"
+msgstr "Avslutad kl"
+
+msgid "No GDPR requests logged yet."
+msgstr "Inga GDPR-förfrågningar loggade än."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Shadow Runtime Sandbox"
+
+msgid "Enable Sandbox Module"
+msgstr "Aktivera Sandbox Module"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Laddar Shadow Runtime Sandbox-motorn."
+
+msgid "Enable Sandbox Console"
+msgstr "Aktivera Sandbox Console"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Tillåter wp-admin-användare med manage_options att köra kod i sandlådekonsolen."
+
+msgid "Sandbox Timeout"
+msgstr "Sandlåda Timeout"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Exekveringstimeout i sekunder (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Dynamisk analys"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Kör dynamisk exekveringsanalys utöver statiska kontroller."
+
+msgid "Quarantine Policy"
+msgstr "Karantänpolicy"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Manuell karantän rekommenderas för de flesta webbplatser. Automatisk karantän isolerar endast bekräftad skadlig programvara med hög förtroende."
+
+msgid "Manual (Recommended)"
+msgstr "Manual (rekommenderas)"
+
+msgid "Auto Quarantine"
+msgstr "Automatisk karantän"
+
+msgid "Save Quarantine Policy"
+msgstr "Spara karantänpolicy"
+
+msgid "AI Risk Controls"
+msgstr "AI-riskkontroller"
+
+msgid "Enable AI Detection Module"
+msgstr "Aktivera AI-detektionsmodul"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Aktivera upptäckt av insiderhot"
+
+msgid "Insider Threat Threshold"
+msgstr "Insiderhotströskel"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Aktivera övervakning av dataexfiltrering"
+
+msgid "Exfiltration Threshold"
+msgstr "Exfiltrationströskel"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Exfiltration Baseline Days"
+
+msgid "Session Risk Threshold"
+msgstr "Sessionsriskgräns"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Intervall för kontinuerlig återkontroll av autentisering (sekunder)"
+
+msgid "Risk Spike Threshold"
+msgstr "Riskspiktröskel"
+
+msgid "Save AI Settings"
+msgstr "Spara AI-inställningar"
+
+msgid "Quarantine Mode"
+msgstr "Karantänläge"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Manuellt läge är säkrare och rekommenderas. Autoläge karantäner endast bekräftad skadlig programvara med hög säkerhet."
+
+msgid "Data Map"
+msgstr "Datakarta"
+
+msgid "Privacy Requests"
+msgstr "Sekretessförfrågningar"
+
+msgid "Deception Technology"
+msgstr "Bedrägeriteknik"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypots, lockbetetillgångar och angripares bedrägeri för att fånga hot innan de slår till."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Visar %1$d av %2$d poster"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P Intelligence-modulen är inte laddad."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P Hot Intelligence"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Dela hotintelligens med andra SentinelWP-installationer för flockimmunitet."
+
+msgid "P2P Settings"
+msgstr "P2P-inställningar"
+
+msgid "Enable P2P Intelligence"
+msgstr "Aktivera P2P Intelligence"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Aktivera kollaborativ hotintelligensdelning med peer-noder."
+
+msgid "My Node Key"
+msgstr "Min nodnyckel"
+
+msgid "Copy"
+msgstr "Kopiera"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Dela den här nyckeln med andra som vill ansluta till din webbplats."
+
+msgid "Broadcast Threats"
+msgstr "Broadcast Hot"
+
+msgid "Share detected threats with registered peers."
+msgstr "Dela upptäckta hot med registrerade kamrater."
+
+msgid "Trust Threshold"
+msgstr "Trust Threshold"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Endast autoblockera IP-adresser med hotpoäng >= denna tröskel. Lägre värden = mer aggressiv blockering."
+
+msgid "Registered Peers"
+msgstr "Registrerade kamrater"
+
+msgid "Add Peer"
+msgstr "Lägg till Peer"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Inga jämnåriga registrerade än. Lägg till en peer för att börja dela hotintelligens."
+
+msgid "Label"
+msgstr "Märka"
+
+msgid "Last Sync"
+msgstr "Senaste synkronisering"
+
+msgid "Sent/Received"
+msgstr "Skickat/mottaget"
+
+msgid "Unnamed"
+msgstr "Namnlösa"
+
+msgid "%s ago"
+msgstr "%s sedan"
+
+msgid "Threats Sent"
+msgstr "Hot skickas"
+
+msgid "Threats Received"
+msgstr "Mottagna hot"
+
+msgid "Statistics"
+msgstr "Statistik"
+
+msgid "Connected Peers"
+msgstr "Anslutna kamrater"
+
+msgid "Threats Received (24h)"
+msgstr "Mottagna hot (24h)"
+
+msgid "P2P Status"
+msgstr "P2P-status"
+
+msgid "Threat Intelligence Credits"
+msgstr "Threat Intelligence Credits"
+
+msgid "Current Credit Balance"
+msgstr "Nuvarande kreditsaldo"
+
+msgid "Reputation Score"
+msgstr "Reputation Poäng"
+
+msgid "Accuracy"
+msgstr "Noggrannhet"
+
+msgid "Badges:"
+msgstr "Märken:"
+
+msgid "No badges yet"
+msgstr "Inga märken än"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Premiumförmåner låses upp gratis eftersom ditt rykte är över 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Nå ett ryktepoäng över 1000 för att låsa upp premiumförmåner gratis."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Toppbidragsgivare (anonym)"
+
+msgid "No contributor data available yet."
+msgstr "Ingen bidragsgivardata tillgänglig ännu."
+
+msgid "Rank"
+msgstr "Rang"
+
+msgid "Anonymous Site ID"
+msgstr "Anonymt webbplats-ID"
+
+msgid "Credits"
+msgstr "Krediter"
+
+msgid "Reputation"
+msgstr "Rykte"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Add New Peer"
+msgstr "Lägg till ny peer"
+
+msgid "Peer URL"
+msgstr "Peer URL"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "Fullständig URL till den peer WordPress-webbplatsen (måste använda HTTPS i produktionen)."
+
+msgid "Peer Node Key"
+msgstr "Peer Node Key"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Peers nodnyckel (de kan kopiera den från sin P2P-inställningssida)."
+
+msgid "Label (Optional)"
+msgstr "Etikett (valfritt)"
+
+msgid "My Production Server"
+msgstr "Min produktionsserver"
+
+msgid "A friendly name to identify this peer."
+msgstr "Ett vänligt namn för att identifiera denna kamrat."
+
+msgid "Unauthorized"
+msgstr "Obehörig"
+
+msgid "Sandbox module is not loaded."
+msgstr "Sandlådemodulen är inte laddad."
+
+msgid "Sandbox module is disabled."
+msgstr "Sandlådemodulen är inaktiverad."
+
+msgid "Sandbox console is disabled."
+msgstr "Sandbox-konsolen är inaktiverad."
+
+msgid "No code provided."
+msgstr "Ingen kod tillhandahållen."
+
+msgid "Insufficient permissions."
+msgstr "Otillräckliga behörigheter."
+
+msgid "Sandbox Module Disabled"
+msgstr "Sandbox Module inaktiverad"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Shadow Runtime Sandbox är för närvarande inaktiverad. Aktivera det i Inställningar för att använda konsolen."
+
+msgid "Go to Settings"
+msgstr "Gå till Inställningar"
+
+msgid "Sandbox Console Disabled"
+msgstr "Sandbox Console inaktiverad"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Sandbox-modulen är aktiverad, men administratörskonsolen är inaktiverad. Aktivera konsolinställningen för att köra kod från wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Riskzon: Kodexekvering"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Denna konsol kör PHP-kod i en isolerad sandlåda. Alla databasändringar återställs automatiskt. Använd endast för att analysera misstänkt kod eller testa."
+
+msgid "PHP Code Editor"
+msgstr "PHP kodredigerare"
+
+msgid "Run Code"
+msgstr "Kör kod"
+
+msgid "Analyze Only"
+msgstr "Endast analysera"
+
+msgid "Timeout:"
+msgstr "Timeout:"
+
+msgid "Execution Results"
+msgstr "Utföranderesultat"
+
+msgid "STATIC ANALYSIS"
+msgstr "STATISK ANALYS"
+
+msgid "OUTPUT"
+msgstr "UTGÅNG"
+
+msgid "ERRORS"
+msgstr "FEL"
+
+msgid "DATABASE QUERIES"
+msgstr "DATABASFRÅGOR"
+
+msgid "Module not loaded"
+msgstr "Modulen är inte laddad"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Trafikanalys i realtid är inte tillgänglig."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Just-in-time åtkomst använder arbetsflöde för begäran och godkännande med automatisk utgång."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Tillfällig åtkomst är för närvarande inte tillgänglig eftersom modulen är inaktiverad eller inte laddad."
+
+msgid "Open settings"
+msgstr "Öppna inställningar"
+
+msgid "Request Temporary Access"
+msgstr "Begär tillfällig åtkomst"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Denna begäran gäller ditt för närvarande inloggade konto. En administratör måste godkänna det innan tillfällig förhöjd åtkomst beviljas."
+
+msgid "Requested Role"
+msgstr "Begärd roll"
+
+msgid "Administrator"
+msgstr "Administratör"
+
+msgid "Editor"
+msgstr "Redaktör"
+
+msgid "Duration (minutes)"
+msgstr "Varaktighet (minuter)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Beskriv varför tillfälligt förhöjd tillträde krävs."
+
+msgid "Submit Request"
+msgstr "Skicka in förfrågan"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Bevilja tillfällig åtkomst (admin)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Ge tidsbegränsad förhöjd åtkomst direkt till en specifik användare via användarnamn eller e-post."
+
+msgid "Target User (Username or Email)"
+msgstr "Målanvändare (användarnamn eller e-post)"
+
+msgid "username or user@example.com"
+msgstr "användarnamn eller user@example.com"
+
+msgid "Grant Role"
+msgstr "Grant Roll"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Beskriv varför den här användaren kräver tillfälligt förhöjd åtkomst."
+
+msgid "Grant Access"
+msgstr "Bevilja åtkomst"
+
+msgid "Pending and Active Requests"
+msgstr "Väntande och aktiva förfrågningar"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Godkänn väntande förfrågningar, granska direkta anslag och återkalla aktiva behörigheter från den här kön."
+
+msgid "Original Role"
+msgstr "Ursprunglig roll"
+
+msgid "Elevated Role"
+msgstr "Förhöjd roll"
+
+msgid "Granted"
+msgstr "Beviljas"
+
+msgid "Expires"
+msgstr "Upphör att gälla"
+
+msgid "Approved By"
+msgstr "Godkänd av"
+
+msgid "Loading..."
+msgstr "Laddar..."
+
+msgid "English (US)"
+msgstr "engelska (USA)"
+
+msgid "English (UK)"
+msgstr "engelska (UK)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (spanska)"
+
+msgid "Francais (French)"
+msgstr "Francais (franska)"
+
+msgid "Deutsch (German)"
+msgstr "Deutsch (tyska)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (italienska)"
+
+msgid "Portugues (Brazilian)"
+msgstr "portugisiska (brasilianska)"
+
+msgid "Nederlands (Dutch)"
+msgstr "nederländska (nederländska)"
+
+msgid "Russian"
+msgstr "ryska"
+
+msgid "Japanese"
+msgstr "japanska"
+
+msgid "Chinese (Simplified)"
+msgstr "kinesiska (förenklad)"
+
+msgid "Arabic"
+msgstr "arabiska"
+
+msgid "Hindi"
+msgstr "hindi"
+
+msgid "Korean"
+msgstr "koreanska"
+
+msgid "Turkish"
+msgstr "turkiska"
+
+msgid "Polski (Polish)"
+msgstr "Polski (polska)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (indonesiska)"
+
+msgid "Ukrainian"
+msgstr "ukrainska"
+
+msgid "Vietnamese"
+msgstr "vietnamesiska"
+
+msgid "Thai"
+msgstr "Thai"
+
+msgid "Svenska (Swedish)"
+msgstr "Svenska (svenska)"
+
+msgid "Dansk (Danish)"
+msgstr "Dansk (danska)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (finska)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (norska)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (tjeckiska)"
+
+msgid "Greek"
+msgstr "grekiska"
+
+msgid "Magyar (Hungarian)"
+msgstr "Magyar (ungerska)"
+
+msgid "Romana (Romanian)"
+msgstr "Romana (rumänska)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovencina (slovakiska)"
+
+msgid "Bulgarian"
+msgstr "bulgariska"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (kroatiska)"
+
+msgid "Serbian"
+msgstr "serbiska"
+
+msgid "Hebrew"
+msgstr "hebreiska"
+
+msgid "Persian"
+msgstr "persiska"
+
+msgid "Settings saved successfully."
+msgstr "Inställningarna har sparats."
+
+msgid "Settings reset to defaults."
+msgstr "Inställningarna återställs till standardinställningarna."
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyMy Security Logs"
+
+msgid "No matching user found."
+msgstr "Ingen matchande användare hittades."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Säkerhetsloggar och relaterad PII anonymiserades."
+
+msgid "Invalid user ID."
+msgstr "Ogiltigt användar-ID."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Manuell eller webhook-baserad raderingsbegäran i kö."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp raderingsbegäran har skickats."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Stripe-radering kräver manuell API-uppföljning för överensstämmelseposter."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analytics-användarborttagnings-API-begäran måste konfigureras externt."
+
+msgid "Privacy Preferences"
+msgstr "Sekretessinställningar"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Välj vilka valfria bearbetningskategorier du tillåter."
+
+msgid "Save Preferences"
+msgstr "Spara inställningar"
+
+msgid "Consent Management"
+msgstr "Samtyckeshantering"
+
+msgid "Given"
+msgstr "Givet"
+
+msgid "Withdrawn"
+msgstr "Indragen"
+
+msgid "No consent records found."
+msgstr "Inga samtyckesposter hittades."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Fel</strong>: Något gick fel. Försök igen senare."
+
+msgid "The peer URL is not valid."
+msgstr "Peer-URL:n är inte giltig."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Du kan inte lägga till din egen webbplats som peer."
+
+msgid "API key must be at least 16 characters."
+msgstr "API-nyckel måste vara minst 16 tecken."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Maximalt antal kamrater (%d) har uppnåtts."
+
+msgid "Missing authentication header."
+msgstr "Autentiseringshuvud saknas."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Ogiltig nodnyckel. Peer inte igenkänd."
+
+msgid "Invalid request signature."
+msgstr "Ogiltig signatur för begäran."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Prisgränsen har överskridits. Försök igen senare."
+
+msgid "Invalid site identifier."
+msgstr "Ogiltig webbplatsidentifierare."
+
+msgid "Unknown contribution type."
+msgstr "Okänd bidragstyp."
+
+msgid "Unknown benefit type."
+msgstr "Okänd förmånstyp."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Otillräckliga krediter för denna förmån."
+
+msgid "Threat Forecast"
+msgstr "Hotprognos"
+
+msgid "Your site profile:"
+msgstr "Din webbplatsprofil:"
+
+msgid "Predicted threats this month:"
+msgstr "Förutspådda hot denna månad:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Inga högsäkerhetsvektorer har upptäckts ännu."
+
+msgid "Recommended actions:"
+msgstr "Rekommenderade åtgärder:"
+
+msgid "No immediate actions required."
+msgstr "Inga omedelbara åtgärder krävs."
+
+msgid "Not logged in"
+msgstr "Inte inloggad"
+
+msgid "A reason is required"
+msgstr "En anledning krävs"
+
+msgid "Invalid requested role"
+msgstr "Ogiltig begärd roll"
+
+msgid "An active or pending request already exists for this role."
+msgstr "En aktiv eller väntande begäran finns redan för den här rollen."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Begäran om åtkomst har skickats. En administratör kommer att granska din begäran."
+
+msgid "Invalid request"
+msgstr "Ogiltig begäran"
+
+msgid "Pending request not found"
+msgstr "Väntande begäran hittades inte"
+
+msgid "Request role is invalid"
+msgstr "Begärans roll är ogiltig"
+
+msgid "Invalid approved role"
+msgstr "Ogiltig godkänd roll"
+
+msgid "Access approved successfully"
+msgstr "Åtkomsten har godkänts"
+
+msgid "Target user (username or email) is required."
+msgstr "Målanvändare (användarnamn eller e-postadress) krävs."
+
+msgid "A reason is required."
+msgstr "En anledning krävs."
+
+msgid "Invalid requested role."
+msgstr "Ogiltig begärd roll."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Målanvändaren hittades inte. Använd ett befintligt användarnamn eller e-postadress."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Användaren har redan den här rollen. Tillfällig höjning behövs inte."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Ett aktivt eller väntande anslag finns redan för denna användare och roll."
+
+msgid "Unable to grant temporary access."
+msgstr "Det går inte att bevilja tillfällig åtkomst."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Tillfällig %2$s åtkomst beviljad till %1$s i %3$d minuter."
+
+msgid "Invalid grant"
+msgstr "Ogiltigt bidrag"
+
+msgid "Grant not found or already revoked"
+msgstr "Anslaget hittades inte eller har redan återkallats"
+
+msgid "Permission revoked successfully"
+msgstr "Behörigheten har återkallats"
+
+msgid "Once Monthly"
+msgstr "En gång i månaden"
+
+msgid "Every 5 Minutes"
+msgstr "Var 5:e minut"
 

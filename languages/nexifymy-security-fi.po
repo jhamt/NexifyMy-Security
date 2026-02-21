@@ -8,634 +8,634 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d uhkaa havaittu viimeisessä tarkistuksessa"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Puhu tämä koodi vahvistaaksesi)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Korkea"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 päivä"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 tunti"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 päivää"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 minuuttia"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Keskikokoinen"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 tuntia"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA-menetelmät"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA-asetukset"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Matala"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 päivää"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 päivää"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 minuuttia"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 päivää"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Kielletty"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Ei löydy"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Liian monta pyyntöä (suositus)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 minuuttia"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Palvelu ei saatavilla"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 tuntia"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 päivää"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 päivää"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 päivää (jatkuva)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 päivää"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 päivää"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "AI-oppimistila"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "AI-tila"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI-uhan tunnistus"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "AI-oppimistietojen nollaus onnistui."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "AJAX-pyynnöt minuutissa"
 
 msgid "API & Headless Security"
 msgstr "API & Headless Security"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API ja palvelut"
 
 msgid "API Burst Allowance"
 msgstr "API Burst Allowance"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "API-päätepisteet"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API-avain"
 
 msgid "API Rate Limiting"
 msgstr "API Rate Limiting"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "API-pyynnöt minuutissa"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "API-suojaus"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "API-tunnus"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "API-nopeusraja ylitetty. Rajoitus: %d pyyntöä minuutissa."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "API-rajoitukset"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API-tunnus, HEC-tunnus tai todennusavain."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Hylätty"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "Tietoja karanteenista"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Pääsy kielletty"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Toiminta"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Toiminnot"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktiivinen"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Toimintojen hallintapaneeli"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Toimintaloki"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Toimintalokin asetukset"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Näiden käyttäjien toimintaa ei kirjata lokiin."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Tätä vanhemmat toimintalokit poistetaan automaattisesti."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Toiminnan seuranta"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Lisää %d muuta merkkiä."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Lisää 2FA käyttäjätileihin turvallisuuden lisäämiseksi."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Lisää CAPTCHA kirjautumiseen ja lomakkeisiin."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Lisää CAPTCHA-vahvistus kirjautumislomakkeisiin"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Lisää HTTP-suojausotsikot (X-Frame-Options, CSP jne.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Lisää uusi salasana"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Lisää suojausotsikot"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Lisää Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Lisää X-Frame-Options, X-Content-Type-Options ja muut suojausotsikot."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Lisää X-Frame-Options-, X-XSS-Protection-otsikot"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Lisää ylimääräinen suojaustaso vaatimalla toinen todennustapa."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Lisää ylimääräinen suojaustaso vaatimalla käyttäjien kirjautumisille kaksi todennustapaa."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Lisää ylimääräinen suojaustaso TOTP-pohjaisella 2FA:lla."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Lisää pieniä kirjaimia."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Lisää numeroita."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Lisää erikoismerkkejä."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Lisää listaan"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Lisää isoja kirjaimia."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Kirjautumisen lisäturvatoimet. Toimii nopeudenrajoittimen kanssa."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Lisää CAPTCHA:n kirjautumislomakkeisiin. Turvallinen, mutta saattaa vaikuttaa käyttökokemukseen."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Lisää Googlen reCAPTCHA-, Cloudflare Turnstile- tai matemaattisia haasteita"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Lisää HTTP-suojausotsikot (X-Frame-Options, CSP). Turvallinen - parantaa selaimen suojausta."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Lisää ylimääräisen suojakerroksen TOTP-, sähköposti- tai SMS-koodeilla"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Järjestelmänvalvojan kirjautumiset (onnistuneet järjestelmänvalvojan kirjautumiset)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Edistynyt"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Palomuurin lisäasetukset"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Edistynyt karkaisu"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Edistyneet karkaisuasetukset"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Kirjautumisen lisäasetukset"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Lisäasetukset"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Skannerin lisäasetukset"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Kehittynyt heuristiikka"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Tiedostot, joita asia koskee:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Varoituskynnys"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Varoitustyypit"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "Hälytykset"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Hälytykset lähetetään, jos laajennus poistetaan käytöstä."
 
 msgid "All"
-msgstr "All"
+msgstr "Kaikki"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Kaikki selvä!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Kaikki tapahtumat"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Kaikki vakavuusasteet"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Salli kaikkien käyttäjien ottaa 2FA käyttöön vapaaehtoisesti."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Salli sähköpostikoodi varamenetelmänä"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Salli lyhyet sarjat yli nopeusrajan."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Anna käyttäjille aikaa määrittää 2FA ennen täytäntöönpanoa."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Salli käyttäjien ottaa 2FA käyttöön"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Salli käyttäjien luoda hätävarakoodeja."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Salli käyttäjien ohittaa 2FA luotetuissa laitteissa."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Sallitut käyttäjäagentit"
 
 msgid "Analytics"
 msgstr "Analytics"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anomaliat"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Mikä tahansa vakavuus"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Kaikki muutokset laukaisevat välittömiä sähköpostihälytyksiä."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Käytä asetuksia"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Käytä WordPressin parhaita tietoturvakäytäntöjä."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Käytä suojauskorjauksia"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Käytä WordPressissä suojaustoimenpiteitä."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Suojaa WordPress-asennuksesi käyttämällä suojaustoimenpiteitä."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Haluatko varmasti poistaa tämän salasanan?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Haluatko varmasti jatkaa?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Hyökkäyssuojaus"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Yritysikkuna"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Ääni (puhuva)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Todennetaan..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Todennuskoodi"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Todennustapahtumat"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Todennustunnus"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Todennus epäonnistui. Yritä uudelleen."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "API-käyttöön tarvitaan todennus."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "GraphQL-käyttöön tarvitaan todennus."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Tekijän skannaukset"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Automaattisen eston kesto"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Toistuvien rikosten automaattinen esto"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Automaattisen eston kynnys"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Automaattinen korjaus"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Luo raportit automaattisesti"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Automaattisen karanteenin uhkat"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Automaattisen skannauksen aikataulu"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Automaattinen päivitys"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Automaattisen päivityksen asetukset"
 
 msgid "Auto-Updates"
-msgstr "Auto-Updates"
+msgstr "Automaattiset päivitykset"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Automaattinen tunnistus"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Automaattinen skannaus"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Automaattiset skannaukset"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Lisää automaattisesti mustalle listalle IP-osoitteet, jotka käynnistävät säännöt useita kertoja."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Luo automaattisesti Jira-liput tietoturvahäiriöitä ja haavoittuvuuksia varten."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Luo automaattisesti lippuja tietoturvahäiriöistä projektinhallintajärjestelmissäsi."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Luo raportit automaattisesti aikataulussa"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Siirrä havaitut haittaohjelmat automaattisesti karanteeniin."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Suorita tarkistukset automaattisesti taustalla."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Päivitä haittaohjelmien allekirjoitukset automaattisesti päivittäin."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Saatavilla olevat maat"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Saatavilla olevat tapahtumat"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Keskim./päivä"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Taustaskannaukset"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Varmuuskopioi vioittuneet tiedostot ennen vaihtamista"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Varakoodit"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Varmuuskopioi, optimoi ja suojaa tietokantasi."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Varmuuskopiot ja siivous"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Varmuuskopiot tallennetaan kansioon wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Huonot Botit"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Huonot pyynnöt"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Tasapainoinen (suositus)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Käyttäytymistiedot"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Käyttäytymisanalyysi"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Musta lista (Block Listed)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Musta lista (esto valittu)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "IP-osoitteet mustalle listalle"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Musta lista: Estä valitut maat. Valkoinen lista: Salli vain valitut maat."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "Mustalla listalla olevat IP-osoitteet"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Estä huonot robotit"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Estä CSRF-hyökkäykset"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Estä yleiset salasanat"
 
 msgid "Block Directory Traversal"
 msgstr "Block Directory Traversal"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Eston kesto"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Estä tyhjät käyttäjäagentit"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Estä liialliset API-käyttäjät"
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "Estä tiedostoeditori"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Estä paikallisten tiedostojen sisällyttäminen"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Estä viesti"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Estä tila"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Estä tila (suositus)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Estä tila: Estää haitalliset pyynnöt. Valvontatila: Kirjaa uhat ilman estoa."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Estä koodin etäsuoritus"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Estä tiedostojen etäkäyttö"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Estä SQL-injektio"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Estä epäilyttävät tiedostojen lataukset"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Estä XML-RPC-käyttö (estää raa'an voiman)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Estä XSS-hyökkäykset"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Estä pääsy tietyistä maista."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Estä aggressiiviset indeksointirobotit (korkea pyyntömäärä)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Estä kirjoittajien luettelon tarkistukset (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Estä liian pitkät kyselyjonot."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Estä tunnetut huonot robotit ja kaavinta"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Estä tunnetut haitalliset robotit ja kaavinet."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Estä väärin muotoillut pyynnöt ja epäilyttävät kyselyjonot"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Estä haitalliset pyynnöt"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Estä haitalliset pyynnöt ja hyökkäykset"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Estä tai salli liikenne maan perusteella."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Estä tätä kokoa suuremmat pyynnöt estääksesi DoS-hyökkäykset."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Estä pyynnöt tyhjällä user-agentilla (voi estää jotkin lailliset robotit)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Estä pyynnöt ilman User-Agent-otsikkoa."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Estä epäilyttävät IP-osoitteet"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Estä epäilyttävät käyttäjäagentit"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Estä liikenne tietyistä maista. Määritä maat asetuksissa ennen käyttöönottoa."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Estä lataukset suoritettavilla laajennuksilla (.php, .exe, .sh jne.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Estetyt hyökkäykset"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Estetyt tiedostolaajennukset"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Estetyt pyynnöt"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Estetyt käyttäjäagentit"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Estää IP-osoitteet, jotka osoittavat haitallista toimintaa. Turvallinen - voit lisätä IP-osoitteesi sallittujen luetteloon."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Lisää tämä URL-osoite kirjanmerkkeihin, jotta pääset aina kirjautumissivullesi."
 
 msgid "Bot & Crawler Protection"
 msgstr "Bot & Crawler Protection"
@@ -644,40 +644,40 @@ msgid "Bot & User Agent Protection"
 msgstr "Bot & User Agent Protection"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Botin ehkäisy"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Botin suojaus"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Selaimet"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Raaka voima"
 
 msgid "Brute Force Protection"
 msgstr "Brute Force Protection"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Raaka voimasuojaus ja kirjautumisyritysrajoitukset."
 
 msgid "Bug"
 msgstr "Bug"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Kiireisin päivä"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "CAPTCHA-suojaus"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDN-integraatio"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN-tila"
 
 msgid "CEF (Common Event Format)"
 msgstr "CEF (Common Event Format)"
@@ -686,1096 +686,1096 @@ msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "CI/CD-putkilinja"
 
 msgid "CI/CD Pipeline Integration"
 msgstr "CI/CD Pipeline Integration"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Peruuta"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Captcha esikatselu"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "Captcha-palveluntarjoaja"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Captcha-asetukset"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Muuta tietokannan etuliite"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Muuta tietokantataulukon etuliite (vaatii manuaalisen tietokantapäivityksen)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Muuta oletusarvoista kirjautumis-URL-osoitetta estääksesi hyökkäykset."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Muuta oletusarvoista wp-admin-kirjautumis-URL-osoitetta estääksesi automaattiset hyökkäykset."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Muuttaa kirjautumis-URL-osoitteen /wp-admin mukautettuun slug-osoitteeseen estääkseen bottihyökkäykset"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "kanava"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Hahmovaatimukset"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Tarkista ytimen eheys"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Tarkista väli"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Tarkista ja korjaa vioittuneet WordPress-ydintiedostot virallisista lähteistä."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Tarkista ydintiedostot muutosten ja haittaohjelmien varalta."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Tarkista takaovet"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Tarkista hämärtyminen"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Tarkista tunnetut haavoittuvuudet."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Tarkista ladatut tiedostot haitallisen sisällön varalta."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Tarkistaa verkkokuoret"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Tarkistaa laajennukset/teemat tunnettujen haavoittuvuuksien varalta. Turvallinen - tarkistaa vain versiot."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Valitse ainutlaatuinen, vaikeasti arvattava etana."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Valitse haastetyyppi NexifyMy captchalle."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Puhdista tiedostot"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Puhdista tiedostot:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Puhdista ja optimoi tietokanta"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Puhdista tarpeettomat tiedot parantaaksesi tietokannan suorituskykyä."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Tyhjennä lokit"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare ja paljon muuta"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API -asetukset"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API Token (vyöhykekäyttöoikeuksilla)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare kääntöportti"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Koodi"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Koodin vanheneminen"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Koodin laatuongelmat"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Pilkuilla eroteltu luettelo tiedostopäätteistä, jotka estetään latauksissa."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Pilkuilla eroteltu luettelo ohitettavista tiedostopäätteistä (esim. jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Kommentti estetty"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Kommenttilomake"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Kommenttien lähetysprosentti"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Kommenttilomake"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Viestintä"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Viestintäalustat"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Vertaa ydintiedostoja virallisiin WordPress-tarkistussummiin."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Vertaa WordPressin ydintiedostojasi virallisiin tarkistussummiin havaitaksesi muutokset."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Vertaa jokaista ydintiedostoa odotettuun hashiin"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Poista kaikki RSS- ja Atom-syötteet kokonaan käytöstä."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Poista kaikki tiedostomuutokset kokonaan käytöstä (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Vaatimustenmukaisuus"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Vaatimustenmukaisuus ja raportointi"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Vaatimustenmukaisuus ja turvallisuusraportointi"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Yhteensopivuusasetukset"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Säveltäjäriippuvuudet"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Kattava analyysi"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Kattava käyttäjien toiminnan seuranta, sisäänkirjautumisen seuranta ja järjestelmän tapahtumaloki."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Määritä"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Määritä 2FA parantaaksesi kirjautumissuojausta"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Määritä CDN turvallisuutta ja suorituskykyä varten."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Määritä CDN-integrointi ja välimuistin hallinta."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Määritä Web Application Firewall (WAF) suojaamaan sivustoasi."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Määritä sähköpostihälytykset ja -ilmoitukset."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Määritä palomuurisäännöt ja suojausasetukset."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Määritä haittaohjelmien skannerin toiminta ja ajoitetut tarkistusasetukset."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Määritä laajennuksen asetukset ja asetukset."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Määritä laajennuksen asetukset."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Määritä suojausasetukset."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Vahvista"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Vahvista toiminto"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Vahvistettu haittaohjelma"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Yhdistä tietoturvavalvontasi SIEM-, lippu-, viestintä- ja CI/CD-alustoihin."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Ota yhteyttä tukitiimiimme saadaksesi apua NexifyMy Securityn kanssa."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Sisältö"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Sisältötoiminta"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Sisällön muutokset"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Sisältötapahtumat"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Sisällön turvallisuus"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Tiedostojen ydinmuutokset"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Tiedostojen ydinkorjaus"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Ytimen korjaus"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Ydin WordPressin eheys"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Ydintiedostojen eheys"
 
 msgid "Count"
-msgstr "Count"
+msgstr "Laskea"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "maat"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Maa"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Maan estoasetukset"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Maakohtaiset rajoitukset"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Luo varmuuskopio nyt"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Luo varmuuskopio WordPress-tietokannastasi. Varmuuskopiot tallennetaan turvallisesti ja ne voidaan ladata."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Luo ServiceNow'ssa tapahtumia kriittisiä tietoturvatapahtumia varten."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Luo webhook osoitteessa https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Luo webhook kohdassa Discord Server Settings > Integrations > Webhooks"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Luo webhook: Teams > Channel > Connectors > Incoming Webhook"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Luotu"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Luotu: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kriittinen"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Vain kriittinen"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Nykyinen kirjautumis-URL-osoite"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Nykyinen versio"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Nykyinen:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Muokattu kirjautumis-URL-osoite"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Muokattu URL-osoite"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Mukautetut Webhookit"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Päivittäin"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Päivittäin (suositus)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Päivittäinen tilan yhteenveto"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Päivittäinen yhteenveto"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Kojelauta"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Tietojen säilyttäminen"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Tietokanta"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Tietokantatoiminnot"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Tietokannan varmuuskopiointi"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Tietokannan tiedot"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Tietokannan optimointi"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Tietokannan optimoija"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Tietokannan turvallisuus"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Tietokannan koko"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Tietokannan varmuuskopiointi ja optimointi. Määritä varmuuskopiointiaikataulu ennen käyttöönottoa."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Tietokannan turvatarkastus"
 
 msgid "Datadog"
-msgstr "Datadog"
+msgstr "Datakoira"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Päivämäärä"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Päivämäärä/aika"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Deaktivoinnin valvonta:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Virheenkorjaustila"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "Syvä"
 
 msgid "Deep Scan"
 msgstr "Deep Scan"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Oletusskannaustila"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Oletusskannaustila, jota käytetään, kun mitään ei ole määritetty."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Määritelmät"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Poista"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Poista kaikki laajennustiedot asennuksen poistamisen yhteydessä"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Poista:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Riippuvuusskannaus, kolmannen osapuolen komentosarjojen valvonta ja CDN-eheyden tarkistus."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Kuvaus"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Yksityiskohtaiset tiedot sivustosi liikenteestä ja tietoturvatapahtumista"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Yksityiskohtaiset tiedot verkkosivustosi turvallisuudesta."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Tunnista ja estä koodin suoritusyritykset."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Tunnista piilotetut takaoven skriptit ja kuoret."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Tunnista haittaohjelmat, takaovet ja epäilyttävä koodi"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Tunnista uhkaukset"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Tunnista tuntemattomat uhat käyttäytymisanalyysin avulla."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Havaitsemismenetelmät"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Laitetyypit"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Vaikeus"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Vaikeustaso"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "NexifyMy captcha -haasteiden vaikeustaso."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Suora"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Hakemiston läpikulku"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Hakemiston läpikulkusuojaus"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Poista 2FA käytöstä"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Poista sovellusten salasanat käytöstä"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Poista tekijän arkistot käytöstä"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Poista hakemiston selaus käytöstä"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Poista upotukset käytöstä"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Poista tiedostoeditori käytöstä"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Poista tiedostojen muutokset käytöstä"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Poista kirjautumisvirheilmoitukset käytöstä"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Poista Pingback käytöstä"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Poista Pingbacks käytöstä"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Poista laajennuksen/teeman asennus käytöstä"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Poista REST API -käyttäjien luettelo käytöstä"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Poista RSS/Atom-syötteet käytöstä"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Poista hiiren kakkospainikkeella käytöstä"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Poista tekstin valinta käytöstä"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Poista Trackbacks käytöstä"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Poista WP-editori käytöstä"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Poista XML-RPC käytöstä"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Poista XML-RPC käytöstä (estää yleisen raakavoimavektorin)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Poista XML-RPC käytöstä (estää pingback-hyökkäykset)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Poista XML-RPC käytöstä (käytetään DDoS- ja brute force -hyökkäyksissä)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Estä käyttäjänimien luettelointi poistamalla tekijänarkistosivut käytöstä."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Poista oEmbed-toiminnallisuus ja REST API -päätepisteet käytöstä."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Estä DDoS poistamalla takaisinping-toiminto käytöstä."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Poista pingback/trackback-toiminto käytöstä"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Poista laajennus-/teematiedostoeditori käytöstä WordPress-järjestelmänvalvojassa."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Poista julkinen käyttäjien luettelo käytöstä REST API:n kautta"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Poista käytöstä hiiren kakkospainikkeella kontekstivalikko käyttöliittymässä."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Estä koodin lisääminen poistamalla sisäänrakennettu teema- ja laajennuseditori käytöstä."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Poista teema- ja laajennuseditori käytöstä"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Poista teema/laajennusten editori käytöstä järjestelmänvalvojassa"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Poista seurantatoiminto käytöstä."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Ei käytössä"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Poistaa XML-RPC:n käytöstä hyökkäysten estämiseksi. Turvallinen, ellet käytä Jetpackia tai mobiilisovelluksia."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Poistaa sisäänrakennetun teeman/liitännäisen editorin käytöstä. Turvallinen - estää koodin muokkaamisen järjestelmänvalvojassa."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Poistaa tiedostojen muokkaamisen, XML-RPC:n käytöstä ja soveltaa WordPressin parhaita käytäntöjä"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Discord-integraatio"
 
 msgid "Download"
-msgstr "Download"
+msgstr "Lataa"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Lataa tuoreen WordPress-paketin virallisesta lähteestä"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "Helppoa"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Helppo (vain lisäys)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "NexifyMy Security -laajennustiedostojen muokkaaminen on estetty turvallisuussyistä."
 
 msgid "Editor & File Access"
 msgstr "Editor & File Access"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Editorin esto:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "Sähköposti"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Sähköpostihälytysasetukset"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "Sähköpostihälytykset"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Sähköpostin varmuuskopiointi"
 
 msgid "Email Notifications"
-msgstr "Email Notifications"
+msgstr "Sähköposti-ilmoitukset"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "Sähköposti raportit"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Sähköpostin skannausraportit"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Sähköpostin vahvistus"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Tyhjä käyttäjäagentti"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Ota käyttöön"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Ota 2FA käyttöön"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Ota 2FA-moduuli käyttöön"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Ota toimintojen kirjaus käyttöön"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Ota hälytykset käyttöön"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Ota CAPTCHA-suojaus käyttöön"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Ota CDN-integrointi käyttöön"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Ota CDN-ominaisuudet käyttöön"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Ota CI/CD-integrointi käyttöön"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Ota Captcha käyttöön"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Ota mukautetut Webhookit käyttöön"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Ota Discord käyttöön"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Ota sähköpostihälytykset käyttöön"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Ota palomuuri käyttöön"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Ota Geo Blocking käyttöön"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Ota käyttöön Piilota kirjautuminen"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Ota Jira käyttöön"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Ota suojaus käyttöön"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Ota nopeuden rajoitus käyttöön"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Ota SIEM-integrointi käyttöön"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Ota SSL/HTTPS käyttöön"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Ota skanneri käyttöön"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Ota skannerimoduuli käyttöön"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Ota ajoitetut tarkistukset käyttöön"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Ota ServiceNow käyttöön"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Ota Slack käyttöön"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Ota Teams käyttöön"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Ota kaksivaiheinen todennus käyttöön"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Ota WAF käyttöön"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Ota WAF-moduuli käyttöön"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Ota WAF-suojaus käyttöön"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Ota verkkosovellusten palomuuri käyttöön"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Ota verkkosovellusten palomuurisuojaus käyttöön."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Ota käyttöön ja määritä sivustosi suojausmoduulit."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Ota käyttöön ja määritä suojausmoduulit."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Ota captcha-suojaus käyttöön"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Ota käyttöön maakohtainen esto"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Ota virheenkorjausloki käyttöön (vain vianetsintää varten)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Ota palomuurisuoja käyttöön estääksesi hyökkäykset"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Ota sisäänkirjautumisnopeuden rajoitus käyttöön"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Ota haittaohjelmatarkistus käyttöön"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Ota suojausmoduulit käyttöön tai poista ne käytöstä."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Ota koko WAF-moduuli käyttöön tai poista se käytöstä."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Ota haittaohjelmatarkistus käyttöön tai poista se käytöstä."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Ota nopeudenrajoitusmoduuli käyttöön tai poista se käytöstä."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Ota kaksivaiheinen todennus käyttöön tai poista se käytöstä."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Ota ajoitetut tarkistukset käyttöön"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Ota käyttöön haavoittuvuusskannerin ominaisuudet"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Käytössä"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Päätepiste"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "Päätepisteen URL-osoite"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Pakota vahvat salasanat"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Täytä vahvat salasanavaatimukset"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Täytä vahvat salasanavaatimukset kaikille käyttäjille."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Täytä vahvat salasanavaatimukset."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Pakottaa käyttäjille vahvat salasanavaatimukset. Turvallinen - vaikuttaa vain uusiin salasanoihin."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Pakottaa vahvat salasanat vähimmäispituuksilla ja monimutkaisuussäännöillä"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Syötä 6-numeroinen koodi vahvistaaksesi asetukset"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Anna IP-osoitteet, yksi kullekin riville"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Syötä vastaus"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Syötä koodi:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Yritystason WordPress-suojaus"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Virhe"
 
 msgid "Event"
-msgstr "Event"
+msgstr "Tapahtuma"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Tapahtuman muoto"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Tapahtumalokit"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Tapahtuman vakavuus"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Tapahtuman tyyppi"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Tapahtumat"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Tapahtumat (7 päivää)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Tapahtumat lippujen luomiseen"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Tapahtumat eteenpäin"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Ilmoitavat tapahtumat"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Esimerkki: GitHub Actions"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Esimerkki: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Esimerkki: Jenkins Pipeline"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Poissuljetut laajennukset"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Poissuljetut tiedostomallit"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Poissuljetut polut"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Poissuljetut käyttäjät"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Poikkeukset"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Kattava tiedostoskannaus"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Olemassa olevat varmuuskopiot"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Vie CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Vie asetukset"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Vie NexifyMy Security -asetuksesi JSON-tiedostoon. Tämä sisältää kaikki moduulikokoonpanot, palomuurisäännöt, IP-luettelot ja tarkistusasetukset."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Ulkoiset komentosarjat ja CDN-resurssit"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Ylimääräinen sisäänkirjautumissuojaus"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Fail Build on haittaohjelma"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Fail Build on haavoittuvuuksia"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "Epäonnistui"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Epäonnistuneet 2FA-yritykset ennen väliaikaista lukitusta."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Kirjautuminen epäonnistui"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Epäonnistuneet kirjautumiset"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Epäonnistunut kirjautumisyritys havaittu"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Salasanan rekisteröinti epäonnistui."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Nopea toteutus"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Nopea turvatarkastus"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Hakee viralliset tiedostojen tarkistussummat WordPress.org API:sta"
 
 msgid "File"
-msgstr "File"
+msgstr "Tiedosto"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Tiedostoeditori"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Tiedoston tiivistys:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Tiedoston sisällyttäminen"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Tiedostojen sisällyttämisen suojaus"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Tiedoston eheyden tarkistus"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Tiedoston eheyden valvonta"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Tiedoston käyttöoikeudet"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Tiedosto karanteeniin"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Skannauksesta poissuljettavat tiedostopäätteet (yksi per rivi, ilman pisteitä)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Tiedostonimi"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Skannatut tiedostot"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Skannatut tiedostot:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Tiedostoja verrataan säännöllisesti perusviivaan."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Karanteenissa olevat tiedostot tallennetaan turvallisesti, eikä niitä voida suorittaa."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Tätä suuremmat tiedostot ohitetaan skannauksen aikana."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "Suodata"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Palomuuri"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Palomuuri ja suojaus"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Palomuurin asetukset"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Palomuurisäännöt"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Palomuuriasetukset"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Korjaa muokatut tiedostot"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Merkitse voimakkaasti hämärä tai koodattu koodi."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Pakota SSL järjestelmänvalvojalle"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Pakota SSL/HTTPS järjestelmänvalvojan alueelle (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Pako järjestelmänvalvojille"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "Muoto:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Välitä tietoturvatapahtumat Security Information and Event Management (SIEM) -alustaan keskitettyä kirjaamista ja analysointia varten."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Löytyy Cloudflare-hallintapaneelista Yleiskatsaus-kohdasta"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Löytyy tunnetusta turvallisesta laajennuksesta - todennäköisesti laillinen käyttö"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Löytyy järjestelmähakemistosta - voi olla laillinen"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Päivämäärästä alkaen"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Sähköpostista"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Nimeltä"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "Täydellinen HTTP/HTTPS-päätepisteen URL-osoite SIEM-alustallesi."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Täydellinen haittaohjelmaanalyysi"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Täysi haittaohjelmien tarkistus"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Täydelliset haittaohjelmaallekirjoitukset"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Sivuston täydellinen analyysi"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR-, CCPA-, HIPAA-yhteensopivuusmoduulit ja kattavat tietoturvatarkastusraportit."
 
 msgid "General"
-msgstr "General"
+msgstr "Kenraali"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Yleinen pyyntörajoitus"
 
 msgid "General Settings"
-msgstr "General Settings"
+msgstr "Yleiset asetukset"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Luo raportti"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Luo SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Luo osoitteesta: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Luotu"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Yleinen HTTP-päätepiste"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Yleinen välityspalvelin"
 
 msgid "Geo Block"
 msgstr "Geo Block"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Geo esto"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Maantieteellinen jakelu"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Hanki ilmainen API-tunnus osoitteesta wpscan.com saadaksesi yksityiskohtaisia haavoittuvuustietoja."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Saat välittömät ilmoitukset tiimisi viestintäkanaville, kun tietoturvatapahtumia tapahtuu."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Hanki viimeisin skannaustila"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Hanki skannaustulokset (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Hanki avaimesi Googlen reCAPTCHA- tai Cloudflare Turnstile -hallintapaneelista."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Aloitus"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1784,148 +1784,148 @@ msgid "Google reCAPTCHA v3"
 msgstr "Google reCAPTCHA v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "Armonaika"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Arvosana"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQL-suojaus"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL:n itsetutkiskelu on poistettu käytöstä."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL-nopeusraja ylitetty. Rajoitus: %d kyselyä minuutissa."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP-suojausotsikot"
 
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTP Strict Transport Security (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP-otsikot"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Kahva"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "Kovaa"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Kova (sisältää kertolasku)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Harden sivusto"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Kovettumista"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Kovettumisvaihtoehdot"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Otsikot"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Ohje ja dokumentaatio"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Heuristinen analyysi"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Heuristisen kuvion tunnistus"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Piilota kirjautuminen"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Piilota kirjautumissivu"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Piilota kirjautumis-URL-osoite"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Piilota kirjautumis-URL-osoite:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Piilota WP-versio"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Piilota WordPressin kirjautumis-URL-osoite"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Piilota WordPress-versio"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Piilota WordPress-versio lähdekoodista"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Piilota oletusarvoiset kirjautumis-URL-osoitteet"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Piilota wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Piilota wp-admin ja wp-login.php hyökkääjiltä."
 
 msgid "High"
-msgstr "High"
+msgstr "Korkea"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Korkea (maksimaalinen tunnistus)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Korkea turvallisuus (enemmän tarkistuksia, hitaammin)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Suuri määrä estettyjä hyökkäyksiä viime aikoina"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Korkea tai yli"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Vakavat uhat"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Vain korkean riskin alueet"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Tekoälyanalyysillä havaittu korkeapisteinen uhka"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Suurempi herkkyys voi tuottaa enemmän vääriä positiivisia."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Korkein"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Valitse useita maita pitämällä Ctrl/Cmd painettuna."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Isäntä"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Tunneittain"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Kuinka 2FA toimii"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Kuinka ydinkorjaus toimii"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Kuinka itsesuojelu toimii"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Kuinka kauan IP-osoite estetään yliyritysten jälkeen."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Kuinka kauan IP-osoite estetään nopeusrajan ylittymisen jälkeen."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Kuinka kauan vanhoja raportteja säilytetään (30–365 päivää)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1937,253 +1937,253 @@ msgid "IP Access Control"
 msgstr "IP Access Control"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP-osoite"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IP esto"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP-määritys"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IP-sulku"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "IP-lukitukset (raaka voimayritykset)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "IP-hallinta"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "IP valkoinen lista"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP-osoitteet, jotka ohittavat nopeusrajoituksen."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP-osoitteet, jotka estetään aina."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP-osoitteet, joita ei koskaan estä."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Tunnistaa muokatut tai puuttuvat tiedostot"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Kuvan valinta"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Tarvitaan välitöntä toimenpidettä"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Vaikutustaso"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Tuo asetukset"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Tuo asetukset aiemmin viedystä JSON-tiedostosta. Tämä korvaa nykyiset asetukset."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "Tuo/Vie"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Ei-aktiivinen"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "Tapahtuma"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Sisällytä GDPR-tarkistukset"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Sisällytä IP-osoitteen sallittu/musta lista"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Sisällytä tehokkuusmittarit"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Sisällytä turvatarkastukset"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Sisällytä uhkien yhteenveto"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Sisällytä viimeisimmän skannauksen tulokset"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Sisällytä suojauslokit (viimeiset 30 päivää)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Väärä captcha-vastaus. Palaa takaisin ja yritä uudelleen."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Väärä captcha-vastaus. Yritä uudelleen."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Indeksin nimi tai lähteen tunniste tapahtumien luokittelua varten."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Hakemisto/lähde"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Tietoja"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Tietojen paljastaminen"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Alustetaan..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Ilmentymän nimi"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Integroi tietoturvaskannaus jatkuvaan integrointi- ja käyttöönottoprosessiisi."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Integroi tietoturvaskannaus käyttöönottoprosessiisi webhookien ja API-käyttöoikeuksien avulla."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Integroituu CDN-palveluihin. Määritä CDN-tunnistetiedot ennen käyttöönottoa."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Integraatiot"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Eheystarkastuksen tulokset"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Eheystarkastukset:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Eheyden tila"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Virheellinen JWT-tunnus."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Virheelliset kirjautumistiedot."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Virheellinen vahvistuskoodi."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Eristä uhat"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Eristää epäilyttävät tiedostot poistamatta niitä. Turvallinen - tiedostot voidaan palauttaa."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Ongelman tyyppi"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Ongelmia löydetty"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON-muoto. Esimerkki: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "Jira Cloudin URL-osoite"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Jiran integraatio"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Pidä lokit kaikista estetyistä analyysipyynnöistä."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Pidä lokit kaikista nopeusrajojen rikkomuksista analysointia varten."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Pidä haittaohjelmaallekirjoituksesi ajan tasalla parhaan suojan saavuttamiseksi."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Tunnetut maat"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "Asennetusta laajennuksesta löytyi tunnettu haavoittuvuus"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (lokitapahtuman laajennettu muoto)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Viimeiset 30 päivää"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Viimeiset 30 päivää"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Viimeiset 7 päivää"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Viimeiset 90 päivää"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Viimeksi opittu"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Viimeinen skannaus"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Viimeisin skannaus:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Viimeksi päivitetty"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Viimeksi käytetty: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Uusin versio"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Oppiminen - vain kirjaa, ei estoa"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Oppimisjakso"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Oppiminen..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Jätä tyhjäksi käyttääksesi järjestelmänvalvojan sähköpostia."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Todennäköisesti turvallinen - tarkista tarvittaessa"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Rajoita REST API:n käyttöoikeudet todennettuihin käyttäjiin"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Rajoita kommenttien lähettämistä roskapostin estämiseksi."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Rajoita liiallisia pyyntöjä yhdestä IP-osoitteesta."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Rajoita kirjautumisyrityksiä"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Rajoita sisäänkirjautumisyrityksiä estääksesi raa'an voiman hyökkäykset"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Rajoita pyyntöjen määrää väärinkäytösten ja DDoS-hyökkäysten estämiseksi."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Rajoita pyyntöjen määrää väärinkäytösten estämiseksi."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Rajoittaa kirjautumisyrityksiä estääkseen raakoja hyökkäyksiä. Turvallinen - vaikuttaa vain epäonnistuneisiin kirjautumisyrityksiin."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Listaa tunnetut haavoittuvuudet"
 
 msgid "Live Traffic"
 msgstr "Live Traffic"
@@ -2192,394 +2192,394 @@ msgid "Live Traffic Monitor"
 msgstr "Live Traffic Monitor"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Ladataan CDN-tilaa..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Ladataan ilmoituksia..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Ladataan analytiikkatietoja..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Ladataan varmuuskopioita..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Ladataan estettyjä IP-osoitteita..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Ladataan maita..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Ladataan tietokannan tietoja..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Ladataan maantieteellisiä tietoja..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Ladataan lokeja..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Ladataan ilmoituksia..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Ladataan optimointitilastoja..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Ladataan suojaustilaa..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Ladataan karanteeniin asetettuja tiedostoja..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Ladataan viittauksia..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Ladataan uhkien havaintoja..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Ladataan parhaita sivuja..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Ladataan liikennetietoja..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Lukitse tämän monien epäonnistuneiden yritysten jälkeen."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Lukituksen kesto"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Lukitusjakso enintään epäonnistuneen 2FA-yrityksen jälkeen."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Kirjaa sallitut pyynnöt"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Kirjaa estetyt pyynnöt"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Epäonnistuneet kirjautumisyritykset"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Kirjaudu uloskirjautumiseen"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Kirjaa medialataukset"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Lokivaihtoehdon muutokset"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Lokilaajennusten muutokset"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Kirjaa viestin/sivun muutokset"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Lokiprofiilin muutokset"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Lokinopeuden rajan rikkomukset"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Lokin säilyttäminen"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Kirjaa roolien muutokset"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Kirjaa onnistuneet kirjautumiset"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Lokiteeman muutokset"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Lokikäyttäjän luominen/poisto"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Kirjaa kaikki pyynnöt, jotka läpäisevät WAF-tarkastukset (suuri levyn käyttö)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Kirjaaminen"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Kirjaaminen ja seuranta"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Kirjaudu sisään"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Kirjautuminen ja todennus"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Kirjautumistoiminta"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Kirjautumisyritysikkuna"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Kirjautumisyritykset"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Kirjaudu sisään CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Kirjaudu sisään Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Kirjautumislomake"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Kirjautumisen lukituksen kesto"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Kirjautumisen suojaus"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Kirjautumisnopeuden rajoitus"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Kirjautumisturvallisuus"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Kirjaudu Slug"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Kirjautumis-URL-asetukset"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Kirjautumislomake"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Kirjaudu ulos"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Uloskirjautumiset"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Lokit"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Tätä vanhemmat lokit tyhjennetään automaattisesti päivittäin."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Kirjaa tietoturvatapahtumat tarkistettavaksi. Turvallinen - tallentaa vain toiminnan."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Matala"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Matala (vähemmän vääriä positiivisia)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Pieni vaikutus (vähemmän tarkastuksia, nopeammin)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Pienet kirjaimet (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Ylläpito- ja diagnostiikkatyökalut sivustollesi."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Muista muistaa mukautettu kirjautumis-URL-osoite!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Haittaohjelmat ja skannaus"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Haittaohjelmien määritelmät"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Haittaohjelma löydetty"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Haittaohjelmien skanneri"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Haittaohjelma havaittu tiedoston tarkistuksen aikana"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Hallitse ilmoituksia"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Hallitse karanteeniin asetettuja uhkia. Tarkista, palauta tai poista tiedostoja pysyvästi."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Pakollinen rooleille"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Manuaalinen tarkistus suositellaan"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Merkitse kaikki luetuiksi"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Merkitse kaikki luetuiksi"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Pääkytkin ottaa käyttöön tai poistaa käytöstä kaiken toimintojen kirjaamisen."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Matemaattinen kysymys"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Max Yrityksiä"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Max epäonnistuneet yritykset"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Tiedoston enimmäiskoko"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Max kirjautumisyritykset"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Kyselymerkkijonon enimmäispituus"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Pyynnön enimmäiskoko"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Pyyntöjen enimmäismäärä"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "AJAX-pyyntöjen enimmäismäärä minuutissa IP-osoitetta kohden."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "API-pyyntöjen enimmäismäärä minuutissa IP-osoitetta kohden."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Enimmäismäärä epäonnistuneita kirjautumisyrityksiä ennen lukitusta."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Sivupyyntöjen enimmäismäärä minuutissa per IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Pyynnön enimmäiskoko skannattavaksi. Suuremmat pyynnöt ohitetaan."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Pyyntöjen enimmäismäärä minuutissa per IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Hakupyyntöjen enimmäismäärä minuutissa tietokannan ehtymisen estämiseksi."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Yhden skannaustoiminnon enimmäisaika."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Haittaohjelmien tarkistuksen enimmäisaika ennen aikakatkaisua."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Medialataukset"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "Keskikokoinen"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Keskitasoinen (tasapainotettu)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Keskitaso (lisäys/vähennys)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Keskikokoinen tai korkeampi"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Muistiraja"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Skannaustoimintoja varten varattu muisti."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Viesti"
 
 msgid "Method"
-msgstr "Method"
+msgstr "menetelmä"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Microsoft Teams -integraatio"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Vähintään %d merkkiä"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Minimipituus"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Vähimmäisvakavuus epäonnistumiseen"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Salasanan vähimmäispituus (8-32 merkkiä)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "tila"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Moduulin säätimet"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Moduulit"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Tarkkaile ulkoisia komentosarjoja"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Monitoritila (vain loki)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Tarkkaile laajennustiedostoja muutosten varalta"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Seuraa reaaliaikaista sivuston liikennettä."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Seuraa reaaliaikaista liikennettä"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Seuraa reaaliaikaista liikennettä ja vierailijoiden toimintaa."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Seuraa vierailijatrendejä, sivun katselukertoja ja liikennemalleja ajan mittaan."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Valvonta ja hälytykset"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Valvoo reaaliaikaista liikennettä. Turvallinen - seuraa vain käyntejä."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Kuukausittain"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Aktiivisimmat käyttäjät"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Siirtää epäilyttävät tiedostot suojattuun hakemistoon."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM-riippuvuudet"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Nimi"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Tarvitsetko tukea?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "Ei koskaan"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Ei koskaan vanhene"
 
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (sisäänrakennettu)"
 
 msgid "NexifyMy Captcha Type"
 msgstr "NexifyMy Captcha Type"
@@ -2588,331 +2588,331 @@ msgid "NexifyMy Security"
 msgstr "NexifyMy Security"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security on havainnut tiedostoihinsa tehtyjä luvattomia muutoksia. Tarkista asennuksesi."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Sinulla on %d lukematonta suojausvaroitusta."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Seuraava päivitys"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Ei armonaikaa"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Ei viimeaikaista toimintaa"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Ei SRI:tä"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Toimintoja ei ole vielä tallennettu. Toiminta näkyy tässä, kun käyttäjät alkavat suorittaa toimintoja."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Sisältömuutoksia ei ole vielä tallennettu."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Ei vielä valittuja maita."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Tietoja ei ole saatavilla"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Tapahtumatietoja ei ole vielä saatavilla."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Ei tiedostoja karanteenissa."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Maantieteellisiä tietoja ei ole saatavilla"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Kirjautumistoimintaa ei ole vielä tallennettu."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Tunnuslukuja ei ole vielä rekisteröity."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Raportteja ei ole saatavilla."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Skannausta ei ole vielä suoritettu"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Skannaustuloksia ei ole saatavilla. Napsauta \"Suorita tarkistus\" analysoidaksesi riippuvuutesi."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Skannaustuloksia ei ole saatavilla. Suorita tarkistus tarkistaaksesi haavoittuvuudet."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Ei turvallisuussuosituksia tällä hetkellä. Sivustosi on hyvin suojattu."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Vakavuustietoja ei ole saatavilla."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Epäilyttäviä IP-osoitteita ei havaittu."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Järjestelmätapahtumia ei ole vielä tallennettu."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Uhkia ei ole vielä havaittu."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Käyttäjien toimintaa ei ole vielä tallennettu."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Ei vielä käyttäjätoimintaa."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Ei aktiivinen"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Ei käytössä"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Ei vielä tarkistettu"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Ei aikataulutettu"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Huomautus:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Ilmoitus sähköposti"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Ilmoitusasetukset"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Ilmoitukset"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Ilmoita lukituksesta"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Ilmoita käyttäjille, kun 2FA on käytössä/pois käytöstä heidän tilillään."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Numero (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Varakoodien määrä"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Luotavien varakoodien määrä käyttäjää kohti."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Epäonnistuneiden kirjautumisyritysten määrä ennen lukitusta."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Työsulun määrä ennen pysyvää kieltoa."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Sääntörikkomusten määrä ennen automaattista estoa."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Objekti"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Syötä seuraavan sisäänkirjautumisen yhteydessä salasana + 6-numeroinen koodi"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Kerran Viikoittain"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Yksi IP per rivi"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Yksi IP per rivi. Välityspalvelimen IP-osoitteet voivat lähettää X-Forwarded-For-otsikoita (esim. Cloudflare, kuormituksen tasapainottimet)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Yksi IP per rivi. Nämä IP-osoitteet ohittavat kaikki nopeusrajoitukset."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Yksi IP per rivi. Nämä IP-osoitteet estetään välittömästi. Esimerkki: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Yksi IP per rivi. Nämä IP-osoitteet ohittavat WAF-tarkistukset."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Yksi IP per rivi. Nämä IP-osoitteet ohittavat kaikki WAF-säännöt. Esimerkki: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Yksi polku riviä kohden. Absoluuttiset polut lisähakemistoihin."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Yksi polku riviä kohden. Hakemistot, jotka ohitetaan skannauksen aikana."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Yksi per rivi. Estä tietyt käyttäjäagentit. Esimerkki: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Yksi per rivi. Tämän luettelon käyttäjäagentit ohittavat WAF-tarkistukset. Esimerkki: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Yksi käyttäjänimi riviä kohden"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Avaa Asetukset"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Käyttöjärjestelmät"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Toimintatila"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Optimoi tietokanta"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Optimoi ja suojaa tietokantasi."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Vaihtoehto Muutokset"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Valinnainen kaikille käyttäjille"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Valinnainen: Lähetä skannaustulokset CI/CD-alustallesi."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Alkuperäinen polku"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Vanhentunut"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Yläpuolella"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Ohita laajennusliittymän kieli. Tuetut kielet: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Yleiskatsaus"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHP versio"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Paketti"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Sivupyyntöjä minuutissa"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Sivun katselut"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Sivua ei löydy."
 
 msgid "Passkey Authentication"
 msgstr "Passkey Authentication"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Salasanan nimi (esim. MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Salasana rekisteröity onnistuneesti!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Tämä selain ei tue salasanoja."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Salasana"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Salasanan vanhentuminen"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Salasanakäytännöt"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Salasanakäytäntö"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Salasanavaatimukset"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Salasanavaatimukset:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Salasanan palautuslomake"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Salasanan palautus"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Salasanan on oltava vähintään %d merkkiä pitkä."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Salasanassa on oltava vähintään yksi pieni kirjain."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Salasanassa on oltava vähintään yksi numero."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Salasanassa on oltava vähintään yksi erikoismerkki."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Salasanassa on oltava vähintään yksi iso kirjain."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Salasanapolitiikka"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Salasanan palautuslomake"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Polut, jotka jätetään pois tarkistuksesta (suhteessa WordPress-juureen). Yksi per rivi."
 
 msgid "Peak Activity Insights"
 msgstr "Peak Activity Insights"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Huipputunti"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Huippuliikenteen tunnit"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Suorituskykytila"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Suorituskykyasetukset"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Säännölliset raportit"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Pysyvä"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Pysyvä kieltokynnys"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Poistaa tiedoston pysyvästi."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Ratkaise matemaattinen captcha."
 
 msgid "Plugin"
 msgstr "Plugin"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Plugin & Theme analyysi"
 
 msgid "Plugin Language"
 msgstr "Plugin Language"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Plugin päivitetty viimeksi"
 
 msgid "Plugin Options"
 msgstr "Plugin Options"
@@ -2921,241 +2921,241 @@ msgid "Plugin Self-Protection"
 msgstr "Plugin Self-Protection"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Plugin-versio"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Plugin haavoittuvuudet"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Plugin-tiedostoja ei voi muokata WordPressin kautta."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Plugin eheys"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Lisäosien suojaus"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "Plugin/theme CVE:t"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Laajennusten/teeman aktivointi, päivitykset, vaihtoehtojen muutokset ja vienti."
 
 msgid "Plugins"
 msgstr "Plugins"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Plugins aktivoitu"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Plugins deaktivoitu"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Plugins päivitetty"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Viestien/sivujen muokkaukset, julkaisut, medialataukset ja sisällön poistaminen."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Viestit luotu"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Julkaistut viestit"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Viestit päivitetty"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Mahdollinen tietoturvauhka havaittu"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Estä XML-RPC-hyökkäykset ja raa'an voiman yritykset"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Estä pääsy verkkojuuren ulkopuolisiin hakemistoihin."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Estä hyökkääjiä sisällyttämästä paikallisia palvelintiedostoja."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Estä raakaa voimaa"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Estä koodin muokkaaminen WordPress-järjestelmänvalvojassa"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Estä hakemistolistaus .htaccessin kautta"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Estä päällekkäiset hälytykset tänä aikana."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Estä päällekkäiset hälytykset tämän ajanjakson aikana. Aseta arvoksi 0, jos haluat poistaa kuristuksen käytöstä."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Estä laajennustiedostojen muokkaaminen WordPress-editorin kautta"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Estä etätiedostojen sisällyttäminen URL-parametrien kautta."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Estä hakemiston sisällön listaaminen .htaccess-tiedoston kautta."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Estä laajennuksen/teeman asennus hallintapaneelista."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Estä tekstin valinta ja kopioiminen käyttöliittymässä."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Estä usein rikottujen salasanojen käyttö"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Estä käyttäjien löytäminen /wp-json/wp/v2/users päätepisteen kautta."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Estää suojauslaajennustiedostojen luvattoman muuttamisen"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Ensisijainen sähköpostiosoite turvahälytyksiä varten."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Prioriteetti"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Ennakoivat tietoturvaehdotukset ja automaattiset vahvistussuositukset."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "Ongelma"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Profiilipäivitykset"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Profiilimuutokset, roolimuutokset, käyttäjien luonti- ja poistotapahtumat."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Projektin avain"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Suojaa sivustojen välisiltä pyyntöjen väärentämiseltä."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Suojaa Cross-Site Scripting (XSS) -hyökkäyksiltä."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Suojaa SQL-injektiohyökkäyksiltä GET/POST-parametreilla."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Suojaa SQL-injektio-, XSS-, RFI- ja muilta hyökkäyksiltä."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Suojaa raa'alta voimalta ja DoS-hyökkäyksiltä rajoittamalla pyyntöjen tiheyttä IP-osoitetta kohti."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Suojaa kirjautumis- ja rekisteröintilomakkeet automaattisilta robottihyökkäyksiltä."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Suojaa kirjautumis- ja rekisteröintilomakkeet matemaattisella captchalla."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Suojaa liitännäistiedostoja luvattomalta käytöltä."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Suojaa suojauslaajennus peukaloitumiselta ja luvattomilta muutoksilta."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Suojaa kirjautumissivuasi brute force hyökkäyksiltä."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Suojaa sivustoasi haittaliikenteeltä ja hyökkäyksiltä."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Suojatut lomakkeet"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Suojaustaso"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Suojaustila"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Suojasäännöt"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Suojausasetukset"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Suojaa REST API:ta JWT-todennusta, nopeusrajoitusta ja CORS:ia käyttämällä. Välttämätön päättömälle WordPressille."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Suojaa SQL-injektointia, XSS:ää ja haitallisia pyyntöjä vastaan. Turvallinen ottaa käyttöön – estää vain haitallisen liikenteen."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Suojaa laajennustiedostoja muutoksilta. Turvallinen - ehkäisee kajottamisen."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Palveluntarjoaja"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Tyhjennä kaikki lokit"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Tyhjennä välimuisti"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "Karanteeni"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Karanteen välittömästi"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Karanteeni suositellaan"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "Karanteeni:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "Karanteenissa"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Karanteenissa olevat tiedostot"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Kyselyn monimutkaisuus ylittää maksimiarvon %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Kyselyn syvyys ylittää suurimman sallitun syvyyden %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "Nopeasti"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Nopeat toiminnot"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Pikaskannaus"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Pikaskannaustoiminnot"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Nopea pääsy turvallisuuden ylläpitotyökaluihin."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Nopea: vain ydintiedostot. Vakio: Core + teemat/laajennukset. Deep: Kaikki tiedostot."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST API suojaus"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "REST API -käyttäjät"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST API -suojaus"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS-syötteet on poistettu käytöstä tällä sivustolla."
 
 msgid "Rate Limit"
 msgstr "Rate Limit"
@@ -3167,1220 +3167,2128 @@ msgid "Rate Limiting"
 msgstr "Rate Limiting"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Hintarajoitusasetukset"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Reaaliaikainen seuranta"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "Syy"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Vastaanota sähköposti-ilmoituksia, kun haavoittuvuuksia havaitaan"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Viimeaikainen toiminta"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Viimeaikaiset uhkahavainnot"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Äskettäin estetyt IP-osoitteet"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "Vastaanottajan sähköposti"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Suositukset"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Suositeltava"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Suositellut toimet"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Uudelleenohjaa estetty pääsy"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Ohjaa etusivulle"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Vähennä hyökkäyspintaa poistamalla tarpeettomat ominaisuudet käytöstä ja kovettamalla WordPress-kokoonpanoa."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Päivitä"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Luo uudelleen"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Luo perusviiva uudelleen"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Rekisteröi salasana"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Rekisteröidyt salasanat"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Rekisteröidään salasanaa..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Ilmoittautumislomake"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Ilmoittautumislomake"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Muista laite"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Muista Kesto"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Muista tämä laite"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Poista"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Poista generaattoritunnisteet"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Poista kirjautumisvinkit"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Poista WordPress-versio lähdekoodista"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Poista generaattorin sisällönkuvauskentät kaikilta sivuilta."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Poista salasanan palautusvinkit ja -ehdotukset."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Poista versiotiedot HTML:stä ja syötteistä."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Korjaa kaikki muokatut tiedostot"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Korjaa muokatut WordPress-ydintiedostot. Käytä huolellisesti - varmuuskopioi ennen korjaamista."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Korvaa vioittuneet tiedostot puhtailla versioilla"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Raportoi historia"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Raportin säilyttäminen (päiviä)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Raporttiaikataulu"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Pyydä rajoituksia ja suodatusta"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Pyydä kokorajoitusta"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Pyynnöt minuutissa"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Vaadi 2FA kaikilta ylläpitäjiltä"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Vaadi 2FA valituille käyttäjärooleille."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Vaadi toinen tekijä kirjautumisen vahvistamiseksi"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Vaadi kirjautuminen REST API -käyttöön"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Vaatii toisen tekijän kirjautumiseen. Määritä 2FA-menetelmäsi ennen käyttöönottoa."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Nollaa"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Palauta kaikki asetukset"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Nollaa oppiminen"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Palauta kaikki NexifyMy Security -asetukset oletusarvoihinsa. Tätä toimintoa ei voi kumota."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Palauta oletusarvoihin"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Nollataan..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Vastauskoodi estossa"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Palauta"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Palauta:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Rajoita REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Rajoittaa REST API -käyttöä. Saattaa vaikuttaa laajennuksiin, jotka käyttävät REST API:ta."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Säilytysaika"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Palauta virhekoodi, jos haittaohjelma havaitaan (CI/CD-koonti epäonnistuu)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Palauta virhekoodi, jos haavoittuvuuksia löytyy."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Palauttaa tiedoston alkuperäiseen sijaintiinsa."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Tarkista hälytykset ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Tarkista heti"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Tarkista suojauslokit säännöllisesti"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Roolimuutokset"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Suorita Full Security Scan"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Suorita eheyden tarkistus"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Suorita pikatarkistus"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Suorita skannaus"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Suorita haavoittuvuuden tarkistus"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Suorita suojaustarkistus haavoittuvuuksien tunnistamiseksi"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Suorittaa automaattisen haittaohjelmatarkistuksen päivittäin. Turvallinen - vain skannaus, ei tiedostomuutoksia."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "TURVALLISUUSVAROITUS:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "Kaikkien laajennustiedostojen SHA-256-tiivisteet tallennetaan perusviivaksi."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM-integraatio"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEM-alusta"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL-injektio"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "SQL-injektion suojaus"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSL-tila"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL-vahvistus"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Tallenna lisäasetukset"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Tallenna CI/CD-asetukset"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Tallenna Discord-asetukset"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Tallenna sähköpostiasetukset"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Tallenna Jira-asetukset"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Tallenna SIEM-asetukset"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Tallenna skannerin asetukset"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Tallenna ServiceNow-asetukset"
 
 msgid "Save Settings"
-msgstr "Save Settings"
+msgstr "Tallenna asetukset"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Tallenna Slack-asetukset"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Tallenna Teams-asetukset"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Tallenna WAF-asetukset"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Tallenna Webhook-asetukset"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Skannaa"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Skannaus valmis"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Skannaus valmis"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Skannaa säveltäjäriippuvuudet"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Skannausasetukset"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Skannausohjaimet"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Skannaa mukautettuja hakemistoja"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Tarkista NPM-riippuvuudet"
 
 msgid "Scan Plugins"
 msgstr "Scan Plugins"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Skannaa QR-koodi autentikointisovelluksella (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Skannaustulokset"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Skannausaikataulu"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Skannausherkkyys"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Skannauskohteet"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Skannaa teemoja"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Skannauksen aikakatkaisu"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Tarkista lataushakemisto"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Skannaa WordPress Core"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Tarkista kaikki asennetut lisäosat haittaohjelmien varalta."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Tarkista kaikki asennetut teemat haittaohjelmien varalta."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Skannaa vain kriittiset alueet"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Tarkista tiedostot haittaohjelmien ja epäilyttävän koodin varalta."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Tarkista laajennukset, teemat ja WordPress-ydin tunnettujen haavoittuvuuksien varalta."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Tarkista sivustosi haittaohjelmien, haavoittuvuuksien ja tietoturvaongelmien varalta."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Tarkista verkkosivustosi haittaohjelmien ja tietoturva-aukkojen varalta."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Skanneri"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Skannerin asetukset"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Skannataan..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Tarkistaa tiedostot haittaohjelmien ja epäilyttävän koodin varalta. Turvallinen - vain skannaa, ei muokkaa tiedostoja."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Ajastettu skannaustila"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Ajoitetut skannaukset"
 
 msgid "Score"
-msgstr "Score"
+msgstr "Pisteet"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Hakupyynnöt minuutissa"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Hae käyttäjätunnusta..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Salainen avain"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Suojattu tiedostojen käyttö"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Suojaa WPGraphQL:n kyselyn syvyysrajoituksilla, monimutkaisuustarkastuksilla ja nopeusrajoituksilla. Turvallinen päättömään käyttöön."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Turvahälytykset"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Turvallisuusanalyysi"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Turvallisuuden karkaisu"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Suojausotsikot"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Turvallisuustapahtuma"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Suojauslokit"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Suojausmoduulit"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Turvallisuusilmoitukset"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Suojausasetukset"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Turvallisuussuositukset"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Turvallisuuspisteet"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Turvallisuustila"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Suojaustyökalut"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Tietoturvahaavoittuvuudet"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Turvahälytykset"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Tietoturvatapahtumat näkyvät täällä."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Turvallisuuden koventaminen"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Suojausskannaus on suoritettu loppuun"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Suojausasetuksia on muutettu"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Valitse maat:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Valitse maat vasemmalta, napsauta \"Lisää luetteloon\" lisätäksesi ne. Valitut maat estetään (musta lista) tai sallitaan (valkoinen lista) yllä olevan tilan perusteella."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Valitse kuva, jossa on valintamerkki:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Valitse käytettävä captcha-palvelu."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Valitut maat:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Itsesuojaus"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Itsesuojaus"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Lähetä testihälytys"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Lähetä testisähköposti"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Lähetä hälytys tämän monen hyökkäyksen jälkeen tunnin aikana."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Lähetä päivittäin sähköpostikooste"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Lähetä sähköposti-ilmoitus, kun IP-osoite on lukittu."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Lähetä sähköposti-ilmoituksia tietoturvatapahtumista"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Lähetä sähköposti-ilmoituksia, kun kriittisiä hyökkäyksiä havaitaan."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Lähetä sähköpostia, kun peukalointi havaitaan"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Lähetä sähköpostia, kun haavoittuvuuksia löytyy"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Lähetä raportit järjestelmänvalvojan sähköpostiin"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Lähetä skannaustulokset sähköpostitse jokaisen skannauksen jälkeen."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Lähetä tietoturvatapahtumat Splunk-, Elasticsearch- tai muille SIEM-alustoille keskitettyä valvontaa ja analysointia varten."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Lähetä suojaustapahtumat mihin tahansa HTTP-päätepisteeseen mukautetuilla määrityksillä."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Lähetä suojaustapahtumat mihin tahansa HTTP-päätepisteeseen mukautetuilla otsikoilla ja todennuksella."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Lähetä vahvistuskoodit sähköpostitse."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Lähettää sähköpostihälytyksiä tietoturvatapahtumista. Turvallinen - määritä ensin sähköpostiasetukset."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "ServiceNow-integraatio"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Asettaa suojatut tiedostooikeudet. Saattaa vaatia manuaalista säätöä, jos palvelimella on ongelmia."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "Asetukset"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Asetukset tallennettu onnistuneesti"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Vakavuus"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Näytä sivu 404"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Näytä yleinen virheilmoitus kirjautumisvirheestä."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Näytä Lomakkeissa"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Näytetään %d/%d merkintää"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Näyttää lukemattomat kriittiset/varoitustapahtumat. Käytä lokeja saadaksesi koko historian."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Kirjaudu sisään Passkey-tunnuksella"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Allekirjoituksen tila"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Allekirjoitukseen perustuva tunnistus"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Allekirjoitukset"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Sivuston oletusarvo"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Sivuston avain"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Sivuston turvallisuus terveys"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Koko"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Ohita tätä kokoa suuremmat tiedostot."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Hidas integraatio"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Joitakin parannuksia suositellaan"
 
 msgid "Source"
-msgstr "Source"
+msgstr "lähde"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Erikoismerkki (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
 msgstr "Splunk (HTTP Event Collector)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Vakio"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Vakio - Tasapainoinen suojaus"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Vakioskannaus"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Aloita skannaus"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Aloita uusi skannaus"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Aloita skannaus"
 
 msgid "Status"
-msgstr "Status"
+msgstr "Tila"
 
 msgid "Story"
-msgstr "Story"
+msgstr "Tarina"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Tiukka - Suurin turvallisuus"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Vahvat salasanat"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Vahvat salasanat"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Onnistumisprosentti"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Onnistunut kirjautuminen"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Onnistuneet kirjautumiset"
 
 msgid "Sucuri"
 msgstr "Sucuri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Sumo logiikka"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Toimitusketju"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Toimitusketjun turvallisuus"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Toimitusketjun asetukset"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Tue Google Authenticatoria, Authya jne."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Tuetut:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Epäilyttävä koodi"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Epäilyttävät IP-osoitteet"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Järjestelmän toiminta"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Järjestelmätapahtumat"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Järjestelmän tila"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "TOTP Authenticator -sovellukset"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Taulukon nimi"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Taulukot"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Peukaloinnin tunnistus:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "Tehtävä"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Estä väliaikaisesti IP-osoitteet, jotka ylittävät API-nopeusrajoitukset."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Testaa yhteys"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Testi-ilmoitus"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Tekstin sovitus"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "Tekoäly oppii jatkuvasti normaaleja käyttäytymismalleja, kuten liikennetunnit, maantieteelliset sijainnit, käyttäjäagentit ja pyyntömallit. Tätä perusviivaa käytetään poikkeamien havaitsemiseen."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF suojaa sivustoasi yleisiltä verkkohyökkäyksiltä, ​​mukaan lukien SQL-injektio, XSS ja haitalliset robotit."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Teemankytkimet"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Tämä Tunti"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Tässä kuussa"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Tällä viikolla"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Tämä on yleinen salasana."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Näin captcha näkyy kirjautumislomakkeissa:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Tämä salasana on liian yleinen. Valitse yksilöllisempi salasana."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Tämä kysely ei ole sallittu."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Tämä nollaa kaikki tekoälyn oppimistiedot ja käyttäytymismallit. Jatkaa?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Uhka"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Uhkien jakautuminen:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Uhka havaittu"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Uhka havaittu (haittaohjelmat, epäilyttävät tiedostot)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Uhkien havaitseminen ja estäminen – viimeiset 7 päivää"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Uhkapisteet"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Uhat estetty"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Uhkia löydetty"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Uhat tänään"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Kaasujakso"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Lipunmyynti"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Lippujärjestelmät"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Aika"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Aikaikkuna (s)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Aika ennen kuin sähköpostivahvistuskoodit vanhenevat."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Aikaikkuna epäonnistuneiden kirjautumisyritysten laskemiseen."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Aikaikkuna, jota käytetään epäonnistuneiden kirjautumisyritysten laskemiseen."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Päivämäärään"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Tänään"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Liian monta epäonnistunutta kirjautumisyritystä. Yritä uudelleen %d minuutin kuluttua."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Työkalut"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Työkalut ja apuohjelmat"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Huippumaa"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Yleisimmät havaitsemisen syyt"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Suosituimmat tapahtumatyypit"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Parhaat sivut"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Suosituimmat viittaajat"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Tapahtumat yhteensä"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Sivun katselut yhteensä"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Allekirjoituksia yhteensä"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Kokonaiskoko"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Liikenneanalyysi"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Liikennekatsaus"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Käynnistä suojausskannaus"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Luota välityspalvelimen otsikoihin"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Luotetut välityspalvelimet"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Kahdesti päivässä"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Kaksitekijäinen todennus (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Kaksitekijäinen todennus"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Kaksivaiheinen todennus"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Kirjoita"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Kirjoita sana:"
 
 msgid "URL"
-msgstr "URL"
+msgstr "URL-osoite"
 
 msgid "Uninstall Behavior"
 msgstr "Uninstall Behavior"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Ainutlaatuiset IP-osoitteet"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Ainutlaatuiset käyttäjät"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Ainutlaatuiset Vierailijat"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Tuntematon"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Lukemattomat hälytykset"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Lukemattomat suojaushälytykset lokeistasi."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Päivitä määritelmät"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Päivitä määritelmät nyt"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Päivitä haittaohjelmien määritelmät"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Päivitä nyt"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Päivitä haittaohjelmien tunnistusallekirjoitukset."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Iso kirjain (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Kiireellisyystaso"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Käytä CDN/välityspalvelimen otsikoita todellisen asiakkaan IP-osoitteen määrittämiseen"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Käytä Touch ID:tä, Face ID:tä, Windows Hellota tai laitteiston suojausavainta."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Käytä X-Forwarded-For-otsikkoa IP-tunnistukseen (vain jos CDN:n/välityspalvelimen takana)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Käytä haittaohjelmien allekirjoitustietokantaa havaitsemiseen."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Käytä tätä avainta API-pyyntöjen todentamiseen CI/CD-putkistosta."
 
 msgid "User"
-msgstr "User"
+msgstr "Käyttäjä"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Käyttäjän toiminta"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Käyttäjäagentti"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Käyttäjätapahtumat"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Käyttäjien lukitukset"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Käyttäjien hallinta"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Käyttäjän vaatimukset"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Käyttäjä tai IP-osoite lukittu epäilyttävän toiminnan vuoksi"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Käyttäjätunnus"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Käyttäjätunnus ja salasana vaaditaan."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Käyttäjät luotu"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Käyttäjät poistettu"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Käyttäjät ottavat käyttöön 2FA:n profiiliasetuksissaan"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Käyttää tekoälyä havaitakseen nollapäivän uhkia käyttäytymisanalyysin avulla. Oppii normaalit kuviot ja merkitsee poikkeavuuksia. Turvallinen - valvoo vain käyttäytymistä."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Vahvistusistunto vanhentunut. Kirjaudu uudelleen sisään."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Vahvista"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Tarkista ydintiedostot"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Tarkista SSL-sertifikaatit (suositus tuotantoon)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Tarkista ja korjaa WordPress-ydintiedostot."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Tarkista ja korjaa ydintiedostot"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Versio"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Näytä kaikki"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Katso Live Traffic"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Katso kaikki tietoturvatapahtumat."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Tarkastele ja hallitse karanteeniin asetettuja uhkia."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Tarkastele ja hallinnoi suojaushälytyksiä ja -ilmoituksia."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Näkymät"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Kävijätrendit – viimeiset 30 päivää"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Vierailijat"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Vierailut tänään"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Haavoittuvuuden tarkistus"
 
 msgid "Vulnerability Scanner"
 msgstr "Vulnerability Scanner"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Haavoittuvainen"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF-hyökkäys estetty"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF-estot (palomuuri estää hyökkäyksen)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF palomuuri"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAF-tila"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP versio"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL suojaus"
 
 msgid "WPScan API Token"
 msgstr "WPScan API Token"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Varoitus"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Varoitus:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Varoitus: Tuonti korvaa kaikki nykyiset asetukset. Muista viedä nykyiset asetuksesi ensin varmuuskopioksi."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Verkkosovellusten palomuuri"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Web-sovellusten palomuuri (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "Webhookin URL-osoite"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "Webhookin URL-osoite tuloksille"
 
 msgid "Webhooks"
 msgstr "Webhooks"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "viikoittain"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Viikoittainen turvallisuusraportti"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Sallittu luettelo (vain sallittu)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Sallittu luettelo (salli vain valitut)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "IP-osoitteet sallittujen luetteloon"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "Sallittujen luetteloon lisätyt IP-osoitteet"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "WordPressin ydintiedoston vahvistus"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "WordPressin ydintila"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "WordPressin karkaisu"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "WordPress-versio"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "WordPressin ydintiedostoa on muokattu"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress ei ole ajan tasalla"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (ei haistaa)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Estä Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-suojaus"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC-ohjaus"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS-hyökkäys"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS-suojaus"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Käytät oletusarvoista kirjautumislokeroa. Harkitse sen vaihtamista johonkin ainutlaatuiseen."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Sinun on oltava kirjautuneena sisään käyttääksesi REST-sovellusliittymää."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Sivustosi ei käytä HTTPS:ää. Ota käyttöön suojattujen yhteyksien SSL-varmenne."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Sivustosi on hyvin suojattu"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Vahvistuskoodisi on: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Virusmäärittelysi ovat vanhentuneet. Päivitä nyt parhaan suojan saamiseksi."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "Alueen tunnus"
 
 msgid "ago"
-msgstr "ago"
+msgstr "sitten"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "hyökkäyksiä tunnissa"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "yrityksiä"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "tukossa"
 
 msgid "characters"
-msgstr "characters"
+msgstr "hahmoja"
 
 msgid "days"
-msgstr "days"
+msgstr "päivää"
 
 msgid "events"
-msgstr "events"
+msgstr "tapahtumia"
 
 msgid "fails"
-msgstr "fails"
+msgstr "epäonnistuu"
 
 msgid "files"
-msgstr "files"
+msgstr "tiedostot"
 
 msgid "from now"
-msgstr "from now"
+msgstr "tästä lähtien"
 
 msgid "including:"
-msgstr "including:"
+msgstr "mukaan lukien:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "pieni kirjain"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "minuuttia"
 
 msgid "modules"
-msgstr "modules"
+msgstr "moduulit"
 
 msgid "number"
-msgstr "number"
+msgstr "numero"
 
 msgid "or"
-msgstr "or"
+msgstr "tai"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "minuutissa"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "sekuntia"
 
 msgid "special character"
-msgstr "special character"
+msgstr "erikoishahmo"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "uhkauksia löydetty"
 
 msgid "total records"
-msgstr "total records"
+msgstr "ennätyksiä yhteensä"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "iso kirjain"
 
 msgid "views"
-msgstr "views"
+msgstr "näkymät"
 
 msgid "violations"
-msgstr "violations"
+msgstr "rikkomuksia"
 
 msgid "visits"
-msgstr "visits"
+msgstr "vierailuja"
+msgid "Deception"
+msgstr "Petos"
+
+msgid "P2P Intelligence"
+msgstr "P2P-äly"
+
+msgid "Sandbox Console"
+msgstr "Sandbox-konsoli"
+
+msgid "Temporary Access"
+msgstr "Väliaikainen pääsy"
+
+msgid "Saving..."
+msgstr "Tallennetaan..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Asetukset tallennettu. Ladataan uudelleen..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Asetukset tallennettu onnistuneesti! Ladataan uudelleen..."
+
+msgid "Connection error"
+msgstr "Yhteysvirhe"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Turvatarkastus epäonnistui. Päivitä ja yritä uudelleen."
+
+msgid "Settings handler not available."
+msgstr "Asetusten käsittelijä ei ole käytettävissä."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Palautetaanko kaikki asetukset oletusasetuksiin? Tätä ei voi kumota."
+
+msgid "Purge CDN cache now?"
+msgstr "Tyhjennetäänkö CDN-välimuisti nyt?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Asetusten tallentaminen epäonnistui. Yritä uudelleen."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Asetukset palautetaan oletusasetuksiin. Ladataan sivua uudelleen..."
+
+msgid "Failed to load analytics data."
+msgstr "Analytiikkatietojen lataaminen epäonnistui."
+
+msgid "Devices"
+msgstr "Laitteet"
+
+msgid "No data available for this range."
+msgstr "Tälle alueelle ei ole saatavilla tietoja."
+
+msgid "Traffic trend chart"
+msgstr "Liikennetrendikaavio"
+
+msgid "Distribution breakdown chart"
+msgstr "Jakelukaavio"
+
+msgid "Total"
+msgstr "Yhteensä"
+
+msgid "Series"
+msgstr "sarja"
+
+msgid "Predictive Threat Hunting"
+msgstr "Ennakoiva uhkien metsästys"
+
+msgid "Forecast next attack vectors"
+msgstr "Ennusta seuraavan hyökkäyksen vektorit"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Profiloi pinoasi, ennustaa todennäköiset hyökkäysvektorit ja tarjoaa ennakoivia koventumisohjeita."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Hallitse karanteeniin asetettuja uhkia ja palautettavia poistettuja tiedostoja."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Poistetut tiedostot (palautettavissa)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Tänne siirretyt tiedostot voidaan palauttaa takaisin karanteeniin tai poistaa pysyvästi."
+
+msgid "Deleted"
+msgstr "Poistettu"
+
+msgid "Loading deleted files..."
+msgstr "Ladataan poistettuja tiedostoja..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Siirtää karanteenissa olevat tiedostot palautettavaan poistettuun tallennustilaan."
+
+msgid "Delete Permanently:"
+msgstr "Poista pysyvästi:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Poistaa tiedoston pysyvästi poistetusta tallennustilasta."
+
+msgid "Access denied from your region."
+msgstr "Pääsy kielletty alueeltasi."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Enimmäismäärä epäonnistuneita kirjautumisyrityksiä ennen tilapäistä lukitusta."
+
+msgid "Time window for counting failed attempts."
+msgstr "Aikaikkuna epäonnistuneiden yritysten laskemiseen."
+
+msgid "Open Tool"
+msgstr "Avaa Työkalu"
+
+msgid "Available Fix"
+msgstr "Saatavilla Fix"
+
+msgid "Preview Patch"
+msgstr "Esikatselu Patch"
+
+msgid "Apply Patch"
+msgstr "Kiinnitä Patch"
+
+msgid "Honeytrap Configuration"
+msgstr "Honeytrap-kokoonpano"
+
+msgid "Enable Deception Module"
+msgstr "Ota Deception Module käyttöön"
+
+msgid "How Deception Works:"
+msgstr "Kuinka petos toimii:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Seuraavia URL-osoitteita ei ole sivustossasi. Jos joku käyttää niitä, hänet <strong>estetään automaattisesti</strong> vahvistetuiksi hyökkääjiksi. Järjestelmänvalvojia ei koskaan estetä, mutta he näkevät varoituksen."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Mukautetut hunajaloukkupolut"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Lisää yksi polku riviä kohden (esim. /my-secret-admin/, /old-backup.sql). Oletusasetukset ovat jo aktiivisia."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Honeytrap-oletuspolut (aina aktiivinen)"
+
+msgid "Login Page Honeypot"
+msgstr "Kirjautumissivu Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Näkymätön kenttä lisätään sisäänkirjautumis-/rekisteröitymislomakkeisiin. Vain robotit täyttävät sen, mikä käynnistää välittömän havaitsemisen ja eston."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Tämä suojaus on aina käytössä, kun Deception-moduuli on aktiivinen. Määritystä ei tarvita."
+
+msgid "User Enumeration Trap"
+msgstr "User Enumeration Trap"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Havaitsee tiedusteluyritykset, joissa hyökkääjät etsivät kelvollisia käyttäjänimiä käyttämällä ?author=1, ?author=2 jne."
+
+msgid "Enable user enumeration detection"
+msgstr "Ota käyttäjäluettelon tunnistus käyttöön"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Kova esto luettelointiyrityksissä (oletus: pehmeä uudelleenohjaus etusivulle)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Estä KAIKKI tekijöiden luettelo (jopa olemassa oleville käyttäjille)"
+
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR artiklan 30 Data Mapping"
+
+msgid "Refresh Map"
+msgstr "Päivitä kartta"
+
+msgid "Export Data Map (PDF)"
+msgstr "Vie datakartta (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Automaattinen PII-etsintä tietokantataulukoista, tietovirran kartoitus ja kolmannen osapuolen jakamisen tunnistus."
+
+msgid "Data Element"
+msgstr "Tietoelementti"
+
+msgid "Location"
+msgstr "Sijainti"
+
+msgid "Purpose"
+msgstr "Tarkoitus"
+
+msgid "Retention"
+msgstr "Säilytys"
+
+msgid "Third-Party Sharing"
+msgstr "Kolmannen osapuolen jakaminen"
+
+msgid "Legal Basis"
+msgstr "Oikeusperusta"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Henkilökohtaisia tunnistetietoja ei ole vielä löydetty. Luo raportti suorittamalla datakartan skannaus."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Oikeus tulla unohdetuksi automaatio"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Lähetä poistopyyntöjä, tarkista tietojen poisto ja seuraa GDPR-työnkulkujen noudattamislokeja."
+
+msgid "User ID"
+msgstr "Käyttäjätunnus"
+
+msgid "Comments"
+msgstr "Kommentit"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Poista kommentit anonymisoimisen sijaan"
+
+msgid "Run Erasure"
+msgstr "Suorita Erasure"
+
+msgid "Verify Erasure"
+msgstr "Vahvista poisto"
+
+msgid "GDPR Request Log"
+msgstr "GDPR-pyyntöloki"
+
+msgid "Request Type"
+msgstr "Pyynnön tyyppi"
+
+msgid "Requested At"
+msgstr "Pyydetty klo"
+
+msgid "Completed At"
+msgstr "Valmistunut klo"
+
+msgid "No GDPR requests logged yet."
+msgstr "GDPR-pyyntöjä ei ole vielä kirjattu."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Shadow Runtime Sandbox"
+
+msgid "Enable Sandbox Module"
+msgstr "Ota hiekkalaatikkomoduuli käyttöön"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Lataa Shadow Runtime Sandbox -moottorin."
+
+msgid "Enable Sandbox Console"
+msgstr "Ota Sandbox Console käyttöön"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Antaa wp-admin-käyttäjien, joilla on manage_options, suorittaa koodia hiekkalaatikkokonsolissa."
+
+msgid "Sandbox Timeout"
+msgstr "Hiekkalaatikon aikakatkaisu"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Suorituksen aikakatkaisu sekunneissa (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Dynaaminen analyysi"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Suorita dynaaminen suoritusanalyysi staattisten tarkistusten lisäksi."
+
+msgid "Quarantine Policy"
+msgstr "Karanteenipolitiikka"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Manuaalista karanteenia suositellaan useimmille sivustoille. Automaattinen karanteeni eristää vain erittäin luotettavat, vahvistetut haittaohjelmat."
+
+msgid "Manual (Recommended)"
+msgstr "Manuaalinen (suositus)"
+
+msgid "Auto Quarantine"
+msgstr "Automaattinen karanteeni"
+
+msgid "Save Quarantine Policy"
+msgstr "Tallenna karanteenikäytäntö"
+
+msgid "AI Risk Controls"
+msgstr "AI riskinhallinta"
+
+msgid "Enable AI Detection Module"
+msgstr "Ota AI-tunnistusmoduuli käyttöön"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Ota sisäpiiriuhan tunnistus käyttöön"
+
+msgid "Insider Threat Threshold"
+msgstr "Sisäpiirin uhkakynnys"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Ota Data Exfiltration Monitoring käyttöön"
+
+msgid "Exfiltration Threshold"
+msgstr "Eksfiltraatiokynnys"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Exfiltration Baseline Days"
+
+msgid "Session Risk Threshold"
+msgstr "Istunnon riskikynnys"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Jatkuva todennustarkistusväli (sekuntia)"
+
+msgid "Risk Spike Threshold"
+msgstr "Riskipiikkikynnys"
+
+msgid "Save AI Settings"
+msgstr "Tallenna AI-asetukset"
+
+msgid "Quarantine Mode"
+msgstr "Karanteenitila"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Manuaalinen tila on turvallisempi ja suositeltavampi. Automaattinen tila asettaa karanteeniin vain korkean varmuuden omaavat haittaohjelmat."
+
+msgid "Data Map"
+msgstr "Tietokartta"
+
+msgid "Privacy Requests"
+msgstr "Tietosuojapyynnöt"
+
+msgid "Deception Technology"
+msgstr "Petostekniikka"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Hunajaruukkuja, houkuttimia ja hyökkääjien petoksia saadakseen kiinni uhista ennen kuin ne iskevät."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Näytetään %1$d/%2$d merkintää"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P Intelligence -moduulia ei ole ladattu."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P Threat Intelligence"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Jaa uhkatietoa muiden SentinelWP-asennusten kanssa lauman immuniteetin varmistamiseksi."
+
+msgid "P2P Settings"
+msgstr "P2P-asetukset"
+
+msgid "Enable P2P Intelligence"
+msgstr "Ota P2P Intelligence käyttöön"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Ota käyttöön uhkatietojen yhteiskäyttö jakaminen vertaissolmujen kanssa."
+
+msgid "My Node Key"
+msgstr "Minun solmuavaimeni"
+
+msgid "Copy"
+msgstr "Kopioi"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Jaa tämä avain muiden kanssa, jotka haluavat muodostaa yhteyden sivustoosi."
+
+msgid "Broadcast Threats"
+msgstr "Yleisradiouhkat"
+
+msgid "Share detected threats with registered peers."
+msgstr "Jaa havaitut uhat rekisteröityjen kumppanien kanssa."
+
+msgid "Trust Threshold"
+msgstr "Luottamuksellinen kynnys"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Vain automaattisen eston IP-osoitteet, joiden uhkapiste on >= tämä kynnys. Pienemmät arvot = aggressiivisempi esto."
+
+msgid "Registered Peers"
+msgstr "Rekisteröityneet vertaiset"
+
+msgid "Add Peer"
+msgstr "Lisää Peer"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Yhtään vertaista ei ole vielä rekisteröitynyt. Lisää vertaiskäyttäjä aloittaaksesi uhkatiedon jakamisen."
+
+msgid "Label"
+msgstr "Label"
+
+msgid "Last Sync"
+msgstr "Viimeinen synkronointi"
+
+msgid "Sent/Received"
+msgstr "Lähetetty/vastaanotettu"
+
+msgid "Unnamed"
+msgstr "Nimetön"
+
+msgid "%s ago"
+msgstr "%s sitten"
+
+msgid "Threats Sent"
+msgstr "Uhkat lähetetty"
+
+msgid "Threats Received"
+msgstr "Vastaanotetut uhkaukset"
+
+msgid "Statistics"
+msgstr "Tilastot"
+
+msgid "Connected Peers"
+msgstr "Yhdistetyt vertaiset"
+
+msgid "Threats Received (24h)"
+msgstr "Vastaanotetut uhkaukset (24h)"
+
+msgid "P2P Status"
+msgstr "P2P-tila"
+
+msgid "Threat Intelligence Credits"
+msgstr "Uhkien tiedustelutiedot"
+
+msgid "Current Credit Balance"
+msgstr "Nykyinen luottosaldo"
+
+msgid "Reputation Score"
+msgstr "Mainepisteet"
+
+msgid "Accuracy"
+msgstr "Tarkkuus"
+
+msgid "Badges:"
+msgstr "Tunnusmerkit:"
+
+msgid "No badges yet"
+msgstr "Ei merkkejä vielä"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Premium-edut ovat käytettävissä ilmaiseksi, koska mainepisteesi on yli 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Saavuta mainepisteet yli 1000 saadaksesi premium-etuja ilmaiseksi."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Ahkerat kirjoittajat (nimettömät)"
+
+msgid "No contributor data available yet."
+msgstr "Osallistujatietoja ei ole vielä saatavilla."
+
+msgid "Rank"
+msgstr "Sijoitus"
+
+msgid "Anonymous Site ID"
+msgstr "Nimetön sivustotunnus"
+
+msgid "Credits"
+msgstr "Krediitit"
+
+msgid "Reputation"
+msgstr "Maine"
+
+msgid "Close"
+msgstr "Sulje"
+
+msgid "Add New Peer"
+msgstr "Lisää uusi vertaisversio"
+
+msgid "Peer URL"
+msgstr "Vertais-URL-osoite"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "WordPress-vertaissivuston täydellinen URL-osoite (tuotannossa on käytettävä HTTPS:ää)."
+
+msgid "Peer Node Key"
+msgstr "Vertaissolmuavain"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Vertaissolmuavain (he voivat kopioida sen P2P-asetussivultaan)."
+
+msgid "Label (Optional)"
+msgstr "Tunniste (valinnainen)"
+
+msgid "My Production Server"
+msgstr "Oma tuotantopalvelin"
+
+msgid "A friendly name to identify this peer."
+msgstr "Ystävällinen nimi tämän vertaisen tunnistamiseksi."
+
+msgid "Unauthorized"
+msgstr "Luvaton"
+
+msgid "Sandbox module is not loaded."
+msgstr "Sandbox-moduulia ei ole ladattu."
+
+msgid "Sandbox module is disabled."
+msgstr "Sandbox-moduuli on poistettu käytöstä."
+
+msgid "Sandbox console is disabled."
+msgstr "Sandbox-konsoli on poistettu käytöstä."
+
+msgid "No code provided."
+msgstr "Koodia ei ole annettu."
+
+msgid "Insufficient permissions."
+msgstr "Riittämättömät käyttöoikeudet."
+
+msgid "Sandbox Module Disabled"
+msgstr "Sandbox-moduuli pois käytöstä"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Shadow Runtime Sandbox on tällä hetkellä poissa käytöstä. Ota se käyttöön asetuksissa käyttääksesi konsolia."
+
+msgid "Go to Settings"
+msgstr "Siirry kohtaan Asetukset"
+
+msgid "Sandbox Console Disabled"
+msgstr "Sandbox-konsoli pois käytöstä"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Sandbox-moduuli on käytössä, mutta hallintakonsoli on poistettu käytöstä. Ota käyttöön konsoliasetus suorittaaksesi koodia wp-administa."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Vaaravyöhyke: koodin suoritus"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Tämä konsoli suorittaa PHP-koodin eristetyssä hiekkalaatikossa. Kaikki tietokannan muutokset palautetaan automaattisesti. Käytä vain epäilyttävän koodin analysointiin tai testaukseen."
+
+msgid "PHP Code Editor"
+msgstr "PHP koodieditori"
+
+msgid "Run Code"
+msgstr "Suorita koodi"
+
+msgid "Analyze Only"
+msgstr "Vain analysoida"
+
+msgid "Timeout:"
+msgstr "Aikakatkaisu:"
+
+msgid "Execution Results"
+msgstr "Toteutuksen tulokset"
+
+msgid "STATIC ANALYSIS"
+msgstr "STAATTINEN ANALYYSI"
+
+msgid "OUTPUT"
+msgstr "OUTPUT"
+
+msgid "ERRORS"
+msgstr "VIRHEET"
+
+msgid "DATABASE QUERIES"
+msgstr "TIETOKANTAKYSYMYKSET"
+
+msgid "Module not loaded"
+msgstr "Moduulia ei ladattu"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Live-liikenneanalytiikka ei ole saatavilla."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Just-in-time -käyttö käyttää pyyntö- ja hyväksyntätyönkulkua automaattisella vanhenemisella."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Väliaikainen käyttö ei ole tällä hetkellä käytettävissä, koska moduuli on poistettu käytöstä tai sitä ei ole ladattu."
+
+msgid "Open settings"
+msgstr "Avaa asetukset"
+
+msgid "Request Temporary Access"
+msgstr "Pyydä väliaikaista pääsyä"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Tämä pyyntö koskee tällä hetkellä kirjautuneena olevaa tiliäsi. Järjestelmänvalvojan on hyväksyttävä se ennen tilapäisen korotetun käyttöoikeuden myöntämistä."
+
+msgid "Requested Role"
+msgstr "Pyydetty rooli"
+
+msgid "Administrator"
+msgstr "Järjestelmänvalvoja"
+
+msgid "Editor"
+msgstr "Toimittaja"
+
+msgid "Duration (minutes)"
+msgstr "Kesto (minuuttia)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Kuvaile, miksi tilapäinen korotettu käyttöoikeus vaaditaan."
+
+msgid "Submit Request"
+msgstr "Lähetä pyyntö"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Myönnä väliaikainen käyttöoikeus (järjestelmänvalvoja)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Myönnä aikarajoitettu korotettu käyttöoikeus suoraan tietylle käyttäjälle käyttäjätunnuksella tai sähköpostilla."
+
+msgid "Target User (Username or Email)"
+msgstr "Kohdekäyttäjä (käyttäjänimi tai sähköpostiosoite)"
+
+msgid "username or user@example.com"
+msgstr "käyttäjätunnus tai user@example.com"
+
+msgid "Grant Role"
+msgstr "Grant Rooli"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Kuvaile, miksi tämä käyttäjä tarvitsee tilapäistä korotettua käyttöoikeutta."
+
+msgid "Grant Access"
+msgstr "Myönnä käyttöoikeus"
+
+msgid "Pending and Active Requests"
+msgstr "Odottavat ja aktiiviset pyynnöt"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Hyväksy odottavat pyynnöt, tarkista suorat avustukset ja peruuta aktiiviset käyttöoikeudet tästä jonosta."
+
+msgid "Original Role"
+msgstr "Alkuperäinen rooli"
+
+msgid "Elevated Role"
+msgstr "Korotettu rooli"
+
+msgid "Granted"
+msgstr "Myönnetty"
+
+msgid "Expires"
+msgstr "Vanhenee"
+
+msgid "Approved By"
+msgstr "Hyväksytty"
+
+msgid "Loading..."
+msgstr "Ladataan..."
+
+msgid "English (US)"
+msgstr "englanti (USA)"
+
+msgid "English (UK)"
+msgstr "englanti (UK)"
+
+msgid "Espanol (Spanish)"
+msgstr "espanol (espanja)"
+
+msgid "Francais (French)"
+msgstr "Francais (ranska)"
+
+msgid "Deutsch (German)"
+msgstr "Deutsch (saksa)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (italia)"
+
+msgid "Portugues (Brazilian)"
+msgstr "portugali (Brasilia)"
+
+msgid "Nederlands (Dutch)"
+msgstr "Alankomaat (hollanti)"
+
+msgid "Russian"
+msgstr "venäjäksi"
+
+msgid "Japanese"
+msgstr "japanilainen"
+
+msgid "Chinese (Simplified)"
+msgstr "kiina (yksinkertaistettu)"
+
+msgid "Arabic"
+msgstr "arabia"
+
+msgid "Hindi"
+msgstr "hindi"
+
+msgid "Korean"
+msgstr "korealainen"
+
+msgid "Turkish"
+msgstr "turkkilainen"
+
+msgid "Polski (Polish)"
+msgstr "polski (puola)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (indonesia)"
+
+msgid "Ukrainian"
+msgstr "ukrainalainen"
+
+msgid "Vietnamese"
+msgstr "vietnamilainen"
+
+msgid "Thai"
+msgstr "thaimaalainen"
+
+msgid "Svenska (Swedish)"
+msgstr "svenska (ruotsi)"
+
+msgid "Dansk (Danish)"
+msgstr "tanska (tanska)"
+
+msgid "Suomi (Finnish)"
+msgstr "suomi (suomi)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (norja)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Tšekki)"
+
+msgid "Greek"
+msgstr "kreikkalainen"
+
+msgid "Magyar (Hungarian)"
+msgstr "Magyar (Unkari)"
+
+msgid "Romana (Romanian)"
+msgstr "romana (romania)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovencina (slovakki)"
+
+msgid "Bulgarian"
+msgstr "bulgarialainen"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (kroatia)"
+
+msgid "Serbian"
+msgstr "serbia"
+
+msgid "Hebrew"
+msgstr "heprea"
+
+msgid "Persian"
+msgstr "persialainen"
+
+msgid "Settings saved successfully."
+msgstr "Asetukset tallennettu onnistuneesti."
+
+msgid "Settings reset to defaults."
+msgstr "Asetukset palautetaan oletusasetuksiin."
+
+msgid "NexifyMy Security Logs"
+msgstr "NexifyMy suojauslokit"
+
+msgid "No matching user found."
+msgstr "Vastaavaa käyttäjää ei löytynyt."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Suojauslokit ja niihin liittyvät henkilötiedot anonymisoitiin."
+
+msgid "Invalid user ID."
+msgstr "Virheellinen käyttäjätunnus."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Manuaalinen tai webhook-pohjainen poistopyyntö jonossa."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Mailchimp-poistopyyntö lähetetty."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Raidan poistaminen edellyttää manuaalista API-seurantaa vaatimustenmukaisuustietueiden osalta."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "Google Analyticsin käyttäjän poistosovellusliittymäpyyntö on määritettävä ulkoisesti."
+
+msgid "Privacy Preferences"
+msgstr "Yksityisyysasetukset"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Valitse sallitut valinnaiset käsittelyluokat."
+
+msgid "Save Preferences"
+msgstr "Tallenna asetukset"
+
+msgid "Consent Management"
+msgstr "Suostumuksen hallinta"
+
+msgid "Given"
+msgstr "Annettu"
+
+msgid "Withdrawn"
+msgstr "Peruutettu"
+
+msgid "No consent records found."
+msgstr "Suostumustietueita ei löytynyt."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Virhe</strong>: Jotain meni pieleen. Yritä myöhemmin uudelleen."
+
+msgid "The peer URL is not valid."
+msgstr "Vertais-URL-osoite ei kelpaa."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Et voi lisätä omaa sivustoasi vertaissivustoksi."
+
+msgid "API key must be at least 16 characters."
+msgstr "API-avaimen on oltava vähintään 16 merkkiä pitkä."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Vertaistuinten enimmäismäärä (%d) saavutettu."
+
+msgid "Missing authentication header."
+msgstr "Todennusotsikko puuttuu."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Virheellinen solmuavain. Vertaista ei tunnistettu."
+
+msgid "Invalid request signature."
+msgstr "Virheellinen pyynnön allekirjoitus."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Hintaraja ylitetty. Yritä myöhemmin uudelleen."
+
+msgid "Invalid site identifier."
+msgstr "Virheellinen sivuston tunniste."
+
+msgid "Unknown contribution type."
+msgstr "Tuntematon lahjoitustyyppi."
+
+msgid "Unknown benefit type."
+msgstr "Tuntematon edun tyyppi."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Tähän etuuteen ei ole riittävästi luottoja."
+
+msgid "Threat Forecast"
+msgstr "Uhkaennuste"
+
+msgid "Your site profile:"
+msgstr "Sivustoprofiilisi:"
+
+msgid "Predicted threats this month:"
+msgstr "Ennustetut uhat tässä kuussa:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Korkean luotettavuuden vektoreita ei ole vielä havaittu."
+
+msgid "Recommended actions:"
+msgstr "Suositellut toimenpiteet:"
+
+msgid "No immediate actions required."
+msgstr "Ei vaadi välittömiä toimia."
+
+msgid "Not logged in"
+msgstr "Ei kirjautunut sisään"
+
+msgid "A reason is required"
+msgstr "Syy vaaditaan"
+
+msgid "Invalid requested role"
+msgstr "Virheellinen pyydetty rooli"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Tätä roolia varten on jo aktiivinen tai odottava pyyntö."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Käyttöoikeuspyyntö lähetetty. Järjestelmänvalvoja tarkistaa pyyntösi."
+
+msgid "Invalid request"
+msgstr "Virheellinen pyyntö"
+
+msgid "Pending request not found"
+msgstr "Odottavaa pyyntöä ei löydy"
+
+msgid "Request role is invalid"
+msgstr "Pyyntörooli on virheellinen"
+
+msgid "Invalid approved role"
+msgstr "Virheellinen hyväksytty rooli"
+
+msgid "Access approved successfully"
+msgstr "Käyttöoikeus hyväksytty"
+
+msgid "Target user (username or email) is required."
+msgstr "Kohdekäyttäjä (käyttäjänimi tai sähköpostiosoite) vaaditaan."
+
+msgid "A reason is required."
+msgstr "Syy vaaditaan."
+
+msgid "Invalid requested role."
+msgstr "Virheellinen pyydetty rooli."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Kohdekäyttäjää ei löydy. Käytä olemassa olevaa käyttäjätunnusta tai sähköpostiosoitetta."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Käyttäjällä on jo tämä rooli. Väliaikaista nousua ei tarvita."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Tälle käyttäjälle ja roolille on jo olemassa aktiivinen tai odottava apuraha."
+
+msgid "Unable to grant temporary access."
+msgstr "Tilapäistä käyttöoikeutta ei voida myöntää."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Väliaikainen käyttöoikeus %2$s myönnetty käyttäjälle %1$s %3$d minuutiksi."
+
+msgid "Invalid grant"
+msgstr "Virheellinen apuraha"
+
+msgid "Grant not found or already revoked"
+msgstr "Apurahaa ei löydy tai se on jo peruutettu"
+
+msgid "Permission revoked successfully"
+msgstr "Lupa peruutettu onnistuneesti"
+
+msgid "Once Monthly"
+msgstr "Kerran Kuukaudessa"
+
+msgid "Every 5 Minutes"
+msgstr "5 minuutin välein"
 

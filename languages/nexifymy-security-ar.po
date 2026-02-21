@@ -8,4379 +8,5287 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "تم اكتشاف %d تهديدًا في الفحص الأخير"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(تحدث بهذا الرمز للتحقق)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - عالية"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 يوم"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 ساعة"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 يوما"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 دقيقة"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2- متوسطة"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 ساعة"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "طرق 2FA"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "إعدادات 2FA"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - منخفض"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 أيام"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 يوما"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 دقيقة"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 يوما"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 ممنوع"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 غير موجود"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 طلبات كثيرة جدًا (مستحسن)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 دقائق"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 الخدمة غير متاحة"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 ساعات"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 يوما"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 أيام"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 أيام (مستمر)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 يوما"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 يوما"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "حالة تعلم الذكاء الاصطناعي"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "حالة الذكاء الاصطناعي"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "كشف التهديدات بالذكاء الاصطناعي"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "تمت إعادة ضبط بيانات تعلم الذكاء الاصطناعي بنجاح."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "طلبات أجاكس في الدقيقة"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "واجهة برمجة التطبيقات والأمن بدون رأس"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "واجهة برمجة التطبيقات والخدمات"
 
 msgid "API Burst Allowance"
-msgstr "API Burst Allowance"
+msgstr "بدل انفجار API"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "نقاط نهاية API"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "مفتاح واجهة برمجة التطبيقات"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "تحديد معدل واجهة برمجة التطبيقات (API)."
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "طلبات API في الدقيقة"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "أمان واجهة برمجة التطبيقات"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "رمز API"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "تم تجاوز الحد الأقصى لمعدل واجهة برمجة التطبيقات. الحد: %d طلب في الدقيقة."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "قيود واجهة برمجة التطبيقات"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "رمز واجهة برمجة التطبيقات (API) أو رمز HEC المميز أو مفتاح المصادقة."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "مهجور"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "حول الحجر الصحي"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "تم رفض الوصول"
 
 msgid "Action"
-msgstr "Action"
+msgstr "العمل"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "الإجراءات"
 
 msgid "Active"
-msgstr "Active"
+msgstr "نشط"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "لوحة معلومات النشاط"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "سجل النشاط"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "إعدادات سجل النشاط"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "لن يتم تسجيل النشاط من هؤلاء المستخدمين."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "سيتم حذف سجلات الأنشطة الأقدم من ذلك تلقائيًا."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "تتبع النشاط"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "أضف %d حرفًا إضافيًا."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "أضف 2FA إلى حسابات المستخدمين لمزيد من الأمان."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "أضف CAPTCHA لتسجيل الدخول والنماذج."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "أضف التحقق من CAPTCHA إلى نماذج تسجيل الدخول"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "أضف رؤوس أمان HTTP (خيارات الإطار X، CSP، إلخ.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "إضافة مفتاح مرور جديد"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "إضافة رؤوس الأمان"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "إضافة خطاف ويب"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "أضف خيارات X-Frame وخيارات نوع المحتوى X ورؤوس الأمان الأخرى."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "أضف خيارات X-Frame ورؤوس X-XSS-Protection"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "أضف طبقة إضافية من الأمان عن طريق طلب نموذج ثانٍ من المصادقة."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "أضف طبقة إضافية من الأمان من خلال طلب نموذجين من المصادقة لتسجيلات دخول المستخدم."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "أضف طبقة إضافية من الأمان باستخدام المصادقة الثنائية المستندة إلى TOTP."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "إضافة أحرف صغيرة."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "أضف أرقامًا."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "إضافة أحرف خاصة."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "أضف إلى القائمة"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "أضف الحروف الكبيرة."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "إجراءات أمنية إضافية لتسجيل الدخول. يعمل مع محدد المعدل."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "يضيف اختبار CAPTCHA إلى نماذج تسجيل الدخول. آمنة ولكنها قد تؤثر على تجربة المستخدم."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "يضيف Google reCAPTCHA أو Cloudflare Turnstile أو تحديات الرياضيات"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "يضيف رؤوس أمان HTTP (X-Frame-Options، CSP). آمن - يحسن أمان المتصفح."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "يضيف طبقة أمان إضافية باستخدام رموز TOTP أو البريد الإلكتروني أو الرسائل القصيرة"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "تسجيلات دخول المشرف (تسجيلات دخول المشرف الناجحة)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "متقدم"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "إعدادات جدار الحماية المتقدمة"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "تصلب متقدم"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "خيارات تصلب متقدمة"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "إعدادات تسجيل الدخول المتقدمة"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "خيارات متقدمة"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "خيارات الماسح الضوئي المتقدمة"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "الاستدلال المتقدم"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "الملفات المتأثرة:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "عتبة التنبيه"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "أنواع التنبيه"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "التنبيهات"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "يتم إرسال التنبيهات إذا تم إلغاء تنشيط البرنامج المساعد."
 
 msgid "All"
-msgstr "All"
+msgstr "الكل"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "كل شيء واضح!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "جميع الأحداث"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "جميع الشدة"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "السماح لجميع المستخدمين بتمكين المصادقة الثنائية (2FA) طوعًا."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "السماح برمز البريد الإلكتروني كطريقة احتياطية"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "السماح برشقات نارية قصيرة فوق الحد الأقصى للمعدل."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "السماح للمستخدمين بالوقت لإعداد المصادقة الثنائية (2FA) قبل التنفيذ."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "السماح للمستخدمين بتمكين المصادقة الثنائية (2FA)."
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "السماح للمستخدمين بإنشاء رموز احتياطية للطوارئ."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "السماح للمستخدمين بتخطي المصادقة الثنائية (2FA) على الأجهزة الموثوقة."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "وكلاء المستخدم المسموح بهم"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "التحليلات"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "الشذوذ"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "أي شدة"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "تؤدي أي تعديلات إلى تنبيهات فورية عبر البريد الإلكتروني."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "تطبيق الإعدادات"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "قم بتطبيق أفضل ممارسات أمان WordPress."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "تطبيق الإصلاحات الأمنية"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "تطبيق إجراءات تشديد الأمان على WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "قم بتطبيق إجراءات تشديد الأمان لحماية تثبيت WordPress الخاص بك."
 
 msgid "ArcSight"
-msgstr "ArcSight"
+msgstr "آرك سايت"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "هل أنت متأكد أنك تريد حذف مفتاح المرور هذا؟"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "هل أنت متأكد أنك تريد المتابعة؟"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "الحماية من الهجوم"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "نافذة المحاولة"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "الصوت (التحدث)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "جارٍ المصادقة..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "رمز المصادقة"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "أحداث المصادقة"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "رمز المصادقة"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "فشلت المصادقة. يرجى المحاولة مرة أخرى."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "المصادقة مطلوبة للوصول إلى واجهة برمجة التطبيقات (API)."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "المصادقة مطلوبة للوصول إلى GraphQL."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "مسح المؤلف"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "مدة الحظر التلقائي"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "الحظر التلقائي للمخالفين المتكررين"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "عتبة الحظر التلقائي"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "الإصلاح التلقائي"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "إنشاء التقارير تلقائيًا"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "تهديدات الحجر الصحي التلقائي"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "جدول المسح التلقائي"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "التحديث التلقائي"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "إعدادات التحديث التلقائي"
 
 msgid "Auto-Updates"
 msgstr "التحديثات التلقائية"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "الكشف التلقائي"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "المسح الآلي"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "المسح التلقائي"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "قم تلقائيًا بإدراج عناوين IP التي تؤدي إلى تشغيل القواعد عدة مرات في القائمة السوداء."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "إنشاء تذاكر Jira تلقائيًا للحوادث الأمنية ونقاط الضعف."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "إنشاء تذاكر للحوادث الأمنية تلقائيًا في أنظمة إدارة مشروعك."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "إنشاء التقارير تلقائيا في الموعد المحدد"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "نقل البرامج الضارة المكتشفة تلقائيًا إلى الحجر الصحي."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "تشغيل عمليات الفحص تلقائيًا في الخلفية."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "قم بتحديث توقيعات البرامج الضارة تلقائيًا يوميًا."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "البلدان المتاحة"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "الأحداث المتاحة"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "متوسط/يوم"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "عمليات مسح الخلفية"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "عمل نسخة احتياطية من الملفات التالفة قبل الاستبدال"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "رموز النسخ الاحتياطي"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "النسخ الاحتياطي، وتحسين، وتأمين قاعدة البيانات الخاصة بك."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "النسخ الاحتياطية والتنظيف"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "يتم تخزين النسخ الاحتياطية في wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "الروبوتات السيئة"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "الطلبات السيئة"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "متوازن (مستحسن)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "سجلات السلوك"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "التحليل السلوكي"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "القائمة السوداء (قائمة الحظر)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "القائمة السوداء (تم تحديد الكتلة)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "عناوين IP القائمة السوداء"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "القائمة السوداء: حظر البلدان المحددة. القائمة البيضاء: السماح للبلدان المحددة فقط."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "عناوين IP المدرجة في القائمة السوداء"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "منع الروبوتات السيئة"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "منع هجمات CSRF"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "حظر كلمات المرور الشائعة"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "كتلة اجتياز الدليل"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "مدة الحظر"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "حظر وكلاء المستخدم الفارغين"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "حظر المستخدمين الزائدين لواجهة برمجة التطبيقات (API)."
 
 msgid "Block File Editor"
-msgstr "Block File Editor"
+msgstr "محرر كتلة الملف"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "منع إدراج الملف المحلي"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "حظر الرسالة"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "وضع الحظر"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "وضع الحظر (مستحسن)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "وضع الحظر: يحظر الطلبات الضارة. وضع المراقبة: يسجل التهديدات دون حظر."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "منع تنفيذ التعليمات البرمجية عن بعد"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "منع تضمين الملفات البعيدة"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "منع حقن SQL"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "منع تحميلات الملفات المشبوهة"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "منع الوصول إلى XML-RPC (يمنع القوة الغاشمة)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "منع هجمات XSS"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "منع الوصول من بلدان محددة."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "منع برامج الزحف العدوانية (معدل الطلب المرتفع)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "حظر عمليات فحص تعداد المؤلف (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "حظر سلاسل الاستعلام الطويلة جدًا."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "حظر الروبوتات والكاشطات السيئة المعروفة"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "حظر الروبوتات والكاشطات الضارة المعروفة."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "حظر الطلبات المشوهة وسلاسل الاستعلام المشبوهة"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "منع الطلبات الضارة"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "منع الطلبات والهجمات الضارة"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "حظر أو السماح بحركة المرور على أساس البلد."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "حظر الطلبات الأكبر من هذا الحجم لمنع هجمات DoS."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "حظر الطلبات باستخدام وكيل مستخدم فارغ (قد يمنع بعض الروبوتات الشرعية)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "حظر الطلبات بدون رأس وكيل المستخدم."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "حظر عناوين IP المشبوهة"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "حظر وكلاء المستخدم المشبوهين"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "منع حركة المرور من بلدان محددة. قم بتكوين البلدان في الإعدادات قبل التمكين."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "حظر التحميلات ذات الامتدادات القابلة للتنفيذ (.php، .exe، .sh، وما إلى ذلك)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "الهجمات المحظورة"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "ملحقات الملفات المحظورة"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "الطلبات المحظورة"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "وكلاء المستخدم المحظورون"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "يحظر عناوين IP التي تظهر سلوكًا ضارًا. آمن - يمكنك إضافة عنوان IP الخاص بك إلى القائمة البيضاء."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "قم بوضع إشارة مرجعية على عنوان URL هذا حتى تتمكن دائمًا من الوصول إلى صفحة تسجيل الدخول الخاصة بك."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "حماية الروبوتات والزاحف"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "حماية الروبوت ووكيل المستخدم"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "منع البوت"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "حماية البوت"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "المتصفحات"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "القوة الغاشمة"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "حماية القوة الغاشمة"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "حماية القوة الغاشمة وحدود محاولات تسجيل الدخول."
 
 msgid "Bug"
-msgstr "Bug"
+msgstr "علة"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "اليوم الأكثر ازدحاما"
 
 msgid "CAPTCHA"
-msgstr "CAPTCHA"
+msgstr "اختبار CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "حماية كابتشا"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "تكامل CDN"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "حالة CDN"
 
 msgid "CEF (Common Event Format)"
-msgstr "CEF (Common Event Format)"
+msgstr "CEF (تنسيق الحدث المشترك)"
 
 msgid "CI/CD"
-msgstr "CI/CD"
+msgstr "سي آي/سي دي"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "خط أنابيب CI/CD"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "تكامل خطوط أنابيب CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "إلغاء"
 
 msgid "Captcha"
-msgstr "Captcha"
+msgstr "كلمة التحقق"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "معاينة كلمة التحقق"
 
 msgid "Captcha Provider"
-msgstr "Captcha Provider"
+msgstr "مزود كلمة التحقق"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "إعدادات كلمة التحقق"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "تغيير بادئة قاعدة البيانات"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "تغيير بادئة جدول قاعدة البيانات (يتطلب تحديث قاعدة البيانات يدويًا)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "قم بتغيير عنوان URL الافتراضي لتسجيل الدخول لمنع الهجمات."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "قم بتغيير عنوان URL الافتراضي لتسجيل الدخول إلى wp-admin لمنع الهجمات الآلية."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "يغير عنوان URL لتسجيل الدخول من /wp-admin إلى سبيكة مخصصة لمنع هجمات الروبوت"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "قناة"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "متطلبات الشخصية"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "التحقق من النزاهة الأساسية"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "تحقق الفاصل الزمني"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "فحص وإصلاح ملفات WordPress الأساسية التالفة باستخدام المصادر الرسمية."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "تحقق من الملفات الأساسية بحثًا عن التعديلات والبرامج الضارة."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "تحقق من وجود أبواب خلفية"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "التحقق من التشويش"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "التحقق من وجود نقاط الضعف المعروفة."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "التحقق من الملفات التي تم تحميلها بحثًا عن محتوى ضار."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "الشيكات لقذائف الويب"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "التحقق من المكونات الإضافية/الموضوعات بحثًا عن نقاط الضعف المعروفة. آمن - يتحقق فقط من الإصدارات."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "اختر سبيكة فريدة يصعب تخمينها."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "اختر نوع التحدي لـ NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "تنظيف الملفات"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "الملفات النظيفة:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "تنظيف وتحسين قاعدة البيانات"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "تنظيف البيانات غير الضرورية لتحسين أداء قاعدة البيانات."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "مسح السجلات"
 
 msgid "Cloudflare"
-msgstr "Cloudflare"
+msgstr "كلاودفلير"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "كلاود فلير وأكثر"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "إعدادات واجهة برمجة تطبيقات Cloudflare"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "رمز Cloudflare API المميز (مع أذونات المنطقة)"
 
 msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
+msgstr "Cloudflare الباب الدوار"
 
 msgid "Code"
-msgstr "Code"
+msgstr "الكود"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "انتهاء صلاحية الكود"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "مشكلات جودة الكود"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "قائمة مفصولة بفواصل لامتدادات الملفات لمنع التحميلات."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "قائمة مفصولة بفواصل لامتدادات الملفات المطلوب تخطيها (على سبيل المثال، jpg، png، pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "تم حظر التعليق"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "نموذج التعليق"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "معدل نشر التعليق"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "نموذج التعليق"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "الاتصالات"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "منصات التواصل"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "قارن الملفات الأساسية مع المجاميع الاختبارية الرسمية لـ WordPress."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "قارن ملفات WordPress الأساسية الخاصة بك بالمجاميع الاختبارية الرسمية لاكتشاف التعديلات."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "يقارن كل ملف أساسي بالتجزئة المتوقعة"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "قم بتعطيل كافة خلاصات RSS وAtom بشكل كامل."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "قم بتعطيل جميع تعديلات الملفات بشكل كامل (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "الامتثال"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "الامتثال وإعداد التقارير"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "تقارير الامتثال والأمن"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "إعدادات الامتثال"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "تبعيات الملحن"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "تحليل شامل"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "تتبع شامل لنشاط المستخدم، ومراقبة تسجيل الدخول، وتسجيل أحداث النظام."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "تكوين"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "قم بتكوين 2FA لتعزيز أمان تسجيل الدخول"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "قم بتكوين CDN للأمان والأداء."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "تكوين تكامل CDN وإدارة ذاكرة التخزين المؤقت."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "قم بتكوين جدار حماية تطبيقات الويب (WAF) لحماية موقعك."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "تكوين تنبيهات وإشعارات البريد الإلكتروني."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "تكوين قواعد جدار الحماية وإعدادات الحماية."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "قم بتكوين سلوك الماسح الضوئي للبرامج الضارة وخيارات الفحص المجدولة."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "تكوين إعدادات البرنامج المساعد والتفضيلات."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "تكوين إعدادات البرنامج المساعد."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "قم بتكوين إعدادات الأمان الخاصة بك."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "تأكيد"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "تأكيد الإجراء"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "البرامج الضارة المؤكدة"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "قم بتوصيل مراقبة الأمان الخاصة بك بمنصات SIEM وإصدار التذاكر والاتصالات ومنصات CI/CD."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "اتصل بفريق الدعم لدينا للحصول على المساعدة فيما يتعلق بـ NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "المحتوى"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "نشاط المحتوى"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "تغييرات المحتوى"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "أحداث المحتوى"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "أمن المحتوى"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "تعديلات الملف الأساسية"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "إصلاح الملف الأساسي"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "الإصلاح الأساسي"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "سلامة ووردبريس الأساسية"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "سلامة الملف الأساسية"
 
 msgid "Count"
-msgstr "Count"
+msgstr "عد"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "البلدان"
 
 msgid "Country"
-msgstr "Country"
+msgstr "البلد"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "إعدادات حظر البلد"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "القيود القطرية"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "إنشاء نسخة احتياطية الآن"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "قم بإنشاء نسخة احتياطية من قاعدة بيانات WordPress الخاصة بك. يتم تخزين النسخ الاحتياطية بشكل آمن ويمكن تنزيلها."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "قم بإنشاء حوادث في ServiceNow للأحداث الأمنية الهامة."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "قم بإنشاء خطاف ويب على: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "أنشئ خطافًا على الويب في إعدادات خادم Discord > عمليات التكامل > خطافات الويب"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "إنشاء خطاف ويب: الفرق > القناة > الموصلات > خطاف الويب الوارد"
 
 msgid "Created"
-msgstr "Created"
+msgstr "تم إنشاؤها"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "تم الإنشاء: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "حرجة"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "الحرجة فقط"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "عنوان URL الحالي لتسجيل الدخول"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "الإصدار الحالي"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "الحالي:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "عنوان URL لتسجيل الدخول المخصص"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "عنوان URL مخصص"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "خطافات الويب المخصصة"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "يوميا"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "يوميًا (موصى به)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "ملخص الحالة اليومية"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "ملخص يومي"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "لوحة القيادة"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "الاحتفاظ بالبيانات"
 
 msgid "Database"
-msgstr "Database"
+msgstr "قاعدة البيانات"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "إجراءات قاعدة البيانات"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "النسخ الاحتياطي لقاعدة البيانات"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "معلومات قاعدة البيانات"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "تحسين قاعدة البيانات"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "محسن قاعدة البيانات"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "أمن قاعدة البيانات"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "حجم قاعدة البيانات"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "النسخ الاحتياطي لقاعدة البيانات وتحسينها. قم بتكوين جدول النسخ الاحتياطي قبل التمكين."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "فحص أمن قاعدة البيانات"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "التاريخ"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "التاريخ/الوقت"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "مراقبة التعطيل:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "وضع التصحيح"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "عميق"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "المسح العميق"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "وضع المسح الافتراضي"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "يتم استخدام وضع الفحص الافتراضي عند عدم تحديد أي شيء."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "التعاريف"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "حذف"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "احذف جميع بيانات البرنامج المساعد عند إلغاء التثبيت"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "حذف:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "فحص التبعية ومراقبة البرامج النصية لجهة خارجية والتحقق من سلامة CDN."
 
 msgid "Description"
-msgstr "Description"
+msgstr "الوصف"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "رؤى تفصيلية حول حركة مرور موقعك والأحداث الأمنية"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "رؤى تفصيلية حول أداء أمان موقع الويب الخاص بك."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "كشف وحظر محاولات تنفيذ التعليمات البرمجية."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "كشف البرامج النصية والأصداف المخفية في الباب الخلفي."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "كشف البرامج الضارة والأبواب الخلفية والأكواد المشبوهة"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "كشف التهديدات"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "اكتشاف التهديدات غير المعروفة باستخدام التحليل السلوكي."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "طرق الكشف"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "أنواع الأجهزة"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "صعوبة"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "مستوى الصعوبة"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "مستوى الصعوبة في تحديات NexifyMy captcha."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "مباشر"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "اجتياز الدليل"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "حماية اجتياز الدليل"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "تعطيل المصادقة الثنائية (2FA)."
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "تعطيل كلمات مرور التطبيقات"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "تعطيل أرشيفات المؤلف"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "تعطيل تصفح الدليل"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "تعطيل التضمينات"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "تعطيل محرر الملفات"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "تعطيل تعديلات الملفات"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "تعطيل رسائل خطأ تسجيل الدخول"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "تعطيل الرد على المكالمات"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "تعطيل ردود الاتصال"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "تعطيل تثبيت البرنامج المساعد/الموضوع"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "تعطيل تعداد مستخدم REST API"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "تعطيل خلاصات RSS/Atom"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "تعطيل النقر بزر الماوس الأيمن"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "تعطيل اختيار النص"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "تعطيل عمليات التتبع"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "تعطيل محرر WP"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "تعطيل XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "تعطيل XML-RPC (يمنع ناقل القوة الغاشمة الشائع)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "تعطيل XML-RPC (يمنع هجمات pingback)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "تعطيل XML-RPC (المستخدم في هجمات DDoS وهجمات القوة الغاشمة)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "قم بتعطيل صفحات أرشيف المؤلف لمنع تعداد اسم المستخدم."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "تعطيل وظيفة oEmbed ونقاط نهاية REST API."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "تعطيل وظيفة pingback لمنع DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "تعطيل وظيفة pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "قم بتعطيل محرر ملفات البرنامج المساعد/الموضوع في مسؤول WordPress."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "تعطيل تعداد المستخدم العام عبر REST API"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "قم بتعطيل قائمة سياق النقر بزر الماوس الأيمن على الواجهة الأمامية."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "قم بتعطيل محرر السمات والمكونات الإضافية المضمن لمنع إدخال التعليمات البرمجية."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "تعطيل محرر السمات والمكونات الإضافية"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "تعطيل محرر السمة/البرنامج المساعد في المشرف"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "تعطيل وظيفة التتبع."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "معطل"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "تعطيل XML-RPC لمنع الهجمات. آمن إلا إذا كنت تستخدم Jetpack أو تطبيقات الهاتف المحمول."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "تعطيل محرر السمات/المكونات الإضافية المدمج. آمن - يمنع تحرير التعليمات البرمجية في المشرف."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "تعطيل تحرير الملفات، XML-RPC، وتطبيق أفضل ممارسات WordPress"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "تكامل الخلاف"
 
 msgid "Download"
-msgstr "Download"
+msgstr "تحميل"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "تنزيل حزمة WordPress الجديدة من المصدر الرسمي"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "سهل"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "سهل (للإضافة فقط)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "تم تعطيل تحرير ملفات البرنامج المساعد NexifyMy Security لأسباب أمنية."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "محرر والوصول إلى الملفات"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "حظر المحرر:"
 
 msgid "Elasticsearch"
-msgstr "Elasticsearch"
+msgstr "بحث مرن"
 
 msgid "Email"
-msgstr "Email"
+msgstr "البريد الإلكتروني"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "إعدادات تنبيه البريد الإلكتروني"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "تنبيهات البريد الإلكتروني"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "النسخ الاحتياطي للبريد الإلكتروني"
 
 msgid "Email Notifications"
 msgstr "إشعارات البريد الإلكتروني"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "تقارير البريد الإلكتروني"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "تقارير مسح البريد الإلكتروني"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "التحقق من البريد الإلكتروني"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "وكيل المستخدم فارغ"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "تمكين"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "تمكين 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "تمكين وحدة 2FA"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "تمكين تسجيل النشاط"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "تمكين التنبيهات"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "تمكين حماية CAPTCHA"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "تمكين تكامل CDN"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "تمكين ميزات CDN"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "تمكين تكامل CI/CD"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "تمكين كلمة التحقق"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "تمكين خطافات الويب المخصصة"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "تمكين الخلاف"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "تمكين تنبيهات البريد الإلكتروني"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "تمكين جدار الحماية"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "تمكين الحظر الجغرافي"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "تمكين إخفاء تسجيل الدخول"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "تمكين جيرا"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "تمكين الحماية"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "تمكين تحديد المعدل"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "تمكين تكامل SIEM"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "تمكين SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "تمكين الماسح الضوئي"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "تمكين وحدة الماسح الضوئي"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "تمكين عمليات الفحص المجدولة"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "تمكين الخدمة الآن"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "تمكين سلاك"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "تمكين الفرق"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "تمكين المصادقة الثنائية"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "تمكين واف"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "تمكين وحدة WAF"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "تمكين حماية WAF"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "تمكين جدار حماية تطبيقات الويب"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "تمكين حماية جدار حماية تطبيقات الويب."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "تمكين وتكوين وحدات الأمان لموقعك."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "تمكين وتكوين وحدات الأمان."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "تمكين حماية كلمة التحقق"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "تمكين الحظر على أساس البلد"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "تمكين تسجيل التصحيح (لاستكشاف الأخطاء وإصلاحها فقط)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "تمكين جدار الحماية لمنع الهجمات"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "تمكين تحديد معدل تسجيل الدخول"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "تمكين الماسح الضوئي للبرامج الضارة"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "تمكين أو تعطيل وحدات الأمان."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "تمكين أو تعطيل وحدة WAF بأكملها."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "تمكين أو تعطيل الماسح الضوئي للبرامج الضارة."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "تمكين أو تعطيل وحدة تحديد المعدل."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "تمكين أو تعطيل المصادقة الثنائية."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "تمكين عمليات الفحص المجدولة"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "تمكين ميزات فحص الثغرات الأمنية"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "ممكّن"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "نقطة النهاية"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "عنوان URL لنقطة النهاية"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "فرض كلمات مرور قوية"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "فرض متطلبات كلمة المرور القوية"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "فرض متطلبات كلمة المرور القوية لجميع المستخدمين."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "فرض متطلبات كلمة المرور القوية."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "يفرض متطلبات كلمة مرور قوية للمستخدمين. آمن - يؤثر فقط على كلمات المرور الجديدة."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "يفرض كلمات مرور قوية مع الحد الأدنى من الطول وقواعد التعقيد"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "أدخل الرمز المكون من 6 أرقام للتحقق من الإعداد"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "أدخل عناوين IP، واحدة في كل سطر"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "أدخل الإجابة"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "أدخل الرمز:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "أمان WordPress على مستوى المؤسسات"
 
 msgid "Error"
-msgstr "Error"
+msgstr "خطأ"
 
 msgid "Event"
-msgstr "Event"
+msgstr "حدث"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "تنسيق الحدث"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "سجلات الأحداث"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "خطورة الحدث"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "نوع الحدث"
 
 msgid "Events"
-msgstr "Events"
+msgstr "الأحداث"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "الأحداث (7 أيام)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "الأحداث لإنشاء التذاكر"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "الأحداث إلى الأمام"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "الأحداث للإخطار"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "مثال: إجراءات جيثب"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "على سبيل المثال: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "مثال: خط أنابيب جنكينز"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "الامتدادات المستبعدة"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "أنماط الملفات المستبعدة"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "المسارات المستبعدة"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "المستخدمون المستبعدون"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "الاستثناءات"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "مسح شامل للملفات"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "النسخ الاحتياطية الموجودة"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "تصدير CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "إعدادات التصدير"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "قم بتصدير إعدادات NexifyMy Security إلى ملف JSON. يتضمن ذلك جميع تكوينات الوحدة النمطية وقواعد جدار الحماية وقوائم IP وإعدادات المسح الضوئي."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "البرامج النصية الخارجية وموارد CDN"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "أمان إضافي لتسجيل الدخول"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "فشل البناء على البرامج الضارة"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "فشل البناء على نقاط الضعف"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "فشل"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "محاولات 2FA الفاشلة قبل الإغلاق المؤقت."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "فشل تسجيل الدخول"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "تسجيلات الدخول الفاشلة"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "تم اكتشاف محاولة تسجيل دخول فاشلة"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "فشل في تسجيل مفتاح المرور."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "التنفيذ السريع"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "فحص أمني سريع"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "جلب المجاميع الاختبارية الرسمية للملف من WordPress.org API"
 
 msgid "File"
-msgstr "File"
+msgstr "ملف"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "محرر الملفات"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "تجزئة الملف:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "إدراج الملف"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "حماية إدراج الملف"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "التحقق من سلامة الملف"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "مراقبة سلامة الملفات"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "أذونات الملف"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "الملف معزول"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "امتدادات الملفات المراد استبعادها من المسح (امتداد واحد لكل سطر، بدون نقاط)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "اسم الملف"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "الملفات الممسوحة ضوئيا"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "الملفات التي تم فحصها:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "تتم مقارنة الملفات بشكل دوري مع خط الأساس."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "يتم تخزين الملفات الموجودة في وحدة العزل بأمان ولا يمكن تنفيذها."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "سيتم تخطي الملفات الأكبر من هذا أثناء المسح."
 
 msgid "Filter"
-msgstr "Filter"
+msgstr "تصفية"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "جدار الحماية"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "جدار الحماية والحماية"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "تكوين جدار الحماية"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "قواعد جدار الحماية"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "إعدادات جدار الحماية"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "إصلاح الملفات المعدلة"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "ضع علامة على التعليمات البرمجية المبهمة أو المشفرة بشكل كبير."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "فرض SSL للمسؤول"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "فرض SSL/HTTPS لمنطقة الإدارة (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "القوة للمسؤولين"
 
 msgid "Format:"
-msgstr "Format:"
+msgstr "التنسيق:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "قم بإعادة توجيه الأحداث الأمنية إلى النظام الأساسي لإدارة معلومات الأمان والأحداث (SIEM) الخاص بك للتسجيل والتحليل المركزي."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "تم العثور عليه في لوحة تحكم Cloudflare ضمن نظرة عامة"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "تم العثور عليه في مكون إضافي آمن معروف - وهو استخدام مشروع على الأرجح"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "تم العثور عليه في دليل النظام - قد يكون مشروعًا"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "من التاريخ"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "من البريد الإلكتروني"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "من الاسم"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "عنوان URL الكامل لنقطة نهاية HTTP/HTTPS لمنصة SIEM الخاصة بك."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "التحليل الكامل للبرامج الضارة"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "فحص كامل للبرامج الضارة"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "توقيعات البرامج الضارة الكاملة"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "تحليل كامل للموقع"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "وحدات الامتثال للقانون العام لحماية البيانات (GDPR) وCCPA وHIPAA وتقارير التدقيق الأمني الشاملة."
 
 msgid "General"
-msgstr "General"
+msgstr "عام"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "تحديد الطلب العام"
 
 msgid "General Settings"
 msgstr "الإعدادات العامة"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "إنشاء تقرير"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "توليد سري"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "الإنشاء من: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "تم إنشاؤها"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "نقطة نهاية HTTP العامة"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "الوكيل العام"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "الكتلة الجغرافية"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "الحظر الجغرافي"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "التوزيع الجغرافي"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "احصل على رمز API مجاني من wpscan.com للحصول على بيانات تفصيلية عن الثغرات الأمنية."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "احصل على إشعارات فورية في قنوات اتصال فريقك عند حدوث أحداث أمنية."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "احصل على أحدث حالة المسح"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "الحصول على نتائج المسح (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "احصل على مفاتيحك من لوحة تحكم Google reCAPTCHA أو Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "البدء"
 
 msgid "Google reCAPTCHA v2"
-msgstr "Google reCAPTCHA v2"
+msgstr "جوجل reCAPTCHA v2"
 
 msgid "Google reCAPTCHA v3"
-msgstr "Google reCAPTCHA v3"
+msgstr "جوجل ريكابتشا v3"
 
 msgid "Grace Period"
-msgstr "Grace Period"
+msgstr "فترة السماح"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "الصف"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "أمن GraphQL"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "تم تعطيل استبطان GraphQL."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "تم تجاوز حد معدل GraphQL. الحد: %d استعلامات في الدقيقة."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "رؤوس أمان HTTP"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "أمان النقل الصارم لـ HTTP (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "رؤوس HTTP"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "مقبض"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "صعب"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "صعب (يشمل الضرب)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "موقع هاردن"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "تصلب"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "خيارات تصلب"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "الرؤوس"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "المساعدة والوثائق"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "التحليل الإرشادي"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "الكشف عن نمط ارشادي"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "إخفاء تسجيل الدخول"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "إخفاء صفحة تسجيل الدخول"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "إخفاء عنوان URL لتسجيل الدخول"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "إخفاء عنوان URL لتسجيل الدخول:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "إخفاء إصدار الفسفور الأبيض"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "إخفاء عنوان URL لتسجيل الدخول إلى WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "إخفاء نسخة ووردبريس"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "إخفاء إصدار WordPress من الكود المصدري"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "إخفاء عناوين URL الافتراضية لتسجيل الدخول"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "إخفاء wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "إخفاء wp-admin وwp-login.php عن المهاجمين."
 
 msgid "High"
-msgstr "High"
+msgstr "عالية"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "عالي (الحد الأقصى للاكتشاف)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "إجراءات أمنية مشددة (المزيد من عمليات التفتيش، أبطأ)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "ارتفاع عدد الهجمات المحظورة مؤخرًا"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "عالية أو أعلى"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "التهديدات عالية الخطورة"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "المناطق عالية الخطورة فقط"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "تم اكتشاف تهديد عالي الدرجات من خلال تحليل الذكاء الاصطناعي"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "الحساسية العالية قد تنتج المزيد من النتائج الإيجابية الكاذبة."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "الأعلى"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "اضغط باستمرار على Ctrl/Cmd لتحديد عدة بلدان."
 
 msgid "Host"
-msgstr "Host"
+msgstr "المضيف"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "كل ساعة"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "كيف يعمل المصادقة الثنائية (2FA)."
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "كيف يعمل الإصلاح الأساسي"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "كيف تعمل الحماية الذاتية"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "كم من الوقت يتم حظر IP بعد تجاوز المحاولات."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "كم من الوقت يتم حظر عنوان IP بعد تجاوز الحد الأقصى للمعدل."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "مدة الاحتفاظ بالتقارير القديمة (30-365 يومًا)"
 
 msgid "IBM QRadar"
-msgstr "IBM QRadar"
+msgstr "آي بي إم QRadar"
 
 msgid "IP"
-msgstr "IP"
+msgstr "الملكية الفكرية"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "التحكم في الوصول إلى IP"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "عنوان IP"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "حظر IP"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "تكوين IP"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "تأمين IP"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "عمليات تأمين IP (محاولات القوة الغاشمة)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "إدارة الملكية الفكرية"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "القائمة البيضاء للملكية الفكرية"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "عناوين IP التي تتجاوز تحديد المعدل."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "عناوين IP التي سيتم حظرها دائمًا."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "عناوين IP التي لن يتم حظرها أبدًا."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "يحدد الملفات المعدلة أو المفقودة"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "اختيار الصورة"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "مطلوب اتخاذ إجراء فوري"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "مستوى التأثير"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "إعدادات الاستيراد"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "إعدادات الاستيراد من ملف JSON الذي تم تصديره مسبقًا. سيؤدي هذا إلى استبدال إعداداتك الحالية."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "استيراد/تصدير"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "غير نشط"
 
 msgid "Incident"
-msgstr "Incident"
+msgstr "حادثة"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "قم بتضمين فحوصات القانون العام لحماية البيانات (GDPR)."
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "تضمين القائمة البيضاء/القائمة السوداء لعناوين IP"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "تضمين مقاييس الأداء"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "تضمين الشيكات الأمنية"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "تضمين ملخص التهديد"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "تضمين نتائج الفحص الأخيرة"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "تضمين سجلات الأمان (آخر 30 يومًا)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "إجابة كلمة التحقق غير صحيحة. يرجى العودة والمحاولة مرة أخرى."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "إجابة كلمة التحقق غير صحيحة. يرجى المحاولة مرة أخرى."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "اسم الفهرس أو معرف المصدر لتصنيف الأحداث."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "الفهرس/المصدر"
 
 msgid "Info"
-msgstr "Info"
+msgstr "معلومات"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "الكشف عن المعلومات"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "جارٍ التهيئة..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "اسم المثيل"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "قم بدمج الفحص الأمني في مسارات التكامل والنشر المستمر لديك."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "قم بدمج الفحص الأمني ​​في مسار النشر الخاص بك من خلال خطافات الويب والوصول إلى واجهة برمجة التطبيقات."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "يتكامل مع خدمات CDN. قم بتكوين بيانات اعتماد CDN قبل التمكين."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "التكامل"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "نتائج التحقق من النزاهة"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "فحوصات النزاهة:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "حالة النزاهة"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "رمز JWT غير صالح."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "بيانات اعتماد غير صالحة."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "رمز التحقق غير صالح."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "عزل التهديدات"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "يعزل الملفات المشبوهة دون حذفها. آمنة - يمكن استعادة الملفات."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "نوع المشكلة"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "القضايا التي تم العثور عليها"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "تنسيق جيسون. مثال: {\"التفويض\": \"الرمز المميز للحامل\"، \"نوع المحتوى\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
-msgstr "Jira Cloud URL"
+msgstr "جيرا كلاود URL"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "جيرا التكامل"
 
 msgid "KB"
-msgstr "KB"
+msgstr "كيلو بايت"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "الاحتفاظ بسجلات لجميع الطلبات المحظورة للتحليل."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "احتفظ بسجلات لجميع انتهاكات الحد الأقصى للسعر لتحليلها."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "حافظ على تحديث توقيعات البرامج الضارة الخاصة بك للحصول على أفضل حماية."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "الدول المعروفة"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "تم العثور على ثغرة أمنية معروفة في البرنامج المساعد المثبت"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (التنسيق الموسع لحدث السجل)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "آخر 30 يومًا"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "آخر 30 يومًا"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "آخر 7 أيام"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "آخر 90 يومًا"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "آخر ما تعلمته"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "المسح الأخير"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "المسح الأخير:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "آخر تحديث"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "آخر استخدام: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "أحدث نسخة"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "التعلم - تسجيل الدخول فقط، لا يوجد حظر"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "فترة التعلم"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "التعلم..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "اتركه فارغًا لاستخدام البريد الإلكتروني للمشرف."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "من المحتمل أن يكون آمنًا - تحقق إذا لزم الأمر"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "تقييد الوصول إلى REST API للمستخدمين المصادق عليهم"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "الحد من عمليات إرسال التعليقات لمنع البريد العشوائي."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "الحد من الطلبات المفرطة من عنوان IP واحد."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "الحد من محاولات تسجيل الدخول"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "الحد من محاولات تسجيل الدخول لمنع هجمات القوة الغاشمة"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "الحد من معدلات الطلب لمنع إساءة الاستخدام وهجمات DDoS."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "الحد من معدلات الطلب لمنع إساءة الاستخدام."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "يحد من محاولات تسجيل الدخول لمنع هجمات القوة الغاشمة. آمن - يؤثر فقط على محاولات تسجيل الدخول الفاشلة."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "قائمة نقاط الضعف المعروفة"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "حركة المرور الحية"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "مراقبة حركة المرور الحية"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "جارٍ تحميل حالة CDN..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "جارٍ تحميل التنبيهات..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "جارٍ تحميل بيانات التحليلات..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "جارٍ تحميل النسخ الاحتياطية..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "جارٍ تحميل عناوين IP المحظورة..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "جارٍ تحميل البلدان..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "جارٍ تحميل معلومات قاعدة البيانات..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "جارٍ تحميل البيانات الجغرافية..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "جارٍ تحميل السجلات..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "جارٍ تحميل الإشعارات..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "جارٍ تحميل إحصاءات التحسين..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "جارٍ تحميل حالة الحماية..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "جارٍ تحميل الملفات المعزولة..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "جارٍ تحميل المُحيلين..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "جارٍ تحميل عمليات اكتشاف التهديدات..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "جارٍ تحميل الصفحات العليا..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "جارٍ تحميل بيانات حركة المرور..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "قفل بعد هذه المحاولات العديدة الفاشلة."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "مدة القفل"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "فترة التأمين بعد الحد الأقصى لمحاولات المصادقة الثنائية الفاشلة."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "تسجيل الطلبات المسموح بها"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "تسجيل الطلبات المحظورة"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "تسجيل محاولات تسجيل الدخول الفاشلة"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "تسجيل الخروج"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "سجل تحميلات الوسائط"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "تغييرات خيار السجل"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "تسجيل تغييرات البرنامج المساعد"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "سجل تغييرات النشر/الصفحة"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "سجل تغييرات الملف الشخصي"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "سجل انتهاكات حدود المعدل"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "الاحتفاظ بالسجل"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "سجل تغييرات الدور"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "تسجيل الدخول الناجح"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "سجل تغييرات الموضوع"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "سجل إنشاء/حذف المستخدم"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "قم بتسجيل جميع الطلبات التي تجتاز اختبارات WAF (الاستخدام العالي للقرص)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "التسجيل"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "التسجيل والمراقبة"
 
 msgid "Login"
-msgstr "Login"
+msgstr "تسجيل الدخول"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "تسجيل الدخول والمصادقة"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "نشاط تسجيل الدخول"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "نافذة محاولة تسجيل الدخول"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "محاولات تسجيل الدخول"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "تسجيل الدخول"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "تسجيل الدخول"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "نموذج تسجيل الدخول"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "مدة تأمين تسجيل الدخول"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "حماية تسجيل الدخول"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "الحد من معدل تسجيل الدخول"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "أمان تسجيل الدخول"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "سبيكة تسجيل الدخول"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "إعدادات عنوان URL لتسجيل الدخول"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "نموذج تسجيل الدخول"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "تسجيل الخروج"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "تسجيل الخروج"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "سجلات"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "تتم إزالة السجلات الأقدم من هذا تلقائيًا يوميًا."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "يسجل الأحداث الأمنية للمراجعة. آمن - يسجل النشاط فقط."
 
 msgid "Low"
-msgstr "Low"
+msgstr "منخفض"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "منخفض (نتائج إيجابية كاذبة أقل)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "تأثير منخفض (عمليات فحص أقل وأسرع)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "الحرف الصغير (من الألف إلى الياء)"
 
 msgid "MB"
-msgstr "MB"
+msgstr "ميغابايت"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "أدوات الصيانة والتشخيص لموقعك."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "تأكد من تذكر عنوان URL المخصص لتسجيل الدخول الخاص بك!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "البرامج الضارة والمسح الضوئي"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "تعريفات البرامج الضارة"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "تم العثور على برامج ضارة"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "ماسح البرامج الضارة"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "تم اكتشاف برامج ضارة أثناء فحص الملفات"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "إدارة الإخطارات"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "إدارة التهديدات المعزولة. مراجعة الملفات أو استعادتها أو حذفها نهائيًا."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "إلزامية الأدوار"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "يوصى بالمراجعة اليدوية"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "وضع علامة على الكل مقروءة"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "وضع علامة على الكل كمقروءة"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "مفتاح رئيسي لتمكين أو تعطيل تسجيل جميع الأنشطة."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "سؤال الرياضيات"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "ماكس المحاولات"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "ماكس المحاولات الفاشلة"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "الحد الأقصى لحجم الملف"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "الحد الأقصى لمحاولات تسجيل الدخول"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "الحد الأقصى لطول سلسلة الاستعلام"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "الحد الأقصى لحجم الطلب"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "طلبات ماكس"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "الحد الأقصى لطلبات AJAX في الدقيقة لكل IP."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "الحد الأقصى لطلبات API في الدقيقة لكل IP."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "الحد الأقصى لمحاولات تسجيل الدخول الفاشلة قبل الإغلاق."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "الحد الأقصى لطلبات الصفحة في الدقيقة لكل IP."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "الحد الأقصى لحجم جسم الطلب للمسح الضوئي. سيتم تخطي الطلبات الأكبر حجمًا."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "الحد الأقصى للطلبات المسموح بها في الدقيقة لكل IP."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "الحد الأقصى لطلبات البحث في الدقيقة لمنع استنفاد قاعدة البيانات."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "الحد الأقصى للوقت لعملية مسح واحدة."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "الحد الأقصى للوقت لفحص البرامج الضارة قبل انتهاء المهلة."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "تحميلات الوسائط"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "متوسط"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "متوسط (متوازن)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "المتوسطة (الجمع / الطرح)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "متوسطة أو أعلى"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "حد الذاكرة"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "الذاكرة المخصصة لعمليات المسح."
 
 msgid "Message"
-msgstr "Message"
+msgstr "رسالة"
 
 msgid "Method"
-msgstr "Method"
+msgstr "الطريقة"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "تكامل فرق مايكروسوفت"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "الحد الأدنى %d حرفًا"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "الحد الأدنى للطول"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "الحد الأدنى من خطورة الفشل"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "الحد الأدنى لطول كلمة المرور (8-32 حرفًا)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "الوضع"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "ضوابط الوحدة"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "وحدات"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "مراقبة البرامج النصية الخارجية"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "وضع المراقبة (السجل فقط)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "مراقبة ملفات البرنامج المساعد للتغييرات"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "مراقبة حركة المرور في الموقع في الوقت الحقيقي."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "مراقبة حركة المرور في الوقت الحقيقي"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "مراقبة حركة المرور ونشاط الزوار في الوقت الحقيقي."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "مراقبة اتجاهات الزائرين ومشاهدات الصفحة وأنماط حركة المرور بمرور الوقت."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "المراقبة والتنبيهات"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "يراقب حركة المرور في الوقت الحقيقي. آمن - يتتبع الزيارات فقط."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "شهريا"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "المستخدمين الأكثر نشاطا"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "ينقل الملفات المشبوهة إلى دليل محمي."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "تبعيات NPM"
 
 msgid "Name"
-msgstr "Name"
+msgstr "الاسم"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "هل تحتاج إلى الدعم؟"
 
 msgid "Never"
-msgstr "Never"
+msgstr "أبدا"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "لا تنتهي صلاحيته أبدًا"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "نيكسيفي الأمن"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (مدمج)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "نوع NexifyMy Captcha"
 
 msgid "NexifyMy Security"
 msgstr "NexifyMy Security"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "اكتشف NexifyMy Security تعديلات غير مصرح بها على ملفاته. الرجاء التحقق من التثبيت الخاص بك."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: لديك %d من التنبيهات الأمنية غير المقروءة."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "التحديث القادم"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "لا توجد فترة سماح"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "لا يوجد نشاط حديث"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "لا سري"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "لم يتم تسجيل أي نشاط حتى الآن. سيظهر النشاط هنا بمجرد أن يبدأ المستخدمون في تنفيذ الإجراءات."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "لم يتم تسجيل أي تغييرات في المحتوى حتى الآن."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "لم يتم اختيار أي دولة حتى الآن."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "لا توجد بيانات متاحة"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "لا توجد بيانات الحدث المتاحة حتى الآن."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "لا توجد ملفات في الحجر الصحي."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "لا توجد بيانات جغرافية متاحة"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "لم يتم تسجيل أي نشاط تسجيل الدخول حتى الآن."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "لم يتم تسجيل أي مفاتيح مرور حتى الآن."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "لا توجد تقارير متاحة."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "لم يتم إجراء أي فحص حتى الآن"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "لا توجد نتائج المسح المتاحة. انقر فوق \"تشغيل الفحص\" لتحليل تبعياتك."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "لا توجد نتائج المسح المتاحة. قم بإجراء فحص للتحقق من نقاط الضعف."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "لا توجد توصيات أمنية في هذا الوقت. موقعك محمي بشكل جيد."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "لا توجد بيانات خطورة متاحة."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "لم يتم اكتشاف عناوين IP مشبوهة."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "لم يتم تسجيل أي أحداث النظام حتى الآن."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "لم يتم اكتشاف أي تهديدات حتى الآن."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "لم يتم تسجيل أي نشاط للمستخدم حتى الآن."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "لا يوجد نشاط للمستخدم حتى الآن."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "غير نشط"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "غير ممكّن"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "لم يتم التحقق بعد"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "غير مجدولة"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "ملحوظة:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "البريد الإلكتروني للإخطار"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "إعدادات الإخطار"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "الإخطارات"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "إعلام على تأمين"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "قم بإعلام المستخدمين عند تمكين/تعطيل المصادقة الثنائية في حساباتهم."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "الرقم (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "عدد الرموز الاحتياطية"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "عدد الرموز الاحتياطية التي سيتم إنشاؤها لكل مستخدم."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "عدد محاولات تسجيل الدخول الفاشلة قبل الإغلاق."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "عدد عمليات الإغلاق قبل الحظر الدائم."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "عدد انتهاكات القواعد قبل الحظر التلقائي."
 
 msgid "Object"
-msgstr "Object"
+msgstr "هدف"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "عند تسجيل الدخول التالي، أدخل كلمة المرور + الرمز المكون من 6 أرقام"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "مرة واحدة أسبوعيا"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "IP واحد لكل سطر"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "IP واحد لكل سطر. يُسمح لعناوين IP الوكيلة بإرسال رؤوس X-Forwarded-For (على سبيل المثال، Cloudflare، وموازنات التحميل)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "IP واحد لكل سطر. تتجاوز عناوين IP هذه جميع حدود الأسعار."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "IP واحد لكل سطر. سيتم حظر عناوين IP هذه على الفور. مثال: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "IP واحد لكل سطر. ستتجاوز عناوين IP هذه عمليات فحص WAF."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "IP واحد لكل سطر. ستتجاوز عناوين IP هذه جميع قواعد WAF. مثال: 192.168.1.1، 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "مسار واحد لكل سطر. المسارات المطلقة إلى أدلة إضافية للمسح."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "مسار واحد لكل سطر. الأدلة التي يجب تخطيها أثناء عمليات الفحص."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "واحد لكل سطر. حظر وكلاء المستخدم المحددين. على سبيل المثال: روبوت سيء، مكشطة"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "واحد لكل سطر. سيتجاوز وكلاء المستخدم في هذه القائمة عمليات فحص WAF. على سبيل المثال: Googlebot، روبوت الخدمة الجيدة"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "اسم مستخدم واحد لكل سطر"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "افتح الإعدادات"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "أنظمة التشغيل"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "وضع التشغيل"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "تحسين قاعدة البيانات"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "تحسين وتأمين قاعدة البيانات الخاصة بك."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "تغييرات الخيار"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "اختياري لجميع المستخدمين"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "اختياري: أرسل نتائج المسح إلى نظام CI/CD الخاص بك."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "المسار الأصلي"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "عفا عليها الزمن"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "النفقات العامة"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "تجاوز لغة واجهة البرنامج المساعد. اللغات المدعومة: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "نظرة عامة"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "نسخة PHP"
 
 msgid "Package"
-msgstr "Package"
+msgstr "الحزمة"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "طلبات الصفحة في الدقيقة"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "مشاهدات الصفحة"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "لم يتم العثور على الصفحة."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "مصادقة مفتاح المرور"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "اسم مفتاح المرور (على سبيل المثال، MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "تم تسجيل مفتاح المرور بنجاح!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "مفاتيح المرور غير مدعومة في هذا المتصفح."
 
 msgid "Password"
-msgstr "Password"
+msgstr "كلمة المرور"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "انتهاء صلاحية كلمة المرور"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "سياسات كلمة المرور"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "سياسة كلمة المرور"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "متطلبات كلمة المرور"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "متطلبات كلمة المرور:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "نموذج إعادة تعيين كلمة المرور"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "إعادة تعيين كلمة المرور"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "يجب أن تتكون كلمة المرور من %d حرفًا على الأقل."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "سياسة كلمة المرور"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "نموذج إعادة تعيين كلمة المرور"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "المسارات المراد استبعادها من الفحص (بالنسبة لجذر WordPress). واحد لكل سطر."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "رؤى نشاط الذروة"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "ساعة الذروة"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "ساعات الذروة المرورية"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "وضع الأداء"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "إعدادات الأداء"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "التقارير الدورية"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "دائم"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "عتبة الحظر الدائم"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "يقوم بإزالة الملف نهائيًا."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "من فضلك قم بحل كلمة التحقق الرياضية."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "البرنامج المساعد"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "تحليل البرنامج المساعد والموضوع"
 
 msgid "Plugin Language"
 msgstr "لغة الإضافة"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "آخر تحديث للبرنامج المساعد"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "خيارات البرنامج المساعد"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "البرنامج المساعد الحماية الذاتية"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "إصدار البرنامج المساعد"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "نقاط الضعف في البرنامج المساعد"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "لا يمكن تحرير ملفات البرنامج المساعد عبر WordPress."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "سلامة البرنامج المساعد"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "حماية البرنامج المساعد"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "البرنامج المساعد / الموضوع CVEs"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "تنشيط المكونات الإضافية/الموضوعات والتحديثات وتغييرات الخيارات والصادرات."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "الإضافات"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "تم تفعيل الإضافات"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "تم إلغاء تنشيط المكونات الإضافية"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "تم تحديث المكونات الإضافية"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "تحرير المنشورات/الصفحات، والنشر، وتحميل الوسائط، وحذف المحتوى."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "المشاركات التي تم إنشاؤها"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "المشاركات المنشورة"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "تم تحديث المشاركات"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "تم اكتشاف تهديد أمني محتمل"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "منع هجمات XML-RPC ومحاولات القوة الغاشمة"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "منع الوصول إلى الدلائل خارج جذر الويب."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "منع المهاجمين من تضمين ملفات الخادم المحلي."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "منع القوة الغاشمة"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "منع تحرير التعليمات البرمجية في مسؤول WordPress"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "منع إدراج الدليل عبر .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "منع التنبيهات المكررة خلال هذه الفترة."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "منع التنبيهات المكررة خلال هذه الفترة الزمنية. اضبط على 0 لتعطيل الاختناق."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "منع تحرير ملفات البرنامج المساعد عبر محرر WordPress"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "منع إدراج الملفات البعيدة عبر معلمات URL."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "منع إدراج محتويات الدليل عبر .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "منع تثبيت البرنامج المساعد/الموضوع من لوحة الإدارة."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "منع اختيار النص ونسخه على الواجهة الأمامية."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "منع استخدام كلمات المرور التي يتم اختراقها بشكل شائع"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "منع اكتشاف المستخدم عبر /wp-json/wp/v2/users endpoint."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "يمنع التعديل غير المصرح به لملفات المكونات الإضافية للأمان"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "عنوان البريد الإلكتروني الأساسي للتنبيهات الأمنية."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "أولوية"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "اقتراحات أمنية استباقية وتوصيات تقوية آلية."
 
 msgid "Problem"
-msgstr "Problem"
+msgstr "مشكلة"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "تحديثات الملف الشخصي"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "تغييرات الملف الشخصي وتغييرات الأدوار وإنشاء المستخدم وأحداث الحذف."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "مفتاح المشروع"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "الحماية من تزوير الطلبات عبر المواقع."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "الحماية من هجمات البرمجة النصية عبر المواقع (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "الحماية من هجمات حقن SQL في معلمات GET/POST."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "الحماية ضد حقن SQL وXSS وRFI والهجمات الأخرى."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "يمكنك الحماية من هجمات القوة الغاشمة وهجمات DoS عن طريق الحد من تكرار الطلب لكل عنوان IP."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "حماية نماذج تسجيل الدخول والتسجيل من هجمات الروبوت الآلية."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "حماية نماذج تسجيل الدخول والتسجيل باستخدام رموز التحقق المستندة إلى الرياضيات."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "حماية ملفات البرنامج المساعد من العبث."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "حماية المكون الإضافي للأمان من العبث والتعديلات غير المصرح بها."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "حماية صفحة تسجيل الدخول الخاصة بك من هجمات القوة الغاشمة."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "حماية موقعك من حركة المرور والهجمات الضارة."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "النماذج المحمية"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "مستوى الحماية"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "وضع الحماية"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "قواعد الحماية"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "إعدادات الحماية"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "يحمي REST API باستخدام مصادقة JWT وتحديد المعدل وCORS. ضروري لووردبريس مقطوعة الرأس."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "يحمي من حقن SQL وXSS والطلبات الضارة. آمن للتمكين - يمنع فقط حركة المرور الضارة."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "يحمي ملفات البرنامج المساعد من التعديل. آمن - يمنع العبث."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "مزود"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "تطهير كافة السجلات"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "تطهير ذاكرة التخزين المؤقت"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "الحجر الصحي"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "الحجر الصحي على الفور"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "يوصى بالحجر الصحي"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "الحجر الصحي:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "معزول"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "الملفات المعزولة"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "يتجاوز تعقيد الاستعلام الحد الأقصى لـ %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "يتجاوز عمق الاستعلام الحد الأقصى المسموح به وهو %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "سريع"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "إجراءات سريعة"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "المسح السريع"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "إجراءات المسح السريع"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "الوصول السريع إلى أدوات الصيانة الأمنية."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "سريع: الملفات الأساسية فقط. قياسي: الأساسية + السمات/المكونات الإضافية. عميق: جميع الملفات."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "REST API الأمن"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "مستخدمي واجهة برمجة تطبيقات REST"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "حماية REST API"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "تم تعطيل خلاصات RSS على هذا الموقع."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "حد السعر"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "محدد المعدل"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "الحد من المعدل"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "إعدادات تحديد المعدل"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "مراقبة في الوقت الحقيقي"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "السبب"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "تلقي تنبيهات عبر البريد الإلكتروني عند اكتشاف نقاط الضعف"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "النشاط الأخير"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "الكشف عن التهديدات الأخيرة"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "عناوين IP المحظورة مؤخرًا"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "البريد الإلكتروني للمستلم"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "التوصيات"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "موصى به"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "الإجراءات الموصى بها"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "إعادة توجيه الوصول المحظور"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "إعادة التوجيه إلى الصفحة الرئيسية"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "قم بتقليل مساحة الهجوم عن طريق تعطيل الميزات غير الضرورية وتقوية تكوين WordPress."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "تحديث"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "تجديد"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "إعادة إنشاء خط الأساس"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "تسجيل مفتاح المرور"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "مفاتيح المرور المسجلة"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "تسجيل مفتاح المرور..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "استمارة التسجيل"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "استمارة التسجيل"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "تذكر الجهاز"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "تذكر المدة"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "تذكر هذا الجهاز"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "إزالة"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "إزالة علامات المولد"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "إزالة تلميحات تسجيل الدخول"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "قم بإزالة إصدار WordPress من الكود المصدري"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "قم بإزالة العلامات الوصفية للمولد من جميع الصفحات."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "قم بإزالة تلميحات واقتراحات إعادة تعيين كلمة المرور."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "قم بإزالة معلومات الإصدار من HTML والخلاصات."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "إصلاح كافة الملفات المعدلة"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "إصلاح ملفات WordPress الأساسية المعدلة. استخدمه بعناية - قم بعمل نسخة احتياطية قبل الإصلاح."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "يستبدل الملفات التالفة بإصدارات نظيفة"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "تقرير التاريخ"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "الاحتفاظ بالتقرير (أيام)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "جدول التقرير"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "حدود الطلب والتصفية"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "حد حجم الطلب"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "الطلبات في الدقيقة"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "تتطلب 2FA لجميع المسؤولين"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "تتطلب 2FA لأدوار المستخدم المحددة."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "تتطلب العامل الثاني للتحقق من تسجيل الدخول"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "يتطلب تسجيل الدخول للوصول إلى REST API"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "يتطلب العامل الثاني لتسجيل الدخول. قم بتكوين طريقة 2FA الخاصة بك قبل التمكين."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "إعادة تعيين"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "إعادة ضبط جميع الإعدادات"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "إعادة ضبط التعلم"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "قم بإعادة ضبط جميع إعدادات NexifyMy Security إلى قيمها الافتراضية. لا يمكن التراجع عن هذا الإجراء."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "إعادة التعيين إلى الإعدادات الافتراضية"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "إعادة الضبط..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "رمز الاستجابة على الكتلة"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "استعادة"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "استعادة:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "تقييد REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "يقيد الوصول إلى REST API. قد يؤثر على المكونات الإضافية التي تستخدم REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "فترة الاحتفاظ"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "قم بإرجاع رمز الخطأ إذا تم اكتشاف برامج ضارة (فشل إنشاء CI/CD)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "قم بإرجاع رمز الخطأ إذا تم العثور على ثغرات أمنية."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "يعيد الملف إلى موقعه الأصلي."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "مراجعة التنبيهات ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "قم بالمراجعة على الفور"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "قم بمراجعة سجلات الأمان بانتظام"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "تغييرات الدور"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "قم بتشغيل فحص الأمان الكامل"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "تشغيل فحص النزاهة"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "قم بتشغيل الفحص السريع"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "تشغيل المسح"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "تشغيل فحص الثغرات الأمنية"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "قم بإجراء فحص أمني لتحديد نقاط الضعف"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "يقوم بإجراء عمليات فحص تلقائية للبرامج الضارة يوميًا. آمن - المسح فقط، لا يوجد تغييرات في الملف."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "تنبيه أمني:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "يتم تخزين تجزئة SHA-256 لجميع ملفات المكونات الإضافية كخط أساسي."
 
 msgid "SIEM"
-msgstr "SIEM"
+msgstr "سيم"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "تكامل SIEM"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "منصة سيم"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "حقن SQL"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "حماية حقن SQL"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "حالة طبقة المقابس الآمنة"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "التحقق من طبقة المقابس الآمنة"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "حفظ الإعدادات المتقدمة"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "حفظ إعدادات CI/CD"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "حفظ إعدادات الخلاف"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "حفظ إعدادات البريد الإلكتروني"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "حفظ إعدادات جيرا"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "احفظ إعدادات SIEM"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "حفظ إعدادات الماسح الضوئي"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "حفظ إعدادات الخدمة الآن"
 
 msgid "Save Settings"
 msgstr "حفظ الإعدادات"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "حفظ إعدادات سلاك"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "حفظ إعدادات الفرق"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "حفظ إعدادات WAF"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "حفظ إعدادات Webhook"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "مسح"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "اكتمل المسح"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "اكتمل المسح"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "مسح تبعيات الملحن"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "تكوين المسح"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "ضوابط المسح"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "مسح الدلائل المخصصة"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "مسح تبعيات NPM"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "مسح الإضافات"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "مسح رمز الاستجابة السريعة ضوئيًا باستخدام تطبيق المصادقة (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "نتائج المسح"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "جدول المسح"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "حساسية المسح"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "مسح الأهداف"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "مسح المواضيع"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "مهلة المسح"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "مسح دليل التحميلات"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "مسح وورد الأساسية"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "فحص جميع المكونات الإضافية المثبتة بحثًا عن البرامج الضارة."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "فحص جميع السمات المثبتة بحثًا عن البرامج الضارة."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "مسح المناطق الحرجة فقط"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "فحص الملفات بحثًا عن البرامج الضارة والأكواد المشبوهة."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "قم بمسح المكونات الإضافية والموضوعات ونواة WordPress بحثًا عن نقاط الضعف المعروفة."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "قم بفحص موقعك بحثًا عن البرامج الضارة ونقاط الضعف والمشكلات الأمنية."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "فحص موقع الويب الخاص بك بحثًا عن البرامج الضارة ونقاط الضعف الأمنية."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "الماسح الضوئي"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "إعدادات الماسح الضوئي"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "جارٍ المسح..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "يقوم بفحص الملفات بحثًا عن البرامج الضارة والأكواد المشبوهة. آمن - يقوم فقط بفحص الملفات، ولا يقوم بتعديلها."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "وضع المسح المجدول"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "عمليات الفحص المجدولة"
 
 msgid "Score"
-msgstr "Score"
+msgstr "النتيجة"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "طلبات البحث في الدقيقة"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "البحث عن اسم المستخدم..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "المفتاح السري"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "تأمين الوصول إلى الملفات"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "يؤمن WPGraphQL بحدود عمق الاستعلام، وفحوصات التعقيد، وتحديد المعدل. آمنة للإعدادات مقطوعة الرأس."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "تنبيهات أمنية"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "تحليلات الأمن"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "تصلب الأمن"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "رؤوس الأمان"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "حادث أمني"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "سجلات الأمان"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "وحدات الأمن"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "الإخطارات الأمنية"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "خيارات الأمان"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "توصيات أمنية"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "نقاط الأمان"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "الحالة الأمنية"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "أدوات الأمان"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "الثغرات الأمنية"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "تنبيهات أمنية"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "ستظهر الأحداث الأمنية هنا."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "تصلب أمني"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "انتهى فحص الأمان من التنفيذ"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "تم تعديل إعدادات الأمان"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "اختر البلدان:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "اختر البلدان من اليسار، ثم انقر فوق \"إضافة إلى القائمة\" لإضافتها. سيتم حظر البلدان المحددة (القائمة السوداء) أو السماح بها (القائمة البيضاء) بناءً على الوضع أعلاه."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "حدد الصورة مع علامة الاختيار:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "حدد خدمة captcha التي تريد استخدامها."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "البلدان المختارة:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "الحماية الذاتية"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "الحماية الذاتية"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "إرسال تنبيه الاختبار"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "إرسال البريد الإلكتروني للاختبار"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "إرسال تنبيه بعد هذه الهجمات العديدة في ساعة واحدة."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "إرسال ملخص البريد الإلكتروني اليومي"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "أرسل إشعارًا عبر البريد الإلكتروني عندما يكون عنوان IP مغلقًا."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "إرسال إشعارات البريد الإلكتروني للأحداث الأمنية"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "إرسال إشعارات عبر البريد الإلكتروني عند اكتشاف هجمات خطيرة."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "إرسال بريد إلكتروني عند اكتشاف العبث"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "إرسال البريد الإلكتروني عندما يتم العثور على نقاط الضعف"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "إرسال التقارير إلى البريد الإلكتروني المشرف"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "إرسال نتائج المسح عبر البريد الإلكتروني بعد كل مسح."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "أرسل الأحداث الأمنية إلى Splunk أو Elasticsearch أو منصات SIEM الأخرى للمراقبة والتحليل المركزيين."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "أرسل أحداث الأمان إلى أي نقطة نهاية HTTP بتكوين مخصص."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "أرسل أحداث الأمان إلى أي نقطة نهاية HTTP باستخدام رؤوس ومصادقة مخصصة."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "إرسال رموز التحقق عبر البريد الإلكتروني."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "يرسل تنبيهات عبر البريد الإلكتروني للأحداث الأمنية. آمن - قم بتكوين إعدادات البريد الإلكتروني أولاً."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "تكامل الخدمة الآن"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "يضبط أذونات الملفات الآمنة. قد يتطلب تعديلًا يدويًا إذا كان الخادم يعاني من مشكلات."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "الإعدادات"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "تم حفظ الإعدادات بنجاح"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "الشدة"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "عرض 404 صفحة"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "إظهار رسالة خطأ عامة عند فشل تسجيل الدخول."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "عرض على النماذج"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "يتم عرض %d من %d إدخالات"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "يظهر الأحداث الحرجة/التحذير غير المقروءة. استخدم السجلات للتاريخ الكامل."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "قم بتسجيل الدخول باستخدام مفتاح المرور"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "حالة التوقيع"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "الكشف على أساس التوقيع"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "التوقيعات"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "الموقع الافتراضي"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "مفتاح الموقع"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "صحة أمن الموقع"
 
 msgid "Size"
-msgstr "Size"
+msgstr "الحجم"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "تخطي الملفات الأكبر من هذا الحجم."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "التكامل الركود"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "بعض التحسينات الموصى بها"
 
 msgid "Source"
-msgstr "Source"
+msgstr "المصدر"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "حرف خاص (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (مجمع أحداث HTTP)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "قياسي"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "قياسي - حماية متوازنة"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "المسح القياسي"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "ابدأ المسح"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "ابدأ فحصًا جديدًا"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "ابدأ عملية المسح"
 
 msgid "Status"
-msgstr "Status"
+msgstr "الحالة"
 
 msgid "Story"
-msgstr "Story"
+msgstr "قصة"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "صارم - الحد الأقصى من الأمن"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "كلمات مرور قوية"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "كلمات مرور قوية"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "معدل النجاح"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "تسجيل الدخول الناجح"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "تسجيلات الدخول الناجحة"
 
 msgid "Sucuri"
-msgstr "Sucuri"
+msgstr "سوكوري"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "منطق السومو"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "سلسلة التوريد"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "أمن سلسلة التوريد"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "إعدادات سلسلة التوريد"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "دعم Google Authenticator وAuthy وما إلى ذلك."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "المدعومة:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "كود مشبوه"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "عناوين IP المشبوهة"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "نشاط النظام"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "أحداث النظام"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "حالة النظام"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "تطبيقات مصادقة TOTP"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "اسم الجدول"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "الجداول"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "كشف العبث:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "المهمة"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "حظر عناوين IP التي تتجاوز حدود معدل API مؤقتًا."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "اتصال الاختبار"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "إشعار الاختبار"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "مطابقة النص"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "يتعلم الذكاء الاصطناعي باستمرار أنماط السلوك العادية بما في ذلك ساعات المرور والمواقع الجغرافية ووكلاء المستخدم وأنماط الطلب. ويستخدم هذا الأساس للكشف عن الحالات الشاذة."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "يحمي WAF موقعك من هجمات الويب الشائعة بما في ذلك حقن SQL وXSS والروبوتات الضارة."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "مفاتيح الموضوع"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "هذه الساعة"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "هذا الشهر"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "هذا الأسبوع"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "هذه كلمة مرور شائعة."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "هذه هي الطريقة التي ستظهر بها كلمة التحقق في نماذج تسجيل الدخول:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "كلمة المرور هذه شائعة جدًا. الرجاء اختيار كلمة مرور أكثر فريدة."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "هذا الاستعلام غير مسموح به."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "سيؤدي هذا إلى إعادة ضبط جميع بيانات التعلم وأنماط السلوك الخاصة بالذكاء الاصطناعي. يكمل؟"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "التهديد"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "انهيار التهديد:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "تم اكتشاف التهديد"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "تم اكتشاف التهديد (البرامج الضارة والملفات المشبوهة)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "اكتشاف التهديدات وحظرها - آخر 7 أيام"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "نقاط التهديد"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "التهديدات المحظورة"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "تم العثور على التهديدات"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "التهديدات اليوم"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "فترة خنق"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "التذاكر"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "أنظمة التذاكر"
 
 msgid "Time"
-msgstr "Time"
+msgstr "الوقت"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "النافذة الزمنية (ثانية)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "الوقت قبل انتهاء صلاحية رموز التحقق من البريد الإلكتروني."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "نافذة زمنية لحساب محاولات تسجيل الدخول الفاشلة."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "النافذة الزمنية المستخدمة لحساب محاولات تسجيل الدخول الفاشلة."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "حتى الآن"
 
 msgid "Today"
-msgstr "Today"
+msgstr "اليوم"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "عدد كبير جدًا من محاولات تسجيل الدخول الفاشلة. الرجاء المحاولة مرة أخرى خلال %d دقيقة (دقائق)."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "أدوات"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "الأدوات والمرافق"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "أعلى البلاد"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "أهم أسباب الكشف"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "أهم أنواع الأحداث"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "أعلى الصفحات"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "أهم المراجعين"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "إجمالي الأحداث"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "إجمالي مشاهدات الصفحة"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "إجمالي التوقيعات"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "الحجم الإجمالي"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "تحليلات حركة المرور"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "نظرة عامة على حركة المرور"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "قم بتشغيل الفحص الأمني"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "رؤوس الوكيل الموثوقة"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "الوكلاء الموثوق بهم"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "مرتين يوميا"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "المصادقة الثنائية (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "المصادقة الثنائية"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "المصادقة الثنائية"
 
 msgid "Type"
-msgstr "Type"
+msgstr "اكتب"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "اكتب الكلمة:"
 
 msgid "URL"
-msgstr "URL"
+msgstr "عنوان URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "إلغاء السلوك"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "عناوين IP الفريدة"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "المستخدمون الفريدون"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "الزوار الفريدون"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "غير معروف"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "التنبيهات غير المقروءة"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "تنبيهات أمنية غير مقروءة من سجلاتك."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "تحديث التعريفات"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "تحديث التعريفات الآن"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "تحديث تعريفات البرامج الضارة"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "التحديث الآن"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "تحديث توقيعات الكشف عن البرامج الضارة."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "الحرف الكبير (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "مستوى الاستعجال"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "استخدم رؤوس CDN/proxy لتحديد عنوان IP الحقيقي للعميل"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "استخدم Touch ID أو Face ID أو Windows Hello أو مفتاح أمان الجهاز."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "استخدم رأس X-Forwarded-For لاكتشاف IP (فقط إذا كان خلف CDN/proxy)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "استخدم قاعدة بيانات توقيع البرامج الضارة للكشف عنها."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "استخدم هذا المفتاح لمصادقة طلبات واجهة برمجة التطبيقات (API) من خط أنابيب CI/CD الخاص بك."
 
 msgid "User"
-msgstr "User"
+msgstr "المستخدم"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "نشاط المستخدم"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "وكيل المستخدم"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "أحداث المستخدم"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "عمليات تأمين المستخدم"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "إدارة المستخدم"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "متطلبات المستخدم"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "تم قفل عنوان المستخدم أو IP بسبب نشاط مشبوه"
 
 msgid "Username"
-msgstr "Username"
+msgstr "اسم المستخدم"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "مطلوب اسم المستخدم وكلمة المرور."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "تم إنشاء المستخدمين"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "تم حذف المستخدمين"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "يقوم المستخدمون بتمكين المصادقة الثنائية (2FA) في إعدادات ملفاتهم الشخصية"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "يستخدم الذكاء الاصطناعي للكشف عن تهديدات يوم الصفر من خلال التحليل السلوكي. يتعلم الأنماط العادية ويكشف عن الشذوذات. آمن - يراقب السلوك فقط."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "انتهت صلاحية جلسة التحقق. الرجاء تسجيل الدخول مرة أخرى."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "تحقق"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "التحقق من الملفات الأساسية"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "التحقق من شهادات SSL (موصى بها للإنتاج)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "التحقق من ملفات WordPress الأساسية وإصلاحها."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "التحقق من الملفات الأساسية وإصلاحها"
 
 msgid "Version"
-msgstr "Version"
+msgstr "الإصدار"
 
 msgid "View All"
-msgstr "View All"
+msgstr "عرض الكل"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "عرض حركة المرور الحية"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "عرض كافة الأحداث الأمنية."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "عرض وإدارة التهديدات المعزولة."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "عرض وإدارة التنبيهات والإشعارات الأمنية."
 
 msgid "Views"
-msgstr "Views"
+msgstr "وجهات النظر"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "اتجاهات الزائرين - آخر 30 يومًا"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "الزوار"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "الزيارات اليوم"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "فحص الضعف"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "ماسح الثغرات الأمنية"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "عرضة للخطر"
 
 msgid "WAF"
-msgstr "WAF"
+msgstr "واف"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "تم حظر هجوم WAF"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "كتل WAF (تم حظر الهجوم بواسطة جدار الحماية)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "جدار الحماية واف"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "حالة واف"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "نسخة الفسفور الأبيض"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "حماية WPGraphQL"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "رمز WPScan API"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "تحذير"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "تحذير:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "تحذير: سيؤدي الاستيراد إلى استبدال كافة الإعدادات الحالية. تأكد من تصدير إعداداتك الحالية أولاً كنسخة احتياطية."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "جدار حماية تطبيقات الويب"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "جدار حماية تطبيقات الويب (WAF)"
 
 msgid "Webhook URL"
-msgstr "Webhook URL"
+msgstr "عنوان URL للويب هوك"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "URL Webhook للنتائج"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "خطافات الويب"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "أسبوعيا"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "التقرير الأمني الأسبوعي"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "القائمة البيضاء (السماح فقط)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "القائمة البيضاء (السماح بالاختيار فقط)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "القائمة البيضاء لعناوين IP"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "عناوين IP المدرجة في القائمة البيضاء"
 
 msgid "WordPress"
-msgstr "WordPress"
+msgstr "ووردبريس"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "التحقق من الملفات الأساسية في ووردبريس"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "حالة ووردبريس الأساسية"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "تصلب ووردبريس"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "نسخة ووردبريس"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "تم تعديل ملف WordPress الأساسي"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "ووردبريس ليس محدثًا"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "خيارات نوع المحتوى X (بدون شم)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "خيارات الإطار X (منع النقر)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "حماية X-XSS"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "تحكم XML-RPC"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "هجوم XSS"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "حماية XSS"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "أنت تستخدم سبيكة تسجيل الدخول الافتراضية. فكر في تغييره إلى شيء فريد من نوعه."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "يجب عليك تسجيل الدخول للوصول إلى REST API."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "موقعك لا يستخدم HTTPS. تمكين شهادة SSL للاتصالات الآمنة."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "موقعك محمي بشكل جيد"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "رمز التحقق الخاص بك هو: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "تعريفات الفيروسات الخاصة بك قديمة. قم بالتحديث الآن للحصول على أفضل حماية."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "معرف المنطقة"
 
 msgid "ago"
-msgstr "ago"
+msgstr "منذ"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "الهجمات في الساعة"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "محاولات"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "محظور"
 
 msgid "characters"
-msgstr "characters"
+msgstr "الشخصيات"
 
 msgid "days"
-msgstr "days"
+msgstr "أيام"
 
 msgid "events"
-msgstr "events"
+msgstr "الأحداث"
 
 msgid "fails"
-msgstr "fails"
+msgstr "فشل"
 
 msgid "files"
-msgstr "files"
+msgstr "ملفات"
 
 msgid "from now"
-msgstr "from now"
+msgstr "من الآن"
 
 msgid "including:"
-msgstr "including:"
+msgstr "بما في ذلك:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "حرف صغير"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "دقائق"
 
 msgid "modules"
-msgstr "modules"
+msgstr "وحدات"
 
 msgid "number"
-msgstr "number"
+msgstr "رقم"
 
 msgid "or"
-msgstr "or"
+msgstr "أو"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "في الدقيقة"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "ثواني"
 
 msgid "special character"
-msgstr "special character"
+msgstr "طابع خاص"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "تم العثور على التهديدات"
 
 msgid "total records"
-msgstr "total records"
+msgstr "إجمالي السجلات"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "حرف كبير"
 
 msgid "views"
-msgstr "views"
+msgstr "وجهات النظر"
 
 msgid "violations"
-msgstr "violations"
+msgstr "الانتهاكات"
 
 msgid "visits"
-msgstr "visits"
+msgstr "الزيارات"
+msgid "Deception"
+msgstr "الخداع"
+
+msgid "P2P Intelligence"
+msgstr "الاستخبارات P2P"
+
+msgid "Sandbox Console"
+msgstr "وحدة التحكم في وضع الحماية"
+
+msgid "Temporary Access"
+msgstr "الوصول المؤقت"
+
+msgid "Saving..."
+msgstr "جارٍ الحفظ..."
+
+msgid "Settings saved. Reloading..."
+msgstr "تم حفظ الإعدادات. جارٍ إعادة التحميل..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "تم حفظ الإعدادات بنجاح! جارٍ إعادة التحميل..."
+
+msgid "Connection error"
+msgstr "خطأ في الاتصال"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "فشل فحص الأمان. قم بالتحديث وحاول مرة أخرى."
+
+msgid "Settings handler not available."
+msgstr "معالج الإعدادات غير متوفر."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "إعادة تعيين كافة الإعدادات إلى الإعدادات الافتراضية؟ لا يمكن التراجع عن هذا."
+
+msgid "Purge CDN cache now?"
+msgstr "تطهير ذاكرة التخزين المؤقت لـ CDN الآن؟"
+
+msgid "Failed to save settings. Please try again."
+msgstr "فشل في حفظ الإعدادات. يرجى المحاولة مرة أخرى."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "إعادة ضبط الإعدادات على الإعدادات الافتراضية. جارٍ إعادة تحميل الصفحة..."
+
+msgid "Failed to load analytics data."
+msgstr "فشل تحميل بيانات التحليلات."
+
+msgid "Devices"
+msgstr "الأجهزة"
+
+msgid "No data available for this range."
+msgstr "لا توجد بيانات متاحة لهذا النطاق."
+
+msgid "Traffic trend chart"
+msgstr "مخطط اتجاه حركة المرور"
+
+msgid "Distribution breakdown chart"
+msgstr "مخطط توزيع التوزيع"
+
+msgid "Total"
+msgstr "المجموع"
+
+msgid "Series"
+msgstr "سلسلة"
+
+msgid "Predictive Threat Hunting"
+msgstr "الصيد التنبؤي للتهديدات"
+
+msgid "Forecast next attack vectors"
+msgstr "توقعات ناقلات الهجوم القادم"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "قم بتخصيص ملفات تعريف مجموعتك، والتنبؤ بنواقل الهجوم المحتملة، وتوفير إرشادات استباقية للتقوية."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "إدارة التهديدات المعزولة والملفات المحذوفة القابلة للاسترداد."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "الملفات المحذوفة (قابلة للاسترداد)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "يمكن استعادة الملفات المنقولة هنا مرة أخرى إلى العزل أو حذفها نهائيًا."
+
+msgid "Deleted"
+msgstr "تم الحذف"
+
+msgid "Loading deleted files..."
+msgstr "جارٍ تحميل الملفات المحذوفة..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "ينقل الملفات المعزولة إلى مساحة تخزين محذوفة قابلة للاسترداد."
+
+msgid "Delete Permanently:"
+msgstr "الحذف نهائيًا:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "يقوم بإزالة ملف نهائيًا من وحدة التخزين المحذوفة."
+
+msgid "Access denied from your region."
+msgstr "تم رفض الوصول من منطقتك."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "الحد الأقصى لمحاولات تسجيل الدخول الفاشلة قبل الإغلاق المؤقت."
+
+msgid "Time window for counting failed attempts."
+msgstr "نافذة زمنية لحساب المحاولات الفاشلة."
+
+msgid "Open Tool"
+msgstr "أداة مفتوحة"
+
+msgid "Available Fix"
+msgstr "الإصلاح المتاح"
+
+msgid "Preview Patch"
+msgstr "معاينة التصحيح"
+
+msgid "Apply Patch"
+msgstr "تطبيق التصحيح"
+
+msgid "Honeytrap Configuration"
+msgstr "تكوين مصيدة العسل"
+
+msgid "Enable Deception Module"
+msgstr "تمكين وحدة الخداع"
+
+msgid "How Deception Works:"
+msgstr "كيف يعمل الخداع:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "عناوين URL التالية غير موجودة على موقعك. إذا قام أي شخص بالوصول إليهم، فسيتم <strong>حظرهم تلقائيًا</strong> باعتبارهم مهاجمين مؤكدين. لا يتم حظر المسؤولين مطلقًا ولكنهم سيشاهدون تحذيرًا."
+
+msgid "Custom Honeytrap Paths"
+msgstr "مسارات مصيدة العسل المخصصة"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "أضف مسارًا واحدًا في كل سطر (على سبيل المثال، /my-secret-admin/، /old-backup.sql). الإعدادات الافتراضية نشطة بالفعل."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "مسارات مصيدة العسل الافتراضية (نشطة دائمًا)"
+
+msgid "Login Page Honeypot"
+msgstr "صفحة تسجيل الدخول Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "يتم إدخال حقل غير مرئي في نماذج تسجيل الدخول/التسجيل. الروبوتات فقط هي التي تملأها، مما يؤدي إلى الكشف الفوري والحظر."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "يتم تمكين هذه الحماية دائمًا عندما تكون وحدة الخداع نشطة. لا يوجد تكوين مطلوب."
+
+msgid "User Enumeration Trap"
+msgstr "فخ تعداد المستخدم"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "يكتشف محاولات الاستطلاع التي يقوم فيها المهاجمون بالبحث عن أسماء مستخدمين صالحة عبر ?author=1، ?author=2، وما إلى ذلك."
+
+msgid "Enable user enumeration detection"
+msgstr "تمكين الكشف عن تعداد المستخدم"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "الحظر الصارم على محاولات التعداد (الافتراضي: إعادة التوجيه الناعم إلى الصفحة الرئيسية)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "حظر جميع تعداد المؤلفين (حتى بالنسبة للمستخدمين الحاليين)"
+
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "المادة 30 من القانون العام لحماية البيانات (GDPR) رسم خرائط البيانات"
+
+msgid "Refresh Map"
+msgstr "تحديث الخريطة"
+
+msgid "Export Data Map (PDF)"
+msgstr "تصدير خريطة البيانات (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "الاكتشاف الآلي لمعلومات تحديد الهوية الشخصية (PII) عبر جداول قاعدة البيانات، وتخطيط تدفق البيانات، واكتشاف مشاركة الطرف الثالث."
+
+msgid "Data Element"
+msgstr "عنصر البيانات"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Purpose"
+msgstr "الغرض"
+
+msgid "Retention"
+msgstr "الاحتفاظ"
+
+msgid "Third-Party Sharing"
+msgstr "مشاركة الطرف الثالث"
+
+msgid "Legal Basis"
+msgstr "الأساس القانوني"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "لم يتم اكتشاف أية سجلات لمعلومات تحديد الهوية الشخصية (PII) حتى الآن. قم بإجراء فحص لخريطة البيانات لإنشاء التقرير."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "أتمتة الحق في النسيان"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "أرسل طلبات المسح، وتحقق من إزالة البيانات، وتتبع سجلات الامتثال لسير عمل اللائحة العامة لحماية البيانات."
+
+msgid "User ID"
+msgstr "معرف المستخدم"
+
+msgid "Comments"
+msgstr "التعليقات"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "حذف التعليقات بدلاً من إخفاء الهوية"
+
+msgid "Run Erasure"
+msgstr "تشغيل المحو"
+
+msgid "Verify Erasure"
+msgstr "التحقق من المحو"
+
+msgid "GDPR Request Log"
+msgstr "سجل طلبات اللائحة العامة لحماية البيانات"
+
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+msgid "Requested At"
+msgstr "مطلوب في"
+
+msgid "Completed At"
+msgstr "اكتمل في"
+
+msgid "No GDPR requests logged yet."
+msgstr "لم يتم تسجيل أي طلبات للقانون العام لحماية البيانات حتى الآن."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "وضع الحماية لوقت تشغيل الظل"
+
+msgid "Enable Sandbox Module"
+msgstr "تمكين وحدة وضع الحماية"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "يقوم بتحميل محرك Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "تمكين وحدة تحكم Sandbox"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "يسمح لمستخدمي wp-admin الذين لديهم خيارات Manage_options بتشغيل التعليمات البرمجية في وحدة التحكم في وضع الحماية."
+
+msgid "Sandbox Timeout"
+msgstr "مهلة وضع الحماية"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "مهلة التنفيذ بالثواني (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "التحليل الديناميكي"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "قم بتشغيل تحليل التنفيذ الديناميكي بالإضافة إلى عمليات التحقق الثابتة."
+
+msgid "Quarantine Policy"
+msgstr "سياسة الحجر الصحي"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "يوصى بالعزل اليدوي لمعظم المواقع. يعمل العزل التلقائي على عزل البرامج الضارة المؤكدة عالية الثقة فقط."
+
+msgid "Manual (Recommended)"
+msgstr "دليل (مستحسن)"
+
+msgid "Auto Quarantine"
+msgstr "الحجر الصحي التلقائي"
+
+msgid "Save Quarantine Policy"
+msgstr "حفظ سياسة الحجر الصحي"
+
+msgid "AI Risk Controls"
+msgstr "ضوابط مخاطر الذكاء الاصطناعي"
+
+msgid "Enable AI Detection Module"
+msgstr "تمكين وحدة الكشف بالذكاء الاصطناعي"
+
+msgid "Enable Insider Threat Detection"
+msgstr "تمكين الكشف عن التهديدات الداخلية"
+
+msgid "Insider Threat Threshold"
+msgstr "عتبة التهديد الداخلي"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "تمكين مراقبة تسرب البيانات"
+
+msgid "Exfiltration Threshold"
+msgstr "عتبة الترشيح"
+
+msgid "Exfiltration Baseline Days"
+msgstr "أيام خط الأساس للترشيح"
+
+msgid "Session Risk Threshold"
+msgstr "عتبة مخاطر الجلسة"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "الفاصل الزمني لإعادة فحص المصادقة المستمرة (بالثواني)"
+
+msgid "Risk Spike Threshold"
+msgstr "عتبة ارتفاع المخاطر"
+
+msgid "Save AI Settings"
+msgstr "حفظ إعدادات الذكاء الاصطناعي"
+
+msgid "Quarantine Mode"
+msgstr "وضع الحجر الصحي"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "الوضع اليدوي أكثر أمانًا ويوصى به. يقوم الوضع التلقائي بعزل البرامج الضارة المؤكدة عالية الثقة فقط."
+
+msgid "Data Map"
+msgstr "خريطة البيانات"
+
+msgid "Privacy Requests"
+msgstr "طلبات الخصوصية"
+
+msgid "Deception Technology"
+msgstr "تكنولوجيا الخداع"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "مصائد الجذب، والأصول الخادعة، وخداع المهاجم للقبض على التهديدات قبل أن تضرب."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "يتم عرض %1$d من %2$d إدخالات"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "لم يتم تحميل وحدة ذكاء P2P."
+
+msgid "P2P Threat Intelligence"
+msgstr "استخبارات تهديدات P2P"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "مشاركة المعلومات المتعلقة بالتهديدات مع عمليات تثبيت SentinelWP الأخرى لتعزيز مناعة القطيع."
+
+msgid "P2P Settings"
+msgstr "إعدادات P2P"
+
+msgid "Enable P2P Intelligence"
+msgstr "تمكين ذكاء P2P"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "تمكين مشاركة المعلومات المتعلقة بالتهديدات التعاونية مع العقد النظيرة."
+
+msgid "My Node Key"
+msgstr "مفتاح العقدة الخاص بي"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "شارك هذا المفتاح مع أقرانك الذين يريدون الاتصال بموقعك."
+
+msgid "Broadcast Threats"
+msgstr "تهديدات البث"
+
+msgid "Share detected threats with registered peers."
+msgstr "مشاركة التهديدات المكتشفة مع أقرانهم المسجلين."
+
+msgid "Trust Threshold"
+msgstr "عتبة الثقة"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "يتم فقط الحظر التلقائي لعناوين IP ذات درجة التهديد >= هذا الحد. القيم المنخفضة = حظر أكثر عدوانية."
+
+msgid "Registered Peers"
+msgstr "أقرانهم المسجلين"
+
+msgid "Add Peer"
+msgstr "إضافة النظير"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "لم يتم تسجيل أقرانهم حتى الآن. أضف نظيرًا لبدء مشاركة المعلومات المتعلقة بالتهديدات."
+
+msgid "Label"
+msgstr "ملصق"
+
+msgid "Last Sync"
+msgstr "آخر مزامنة"
+
+msgid "Sent/Received"
+msgstr "المرسلة / المستلمة"
+
+msgid "Unnamed"
+msgstr "لم يذكر اسمه"
+
+msgid "%s ago"
+msgstr "منذ %s"
+
+msgid "Threats Sent"
+msgstr "تم إرسال التهديدات"
+
+msgid "Threats Received"
+msgstr "التهديدات المتلقاة"
+
+msgid "Statistics"
+msgstr "الإحصائيات"
+
+msgid "Connected Peers"
+msgstr "الأقران المتصلين"
+
+msgid "Threats Received (24h)"
+msgstr "التهديدات المتلقاة (24 ساعة)"
+
+msgid "P2P Status"
+msgstr "حالة P2P"
+
+msgid "Threat Intelligence Credits"
+msgstr "اعتمادات استخبارات التهديد"
+
+msgid "Current Credit Balance"
+msgstr "الرصيد الائتماني الحالي"
+
+msgid "Reputation Score"
+msgstr "نقاط السمعة"
+
+msgid "Accuracy"
+msgstr "الدقة"
+
+msgid "Badges:"
+msgstr "الشارات:"
+
+msgid "No badges yet"
+msgstr "لا توجد شارات بعد"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "يتم فتح المزايا المميزة مجانًا لأن نقاط سمعتك أعلى من 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "يمكنك الوصول إلى درجة سمعة أعلى من 1000 للحصول على مزايا مميزة مجانًا."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "المساهمين الأساسيين (مجهول)"
+
+msgid "No contributor data available yet."
+msgstr "لا توجد بيانات مساهم متاحة حتى الآن."
+
+msgid "Rank"
+msgstr "رتبة"
+
+msgid "Anonymous Site ID"
+msgstr "معرف موقع مجهول"
+
+msgid "Credits"
+msgstr "الاعتمادات"
+
+msgid "Reputation"
+msgstr "السمعة"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Add New Peer"
+msgstr "إضافة نظير جديد"
+
+msgid "Peer URL"
+msgstr "عنوان URL للنظير"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "عنوان URL الكامل لموقع WordPress النظير (يجب استخدام HTTPS في الإنتاج)."
+
+msgid "Peer Node Key"
+msgstr "مفتاح العقدة النظيرة"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "مفتاح عقدة النظير (يمكنهم نسخه من صفحة إعدادات P2P الخاصة بهم)."
+
+msgid "Label (Optional)"
+msgstr "التسمية (اختياري)"
+
+msgid "My Production Server"
+msgstr "خادم الإنتاج الخاص بي"
+
+msgid "A friendly name to identify this peer."
+msgstr "اسم مألوف للتعرف على هذا النظير."
+
+msgid "Unauthorized"
+msgstr "غير مصرح به"
+
+msgid "Sandbox module is not loaded."
+msgstr "لم يتم تحميل وحدة Sandbox."
+
+msgid "Sandbox module is disabled."
+msgstr "تم تعطيل وحدة Sandbox."
+
+msgid "Sandbox console is disabled."
+msgstr "تم تعطيل وحدة التحكم في وضع الحماية."
+
+msgid "No code provided."
+msgstr "لم يتم توفير رمز."
+
+msgid "Insufficient permissions."
+msgstr "أذونات غير كافية."
+
+msgid "Sandbox Module Disabled"
+msgstr "تم تعطيل وحدة Sandbox"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "تم تعطيل Shadow Runtime Sandbox حاليًا. قم بتمكينه في الإعدادات لاستخدام وحدة التحكم."
+
+msgid "Go to Settings"
+msgstr "انتقل إلى الإعدادات"
+
+msgid "Sandbox Console Disabled"
+msgstr "تم تعطيل وحدة تحكم Sandbox"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "تم تمكين وحدة Sandbox، ولكن تم تعطيل وحدة تحكم المشرف. قم بتمكين إعداد وحدة التحكم لتشغيل التعليمات البرمجية من wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "منطقة الخطر: تنفيذ التعليمات البرمجية"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "تقوم وحدة التحكم هذه بتنفيذ كود PHP في وضع الحماية المعزول. يتم إرجاع جميع تغييرات قاعدة البيانات تلقائيًا. يُستخدم فقط لتحليل التعليمات البرمجية أو الاختبارات المشبوهة."
+
+msgid "PHP Code Editor"
+msgstr "محرر كود PHP"
+
+msgid "Run Code"
+msgstr "تشغيل الكود"
+
+msgid "Analyze Only"
+msgstr "تحليل فقط"
+
+msgid "Timeout:"
+msgstr "المهلة:"
+
+msgid "Execution Results"
+msgstr "نتائج التنفيذ"
+
+msgid "STATIC ANALYSIS"
+msgstr "تحليل ثابت"
+
+msgid "OUTPUT"
+msgstr "الإخراج"
+
+msgid "ERRORS"
+msgstr "أخطاء"
+
+msgid "DATABASE QUERIES"
+msgstr "استعلامات قاعدة البيانات"
+
+msgid "Module not loaded"
+msgstr "لم يتم تحميل الوحدة"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "تحليلات حركة المرور المباشرة غير متاحة."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "يستخدم الوصول في الوقت المناسب سير عمل الطلب والموافقة مع انتهاء الصلاحية التلقائي."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "الوصول المؤقت غير متاح حاليًا لأن الوحدة معطلة أو لم يتم تحميلها."
+
+msgid "Open settings"
+msgstr "افتح الإعدادات"
+
+msgid "Request Temporary Access"
+msgstr "طلب الوصول المؤقت"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "ينطبق هذا الطلب على حسابك الذي قمت بتسجيل الدخول به حاليًا. ويجب أن يوافق عليه المسؤول قبل منح الوصول المرتفع المؤقت."
+
+msgid "Requested Role"
+msgstr "الدور المطلوب"
+
+msgid "Administrator"
+msgstr "المسؤول"
+
+msgid "Editor"
+msgstr "محرر"
+
+msgid "Duration (minutes)"
+msgstr "المدة (بالدقائق)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "قم بوصف سبب الحاجة إلى الوصول المرتفع المؤقت."
+
+msgid "Submit Request"
+msgstr "إرسال الطلب"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "منح الوصول المؤقت (المسؤول)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "منح وصول مرتفع محدود المدة مباشرة إلى مستخدم معين عن طريق اسم المستخدم أو البريد الإلكتروني."
+
+msgid "Target User (Username or Email)"
+msgstr "المستخدم المستهدف (اسم المستخدم أو البريد الإلكتروني)"
+
+msgid "username or user@example.com"
+msgstr "اسم المستخدم أو user@example.com"
+
+msgid "Grant Role"
+msgstr "دور المنحة"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "قم بوصف سبب حاجة هذا المستخدم إلى وصول مرتفع مؤقت."
+
+msgid "Grant Access"
+msgstr "منح الوصول"
+
+msgid "Pending and Active Requests"
+msgstr "الطلبات المعلقة والنشطة"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "الموافقة على الطلبات المعلقة ومراجعة المنح المباشرة وإلغاء الأذونات النشطة من قائمة الانتظار هذه."
+
+msgid "Original Role"
+msgstr "الدور الأصلي"
+
+msgid "Elevated Role"
+msgstr "الدور المرتفع"
+
+msgid "Granted"
+msgstr "منح"
+
+msgid "Expires"
+msgstr "تنتهي"
+
+msgid "Approved By"
+msgstr "تمت الموافقة عليه بواسطة"
+
+msgid "Loading..."
+msgstr "جار التحميل..."
+
+msgid "English (US)"
+msgstr "الإنجليزية (الولايات المتحدة)"
+
+msgid "English (UK)"
+msgstr "الإنجليزية (المملكة المتحدة)"
+
+msgid "Espanol (Spanish)"
+msgstr "اسبانيول (الاسبانية)"
+
+msgid "Francais (French)"
+msgstr "الفرنسية (الفرنسية)"
+
+msgid "Deutsch (German)"
+msgstr "الألمانية (الألمانية)"
+
+msgid "Italiano (Italian)"
+msgstr "إيطالي (إيطالي)"
+
+msgid "Portugues (Brazilian)"
+msgstr "البرتغالية (البرازيلية)"
+
+msgid "Nederlands (Dutch)"
+msgstr "هولندا (الهولندية)"
+
+msgid "Russian"
+msgstr "الروسية"
+
+msgid "Japanese"
+msgstr "اليابانية"
+
+msgid "Chinese (Simplified)"
+msgstr "الصينية (المبسطة)"
+
+msgid "Arabic"
+msgstr "العربية"
+
+msgid "Hindi"
+msgstr "الهندية"
+
+msgid "Korean"
+msgstr "الكورية"
+
+msgid "Turkish"
+msgstr "تركي"
+
+msgid "Polski (Polish)"
+msgstr "بولسكي (بولندي)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "البهاسا الإندونيسية (الإندونيسية)"
+
+msgid "Ukrainian"
+msgstr "الأوكرانية"
+
+msgid "Vietnamese"
+msgstr "الفيتنامية"
+
+msgid "Thai"
+msgstr "التايلاندية"
+
+msgid "Svenska (Swedish)"
+msgstr "سفينسكا (السويدية)"
+
+msgid "Dansk (Danish)"
+msgstr "دانسك (الدنماركية)"
+
+msgid "Suomi (Finnish)"
+msgstr "سومي (الفنلندية)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "نورسك بوكمال (النرويجية)"
+
+msgid "Cestina (Czech)"
+msgstr "سيستينا (التشيكية)"
+
+msgid "Greek"
+msgstr "اليونانية"
+
+msgid "Magyar (Hungarian)"
+msgstr "المجرية (المجرية)"
+
+msgid "Romana (Romanian)"
+msgstr "رومانا (رومانية)"
+
+msgid "Slovencina (Slovak)"
+msgstr "سلوفينسينا (سلوفاكية)"
+
+msgid "Bulgarian"
+msgstr "البلغارية"
+
+msgid "Hrvatski (Croatian)"
+msgstr "هرفاتسكي (الكرواتية)"
+
+msgid "Serbian"
+msgstr "الصربية"
+
+msgid "Hebrew"
+msgstr "العبرية"
+
+msgid "Persian"
+msgstr "الفارسية"
+
+msgid "Settings saved successfully."
+msgstr "تم حفظ الإعدادات بنجاح."
+
+msgid "Settings reset to defaults."
+msgstr "إعادة ضبط الإعدادات على الإعدادات الافتراضية."
+
+msgid "NexifyMy Security Logs"
+msgstr "سجلات الأمان NexifyMy"
+
+msgid "No matching user found."
+msgstr "لم يتم العثور على مستخدم مطابق."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "تم إخفاء هوية سجلات الأمان ومعلومات تحديد الهوية الشخصية (PII) ذات الصلة."
+
+msgid "Invalid user ID."
+msgstr "معرف المستخدم غير صالح."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "تم وضع طلب المسح اليدوي أو المستند إلى خطاف الويب في قائمة الانتظار."
+
+msgid "Mailchimp deletion request sent."
+msgstr "تم إرسال طلب حذف Mailchimp."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "يتطلب مسح الشريط متابعة يدوية لواجهة برمجة التطبيقات (API) لسجلات الامتثال."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "يجب تهيئة طلب واجهة برمجة التطبيقات لحذف مستخدم Google Analytics خارجيًا."
+
+msgid "Privacy Preferences"
+msgstr "تفضيلات الخصوصية"
+
+msgid "Select which optional processing categories you allow."
+msgstr "حدد فئات المعالجة الاختيارية التي تسمح بها."
+
+msgid "Save Preferences"
+msgstr "حفظ التفضيلات"
+
+msgid "Consent Management"
+msgstr "إدارة الموافقة"
+
+msgid "Given"
+msgstr "نظرا"
+
+msgid "Withdrawn"
+msgstr "انسحبت"
+
+msgid "No consent records found."
+msgstr "لم يتم العثور على سجلات موافقة."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>خطأ</strong>: حدث خطأ ما. يرجى المحاولة مرة أخرى في وقت لاحق."
+
+msgid "The peer URL is not valid."
+msgstr "عنوان URL النظير غير صالح."
+
+msgid "You cannot add your own site as a peer."
+msgstr "لا يمكنك إضافة موقعك الخاص كنظير."
+
+msgid "API key must be at least 16 characters."
+msgstr "يجب أن يتكون مفتاح API من 16 حرفًا على الأقل."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "تم الوصول إلى الحد الأقصى لعدد النظراء (%d)."
+
+msgid "Missing authentication header."
+msgstr "رأس المصادقة مفقود."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "مفتاح العقدة غير صالح. لم يتم التعرف على الأقران."
+
+msgid "Invalid request signature."
+msgstr "توقيع الطلب غير صالح."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "تم تجاوز الحد الأقصى للسعر. حاول مرة أخرى لاحقًا."
+
+msgid "Invalid site identifier."
+msgstr "معرف الموقع غير صالح."
+
+msgid "Unknown contribution type."
+msgstr "نوع المساهمة غير معروف."
+
+msgid "Unknown benefit type."
+msgstr "نوع الفائدة غير معروف."
+
+msgid "Insufficient credits for this benefit."
+msgstr "الاعتمادات غير كافية لهذه المنفعة."
+
+msgid "Threat Forecast"
+msgstr "توقعات التهديد"
+
+msgid "Your site profile:"
+msgstr "الملف التعريفي لموقعك:"
+
+msgid "Predicted threats this month:"
+msgstr "التهديدات المتوقعة هذا الشهر:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "لم يتم اكتشاف أي نواقل عالية الثقة حتى الآن."
+
+msgid "Recommended actions:"
+msgstr "الإجراءات الموصى بها:"
+
+msgid "No immediate actions required."
+msgstr "لا توجد إجراءات فورية مطلوبة."
+
+msgid "Not logged in"
+msgstr "لم يتم تسجيل الدخول"
+
+msgid "A reason is required"
+msgstr "مطلوب سبب"
+
+msgid "Invalid requested role"
+msgstr "الدور المطلوب غير صالح"
+
+msgid "An active or pending request already exists for this role."
+msgstr "يوجد بالفعل طلب نشط أو معلق لهذا الدور."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "تم إرسال طلب الوصول. سيقوم أحد المسؤولين بمراجعة طلبك."
+
+msgid "Invalid request"
+msgstr "طلب غير صالح"
+
+msgid "Pending request not found"
+msgstr "لم يتم العثور على الطلب المعلق"
+
+msgid "Request role is invalid"
+msgstr "دور الطلب غير صالح"
+
+msgid "Invalid approved role"
+msgstr "الدور المعتمد غير صالح"
+
+msgid "Access approved successfully"
+msgstr "تمت الموافقة على الوصول بنجاح"
+
+msgid "Target user (username or email) is required."
+msgstr "مطلوب المستخدم المستهدف (اسم المستخدم أو البريد الإلكتروني)."
+
+msgid "A reason is required."
+msgstr "مطلوب سبب."
+
+msgid "Invalid requested role."
+msgstr "الدور المطلوب غير صالح."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "لم يتم العثور على المستخدم المستهدف. استخدم اسم مستخدم أو بريد إلكتروني موجود."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "المستخدم لديه هذا الدور بالفعل. ليست هناك حاجة للارتفاع المؤقت."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "توجد بالفعل منحة نشطة أو معلقة لهذا المستخدم وهذا الدور."
+
+msgid "Unable to grant temporary access."
+msgstr "غير قادر على منح الوصول المؤقت."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "تم منح حق الوصول المؤقت %2$s إلى %1$s لمدة %3$d دقيقة."
+
+msgid "Invalid grant"
+msgstr "منحة غير صالحة"
+
+msgid "Grant not found or already revoked"
+msgstr "لم يتم العثور على المنحة أو تم إلغاؤها بالفعل"
+
+msgid "Permission revoked successfully"
+msgstr "تم إلغاء الإذن بنجاح"
+
+msgid "Once Monthly"
+msgstr "مرة واحدة شهريا"
+
+msgid "Every 5 Minutes"
+msgstr "كل 5 دقائق"
 

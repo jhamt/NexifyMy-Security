@@ -8,676 +8,676 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "%d threats detected in last scan"
-msgstr "%d threats detected in last scan"
+msgstr "%d prijetnje otkrivene u zadnjem skeniranju"
 
 msgid "(Speak this code to verify)"
-msgstr "(Speak this code to verify)"
+msgstr "(Izgovorite ovaj kod za potvrdu)"
 
 msgid "1 - High"
-msgstr "1 - High"
+msgstr "1 - Visoko"
 
 msgid "1 Day"
-msgstr "1 Day"
+msgstr "1 dan"
 
 msgid "1 Hour"
-msgstr "1 Hour"
+msgstr "1 sat"
 
 msgid "14 Days"
-msgstr "14 Days"
+msgstr "14 dana"
 
 msgid "15 Minutes"
-msgstr "15 Minutes"
+msgstr "15 minuta"
 
 msgid "2 - Medium"
-msgstr "2 - Medium"
+msgstr "2 - Srednje"
 
 msgid "24 Hours"
-msgstr "24 Hours"
+msgstr "24 sata"
 
 msgid "2FA"
 msgstr "2FA"
 
 msgid "2FA Methods"
-msgstr "2FA Methods"
+msgstr "2FA metode"
 
 msgid "2FA Settings"
-msgstr "2FA Settings"
+msgstr "2FA postavke"
 
 msgid "3 - Low"
-msgstr "3 - Low"
+msgstr "3 - Nisko"
 
 msgid "3 Days"
-msgstr "3 Days"
+msgstr "3 dana"
 
 msgid "30 Days"
-msgstr "30 Days"
+msgstr "30 dana"
 
 msgid "30 Minutes"
-msgstr "30 Minutes"
+msgstr "30 minuta"
 
 msgid "30 days"
-msgstr "30 days"
+msgstr "30 dana"
 
 msgid "403 Forbidden"
-msgstr "403 Forbidden"
+msgstr "403 Zabranjeno"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr "404 Nije pronađeno"
 
 msgid "429 Too Many Requests (Recommended)"
-msgstr "429 Too Many Requests (Recommended)"
+msgstr "429 Previše zahtjeva (preporučeno)"
 
 msgid "5 Minutes"
-msgstr "5 Minutes"
+msgstr "5 minuta"
 
 msgid "503 Service Unavailable"
-msgstr "503 Service Unavailable"
+msgstr "503 Usluga nedostupna"
 
 msgid "6 Hours"
-msgstr "6 Hours"
+msgstr "6 sati"
 
 msgid "60 days"
-msgstr "60 days"
+msgstr "60 dana"
 
 msgid "7 Days"
-msgstr "7 Days"
+msgstr "7 dana"
 
 msgid "7 days (continuous)"
-msgstr "7 days (continuous)"
+msgstr "7 dana (kontinuirano)"
 
 msgid "90 Days"
-msgstr "90 Days"
+msgstr "90 dana"
 
 msgid "90 days"
-msgstr "90 days"
+msgstr "90 dana"
 
 msgid "AI Learning Status"
-msgstr "AI Learning Status"
+msgstr "Status učenja AI"
 
 msgid "AI Status"
-msgstr "AI Status"
+msgstr "Status AI"
 
 msgid "AI Threat Detection"
-msgstr "AI Threat Detection"
+msgstr "AI otkrivanje prijetnji"
 
 msgid "AI learning data reset successfully."
-msgstr "AI learning data reset successfully."
+msgstr "Uspješno resetiranje podataka o učenju umjetne inteligencije."
 
 msgid "AJAX Requests per Minute"
-msgstr "AJAX Requests per Minute"
+msgstr "AJAX zahtjeva po minuti"
 
 msgid "API & Headless Security"
-msgstr "API & Headless Security"
+msgstr "API i bezglava sigurnost"
 
 msgid "API & Services"
-msgstr "API & Services"
+msgstr "API i usluge"
 
 msgid "API Burst Allowance"
 msgstr "API Burst Allowance"
 
 msgid "API Endpoints"
-msgstr "API Endpoints"
+msgstr "API krajnje točke"
 
 msgid "API Key"
-msgstr "API Key"
+msgstr "API ključ"
 
 msgid "API Rate Limiting"
-msgstr "API Rate Limiting"
+msgstr "Ograničenje brzine API-ja"
 
 msgid "API Requests per Minute"
-msgstr "API Requests per Minute"
+msgstr "API zahtjevi po minuti"
 
 msgid "API Security"
-msgstr "API Security"
+msgstr "Sigurnost API-ja"
 
 msgid "API Token"
-msgstr "API Token"
+msgstr "API token"
 
 msgid "API rate limit exceeded. Limit: %d requests per minute."
-msgstr "API rate limit exceeded. Limit: %d requests per minute."
+msgstr "Ograničenje brzine API-ja premašeno. Ograničenje: %d zahtjeva po minuti."
 
 msgid "API restrictions"
-msgstr "API restrictions"
+msgstr "API ograničenja"
 
 msgid "API token, HEC token, or authentication key."
-msgstr "API token, HEC token, or authentication key."
+msgstr "API token, HEC token ili autentifikacijski ključ."
 
 msgid "Abandoned"
-msgstr "Abandoned"
+msgstr "Napuštena"
 
 msgid "About Quarantine"
-msgstr "About Quarantine"
+msgstr "O karanteni"
 
 msgid "Access Denied"
-msgstr "Access Denied"
+msgstr "Pristup odbijen"
 
 msgid "Action"
-msgstr "Action"
+msgstr "Akcija"
 
 msgid "Actions"
-msgstr "Actions"
+msgstr "Radnje"
 
 msgid "Active"
-msgstr "Active"
+msgstr "Aktivno"
 
 msgid "Activity Dashboard"
-msgstr "Activity Dashboard"
+msgstr "Nadzorna ploča aktivnosti"
 
 msgid "Activity Log"
-msgstr "Activity Log"
+msgstr "Dnevnik aktivnosti"
 
 msgid "Activity Log Settings"
-msgstr "Activity Log Settings"
+msgstr "Postavke dnevnika aktivnosti"
 
 msgid "Activity from these users will not be logged."
-msgstr "Activity from these users will not be logged."
+msgstr "Aktivnosti ovih korisnika neće biti zabilježene."
 
 msgid "Activity logs older than this will be automatically deleted."
-msgstr "Activity logs older than this will be automatically deleted."
+msgstr "Dnevnici aktivnosti stariji od ovoga automatski će se izbrisati."
 
 msgid "Activity tracking"
-msgstr "Activity tracking"
+msgstr "Praćenje aktivnosti"
 
 msgid "Add %d more characters."
-msgstr "Add %d more characters."
+msgstr "Dodajte još %d znakova."
 
 msgid "Add 2FA to user accounts for extra security."
-msgstr "Add 2FA to user accounts for extra security."
+msgstr "Dodajte 2FA korisničkim računima za dodatnu sigurnost."
 
 msgid "Add CAPTCHA to login and forms."
-msgstr "Add CAPTCHA to login and forms."
+msgstr "Dodajte CAPTCHA prijavi i obrascima."
 
 msgid "Add CAPTCHA verification to login forms"
-msgstr "Add CAPTCHA verification to login forms"
+msgstr "Dodajte CAPTCHA potvrdu obrascima za prijavu"
 
 msgid "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
-msgstr "Add HTTP security headers (X-Frame-Options, CSP, etc.)"
+msgstr "Dodajte HTTP sigurnosna zaglavlja (X-Frame-Options, CSP, itd.)"
 
 msgid "Add New Passkey"
-msgstr "Add New Passkey"
+msgstr "Dodaj novi pristupni ključ"
 
 msgid "Add Security Headers"
-msgstr "Add Security Headers"
+msgstr "Dodajte sigurnosna zaglavlja"
 
 msgid "Add Webhook"
-msgstr "Add Webhook"
+msgstr "Dodaj Webhook"
 
 msgid "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
-msgstr "Add X-Frame-Options, X-Content-Type-Options, and other security headers."
+msgstr "Dodajte X-Frame-Options, X-Content-Type-Options i druga sigurnosna zaglavlja."
 
 msgid "Add X-Frame-Options, X-XSS-Protection headers"
-msgstr "Add X-Frame-Options, X-XSS-Protection headers"
+msgstr "Dodajte X-Frame-Options, X-XSS-Protection zaglavlja"
 
 msgid "Add an extra layer of security by requiring a second form of authentication."
-msgstr "Add an extra layer of security by requiring a second form of authentication."
+msgstr "Dodajte dodatni sloj sigurnosti zahtijevajući drugi oblik provjere autentičnosti."
 
 msgid "Add an extra layer of security by requiring two forms of authentication for user logins."
-msgstr "Add an extra layer of security by requiring two forms of authentication for user logins."
+msgstr "Dodajte dodatni sloj sigurnosti zahtijevajući dva oblika provjere autentičnosti za prijavu korisnika."
 
 msgid "Add an extra layer of security with TOTP-based 2FA."
-msgstr "Add an extra layer of security with TOTP-based 2FA."
+msgstr "Dodajte dodatni sloj sigurnosti uz 2FA temeljen na TOTP-u."
 
 msgid "Add lowercase letters."
-msgstr "Add lowercase letters."
+msgstr "Dodajte mala slova."
 
 msgid "Add numbers."
-msgstr "Add numbers."
+msgstr "Dodajte brojeve."
 
 msgid "Add special characters."
-msgstr "Add special characters."
+msgstr "Dodajte posebne znakove."
 
 msgid "Add to List"
-msgstr "Add to List"
+msgstr "Dodaj na popis"
 
 msgid "Add uppercase letters."
-msgstr "Add uppercase letters."
+msgstr "Dodajte velika slova."
 
 msgid "Additional login security measures. Works with rate limiter."
-msgstr "Additional login security measures. Works with rate limiter."
+msgstr "Dodatne mjere sigurnosti prijave. Radi s limitatorom brzine."
 
 msgid "Adds CAPTCHA to login forms. Safe but may affect user experience."
-msgstr "Adds CAPTCHA to login forms. Safe but may affect user experience."
+msgstr "Dodaje CAPTCHA obrascima za prijavu. Sigurno, ali može utjecati na korisničko iskustvo."
 
 msgid "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
-msgstr "Adds Google reCAPTCHA, Cloudflare Turnstile, or math challenges"
+msgstr "Dodaje Google reCAPTCHA, Cloudflare Turnstile ili matematičke izazove"
 
 msgid "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
-msgstr "Adds HTTP security headers (X-Frame-Options, CSP). Safe - improves browser security."
+msgstr "Dodaje HTTP sigurnosna zaglavlja (X-Frame-Options, CSP). Sigurno - poboljšava sigurnost preglednika."
 
 msgid "Adds extra security layer with TOTP, Email, or SMS codes"
-msgstr "Adds extra security layer with TOTP, Email, or SMS codes"
+msgstr "Dodaje dodatni sigurnosni sloj uz TOTP, e-mail ili SMS kodove"
 
 msgid "Admin Logins (successful admin logins)"
-msgstr "Admin Logins (successful admin logins)"
+msgstr "Administratorske prijave (uspješne administratorske prijave)"
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr "Napredno"
 
 msgid "Advanced Firewall Settings"
-msgstr "Advanced Firewall Settings"
+msgstr "Napredne postavke vatrozida"
 
 msgid "Advanced Hardening"
-msgstr "Advanced Hardening"
+msgstr "Napredno otvrdnjavanje"
 
 msgid "Advanced Hardening Options"
-msgstr "Advanced Hardening Options"
+msgstr "Napredne opcije otvrdnjavanja"
 
 msgid "Advanced Login Settings"
-msgstr "Advanced Login Settings"
+msgstr "Napredne postavke prijave"
 
 msgid "Advanced Options"
-msgstr "Advanced Options"
+msgstr "Napredne opcije"
 
 msgid "Advanced Scanner Options"
-msgstr "Advanced Scanner Options"
+msgstr "Napredne opcije skenera"
 
 msgid "Advanced heuristics"
-msgstr "Advanced heuristics"
+msgstr "Napredna heuristika"
 
 msgid "Affected Files:"
-msgstr "Affected Files:"
+msgstr "Zahvaćene datoteke:"
 
 msgid "Alert Threshold"
-msgstr "Alert Threshold"
+msgstr "Prag upozorenja"
 
 msgid "Alert Types"
-msgstr "Alert Types"
+msgstr "Vrste upozorenja"
 
 msgid "Alerts"
-msgstr "Alerts"
+msgstr "upozorenja"
 
 msgid "Alerts sent if plugin is deactivated."
-msgstr "Alerts sent if plugin is deactivated."
+msgstr "Upozorenja se šalju ako je dodatak deaktiviran."
 
 msgid "All"
-msgstr "All"
+msgstr "sve"
 
 msgid "All Clear!"
-msgstr "All Clear!"
+msgstr "Sve jasno!"
 
 msgid "All Events"
-msgstr "All Events"
+msgstr "Svi događaji"
 
 msgid "All Severities"
-msgstr "All Severities"
+msgstr "Sve ozbiljnosti"
 
 msgid "Allow all users to enable 2FA voluntarily."
-msgstr "Allow all users to enable 2FA voluntarily."
+msgstr "Dopustite svim korisnicima da dobrovoljno omoguće 2FA."
 
 msgid "Allow email code as backup method"
-msgstr "Allow email code as backup method"
+msgstr "Dopusti kod e-pošte kao pričuvnu metodu"
 
 msgid "Allow short bursts above the rate limit."
-msgstr "Allow short bursts above the rate limit."
+msgstr "Dopustite kratke nizove iznad ograničenja brzine."
 
 msgid "Allow users time to set up 2FA before enforcement."
-msgstr "Allow users time to set up 2FA before enforcement."
+msgstr "Dopustite korisnicima vremena da postave 2FA prije provedbe."
 
 msgid "Allow users to enable 2FA"
-msgstr "Allow users to enable 2FA"
+msgstr "Dopusti korisnicima da omoguće 2FA"
 
 msgid "Allow users to generate emergency backup codes."
-msgstr "Allow users to generate emergency backup codes."
+msgstr "Omogućite korisnicima generiranje pričuvnih kodova za hitne slučajeve."
 
 msgid "Allow users to skip 2FA on trusted devices."
-msgstr "Allow users to skip 2FA on trusted devices."
+msgstr "Dopustite korisnicima da preskoče 2FA na pouzdanim uređajima."
 
 msgid "Allowed User Agents"
-msgstr "Allowed User Agents"
+msgstr "Dopušteni korisnički agenti"
 
 msgid "Analytics"
-msgstr "Analytics"
+msgstr "Analitika"
 
 msgid "Anomalies"
-msgstr "Anomalies"
+msgstr "Anomalije"
 
 msgid "Any Severity"
-msgstr "Any Severity"
+msgstr "Bilo koja ozbiljnost"
 
 msgid "Any modifications trigger immediate email alerts."
-msgstr "Any modifications trigger immediate email alerts."
+msgstr "Sve izmjene aktiviraju trenutna upozorenja e-poštom."
 
 msgid "Apply Settings"
-msgstr "Apply Settings"
+msgstr "Primijeni postavke"
 
 msgid "Apply WordPress security best practices."
-msgstr "Apply WordPress security best practices."
+msgstr "Primijenite najbolju sigurnosnu praksu WordPressa."
 
 msgid "Apply security fixes"
-msgstr "Apply security fixes"
+msgstr "Primijenite sigurnosne popravke"
 
 msgid "Apply security hardening measures to WordPress."
-msgstr "Apply security hardening measures to WordPress."
+msgstr "Primijenite sigurnosne mjere za WordPress."
 
 msgid "Apply security hardening measures to protect your WordPress installation."
-msgstr "Apply security hardening measures to protect your WordPress installation."
+msgstr "Primijenite mjere za jačanje sigurnosti kako biste zaštitili svoju WordPress instalaciju."
 
 msgid "ArcSight"
 msgstr "ArcSight"
 
 msgid "Are you sure you want to delete this passkey?"
-msgstr "Are you sure you want to delete this passkey?"
+msgstr "Jeste li sigurni da želite izbrisati ovaj pristupni ključ?"
 
 msgid "Are you sure you want to proceed?"
-msgstr "Are you sure you want to proceed?"
+msgstr "Jeste li sigurni da želite nastaviti?"
 
 msgid "Attack Protection"
-msgstr "Attack Protection"
+msgstr "Zaštita od napada"
 
 msgid "Attempt Window"
-msgstr "Attempt Window"
+msgstr "Prozor pokušaja"
 
 msgid "Audio (Speaking)"
-msgstr "Audio (Speaking)"
+msgstr "Audio (govor)"
 
 msgid "Authenticating..."
-msgstr "Authenticating..."
+msgstr "Provjera autentičnosti..."
 
 msgid "Authentication Code"
-msgstr "Authentication Code"
+msgstr "Autentifikacijski kod"
 
 msgid "Authentication Events"
-msgstr "Authentication Events"
+msgstr "Događaji provjere autentičnosti"
 
 msgid "Authentication Token"
-msgstr "Authentication Token"
+msgstr "Token za provjeru autentičnosti"
 
 msgid "Authentication failed. Please try again."
-msgstr "Authentication failed. Please try again."
+msgstr "Autentifikacija nije uspjela. Molimo pokušajte ponovo."
 
 msgid "Authentication required for API access."
-msgstr "Authentication required for API access."
+msgstr "Za pristup API-ju potrebna je provjera autentičnosti."
 
 msgid "Authentication required for GraphQL access."
-msgstr "Authentication required for GraphQL access."
+msgstr "Za pristup GraphQL-u potrebna je provjera autentičnosti."
 
 msgid "Author Scans"
-msgstr "Author Scans"
+msgstr "Skeniranje autora"
 
 msgid "Auto-Block Duration"
-msgstr "Auto-Block Duration"
+msgstr "Trajanje automatskog blokiranja"
 
 msgid "Auto-Block Repeated Offenders"
-msgstr "Auto-Block Repeated Offenders"
+msgstr "Automatski blokiraj ponovljene prijestupnike"
 
 msgid "Auto-Block Threshold"
-msgstr "Auto-Block Threshold"
+msgstr "Prag automatskog blokiranja"
 
 msgid "Auto-Fix"
-msgstr "Auto-Fix"
+msgstr "Automatski popravak"
 
 msgid "Auto-Generate Reports"
-msgstr "Auto-Generate Reports"
+msgstr "Automatsko generiranje izvješća"
 
 msgid "Auto-Quarantine Threats"
-msgstr "Auto-Quarantine Threats"
+msgstr "Prijetnje auto-karantenom"
 
 msgid "Auto-Scan Schedule"
-msgstr "Auto-Scan Schedule"
+msgstr "Raspored automatskog skeniranja"
 
 msgid "Auto-Update"
-msgstr "Auto-Update"
+msgstr "Automatsko ažuriranje"
 
 msgid "Auto-Update Settings"
-msgstr "Auto-Update Settings"
+msgstr "Postavke automatskog ažuriranja"
 
 msgid "Auto-Updates"
-msgstr "Auto-Updates"
+msgstr "Automatska ažuriranja"
 
 msgid "Auto-detect"
-msgstr "Auto-detect"
+msgstr "Automatsko otkrivanje"
 
 msgid "Automated scanning"
-msgstr "Automated scanning"
+msgstr "Automatizirano skeniranje"
 
 msgid "Automatic Scans"
-msgstr "Automatic Scans"
+msgstr "Automatsko skeniranje"
 
 msgid "Automatically blacklist IPs that trigger rules multiple times."
-msgstr "Automatically blacklist IPs that trigger rules multiple times."
+msgstr "Automatski stavite na crnu listu IP-ova koji više puta pokreću pravila."
 
 msgid "Automatically create Jira tickets for security incidents and vulnerabilities."
-msgstr "Automatically create Jira tickets for security incidents and vulnerabilities."
+msgstr "Automatski kreirajte Jira tikete za sigurnosne incidente i ranjivosti."
 
 msgid "Automatically create tickets for security incidents in your project management systems."
-msgstr "Automatically create tickets for security incidents in your project management systems."
+msgstr "Automatski kreirajte ulaznice za sigurnosne incidente u svojim sustavima za upravljanje projektima."
 
 msgid "Automatically generate reports on schedule"
-msgstr "Automatically generate reports on schedule"
+msgstr "Automatski generirajte izvješća prema rasporedu"
 
 msgid "Automatically move detected malware to quarantine."
-msgstr "Automatically move detected malware to quarantine."
+msgstr "Automatski premjesti otkriveni zlonamjerni softver u karantenu."
 
 msgid "Automatically run scans in the background."
-msgstr "Automatically run scans in the background."
+msgstr "Automatsko pokretanje skeniranja u pozadini."
 
 msgid "Automatically update malware signatures daily."
-msgstr "Automatically update malware signatures daily."
+msgstr "Automatski svakodnevno ažurirajte malware potpise."
 
 msgid "Available Countries"
-msgstr "Available Countries"
+msgstr "Dostupne zemlje"
 
 msgid "Available Events"
-msgstr "Available Events"
+msgstr "Dostupni događaji"
 
 msgid "Avg/Day"
-msgstr "Avg/Day"
+msgstr "Prosj./dan"
 
 msgid "Background Scans"
-msgstr "Background Scans"
+msgstr "Pozadinsko skeniranje"
 
 msgid "Backs up corrupted files before replacement"
-msgstr "Backs up corrupted files before replacement"
+msgstr "Sigurnosno kopira oštećene datoteke prije zamjene"
 
 msgid "Backup Codes"
-msgstr "Backup Codes"
+msgstr "Pričuvni kodovi"
 
 msgid "Backup, optimize, and secure your database."
-msgstr "Backup, optimize, and secure your database."
+msgstr "Sigurnosno kopirajte, optimizirajte i osigurajte svoju bazu podataka."
 
 msgid "Backups & cleanup"
-msgstr "Backups & cleanup"
+msgstr "Sigurnosne kopije i čišćenje"
 
 msgid "Backups are stored in wp-content/nexifymy-backups/core/"
-msgstr "Backups are stored in wp-content/nexifymy-backups/core/"
+msgstr "Sigurnosne kopije pohranjuju se u wp-content/nexifymy-backups/core/"
 
 msgid "Bad Bots"
-msgstr "Bad Bots"
+msgstr "Loši botovi"
 
 msgid "Bad Requests"
-msgstr "Bad Requests"
+msgstr "Loši zahtjevi"
 
 msgid "Balanced (recommended)"
-msgstr "Balanced (recommended)"
+msgstr "Uravnotežen (preporučeno)"
 
 msgid "Behavior Records"
-msgstr "Behavior Records"
+msgstr "Evidencija ponašanja"
 
 msgid "Behavioral analysis"
-msgstr "Behavioral analysis"
+msgstr "Analiza ponašanja"
 
 msgid "Blacklist (Block Listed)"
-msgstr "Blacklist (Block Listed)"
+msgstr "Crna lista (na popisu blokiranih)"
 
 msgid "Blacklist (block selected)"
-msgstr "Blacklist (block selected)"
+msgstr "Crna lista (odabran blok)"
 
 msgid "Blacklist IPs"
-msgstr "Blacklist IPs"
+msgstr "IP adrese na crnoj listi"
 
 msgid "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
-msgstr "Blacklist: Block selected countries. Whitelist: Allow only selected countries."
+msgstr "Crna lista: Blokirajte odabrane zemlje. Popis dopuštenih: Dopusti samo odabrane zemlje."
 
 msgid "Blacklisted IPs"
-msgstr "Blacklisted IPs"
+msgstr "IP adrese na crnoj listi"
 
 msgid "Block Bad Bots"
-msgstr "Block Bad Bots"
+msgstr "Blokiraj loše robote"
 
 msgid "Block CSRF Attacks"
-msgstr "Block CSRF Attacks"
+msgstr "Blokiraj CSRF napade"
 
 msgid "Block Common Passwords"
-msgstr "Block Common Passwords"
+msgstr "Blokiraj uobičajene lozinke"
 
 msgid "Block Directory Traversal"
-msgstr "Block Directory Traversal"
+msgstr "Blokiraj obilazak imenika"
 
 msgid "Block Duration"
-msgstr "Block Duration"
+msgstr "Trajanje bloka"
 
 msgid "Block Empty User Agents"
-msgstr "Block Empty User Agents"
+msgstr "Blokiraj prazne korisničke agente"
 
 msgid "Block Excessive API Users"
-msgstr "Block Excessive API Users"
+msgstr "Blokirajte prekomjerne API korisnike"
 
 msgid "Block File Editor"
 msgstr "Block File Editor"
 
 msgid "Block Local File Inclusion"
-msgstr "Block Local File Inclusion"
+msgstr "Blokiraj uključivanje lokalne datoteke"
 
 msgid "Block Message"
-msgstr "Block Message"
+msgstr "Blokiraj poruku"
 
 msgid "Block Mode"
-msgstr "Block Mode"
+msgstr "Blokirani način rada"
 
 msgid "Block Mode (Recommended)"
-msgstr "Block Mode (Recommended)"
+msgstr "Blokirani način (preporučeno)"
 
 msgid "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
-msgstr "Block Mode: Blocks malicious requests. Monitor Mode: Logs threats without blocking."
+msgstr "Način blokiranja: Blokira zlonamjerne zahtjeve. Način nadzora: Bilježi prijetnje bez blokiranja."
 
 msgid "Block Remote Code Execution"
-msgstr "Block Remote Code Execution"
+msgstr "Blokiraj daljinsko izvršavanje koda"
 
 msgid "Block Remote File Inclusion"
-msgstr "Block Remote File Inclusion"
+msgstr "Blokiraj uključenje udaljene datoteke"
 
 msgid "Block SQL Injection"
-msgstr "Block SQL Injection"
+msgstr "Blokiraj SQL injekciju"
 
 msgid "Block Suspicious File Uploads"
-msgstr "Block Suspicious File Uploads"
+msgstr "Blokirajte slanje sumnjivih datoteka"
 
 msgid "Block XML-RPC access (prevents brute force)"
-msgstr "Block XML-RPC access (prevents brute force)"
+msgstr "Blokiraj XML-RPC pristup (sprječava grubu silu)"
 
 msgid "Block XSS Attacks"
-msgstr "Block XSS Attacks"
+msgstr "Blokiraj XSS napade"
 
 msgid "Block access from specific countries."
-msgstr "Block access from specific countries."
+msgstr "Blokiraj pristup iz određenih zemalja."
 
 msgid "Block aggressive crawlers (high request rate)"
-msgstr "Block aggressive crawlers (high request rate)"
+msgstr "Blokiraj agresivne alate za indeksiranje (visoka stopa zahtjeva)"
 
 msgid "Block author enumeration scans (?author=1)"
-msgstr "Block author enumeration scans (?author=1)"
+msgstr "Blokiraj skeniranje popisa autora (?author=1)"
 
 msgid "Block excessively long query strings."
-msgstr "Block excessively long query strings."
+msgstr "Blokiraj preduge nizove upita."
 
 msgid "Block known bad bots and scrapers"
-msgstr "Block known bad bots and scrapers"
+msgstr "Blokirajte poznate loše robote i strugače"
 
 msgid "Block known malicious bots and scrapers."
-msgstr "Block known malicious bots and scrapers."
+msgstr "Blokirajte poznate zlonamjerne robote i strugače."
 
 msgid "Block malformed requests and suspicious query strings"
-msgstr "Block malformed requests and suspicious query strings"
+msgstr "Blokiraj neispravne zahtjeve i sumnjive nizove upita"
 
 msgid "Block malicious requests"
-msgstr "Block malicious requests"
+msgstr "Blokirajte zlonamjerne zahtjeve"
 
 msgid "Block malicious requests and attacks"
-msgstr "Block malicious requests and attacks"
+msgstr "Blokirajte zlonamjerne zahtjeve i napade"
 
 msgid "Block or allow traffic based on country."
-msgstr "Block or allow traffic based on country."
+msgstr "Blokirajte ili dopustite promet ovisno o zemlji."
 
 msgid "Block requests larger than this size to prevent DoS attacks."
-msgstr "Block requests larger than this size to prevent DoS attacks."
+msgstr "Blokirajte zahtjeve veće od ove veličine kako biste spriječili DoS napade."
 
 msgid "Block requests with empty user-agent (may block some legitimate bots)"
-msgstr "Block requests with empty user-agent (may block some legitimate bots)"
+msgstr "Blokiraj zahtjeve s praznim korisničkim agentom (može blokirati neke legitimne botove)"
 
 msgid "Block requests without a User-Agent header."
-msgstr "Block requests without a User-Agent header."
+msgstr "Blokiraj zahtjeve bez zaglavlja User-Agent."
 
 msgid "Block suspicious IPs"
-msgstr "Block suspicious IPs"
+msgstr "Blokirajte sumnjive IP adrese"
 
 msgid "Block suspicious User-Agents"
-msgstr "Block suspicious User-Agents"
+msgstr "Blokirajte sumnjive korisničke agente"
 
 msgid "Block traffic from specific countries. Configure countries in settings before enabling."
-msgstr "Block traffic from specific countries. Configure countries in settings before enabling."
+msgstr "Blokirajte promet iz određenih zemalja. Konfigurirajte zemlje u postavkama prije omogućavanja."
 
 msgid "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
-msgstr "Block uploads with executable extensions (.php, .exe, .sh, etc.)."
+msgstr "Blokirajte prijenose s izvršnim ekstenzijama (.php, .exe, .sh, itd.)."
 
 msgid "Blocked Attacks"
-msgstr "Blocked Attacks"
+msgstr "Blokirani napadi"
 
 msgid "Blocked File Extensions"
-msgstr "Blocked File Extensions"
+msgstr "Blokirane ekstenzije datoteka"
 
 msgid "Blocked Requests"
-msgstr "Blocked Requests"
+msgstr "Blokirani zahtjevi"
 
 msgid "Blocked User Agents"
-msgstr "Blocked User Agents"
+msgstr "Blokirani korisnički agenti"
 
 msgid "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
-msgstr "Blocks IP addresses that show malicious behavior. Safe - you can whitelist your IP."
+msgstr "Blokira IP adrese koje pokazuju zlonamjerno ponašanje. Sigurno - svoju IP adresu možete staviti na bijelu listu."
 
 msgid "Bookmark this URL so you can always access your login page."
-msgstr "Bookmark this URL so you can always access your login page."
+msgstr "Označite ovaj URL kako biste uvijek mogli pristupiti svojoj stranici za prijavu."
 
 msgid "Bot & Crawler Protection"
-msgstr "Bot & Crawler Protection"
+msgstr "Zaštita od robota i indeksiranja"
 
 msgid "Bot & User Agent Protection"
-msgstr "Bot & User Agent Protection"
+msgstr "Zaštita od robota i korisničkog agenta"
 
 msgid "Bot prevention"
-msgstr "Bot prevention"
+msgstr "Prevencija botova"
 
 msgid "Bot protection"
-msgstr "Bot protection"
+msgstr "Zaštita od botova"
 
 msgid "Browsers"
-msgstr "Browsers"
+msgstr "Preglednici"
 
 msgid "Brute Force"
-msgstr "Brute Force"
+msgstr "Gruba sila"
 
 msgid "Brute Force Protection"
-msgstr "Brute Force Protection"
+msgstr "Zaštita grubom silom"
 
 msgid "Brute force protection and login attempt limits."
-msgstr "Brute force protection and login attempt limits."
+msgstr "Brute force zaštita i ograničenja pokušaja prijave."
 
 msgid "Bug"
 msgstr "Bug"
 
 msgid "Busiest Day"
-msgstr "Busiest Day"
+msgstr "Najprometniji dan"
 
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
 msgid "CAPTCHA Protection"
-msgstr "CAPTCHA Protection"
+msgstr "CAPTCHA zaštita"
 
 msgid "CDN Integration"
-msgstr "CDN Integration"
+msgstr "CDN integracija"
 
 msgid "CDN Status"
-msgstr "CDN Status"
+msgstr "CDN status"
 
 msgid "CEF (Common Event Format)"
 msgstr "CEF (Common Event Format)"
@@ -686,1096 +686,1096 @@ msgid "CI/CD"
 msgstr "CI/CD"
 
 msgid "CI/CD Pipeline"
-msgstr "CI/CD Pipeline"
+msgstr "CI/CD cjevovod"
 
 msgid "CI/CD Pipeline Integration"
-msgstr "CI/CD Pipeline Integration"
+msgstr "Integracija cjevovoda CI/CD"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Odustani"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Captcha Preview"
-msgstr "Captcha Preview"
+msgstr "Captcha pregled"
 
 msgid "Captcha Provider"
 msgstr "Captcha Provider"
 
 msgid "Captcha Settings"
-msgstr "Captcha Settings"
+msgstr "Captcha postavke"
 
 msgid "Change Database Prefix"
-msgstr "Change Database Prefix"
+msgstr "Promjena prefiksa baze podataka"
 
 msgid "Change database table prefix (requires manual database update)."
-msgstr "Change database table prefix (requires manual database update)."
+msgstr "Promjena prefiksa tablice baze podataka (zahtijeva ručno ažuriranje baze podataka)."
 
 msgid "Change the default login URL to prevent attacks."
-msgstr "Change the default login URL to prevent attacks."
+msgstr "Promijenite zadani URL za prijavu kako biste spriječili napade."
 
 msgid "Change the default wp-admin login URL to prevent automated attacks."
-msgstr "Change the default wp-admin login URL to prevent automated attacks."
+msgstr "Promijenite zadani URL za prijavu na wp-admin kako biste spriječili automatizirane napade."
 
 msgid "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
-msgstr "Changes login URL from /wp-admin to custom slug to prevent bot attacks"
+msgstr "Mijenja URL za prijavu iz /wp-admin u prilagođeni slug kako bi se spriječili napadi robota"
 
 msgid "Channel"
-msgstr "Channel"
+msgstr "kanal"
 
 msgid "Character Requirements"
-msgstr "Character Requirements"
+msgstr "Zahtjevi za karakter"
 
 msgid "Check Core Integrity"
-msgstr "Check Core Integrity"
+msgstr "Provjerite integritet jezgre"
 
 msgid "Check Interval"
-msgstr "Check Interval"
+msgstr "Interval provjere"
 
 msgid "Check and repair corrupted WordPress core files using official sources."
-msgstr "Check and repair corrupted WordPress core files using official sources."
+msgstr "Provjerite i popravite oštećene datoteke jezgre WordPressa pomoću službenih izvora."
 
 msgid "Check core files for modifications and malware."
-msgstr "Check core files for modifications and malware."
+msgstr "Provjerite jezgrene datoteke za modifikacije i zlonamjerni softver."
 
 msgid "Check for Backdoors"
-msgstr "Check for Backdoors"
+msgstr "Provjerite stražnja vrata"
 
 msgid "Check for Obfuscation"
-msgstr "Check for Obfuscation"
+msgstr "Provjerite maskiranje"
 
 msgid "Check for known vulnerabilities."
-msgstr "Check for known vulnerabilities."
+msgstr "Provjerite postoje li poznate ranjivosti."
 
 msgid "Check uploaded files for malicious content."
-msgstr "Check uploaded files for malicious content."
+msgstr "Provjerite ima li učitanih datoteka zlonamjernog sadržaja."
 
 msgid "Checks for web shells"
-msgstr "Checks for web shells"
+msgstr "Provjerava web školjke"
 
 msgid "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
-msgstr "Checks plugins/themes for known vulnerabilities. Safe - only checks versions."
+msgstr "Provjerava dodatke/teme za poznate ranjivosti. Sigurno - provjerava samo verzije."
 
 msgid "Choose a unique, hard-to-guess slug."
-msgstr "Choose a unique, hard-to-guess slug."
+msgstr "Odaberite jedinstvenog puža kojeg je teško pogoditi."
 
 msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Choose the type of challenge for NexifyMy captcha."
+msgstr "Odaberite vrstu izazova za NexifyMy captcha."
 
 msgid "Clean Files"
-msgstr "Clean Files"
+msgstr "Očistite datoteke"
 
 msgid "Clean Files:"
-msgstr "Clean Files:"
+msgstr "Očistite datoteke:"
 
 msgid "Clean and optimize database"
-msgstr "Clean and optimize database"
+msgstr "Očistite i optimizirajte bazu podataka"
 
 msgid "Clean up unnecessary data to improve database performance."
-msgstr "Clean up unnecessary data to improve database performance."
+msgstr "Očistite nepotrebne podatke kako biste poboljšali performanse baze podataka."
 
 msgid "Clear Logs"
-msgstr "Clear Logs"
+msgstr "Obriši zapisnike"
 
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
 msgid "Cloudflare & more"
-msgstr "Cloudflare & more"
+msgstr "Cloudflare i više"
 
 msgid "Cloudflare API Settings"
-msgstr "Cloudflare API Settings"
+msgstr "Cloudflare API postavke"
 
 msgid "Cloudflare API Token (with Zone permissions)"
-msgstr "Cloudflare API Token (with Zone permissions)"
+msgstr "Cloudflare API token (s dopuštenjima zone)"
 
 msgid "Cloudflare Turnstile"
 msgstr "Cloudflare Turnstile"
 
 msgid "Code"
-msgstr "Code"
+msgstr "Šifra"
 
 msgid "Code Expiration"
-msgstr "Code Expiration"
+msgstr "Istek koda"
 
 msgid "Code Quality Issues"
-msgstr "Code Quality Issues"
+msgstr "Problemi s kvalitetom koda"
 
 msgid "Comma-separated list of file extensions to block in uploads."
-msgstr "Comma-separated list of file extensions to block in uploads."
+msgstr "Popis ekstenzija datoteka odvojenih zarezima za blokiranje u prijenosima."
 
 msgid "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
-msgstr "Comma-separated list of file extensions to skip (e.g., jpg, png, pdf)."
+msgstr "Popis ekstenzija datoteka odvojenih zarezima za preskakanje (npr. jpg, png, pdf)."
 
 msgid "Comment Blocked"
-msgstr "Comment Blocked"
+msgstr "Komentar blokiran"
 
 msgid "Comment Form"
-msgstr "Comment Form"
+msgstr "Obrazac za komentar"
 
 msgid "Comment Posting Rate"
-msgstr "Comment Posting Rate"
+msgstr "Stopa objavljivanja komentara"
 
 msgid "Comment form"
-msgstr "Comment form"
+msgstr "Obrazac za komentar"
 
 msgid "Communication"
-msgstr "Communication"
+msgstr "Komunikacija"
 
 msgid "Communication Platforms"
-msgstr "Communication Platforms"
+msgstr "Komunikacijske platforme"
 
 msgid "Compare core files with official WordPress checksums."
-msgstr "Compare core files with official WordPress checksums."
+msgstr "Usporedite osnovne datoteke sa službenim WordPress kontrolnim zbrojevima."
 
 msgid "Compare your WordPress core files against the official checksums to detect modifications."
-msgstr "Compare your WordPress core files against the official checksums to detect modifications."
+msgstr "Usporedite svoje WordPress temeljne datoteke sa službenim kontrolnim zbrojevima kako biste otkrili izmjene."
 
 msgid "Compares each core file against the expected hash"
-msgstr "Compares each core file against the expected hash"
+msgstr "Uspoređuje svaku jezgrenu datoteku s očekivanim hashom"
 
 msgid "Completely disable all RSS and Atom feeds."
-msgstr "Completely disable all RSS and Atom feeds."
+msgstr "Potpuno onemogućite sve RSS i Atom feedove."
 
 msgid "Completely disable all file modifications (DISALLOW_FILE_MODS)."
-msgstr "Completely disable all file modifications (DISALLOW_FILE_MODS)."
+msgstr "Potpuno onemogućite sve izmjene datoteka (DISALLOW_FILE_MODS)."
 
 msgid "Compliance"
-msgstr "Compliance"
+msgstr "Sukladnost"
 
 msgid "Compliance & Reporting"
-msgstr "Compliance & Reporting"
+msgstr "Sukladnost i izvješćivanje"
 
 msgid "Compliance & Security Reporting"
-msgstr "Compliance & Security Reporting"
+msgstr "Izvješćivanje o usklađenosti i sigurnosti"
 
 msgid "Compliance Settings"
-msgstr "Compliance Settings"
+msgstr "Postavke sukladnosti"
 
 msgid "Composer Dependencies"
-msgstr "Composer Dependencies"
+msgstr "Ovisnosti skladatelja"
 
 msgid "Comprehensive analysis"
-msgstr "Comprehensive analysis"
+msgstr "Sveobuhvatna analiza"
 
 msgid "Comprehensive user activity tracking, login monitoring, and system event logging."
-msgstr "Comprehensive user activity tracking, login monitoring, and system event logging."
+msgstr "Sveobuhvatno praćenje aktivnosti korisnika, praćenje prijave i bilježenje događaja u sustavu."
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Konfigurirajte"
 
 msgid "Configure 2FA for enhanced login security"
-msgstr "Configure 2FA for enhanced login security"
+msgstr "Konfigurirajte 2FA za poboljšanu sigurnost prijave"
 
 msgid "Configure CDN for security and performance."
-msgstr "Configure CDN for security and performance."
+msgstr "Konfigurirajte CDN za sigurnost i performanse."
 
 msgid "Configure CDN integration and cache management."
-msgstr "Configure CDN integration and cache management."
+msgstr "Konfigurirajte CDN integraciju i upravljanje predmemorijom."
 
 msgid "Configure Web Application Firewall (WAF) to protect your site."
-msgstr "Configure Web Application Firewall (WAF) to protect your site."
+msgstr "Konfigurirajte vatrozid web aplikacije (WAF) da biste zaštitili svoju stranicu."
 
 msgid "Configure email alerts and notifications."
-msgstr "Configure email alerts and notifications."
+msgstr "Konfigurirajte upozorenja i obavijesti putem e-pošte."
 
 msgid "Configure firewall rules and protection settings."
-msgstr "Configure firewall rules and protection settings."
+msgstr "Konfigurirajte pravila vatrozida i postavke zaštite."
 
 msgid "Configure malware scanner behavior and scheduled scanning options."
-msgstr "Configure malware scanner behavior and scheduled scanning options."
+msgstr "Konfigurirajte ponašanje skenera zlonamjernog softvera i planirane opcije skeniranja."
 
 msgid "Configure plugin settings and preferences."
-msgstr "Configure plugin settings and preferences."
+msgstr "Konfigurirajte postavke i postavke dodatka."
 
 msgid "Configure plugin settings."
-msgstr "Configure plugin settings."
+msgstr "Konfigurirajte postavke dodatka."
 
 msgid "Configure your security settings."
-msgstr "Configure your security settings."
+msgstr "Konfigurirajte svoje sigurnosne postavke."
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Potvrdi"
 
 msgid "Confirm Action"
-msgstr "Confirm Action"
+msgstr "Potvrdi radnju"
 
 msgid "Confirmed Malware"
-msgstr "Confirmed Malware"
+msgstr "Potvrđen zlonamjerni softver"
 
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
-msgstr "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
+msgstr "Povežite svoj sigurnosni nadzor sa SIEM, prodajom ulaznica, komunikacijom i CI/CD platformama."
 
 msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Contact our support team for assistance with NexifyMy Security."
+msgstr "Kontaktirajte naš tim za podršku za pomoć s NexifyMy Security."
 
 msgid "Content"
-msgstr "Content"
+msgstr "Sadržaj"
 
 msgid "Content Activity"
-msgstr "Content Activity"
+msgstr "Aktivnost sadržaja"
 
 msgid "Content Changes"
-msgstr "Content Changes"
+msgstr "Promjene sadržaja"
 
 msgid "Content Events"
-msgstr "Content Events"
+msgstr "Sadržaj Događaji"
 
 msgid "Content Security"
-msgstr "Content Security"
+msgstr "Sigurnost sadržaja"
 
 msgid "Core File Modifications"
-msgstr "Core File Modifications"
+msgstr "Izmjene osnovnih datoteka"
 
 msgid "Core File Repair"
-msgstr "Core File Repair"
+msgstr "Popravak osnovne datoteke"
 
 msgid "Core Repair"
-msgstr "Core Repair"
+msgstr "Popravak jezgre"
 
 msgid "Core WordPress integrity"
-msgstr "Core WordPress integrity"
+msgstr "Temeljni integritet WordPressa"
 
 msgid "Core file integrity"
-msgstr "Core file integrity"
+msgstr "Integritet osnovne datoteke"
 
 msgid "Count"
-msgstr "Count"
+msgstr "brojati"
 
 msgid "Countries"
-msgstr "Countries"
+msgstr "zemlje"
 
 msgid "Country"
-msgstr "Country"
+msgstr "Država"
 
 msgid "Country Blocking Settings"
-msgstr "Country Blocking Settings"
+msgstr "Postavke blokiranja države"
 
 msgid "Country restrictions"
-msgstr "Country restrictions"
+msgstr "Ograničenja zemlje"
 
 msgid "Create Backup Now"
-msgstr "Create Backup Now"
+msgstr "Stvorite sigurnosnu kopiju sada"
 
 msgid "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
-msgstr "Create a backup of your WordPress database. Backups are stored securely and can be downloaded."
+msgstr "Napravite sigurnosnu kopiju vaše WordPress baze podataka. Sigurnosne kopije su sigurno pohranjene i mogu se preuzeti."
 
 msgid "Create incidents in ServiceNow for critical security events."
-msgstr "Create incidents in ServiceNow for critical security events."
+msgstr "Stvorite incidente u ServiceNow za kritične sigurnosne događaje."
 
 msgid "Create webhook at: https://api.slack.com/messaging/webhooks"
-msgstr "Create webhook at: https://api.slack.com/messaging/webhooks"
+msgstr "Stvorite webhook na: https://api.slack.com/messaging/webhooks"
 
 msgid "Create webhook in Discord Server Settings > Integrations > Webhooks"
-msgstr "Create webhook in Discord Server Settings > Integrations > Webhooks"
+msgstr "Stvorite webhook u postavkama Discord poslužitelja > Integracije > Webhookovi"
 
 msgid "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
-msgstr "Create webhook: Teams > Channel > Connectors > Incoming Webhook"
+msgstr "Stvorite web-dojavnik: Timovi > Kanal > Konektori > Dolazni web-dojavnik"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Stvoreno"
 
 msgid "Created: %s"
-msgstr "Created: %s"
+msgstr "Stvoreno: %s"
 
 msgid "Critical"
-msgstr "Critical"
+msgstr "Kritično"
 
 msgid "Critical Only"
-msgstr "Critical Only"
+msgstr "Samo kritično"
 
 msgid "Current Login URL"
-msgstr "Current Login URL"
+msgstr "Trenutačni URL za prijavu"
 
 msgid "Current Version"
-msgstr "Current Version"
+msgstr "Trenutna verzija"
 
 msgid "Current:"
-msgstr "Current:"
+msgstr "Trenutno:"
 
 msgid "Custom Login URL"
-msgstr "Custom Login URL"
+msgstr "Prilagođeni URL za prijavu"
 
 msgid "Custom URL"
-msgstr "Custom URL"
+msgstr "Prilagođeni URL"
 
 msgid "Custom Webhooks"
-msgstr "Custom Webhooks"
+msgstr "Prilagođeni webdojavnici"
 
 msgid "Daily"
-msgstr "Daily"
+msgstr "Dnevno"
 
 msgid "Daily (Recommended)"
-msgstr "Daily (Recommended)"
+msgstr "Dnevno (preporučeno)"
 
 msgid "Daily Status Summary"
-msgstr "Daily Status Summary"
+msgstr "Dnevni sažetak statusa"
 
 msgid "Daily Summary"
-msgstr "Daily Summary"
+msgstr "Dnevni sažetak"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Nadzorna ploča"
 
 msgid "Data Retention"
-msgstr "Data Retention"
+msgstr "Zadržavanje podataka"
 
 msgid "Database"
-msgstr "Database"
+msgstr "Baza podataka"
 
 msgid "Database Actions"
-msgstr "Database Actions"
+msgstr "Radnje baze podataka"
 
 msgid "Database Backup"
-msgstr "Database Backup"
+msgstr "Sigurnosna kopija baze podataka"
 
 msgid "Database Information"
-msgstr "Database Information"
+msgstr "Podaci baze podataka"
 
 msgid "Database Optimization"
-msgstr "Database Optimization"
+msgstr "Optimizacija baze podataka"
 
 msgid "Database Optimizer"
-msgstr "Database Optimizer"
+msgstr "Optimizator baze podataka"
 
 msgid "Database Security"
-msgstr "Database Security"
+msgstr "Sigurnost baze podataka"
 
 msgid "Database Size"
-msgstr "Database Size"
+msgstr "Veličina baze podataka"
 
 msgid "Database backup and optimization. Configure backup schedule before enabling."
-msgstr "Database backup and optimization. Configure backup schedule before enabling."
+msgstr "Sigurnosno kopiranje i optimizacija baze podataka. Konfigurirajte raspored sigurnosnog kopiranja prije omogućavanja."
 
 msgid "Database security check"
-msgstr "Database security check"
+msgstr "Sigurnosna provjera baze podataka"
 
 msgid "Datadog"
 msgstr "Datadog"
 
 msgid "Date"
-msgstr "Date"
+msgstr "Datum"
 
 msgid "Date/Time"
-msgstr "Date/Time"
+msgstr "Datum/vrijeme"
 
 msgid "Deactivation Monitoring:"
-msgstr "Deactivation Monitoring:"
+msgstr "Praćenje deaktivacije:"
 
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "Način otklanjanja pogrešaka"
 
 msgid "Deep"
-msgstr "Deep"
+msgstr "duboko"
 
 msgid "Deep Scan"
-msgstr "Deep Scan"
+msgstr "Duboko skeniranje"
 
 msgid "Default Scan Mode"
-msgstr "Default Scan Mode"
+msgstr "Zadani način skeniranja"
 
 msgid "Default scan mode used when none is specified."
-msgstr "Default scan mode used when none is specified."
+msgstr "Zadani način skeniranja koji se koristi kada nijedan nije naveden."
 
 msgid "Definitions"
-msgstr "Definitions"
+msgstr "Definicije"
 
 msgid "Delete"
-msgstr "Delete"
+msgstr "Izbriši"
 
 msgid "Delete all plugin data when uninstalling"
-msgstr "Delete all plugin data when uninstalling"
+msgstr "Izbrišite sve podatke dodatka prilikom deinstalacije"
 
 msgid "Delete:"
-msgstr "Delete:"
+msgstr "Izbriši:"
 
 msgid "Dependency scanning, third-party script monitoring, and CDN integrity verification."
-msgstr "Dependency scanning, third-party script monitoring, and CDN integrity verification."
+msgstr "Skeniranje ovisnosti, praćenje skripti treće strane i provjera integriteta CDN-a."
 
 msgid "Description"
-msgstr "Description"
+msgstr "Opis"
 
 msgid "Detailed insights into your site traffic and security events"
-msgstr "Detailed insights into your site traffic and security events"
+msgstr "Detaljan uvid u promet vaše stranice i sigurnosne događaje"
 
 msgid "Detailed insights into your website security performance."
-msgstr "Detailed insights into your website security performance."
+msgstr "Detaljan uvid u sigurnosnu izvedbu vaše web stranice."
 
 msgid "Detect and block code execution attempts."
-msgstr "Detect and block code execution attempts."
+msgstr "Otkrijte i blokirajte pokušaje izvršenja koda."
 
 msgid "Detect hidden backdoor scripts and shells."
-msgstr "Detect hidden backdoor scripts and shells."
+msgstr "Otkrijte skrivene backdoor skripte i školjke."
 
 msgid "Detect malware, backdoors, and suspicious code"
-msgstr "Detect malware, backdoors, and suspicious code"
+msgstr "Otkrijte zlonamjerni softver, stražnja vrata i sumnjivi kod"
 
 msgid "Detect threats"
-msgstr "Detect threats"
+msgstr "Otkrijte prijetnje"
 
 msgid "Detect unknown threats using behavioral analysis."
-msgstr "Detect unknown threats using behavioral analysis."
+msgstr "Otkrijte nepoznate prijetnje pomoću analize ponašanja."
 
 msgid "Detection Methods"
-msgstr "Detection Methods"
+msgstr "Metode otkrivanja"
 
 msgid "Device Types"
-msgstr "Device Types"
+msgstr "Vrste uređaja"
 
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Poteškoće"
 
 msgid "Difficulty Level"
-msgstr "Difficulty Level"
+msgstr "Razina težine"
 
 msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Difficulty level for NexifyMy captcha challenges."
+msgstr "Razina težine za NexifyMy captcha izazove."
 
 msgid "Direct"
-msgstr "Direct"
+msgstr "Izravno"
 
 msgid "Directory Traversal"
-msgstr "Directory Traversal"
+msgstr "Putovanje imenikom"
 
 msgid "Directory Traversal Protection"
-msgstr "Directory Traversal Protection"
+msgstr "Zaštita od prolaska imenika"
 
 msgid "Disable 2FA"
-msgstr "Disable 2FA"
+msgstr "Onemogući 2FA"
 
 msgid "Disable Application Passwords"
-msgstr "Disable Application Passwords"
+msgstr "Onemogući aplikacijske lozinke"
 
 msgid "Disable Author Archives"
-msgstr "Disable Author Archives"
+msgstr "Onemogući arhive autora"
 
 msgid "Disable Directory Browsing"
-msgstr "Disable Directory Browsing"
+msgstr "Onemogući pregledavanje direktorija"
 
 msgid "Disable Embeds"
-msgstr "Disable Embeds"
+msgstr "Onemogući ugradnje"
 
 msgid "Disable File Editor"
-msgstr "Disable File Editor"
+msgstr "Onemogući uređivač datoteka"
 
 msgid "Disable File Modifications"
-msgstr "Disable File Modifications"
+msgstr "Onemogući izmjene datoteka"
 
 msgid "Disable Login Error Messages"
-msgstr "Disable Login Error Messages"
+msgstr "Onemogući poruke o pogrešci prijave"
 
 msgid "Disable Pingback"
-msgstr "Disable Pingback"
+msgstr "Onemogući Pingback"
 
 msgid "Disable Pingbacks"
-msgstr "Disable Pingbacks"
+msgstr "Onemogući povratne pingove"
 
 msgid "Disable Plugin/Theme Installation"
-msgstr "Disable Plugin/Theme Installation"
+msgstr "Onemogući instalaciju dodatka/teme"
 
 msgid "Disable REST API User Enumeration"
-msgstr "Disable REST API User Enumeration"
+msgstr "Onemogući popis korisnika REST API-ja"
 
 msgid "Disable RSS/Atom Feeds"
-msgstr "Disable RSS/Atom Feeds"
+msgstr "Onemogući RSS/Atom feedove"
 
 msgid "Disable Right-Click"
-msgstr "Disable Right-Click"
+msgstr "Onemogući desni klik"
 
 msgid "Disable Text Selection"
-msgstr "Disable Text Selection"
+msgstr "Onemogući odabir teksta"
 
 msgid "Disable Trackbacks"
-msgstr "Disable Trackbacks"
+msgstr "Onemogući Trackbacks"
 
 msgid "Disable WP editor"
-msgstr "Disable WP editor"
+msgstr "Onemogući WP editor"
 
 msgid "Disable XML-RPC"
-msgstr "Disable XML-RPC"
+msgstr "Onemogući XML-RPC"
 
 msgid "Disable XML-RPC (prevents common brute force vector)"
-msgstr "Disable XML-RPC (prevents common brute force vector)"
+msgstr "Onemogući XML-RPC (sprječava uobičajeni vektor grube sile)"
 
 msgid "Disable XML-RPC (prevents pingback attacks)"
-msgstr "Disable XML-RPC (prevents pingback attacks)"
+msgstr "Onemogući XML-RPC (sprječava pingback napade)"
 
 msgid "Disable XML-RPC (used in DDoS and brute force attacks)."
-msgstr "Disable XML-RPC (used in DDoS and brute force attacks)."
+msgstr "Onemogući XML-RPC (koristi se u DDoS napadima i napadima grubom silom)."
 
 msgid "Disable author archive pages to prevent username enumeration."
-msgstr "Disable author archive pages to prevent username enumeration."
+msgstr "Onemogućite arhivske stranice autora kako biste spriječili nabrajanje korisničkog imena."
 
 msgid "Disable oEmbed functionality and REST API endpoints."
-msgstr "Disable oEmbed functionality and REST API endpoints."
+msgstr "Onemogućite funkciju oEmbed i krajnje točke REST API-ja."
 
 msgid "Disable pingback functionality to prevent DDoS."
-msgstr "Disable pingback functionality to prevent DDoS."
+msgstr "Onemogućite funkciju povratnog pinga kako biste spriječili DDoS."
 
 msgid "Disable pingback/trackback functionality"
-msgstr "Disable pingback/trackback functionality"
+msgstr "Onemogući funkciju pingback/trackback"
 
 msgid "Disable plugin/theme file editor in WordPress admin."
-msgstr "Disable plugin/theme file editor in WordPress admin."
+msgstr "Onemogućite uređivač datoteke dodatka/teme u WordPress administratoru."
 
 msgid "Disable public user enumeration via REST API"
-msgstr "Disable public user enumeration via REST API"
+msgstr "Onemogući javno nabrajanje korisnika putem REST API-ja"
 
 msgid "Disable right-click context menu on frontend."
-msgstr "Disable right-click context menu on frontend."
+msgstr "Onemogući kontekstni izbornik desnim klikom na sučelju."
 
 msgid "Disable the built-in theme and plugin editor to prevent code injection."
-msgstr "Disable the built-in theme and plugin editor to prevent code injection."
+msgstr "Onemogućite ugrađenu temu i uređivač dodataka kako biste spriječili ubacivanje koda."
 
 msgid "Disable theme and plugin editor"
-msgstr "Disable theme and plugin editor"
+msgstr "Onemogući uređivač tema i dodataka"
 
 msgid "Disable theme/plugin editor in admin"
-msgstr "Disable theme/plugin editor in admin"
+msgstr "Onemogućite uređivač tema/dodataka u adminu"
 
 msgid "Disable trackback functionality."
-msgstr "Disable trackback functionality."
+msgstr "Onemogući funkciju praćenja."
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Onesposobljeno"
 
 msgid "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
-msgstr "Disables XML-RPC to prevent attacks. Safe unless you use Jetpack or mobile apps."
+msgstr "Onemogućuje XML-RPC radi sprječavanja napada. Sigurno osim ako ne koristite Jetpack ili mobilne aplikacije."
 
 msgid "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
-msgstr "Disables built-in theme/plugin editor. Safe - prevents code editing in admin."
+msgstr "Onemogućuje ugrađeni uređivač tema/dodataka. Sigurno - sprječava uređivanje koda u administratoru."
 
 msgid "Disables file editing, XML-RPC, and applies WordPress best practices"
-msgstr "Disables file editing, XML-RPC, and applies WordPress best practices"
+msgstr "Onemogućuje uređivanje datoteka, XML-RPC i primjenjuje najbolju praksu WordPressa"
 
 msgid "Discord Integration"
-msgstr "Discord Integration"
+msgstr "Integracija Discorda"
 
 msgid "Download"
-msgstr "Download"
+msgstr "preuzimanje"
 
 msgid "Downloads fresh WordPress package from official source"
-msgstr "Downloads fresh WordPress package from official source"
+msgstr "Preuzima novi WordPress paket sa službenog izvora"
 
 msgid "Easy"
-msgstr "Easy"
+msgstr "lako"
 
 msgid "Easy (addition only)"
-msgstr "Easy (addition only)"
+msgstr "Jednostavno (samo dodatak)"
 
 msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgstr "Uređivanje datoteka sigurnosnog dodatka NexifyMy onemogućeno je iz sigurnosnih razloga."
 
 msgid "Editor & File Access"
-msgstr "Editor & File Access"
+msgstr "Uređivač i pristup datotekama"
 
 msgid "Editor Blocking:"
-msgstr "Editor Blocking:"
+msgstr "Blokiranje urednika:"
 
 msgid "Elasticsearch"
 msgstr "Elasticsearch"
 
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 msgid "Email Alert Settings"
-msgstr "Email Alert Settings"
+msgstr "Postavke upozorenja putem e-pošte"
 
 msgid "Email Alerts"
-msgstr "Email Alerts"
+msgstr "Obavijesti e-poštom"
 
 msgid "Email Backup"
-msgstr "Email Backup"
+msgstr "Sigurnosna kopija e-pošte"
 
 msgid "Email Notifications"
-msgstr "Email Notifications"
+msgstr "Obavijesti e-poštom"
 
 msgid "Email Reports"
-msgstr "Email Reports"
+msgstr "Izvješća e-poštom"
 
 msgid "Email Scan Reports"
-msgstr "Email Scan Reports"
+msgstr "Izvješća skeniranja e-pošte"
 
 msgid "Email Verification"
-msgstr "Email Verification"
+msgstr "Potvrda e-pošte"
 
 msgid "Empty User Agent"
-msgstr "Empty User Agent"
+msgstr "Prazan korisnički agent"
 
 msgid "Enable"
-msgstr "Enable"
+msgstr "Omogući"
 
 msgid "Enable 2FA"
-msgstr "Enable 2FA"
+msgstr "Omogućite 2FA"
 
 msgid "Enable 2FA Module"
-msgstr "Enable 2FA Module"
+msgstr "Omogućite 2FA modul"
 
 msgid "Enable Activity Logging"
-msgstr "Enable Activity Logging"
+msgstr "Omogući bilježenje aktivnosti"
 
 msgid "Enable Alerts"
-msgstr "Enable Alerts"
+msgstr "Omogući upozorenja"
 
 msgid "Enable CAPTCHA Protection"
-msgstr "Enable CAPTCHA Protection"
+msgstr "Omogući CAPTCHA zaštitu"
 
 msgid "Enable CDN Integration"
-msgstr "Enable CDN Integration"
+msgstr "Omogući integraciju CDN-a"
 
 msgid "Enable CDN features"
-msgstr "Enable CDN features"
+msgstr "Omogućite CDN značajke"
 
 msgid "Enable CI/CD Integration"
-msgstr "Enable CI/CD Integration"
+msgstr "Omogući CI/CD integraciju"
 
 msgid "Enable Captcha"
-msgstr "Enable Captcha"
+msgstr "Omogući Captcha"
 
 msgid "Enable Custom Webhooks"
-msgstr "Enable Custom Webhooks"
+msgstr "Omogući prilagođene web-dojavnike"
 
 msgid "Enable Discord"
-msgstr "Enable Discord"
+msgstr "Omogući Discord"
 
 msgid "Enable Email Alerts"
-msgstr "Enable Email Alerts"
+msgstr "Omogući upozorenja putem e-pošte"
 
 msgid "Enable Firewall"
-msgstr "Enable Firewall"
+msgstr "Omogući vatrozid"
 
 msgid "Enable Geo Blocking"
-msgstr "Enable Geo Blocking"
+msgstr "Omogući geoblokiranje"
 
 msgid "Enable Hide Login"
-msgstr "Enable Hide Login"
+msgstr "Omogući Sakrij prijavu"
 
 msgid "Enable Jira"
-msgstr "Enable Jira"
+msgstr "Omogući Jira"
 
 msgid "Enable Protection"
-msgstr "Enable Protection"
+msgstr "Omogući zaštitu"
 
 msgid "Enable Rate Limiting"
-msgstr "Enable Rate Limiting"
+msgstr "Omogući ograničenje brzine"
 
 msgid "Enable SIEM Integration"
-msgstr "Enable SIEM Integration"
+msgstr "Omogući SIEM integraciju"
 
 msgid "Enable SSL/HTTPS"
-msgstr "Enable SSL/HTTPS"
+msgstr "Omogućite SSL/HTTPS"
 
 msgid "Enable Scanner"
-msgstr "Enable Scanner"
+msgstr "Omogući skener"
 
 msgid "Enable Scanner Module"
-msgstr "Enable Scanner Module"
+msgstr "Omogući modul skenera"
 
 msgid "Enable Scheduled Scans"
-msgstr "Enable Scheduled Scans"
+msgstr "Omogući planirana skeniranja"
 
 msgid "Enable ServiceNow"
-msgstr "Enable ServiceNow"
+msgstr "Omogući ServiceNow"
 
 msgid "Enable Slack"
-msgstr "Enable Slack"
+msgstr "Omogući Slack"
 
 msgid "Enable Teams"
-msgstr "Enable Teams"
+msgstr "Omogući timove"
 
 msgid "Enable Two-Factor Authentication"
-msgstr "Enable Two-Factor Authentication"
+msgstr "Omogućite dvofaktorsku provjeru autentičnosti"
 
 msgid "Enable WAF"
-msgstr "Enable WAF"
+msgstr "Omogući WAF"
 
 msgid "Enable WAF Module"
-msgstr "Enable WAF Module"
+msgstr "Omogući WAF modul"
 
 msgid "Enable WAF protection"
-msgstr "Enable WAF protection"
+msgstr "Omogući WAF zaštitu"
 
 msgid "Enable Web Application Firewall"
-msgstr "Enable Web Application Firewall"
+msgstr "Omogući vatrozid web aplikacije"
 
 msgid "Enable Web Application Firewall protection."
-msgstr "Enable Web Application Firewall protection."
+msgstr "Omogući zaštitu vatrozida web aplikacije."
 
 msgid "Enable and configure security modules for your site."
-msgstr "Enable and configure security modules for your site."
+msgstr "Omogućite i konfigurirajte sigurnosne module za svoju stranicu."
 
 msgid "Enable and configure security modules."
-msgstr "Enable and configure security modules."
+msgstr "Omogućite i konfigurirajte sigurnosne module."
 
 msgid "Enable captcha protection"
-msgstr "Enable captcha protection"
+msgstr "Uključi captcha zaštitu"
 
 msgid "Enable country-based blocking"
-msgstr "Enable country-based blocking"
+msgstr "Omogući blokiranje prema zemlji"
 
 msgid "Enable debug logging (for troubleshooting only)"
-msgstr "Enable debug logging (for troubleshooting only)"
+msgstr "Omogući bilježenje otklanjanja pogrešaka (samo za rješavanje problema)"
 
 msgid "Enable firewall protection to block attacks"
-msgstr "Enable firewall protection to block attacks"
+msgstr "Omogućite zaštitu vatrozidom za blokiranje napada"
 
 msgid "Enable login rate limiting"
-msgstr "Enable login rate limiting"
+msgstr "Omogući ograničenje stope prijave"
 
 msgid "Enable malware scanner"
-msgstr "Enable malware scanner"
+msgstr "Omogući skener zlonamjernog softvera"
 
 msgid "Enable or disable security modules."
-msgstr "Enable or disable security modules."
+msgstr "Omogućite ili onemogućite sigurnosne module."
 
 msgid "Enable or disable the entire WAF module."
-msgstr "Enable or disable the entire WAF module."
+msgstr "Omogućite ili onemogućite cijeli WAF modul."
 
 msgid "Enable or disable the malware scanner."
-msgstr "Enable or disable the malware scanner."
+msgstr "Omogućite ili onemogućite skener zlonamjernog softvera."
 
 msgid "Enable or disable the rate limiting module."
-msgstr "Enable or disable the rate limiting module."
+msgstr "Omogućite ili onemogućite modul za ograničavanje brzine."
 
 msgid "Enable or disable two-factor authentication."
-msgstr "Enable or disable two-factor authentication."
+msgstr "Omogućite ili onemogućite dvofaktorsku provjeru autentičnosti."
 
 msgid "Enable scheduled scans"
-msgstr "Enable scheduled scans"
+msgstr "Omogući zakazana skeniranja"
 
 msgid "Enable vulnerability scanner features"
-msgstr "Enable vulnerability scanner features"
+msgstr "Omogući značajke skeniranja ranjivosti"
 
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Omogućeno"
 
 msgid "Endpoint"
-msgstr "Endpoint"
+msgstr "Krajnja točka"
 
 msgid "Endpoint URL"
-msgstr "Endpoint URL"
+msgstr "URL krajnje točke"
 
 msgid "Enforce Strong Passwords"
-msgstr "Enforce Strong Passwords"
+msgstr "Provedite snažne lozinke"
 
 msgid "Enforce strong password requirements"
-msgstr "Enforce strong password requirements"
+msgstr "Provedite zahtjeve za jaku lozinku"
 
 msgid "Enforce strong password requirements for all users."
-msgstr "Enforce strong password requirements for all users."
+msgstr "Provedite snažne zahtjeve za lozinku za sve korisnike."
 
 msgid "Enforce strong password requirements."
-msgstr "Enforce strong password requirements."
+msgstr "Provedite zahtjeve za jaku lozinku."
 
 msgid "Enforces strong password requirements for users. Safe - only affects new passwords."
-msgstr "Enforces strong password requirements for users. Safe - only affects new passwords."
+msgstr "Provodi stroge zahtjeve za lozinku za korisnike. Sigurno - utječe samo na nove lozinke."
 
 msgid "Enforces strong passwords with minimum length, complexity rules"
-msgstr "Enforces strong passwords with minimum length, complexity rules"
+msgstr "Provodi jake lozinke s minimalnom duljinom i pravilima složenosti"
 
 msgid "Enter 6-digit code to verify setup"
-msgstr "Enter 6-digit code to verify setup"
+msgstr "Unesite 6-znamenkasti kod za potvrdu postavki"
 
 msgid "Enter IPs, one per line"
-msgstr "Enter IPs, one per line"
+msgstr "Unesite IP adrese, jednu po retku"
 
 msgid "Enter answer"
-msgstr "Enter answer"
+msgstr "Unesite odgovor"
 
 msgid "Enter the code:"
-msgstr "Enter the code:"
+msgstr "Unesite kod:"
 
 msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgstr "Sigurnost WordPressa na razini poduzeća"
 
 msgid "Error"
-msgstr "Error"
+msgstr "Greška"
 
 msgid "Event"
-msgstr "Event"
+msgstr "događaj"
 
 msgid "Event Format"
-msgstr "Event Format"
+msgstr "Format događaja"
 
 msgid "Event Logs"
-msgstr "Event Logs"
+msgstr "Dnevnici događaja"
 
 msgid "Event Severity"
-msgstr "Event Severity"
+msgstr "Ozbiljnost događaja"
 
 msgid "Event Type"
-msgstr "Event Type"
+msgstr "Vrsta događaja"
 
 msgid "Events"
-msgstr "Events"
+msgstr "Događaji"
 
 msgid "Events (7 days)"
-msgstr "Events (7 days)"
+msgstr "Događaji (7 dana)"
 
 msgid "Events to Create Tickets"
-msgstr "Events to Create Tickets"
+msgstr "Događaji za izradu ulaznica"
 
 msgid "Events to Forward"
-msgstr "Events to Forward"
+msgstr "Događaji za prosljeđivanje"
 
 msgid "Events to Notify"
-msgstr "Events to Notify"
+msgstr "Događaji za obavijest"
 
 msgid "Example: GitHub Actions"
-msgstr "Example: GitHub Actions"
+msgstr "Primjer: GitHub radnje"
 
 msgid "Example: GitLab CI"
-msgstr "Example: GitLab CI"
+msgstr "Primjer: GitLab CI"
 
 msgid "Example: Jenkins Pipeline"
-msgstr "Example: Jenkins Pipeline"
+msgstr "Primjer: Jenkinsov cjevovod"
 
 msgid "Excluded Extensions"
-msgstr "Excluded Extensions"
+msgstr "Isključena proširenja"
 
 msgid "Excluded File Patterns"
-msgstr "Excluded File Patterns"
+msgstr "Izuzeti uzorci datoteka"
 
 msgid "Excluded Paths"
-msgstr "Excluded Paths"
+msgstr "Isključeni putovi"
 
 msgid "Excluded Users"
-msgstr "Excluded Users"
+msgstr "Isključeni korisnici"
 
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Isključivanja"
 
 msgid "Exhaustive file scan"
-msgstr "Exhaustive file scan"
+msgstr "Iscrpno skeniranje datoteka"
 
 msgid "Existing Backups"
-msgstr "Existing Backups"
+msgstr "Postojeće sigurnosne kopije"
 
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Izvezi CSV"
 
 msgid "Export Settings"
-msgstr "Export Settings"
+msgstr "Postavke izvoza"
 
 msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Izvezite svoje NexifyMy sigurnosne postavke u JSON datoteku. To uključuje sve konfiguracije modula, pravila vatrozida, IP liste i postavke skeniranja."
 
 msgid "External Scripts & CDN Resources"
-msgstr "External Scripts & CDN Resources"
+msgstr "Vanjske skripte i CDN resursi"
 
 msgid "Extra login security"
-msgstr "Extra login security"
+msgstr "Dodatna sigurnost prijave"
 
 msgid "Fail Build on Malware"
-msgstr "Fail Build on Malware"
+msgstr "Neuspješna izgradnja zlonamjernog softvera"
 
 msgid "Fail Build on Vulnerabilities"
-msgstr "Fail Build on Vulnerabilities"
+msgstr "Neuspješna izgradnja ranjivosti"
 
 msgid "Failed"
-msgstr "Failed"
+msgstr "neuspješno"
 
 msgid "Failed 2FA attempts before temporary lockout."
-msgstr "Failed 2FA attempts before temporary lockout."
+msgstr "Neuspjeli pokušaji 2FA prije privremenog zaključavanja."
 
 msgid "Failed Login"
-msgstr "Failed Login"
+msgstr "Prijava nije uspjela"
 
 msgid "Failed Logins"
-msgstr "Failed Logins"
+msgstr "Neuspjele prijave"
 
 msgid "Failed login attempt detected"
-msgstr "Failed login attempt detected"
+msgstr "Otkriven neuspjeli pokušaj prijave"
 
 msgid "Failed to register passkey."
-msgstr "Failed to register passkey."
+msgstr "Neuspješna registracija zaporke."
 
 msgid "Fast execution"
-msgstr "Fast execution"
+msgstr "Brza izvedba"
 
 msgid "Fast security check"
-msgstr "Fast security check"
+msgstr "Brza sigurnosna provjera"
 
 msgid "Fetches official file checksums from WordPress.org API"
-msgstr "Fetches official file checksums from WordPress.org API"
+msgstr "Dohvaća službene kontrolne zbrojeve datoteka s WordPress.org API-ja"
 
 msgid "File"
 msgstr "File"
 
 msgid "File Editor"
-msgstr "File Editor"
+msgstr "Uređivač datoteka"
 
 msgid "File Hashing:"
-msgstr "File Hashing:"
+msgstr "Raspršivanje datoteke:"
 
 msgid "File Inclusion"
-msgstr "File Inclusion"
+msgstr "Uključivanje datoteke"
 
 msgid "File Inclusion Protection"
-msgstr "File Inclusion Protection"
+msgstr "Zaštita uključivanja datoteke"
 
 msgid "File Integrity Check"
-msgstr "File Integrity Check"
+msgstr "Provjera integriteta datoteke"
 
 msgid "File Integrity Monitoring"
-msgstr "File Integrity Monitoring"
+msgstr "Nadzor integriteta datoteke"
 
 msgid "File Permissions"
-msgstr "File Permissions"
+msgstr "Dozvole za datoteke"
 
 msgid "File Quarantined"
-msgstr "File Quarantined"
+msgstr "Datoteka u karanteni"
 
 msgid "File extensions to exclude from scanning (one per line, without dots)."
-msgstr "File extensions to exclude from scanning (one per line, without dots)."
+msgstr "Ekstenzije datoteka za isključivanje iz skeniranja (jedna po retku, bez točkica)."
 
 msgid "Filename"
-msgstr "Filename"
+msgstr "Naziv datoteke"
 
 msgid "Files Scanned"
-msgstr "Files Scanned"
+msgstr "Datoteke skenirane"
 
 msgid "Files Scanned:"
-msgstr "Files Scanned:"
+msgstr "Skenirane datoteke:"
 
 msgid "Files are periodically compared against the baseline."
-msgstr "Files are periodically compared against the baseline."
+msgstr "Datoteke se povremeno uspoređuju s osnovnom linijom."
 
 msgid "Files in quarantine are safely stored and cannot execute."
-msgstr "Files in quarantine are safely stored and cannot execute."
+msgstr "Datoteke u karanteni su sigurno pohranjene i ne mogu se izvršiti."
 
 msgid "Files larger than this will be skipped during scanning."
-msgstr "Files larger than this will be skipped during scanning."
+msgstr "Datoteke veće od ove bit će preskočene tijekom skeniranja."
 
 msgid "Filter"
 msgstr "Filter"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Vatrozid"
 
 msgid "Firewall & Protection"
-msgstr "Firewall & Protection"
+msgstr "Vatrozid i zaštita"
 
 msgid "Firewall Configuration"
-msgstr "Firewall Configuration"
+msgstr "Konfiguracija vatrozida"
 
 msgid "Firewall Rules"
-msgstr "Firewall Rules"
+msgstr "Pravila vatrozida"
 
 msgid "Firewall Settings"
-msgstr "Firewall Settings"
+msgstr "Postavke vatrozida"
 
 msgid "Fix modified files"
-msgstr "Fix modified files"
+msgstr "Popravite izmijenjene datoteke"
 
 msgid "Flag heavily obfuscated or encoded code."
-msgstr "Flag heavily obfuscated or encoded code."
+msgstr "Označite jako maskiran ili kodiran kod."
 
 msgid "Force SSL for Admin"
-msgstr "Force SSL for Admin"
+msgstr "Prisilni SSL za administratora"
 
 msgid "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
-msgstr "Force SSL/HTTPS for admin area (FORCE_SSL_ADMIN)."
+msgstr "Prisilni SSL/HTTPS za administrativno područje (FORCE_SSL_ADMIN)."
 
 msgid "Force for Admins"
-msgstr "Force for Admins"
+msgstr "Prisilno za administratore"
 
 msgid "Format:"
 msgstr "Format:"
 
 msgid "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
-msgstr "Forward security events to your Security Information and Event Management (SIEM) platform for centralized logging and analysis."
+msgstr "Proslijedite sigurnosne događaje na vašu platformu za upravljanje sigurnosnim informacijama i događajima (SIEM) za centralizirano bilježenje i analizu."
 
 msgid "Found in Cloudflare dashboard under Overview"
-msgstr "Found in Cloudflare dashboard under Overview"
+msgstr "Pronađeno na Cloudflare nadzornoj ploči pod Pregledom"
 
 msgid "Found in known safe plugin - likely legitimate use"
-msgstr "Found in known safe plugin - likely legitimate use"
+msgstr "Pronađeno u poznatom sigurnom dodatku - vjerojatno legitimna upotreba"
 
 msgid "Found in system directory - may be legitimate"
-msgstr "Found in system directory - may be legitimate"
+msgstr "Pronađeno u direktoriju sustava - može biti legitimno"
 
 msgid "From Date"
-msgstr "From Date"
+msgstr "Od datuma"
 
 msgid "From Email"
-msgstr "From Email"
+msgstr "Iz e-pošte"
 
 msgid "From Name"
-msgstr "From Name"
+msgstr "Od imena"
 
 msgid "Full HTTP/HTTPS endpoint URL for your SIEM platform."
-msgstr "Full HTTP/HTTPS endpoint URL for your SIEM platform."
+msgstr "Puni URL HTTP/HTTPS krajnje točke za vašu SIEM platformu."
 
 msgid "Full malware analysis"
-msgstr "Full malware analysis"
+msgstr "Potpuna analiza zlonamjernog softvera"
 
 msgid "Full malware scan"
-msgstr "Full malware scan"
+msgstr "Potpuno skeniranje zlonamjernog softvera"
 
 msgid "Full malware signatures"
-msgstr "Full malware signatures"
+msgstr "Potpuni potpisi zlonamjernog softvera"
 
 msgid "Full site analysis"
-msgstr "Full site analysis"
+msgstr "Potpuna analiza stranice"
 
 msgid "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
-msgstr "GDPR, CCPA, HIPAA compliance modules and comprehensive security audit reports."
+msgstr "GDPR, CCPA, moduli usklađenosti s HIPAA i sveobuhvatna izvješća o reviziji sigurnosti."
 
 msgid "General"
-msgstr "General"
+msgstr "generalno"
 
 msgid "General Request Limiting"
-msgstr "General Request Limiting"
+msgstr "Općenito ograničenje zahtjeva"
 
 msgid "General Settings"
-msgstr "General Settings"
+msgstr "Opće postavke"
 
 msgid "Generate Report"
-msgstr "Generate Report"
+msgstr "Generiraj izvješće"
 
 msgid "Generate SRI"
-msgstr "Generate SRI"
+msgstr "Generiraj SRI"
 
 msgid "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
-msgstr "Generate from: https://id.atlassian.com/manage-profile/security/api-tokens"
+msgstr "Generiraj iz: https://id.atlassian.com/manage-profile/security/api-tokens"
 
 msgid "Generated"
-msgstr "Generated"
+msgstr "Generirano"
 
 msgid "Generic HTTP Endpoint"
-msgstr "Generic HTTP Endpoint"
+msgstr "Generička HTTP krajnja točka"
 
 msgid "Generic Proxy"
-msgstr "Generic Proxy"
+msgstr "Generički proxy"
 
 msgid "Geo Block"
-msgstr "Geo Block"
+msgstr "Geo blok"
 
 msgid "Geo Blocking"
-msgstr "Geo Blocking"
+msgstr "Geografsko blokiranje"
 
 msgid "Geographic Distribution"
-msgstr "Geographic Distribution"
+msgstr "Geografska distribucija"
 
 msgid "Get a free API token from wpscan.com for detailed vulnerability data."
-msgstr "Get a free API token from wpscan.com for detailed vulnerability data."
+msgstr "Nabavite besplatni API token s wpscan.com za detaljne podatke o ranjivostima."
 
 msgid "Get instant notifications in your team communication channels when security events occur."
-msgstr "Get instant notifications in your team communication channels when security events occur."
+msgstr "Primite trenutne obavijesti u komunikacijskim kanalima svog tima kada se dogode sigurnosni događaji."
 
 msgid "Get latest scan status"
-msgstr "Get latest scan status"
+msgstr "Dobijte najnoviji status skeniranja"
 
 msgid "Get scan results (JSON)"
-msgstr "Get scan results (JSON)"
+msgstr "Dohvati rezultate skeniranja (JSON)"
 
 msgid "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
-msgstr "Get your keys from Google reCAPTCHA or Cloudflare Turnstile dashboard."
+msgstr "Preuzmite svoje ključeve s nadzorne ploče Google reCAPTCHA ili Cloudflare Turnstile."
 
 msgid "Getting Started"
-msgstr "Getting Started"
+msgstr "Početak rada"
 
 msgid "Google reCAPTCHA v2"
 msgstr "Google reCAPTCHA v2"
@@ -1787,145 +1787,145 @@ msgid "Grace Period"
 msgstr "Grace Period"
 
 msgid "Grade"
-msgstr "Grade"
+msgstr "Ocjena"
 
 msgid "GraphQL Security"
-msgstr "GraphQL Security"
+msgstr "GraphQL sigurnost"
 
 msgid "GraphQL introspection is disabled."
-msgstr "GraphQL introspection is disabled."
+msgstr "GraphQL introspekcija je onemogućena."
 
 msgid "GraphQL rate limit exceeded. Limit: %d queries per minute."
-msgstr "GraphQL rate limit exceeded. Limit: %d queries per minute."
+msgstr "GraphQL ograničenje brzine premašeno. Ograničenje: %d upita u minuti."
 
 msgid "HTTP Security Headers"
-msgstr "HTTP Security Headers"
+msgstr "HTTP sigurnosna zaglavlja"
 
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP stroga sigurnost prijenosa (HSTS)"
 
 msgid "HTTP headers"
-msgstr "HTTP headers"
+msgstr "HTTP zaglavlja"
 
 msgid "Handle"
-msgstr "Handle"
+msgstr "Ručka"
 
 msgid "Hard"
-msgstr "Hard"
+msgstr "teško"
 
 msgid "Hard (includes multiplication)"
-msgstr "Hard (includes multiplication)"
+msgstr "Teško (uključuje množenje)"
 
 msgid "Harden Site"
-msgstr "Harden Site"
+msgstr "Stvrdnuti mjesto"
 
 msgid "Hardening"
-msgstr "Hardening"
+msgstr "Stvrdnjavanje"
 
 msgid "Hardening Options"
-msgstr "Hardening Options"
+msgstr "Mogućnosti otvrdnjavanja"
 
 msgid "Headers"
-msgstr "Headers"
+msgstr "Zaglavlja"
 
 msgid "Help & Documentation"
-msgstr "Help & Documentation"
+msgstr "Pomoć i dokumentacija"
 
 msgid "Heuristic Analysis"
-msgstr "Heuristic Analysis"
+msgstr "Heuristička analiza"
 
 msgid "Heuristic pattern detection"
-msgstr "Heuristic pattern detection"
+msgstr "Heurističko otkrivanje uzoraka"
 
 msgid "Hide Login"
-msgstr "Hide Login"
+msgstr "Sakrij prijavu"
 
 msgid "Hide Login Page"
-msgstr "Hide Login Page"
+msgstr "Sakrij stranicu za prijavu"
 
 msgid "Hide Login URL"
-msgstr "Hide Login URL"
+msgstr "Sakrij URL za prijavu"
 
 msgid "Hide Login URL:"
-msgstr "Hide Login URL:"
+msgstr "Sakrij URL za prijavu:"
 
 msgid "Hide WP Version"
-msgstr "Hide WP Version"
+msgstr "Sakrij WP verziju"
 
 msgid "Hide WordPress Login URL"
-msgstr "Hide WordPress Login URL"
+msgstr "Sakrij URL za prijavu u WordPress"
 
 msgid "Hide WordPress Version"
-msgstr "Hide WordPress Version"
+msgstr "Sakrij verziju WordPressa"
 
 msgid "Hide WordPress version from source code"
-msgstr "Hide WordPress version from source code"
+msgstr "Sakrij verziju WordPressa iz izvornog koda"
 
 msgid "Hide default login URLs"
-msgstr "Hide default login URLs"
+msgstr "Sakrij zadane URL-ove za prijavu"
 
 msgid "Hide wp-admin"
-msgstr "Hide wp-admin"
+msgstr "Sakrij wp-admin"
 
 msgid "Hide wp-admin and wp-login.php from attackers."
-msgstr "Hide wp-admin and wp-login.php from attackers."
+msgstr "Sakrijte wp-admin i wp-login.php od napadača."
 
 msgid "High"
-msgstr "High"
+msgstr "visoko"
 
 msgid "High (Maximum detection)"
-msgstr "High (Maximum detection)"
+msgstr "Visoko (Maksimalno otkrivanje)"
 
 msgid "High Security (more checks, slower)"
-msgstr "High Security (more checks, slower)"
+msgstr "Visoka sigurnost (više provjera, sporije)"
 
 msgid "High number of blocked attacks recently"
-msgstr "High number of blocked attacks recently"
+msgstr "Veliki broj blokiranih napada u posljednje vrijeme"
 
 msgid "High or Above"
-msgstr "High or Above"
+msgstr "Visoko ili iznad"
 
 msgid "High-Severity Threats"
-msgstr "High-Severity Threats"
+msgstr "Prijetnje visoke ozbiljnosti"
 
 msgid "High-risk areas only"
-msgstr "High-risk areas only"
+msgstr "Samo područja visokog rizika"
 
 msgid "High-scoring threat detected by AI analysis"
-msgstr "High-scoring threat detected by AI analysis"
+msgstr "Prijetnja s visokim bodovanjem otkrivena AI analizom"
 
 msgid "Higher sensitivity may produce more false positives."
-msgstr "Higher sensitivity may produce more false positives."
+msgstr "Veća osjetljivost može proizvesti više lažno pozitivnih rezultata."
 
 msgid "Highest"
-msgstr "Highest"
+msgstr "Najviša"
 
 msgid "Hold Ctrl/Cmd to select multiple countries."
-msgstr "Hold Ctrl/Cmd to select multiple countries."
+msgstr "Držite Ctrl/Cmd za odabir više zemalja."
 
 msgid "Host"
-msgstr "Host"
+msgstr "Domaćin"
 
 msgid "Hourly"
-msgstr "Hourly"
+msgstr "Svaki sat"
 
 msgid "How 2FA Works"
-msgstr "How 2FA Works"
+msgstr "Kako radi 2FA"
 
 msgid "How Core Repair Works"
-msgstr "How Core Repair Works"
+msgstr "Kako funkcionira Core Repair"
 
 msgid "How Self-Protection Works"
-msgstr "How Self-Protection Works"
+msgstr "Kako funkcionira samozaštita"
 
 msgid "How long to block an IP after exceeding attempts."
-msgstr "How long to block an IP after exceeding attempts."
+msgstr "Koliko dugo blokirati IP nakon prekoračenja pokušaja."
 
 msgid "How long to block an IP after rate limit exceeded."
-msgstr "How long to block an IP after rate limit exceeded."
+msgstr "Koliko dugo blokirati IP nakon prekoračenja ograničenja brzine."
 
 msgid "How long to keep old reports (30-365 days)"
-msgstr "How long to keep old reports (30-365 days)"
+msgstr "Koliko dugo čuvati stara izvješća (30-365 dana)"
 
 msgid "IBM QRadar"
 msgstr "IBM QRadar"
@@ -1934,2453 +1934,3361 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Access Control"
-msgstr "IP Access Control"
+msgstr "IP kontrola pristupa"
 
 msgid "IP Address"
-msgstr "IP Address"
+msgstr "IP adresa"
 
 msgid "IP Blocking"
-msgstr "IP Blocking"
+msgstr "IP blokiranje"
 
 msgid "IP Configuration"
-msgstr "IP Configuration"
+msgstr "IP konfiguracija"
 
 msgid "IP Lockout"
-msgstr "IP Lockout"
+msgstr "IP zaključavanje"
 
 msgid "IP Lockouts (brute force attempts)"
-msgstr "IP Lockouts (brute force attempts)"
+msgstr "Zaključavanje IP-a (pokušaji grube sile)"
 
 msgid "IP Management"
-msgstr "IP Management"
+msgstr "IP upravljanje"
 
 msgid "IP Whitelist"
-msgstr "IP Whitelist"
+msgstr "Popis dopuštenih IP adresa"
 
 msgid "IPs that bypass rate limiting."
-msgstr "IPs that bypass rate limiting."
+msgstr "IP-ovi koji zaobilaze ograničenje brzine."
 
 msgid "IPs that will always be blocked."
-msgstr "IPs that will always be blocked."
+msgstr "IP-ovi koji će uvijek biti blokirani."
 
 msgid "IPs that will never be blocked."
-msgstr "IPs that will never be blocked."
+msgstr "IP adrese koje nikada neće biti blokirane."
 
 msgid "Identifies modified or missing files"
-msgstr "Identifies modified or missing files"
+msgstr "Identificira izmijenjene datoteke ili datoteke koje nedostaju"
 
 msgid "Image Selection"
-msgstr "Image Selection"
+msgstr "Odabir slike"
 
 msgid "Immediate action required"
-msgstr "Immediate action required"
+msgstr "Potrebna hitna akcija"
 
 msgid "Impact Level"
-msgstr "Impact Level"
+msgstr "Razina utjecaja"
 
 msgid "Import Settings"
-msgstr "Import Settings"
+msgstr "Postavke uvoza"
 
 msgid "Import settings from a previously exported JSON file. This will overwrite your current settings."
-msgstr "Import settings from a previously exported JSON file. This will overwrite your current settings."
+msgstr "Uvezite postavke iz prethodno izvezene JSON datoteke. Ovo će prebrisati vaše trenutne postavke."
 
 msgid "Import/Export"
-msgstr "Import/Export"
+msgstr "Uvoz/Izvoz"
 
 msgid "Inactive"
-msgstr "Inactive"
+msgstr "Neaktivan"
 
 msgid "Incident"
 msgstr "Incident"
 
 msgid "Include GDPR Checks"
-msgstr "Include GDPR Checks"
+msgstr "Uključite GDPR provjere"
 
 msgid "Include IP whitelist/blacklist"
-msgstr "Include IP whitelist/blacklist"
+msgstr "Uključi popis dopuštenih/crnih IP adresa"
 
 msgid "Include Performance Metrics"
-msgstr "Include Performance Metrics"
+msgstr "Uključi metriku izvedbe"
 
 msgid "Include Security Checks"
-msgstr "Include Security Checks"
+msgstr "Uključi sigurnosne provjere"
 
 msgid "Include Threat Summary"
-msgstr "Include Threat Summary"
+msgstr "Uključi sažetak prijetnji"
 
 msgid "Include last scan results"
-msgstr "Include last scan results"
+msgstr "Uključi zadnje rezultate skeniranja"
 
 msgid "Include security logs (last 30 days)"
-msgstr "Include security logs (last 30 days)"
+msgstr "Uključi sigurnosne zapisnike (zadnjih 30 dana)"
 
 msgid "Incorrect captcha answer. Please go back and try again."
-msgstr "Incorrect captcha answer. Please go back and try again."
+msgstr "Netočan captcha odgovor. Molimo vratite se i pokušajte ponovo."
 
 msgid "Incorrect captcha answer. Please try again."
-msgstr "Incorrect captcha answer. Please try again."
+msgstr "Netočan captcha odgovor. Molimo pokušajte ponovo."
 
 msgid "Index name or source identifier for event categorization."
-msgstr "Index name or source identifier for event categorization."
+msgstr "Ime indeksa ili identifikator izvora za kategorizaciju događaja."
 
 msgid "Index/Source"
-msgstr "Index/Source"
+msgstr "Index/Izvor"
 
 msgid "Info"
 msgstr "Info"
 
 msgid "Information Disclosure"
-msgstr "Information Disclosure"
+msgstr "Otkrivanje informacija"
 
 msgid "Initializing..."
-msgstr "Initializing..."
+msgstr "Inicijalizacija..."
 
 msgid "Instance Name"
-msgstr "Instance Name"
+msgstr "Naziv instance"
 
 msgid "Integrate security scanning into your continuous integration and deployment pipelines."
-msgstr "Integrate security scanning into your continuous integration and deployment pipelines."
+msgstr "Integrirajte sigurnosno skeniranje u svoje kontinuirane integracije i cjevovode za implementaciju."
 
 msgid "Integrate security scanning into your deployment pipeline with webhooks and API access."
-msgstr "Integrate security scanning into your deployment pipeline with webhooks and API access."
+msgstr "Integrirajte sigurnosno skeniranje u svoj cjevovod za implementaciju s web-dojavnicima i API pristupom."
 
 msgid "Integrates with CDN services. Configure CDN credentials before enabling."
-msgstr "Integrates with CDN services. Configure CDN credentials before enabling."
+msgstr "Integrira se s CDN uslugama. Konfigurirajte CDN vjerodajnice prije omogućavanja."
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr "Integracije"
 
 msgid "Integrity Check Results"
-msgstr "Integrity Check Results"
+msgstr "Rezultati provjere integriteta"
 
 msgid "Integrity Checks:"
-msgstr "Integrity Checks:"
+msgstr "Provjere integriteta:"
 
 msgid "Integrity Status"
-msgstr "Integrity Status"
+msgstr "Status integriteta"
 
 msgid "Invalid JWT token."
-msgstr "Invalid JWT token."
+msgstr "Nevažeći JWT token."
 
 msgid "Invalid credentials."
-msgstr "Invalid credentials."
+msgstr "Nevažeće vjerodajnice."
 
 msgid "Invalid verification code."
-msgstr "Invalid verification code."
+msgstr "Nevažeći kontrolni kod."
 
 msgid "Isolate threats"
-msgstr "Isolate threats"
+msgstr "Izolirajte prijetnje"
 
 msgid "Isolates suspicious files without deleting. Safe - files can be restored."
-msgstr "Isolates suspicious files without deleting. Safe - files can be restored."
+msgstr "Izolira sumnjive datoteke bez brisanja. Sigurno - datoteke se mogu vratiti."
 
 msgid "Issue Type"
-msgstr "Issue Type"
+msgstr "Vrsta problema"
 
 msgid "Issues Found"
-msgstr "Issues Found"
+msgstr "Pronađeni problemi"
 
 msgid "JSON"
 msgstr "JSON"
 
 msgid "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
-msgstr "JSON format. Example: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
+msgstr "JSON format. Primjer: {\"Authorization\": \"Bearer TOKEN\", \"Content-Type\": \"application/json\"}"
 
 msgid "Jira Cloud URL"
 msgstr "Jira Cloud URL"
 
 msgid "Jira Integration"
-msgstr "Jira Integration"
+msgstr "Jira integracija"
 
 msgid "KB"
 msgstr "KB"
 
 msgid "Keep logs of all blocked requests for analysis."
-msgstr "Keep logs of all blocked requests for analysis."
+msgstr "Vodite evidenciju svih blokiranih zahtjeva za analizu."
 
 msgid "Keep logs of all rate limit violations for analysis."
-msgstr "Keep logs of all rate limit violations for analysis."
+msgstr "Vodite evidencije svih kršenja ograničenja brzine za analizu."
 
 msgid "Keep your malware signatures up to date for best protection."
-msgstr "Keep your malware signatures up to date for best protection."
+msgstr "Održavajte svoje zlonamjerne potpise ažurnima za najbolju zaštitu."
 
 msgid "Known Countries"
-msgstr "Known Countries"
+msgstr "Poznate zemlje"
 
 msgid "Known vulnerability found in installed plugin"
-msgstr "Known vulnerability found in installed plugin"
+msgstr "U instaliranom dodatku pronađena je poznata ranjivost"
 
 msgid "LEEF (Log Event Extended Format)"
-msgstr "LEEF (Log Event Extended Format)"
+msgstr "LEEF (prošireni format događaja dnevnika)"
 
 msgid "Last 30 Days"
-msgstr "Last 30 Days"
+msgstr "Posljednjih 30 dana"
 
 msgid "Last 30 days"
-msgstr "Last 30 days"
+msgstr "Zadnjih 30 dana"
 
 msgid "Last 7 Days"
-msgstr "Last 7 Days"
+msgstr "Posljednjih 7 dana"
 
 msgid "Last 90 Days"
-msgstr "Last 90 Days"
+msgstr "Posljednjih 90 dana"
 
 msgid "Last Learned"
-msgstr "Last Learned"
+msgstr "Zadnje naučeno"
 
 msgid "Last Scan"
-msgstr "Last Scan"
+msgstr "Zadnje skeniranje"
 
 msgid "Last Scan:"
-msgstr "Last Scan:"
+msgstr "Zadnje skeniranje:"
 
 msgid "Last Updated"
-msgstr "Last Updated"
+msgstr "Zadnje ažurirano"
 
 msgid "Last used: %s"
-msgstr "Last used: %s"
+msgstr "Zadnje korištenje: %s"
 
 msgid "Latest Version"
-msgstr "Latest Version"
+msgstr "Najnovija verzija"
 
 msgid "Learning - Log only, no blocking"
-msgstr "Learning - Log only, no blocking"
+msgstr "Učenje - samo zapisnik, bez blokiranja"
 
 msgid "Learning Period"
-msgstr "Learning Period"
+msgstr "Razdoblje učenja"
 
 msgid "Learning..."
-msgstr "Learning..."
+msgstr "Učenje..."
 
 msgid "Leave blank to use admin email."
-msgstr "Leave blank to use admin email."
+msgstr "Ostavite prazno za korištenje e-pošte administratora."
 
 msgid "Likely safe - verify if needed"
-msgstr "Likely safe - verify if needed"
+msgstr "Vjerojatno sigurno - provjerite ako je potrebno"
 
 msgid "Limit REST API access to authenticated users"
-msgstr "Limit REST API access to authenticated users"
+msgstr "Ograničite pristup REST API-ju na autentificirane korisnike"
 
 msgid "Limit comment submissions to prevent spam."
-msgstr "Limit comment submissions to prevent spam."
+msgstr "Ograničite slanje komentara kako biste spriječili neželjenu poštu."
 
 msgid "Limit excessive requests from a single IP address."
-msgstr "Limit excessive requests from a single IP address."
+msgstr "Ograničite prekomjerne zahtjeve s jedne IP adrese."
 
 msgid "Limit login attempts"
-msgstr "Limit login attempts"
+msgstr "Ograničite pokušaje prijave"
 
 msgid "Limit login attempts to prevent brute force attacks"
-msgstr "Limit login attempts to prevent brute force attacks"
+msgstr "Ograničite pokušaje prijave kako biste spriječili napade brutalnom silom"
 
 msgid "Limit request rates to prevent abuse and DDoS attacks."
-msgstr "Limit request rates to prevent abuse and DDoS attacks."
+msgstr "Ograničite stope zahtjeva kako biste spriječili zlouporabu i DDoS napade."
 
 msgid "Limit request rates to prevent abuse."
-msgstr "Limit request rates to prevent abuse."
+msgstr "Ograničite stope zahtjeva kako biste spriječili zlouporabu."
 
 msgid "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
-msgstr "Limits login attempts to prevent brute force attacks. Safe - only affects failed login attempts."
+msgstr "Ograničava pokušaje prijave kako bi se spriječili napadi brutalnom silom. Sigurno - utječe samo na neuspjele pokušaje prijave."
 
 msgid "List known vulnerabilities"
-msgstr "List known vulnerabilities"
+msgstr "Navedite poznate ranjivosti"
 
 msgid "Live Traffic"
-msgstr "Live Traffic"
+msgstr "Promet uživo"
 
 msgid "Live Traffic Monitor"
-msgstr "Live Traffic Monitor"
+msgstr "Monitor prometa uživo"
 
 msgid "Loading CDN status..."
-msgstr "Loading CDN status..."
+msgstr "Učitavanje CDN statusa..."
 
 msgid "Loading alerts..."
-msgstr "Loading alerts..."
+msgstr "Učitavanje upozorenja..."
 
 msgid "Loading analytics data..."
-msgstr "Loading analytics data..."
+msgstr "Učitavanje analitičkih podataka..."
 
 msgid "Loading backups..."
-msgstr "Loading backups..."
+msgstr "Učitavanje sigurnosnih kopija..."
 
 msgid "Loading blocked IPs..."
-msgstr "Loading blocked IPs..."
+msgstr "Učitavanje blokiranih IP-ova..."
 
 msgid "Loading countries..."
-msgstr "Loading countries..."
+msgstr "Učitavanje zemalja..."
 
 msgid "Loading database information..."
-msgstr "Loading database information..."
+msgstr "Učitavanje podataka baze podataka..."
 
 msgid "Loading geographic data..."
-msgstr "Loading geographic data..."
+msgstr "Učitavanje geografskih podataka..."
 
 msgid "Loading logs..."
-msgstr "Loading logs..."
+msgstr "Učitavanje zapisa..."
 
 msgid "Loading notifications..."
-msgstr "Loading notifications..."
+msgstr "Učitavanje obavijesti..."
 
 msgid "Loading optimization stats..."
-msgstr "Loading optimization stats..."
+msgstr "Učitavanje statistike optimizacije..."
 
 msgid "Loading protection status..."
-msgstr "Loading protection status..."
+msgstr "Učitavanje statusa zaštite..."
 
 msgid "Loading quarantined files..."
-msgstr "Loading quarantined files..."
+msgstr "Učitavanje datoteka u karanteni..."
 
 msgid "Loading referrers..."
-msgstr "Loading referrers..."
+msgstr "Učitavanje preporuka..."
 
 msgid "Loading threat detections..."
-msgstr "Loading threat detections..."
+msgstr "Učitavanje otkrivanja prijetnji..."
 
 msgid "Loading top pages..."
-msgstr "Loading top pages..."
+msgstr "Učitavanje glavnih stranica..."
 
 msgid "Loading traffic data..."
-msgstr "Loading traffic data..."
+msgstr "Učitavanje podataka o prometu..."
 
 msgid "Lock out after this many failed attempts."
-msgstr "Lock out after this many failed attempts."
+msgstr "Zaključaj nakon ovoliko neuspjelih pokušaja."
 
 msgid "Lockout Duration"
-msgstr "Lockout Duration"
+msgstr "Trajanje zaključavanja"
 
 msgid "Lockout period after max failed 2FA attempts."
-msgstr "Lockout period after max failed 2FA attempts."
+msgstr "Razdoblje zaključavanja nakon najviše neuspjelih 2FA pokušaja."
 
 msgid "Log Allowed Requests"
-msgstr "Log Allowed Requests"
+msgstr "Zabilježite dopuštene zahtjeve"
 
 msgid "Log Blocked Requests"
-msgstr "Log Blocked Requests"
+msgstr "Zabilježi blokirane zahtjeve"
 
 msgid "Log Failed Login Attempts"
-msgstr "Log Failed Login Attempts"
+msgstr "Zabilježite neuspjele pokušaje prijave"
 
 msgid "Log Logouts"
-msgstr "Log Logouts"
+msgstr "Prijava Odjava"
 
 msgid "Log Media Uploads"
-msgstr "Log Media Uploads"
+msgstr "Zabilježite prijenos medija"
 
 msgid "Log Option Changes"
-msgstr "Log Option Changes"
+msgstr "Promjene opcija zapisnika"
 
 msgid "Log Plugin Changes"
-msgstr "Log Plugin Changes"
+msgstr "Zabilježite promjene dodataka"
 
 msgid "Log Post/Page Changes"
-msgstr "Log Post/Page Changes"
+msgstr "Zabilježite promjene objave/stranice"
 
 msgid "Log Profile Changes"
-msgstr "Log Profile Changes"
+msgstr "Zabilježite promjene profila"
 
 msgid "Log Rate Limit Violations"
-msgstr "Log Rate Limit Violations"
+msgstr "Prekršaji ograničenja brzine zapisivanja"
 
 msgid "Log Retention"
-msgstr "Log Retention"
+msgstr "Zadržavanje dnevnika"
 
 msgid "Log Role Changes"
-msgstr "Log Role Changes"
+msgstr "Zabilježite promjene uloga"
 
 msgid "Log Successful Logins"
-msgstr "Log Successful Logins"
+msgstr "Zabilježite uspješne prijave"
 
 msgid "Log Theme Changes"
-msgstr "Log Theme Changes"
+msgstr "Zabilježite promjene teme"
 
 msgid "Log User Creation/Deletion"
-msgstr "Log User Creation/Deletion"
+msgstr "Stvaranje/brisanje korisnika zapisnika"
 
 msgid "Log all requests that pass WAF checks (high disk usage)."
-msgstr "Log all requests that pass WAF checks (high disk usage)."
+msgstr "Zabilježite sve zahtjeve koji prolaze WAF provjere (visoka upotreba diska)."
 
 msgid "Logging"
-msgstr "Logging"
+msgstr "Sječa drva"
 
 msgid "Logging & Monitoring"
-msgstr "Logging & Monitoring"
+msgstr "Bilježenje i praćenje"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Prijava"
 
 msgid "Login & Authentication"
-msgstr "Login & Authentication"
+msgstr "Prijava i autentifikacija"
 
 msgid "Login Activity"
-msgstr "Login Activity"
+msgstr "Aktivnost prijave"
 
 msgid "Login Attempt Window"
-msgstr "Login Attempt Window"
+msgstr "Prozor za pokušaj prijave"
 
 msgid "Login Attempts"
-msgstr "Login Attempts"
+msgstr "Pokušaji prijave"
 
 msgid "Login CAPTCHA"
-msgstr "Login CAPTCHA"
+msgstr "Prijava CAPTCHA"
 
 msgid "Login Captcha"
-msgstr "Login Captcha"
+msgstr "Prijava Captcha"
 
 msgid "Login Form"
-msgstr "Login Form"
+msgstr "Obrazac za prijavu"
 
 msgid "Login Lockout Duration"
-msgstr "Login Lockout Duration"
+msgstr "Trajanje blokade prijave"
 
 msgid "Login Protection"
-msgstr "Login Protection"
+msgstr "Zaštita prijave"
 
 msgid "Login Rate Limiting"
-msgstr "Login Rate Limiting"
+msgstr "Ograničenje stope prijave"
 
 msgid "Login Security"
-msgstr "Login Security"
+msgstr "Sigurnost prijave"
 
 msgid "Login Slug"
-msgstr "Login Slug"
+msgstr "Puž za prijavu"
 
 msgid "Login URL Settings"
-msgstr "Login URL Settings"
+msgstr "Postavke URL-a za prijavu"
 
 msgid "Login form"
-msgstr "Login form"
+msgstr "Obrazac za prijavu"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Odjava"
 
 msgid "Logouts"
-msgstr "Logouts"
+msgstr "Odjave"
 
 msgid "Logs"
-msgstr "Logs"
+msgstr "Dnevnici"
 
 msgid "Logs older than this are automatically purged daily."
-msgstr "Logs older than this are automatically purged daily."
+msgstr "Dnevnici stariji od ovoga automatski se brišu svakodnevno."
 
 msgid "Logs security events for review. Safe - only records activity."
-msgstr "Logs security events for review. Safe - only records activity."
+msgstr "Zapisuje sigurnosne događaje za pregled. Sigurno - bilježi samo aktivnost."
 
 msgid "Low"
-msgstr "Low"
+msgstr "Niska"
 
 msgid "Low (Less false positives)"
-msgstr "Low (Less false positives)"
+msgstr "Nisko (manje lažno pozitivnih)"
 
 msgid "Low Impact (fewer checks, faster)"
-msgstr "Low Impact (fewer checks, faster)"
+msgstr "Mali utjecaj (manje provjera, brže)"
 
 msgid "Lowercase letter (a-z)"
-msgstr "Lowercase letter (a-z)"
+msgstr "Malo slovo (a-z)"
 
 msgid "MB"
 msgstr "MB"
 
 msgid "Maintenance and diagnostic tools for your site."
-msgstr "Maintenance and diagnostic tools for your site."
+msgstr "Alati za održavanje i dijagnostiku vaše stranice."
 
 msgid "Make sure to remember your custom login URL!"
-msgstr "Make sure to remember your custom login URL!"
+msgstr "Obavezno zapamtite svoj prilagođeni URL za prijavu!"
 
 msgid "Malware & Scanning"
-msgstr "Malware & Scanning"
+msgstr "Zlonamjerni softver i skeniranje"
 
 msgid "Malware Definitions"
-msgstr "Malware Definitions"
+msgstr "Definicije zlonamjernog softvera"
 
 msgid "Malware Found"
-msgstr "Malware Found"
+msgstr "Pronađen zlonamjerni softver"
 
 msgid "Malware Scanner"
-msgstr "Malware Scanner"
+msgstr "Skener zlonamjernog softvera"
 
 msgid "Malware detected during file scanning"
-msgstr "Malware detected during file scanning"
+msgstr "Zlonamjerni softver otkriven tijekom skeniranja datoteke"
 
 msgid "Manage Notifications"
-msgstr "Manage Notifications"
+msgstr "Upravljanje obavijestima"
 
 msgid "Manage quarantined threats. Review, restore, or permanently delete files."
-msgstr "Manage quarantined threats. Review, restore, or permanently delete files."
+msgstr "Upravljajte prijetnjama u karanteni. Pregledajte, vratite ili trajno izbrišite datoteke."
 
 msgid "Mandatory for Roles"
-msgstr "Mandatory for Roles"
+msgstr "Obavezno za uloge"
 
 msgid "Manual review recommended"
-msgstr "Manual review recommended"
+msgstr "Preporuča se ručni pregled"
 
 msgid "Mark All Read"
-msgstr "Mark All Read"
+msgstr "Označi sve kao pročitano"
 
 msgid "Mark All as Read"
-msgstr "Mark All as Read"
+msgstr "Označi sve kao pročitano"
 
 msgid "Master switch to enable or disable all activity logging."
-msgstr "Master switch to enable or disable all activity logging."
+msgstr "Glavni prekidač za omogućavanje ili onemogućavanje zapisivanja svih aktivnosti."
 
 msgid "Math Question"
-msgstr "Math Question"
+msgstr "Matematičko pitanje"
 
 msgid "Max Attempts"
-msgstr "Max Attempts"
+msgstr "Maksimalni pokušaji"
 
 msgid "Max Failed Attempts"
-msgstr "Max Failed Attempts"
+msgstr "Max neuspjeli pokušaji"
 
 msgid "Max File Size"
-msgstr "Max File Size"
+msgstr "Maksimalna veličina datoteke"
 
 msgid "Max Login Attempts"
-msgstr "Max Login Attempts"
+msgstr "Maks. pokušaja prijave"
 
 msgid "Max Query String Length"
-msgstr "Max Query String Length"
+msgstr "Maksimalna duljina niza upita"
 
 msgid "Max Request Size"
-msgstr "Max Request Size"
+msgstr "Maksimalna veličina zahtjeva"
 
 msgid "Max Requests"
-msgstr "Max Requests"
+msgstr "Maksimalni zahtjevi"
 
 msgid "Maximum AJAX requests per minute per IP."
-msgstr "Maximum AJAX requests per minute per IP."
+msgstr "Maksimalan broj AJAX zahtjeva po minuti po IP-u."
 
 msgid "Maximum API requests per minute per IP."
-msgstr "Maximum API requests per minute per IP."
+msgstr "Maksimalan broj API zahtjeva po minuti po IP-u."
 
 msgid "Maximum failed login attempts before lockout."
-msgstr "Maximum failed login attempts before lockout."
+msgstr "Maksimalan broj neuspjelih pokušaja prijave prije zaključavanja."
 
 msgid "Maximum page requests per minute per IP."
-msgstr "Maximum page requests per minute per IP."
+msgstr "Maksimalni broj zahtjeva za stranice po minuti po IP-u."
 
 msgid "Maximum request body size to scan. Larger requests will be skipped."
-msgstr "Maximum request body size to scan. Larger requests will be skipped."
+msgstr "Maksimalna veličina tijela zahtjeva za skeniranje. Veći zahtjevi će biti preskočeni."
 
 msgid "Maximum requests allowed per minute per IP."
-msgstr "Maximum requests allowed per minute per IP."
+msgstr "Maksimalni dopušteni zahtjevi po minuti po IP-u."
 
 msgid "Maximum search requests per minute to prevent database exhaustion."
-msgstr "Maximum search requests per minute to prevent database exhaustion."
+msgstr "Maksimalni broj zahtjeva za pretraživanje po minuti kako bi se spriječilo iscrpljivanje baze podataka."
 
 msgid "Maximum time for a single scan operation."
-msgstr "Maximum time for a single scan operation."
+msgstr "Maksimalno vrijeme za jednu operaciju skeniranja."
 
 msgid "Maximum time for malware scans before timeout."
-msgstr "Maximum time for malware scans before timeout."
+msgstr "Maksimalno vrijeme za skeniranje zlonamjernog softvera prije isteka vremena."
 
 msgid "Media Uploads"
-msgstr "Media Uploads"
+msgstr "Prijenos medija"
 
 msgid "Medium"
-msgstr "Medium"
+msgstr "srednje"
 
 msgid "Medium (Balanced)"
-msgstr "Medium (Balanced)"
+msgstr "Srednje (uravnoteženo)"
 
 msgid "Medium (addition/subtraction)"
-msgstr "Medium (addition/subtraction)"
+msgstr "Srednje (zbrajanje/oduzimanje)"
 
 msgid "Medium or Above"
-msgstr "Medium or Above"
+msgstr "Srednje ili iznad"
 
 msgid "Memory Limit"
-msgstr "Memory Limit"
+msgstr "Ograničenje memorije"
 
 msgid "Memory allocated for scanning operations."
-msgstr "Memory allocated for scanning operations."
+msgstr "Memorija dodijeljena za operacije skeniranja."
 
 msgid "Message"
-msgstr "Message"
+msgstr "Poruka"
 
 msgid "Method"
-msgstr "Method"
+msgstr "metoda"
 
 msgid "Microsoft Teams Integration"
-msgstr "Microsoft Teams Integration"
+msgstr "Integracija Microsoft Teams"
 
 msgid "Minimum %d characters"
-msgstr "Minimum %d characters"
+msgstr "Najmanje %d znakova"
 
 msgid "Minimum Length"
-msgstr "Minimum Length"
+msgstr "Minimalna duljina"
 
 msgid "Minimum Severity to Fail"
-msgstr "Minimum Severity to Fail"
+msgstr "Minimalna ozbiljnost za neuspjeh"
 
 msgid "Minimum password length (8-32 characters)"
-msgstr "Minimum password length (8-32 characters)"
+msgstr "Minimalna duljina lozinke (8-32 znaka)"
 
 msgid "Mode"
-msgstr "Mode"
+msgstr "Način rada"
 
 msgid "Module Controls"
-msgstr "Module Controls"
+msgstr "Kontrole modula"
 
 msgid "Modules"
-msgstr "Modules"
+msgstr "Moduli"
 
 msgid "Monitor External Scripts"
-msgstr "Monitor External Scripts"
+msgstr "Pratite vanjske skripte"
 
 msgid "Monitor Mode (Log Only)"
-msgstr "Monitor Mode (Log Only)"
+msgstr "Način rada monitora (samo zapisnik)"
 
 msgid "Monitor plugin files for changes"
-msgstr "Monitor plugin files for changes"
+msgstr "Pratite promjene u datotekama dodataka"
 
 msgid "Monitor real-time site traffic."
-msgstr "Monitor real-time site traffic."
+msgstr "Pratite promet stranice u stvarnom vremenu."
 
 msgid "Monitor real-time traffic"
-msgstr "Monitor real-time traffic"
+msgstr "Pratite promet u stvarnom vremenu"
 
 msgid "Monitor real-time traffic and visitor activity."
-msgstr "Monitor real-time traffic and visitor activity."
+msgstr "Pratite promet i aktivnosti posjetitelja u stvarnom vremenu."
 
 msgid "Monitor visitor trends, page views, and traffic patterns over time."
-msgstr "Monitor visitor trends, page views, and traffic patterns over time."
+msgstr "Pratite trendove posjetitelja, prikaze stranica i obrasce prometa tijekom vremena."
 
 msgid "Monitoring & Alerts"
-msgstr "Monitoring & Alerts"
+msgstr "Praćenje i upozorenja"
 
 msgid "Monitors real-time traffic. Safe - only tracks visits."
-msgstr "Monitors real-time traffic. Safe - only tracks visits."
+msgstr "Prati promet u stvarnom vremenu. Sigurno - prati samo posjete."
 
 msgid "Monthly"
-msgstr "Monthly"
+msgstr "Mjesečno"
 
 msgid "Most Active Users"
-msgstr "Most Active Users"
+msgstr "Najaktivniji korisnici"
 
 msgid "Moves suspicious files to a protected directory."
-msgstr "Moves suspicious files to a protected directory."
+msgstr "Premješta sumnjive datoteke u zaštićeni direktorij."
 
 msgid "NPM Dependencies"
-msgstr "NPM Dependencies"
+msgstr "NPM ovisnosti"
 
 msgid "Name"
-msgstr "Name"
+msgstr "Ime"
 
 msgid "Need Support?"
-msgstr "Need Support?"
+msgstr "Trebate podršku?"
 
 msgid "Never"
-msgstr "Never"
+msgstr "nikada"
 
 msgid "Never expires"
-msgstr "Never expires"
+msgstr "Nikada ne ističe"
 
 msgid "Nexify Security"
-msgstr "Nexify Security"
+msgstr "Nexify Sigurnost"
 
 msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Built-in)"
+msgstr "NexifyMy Captcha (ugrađeno)"
 
 msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgstr "Vrsta NexifyMy Captcha"
 
 msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgstr "NexifyMy Sigurnost"
 
 msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "NexifyMy Security otkrio je neovlaštene izmjene svojih datoteka. Provjerite svoju instalaciju."
 
 msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: You have %d unread security alert(s)."
+msgstr "NexifyMy Security: Imate %d nepročitana sigurnosna upozorenja."
 
 msgid "Next Update"
-msgstr "Next Update"
+msgstr "Sljedeće ažuriranje"
 
 msgid "No Grace Period"
-msgstr "No Grace Period"
+msgstr "Bez razdoblja odgode"
 
 msgid "No Recent Activity"
-msgstr "No Recent Activity"
+msgstr "Nema nedavnih aktivnosti"
 
 msgid "No SRI"
-msgstr "No SRI"
+msgstr "Nema SRI"
 
 msgid "No activity recorded yet. Activity will appear here once users start performing actions."
-msgstr "No activity recorded yet. Activity will appear here once users start performing actions."
+msgstr "Još nema zabilježene aktivnosti. Aktivnost će se pojaviti ovdje kada korisnici počnu izvršavati radnje."
 
 msgid "No content changes recorded yet."
-msgstr "No content changes recorded yet."
+msgstr "Još nisu zabilježene promjene sadržaja."
 
 msgid "No countries selected yet."
-msgstr "No countries selected yet."
+msgstr "Još nije odabrana nijedna zemlja."
 
 msgid "No data available"
-msgstr "No data available"
+msgstr "Nema dostupnih podataka"
 
 msgid "No event data available yet."
-msgstr "No event data available yet."
+msgstr "Još nema dostupnih podataka o događajima."
 
 msgid "No files in quarantine."
-msgstr "No files in quarantine."
+msgstr "Nema datoteka u karanteni."
 
 msgid "No geographic data available"
-msgstr "No geographic data available"
+msgstr "Nema dostupnih zemljopisnih podataka"
 
 msgid "No login activity recorded yet."
-msgstr "No login activity recorded yet."
+msgstr "Još nije zabilježena aktivnost prijave."
 
 msgid "No passkeys registered yet."
-msgstr "No passkeys registered yet."
+msgstr "Još nije registriran nijedan pristupni ključ."
 
 msgid "No reports available."
-msgstr "No reports available."
+msgstr "Nema dostupnih izvješća."
 
 msgid "No scan has been run yet"
-msgstr "No scan has been run yet"
+msgstr "Skeniranje još nije pokrenuto"
 
 msgid "No scan results available. Click \"Run Scan\" to analyze your dependencies."
-msgstr "No scan results available. Click \"Run Scan\" to analyze your dependencies."
+msgstr "Nema dostupnih rezultata skeniranja. Kliknite \"Pokreni skeniranje\" da biste analizirali svoje ovisnosti."
 
 msgid "No scan results available. Run a scan to check for vulnerabilities."
-msgstr "No scan results available. Run a scan to check for vulnerabilities."
+msgstr "Nema dostupnih rezultata skeniranja. Pokrenite skeniranje da provjerite postoje li ranjivosti."
 
 msgid "No security recommendations at this time. Your site is well protected."
-msgstr "No security recommendations at this time. Your site is well protected."
+msgstr "Trenutačno nema sigurnosnih preporuka. Vaša stranica je dobro zaštićena."
 
 msgid "No severity data available."
-msgstr "No severity data available."
+msgstr "Nema dostupnih podataka o ozbiljnosti."
 
 msgid "No suspicious IPs detected."
-msgstr "No suspicious IPs detected."
+msgstr "Nisu otkrivene sumnjive IP adrese."
 
 msgid "No system events recorded yet."
-msgstr "No system events recorded yet."
+msgstr "Još nema zabilježenih događaja sustava."
 
 msgid "No threats detected yet."
-msgstr "No threats detected yet."
+msgstr "Još nisu otkrivene prijetnje."
 
 msgid "No user activity recorded yet."
-msgstr "No user activity recorded yet."
+msgstr "Još nije zabilježena aktivnost korisnika."
 
 msgid "No user activity yet."
-msgstr "No user activity yet."
+msgstr "Još nema aktivnosti korisnika."
 
 msgid "Not Active"
-msgstr "Not Active"
+msgstr "Nije aktivno"
 
 msgid "Not Enabled"
-msgstr "Not Enabled"
+msgstr "Nije omogućeno"
 
 msgid "Not checked yet"
-msgstr "Not checked yet"
+msgstr "Još nije provjereno"
 
 msgid "Not scheduled"
-msgstr "Not scheduled"
+msgstr "Nije zakazano"
 
 msgid "Note:"
-msgstr "Note:"
+msgstr "Napomena:"
 
 msgid "Notification Email"
-msgstr "Notification Email"
+msgstr "Obavijest e-poštom"
 
 msgid "Notification Settings"
-msgstr "Notification Settings"
+msgstr "Postavke obavijesti"
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Obavijesti"
 
 msgid "Notify on Lockout"
-msgstr "Notify on Lockout"
+msgstr "Obavijesti o zaključavanju"
 
 msgid "Notify users when 2FA is enabled/disabled on their account."
-msgstr "Notify users when 2FA is enabled/disabled on their account."
+msgstr "Obavijestite korisnike kada je 2FA omogućen/onemogućen na njihovom računu."
 
 msgid "Number (0-9)"
-msgstr "Number (0-9)"
+msgstr "Broj (0-9)"
 
 msgid "Number of Backup Codes"
-msgstr "Number of Backup Codes"
+msgstr "Broj rezervnih kodova"
 
 msgid "Number of backup codes to generate per user."
-msgstr "Number of backup codes to generate per user."
+msgstr "Broj rezervnih kodova za generiranje po korisniku."
 
 msgid "Number of failed login attempts before lockout."
-msgstr "Number of failed login attempts before lockout."
+msgstr "Broj neuspjelih pokušaja prijave prije zaključavanja."
 
 msgid "Number of lockouts before permanent ban."
-msgstr "Number of lockouts before permanent ban."
+msgstr "Broj isključenja prije trajne zabrane."
 
 msgid "Number of rule violations before automatic blocking."
-msgstr "Number of rule violations before automatic blocking."
+msgstr "Broj kršenja pravila prije automatskog blokiranja."
 
 msgid "Object"
-msgstr "Object"
+msgstr "Objekt"
 
 msgid "On next login, enter password + 6-digit code"
-msgstr "On next login, enter password + 6-digit code"
+msgstr "Prilikom sljedeće prijave unesite lozinku + 6-znamenkasti kod"
 
 msgid "Once Weekly"
-msgstr "Once Weekly"
+msgstr "Jednom tjedno"
 
 msgid "One IP per line"
-msgstr "One IP per line"
+msgstr "Jedna IP po liniji"
 
 msgid "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
-msgstr "One IP per line. Proxy IPs allowed to send X-Forwarded-For headers (e.g., Cloudflare, load balancers)."
+msgstr "Jedna IP po liniji. Proxy IP adrese dopuštene za slanje zaglavlja X-Forwarded-For (npr. Cloudflare, balanseri opterećenja)."
 
 msgid "One IP per line. These IPs bypass all rate limits."
-msgstr "One IP per line. These IPs bypass all rate limits."
+msgstr "Jedna IP po liniji. Ovi IP-ovi zaobilaze sva ograničenja brzine."
 
 msgid "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
-msgstr "One IP per line. These IPs will be immediately blocked. Example: 123.45.67.89"
+msgstr "Jedna IP po liniji. Ove IP adrese će odmah biti blokirane. Primjer: 123.45.67.89"
 
 msgid "One IP per line. These IPs will bypass WAF checks."
-msgstr "One IP per line. These IPs will bypass WAF checks."
+msgstr "Jedna IP po liniji. Ove IP adrese će zaobići WAF provjere."
 
 msgid "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
-msgstr "One IP per line. These IPs will bypass all WAF rules. Example: 192.168.1.1, 10.0.0.0/8"
+msgstr "Jedna IP po liniji. Ove IP adrese će zaobići sva WAF pravila. Primjer: 192.168.1.1, 10.0.0.0/8"
 
 msgid "One path per line. Absolute paths to additional directories to scan."
-msgstr "One path per line. Absolute paths to additional directories to scan."
+msgstr "Jedna staza po retku. Apsolutne staze do dodatnih direktorija za skeniranje."
 
 msgid "One path per line. Directories to skip during scans."
-msgstr "One path per line. Directories to skip during scans."
+msgstr "Jedna staza po retku. Imenici za preskakanje tijekom skeniranja."
 
 msgid "One pattern per line. Regex patterns for files to exclude (e.g., .*\.min\.js)."
 msgstr "One pattern per line. Regex patterns for files to exclude (e.g., .*.min.js)."
 
 msgid "One per line. Block specific user agents. Example: bad-bot, scraper"
-msgstr "One per line. Block specific user agents. Example: bad-bot, scraper"
+msgstr "Jedan po redu. Blokirajte određene korisničke agente. Primjer: bad-bot, scraper"
 
 msgid "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
-msgstr "One per line. User agents in this list will bypass WAF checks. Example: Googlebot, good-service-bot"
+msgstr "Jedan po redu. Korisnički agenti na ovom popisu zaobići će WAF provjere. Primjer: Googlebot, good-service-bot"
 
 msgid "One username per line"
-msgstr "One username per line"
+msgstr "Jedno korisničko ime po retku"
 
 msgid "Open Settings"
-msgstr "Open Settings"
+msgstr "Otvorite postavke"
 
 msgid "Operating Systems"
-msgstr "Operating Systems"
+msgstr "Operacijski sustavi"
 
 msgid "Operation Mode"
-msgstr "Operation Mode"
+msgstr "Način rada"
 
 msgid "Optimize Database"
-msgstr "Optimize Database"
+msgstr "Optimizirajte bazu podataka"
 
 msgid "Optimize and secure your database."
-msgstr "Optimize and secure your database."
+msgstr "Optimizirajte i osigurajte svoju bazu podataka."
 
 msgid "Option Changes"
-msgstr "Option Changes"
+msgstr "Promjene opcija"
 
 msgid "Optional for All Users"
-msgstr "Optional for All Users"
+msgstr "Izborno za sve korisnike"
 
 msgid "Optional: Send scan results to your CI/CD platform."
-msgstr "Optional: Send scan results to your CI/CD platform."
+msgstr "Izborno: Pošaljite rezultate skeniranja na svoju CI/CD platformu."
 
 msgid "Original Path"
-msgstr "Original Path"
+msgstr "Izvorni put"
 
 msgid "Outdated"
-msgstr "Outdated"
+msgstr "Zastarjelo"
 
 msgid "Overhead"
-msgstr "Overhead"
+msgstr "Nadzemni"
 
 msgid "Override the language for the plugin interface. Supported languages: %d"
-msgstr "Override the language for the plugin interface. Supported languages: %d"
+msgstr "Nadjačajte jezik za sučelje dodatka. Podržani jezici: %d"
 
 msgid "Overview"
-msgstr "Overview"
+msgstr "Pregled"
 
 msgid "PHP Version"
-msgstr "PHP Version"
+msgstr "PHP verzija"
 
 msgid "Package"
-msgstr "Package"
+msgstr "Paket"
 
 msgid "Page Requests per Minute"
-msgstr "Page Requests per Minute"
+msgstr "Broj zahtjeva za stranicu po minuti"
 
 msgid "Page Views"
-msgstr "Page Views"
+msgstr "Prikazi stranice"
 
 msgid "Page not found."
-msgstr "Page not found."
+msgstr "Stranica nije pronađena."
 
 msgid "Passkey Authentication"
-msgstr "Passkey Authentication"
+msgstr "Autentifikacija lozinke"
 
 msgid "Passkey name (e.g., MacBook Touch ID)"
-msgstr "Passkey name (e.g., MacBook Touch ID)"
+msgstr "Naziv lozinke (npr. MacBook Touch ID)"
 
 msgid "Passkey registered successfully!"
-msgstr "Passkey registered successfully!"
+msgstr "Zaporka je uspješno registrirana!"
 
 msgid "Passkeys are not supported in this browser."
-msgstr "Passkeys are not supported in this browser."
+msgstr "Zaporke nisu podržane u ovom pregledniku."
 
 msgid "Password"
-msgstr "Password"
+msgstr "Lozinka"
 
 msgid "Password Expiry"
-msgstr "Password Expiry"
+msgstr "Istek lozinke"
 
 msgid "Password Policies"
-msgstr "Password Policies"
+msgstr "Pravila zaporke"
 
 msgid "Password Policy"
-msgstr "Password Policy"
+msgstr "Pravila zaporke"
 
 msgid "Password Requirements"
-msgstr "Password Requirements"
+msgstr "Zahtjevi za lozinku"
 
 msgid "Password Requirements:"
-msgstr "Password Requirements:"
+msgstr "Zahtjevi za lozinku:"
 
 msgid "Password Reset Form"
-msgstr "Password Reset Form"
+msgstr "Obrazac za ponovno postavljanje lozinke"
 
 msgid "Password Resets"
-msgstr "Password Resets"
+msgstr "Ponovno postavljanje lozinke"
 
 msgid "Password must be at least %d characters long."
-msgstr "Password must be at least %d characters long."
+msgstr "Lozinka mora imati najmanje %d znakova."
 
 msgid "Password must contain at least one lowercase letter."
-msgstr "Password must contain at least one lowercase letter."
+msgstr "Lozinka mora sadržavati barem jedno malo slovo."
 
 msgid "Password must contain at least one number."
-msgstr "Password must contain at least one number."
+msgstr "Lozinka mora sadržavati barem jedan broj."
 
 msgid "Password must contain at least one special character."
-msgstr "Password must contain at least one special character."
+msgstr "Lozinka mora sadržavati barem jedan poseban znak."
 
 msgid "Password must contain at least one uppercase letter."
-msgstr "Password must contain at least one uppercase letter."
+msgstr "Lozinka mora sadržavati barem jedno veliko slovo."
 
 msgid "Password policy"
-msgstr "Password policy"
+msgstr "Politika lozinki"
 
 msgid "Password reset form"
-msgstr "Password reset form"
+msgstr "Obrazac za ponovno postavljanje lozinke"
 
 msgid "Paths to exclude from scanning (relative to WordPress root). One per line."
-msgstr "Paths to exclude from scanning (relative to WordPress root). One per line."
+msgstr "Putovi koje treba isključiti iz skeniranja (u odnosu na korijen WordPressa). Jedan po redu."
 
 msgid "Peak Activity Insights"
-msgstr "Peak Activity Insights"
+msgstr "Uvid u vršnu aktivnost"
 
 msgid "Peak Hour"
-msgstr "Peak Hour"
+msgstr "Špica"
 
 msgid "Peak Traffic Hours"
-msgstr "Peak Traffic Hours"
+msgstr "Sati vršnog prometa"
 
 msgid "Performance Mode"
-msgstr "Performance Mode"
+msgstr "Način rada"
 
 msgid "Performance Settings"
-msgstr "Performance Settings"
+msgstr "Postavke izvedbe"
 
 msgid "Periodic Reports"
-msgstr "Periodic Reports"
+msgstr "Periodična izvješća"
 
 msgid "Permanent"
-msgstr "Permanent"
+msgstr "Trajna"
 
 msgid "Permanent Ban Threshold"
-msgstr "Permanent Ban Threshold"
+msgstr "Prag trajne zabrane"
 
 msgid "Permanently removes the file."
-msgstr "Permanently removes the file."
+msgstr "Trajno uklanja datoteku."
 
 msgid "Please solve the math captcha."
-msgstr "Please solve the math captcha."
+msgstr "Molimo riješite matematički captcha."
 
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Dodatak"
 
 msgid "Plugin & Theme analysis"
-msgstr "Plugin & Theme analysis"
+msgstr "Analiza dodataka i tema"
 
 msgid "Plugin Language"
-msgstr "Plugin Language"
+msgstr "Jezik dodataka"
 
 msgid "Plugin Last Updated"
-msgstr "Plugin Last Updated"
+msgstr "Dodatak zadnji put ažuriran"
 
 msgid "Plugin Options"
-msgstr "Plugin Options"
+msgstr "Mogućnosti dodatka"
 
 msgid "Plugin Self-Protection"
-msgstr "Plugin Self-Protection"
+msgstr "Dodatak za samozaštitu"
 
 msgid "Plugin Version"
-msgstr "Plugin Version"
+msgstr "Verzija dodatka"
 
 msgid "Plugin Vulnerabilities"
-msgstr "Plugin Vulnerabilities"
+msgstr "Ranjivosti dodataka"
 
 msgid "Plugin files cannot be edited via WordPress."
-msgstr "Plugin files cannot be edited via WordPress."
+msgstr "Datoteke dodataka ne mogu se uređivati putem WordPressa."
 
 msgid "Plugin integrity"
-msgstr "Plugin integrity"
+msgstr "Integritet dodatka"
 
 msgid "Plugin protection"
-msgstr "Plugin protection"
+msgstr "Zaštita dodataka"
 
 msgid "Plugin/theme CVEs"
-msgstr "Plugin/theme CVEs"
+msgstr "CVE-ovi dodataka/tema"
 
 msgid "Plugin/theme activations, updates, option changes, and exports."
-msgstr "Plugin/theme activations, updates, option changes, and exports."
+msgstr "Aktivacije dodataka/tema, ažuriranja, promjene opcija i izvozi."
 
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Dodaci"
 
 msgid "Plugins Activated"
-msgstr "Plugins Activated"
+msgstr "Dodaci aktivirani"
 
 msgid "Plugins Deactivated"
-msgstr "Plugins Deactivated"
+msgstr "Dodaci deaktivirani"
 
 msgid "Plugins Updated"
-msgstr "Plugins Updated"
+msgstr "Dodaci ažurirani"
 
 msgid "Post/page edits, publishing, media uploads, and content deletion."
-msgstr "Post/page edits, publishing, media uploads, and content deletion."
+msgstr "Uređivanje postova/stranica, objavljivanje, učitavanje medija i brisanje sadržaja."
 
 msgid "Posts Created"
-msgstr "Posts Created"
+msgstr "Objave stvorene"
 
 msgid "Posts Published"
-msgstr "Posts Published"
+msgstr "Postovi objavljeni"
 
 msgid "Posts Updated"
-msgstr "Posts Updated"
+msgstr "Postovi ažurirani"
 
 msgid "Potential security threat detected"
-msgstr "Potential security threat detected"
+msgstr "Otkrivena potencijalna sigurnosna prijetnja"
 
 msgid "Prevent XML-RPC attacks and brute force attempts"
-msgstr "Prevent XML-RPC attacks and brute force attempts"
+msgstr "Spriječite XML-RPC napade i pokušaje grube sile"
 
 msgid "Prevent access to directories outside the web root."
-msgstr "Prevent access to directories outside the web root."
+msgstr "Spriječite pristup imenicima izvan web korijena."
 
 msgid "Prevent attackers from including local server files."
-msgstr "Prevent attackers from including local server files."
+msgstr "Spriječite napadače da uključe datoteke lokalnog poslužitelja."
 
 msgid "Prevent brute force"
-msgstr "Prevent brute force"
+msgstr "Spriječite grubu silu"
 
 msgid "Prevent code editing in WordPress admin"
-msgstr "Prevent code editing in WordPress admin"
+msgstr "Spriječite uređivanje koda u WordPress administratoru"
 
 msgid "Prevent directory listing via .htaccess"
-msgstr "Prevent directory listing via .htaccess"
+msgstr "Spriječite ispisivanje imenika putem .htaccess"
 
 msgid "Prevent duplicate alerts within this period."
-msgstr "Prevent duplicate alerts within this period."
+msgstr "Spriječite dvostruka upozorenja unutar ovog razdoblja."
 
 msgid "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
-msgstr "Prevent duplicate alerts within this time period. Set to 0 to disable throttling."
+msgstr "Spriječite dvostruka upozorenja unutar ovog vremenskog razdoblja. Postavite na 0 da onemogućite prigušivanje."
 
 msgid "Prevent editing plugin files via WordPress editor"
-msgstr "Prevent editing plugin files via WordPress editor"
+msgstr "Spriječite uređivanje datoteka dodataka putem WordPress uređivača"
 
 msgid "Prevent inclusion of remote files via URL parameters."
-msgstr "Prevent inclusion of remote files via URL parameters."
+msgstr "Spriječite uključivanje udaljenih datoteka putem URL parametara."
 
 msgid "Prevent listing directory contents via .htaccess."
-msgstr "Prevent listing directory contents via .htaccess."
+msgstr "Spriječite ispisivanje sadržaja direktorija putem .htaccess."
 
 msgid "Prevent plugin/theme installation from admin panel."
-msgstr "Prevent plugin/theme installation from admin panel."
+msgstr "Spriječite instalaciju dodatka/teme s administratorske ploče."
 
 msgid "Prevent text selection and copying on frontend."
-msgstr "Prevent text selection and copying on frontend."
+msgstr "Spriječite odabir teksta i kopiranje na sučelju."
 
 msgid "Prevent use of commonly breached passwords"
-msgstr "Prevent use of commonly breached passwords"
+msgstr "Spriječite korištenje zaporki koje se često provaljuju"
 
 msgid "Prevent user discovery via /wp-json/wp/v2/users endpoint."
-msgstr "Prevent user discovery via /wp-json/wp/v2/users endpoint."
+msgstr "Spriječite otkrivanje korisnika putem krajnje točke /wp-json/wp/v2/users."
 
 msgid "Prevents unauthorized modification of security plugin files"
-msgstr "Prevents unauthorized modification of security plugin files"
+msgstr "Sprječava neovlašteno mijenjanje datoteka sigurnosnih dodataka"
 
 msgid "Primary email address for security alerts."
-msgstr "Primary email address for security alerts."
+msgstr "Primarna adresa e-pošte za sigurnosna upozorenja."
 
 msgid "Priority"
-msgstr "Priority"
+msgstr "Prioritet"
 
 msgid "Proactive security suggestions and automated hardening recommendations."
-msgstr "Proactive security suggestions and automated hardening recommendations."
+msgstr "Proaktivni sigurnosni prijedlozi i preporuke za automatsko očvršćivanje."
 
 msgid "Problem"
 msgstr "Problem"
 
 msgid "Profile Updates"
-msgstr "Profile Updates"
+msgstr "Ažuriranja profila"
 
 msgid "Profile changes, role changes, user creation, and deletion events."
-msgstr "Profile changes, role changes, user creation, and deletion events."
+msgstr "Promjene profila, promjene uloga, stvaranje korisnika i događaji brisanja."
 
 msgid "Project Key"
-msgstr "Project Key"
+msgstr "Ključ projekta"
 
 msgid "Protect against Cross-Site Request Forgery."
-msgstr "Protect against Cross-Site Request Forgery."
+msgstr "Zaštitite se od krivotvorenja zahtjeva na različitim mjestima."
 
 msgid "Protect against Cross-Site Scripting (XSS) attacks."
-msgstr "Protect against Cross-Site Scripting (XSS) attacks."
+msgstr "Zaštitite se od napada Cross-Site Scripting (XSS)."
 
 msgid "Protect against SQL injection attacks in GET/POST parameters."
-msgstr "Protect against SQL injection attacks in GET/POST parameters."
+msgstr "Zaštitite od napada SQL injekcijom u GET/POST parametrima."
 
 msgid "Protect against SQL injection, XSS, RFI, and other attacks."
-msgstr "Protect against SQL injection, XSS, RFI, and other attacks."
+msgstr "Zaštitite od SQL injection, XSS, RFI i drugih napada."
 
 msgid "Protect against brute force and DoS attacks by limiting request frequency per IP address."
-msgstr "Protect against brute force and DoS attacks by limiting request frequency per IP address."
+msgstr "Zaštitite se od grube sile i DoS napada ograničavanjem učestalosti zahtjeva po IP adresi."
 
 msgid "Protect login and registration forms from automated bot attacks."
-msgstr "Protect login and registration forms from automated bot attacks."
+msgstr "Zaštitite obrasce za prijavu i registraciju od automatiziranih napada robota."
 
 msgid "Protect login and registration forms with math-based captcha."
-msgstr "Protect login and registration forms with math-based captcha."
+msgstr "Zaštitite obrasce za prijavu i registraciju pomoću matematičke captcha."
 
 msgid "Protect plugin files from tampering."
-msgstr "Protect plugin files from tampering."
+msgstr "Zaštitite datoteke dodataka od petljanja."
 
 msgid "Protect the security plugin from tampering and unauthorized modifications."
-msgstr "Protect the security plugin from tampering and unauthorized modifications."
+msgstr "Zaštitite sigurnosni dodatak od petljanja i neovlaštenih izmjena."
 
 msgid "Protect your login page from brute force attacks."
-msgstr "Protect your login page from brute force attacks."
+msgstr "Zaštitite svoju stranicu za prijavu od napada brutalnom silom."
 
 msgid "Protect your site from malicious traffic and attacks."
-msgstr "Protect your site from malicious traffic and attacks."
+msgstr "Zaštitite svoju stranicu od zlonamjernog prometa i napada."
 
 msgid "Protected Forms"
-msgstr "Protected Forms"
+msgstr "Zaštićeni obrasci"
 
 msgid "Protection Level"
-msgstr "Protection Level"
+msgstr "Razina zaštite"
 
 msgid "Protection Mode"
-msgstr "Protection Mode"
+msgstr "Način zaštite"
 
 msgid "Protection Rules"
-msgstr "Protection Rules"
+msgstr "Pravila zaštite"
 
 msgid "Protection Settings"
-msgstr "Protection Settings"
+msgstr "Postavke zaštite"
 
 msgid "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
-msgstr "Protects REST API with JWT auth, rate limiting, and CORS. Essential for headless WordPress."
+msgstr "Štiti REST API s JWT autentifikacijom, ograničenjem brzine i CORS-om. Neophodno za bezglavi WordPress."
 
 msgid "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
-msgstr "Protects against SQL injection, XSS, and malicious requests. Safe to enable - only blocks harmful traffic."
+msgstr "Štiti od SQL injekcije, XSS-a i zlonamjernih zahtjeva. Sigurno za uključivanje - blokira samo štetan promet."
 
 msgid "Protects plugin files from modification. Safe - prevents tampering."
-msgstr "Protects plugin files from modification. Safe - prevents tampering."
+msgstr "Štiti datoteke dodataka od izmjena. Sigurno - sprječava neovlašteno korištenje."
 
 msgid "Provider"
-msgstr "Provider"
+msgstr "Davatelj"
 
 msgid "Purge All Logs"
-msgstr "Purge All Logs"
+msgstr "Očisti sve zapisnike"
 
 msgid "Purge Cache"
-msgstr "Purge Cache"
+msgstr "Očisti predmemoriju"
 
 msgid "Quarantine"
-msgstr "Quarantine"
+msgstr "karantena"
 
 msgid "Quarantine immediately"
-msgstr "Quarantine immediately"
+msgstr "Karantena odmah"
 
 msgid "Quarantine recommended"
-msgstr "Quarantine recommended"
+msgstr "Preporučena karantena"
 
 msgid "Quarantine:"
-msgstr "Quarantine:"
+msgstr "karantena:"
 
 msgid "Quarantined"
-msgstr "Quarantined"
+msgstr "U karanteni"
 
 msgid "Quarantined Files"
-msgstr "Quarantined Files"
+msgstr "Datoteke u karanteni"
 
 msgid "Query complexity exceeds maximum of %d"
-msgstr "Query complexity exceeds maximum of %d"
+msgstr "Složenost upita premašuje maksimalno %d"
 
 msgid "Query depth exceeds maximum allowed depth of %d"
-msgstr "Query depth exceeds maximum allowed depth of %d"
+msgstr "Dubina upita premašuje najveću dopuštenu dubinu od %d"
 
 msgid "Quick"
-msgstr "Quick"
+msgstr "brzo"
 
 msgid "Quick Actions"
-msgstr "Quick Actions"
+msgstr "Brze radnje"
 
 msgid "Quick Scan"
-msgstr "Quick Scan"
+msgstr "Brzo skeniranje"
 
 msgid "Quick Scan Actions"
-msgstr "Quick Scan Actions"
+msgstr "Akcije brzog skeniranja"
 
 msgid "Quick access to security maintenance tools."
-msgstr "Quick access to security maintenance tools."
+msgstr "Brzi pristup alatima za održavanje sigurnosti."
 
 msgid "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
-msgstr "Quick: Core files only. Standard: Core + themes/plugins. Deep: All files."
+msgstr "Brzo: samo osnovne datoteke. Standardno: Jezgra + teme/dodaci. Duboko: Sve datoteke."
 
 msgid "REST API Security"
-msgstr "REST API Security"
+msgstr "Sigurnost REST API-ja"
 
 msgid "REST API Users"
-msgstr "REST API Users"
+msgstr "Korisnici REST API-ja"
 
 msgid "REST API protection"
-msgstr "REST API protection"
+msgstr "REST API zaštita"
 
 msgid "RSS feeds are disabled on this site."
-msgstr "RSS feeds are disabled on this site."
+msgstr "RSS izvori su onemogućeni na ovoj stranici."
 
 msgid "Rate Limit"
-msgstr "Rate Limit"
+msgstr "Ograničenje brzine"
 
 msgid "Rate Limiter"
-msgstr "Rate Limiter"
+msgstr "Ograničivač brzine"
 
 msgid "Rate Limiting"
-msgstr "Rate Limiting"
+msgstr "Ograničenje stope"
 
 msgid "Rate Limiting Settings"
-msgstr "Rate Limiting Settings"
+msgstr "Postavke ograničenja brzine"
 
 msgid "Real-time monitoring"
-msgstr "Real-time monitoring"
+msgstr "Praćenje u stvarnom vremenu"
 
 msgid "Reason"
-msgstr "Reason"
+msgstr "razum"
 
 msgid "Receive email alerts when vulnerabilities are detected"
-msgstr "Receive email alerts when vulnerabilities are detected"
+msgstr "Primajte upozorenja e-poštom kada se otkriju ranjivosti"
 
 msgid "Recent Activity"
-msgstr "Recent Activity"
+msgstr "Nedavna aktivnost"
 
 msgid "Recent Threat Detections"
-msgstr "Recent Threat Detections"
+msgstr "Nedavna otkrivanja prijetnji"
 
 msgid "Recently Blocked IPs"
-msgstr "Recently Blocked IPs"
+msgstr "Nedavno blokirane IP adrese"
 
 msgid "Recipient Email"
-msgstr "Recipient Email"
+msgstr "E-pošta primatelja"
 
 msgid "Recommendations"
-msgstr "Recommendations"
+msgstr "Preporuke"
 
 msgid "Recommended"
-msgstr "Recommended"
+msgstr "Preporučeno"
 
 msgid "Recommended Actions"
-msgstr "Recommended Actions"
+msgstr "Preporučene radnje"
 
 msgid "Redirect Blocked Access"
-msgstr "Redirect Blocked Access"
+msgstr "Preusmjeri blokirani pristup"
 
 msgid "Redirect to homepage"
-msgstr "Redirect to homepage"
+msgstr "Preusmjeri na početnu stranicu"
 
 msgid "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
-msgstr "Reduce attack surface by disabling unnecessary features and hardening WordPress configuration."
+msgstr "Smanjite površinu za napad onemogućavanjem nepotrebnih značajki i očvršćavanjem konfiguracije WordPressa."
 
 msgid "Refresh"
-msgstr "Refresh"
+msgstr "Osvježi"
 
 msgid "Regenerate"
-msgstr "Regenerate"
+msgstr "Regenerirati"
 
 msgid "Regenerate Baseline"
-msgstr "Regenerate Baseline"
+msgstr "Regeneriraj osnovnu liniju"
 
 msgid "Register Passkey"
-msgstr "Register Passkey"
+msgstr "Registrirajte pristupni ključ"
 
 msgid "Registered Passkeys"
-msgstr "Registered Passkeys"
+msgstr "Registrirane zaporke"
 
 msgid "Registering passkey..."
-msgstr "Registering passkey..."
+msgstr "Registriranje zaporke..."
 
 msgid "Registration Form"
-msgstr "Registration Form"
+msgstr "Obrazac za registraciju"
 
 msgid "Registration form"
-msgstr "Registration form"
+msgstr "Obrazac za registraciju"
 
 msgid "Remember Device"
-msgstr "Remember Device"
+msgstr "Zapamti uređaj"
 
 msgid "Remember Duration"
-msgstr "Remember Duration"
+msgstr "Zapamti trajanje"
 
 msgid "Remember this device"
-msgstr "Remember this device"
+msgstr "Zapamtite ovaj uređaj"
 
 msgid "Remove"
-msgstr "Remove"
+msgstr "Ukloniti"
 
 msgid "Remove Generator Tags"
-msgstr "Remove Generator Tags"
+msgstr "Ukloni oznake generatora"
 
 msgid "Remove Login Hints"
-msgstr "Remove Login Hints"
+msgstr "Uklonite savjete za prijavu"
 
 msgid "Remove WordPress version from source code"
-msgstr "Remove WordPress version from source code"
+msgstr "Uklonite verziju WordPressa iz izvornog koda"
 
 msgid "Remove generator meta tags from all pages."
-msgstr "Remove generator meta tags from all pages."
+msgstr "Uklonite meta oznake generatora sa svih stranica."
 
 msgid "Remove password reset hints and suggestions."
-msgstr "Remove password reset hints and suggestions."
+msgstr "Uklonite savjete i prijedloge za ponovno postavljanje lozinke."
 
 msgid "Remove version information from HTML and feeds."
-msgstr "Remove version information from HTML and feeds."
+msgstr "Uklonite informacije o verziji iz HTML-a i feedova."
 
 msgid "Repair All Modified Files"
-msgstr "Repair All Modified Files"
+msgstr "Popravi sve izmijenjene datoteke"
 
 msgid "Repairs modified WordPress core files. Use carefully - backs up before repairing."
-msgstr "Repairs modified WordPress core files. Use carefully - backs up before repairing."
+msgstr "Popravlja izmijenjene datoteke jezgre WordPressa. Koristite pažljivo - napravite sigurnosnu kopiju prije popravka."
 
 msgid "Replaces corrupted files with clean versions"
-msgstr "Replaces corrupted files with clean versions"
+msgstr "Zamjenjuje oštećene datoteke čistim verzijama"
 
 msgid "Report History"
-msgstr "Report History"
+msgstr "Povijest izvješća"
 
 msgid "Report Retention (days)"
-msgstr "Report Retention (days)"
+msgstr "Zadržavanje izvješća (dani)"
 
 msgid "Report Schedule"
-msgstr "Report Schedule"
+msgstr "Raspored izvješća"
 
 msgid "Request Limits & Filtering"
-msgstr "Request Limits & Filtering"
+msgstr "Ograničenja zahtjeva i filtriranje"
 
 msgid "Request Size Limit"
-msgstr "Request Size Limit"
+msgstr "Ograničenje veličine zahtjeva"
 
 msgid "Requests Per Minute"
-msgstr "Requests Per Minute"
+msgstr "Zahtjevi po minuti"
 
 msgid "Require 2FA for all administrators"
-msgstr "Require 2FA for all administrators"
+msgstr "Zahtijevajte 2FA za sve administratore"
 
 msgid "Require 2FA for selected user roles."
-msgstr "Require 2FA for selected user roles."
+msgstr "Zahtijevaj 2FA za odabrane korisničke uloge."
 
 msgid "Require a second factor for login verification"
-msgstr "Require a second factor for login verification"
+msgstr "Zahtijevaj drugi faktor za potvrdu prijave"
 
 msgid "Require login for REST API access"
-msgstr "Require login for REST API access"
+msgstr "Zahtijevaj prijavu za pristup REST API-ju"
 
 msgid "Requires second factor for login. Configure your 2FA method before enabling."
-msgstr "Requires second factor for login. Configure your 2FA method before enabling."
+msgstr "Za prijavu je potreban drugi faktor. Konfigurirajte svoju 2FA metodu prije omogućavanja."
 
 msgid "Reset"
-msgstr "Reset"
+msgstr "Resetiraj"
 
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
+msgstr "Resetiraj sve postavke"
 
 msgid "Reset Learning"
-msgstr "Reset Learning"
+msgstr "Ponovno postavljanje učenja"
 
 msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgstr "Vratite sve NexifyMy sigurnosne postavke na zadane vrijednosti. Ova se radnja ne može poništiti."
 
 msgid "Reset to Defaults"
-msgstr "Reset to Defaults"
+msgstr "Vrati na zadane postavke"
 
 msgid "Resetting..."
-msgstr "Resetting..."
+msgstr "Ponovno postavljanje..."
 
 msgid "Response Code on Block"
-msgstr "Response Code on Block"
+msgstr "Kod odgovora na blok"
 
 msgid "Restore"
-msgstr "Restore"
+msgstr "Vratiti"
 
 msgid "Restore:"
-msgstr "Restore:"
+msgstr "Vrati:"
 
 msgid "Restrict REST API"
-msgstr "Restrict REST API"
+msgstr "Ograniči REST API"
 
 msgid "Restricts REST API access. May affect plugins that use REST API."
-msgstr "Restricts REST API access. May affect plugins that use REST API."
+msgstr "Ograničava pristup REST API-ju. Može utjecati na dodatke koji koriste REST API."
 
 msgid "Retention Period"
-msgstr "Retention Period"
+msgstr "Razdoblje zadržavanja"
 
 msgid "Return error code if malware is detected (fails CI/CD build)."
-msgstr "Return error code if malware is detected (fails CI/CD build)."
+msgstr "Vrati kod pogreške ako se otkrije zlonamjerni softver (ne uspijeva CI/CD izgradnja)."
 
 msgid "Return error code if vulnerabilities are found."
-msgstr "Return error code if vulnerabilities are found."
+msgstr "Vrati kod pogreške ako se pronađu ranjivosti."
 
 msgid "Returns the file to its original location."
-msgstr "Returns the file to its original location."
+msgstr "Vraća datoteku na izvornu lokaciju."
 
 msgid "Review Alerts &rsaquo;"
-msgstr "Review Alerts &rsaquo;"
+msgstr "Pregledajte upozorenja ›"
 
 msgid "Review immediately"
-msgstr "Review immediately"
+msgstr "Pregledajte odmah"
 
 msgid "Review security logs regularly"
-msgstr "Review security logs regularly"
+msgstr "Redovito pregledavajte sigurnosne dnevnike"
 
 msgid "Role Changes"
-msgstr "Role Changes"
+msgstr "Promjene uloga"
 
 msgid "Run Full Security Scan"
-msgstr "Run Full Security Scan"
+msgstr "Pokrenite potpuno sigurnosno skeniranje"
 
 msgid "Run Integrity Check"
-msgstr "Run Integrity Check"
+msgstr "Pokrenite provjeru integriteta"
 
 msgid "Run Quick Check"
-msgstr "Run Quick Check"
+msgstr "Pokrenite brzu provjeru"
 
 msgid "Run Scan"
-msgstr "Run Scan"
+msgstr "Pokreni skeniranje"
 
 msgid "Run Vulnerability Scan"
-msgstr "Run Vulnerability Scan"
+msgstr "Pokrenite skeniranje ranjivosti"
 
 msgid "Run a security scan to identify vulnerabilities"
-msgstr "Run a security scan to identify vulnerabilities"
+msgstr "Pokrenite sigurnosno skeniranje kako biste identificirali ranjivosti"
 
 msgid "Runs automatic malware scans daily. Safe - only scanning, no file changes."
-msgstr "Runs automatic malware scans daily. Safe - only scanning, no file changes."
+msgstr "Svakodnevno izvršava automatsko skeniranje zlonamjernog softvera. Sigurno - samo skeniranje, bez promjena datoteka."
 
 msgid "SECURITY ALERT:"
-msgstr "SECURITY ALERT:"
+msgstr "SIGURNOSNO UPOZORENJE:"
 
 msgid "SHA-256 hashes of all plugin files are stored as a baseline."
-msgstr "SHA-256 hashes of all plugin files are stored as a baseline."
+msgstr "SHA-256 hashovi svih datoteka dodataka pohranjuju se kao osnovna linija."
 
 msgid "SIEM"
 msgstr "SIEM"
 
 msgid "SIEM Integration"
-msgstr "SIEM Integration"
+msgstr "SIEM integracija"
 
 msgid "SIEM Platform"
-msgstr "SIEM Platform"
+msgstr "SIEM platforma"
 
 msgid "SQL Injection"
-msgstr "SQL Injection"
+msgstr "SQL injekcija"
 
 msgid "SQL Injection Protection"
-msgstr "SQL Injection Protection"
+msgstr "Zaštita od SQL ubacivanja"
 
 msgid "SSL Status"
-msgstr "SSL Status"
+msgstr "SSL status"
 
 msgid "SSL Verification"
-msgstr "SSL Verification"
+msgstr "SSL provjera"
 
 msgid "Save Advanced Settings"
-msgstr "Save Advanced Settings"
+msgstr "Spremi napredne postavke"
 
 msgid "Save CI/CD Settings"
-msgstr "Save CI/CD Settings"
+msgstr "Spremi CI/CD postavke"
 
 msgid "Save Discord Settings"
-msgstr "Save Discord Settings"
+msgstr "Spremi postavke Discorda"
 
 msgid "Save Email Settings"
-msgstr "Save Email Settings"
+msgstr "Spremi postavke e-pošte"
 
 msgid "Save Jira Settings"
-msgstr "Save Jira Settings"
+msgstr "Spremi Jira postavke"
 
 msgid "Save SIEM Settings"
-msgstr "Save SIEM Settings"
+msgstr "Spremi SIEM postavke"
 
 msgid "Save Scanner Settings"
-msgstr "Save Scanner Settings"
+msgstr "Spremi postavke skenera"
 
 msgid "Save ServiceNow Settings"
-msgstr "Save ServiceNow Settings"
+msgstr "Spremi postavke ServiceNow"
 
 msgid "Save Settings"
-msgstr "Save Settings"
+msgstr "Spremi postavke"
 
 msgid "Save Slack Settings"
-msgstr "Save Slack Settings"
+msgstr "Spremite Slack postavke"
 
 msgid "Save Teams Settings"
-msgstr "Save Teams Settings"
+msgstr "Spremi postavke timova"
 
 msgid "Save WAF Settings"
-msgstr "Save WAF Settings"
+msgstr "Spremi WAF postavke"
 
 msgid "Save Webhook Settings"
-msgstr "Save Webhook Settings"
+msgstr "Spremi postavke Webhooka"
 
 msgid "Scan"
-msgstr "Scan"
+msgstr "Skeniraj"
 
 msgid "Scan Complete"
-msgstr "Scan Complete"
+msgstr "Skeniranje dovršeno"
 
 msgid "Scan Completed"
-msgstr "Scan Completed"
+msgstr "Skeniranje dovršeno"
 
 msgid "Scan Composer Dependencies"
-msgstr "Scan Composer Dependencies"
+msgstr "Skeniraj ovisnosti skladatelja"
 
 msgid "Scan Configuration"
-msgstr "Scan Configuration"
+msgstr "Konfiguracija skeniranja"
 
 msgid "Scan Controls"
-msgstr "Scan Controls"
+msgstr "Kontrole skeniranja"
 
 msgid "Scan Custom Directories"
-msgstr "Scan Custom Directories"
+msgstr "Skenirajte prilagođene direktorije"
 
 msgid "Scan NPM Dependencies"
-msgstr "Scan NPM Dependencies"
+msgstr "Skeniraj NPM ovisnosti"
 
 msgid "Scan Plugins"
-msgstr "Scan Plugins"
+msgstr "Dodaci za skeniranje"
 
 msgid "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
-msgstr "Scan QR code with authenticator app (Google/Microsoft Authenticator)"
+msgstr "Skenirajte QR kod pomoću aplikacije za autentifikaciju (Google/Microsoft Authenticator)"
 
 msgid "Scan Results"
-msgstr "Scan Results"
+msgstr "Rezultati skeniranja"
 
 msgid "Scan Schedule"
-msgstr "Scan Schedule"
+msgstr "Raspored skeniranja"
 
 msgid "Scan Sensitivity"
-msgstr "Scan Sensitivity"
+msgstr "Osjetljivost skeniranja"
 
 msgid "Scan Targets"
-msgstr "Scan Targets"
+msgstr "Ciljevi skeniranja"
 
 msgid "Scan Themes"
-msgstr "Scan Themes"
+msgstr "Skenirajte teme"
 
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
+msgstr "Istek vremena skeniranja"
 
 msgid "Scan Uploads Directory"
-msgstr "Scan Uploads Directory"
+msgstr "Skeniraj direktorij prijenosa"
 
 msgid "Scan WordPress Core"
-msgstr "Scan WordPress Core"
+msgstr "Skenirajte WordPress Core"
 
 msgid "Scan all installed plugins for malware."
-msgstr "Scan all installed plugins for malware."
+msgstr "Skenirajte sve instalirane dodatke na zlonamjerni softver."
 
 msgid "Scan all installed themes for malware."
-msgstr "Scan all installed themes for malware."
+msgstr "Skenirajte sve instalirane teme na zlonamjerni softver."
 
 msgid "Scan critical areas only"
-msgstr "Scan critical areas only"
+msgstr "Skenirajte samo kritična područja"
 
 msgid "Scan files for malware and suspicious code."
-msgstr "Scan files for malware and suspicious code."
+msgstr "Skenirajte datoteke u potrazi za zlonamjernim softverom i sumnjivim kodom."
 
 msgid "Scan plugins, themes, and WordPress core for known vulnerabilities."
-msgstr "Scan plugins, themes, and WordPress core for known vulnerabilities."
+msgstr "Skenirajte dodatke, teme i jezgru WordPressa radi poznatih ranjivosti."
 
 msgid "Scan your site for malware, vulnerabilities, and security issues."
-msgstr "Scan your site for malware, vulnerabilities, and security issues."
+msgstr "Skenirajte svoje web mjesto u potrazi za zlonamjernim softverom, ranjivostima i sigurnosnim problemima."
 
 msgid "Scan your website for malware and security vulnerabilities."
-msgstr "Scan your website for malware and security vulnerabilities."
+msgstr "Skenirajte svoje web mjesto u potrazi za zlonamjernim softverom i sigurnosnim propustima."
 
 msgid "Scanner"
-msgstr "Scanner"
+msgstr "Skener"
 
 msgid "Scanner Settings"
-msgstr "Scanner Settings"
+msgstr "Postavke skenera"
 
 msgid "Scanning..."
-msgstr "Scanning..."
+msgstr "Skeniranje..."
 
 msgid "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
-msgstr "Scans files for malware and suspicious code. Safe - only scans, does not modify files."
+msgstr "Skenira datoteke u potrazi za zlonamjernim softverom i sumnjivim kodom. Sigurno - samo skenira, ne mijenja datoteke."
 
 msgid "Scheduled Scan Mode"
-msgstr "Scheduled Scan Mode"
+msgstr "Način planiranog skeniranja"
 
 msgid "Scheduled Scans"
-msgstr "Scheduled Scans"
+msgstr "Zakazana skeniranja"
 
 msgid "Score"
-msgstr "Score"
+msgstr "rezultat"
 
 msgid "Search Requests per Minute"
-msgstr "Search Requests per Minute"
+msgstr "Zahtjevi za pretraživanje po minuti"
 
 msgid "Search username..."
-msgstr "Search username..."
+msgstr "Traži korisničko ime..."
 
 msgid "Secret Key"
-msgstr "Secret Key"
+msgstr "Tajni ključ"
 
 msgid "Secure file access"
-msgstr "Secure file access"
+msgstr "Siguran pristup datoteci"
 
 msgid "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
-msgstr "Secures WPGraphQL with query depth limits, complexity checks, and rate limiting. Safe for headless setups."
+msgstr "Osigurava WPGraphQL s ograničenjima dubine upita, provjerama složenosti i ograničenjem brzine. Sigurno za bezglave postavke."
 
 msgid "Security Alerts"
-msgstr "Security Alerts"
+msgstr "Sigurnosna upozorenja"
 
 msgid "Security Analytics"
-msgstr "Security Analytics"
+msgstr "Sigurnosna analitika"
 
 msgid "Security Hardening"
-msgstr "Security Hardening"
+msgstr "Ojačavanje sigurnosti"
 
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "Sigurnosna zaglavlja"
 
 msgid "Security Incident"
-msgstr "Security Incident"
+msgstr "Sigurnosni incident"
 
 msgid "Security Logs"
-msgstr "Security Logs"
+msgstr "Sigurnosni zapisnici"
 
 msgid "Security Modules"
-msgstr "Security Modules"
+msgstr "Sigurnosni moduli"
 
 msgid "Security Notifications"
-msgstr "Security Notifications"
+msgstr "Sigurnosne obavijesti"
 
 msgid "Security Options"
-msgstr "Security Options"
+msgstr "Sigurnosne opcije"
 
 msgid "Security Recommendations"
-msgstr "Security Recommendations"
+msgstr "Sigurnosne preporuke"
 
 msgid "Security Score"
-msgstr "Security Score"
+msgstr "Sigurnosna ocjena"
 
 msgid "Security Status"
-msgstr "Security Status"
+msgstr "Sigurnosni status"
 
 msgid "Security Tools"
-msgstr "Security Tools"
+msgstr "Sigurnosni alati"
 
 msgid "Security Vulnerabilities"
-msgstr "Security Vulnerabilities"
+msgstr "Sigurnosne ranjivosti"
 
 msgid "Security alerts"
-msgstr "Security alerts"
+msgstr "Sigurnosna upozorenja"
 
 msgid "Security events will appear here."
-msgstr "Security events will appear here."
+msgstr "Ovdje će se pojaviti sigurnosni događaji."
 
 msgid "Security hardening"
-msgstr "Security hardening"
+msgstr "Ojačavanje sigurnosti"
 
 msgid "Security scan has finished execution"
-msgstr "Security scan has finished execution"
+msgstr "Sigurnosno skeniranje je završilo izvršenje"
 
 msgid "Security settings have been modified"
-msgstr "Security settings have been modified"
+msgstr "Sigurnosne postavke su izmijenjene"
 
 msgid "Select Countries:"
-msgstr "Select Countries:"
+msgstr "Odaberite zemlje:"
 
 msgid "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
-msgstr "Select countries from left, click \"Add to List\" to add them. Selected countries will be blocked (Blacklist) or allowed (Whitelist) based on mode above."
+msgstr "Odaberite zemlje s lijeve strane, kliknite \"Dodaj na popis\" da ih dodate. Odabrane zemlje bit će blokirane (Crna lista) ili dopuštene (Bijela lista) na temelju gornjeg načina."
 
 msgid "Select the image with a checkmark:"
-msgstr "Select the image with a checkmark:"
+msgstr "Odaberite sliku kvačicom:"
 
 msgid "Select which captcha service to use."
-msgstr "Select which captcha service to use."
+msgstr "Odaberite koju ćete captcha uslugu koristiti."
 
 msgid "Selected Countries:"
-msgstr "Selected Countries:"
+msgstr "Odabrane zemlje:"
 
 msgid "Self Protection"
-msgstr "Self Protection"
+msgstr "Samozaštita"
 
 msgid "Self-Protection"
-msgstr "Self-Protection"
+msgstr "Samozaštita"
 
 msgid "Send Test Alert"
-msgstr "Send Test Alert"
+msgstr "Pošalji testno upozorenje"
 
 msgid "Send Test Email"
-msgstr "Send Test Email"
+msgstr "Pošalji probnu e-poštu"
 
 msgid "Send alert after this many attacks in one hour."
-msgstr "Send alert after this many attacks in one hour."
+msgstr "Pošalji upozorenje nakon toliko napada u jednom satu."
 
 msgid "Send daily email digest"
-msgstr "Send daily email digest"
+msgstr "Šalji dnevni sažetak e-pošte"
 
 msgid "Send email notification when an IP is locked out."
-msgstr "Send email notification when an IP is locked out."
+msgstr "Pošaljite obavijest e-poštom kada je IP zaključan."
 
 msgid "Send email notifications for security events"
-msgstr "Send email notifications for security events"
+msgstr "Pošaljite obavijesti e-poštom o sigurnosnim događajima"
 
 msgid "Send email notifications when critical attacks are detected."
-msgstr "Send email notifications when critical attacks are detected."
+msgstr "Pošaljite obavijesti e-poštom kada se otkriju kritični napadi."
 
 msgid "Send email when tampering is detected"
-msgstr "Send email when tampering is detected"
+msgstr "Pošalji e-poštu kada se otkrije neovlašteno mijenjanje"
 
 msgid "Send email when vulnerabilities are found"
-msgstr "Send email when vulnerabilities are found"
+msgstr "Pošalji e-poštu kada se pronađu ranjivosti"
 
 msgid "Send reports to admin email"
-msgstr "Send reports to admin email"
+msgstr "Šalji izvješća na e-mail administratora"
 
 msgid "Send scan results via email after each scan."
-msgstr "Send scan results via email after each scan."
+msgstr "Pošaljite rezultate skeniranja e-poštom nakon svakog skeniranja."
 
 msgid "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
-msgstr "Send security events to Splunk, Elasticsearch, or other SIEM platforms for centralized monitoring and analysis."
+msgstr "Pošaljite sigurnosne događaje na Splunk, Elasticsearch ili druge SIEM platforme za centralizirani nadzor i analizu."
 
 msgid "Send security events to any HTTP endpoint with custom configuration."
-msgstr "Send security events to any HTTP endpoint with custom configuration."
+msgstr "Pošaljite sigurnosne događaje bilo kojoj HTTP krajnjoj točki s prilagođenom konfiguracijom."
 
 msgid "Send security events to any HTTP endpoint with custom headers and authentication."
-msgstr "Send security events to any HTTP endpoint with custom headers and authentication."
+msgstr "Pošaljite sigurnosne događaje bilo kojoj krajnjoj HTTP točki s prilagođenim zaglavljima i autentifikacijom."
 
 msgid "Send verification codes via email."
-msgstr "Send verification codes via email."
+msgstr "Pošaljite kontrolne kodove putem e-pošte."
 
 msgid "Sends email alerts for security events. Safe - configure email settings first."
-msgstr "Sends email alerts for security events. Safe - configure email settings first."
+msgstr "Šalje upozorenja e-poštom za sigurnosne događaje. Sigurno - prvo konfigurirajte postavke e-pošte."
 
 msgid "ServiceNow Integration"
-msgstr "ServiceNow Integration"
+msgstr "Integracija ServiceNow"
 
 msgid "Sets secure file permissions. May require manual adjustment if server has issues."
-msgstr "Sets secure file permissions. May require manual adjustment if server has issues."
+msgstr "Postavlja sigurne dozvole za datoteke. Može zahtijevati ručnu prilagodbu ako poslužitelj ima problema."
 
 msgid "Settings"
-msgstr "Settings"
+msgstr "postavke"
 
 msgid "Settings saved successfully"
-msgstr "Settings saved successfully"
+msgstr "Postavke su uspješno spremljene"
 
 msgid "Severity"
-msgstr "Severity"
+msgstr "Ozbiljnost"
 
 msgid "Show 404 page"
-msgstr "Show 404 page"
+msgstr "Prikaži 404 stranicu"
 
 msgid "Show generic error message on login failure."
-msgstr "Show generic error message on login failure."
+msgstr "Prikaži generičku poruku o pogrešci pri neuspješnoj prijavi."
 
 msgid "Show on Forms"
-msgstr "Show on Forms"
+msgstr "Prikaži na obrascima"
 
 msgid "Showing %d of %d entries"
-msgstr "Showing %d of %d entries"
+msgstr "Prikaz %d od %d unosa"
 
 msgid "Shows unread Critical/Warning events. Use Logs for full history."
-msgstr "Shows unread Critical/Warning events. Use Logs for full history."
+msgstr "Prikazuje nepročitane kritične događaje/događaje upozorenja. Koristite Zapisnike za potpunu povijest."
 
 msgid "Sign in with Passkey"
-msgstr "Sign in with Passkey"
+msgstr "Prijavite se pomoću zaporke"
 
 msgid "Signature Status"
-msgstr "Signature Status"
+msgstr "Status potpisa"
 
 msgid "Signature-Based Detection"
-msgstr "Signature-Based Detection"
+msgstr "Detekcija na temelju potpisa"
 
 msgid "Signatures"
-msgstr "Signatures"
+msgstr "Potpisi"
 
 msgid "Site Default"
-msgstr "Site Default"
+msgstr "Zadano web mjesto"
 
 msgid "Site Key"
-msgstr "Site Key"
+msgstr "Ključ stranice"
 
 msgid "Site Security Health"
-msgstr "Site Security Health"
+msgstr "Zdravlje sigurnosti stranice"
 
 msgid "Size"
-msgstr "Size"
+msgstr "Veličina"
 
 msgid "Skip files larger than this size."
-msgstr "Skip files larger than this size."
+msgstr "Preskoči datoteke veće od ove veličine."
 
 msgid "Slack Integration"
-msgstr "Slack Integration"
+msgstr "Slack integracija"
 
 msgid "Some improvements recommended"
-msgstr "Some improvements recommended"
+msgstr "Preporučuju se neka poboljšanja"
 
 msgid "Source"
-msgstr "Source"
+msgstr "Izvor"
 
 msgid "Special character (!@#$...)"
-msgstr "Special character (!@#$...)"
+msgstr "Poseban znak (!@#$...)"
 
 msgid "Splunk (HTTP Event Collector)"
-msgstr "Splunk (HTTP Event Collector)"
+msgstr "Splunk (HTTP skupljač događaja)"
 
 msgid "Standard"
-msgstr "Standard"
+msgstr "Standardno"
 
 msgid "Standard - Balanced protection"
-msgstr "Standard - Balanced protection"
+msgstr "Standard - Uravnotežena zaštita"
 
 msgid "Standard Scan"
-msgstr "Standard Scan"
+msgstr "Standardno skeniranje"
 
 msgid "Start Scan"
-msgstr "Start Scan"
+msgstr "Pokrenite skeniranje"
 
 msgid "Start a New Scan"
-msgstr "Start a New Scan"
+msgstr "Pokrenite novo skeniranje"
 
 msgid "Start a Scan"
-msgstr "Start a Scan"
+msgstr "Pokrenite skeniranje"
 
 msgid "Status"
 msgstr "Status"
 
 msgid "Story"
-msgstr "Story"
+msgstr "priča"
 
 msgid "Strict - Maximum security"
-msgstr "Strict - Maximum security"
+msgstr "Strogo - Maksimalna sigurnost"
 
 msgid "Strong Passwords"
-msgstr "Strong Passwords"
+msgstr "Jake lozinke"
 
 msgid "Strong passwords"
-msgstr "Strong passwords"
+msgstr "Jake lozinke"
 
 msgid "Success Rate"
-msgstr "Success Rate"
+msgstr "Stopa uspješnosti"
 
 msgid "Successful Login"
-msgstr "Successful Login"
+msgstr "Uspješna prijava"
 
 msgid "Successful Logins"
-msgstr "Successful Logins"
+msgstr "Uspješne prijave"
 
 msgid "Sucuri"
 msgstr "Sucuri"
 
 msgid "Sumo Logic"
-msgstr "Sumo Logic"
+msgstr "Sumo logika"
 
 msgid "Supply Chain"
-msgstr "Supply Chain"
+msgstr "Lanac opskrbe"
 
 msgid "Supply Chain Security"
-msgstr "Supply Chain Security"
+msgstr "Sigurnost lanca opskrbe"
 
 msgid "Supply Chain Settings"
-msgstr "Supply Chain Settings"
+msgstr "Postavke lanca opskrbe"
 
 msgid "Support Google Authenticator, Authy, etc."
-msgstr "Support Google Authenticator, Authy, etc."
+msgstr "Podržava Google Authenticator, Authy itd."
 
 msgid "Supported:"
-msgstr "Supported:"
+msgstr "Podržano:"
 
 msgid "Suspicious Code"
-msgstr "Suspicious Code"
+msgstr "Sumnjivi kod"
 
 msgid "Suspicious IPs"
-msgstr "Suspicious IPs"
+msgstr "Sumnjive IP adrese"
 
 msgid "System Activity"
-msgstr "System Activity"
+msgstr "Aktivnost sustava"
 
 msgid "System Events"
-msgstr "System Events"
+msgstr "Događaji sustava"
 
 msgid "System Status"
-msgstr "System Status"
+msgstr "Status sustava"
 
 msgid "TOTP Authenticator Apps"
-msgstr "TOTP Authenticator Apps"
+msgstr "Aplikacije TOTP autentifikatora"
 
 msgid "Table Name"
-msgstr "Table Name"
+msgstr "Naziv tablice"
 
 msgid "Tables"
-msgstr "Tables"
+msgstr "Stolovi"
 
 msgid "Tamper Detection:"
-msgstr "Tamper Detection:"
+msgstr "Detekcija neovlaštenog otvaranja:"
 
 msgid "Task"
-msgstr "Task"
+msgstr "zadatak"
 
 msgid "Temporarily block IPs that exceed API rate limits."
-msgstr "Temporarily block IPs that exceed API rate limits."
+msgstr "Privremeno blokirajte IP-ove koji premašuju ograničenja brzine API-ja."
 
 msgid "Test Connection"
-msgstr "Test Connection"
+msgstr "Testirajte vezu"
 
 msgid "Test Notification"
-msgstr "Test Notification"
+msgstr "Test Obavijest"
 
 msgid "Text Matching"
-msgstr "Text Matching"
+msgstr "Slaganje teksta"
 
 msgid "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
-msgstr "The AI continuously learns normal behavior patterns including traffic hours, geographic locations, user agents, and request patterns. This baseline is used to detect anomalies."
+msgstr "AI neprestano uči normalne obrasce ponašanja uključujući sate prometa, geografske lokacije, korisničke agente i obrasce zahtjeva. Ova osnovna linija koristi se za otkrivanje anomalija."
 
 msgid "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
-msgstr "The WAF protects your site from common web attacks including SQL injection, XSS, and malicious bots."
+msgstr "WAF štiti vaše web mjesto od uobičajenih web napada uključujući SQL injection, XSS i zlonamjerne robote."
 
 msgid "Theme Switches"
-msgstr "Theme Switches"
+msgstr "Prekidači tema"
 
 msgid "This Hour"
-msgstr "This Hour"
+msgstr "Ovaj sat"
 
 msgid "This Month"
-msgstr "This Month"
+msgstr "Ovaj mjesec"
 
 msgid "This Week"
-msgstr "This Week"
+msgstr "Ovaj tjedan"
 
 msgid "This is a common password."
-msgstr "This is a common password."
+msgstr "Ovo je uobičajena lozinka."
 
 msgid "This is how the captcha will appear on login forms:"
-msgstr "This is how the captcha will appear on login forms:"
+msgstr "Ovako će se captcha pojaviti na obrascima za prijavu:"
 
 msgid "This password is too common. Please choose a more unique password."
-msgstr "This password is too common. Please choose a more unique password."
+msgstr "Ova lozinka je prečesta. Odaberite jedinstveniju lozinku."
 
 msgid "This query is not allowed."
-msgstr "This query is not allowed."
+msgstr "Ovaj upit nije dopušten."
 
 msgid "This will reset all AI learning data and behavior patterns. Continue?"
-msgstr "This will reset all AI learning data and behavior patterns. Continue?"
+msgstr "Ovo će poništiti sve podatke o učenju umjetne inteligencije i obrasce ponašanja. Nastaviti?"
 
 msgid "Threat"
-msgstr "Threat"
+msgstr "Prijetnja"
 
 msgid "Threat Breakdown:"
-msgstr "Threat Breakdown:"
+msgstr "Raščlamba prijetnji:"
 
 msgid "Threat Detected"
-msgstr "Threat Detected"
+msgstr "Prijetnja otkrivena"
 
 msgid "Threat Detected (malware, suspicious files)"
-msgstr "Threat Detected (malware, suspicious files)"
+msgstr "Otkrivena prijetnja (malware, sumnjive datoteke)"
 
 msgid "Threat Detection & Blocking - Last 7 Days"
-msgstr "Threat Detection & Blocking - Last 7 Days"
+msgstr "Otkrivanje i blokiranje prijetnji - zadnjih 7 dana"
 
 msgid "Threat Score"
-msgstr "Threat Score"
+msgstr "Ocjena prijetnje"
 
 msgid "Threats Blocked"
-msgstr "Threats Blocked"
+msgstr "Prijetnje blokirane"
 
 msgid "Threats Found"
-msgstr "Threats Found"
+msgstr "Pronađene prijetnje"
 
 msgid "Threats Today"
-msgstr "Threats Today"
+msgstr "Prijetnje danas"
 
 msgid "Throttle Period"
-msgstr "Throttle Period"
+msgstr "Razdoblje gasa"
 
 msgid "Ticketing"
-msgstr "Ticketing"
+msgstr "Prodaja karata"
 
 msgid "Ticketing Systems"
-msgstr "Ticketing Systems"
+msgstr "Sustavi prodaje karata"
 
 msgid "Time"
-msgstr "Time"
+msgstr "Vrijeme"
 
 msgid "Time Window (sec)"
-msgstr "Time Window (sec)"
+msgstr "Vremenski okvir (sek)"
 
 msgid "Time before email verification codes expire."
-msgstr "Time before email verification codes expire."
+msgstr "Vrijeme prije isteka kodova za provjeru e-pošte."
 
 msgid "Time window for counting failed login attempts."
-msgstr "Time window for counting failed login attempts."
+msgstr "Vremenski okvir za brojanje neuspjelih pokušaja prijave."
 
 msgid "Time window used to count failed login attempts."
-msgstr "Time window used to count failed login attempts."
+msgstr "Vremenski okvir koji se koristi za brojanje neuspjelih pokušaja prijave."
 
 msgid "To Date"
-msgstr "To Date"
+msgstr "Do danas"
 
 msgid "Today"
-msgstr "Today"
+msgstr "Danas"
 
 msgid "Too many failed login attempts. Please try again in %d minute(s)."
-msgstr "Too many failed login attempts. Please try again in %d minute(s)."
+msgstr "Previše neuspjelih pokušaja prijave. Pokušajte ponovno za %d minut(e)."
 
 msgid "Tools"
-msgstr "Tools"
+msgstr "Alati"
 
 msgid "Tools & Utilities"
-msgstr "Tools & Utilities"
+msgstr "Alati i pomoćni programi"
 
 msgid "Top Country"
-msgstr "Top Country"
+msgstr "Vrhunska država"
 
 msgid "Top Detection Reasons"
-msgstr "Top Detection Reasons"
+msgstr "Glavni razlozi otkrivanja"
 
 msgid "Top Event Types"
-msgstr "Top Event Types"
+msgstr "Najpopularnije vrste događaja"
 
 msgid "Top Pages"
-msgstr "Top Pages"
+msgstr "Najpopularnije stranice"
 
 msgid "Top Referrers"
-msgstr "Top Referrers"
+msgstr "Najbolji refereri"
 
 msgid "Total Events"
-msgstr "Total Events"
+msgstr "Ukupni događaji"
 
 msgid "Total Page Views"
-msgstr "Total Page Views"
+msgstr "Ukupni broj prikaza stranice"
 
 msgid "Total Signatures"
-msgstr "Total Signatures"
+msgstr "Ukupno potpisa"
 
 msgid "Total Size"
-msgstr "Total Size"
+msgstr "Ukupna veličina"
 
 msgid "Traffic Analytics"
-msgstr "Traffic Analytics"
+msgstr "Analitika prometa"
 
 msgid "Traffic Overview"
-msgstr "Traffic Overview"
+msgstr "Pregled prometa"
 
 msgid "Trigger a security scan"
-msgstr "Trigger a security scan"
+msgstr "Pokrenite sigurnosno skeniranje"
 
 msgid "Trust Proxy Headers"
-msgstr "Trust Proxy Headers"
+msgstr "Vjerujte proxy zaglavljima"
 
 msgid "Trusted Proxies"
-msgstr "Trusted Proxies"
+msgstr "Pouzdani proxyji"
 
 msgid "Twice Daily"
-msgstr "Twice Daily"
+msgstr "Dva puta dnevno"
 
 msgid "Two-Factor Auth (2FA)"
-msgstr "Two-Factor Auth (2FA)"
+msgstr "Autentifikacija u dva faktora (2FA)"
 
 msgid "Two-Factor Authentication"
-msgstr "Two-Factor Authentication"
+msgstr "Autentifikacija u dva faktora"
 
 msgid "Two-factor authentication"
-msgstr "Two-factor authentication"
+msgstr "Dvofaktorska autentifikacija"
 
 msgid "Type"
-msgstr "Type"
+msgstr "Vrsta"
 
 msgid "Type the word:"
-msgstr "Type the word:"
+msgstr "Upišite riječ:"
 
 msgid "URL"
 msgstr "URL"
 
 msgid "Uninstall Behavior"
-msgstr "Uninstall Behavior"
+msgstr "Ponašanje deinstalacije"
 
 msgid "Unique IPs"
-msgstr "Unique IPs"
+msgstr "Jedinstvene IP adrese"
 
 msgid "Unique Users"
-msgstr "Unique Users"
+msgstr "Jedinstveni korisnici"
 
 msgid "Unique Visitors"
-msgstr "Unique Visitors"
+msgstr "Jedinstveni posjetitelji"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Nepoznato"
 
 msgid "Unread Alerts"
-msgstr "Unread Alerts"
+msgstr "Nepročitana upozorenja"
 
 msgid "Unread security alerts from your logs."
-msgstr "Unread security alerts from your logs."
+msgstr "Nepročitana sigurnosna upozorenja iz vaših zapisa."
 
 msgid "Update Definitions"
-msgstr "Update Definitions"
+msgstr "Ažuriranje definicija"
 
 msgid "Update Definitions Now"
-msgstr "Update Definitions Now"
+msgstr "Ažurirajte definicije sada"
 
 msgid "Update Malware Definitons"
-msgstr "Update Malware Definitons"
+msgstr "Ažurirajte definicije zlonamjernog softvera"
 
 msgid "Update Now"
-msgstr "Update Now"
+msgstr "Ažurirajte sada"
 
 msgid "Update malware detection signatures."
-msgstr "Update malware detection signatures."
+msgstr "Ažurirajte potpise za otkrivanje zlonamjernog softvera."
 
 msgid "Uppercase letter (A-Z)"
-msgstr "Uppercase letter (A-Z)"
+msgstr "Veliko slovo (A-Z)"
 
 msgid "Urgency Level"
-msgstr "Urgency Level"
+msgstr "Razina hitnosti"
 
 msgid "Use CDN/proxy headers to determine real client IP"
-msgstr "Use CDN/proxy headers to determine real client IP"
+msgstr "Koristite CDN/proxy zaglavlja za određivanje stvarnog IP-a klijenta"
 
 msgid "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
-msgstr "Use Touch ID, Face ID, Windows Hello, or a hardware security key."
+msgstr "Koristite Touch ID, Face ID, Windows Hello ili hardverski sigurnosni ključ."
 
 msgid "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
-msgstr "Use X-Forwarded-For header for IP detection (only if behind CDN/proxy)."
+msgstr "Koristite zaglavlje X-Forwarded-For za otkrivanje IP-a (samo ako je iza CDN-a/proxyja)."
 
 msgid "Use malware signature database for detection."
-msgstr "Use malware signature database for detection."
+msgstr "Koristite bazu podataka potpisa zlonamjernog softvera za otkrivanje."
 
 msgid "Use this key to authenticate API requests from your CI/CD pipeline."
-msgstr "Use this key to authenticate API requests from your CI/CD pipeline."
+msgstr "Koristite ovaj ključ za provjeru autentičnosti API zahtjeva iz vašeg CI/CD cjevovoda."
 
 msgid "User"
-msgstr "User"
+msgstr "Korisnik"
 
 msgid "User Activity"
-msgstr "User Activity"
+msgstr "Aktivnost korisnika"
 
 msgid "User Agent"
-msgstr "User Agent"
+msgstr "Korisnički agent"
 
 msgid "User Events"
-msgstr "User Events"
+msgstr "Korisnički događaji"
 
 msgid "User Lockouts"
-msgstr "User Lockouts"
+msgstr "Isključenja korisnika"
 
 msgid "User Management"
-msgstr "User Management"
+msgstr "Upravljanje korisnicima"
 
 msgid "User Requirements"
-msgstr "User Requirements"
+msgstr "Zahtjevi korisnika"
 
 msgid "User or IP address locked out due to suspicious activity"
-msgstr "User or IP address locked out due to suspicious activity"
+msgstr "Korisnik ili IP adresa zaključani su zbog sumnjive aktivnosti"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Korisničko ime"
 
 msgid "Username and password required."
-msgstr "Username and password required."
+msgstr "Potrebno korisničko ime i lozinka."
 
 msgid "Users Created"
-msgstr "Users Created"
+msgstr "Stvoreni korisnici"
 
 msgid "Users Deleted"
-msgstr "Users Deleted"
+msgstr "Korisnici izbrisani"
 
 msgid "Users enable 2FA in their profile settings"
-msgstr "Users enable 2FA in their profile settings"
+msgstr "Korisnici omogućuju 2FA u postavkama svog profila"
 
 msgid "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
-msgstr "Uses AI to detect zero-day threats through behavioral analysis. Learns normal patterns and flags anomalies. Safe - only monitors behavior."
+msgstr "Koristi AI za otkrivanje prijetnji nultog dana putem analize ponašanja. Uči normalne obrasce i označava anomalije. Sigurno - samo prati ponašanje."
 
 msgid "Verification session expired. Please log in again."
-msgstr "Verification session expired. Please log in again."
+msgstr "Sesija provjere je istekla. Molimo prijavite se ponovo."
 
 msgid "Verify"
-msgstr "Verify"
+msgstr "Potvrdi"
 
 msgid "Verify Core Files"
-msgstr "Verify Core Files"
+msgstr "Provjerite osnovne datoteke"
 
 msgid "Verify SSL certificates (recommended for production)."
-msgstr "Verify SSL certificates (recommended for production)."
+msgstr "Provjerite SSL certifikate (preporučeno za proizvodnju)."
 
 msgid "Verify and repair WordPress core files."
-msgstr "Verify and repair WordPress core files."
+msgstr "Provjerite i popravite temeljne datoteke WordPressa."
 
 msgid "Verify and repair core files"
-msgstr "Verify and repair core files"
+msgstr "Provjerite i popravite osnovne datoteke"
 
 msgid "Version"
-msgstr "Version"
+msgstr "Verzija"
 
 msgid "View All"
-msgstr "View All"
+msgstr "Pogledaj sve"
 
 msgid "View Live Traffic"
-msgstr "View Live Traffic"
+msgstr "Pogledajte promet uživo"
 
 msgid "View all security events."
-msgstr "View all security events."
+msgstr "Pogledajte sve sigurnosne događaje."
 
 msgid "View and manage quarantined threats."
-msgstr "View and manage quarantined threats."
+msgstr "Pregledajte prijetnje u karanteni i upravljajte njima."
 
 msgid "View and manage security alerts and notifications."
-msgstr "View and manage security alerts and notifications."
+msgstr "Pregledajte i upravljajte sigurnosnim upozorenjima i obavijestima."
 
 msgid "Views"
-msgstr "Views"
+msgstr "Pogledi"
 
 msgid "Visitor Trends - Last 30 Days"
-msgstr "Visitor Trends - Last 30 Days"
+msgstr "Trendovi posjetitelja - zadnjih 30 dana"
 
 msgid "Visitors"
-msgstr "Visitors"
+msgstr "Posjetitelji"
 
 msgid "Visits Today"
-msgstr "Visits Today"
+msgstr "Posjete danas"
 
 msgid "Vulnerability Check"
-msgstr "Vulnerability Check"
+msgstr "Provjera ranjivosti"
 
 msgid "Vulnerability Scanner"
-msgstr "Vulnerability Scanner"
+msgstr "Skener ranjivosti"
 
 msgid "Vulnerable"
-msgstr "Vulnerable"
+msgstr "Ranjiv"
 
 msgid "WAF"
 msgstr "WAF"
 
 msgid "WAF Attack Blocked"
-msgstr "WAF Attack Blocked"
+msgstr "WAF napad blokiran"
 
 msgid "WAF Blocks (attacked blocked by firewall)"
-msgstr "WAF Blocks (attacked blocked by firewall)"
+msgstr "WAF blokovi (napad blokiran vatrozidom)"
 
 msgid "WAF Firewall"
-msgstr "WAF Firewall"
+msgstr "WAF vatrozid"
 
 msgid "WAF Status"
-msgstr "WAF Status"
+msgstr "WAF status"
 
 msgid "WP Version"
-msgstr "WP Version"
+msgstr "WP verzija"
 
 msgid "WPGraphQL protection"
-msgstr "WPGraphQL protection"
+msgstr "WPGraphQL zaštita"
 
 msgid "WPScan API Token"
-msgstr "WPScan API Token"
+msgstr "WPScan API token"
 
 msgid "Warning"
-msgstr "Warning"
+msgstr "Upozorenje"
 
 msgid "Warning:"
-msgstr "Warning:"
+msgstr "Upozorenje:"
 
 msgid "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
-msgstr "Warning: Importing will replace all current settings. Make sure to export your current settings first as a backup."
+msgstr "Upozorenje: Uvoz će zamijeniti sve trenutne postavke. Obavezno prvo izvezite trenutne postavke kao sigurnosnu kopiju."
 
 msgid "Web Application Firewall"
-msgstr "Web Application Firewall"
+msgstr "Vatrozid web aplikacije"
 
 msgid "Web Application Firewall (WAF)"
-msgstr "Web Application Firewall (WAF)"
+msgstr "Vatrozid web aplikacije (WAF)"
 
 msgid "Webhook URL"
 msgstr "Webhook URL"
 
 msgid "Webhook URL for Results"
-msgstr "Webhook URL for Results"
+msgstr "Webhook URL za rezultate"
 
 msgid "Webhooks"
-msgstr "Webhooks"
+msgstr "Web-dojavice"
 
 msgid "Weekly"
-msgstr "Weekly"
+msgstr "Tjedni"
 
 msgid "Weekly Security Report"
-msgstr "Weekly Security Report"
+msgstr "Tjedno sigurnosno izvješće"
 
 msgid "Whitelist (Allow Only)"
-msgstr "Whitelist (Allow Only)"
+msgstr "Popis dopuštenih (samo dopušteno)"
 
 msgid "Whitelist (allow only selected)"
-msgstr "Whitelist (allow only selected)"
+msgstr "Popis dopuštenih (dopusti samo odabrane)"
 
 msgid "Whitelist IPs"
-msgstr "Whitelist IPs"
+msgstr "Popis dopuštenih IP adresa"
 
 msgid "Whitelisted IPs"
-msgstr "Whitelisted IPs"
+msgstr "IP adrese na popisu dopuštenih"
 
 msgid "WordPress"
 msgstr "WordPress"
 
 msgid "WordPress Core File Verification"
-msgstr "WordPress Core File Verification"
+msgstr "Provjera jezgre WordPress datoteke"
 
 msgid "WordPress Core Status"
-msgstr "WordPress Core Status"
+msgstr "Status jezgre WordPressa"
 
 msgid "WordPress Hardening"
-msgstr "WordPress Hardening"
+msgstr "Učvršćivanje WordPressa"
 
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "WordPress verzija"
 
 msgid "WordPress core file has been modified"
-msgstr "WordPress core file has been modified"
+msgstr "Datoteka jezgre WordPressa je izmijenjena"
 
 msgid "WordPress is not up to date"
-msgstr "WordPress is not up to date"
+msgstr "WordPress nije ažuran"
 
 msgid "X-Content-Type-Options (No Sniff)"
-msgstr "X-Content-Type-Options (No Sniff)"
+msgstr "X-Content-Type-Options (bez njuškanja)"
 
 msgid "X-Frame-Options (Prevent Clickjacking)"
-msgstr "X-Frame-Options (Prevent Clickjacking)"
+msgstr "X-Frame-Options (Spriječite Clickjacking)"
 
 msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
+msgstr "X-XSS-Zaštita"
 
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
 msgid "XML-RPC Control"
-msgstr "XML-RPC Control"
+msgstr "XML-RPC kontrola"
 
 msgid "XSS Attack"
-msgstr "XSS Attack"
+msgstr "XSS napad"
 
 msgid "XSS Protection"
-msgstr "XSS Protection"
+msgstr "XSS zaštita"
 
 msgid "You are using the default login slug. Consider changing it to something unique."
-msgstr "You are using the default login slug. Consider changing it to something unique."
+msgstr "Koristite zadani slug za prijavu. Razmislite o promjeni u nešto jedinstveno."
 
 msgid "You must be logged in to access the REST API."
-msgstr "You must be logged in to access the REST API."
+msgstr "Za pristup REST API-ju morate biti prijavljeni."
 
 msgid "Your site is not using HTTPS. Enable SSL certificate for secure connections."
-msgstr "Your site is not using HTTPS. Enable SSL certificate for secure connections."
+msgstr "Vaša stranica ne koristi HTTPS. Omogućite SSL certifikat za sigurne veze."
 
 msgid "Your site is well protected"
-msgstr "Your site is well protected"
+msgstr "Vaša stranica je dobro zaštićena"
 
 msgid "Your verification code is: %s"
-msgstr "Your verification code is: %s"
+msgstr "Vaš kontrolni kod je: %s"
 
 msgid "Your virus definitions are out of date. Update now for best protection."
-msgstr "Your virus definitions are out of date. Update now for best protection."
+msgstr "Vaše definicije virusa su zastarjele. Ažurirajte sada za najbolju zaštitu."
 
 msgid "Zone ID"
-msgstr "Zone ID"
+msgstr "ID zone"
 
 msgid "ago"
-msgstr "ago"
+msgstr "prije"
 
 msgid "attacks per hour"
-msgstr "attacks per hour"
+msgstr "napada na sat"
 
 msgid "attempts"
-msgstr "attempts"
+msgstr "pokušaja"
 
 msgid "blocked"
-msgstr "blocked"
+msgstr "blokiran"
 
 msgid "characters"
-msgstr "characters"
+msgstr "likovi"
 
 msgid "days"
-msgstr "days"
+msgstr "dana"
 
 msgid "events"
-msgstr "events"
+msgstr "događanja"
 
 msgid "fails"
-msgstr "fails"
+msgstr "ne uspijeva"
 
 msgid "files"
-msgstr "files"
+msgstr "datoteke"
 
 msgid "from now"
-msgstr "from now"
+msgstr "od sada"
 
 msgid "including:"
-msgstr "including:"
+msgstr "uključujući:"
 
 msgid "lowercase letter"
-msgstr "lowercase letter"
+msgstr "malo slovo"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "minuta"
 
 msgid "modules"
-msgstr "modules"
+msgstr "moduli"
 
 msgid "number"
-msgstr "number"
+msgstr "broj"
 
 msgid "or"
-msgstr "or"
+msgstr "ili"
 
 msgid "per minute"
-msgstr "per minute"
+msgstr "po minuti"
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "sekundi"
 
 msgid "special character"
-msgstr "special character"
+msgstr "poseban karakter"
 
 msgid "threats found"
-msgstr "threats found"
+msgstr "pronađene prijetnje"
 
 msgid "total records"
-msgstr "total records"
+msgstr "ukupni zapisi"
 
 msgid "uppercase letter"
-msgstr "uppercase letter"
+msgstr "veliko slovo"
 
 msgid "views"
-msgstr "views"
+msgstr "pogleda"
 
 msgid "violations"
-msgstr "violations"
+msgstr "kršenja"
 
 msgid "visits"
-msgstr "visits"
+msgstr "posjeta"
+msgid "Deception"
+msgstr "obmana"
+
+msgid "P2P Intelligence"
+msgstr "P2P inteligencija"
+
+msgid "Sandbox Console"
+msgstr "Sandbox konzola"
+
+msgid "Temporary Access"
+msgstr "Privremeni pristup"
+
+msgid "Saving..."
+msgstr "Spremanje..."
+
+msgid "Settings saved. Reloading..."
+msgstr "Postavke su spremljene. Ponovno učitavanje..."
+
+msgid "Settings saved successfully! Reloading..."
+msgstr "Postavke su uspješno spremljene! Ponovno učitavanje..."
+
+msgid "Connection error"
+msgstr "Pogreška veze"
+
+msgid "Security check failed. Refresh and try again."
+msgstr "Sigurnosna provjera nije uspjela. Osvježite i pokušajte ponovno."
+
+msgid "Settings handler not available."
+msgstr "Rukovatelj postavkama nije dostupan."
+
+msgid "Reset all settings to defaults? This cannot be undone."
+msgstr "Vratiti sve postavke na zadane? Ovo se ne može poništiti."
+
+msgid "Purge CDN cache now?"
+msgstr "Odmah očistiti CDN predmemoriju?"
+
+msgid "Failed to save settings. Please try again."
+msgstr "Spremanje postavki nije uspjelo. Molimo pokušajte ponovo."
+
+msgid "Settings reset to defaults. Reloading page..."
+msgstr "Postavke se vraćaju na zadane. Ponovno učitavanje stranice..."
+
+msgid "Failed to load analytics data."
+msgstr "Učitavanje analitičkih podataka nije uspjelo."
+
+msgid "Devices"
+msgstr "Uređaji"
+
+msgid "No data available for this range."
+msgstr "Nema dostupnih podataka za ovaj raspon."
+
+msgid "Traffic trend chart"
+msgstr "Grafikon trendova prometa"
+
+msgid "Distribution breakdown chart"
+msgstr "Dijagram raščlambe distribucije"
+
+msgid "Total"
+msgstr "Ukupno"
+
+msgid "Series"
+msgstr "serije"
+
+msgid "Predictive Threat Hunting"
+msgstr "Prediktivni lov na prijetnje"
+
+msgid "Forecast next attack vectors"
+msgstr "Prognozirajte sljedeće vektore napada"
+
+msgid "Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance."
+msgstr "Profilira vaš skup, predviđa vjerojatne vektore napada i pruža smjernice za proaktivno jačanje."
+
+msgid "Manage quarantined threats and recoverable deleted files."
+msgstr "Upravljajte prijetnjama u karanteni i obrisanim izbrisanim datotekama."
+
+msgid "Deleted Files (Recoverable)"
+msgstr "Izbrisane datoteke (povratne)"
+
+msgid "Files moved here can be restored back to quarantine or deleted permanently."
+msgstr "Datoteke premještene ovdje mogu se vratiti u karantenu ili trajno izbrisati."
+
+msgid "Deleted"
+msgstr "Izbrisano"
+
+msgid "Loading deleted files..."
+msgstr "Učitavanje izbrisanih datoteka..."
+
+msgid "Moves quarantined files to recoverable deleted storage."
+msgstr "Premješta datoteke iz karantene u izbrisanu pohranu koja se može obnoviti."
+
+msgid "Delete Permanently:"
+msgstr "Izbriši trajno:"
+
+msgid "Permanently removes a file from deleted storage."
+msgstr "Trajno uklanja datoteku iz izbrisane pohrane."
+
+msgid "Access denied from your region."
+msgstr "Pristup odbijen iz vaše regije."
+
+msgid "Maximum failed login attempts before temporary lockout."
+msgstr "Maksimalan broj neuspjelih pokušaja prijave prije privremenog zaključavanja."
+
+msgid "Time window for counting failed attempts."
+msgstr "Vremenski okvir za brojanje neuspjelih pokušaja."
+
+msgid "Open Tool"
+msgstr "Otvori alat"
+
+msgid "Available Fix"
+msgstr "Dostupan popravak"
+
+msgid "Preview Patch"
+msgstr "Pregled zakrpe"
+
+msgid "Apply Patch"
+msgstr "Primijeni zakrpu"
+
+msgid "Honeytrap Configuration"
+msgstr "Konfiguracija zamke za med"
+
+msgid "Enable Deception Module"
+msgstr "Omogući modul prijevare"
+
+msgid "How Deception Works:"
+msgstr "Kako prijevara funkcionira:"
+
+msgid "The following URLs do not exist on your site. If anyone accesses them, they are <strong>automatically blocked</strong> as confirmed attackers. Administrators are never blocked but will see a warning."
+msgstr "Sljedeći URL-ovi ne postoje na vašoj web-lokaciji. Ako im netko pristupi, <strong>automatski se blokiraju</strong> kao potvrđeni napadači. Administratori nikada nisu blokirani, ali će vidjeti upozorenje."
+
+msgid "Custom Honeytrap Paths"
+msgstr "Prilagođene Honeytrap staze"
+
+msgid "Add one path per line (e.g., /my-secret-admin/, /old-backup.sql). Defaults are already active."
+msgstr "Dodajte jedan put po retku (npr. /my-secret-admin/, /old-backup.sql). Zadane postavke su već aktivne."
+
+msgid "Default Honeytrap Paths (Always Active)"
+msgstr "Zadane staze Honeytrap (uvijek aktivno)"
+
+msgid "Login Page Honeypot"
+msgstr "Stranica za prijavu Honeypot"
+
+msgid "An invisible field is injected into login/registration forms. Only bots fill it in, triggering instant detection and blocking."
+msgstr "Nevidljivo polje umetnuto je u obrasce za prijavu/registraciju. Samo ga botovi popunjavaju, aktivirajući trenutno otkrivanje i blokiranje."
+
+msgid "This protection is always enabled when the Deception module is active. No configuration required."
+msgstr "Ova zaštita je uvijek uključena kada je aktivan modul prijevare. Nije potrebna konfiguracija."
+
+msgid "User Enumeration Trap"
+msgstr "Zamka popisivanja korisnika"
+
+msgid "Detects reconnaissance attempts where attackers scan for valid usernames via ?author=1, ?author=2, etc."
+msgstr "Otkriva pokušaje izviđanja gdje napadači traže važeća korisnička imena putem ?author=1, ?author=2 itd."
+
+msgid "Enable user enumeration detection"
+msgstr "Omogući otkrivanje popisa korisnika"
+
+msgid "Hard block on enumeration attempts (default: soft redirect to homepage)"
+msgstr "Čvrsto blokiranje pokušaja nabrajanja (zadano: meko preusmjeravanje na početnu stranicu)"
+
+msgid "Block ALL author enumeration (even for existing users)"
+msgstr "Blokiraj SVE popise autora (čak i za postojeće korisnike)"
+
+msgid "Save Changes"
+msgstr "Spremi promjene"
+
+msgid "GDPR Article 30 Data Mapping"
+msgstr "GDPR, članak 30. Mapiranje podataka"
+
+msgid "Refresh Map"
+msgstr "Osvježi kartu"
+
+msgid "Export Data Map (PDF)"
+msgstr "Izvoz karte podataka (PDF)"
+
+msgid "Automated PII discovery across database tables, data flow mapping, and third-party sharing detection."
+msgstr "Automatizirano otkrivanje PII u tablicama baze podataka, mapiranje protoka podataka i otkrivanje dijeljenja treće strane."
+
+msgid "Data Element"
+msgstr "Element podataka"
+
+msgid "Location"
+msgstr "Lokacija"
+
+msgid "Purpose"
+msgstr "Svrha"
+
+msgid "Retention"
+msgstr "Zadržavanje"
+
+msgid "Third-Party Sharing"
+msgstr "Dijeljenje s trećim stranama"
+
+msgid "Legal Basis"
+msgstr "Pravna osnova"
+
+msgid "No PII records detected yet. Run a data map scan to build the report."
+msgstr "Još nisu otkriveni zapisi koji otkrivaju identitet. Pokrenite skeniranje mape podataka za izradu izvješća."
+
+msgid "Right-to-be-Forgotten Automation"
+msgstr "Automatizacija prava na zaborav"
+
+msgid "Submit erasure requests, verify data removal, and track compliance logs for GDPR workflows."
+msgstr "Pošaljite zahtjeve za brisanjem, potvrdite uklanjanje podataka i pratite zapisnike usklađenosti za tijekove rada GDPR-a."
+
+msgid "User ID"
+msgstr "ID korisnika"
+
+msgid "Comments"
+msgstr "Komentari"
+
+msgid "Delete comments instead of anonymizing"
+msgstr "Brisanje komentara umjesto anonimizacije"
+
+msgid "Run Erasure"
+msgstr "Pokrenite Brisanje"
+
+msgid "Verify Erasure"
+msgstr "Provjerite brisanje"
+
+msgid "GDPR Request Log"
+msgstr "Dnevnik zahtjeva GDPR-a"
+
+msgid "Request Type"
+msgstr "Vrsta zahtjeva"
+
+msgid "Requested At"
+msgstr "Zatraženo na"
+
+msgid "Completed At"
+msgstr "Završeno na"
+
+msgid "No GDPR requests logged yet."
+msgstr "Još nije zabilježen nijedan GDPR zahtjev."
+
+msgid "Shadow Runtime Sandbox"
+msgstr "Shadow Runtime Sandbox"
+
+msgid "Enable Sandbox Module"
+msgstr "Omogući modul Sandbox"
+
+msgid "Loads the Shadow Runtime Sandbox engine."
+msgstr "Učitava mehanizam Shadow Runtime Sandbox."
+
+msgid "Enable Sandbox Console"
+msgstr "Omogući Sandbox konzolu"
+
+msgid "Allows wp-admin users with manage_options to run code in the sandbox console."
+msgstr "Omogućuje wp-admin korisnicima s manage_options pokretanje koda u konzoli sandboxa."
+
+msgid "Sandbox Timeout"
+msgstr "Vremensko ograničenje sandboxa"
+
+msgid "Execution timeout in seconds (1-30)."
+msgstr "Istek vremena izvršenja u sekundama (1-30)."
+
+msgid "Dynamic Analysis"
+msgstr "Dinamička analiza"
+
+msgid "Run dynamic execution analysis in addition to static checks."
+msgstr "Pokrenite dinamičku analizu izvršenja uz statičke provjere."
+
+msgid "Quarantine Policy"
+msgstr "Politika karantene"
+
+msgid "Manual quarantine is recommended for most sites. Auto quarantine only isolates high-confidence confirmed malware."
+msgstr "Za većinu web-mjesta preporučuje se ručna karantena. Automatska karantena izolira samo zlonamjerni softver s visokom pouzdanošću."
+
+msgid "Manual (Recommended)"
+msgstr "Ručno (preporučeno)"
+
+msgid "Auto Quarantine"
+msgstr "Auto karantena"
+
+msgid "Save Quarantine Policy"
+msgstr "Politika čuvanja karantene"
+
+msgid "AI Risk Controls"
+msgstr "Kontrole rizika AI"
+
+msgid "Enable AI Detection Module"
+msgstr "Omogućite AI detekcijski modul"
+
+msgid "Enable Insider Threat Detection"
+msgstr "Omogući Insider Threat Detection"
+
+msgid "Insider Threat Threshold"
+msgstr "Prag insajderske prijetnje"
+
+msgid "Enable Data Exfiltration Monitoring"
+msgstr "Omogući nadzor ekstrakcije podataka"
+
+msgid "Exfiltration Threshold"
+msgstr "Eksfiltracijski prag"
+
+msgid "Exfiltration Baseline Days"
+msgstr "Osnovni dani eksfiltracije"
+
+msgid "Session Risk Threshold"
+msgstr "Prag rizika sesije"
+
+msgid "Continuous Auth Recheck Interval (seconds)"
+msgstr "Interval kontinuirane ponovne provjere autentifikacije (sekunde)"
+
+msgid "Risk Spike Threshold"
+msgstr "Prag skokova rizika"
+
+msgid "Save AI Settings"
+msgstr "Spremi AI postavke"
+
+msgid "Quarantine Mode"
+msgstr "Način karantene"
+
+msgid "Manual mode is safer and recommended. Auto mode quarantines only high-confidence confirmed malware."
+msgstr "Ručni način je sigurniji i preporučljiv. Automatski način stavlja u karantenu samo zlonamjerni softver s visokom pouzdanošću."
+
+msgid "Data Map"
+msgstr "Karta podataka"
+
+msgid "Privacy Requests"
+msgstr "Zahtjevi za privatnost"
+
+msgid "Deception Technology"
+msgstr "Tehnologija prijevare"
+
+msgid "Honeypots, decoy assets, and attacker deception to catch threats before they strike."
+msgstr "Honeypots, imovina mamac i prijevara napadača za hvatanje prijetnji prije nego što napadnu."
+
+msgid "Showing %1$d of %2$d entries"
+msgstr "Prikaz %1$d od %2$d unosa"
+
+msgid "P2P Intelligence module is not loaded."
+msgstr "P2P Intelligence modul nije učitan."
+
+msgid "P2P Threat Intelligence"
+msgstr "P2P obavještajni podaci o prijetnjama"
+
+msgid "Share threat intelligence with other SentinelWP installations for herd immunity."
+msgstr "Podijelite obavještajne podatke o prijetnjama s drugim SentinelWP instalacijama za imunitet krda."
+
+msgid "P2P Settings"
+msgstr "P2P postavke"
+
+msgid "Enable P2P Intelligence"
+msgstr "Omogući P2P inteligenciju"
+
+msgid "Enable collaborative threat intelligence sharing with peer nodes."
+msgstr "Omogućite zajedničko dijeljenje podataka o prijetnjama s ravnopravnim čvorovima."
+
+msgid "My Node Key"
+msgstr "Moj ključ čvora"
+
+msgid "Copy"
+msgstr "Kopiraj"
+
+msgid "Share this key with peers who want to connect to your site."
+msgstr "Podijelite ovaj ključ s kolegama koji se žele povezati na vašu stranicu."
+
+msgid "Broadcast Threats"
+msgstr "Prijetnje emitiranjem"
+
+msgid "Share detected threats with registered peers."
+msgstr "Dijelite otkrivene prijetnje s registriranim kolegama."
+
+msgid "Trust Threshold"
+msgstr "Prag povjerenja"
+
+msgid "Only auto-block IPs with threat score >= this threshold. Lower values = more aggressive blocking."
+msgstr "Automatski blokirajte samo IP adrese s ocjenom prijetnje >= ovog praga. Niže vrijednosti = agresivnije blokiranje."
+
+msgid "Registered Peers"
+msgstr "Registrirani vršnjaci"
+
+msgid "Add Peer"
+msgstr "Dodaj Peer"
+
+msgid "No peers registered yet. Add a peer to start sharing threat intelligence."
+msgstr "Još nema prijavljenih kolega. Dodajte ravnopravnu osobu da biste započeli dijeljenje podataka o prijetnjama."
+
+msgid "Label"
+msgstr "Oznaka"
+
+msgid "Last Sync"
+msgstr "Zadnja sinkronizacija"
+
+msgid "Sent/Received"
+msgstr "Poslano/Primljeno"
+
+msgid "Unnamed"
+msgstr "Neimenovano"
+
+msgid "%s ago"
+msgstr "Prije %s"
+
+msgid "Threats Sent"
+msgstr "Poslane prijetnje"
+
+msgid "Threats Received"
+msgstr "Primljene prijetnje"
+
+msgid "Statistics"
+msgstr "Statistika"
+
+msgid "Connected Peers"
+msgstr "Povezani vršnjaci"
+
+msgid "Threats Received (24h)"
+msgstr "Primljene prijetnje (24h)"
+
+msgid "P2P Status"
+msgstr "P2P status"
+
+msgid "Threat Intelligence Credits"
+msgstr "Krediti obavještajnih podataka o prijetnjama"
+
+msgid "Current Credit Balance"
+msgstr "Trenutno kreditno stanje"
+
+msgid "Reputation Score"
+msgstr "Ocjena ugleda"
+
+msgid "Accuracy"
+msgstr "Točnost"
+
+msgid "Badges:"
+msgstr "Značke:"
+
+msgid "No badges yet"
+msgstr "Još nema bedževa"
+
+msgid "Premium benefits are unlocked for free because your reputation score is above 1000."
+msgstr "Premium pogodnosti se otključavaju besplatno jer je vaš rezultat reputacije iznad 1000."
+
+msgid "Reach a reputation score above 1000 to unlock premium benefits for free."
+msgstr "Dosegnite ocjenu reputacije iznad 1000 kako biste besplatno otključali premium pogodnosti."
+
+msgid "Top Contributors (Anonymous)"
+msgstr "Najaktivniji suradnici (anonimni)"
+
+msgid "No contributor data available yet."
+msgstr "Podaci o suradnicima još nisu dostupni."
+
+msgid "Rank"
+msgstr "rang"
+
+msgid "Anonymous Site ID"
+msgstr "Anonimni ID stranice"
+
+msgid "Credits"
+msgstr "Zasluge"
+
+msgid "Reputation"
+msgstr "ugled"
+
+msgid "Close"
+msgstr "Zatvori"
+
+msgid "Add New Peer"
+msgstr "Dodaj novog vršnjaka"
+
+msgid "Peer URL"
+msgstr "Peer URL"
+
+msgid "Full URL of the peer WordPress site (must use HTTPS in production)."
+msgstr "Puni URL ravnopravne WordPress stranice (mora koristiti HTTPS u proizvodnji)."
+
+msgid "Peer Node Key"
+msgstr "Ključ ravnopravnog čvora"
+
+msgid "The peer's node key (they can copy it from their P2P settings page)."
+msgstr "Ključ ravnopravnog čvora (mogu ga kopirati sa svoje stranice postavki P2P)."
+
+msgid "Label (Optional)"
+msgstr "Oznaka (nije obavezno)"
+
+msgid "My Production Server"
+msgstr "Moj proizvodni poslužitelj"
+
+msgid "A friendly name to identify this peer."
+msgstr "Prijateljsko ime za identifikaciju ovog vršnjaka."
+
+msgid "Unauthorized"
+msgstr "Neovlašteno"
+
+msgid "Sandbox module is not loaded."
+msgstr "Modul sandboxa nije učitan."
+
+msgid "Sandbox module is disabled."
+msgstr "Modul sandboxa je onemogućen."
+
+msgid "Sandbox console is disabled."
+msgstr "Konzola sandboxa je onemogućena."
+
+msgid "No code provided."
+msgstr "Nema koda."
+
+msgid "Insufficient permissions."
+msgstr "Nedovoljna dopuštenja."
+
+msgid "Sandbox Module Disabled"
+msgstr "Modul sandboxa onemogućen"
+
+msgid "The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console."
+msgstr "Sandbox Shadow Runtime trenutačno je onemogućen. Omogućite ga u Postavkama za korištenje konzole."
+
+msgid "Go to Settings"
+msgstr "Idite na Postavke"
+
+msgid "Sandbox Console Disabled"
+msgstr "Konzola sandboxa onemogućena"
+
+msgid "The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin."
+msgstr "Modul Sandbox je omogućen, ali je administratorska konzola onemogućena. Omogućite postavku konzole za pokretanje koda iz wp-admin."
+
+msgid "Danger Zone: Code Execution"
+msgstr "Opasna zona: Izvršenje koda"
+
+msgid "This console executes PHP code in an isolated sandbox. All database changes are automatically rolled back. Use only for analyzing suspicious code or testing."
+msgstr "Ova konzola izvršava PHP kod u izoliranom sandboxu. Sve promjene baze podataka automatski se vraćaju. Koristite samo za analizu sumnjivog koda ili testiranje."
+
+msgid "PHP Code Editor"
+msgstr "Uređivač PHP koda"
+
+msgid "Run Code"
+msgstr "Pokreni kod"
+
+msgid "Analyze Only"
+msgstr "Samo analiziraj"
+
+msgid "Timeout:"
+msgstr "Istek vremena:"
+
+msgid "Execution Results"
+msgstr "Rezultati izvršenja"
+
+msgid "STATIC ANALYSIS"
+msgstr "STATIČKA ANALIZA"
+
+msgid "OUTPUT"
+msgstr "IZLAZ"
+
+msgid "ERRORS"
+msgstr "POGREŠKE"
+
+msgid "DATABASE QUERIES"
+msgstr "UPITI BAZE PODATAKA"
+
+msgid "Module not loaded"
+msgstr "Modul nije učitan"
+
+msgid "Live Traffic analytics is unavailable."
+msgstr "Analitika prometa uživo nije dostupna."
+
+msgid "Just-in-time access uses request and approval workflow with automatic expiration."
+msgstr "Pravovremeni pristup koristi tijek zahtjeva i odobrenja s automatskim istekom."
+
+msgid "Temporary Access is currently unavailable because the module is disabled or not loaded."
+msgstr "Privremeni pristup trenutno nije dostupan jer je modul onemogućen ili nije učitan."
+
+msgid "Open settings"
+msgstr "Otvori postavke"
+
+msgid "Request Temporary Access"
+msgstr "Zatražite privremeni pristup"
+
+msgid "This request applies to your currently logged-in account. An administrator must approve it before temporary elevated access is granted."
+msgstr "Ovaj se zahtjev odnosi na vaš trenutačno prijavljeni račun. Administrator ga mora odobriti prije nego što se odobri privremeni povišeni pristup."
+
+msgid "Requested Role"
+msgstr "Tražena uloga"
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Editor"
+msgstr "urednik"
+
+msgid "Duration (minutes)"
+msgstr "Trajanje (minute)"
+
+msgid "Describe why temporary elevated access is required."
+msgstr "Opišite zašto je potreban privremeni povišeni pristup."
+
+msgid "Submit Request"
+msgstr "Pošalji zahtjev"
+
+msgid "Grant Temporary Access (Admin)"
+msgstr "Odobri privremeni pristup (Administrator)"
+
+msgid "Grant time-limited elevated access directly to a specific user by username or email."
+msgstr "Odobrite vremenski ograničeni povišeni pristup izravno određenom korisniku putem korisničkog imena ili e-pošte."
+
+msgid "Target User (Username or Email)"
+msgstr "Ciljani korisnik (korisničko ime ili e-pošta)"
+
+msgid "username or user@example.com"
+msgstr "korisničko ime ili korisnik@example.com"
+
+msgid "Grant Role"
+msgstr "Dodjela uloga"
+
+msgid "Describe why this user requires temporary elevated access."
+msgstr "Opišite zašto ovaj korisnik zahtijeva privremeni povišeni pristup."
+
+msgid "Grant Access"
+msgstr "Odobri pristup"
+
+msgid "Pending and Active Requests"
+msgstr "Zahtjevi na čekanju i aktivni zahtjevi"
+
+msgid "Approve pending requests, review direct grants, and revoke active permissions from this queue."
+msgstr "Odobrite zahtjeve na čekanju, pregledajte izravna odobrenja i opozovite aktivna dopuštenja iz ovog reda čekanja."
+
+msgid "Original Role"
+msgstr "Izvorna uloga"
+
+msgid "Elevated Role"
+msgstr "Povišena uloga"
+
+msgid "Granted"
+msgstr "Dopušteno"
+
+msgid "Expires"
+msgstr "ističe"
+
+msgid "Approved By"
+msgstr "Odobreno od strane"
+
+msgid "Loading..."
+msgstr "Učitavanje..."
+
+msgid "English (US)"
+msgstr "engleski (SAD)"
+
+msgid "English (UK)"
+msgstr "engleski (UK)"
+
+msgid "Espanol (Spanish)"
+msgstr "Espanol (španjolski)"
+
+msgid "Francais (French)"
+msgstr "Francais (francuski)"
+
+msgid "Deutsch (German)"
+msgstr "Deutsch (njemački)"
+
+msgid "Italiano (Italian)"
+msgstr "Italiano (talijanski)"
+
+msgid "Portugues (Brazilian)"
+msgstr "portugalski (brazilski)"
+
+msgid "Nederlands (Dutch)"
+msgstr "nizozemski (nizozemski)"
+
+msgid "Russian"
+msgstr "ruski"
+
+msgid "Japanese"
+msgstr "japanski"
+
+msgid "Chinese (Simplified)"
+msgstr "kineski (pojednostavljeni)"
+
+msgid "Arabic"
+msgstr "arapski"
+
+msgid "Hindi"
+msgstr "hindski"
+
+msgid "Korean"
+msgstr "korejski"
+
+msgid "Turkish"
+msgstr "turski"
+
+msgid "Polski (Polish)"
+msgstr "poljski (poljski)"
+
+msgid "Bahasa Indonesia (Indonesian)"
+msgstr "Bahasa Indonesia (indonezijski)"
+
+msgid "Ukrainian"
+msgstr "ukrajinski"
+
+msgid "Vietnamese"
+msgstr "vijetnamski"
+
+msgid "Thai"
+msgstr "tajlandski"
+
+msgid "Svenska (Swedish)"
+msgstr "svenska (švedski)"
+
+msgid "Dansk (Danish)"
+msgstr "dansk (danski)"
+
+msgid "Suomi (Finnish)"
+msgstr "Suomi (finski)"
+
+msgid "Norsk Bokmal (Norwegian)"
+msgstr "Norsk Bokmal (norveški)"
+
+msgid "Cestina (Czech)"
+msgstr "Cestina (Češka)"
+
+msgid "Greek"
+msgstr "grčki"
+
+msgid "Magyar (Hungarian)"
+msgstr "mađarski (mađarski)"
+
+msgid "Romana (Romanian)"
+msgstr "Romana (rumunjski)"
+
+msgid "Slovencina (Slovak)"
+msgstr "Slovencina (Slovački)"
+
+msgid "Bulgarian"
+msgstr "bugarski"
+
+msgid "Hrvatski (Croatian)"
+msgstr "Hrvatski (Croatian)"
+
+msgid "Serbian"
+msgstr "srpski"
+
+msgid "Hebrew"
+msgstr "hebrejski"
+
+msgid "Persian"
+msgstr "perzijski"
+
+msgid "Settings saved successfully."
+msgstr "Postavke su uspješno spremljene."
+
+msgid "Settings reset to defaults."
+msgstr "Postavke se vraćaju na zadane."
+
+msgid "NexifyMy Security Logs"
+msgstr "Sigurnosni zapisnici NexifyMy"
+
+msgid "No matching user found."
+msgstr "Nije pronađen odgovarajući korisnik."
+
+msgid "Security logs and related PII were anonymized."
+msgstr "Sigurnosni zapisnici i povezani PII anonimizirani su."
+
+msgid "Invalid user ID."
+msgstr "Nevažeći ID korisnika."
+
+msgid "Manual or webhook-based erasure request queued."
+msgstr "Zahtjev za ručno brisanje ili brisanje na temelju web-dojavnika u redu čekanja."
+
+msgid "Mailchimp deletion request sent."
+msgstr "Zahtjev za brisanje Mailchimpa je poslan."
+
+msgid "Stripe erasure requires manual API follow-up for compliance records."
+msgstr "Brisanje trake zahtijeva ručno API praćenje za zapise o usklađenosti."
+
+msgid "Google Analytics user deletion API request must be configured externally."
+msgstr "API zahtjev za brisanje korisnika usluge Google Analytics mora se konfigurirati eksterno."
+
+msgid "Privacy Preferences"
+msgstr "Postavke privatnosti"
+
+msgid "Select which optional processing categories you allow."
+msgstr "Odaberite koje neobavezne kategorije obrade dopuštate."
+
+msgid "Save Preferences"
+msgstr "Spremi postavke"
+
+msgid "Consent Management"
+msgstr "Upravljanje pristankom"
+
+msgid "Given"
+msgstr "S obzirom"
+
+msgid "Withdrawn"
+msgstr "povučena"
+
+msgid "No consent records found."
+msgstr "Nije pronađen nijedan zapis o pristanku."
+
+msgid "<strong>Error</strong>: Something went wrong. Please try again later."
+msgstr "<strong>Pogreška</strong>: Nešto nije u redu. Pokušajte ponovno kasnije."
+
+msgid "The peer URL is not valid."
+msgstr "URL ravnopravnog uređaja nije valjan."
+
+msgid "You cannot add your own site as a peer."
+msgstr "Ne možete dodati vlastitu web stranicu kao ravnopravnu."
+
+msgid "API key must be at least 16 characters."
+msgstr "API ključ mora imati najmanje 16 znakova."
+
+msgid "Maximum number of peers (%d) reached."
+msgstr "Dosegnut je maksimalan broj ravnopravnih (%d)."
+
+msgid "Missing authentication header."
+msgstr "Nedostaje zaglavlje za provjeru autentičnosti."
+
+msgid "Invalid node key. Peer not recognised."
+msgstr "Nevažeći ključ čvora. Peer nije prepoznat."
+
+msgid "Invalid request signature."
+msgstr "Nevažeći potpis zahtjeva."
+
+msgid "Rate limit exceeded. Try again later."
+msgstr "Ograničenje brzine premašeno. Pokušajte ponovno kasnije."
+
+msgid "Invalid site identifier."
+msgstr "Nevažeći identifikator mjesta."
+
+msgid "Unknown contribution type."
+msgstr "Nepoznata vrsta doprinosa."
+
+msgid "Unknown benefit type."
+msgstr "Nepoznata vrsta pogodnosti."
+
+msgid "Insufficient credits for this benefit."
+msgstr "Nedovoljno bodova za ovu pogodnost."
+
+msgid "Threat Forecast"
+msgstr "Prognoza prijetnji"
+
+msgid "Your site profile:"
+msgstr "Vaš profil stranice:"
+
+msgid "Predicted threats this month:"
+msgstr "Predviđene prijetnje ovog mjeseca:"
+
+msgid "No high-confidence vectors detected yet."
+msgstr "Još nisu otkriveni vektori visoke pouzdanosti."
+
+msgid "Recommended actions:"
+msgstr "Preporučene radnje:"
+
+msgid "No immediate actions required."
+msgstr "Nisu potrebne hitne radnje."
+
+msgid "Not logged in"
+msgstr "Nisam prijavljen"
+
+msgid "A reason is required"
+msgstr "Potreban je razlog"
+
+msgid "Invalid requested role"
+msgstr "Nevažeća zatražena uloga"
+
+msgid "An active or pending request already exists for this role."
+msgstr "Za ovu ulogu već postoji aktivan zahtjev ili zahtjev na čekanju."
+
+msgid "Access request submitted. An administrator will review your request."
+msgstr "Zahtjev za pristup poslan. Administrator će pregledati vaš zahtjev."
+
+msgid "Invalid request"
+msgstr "Neispravan zahtjev"
+
+msgid "Pending request not found"
+msgstr "Zahtjev na čekanju nije pronađen"
+
+msgid "Request role is invalid"
+msgstr "Uloga zahtjeva nije važeća"
+
+msgid "Invalid approved role"
+msgstr "Nevažeća odobrena uloga"
+
+msgid "Access approved successfully"
+msgstr "Pristup je uspješno odobren"
+
+msgid "Target user (username or email) is required."
+msgstr "Potreban je ciljni korisnik (korisničko ime ili email)."
+
+msgid "A reason is required."
+msgstr "Potreban je razlog."
+
+msgid "Invalid requested role."
+msgstr "Nevažeća zatražena uloga."
+
+msgid "Target user not found. Use an existing username or email."
+msgstr "Ciljni korisnik nije pronađen. Koristite postojeće korisničko ime ili e-poštu."
+
+msgid "User already has this role. Temporary elevation is not needed."
+msgstr "Korisnik već ima ovu ulogu. Privremeno povišenje nije potrebno."
+
+msgid "An active or pending grant already exists for this user and role."
+msgstr "Aktivno odobrenje ili odobrenje na čekanju već postoji za ovog korisnika i ulogu."
+
+msgid "Unable to grant temporary access."
+msgstr "Nije moguće odobriti privremeni pristup."
+
+msgid "Temporary %2$s access granted to %1$s for %3$d minutes."
+msgstr "Privremeni %2$s pristup dodijeljen %1$s na %3$d minute."
+
+msgid "Invalid grant"
+msgstr "Nevažeća dodjela"
+
+msgid "Grant not found or already revoked"
+msgstr "Dotacija nije pronađena ili je već opozvana"
+
+msgid "Permission revoked successfully"
+msgstr "Dozvola je uspješno opozvana"
+
+msgid "Once Monthly"
+msgstr "Jednom mjesečno"
+
+msgid "Every 5 Minutes"
+msgstr "Svakih 5 minuta"
 
