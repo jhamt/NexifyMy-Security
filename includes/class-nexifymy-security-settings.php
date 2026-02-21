@@ -193,24 +193,24 @@ class NexifyMy_Security_Settings {
 
 		// AI Threat Detection Settings.
 		'ai_detection'                          => array(
-			'enabled'                    => true,
-			'learning_mode'              => true,
-			'learning_period_days'       => 7,
-			'anomaly_threshold'          => 75,
-			'auto_block_threshold'       => 90,
-			'track_login_behavior'       => true,
-			'track_request_patterns'     => true,
-			'track_user_agents'          => true,
-			'track_geo_patterns'         => true,
-			'notify_on_anomaly'          => true,
-			'session_risk_threshold'     => 60,
-			'zero_trust_reauth_interval' => 900,
+			'enabled'                         => true,
+			'learning_mode'                   => true,
+			'learning_period_days'            => 7,
+			'anomaly_threshold'               => 75,
+			'auto_block_threshold'            => 90,
+			'track_login_behavior'            => true,
+			'track_request_patterns'          => true,
+			'track_user_agents'               => true,
+			'track_geo_patterns'              => true,
+			'notify_on_anomaly'               => true,
+			'session_risk_threshold'          => 60,
+			'zero_trust_reauth_interval'      => 900,
 			'zero_trust_risk_spike_threshold' => 20,
-			'insider_threat_enabled'     => true,
-			'insider_threat_threshold'   => 60,
-			'data_exfiltration_enabled'  => true,
-			'exfiltration_threshold'     => 60,
-			'exfiltration_baseline_days' => 30,
+			'insider_threat_enabled'          => true,
+			'insider_threat_threshold'        => 60,
+			'data_exfiltration_enabled'       => true,
+			'exfiltration_threshold'          => 60,
+			'exfiltration_baseline_days'      => 30,
 		),
 
 		// Passkey/WebAuthn Settings.
@@ -400,7 +400,7 @@ class NexifyMy_Security_Settings {
 	 */
 	public static function get_available_languages() {
 		return array(
-			'site_default' => __( 'Site Default', 'nexifymy-security' ),
+			'site_default' => 'Site Default',
 			'en_US'        => 'English (US)',
 			'en_GB'        => 'English (UK)',
 			'es_ES'        => 'Espanol (Spanish)',
@@ -832,24 +832,24 @@ class NexifyMy_Security_Settings {
 		// AI Detection.
 		if ( isset( $input['ai_detection'] ) ) {
 			$sanitized['ai_detection'] = array(
-				'enabled'                    => ! empty( $input['ai_detection']['enabled'] ),
-				'learning_mode'              => ! empty( $input['ai_detection']['learning_mode'] ),
-				'learning_period_days'       => max( 1, absint( $input['ai_detection']['learning_period_days'] ?? 7 ) ),
-				'anomaly_threshold'          => max( 0, min( 100, absint( $input['ai_detection']['anomaly_threshold'] ?? 75 ) ) ),
-				'auto_block_threshold'       => max( 0, min( 100, absint( $input['ai_detection']['auto_block_threshold'] ?? 90 ) ) ),
-				'track_login_behavior'       => ! empty( $input['ai_detection']['track_login_behavior'] ),
-				'track_request_patterns'     => ! empty( $input['ai_detection']['track_request_patterns'] ),
-				'track_user_agents'          => ! empty( $input['ai_detection']['track_user_agents'] ),
-				'track_geo_patterns'         => ! empty( $input['ai_detection']['track_geo_patterns'] ),
-				'notify_on_anomaly'          => ! empty( $input['ai_detection']['notify_on_anomaly'] ),
-				'session_risk_threshold'     => max( 1, min( 100, absint( $input['ai_detection']['session_risk_threshold'] ?? 60 ) ) ),
-				'zero_trust_reauth_interval' => max( 60, min( 86400, absint( $input['ai_detection']['zero_trust_reauth_interval'] ?? 900 ) ) ),
+				'enabled'                         => ! empty( $input['ai_detection']['enabled'] ),
+				'learning_mode'                   => ! empty( $input['ai_detection']['learning_mode'] ),
+				'learning_period_days'            => max( 1, absint( $input['ai_detection']['learning_period_days'] ?? 7 ) ),
+				'anomaly_threshold'               => max( 0, min( 100, absint( $input['ai_detection']['anomaly_threshold'] ?? 75 ) ) ),
+				'auto_block_threshold'            => max( 0, min( 100, absint( $input['ai_detection']['auto_block_threshold'] ?? 90 ) ) ),
+				'track_login_behavior'            => ! empty( $input['ai_detection']['track_login_behavior'] ),
+				'track_request_patterns'          => ! empty( $input['ai_detection']['track_request_patterns'] ),
+				'track_user_agents'               => ! empty( $input['ai_detection']['track_user_agents'] ),
+				'track_geo_patterns'              => ! empty( $input['ai_detection']['track_geo_patterns'] ),
+				'notify_on_anomaly'               => ! empty( $input['ai_detection']['notify_on_anomaly'] ),
+				'session_risk_threshold'          => max( 1, min( 100, absint( $input['ai_detection']['session_risk_threshold'] ?? 60 ) ) ),
+				'zero_trust_reauth_interval'      => max( 60, min( 86400, absint( $input['ai_detection']['zero_trust_reauth_interval'] ?? 900 ) ) ),
 				'zero_trust_risk_spike_threshold' => max( 1, min( 100, absint( $input['ai_detection']['zero_trust_risk_spike_threshold'] ?? 20 ) ) ),
-				'insider_threat_enabled'     => ! empty( $input['ai_detection']['insider_threat_enabled'] ),
-				'insider_threat_threshold'   => max( 1, min( 100, absint( $input['ai_detection']['insider_threat_threshold'] ?? 60 ) ) ),
-				'data_exfiltration_enabled'  => ! empty( $input['ai_detection']['data_exfiltration_enabled'] ),
-				'exfiltration_threshold'     => max( 1, min( 100, absint( $input['ai_detection']['exfiltration_threshold'] ?? 60 ) ) ),
-				'exfiltration_baseline_days' => max( 1, min( 365, absint( $input['ai_detection']['exfiltration_baseline_days'] ?? 30 ) ) ),
+				'insider_threat_enabled'          => ! empty( $input['ai_detection']['insider_threat_enabled'] ),
+				'insider_threat_threshold'        => max( 1, min( 100, absint( $input['ai_detection']['insider_threat_threshold'] ?? 60 ) ) ),
+				'data_exfiltration_enabled'       => ! empty( $input['ai_detection']['data_exfiltration_enabled'] ),
+				'exfiltration_threshold'          => max( 1, min( 100, absint( $input['ai_detection']['exfiltration_threshold'] ?? 60 ) ) ),
+				'exfiltration_baseline_days'      => max( 1, min( 365, absint( $input['ai_detection']['exfiltration_baseline_days'] ?? 30 ) ) ),
 			);
 		}
 
@@ -978,7 +978,7 @@ class NexifyMy_Security_Settings {
 				'enabled'       => ! empty( $input['geo_blocking']['enabled'] ),
 				'mode'          => in_array( $input['geo_blocking']['mode'] ?? 'blacklist', $modes, true ) ? $input['geo_blocking']['mode'] : 'blacklist',
 				'countries'     => isset( $input['geo_blocking']['countries'] ) ? array_map( 'sanitize_text_field', (array) $input['geo_blocking']['countries'] ) : array(),
-				'block_message' => sanitize_text_field( $input['geo_blocking']['block_message'] ?? 'Access denied from your region.' ),
+				'block_message' => sanitize_text_field( $input['geo_blocking']['block_message'] ?? __( 'Access denied from your region.', 'nexifymy-security' ) ),
 				'log_blocked'   => ! empty( $input['geo_blocking']['log_blocked'] ),
 			);
 		}
@@ -1251,7 +1251,7 @@ class NexifyMy_Security_Settings {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( 'Unauthorized' );
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
 		}
 
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized via sanitize_settings() method below
@@ -1278,7 +1278,7 @@ class NexifyMy_Security_Settings {
 
 		wp_send_json_success(
 			array(
-				'message'  => 'Settings saved successfully.',
+				'message'  => __( 'Settings saved successfully.', 'nexifymy-security' ),
 				'settings' => $sanitized,
 			)
 		);
@@ -1291,7 +1291,7 @@ class NexifyMy_Security_Settings {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( 'Unauthorized' );
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
 		}
 
 		wp_send_json_success( self::get_all() );
@@ -1304,7 +1304,7 @@ class NexifyMy_Security_Settings {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( 'Unauthorized' );
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
 		}
 
 		self::reset();
@@ -1321,7 +1321,7 @@ class NexifyMy_Security_Settings {
 
 		wp_send_json_success(
 			array(
-				'message'  => 'Settings reset to defaults.',
+				'message'  => __( 'Settings reset to defaults.', 'nexifymy-security' ),
 				'settings' => self::$defaults,
 			)
 		);
@@ -1338,16 +1338,10 @@ class NexifyMy_Security_Settings {
 			if ( function_exists( 'unload_textdomain' ) ) {
 				unload_textdomain( 'nexifymy-security' );
 			}
-			$domain_path = 'languages';
-			if ( function_exists( 'plugin_basename' ) && defined( 'NEXIFYMY_SECURITY_FILE' ) ) {
-				$domain_path = dirname( plugin_basename( NEXIFYMY_SECURITY_FILE ) ) . '/languages';
-			}
-			if ( function_exists( 'load_plugin_textdomain' ) ) {
-				load_plugin_textdomain(
-					'nexifymy-security',
-					false,
-					$domain_path
-				);
+			// Re-run the main textdomain loader so the AJAX response
+			// (e.g. success message) uses the new language.
+			if ( function_exists( 'nexifymy_security_load_textdomain' ) ) {
+				nexifymy_security_load_textdomain();
 			}
 		}
 

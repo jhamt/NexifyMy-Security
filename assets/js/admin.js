@@ -6,6 +6,18 @@
   "use strict";
 
   var NexifymySecurity = {
+    getString: function (key, fallback) {
+      var strings =
+        nexifymySecurity && typeof nexifymySecurity.strings === "object"
+          ? nexifymySecurity.strings
+          : {};
+      var value = strings[key];
+      if (typeof value === "string" && value.length > 0) {
+        return value;
+      }
+      return fallback || key;
+    },
+
     init: function () {
       this.bindEvents();
       this.loadDashboardData();
@@ -26,11 +38,14 @@
       this.loadVulnerabilitySettings();
       this.loadPasswordSettings();
       this.loadAnalyticsDashboard();
+      this.loadSecurityAnalyticsTab();
     },
 
     reloadAfterSettingsSave: function ($status, delayMs, message) {
       var delay = typeof delayMs === "number" ? delayMs : 800;
-      var text = message || "Saved! Reloading...";
+      var text =
+        message ||
+        this.getString("savedReloading", "Settings saved. Reloading...");
 
       if ($status && $status.length) {
         $status.html(
@@ -66,6 +81,46 @@
         NexifymySecurity.loadLogs();
       });
 
+      $("#clear-logs").on("click", function () {
+        if (!window.confirm("Clear all security logs? This cannot be undone.")) {
+          return;
+        }
+
+        var $btn = $(this);
+        $btn.prop("disabled", true).text("Clearing...");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_clear_logs",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text("Clear Logs");
+            if (response && response.success) {
+              NexifymySecurity.loadLogs();
+            } else {
+              alert((response && response.data) || "Failed to clear logs.");
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false).text("Clear Logs");
+            alert("Connection error while clearing logs.");
+          },
+        });
+      });
+
+      // Activity dashboard quick refresh
+      $("#refresh-stats").on("click", function (e) {
+        e.preventDefault();
+        var $btn = $(this);
+        $btn.prop("disabled", true);
+        $btn.find(".dashicons").addClass("spin");
+        window.location.reload();
+      });
+
       $("#log-severity-filter").on("change", function () {
         NexifymySecurity.loadLogs();
       });
@@ -73,6 +128,10 @@
       // Settings
       $("#save-schedule").on("click", function () {
         NexifymySecurity.saveSchedule();
+      });
+
+      $("#optimize-db").on("click", function () {
+        NexifymySecurity.optimizeDatabase();
       });
 
       // General Settings Save
@@ -92,30 +151,36 @@
             sandbox_enabled: $("#settings-sandbox-enabled").is(":checked")
               ? 1
               : 0,
-            sandbox_console_enabled: $(
-              "#settings-sandbox-console-enabled",
-            ).is(":checked")
+            sandbox_console_enabled: $("#settings-sandbox-console-enabled").is(
+              ":checked",
+            )
               ? 1
               : 0,
           },
           sandbox_enabled: $("#settings-sandbox-enabled").is(":checked")
             ? 1
             : 0,
-          sandbox_console_enabled: $(
-            "#settings-sandbox-console-enabled",
-          ).is(":checked")
+          sandbox_console_enabled: $("#settings-sandbox-console-enabled").is(
+            ":checked",
+          )
             ? 1
             : 0,
           sandbox_timeout: $("#settings-sandbox-timeout").val() || 5,
-          sandbox_dynamic_analysis: $(
-            "#settings-sandbox-dynamic-analysis",
-          ).is(":checked")
+          sandbox_dynamic_analysis: $("#settings-sandbox-dynamic-analysis").is(
+            ":checked",
+          )
             ? 1
             : 0,
         };
 
-        $btn.prop("disabled", true).text("Saving...");
-        $status.html('<span style="color: #666;">Saving...</span>');
+        $btn
+          .prop("disabled", true)
+          .text(NexifymySecurity.getString("saving", "Saving..."));
+        $status.html(
+          '<span style="color: #666;">' +
+            NexifymySecurity.getString("saving", "Saving...") +
+            "</span>",
+        );
 
         $.ajax({
           url: nexifymySecurity.ajaxUrl,
@@ -132,12 +197,16 @@
               NexifymySecurity.reloadAfterSettingsSave(
                 $status,
                 900,
-                "Saved! Reloading...",
+                NexifymySecurity.getString(
+                  "savedReloading",
+                  "Settings saved. Reloading...",
+                ),
               );
             } else {
               $status.html(
                 '<span style="color: var(--nms-danger);">' +
-                  (response.data || "Failed") +
+                  (response.data ||
+                    NexifymySecurity.getString("failed", "Failed")) +
                   "</span>",
               );
             }
@@ -151,10 +220,19 @@
             $status.html(
               '<span style="color: var(--nms-danger);">' +
                 (raw === "-1"
-                  ? "Security check failed. Refresh and try again."
+                  ? NexifymySecurity.getString(
+                      "securityCheckFailed",
+                      "Security check failed. Refresh and try again.",
+                    )
                   : raw === "0"
-                    ? "Settings handler not available."
-                    : "Connection error") +
+                    ? NexifymySecurity.getString(
+                        "settingsHandlerMissing",
+                        "Settings handler not available.",
+                      )
+                    : NexifymySecurity.getString(
+                        "connectionError",
+                        "Connection error",
+                      )) +
                 "</span>",
             );
           },
@@ -168,7 +246,14 @@
       });
 
       $("#reset-settings").on("click", function () {
-        if (confirm("Reset all settings to defaults? This cannot be undone.")) {
+        if (
+          confirm(
+            NexifymySecurity.getString(
+              "confirmResetSettings",
+              "Reset all settings to defaults? This cannot be undone.",
+            ),
+          )
+        ) {
           NexifymySecurity.resetSettings();
         }
       });
@@ -202,7 +287,14 @@
       });
 
       $("#purge-cdn-cache").on("click", function () {
-        if (confirm("Purge CDN cache now?")) {
+        if (
+          confirm(
+            NexifymySecurity.getString(
+              "confirmPurgeCdn",
+              "Purge CDN cache now?",
+            ),
+          )
+        ) {
           NexifymySecurity.purgeCdnCache($(this), $("#cdn-settings-status"));
         }
       });
@@ -230,7 +322,7 @@
       });
 
       // Notifications
-      $("#mark-all-notifications-read").on("click", function () {
+      $("#mark-all-notifications-read, #mark-all-read").on("click", function () {
         NexifymySecurity.markAllNotificationsRead();
       });
 
@@ -356,14 +448,13 @@
                   );
                 }
 
-                console.log(
-                  "Module " + module + " " + (enabled ? "enabled" : "disabled"),
-                );
-
                 // Reload after immediate settings save to ensure runtime config propagates.
-                setTimeout(function () {
-                  window.location.reload();
-                }, isModulesHubToggle ? 350 : 700);
+                setTimeout(
+                  function () {
+                    window.location.reload();
+                  },
+                  isModulesHubToggle ? 350 : 700,
+                );
               } else {
                 // Revert toggle on error
                 $this.prop("checked", !enabled);
@@ -582,6 +673,941 @@
         });
       }
 
+      function toBool($el, fallback) {
+        if (!$el || !$el.length) {
+          return fallback ? 1 : 0;
+        }
+        return $el.is(":checked") ? 1 : 0;
+      }
+
+      function toInt($el, fallback) {
+        if (!$el || !$el.length) {
+          return fallback;
+        }
+        var parsed = parseInt($el.val(), 10);
+        return Number.isFinite(parsed) ? parsed : fallback;
+      }
+
+      function csvTextFromRows(rows) {
+        if (!Array.isArray(rows)) {
+          return "";
+        }
+        return rows
+          .map(function (row) {
+            var values = Array.isArray(row) ? row : [row];
+            return values
+              .map(function (value) {
+                var text = value == null ? "" : String(value);
+                text = text.replace(/"/g, '""');
+                return '"' + text + '"';
+              })
+              .join(",");
+          })
+          .join("\n");
+      }
+
+      function downloadTextFile(filename, mimeType, content) {
+        var blob = new Blob([content || ""], { type: mimeType });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(function () {
+          URL.revokeObjectURL(url);
+        }, 0);
+      }
+
+      // WAF page (Tools > Firewall tab)
+      $("#save-waf-settings").on("click", function () {
+        var settings = {
+          enabled: toBool($("#waf-enabled"), true),
+          level: $("#waf-level").length ? $("#waf-level").val() : "medium",
+        };
+        saveModuleSettings("waf", settings, $(this), $("#waf-status"));
+      });
+
+      // Login protection page (Tools > Login tab)
+      $("#save-login-settings").on("click", function () {
+        var settings = {
+          enabled: toBool($("#login-enabled"), false),
+          max_attempts: toInt($("#login-max-attempts"), 5),
+          lockout_duration: toInt($("#login-lockout"), 30),
+        };
+        saveModuleSettings(
+          "login_protection",
+          settings,
+          $(this),
+          $("#login-status"),
+        );
+      });
+
+      // Settings > Email Alerts
+      $("#save-email-settings").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#email-status");
+        var emailSettings = {
+          enabled: toBool($("#email-enabled"), 0),
+          recipient: $("#email-recipient").val() || "",
+          from_name: $("#email-from-name").val() || "",
+          from_email: $("#email-from-email").val() || "",
+          alert_threats: toBool($("#alert-threats"), 1),
+          alert_lockouts: toBool($("#alert-lockouts"), 1),
+          alert_waf: toBool($("#alert-waf"), 0),
+          alert_login: toBool($("#alert-login"), 0),
+          daily_summary: toBool($("#daily-summary"), 0),
+          weekly_report: toBool($("#weekly-report"), 1),
+          throttle_minutes: toInt($("#throttle-minutes"), 60),
+        };
+
+        // Save to central plugin settings.
+        saveModuleSettings("email_alerts", emailSettings, $btn, $status);
+
+        // Also sync legacy alerts module settings used by test-alert endpoint.
+        var alertTypes = [];
+        if (emailSettings.alert_threats) {
+          alertTypes.push("threat_detected");
+        }
+        if (emailSettings.alert_lockouts) {
+          alertTypes.push("ip_lockout");
+        }
+        if (emailSettings.alert_waf) {
+          alertTypes.push("waf_block");
+        }
+        if (!alertTypes.length) {
+          alertTypes = ["threat_detected"];
+        }
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_save_alert_settings",
+            enabled: emailSettings.enabled,
+            recipient_email: emailSettings.recipient,
+            alert_types: alertTypes,
+            throttle_minutes: emailSettings.throttle_minutes,
+            daily_summary: emailSettings.daily_summary,
+            daily_summary_time: "08:00",
+            nonce: nexifymySecurity.nonce,
+          },
+        });
+      });
+
+      $("#test-email").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#email-status");
+        var originalText = $btn.text();
+
+        $btn.prop("disabled", true).text("Sending...");
+        $status.html('<span style="color: #666;">Sending test email...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_test_alert",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text(originalText);
+            if (response && response.success) {
+              $status.html(
+                '<span style="color: var(--nms-success);">' +
+                  (response.data || "Test email sent.") +
+                  "</span>",
+              );
+            } else {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  ((response && response.data) || "Failed to send test email.") +
+                  "</span>",
+              );
+            }
+          },
+          error: function (jqXHR) {
+            $btn.prop("disabled", false).text(originalText);
+            var raw =
+              jqXHR && typeof jqXHR.responseText === "string"
+                ? jqXHR.responseText.trim()
+                : "";
+            $status.html(
+              '<span style="color: var(--nms-danger);">' +
+                (raw === "0"
+                  ? "Email test handler is not available."
+                  : "Connection error while sending test email.") +
+                "</span>",
+            );
+          },
+        });
+      });
+
+      // Settings > Import/Export
+      $("#export-settings").on("click", function () {
+        var $btn = $(this);
+        var includeLogs = $("#export-logs").is(":checked");
+        var includeIpLists = $("#export-ip-lists").is(":checked");
+        var includeScanResults = $("#export-scan-results").is(":checked");
+
+        $btn.prop("disabled", true);
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_get_settings",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (!response || !response.success) {
+              alert("Unable to export settings.");
+              return;
+            }
+
+            var payload = {
+              exported_at: new Date().toISOString(),
+              plugin: "nexifymy-security",
+              settings: response.data || {},
+            };
+
+            if (!includeIpLists && payload.settings) {
+              if (payload.settings.ip) {
+                delete payload.settings.ip.whitelist;
+                delete payload.settings.ip.trusted_proxies;
+              }
+              if (payload.settings.waf) {
+                delete payload.settings.waf.whitelist_ips;
+                delete payload.settings.waf.blacklist_ips;
+              }
+              if (payload.settings.rate_limiter) {
+                delete payload.settings.rate_limiter.whitelist;
+                delete payload.settings.rate_limiter.whitelist_ips;
+              }
+            }
+
+            var exportPromises = [];
+
+            if (includeLogs) {
+              exportPromises.push(
+                $.ajax({
+                  url: nexifymySecurity.ajaxUrl,
+                  type: "POST",
+                  dataType: "json",
+                  data: {
+                    action: "nexifymy_export_activity_log",
+                    per_page: 10000,
+                    nonce: nexifymySecurity.nonce,
+                  },
+                }).then(function (logResponse) {
+                  if (logResponse && logResponse.success && logResponse.data) {
+                    payload.activity_log_export = {
+                      total: logResponse.data.total || 0,
+                      csv_rows: logResponse.data.csv || [],
+                    };
+                  }
+                }),
+              );
+            }
+
+            if (includeScanResults) {
+              exportPromises.push(
+                $.ajax({
+                  url: nexifymySecurity.ajaxUrl,
+                  type: "POST",
+                  dataType: "json",
+                  data: {
+                    action: "nexifymy_scan_results",
+                    nonce: nexifymySecurity.nonce,
+                  },
+                }).then(function (scanResponse) {
+                  if (scanResponse && scanResponse.success) {
+                    payload.last_scan_results = scanResponse.data || {};
+                  }
+                }),
+              );
+            }
+
+            $.when
+              .apply($, exportPromises)
+              .always(function () {
+                var date = new Date();
+                var filename =
+                  "nexifymy-security-settings-" +
+                  date.getFullYear() +
+                  ("0" + (date.getMonth() + 1)).slice(-2) +
+                  ("0" + date.getDate()).slice(-2) +
+                  ".json";
+                downloadTextFile(
+                  filename,
+                  "application/json;charset=utf-8",
+                  JSON.stringify(payload, null, 2),
+                );
+              });
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            alert("Unable to export settings due to a connection error.");
+          },
+        });
+      });
+
+      $("#import-settings").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#import-status");
+        var fileInput = $("#import-file")[0];
+
+        if (!fileInput || !fileInput.files || !fileInput.files[0]) {
+          $status.html(
+            '<span style="color: var(--nms-danger);">Please select a JSON file first.</span>',
+          );
+          return;
+        }
+
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+          var parsed;
+          try {
+            parsed = JSON.parse(event.target.result);
+          } catch (err) {
+            $status.html(
+              '<span style="color: var(--nms-danger);">Invalid JSON file.</span>',
+            );
+            return;
+          }
+
+          var importedSettings =
+            parsed && typeof parsed === "object" && parsed.settings
+              ? parsed.settings
+              : parsed;
+
+          if (!importedSettings || typeof importedSettings !== "object") {
+            $status.html(
+              '<span style="color: var(--nms-danger);">No settings found in file.</span>',
+            );
+            return;
+          }
+
+          $btn.prop("disabled", true);
+          $status.html('<span style="color: #666;">Importing settings...</span>');
+
+          $.ajax({
+            url: nexifymySecurity.ajaxUrl,
+            type: "POST",
+            dataType: "json",
+            data: {
+              action: "nexifymy_save_settings",
+              settings: importedSettings,
+              nonce: nexifymySecurity.nonce,
+            },
+            success: function (response) {
+              if (!response || !response.success) {
+                $btn.prop("disabled", false);
+                $status.html(
+                  '<span style="color: var(--nms-danger);">' +
+                    ((response && response.data) || "Failed to import settings.") +
+                    "</span>",
+                );
+                return;
+              }
+
+              // Persist groups that are managed via module settings endpoint.
+              var moduleImports = [];
+              ["advanced", "email_alerts", "activity_log", "password"].forEach(
+                function (groupKey) {
+                  if (
+                    importedSettings[groupKey] &&
+                    typeof importedSettings[groupKey] === "object"
+                  ) {
+                    moduleImports.push(
+                      $.ajax({
+                        url: nexifymySecurity.ajaxUrl,
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                          action: "nexifymy_save_module_settings",
+                          module: groupKey,
+                          settings: importedSettings[groupKey],
+                          nonce: nexifymySecurity.nonce,
+                        },
+                      }),
+                    );
+                  }
+                },
+              );
+
+              $.when
+                .apply($, moduleImports)
+                .always(function () {
+                  NexifymySecurity.reloadAfterSettingsSave(
+                    $status,
+                    900,
+                    "Settings imported. Reloading...",
+                  );
+                });
+            },
+            error: function () {
+              $btn.prop("disabled", false);
+              $status.html(
+                '<span style="color: var(--nms-danger);">Connection error while importing.</span>',
+              );
+            },
+          });
+        };
+
+        reader.onerror = function () {
+          $status.html(
+            '<span style="color: var(--nms-danger);">Unable to read the selected file.</span>',
+          );
+        };
+
+        reader.readAsText(file);
+      });
+
+      // Settings > Advanced
+      $("#save-advanced-settings").on("click", function () {
+        var settings = {
+          disable_xmlrpc: toBool($("#disable-xmlrpc"), 1),
+          disable_rest_users: toBool($("#disable-rest-users"), 1),
+          hide_wp_version: toBool($("#hide-wp-version"), 1),
+          disable_file_editor: toBool($("#disable-file-editor"), 1),
+          block_author_scans: toBool($("#block-author-scans"), 1),
+          block_bad_requests: toBool($("#block-bad-requests"), 1),
+          block_empty_ua: toBool($("#block-empty-ua"), 0),
+          performance_mode: $("#performance-mode").val() || "balanced",
+          scan_timeout: toInt($("#scan-timeout"), 300),
+          request_size_limit: toInt($("#request-size-limit"), 10240),
+          debug_mode: toBool($("#debug-mode"), 0),
+          delete_on_uninstall: toBool($("#delete-on-uninstall"), 0),
+        };
+        saveModuleSettings("advanced", settings, $(this), $("#advanced-status"));
+      });
+
+      // Legacy self-protection page
+      function loadProtectionStatus() {
+        if (!$("#protection-status").length) {
+          return;
+        }
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_get_protection_status",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            if (!response || !response.success || !response.data) {
+              $("#protection-status").html(
+                '<p style="color: #d63638;">Unable to load integrity status.</p>',
+              );
+              return;
+            }
+
+            var data = response.data;
+            var status = data.status || {};
+            var isTampered = status.status === "tampered";
+            var html = "";
+            html +=
+              '<p><strong>Status:</strong> <span style="color:' +
+              (isTampered ? "#d63638" : "#00a32a") +
+              ';">' +
+              (isTampered ? "Tampering Detected" : "Protected") +
+              "</span></p>";
+            html +=
+              "<p><strong>Last Check:</strong> " +
+              (status.last_check || "Never") +
+              "</p>";
+            html +=
+              "<p><strong>Baseline Files:</strong> " +
+              (data.baseline_files || 0) +
+              "</p>";
+
+            if (isTampered) {
+              var modifiedCount = Array.isArray(status.modified)
+                ? status.modified.length
+                : 0;
+              var deletedCount = Array.isArray(status.deleted)
+                ? status.deleted.length
+                : 0;
+              html +=
+                '<p style="color:#d63638;"><strong>Modified:</strong> ' +
+                modifiedCount +
+                " | <strong>Deleted:</strong> " +
+                deletedCount +
+                "</p>";
+            }
+
+            $("#protection-status").html(html);
+          },
+          error: function () {
+            $("#protection-status").html(
+              '<p style="color: #d63638;">Failed to load protection status.</p>',
+            );
+          },
+        });
+      }
+
+      $("#run-integrity-check").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#integrity-status");
+        $btn.prop("disabled", true);
+        $status.text("Running integrity check...").css("color", "#666");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_run_integrity_check",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (response && response.success) {
+              var result = response.data || {};
+              var message =
+                result.message ||
+                (result.status === "tampered"
+                  ? "Tampering detected."
+                  : "Integrity check completed.");
+              $status
+                .text(message)
+                .css("color", result.status === "tampered" ? "#d63638" : "#00a32a");
+              loadProtectionStatus();
+            } else {
+              $status
+                .text("Integrity check failed.")
+                .css("color", "#d63638");
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            $status
+              .text("Integrity check request failed.")
+              .css("color", "#d63638");
+          },
+        });
+      });
+
+      $("#regenerate-hashes").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#integrity-status");
+        $btn.prop("disabled", true);
+        $status.text("Regenerating baseline...").css("color", "#666");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_generate_hashes",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (response && response.success) {
+              $status
+                .text(
+                  (response.data && response.data.message) ||
+                    "Baseline regenerated successfully.",
+                )
+                .css("color", "#00a32a");
+              loadProtectionStatus();
+            } else {
+              $status.text("Failed to regenerate baseline.").css("color", "#d63638");
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            $status.text("Request failed.").css("color", "#d63638");
+          },
+        });
+      });
+
+      // Legacy core repair page
+      function renderCoreIntegrityResults(data) {
+        if (!$("#results-content").length) {
+          return;
+        }
+
+        var modified = Array.isArray(data.modified) ? data.modified : [];
+        var missing = Array.isArray(data.missing) ? data.missing : [];
+        var html = "";
+        html += "<p><strong>Total files:</strong> " + (data.total_files || 0) + "</p>";
+        html += "<p><strong>Verified:</strong> " + (data.verified || 0) + "</p>";
+        html += "<p><strong>Modified:</strong> " + (data.modified_count || 0) + "</p>";
+        html += "<p><strong>Missing:</strong> " + (data.missing_count || 0) + "</p>";
+
+        if (modified.length || missing.length) {
+          html += '<table class="widefat striped" style="margin-top: 12px;">';
+          html += "<thead><tr><th>File</th><th>Status</th><th>Last Modified</th></tr></thead><tbody>";
+
+          modified.forEach(function (item) {
+            html += "<tr>";
+            html += "<td><code>" + (item.file || "") + "</code></td>";
+            html += '<td><span style="color:#d63638;">Modified</span></td>';
+            html += "<td>" + (item.modified || "-") + "</td>";
+            html += "</tr>";
+          });
+
+          missing.forEach(function (item) {
+            html += "<tr>";
+            html += "<td><code>" + (item.file || "") + "</code></td>";
+            html += '<td><span style="color:#d63638;">Missing</span></td>';
+            html += "<td>-</td>";
+            html += "</tr>";
+          });
+
+          html += "</tbody></table>";
+        } else {
+          html += '<p style="color:#00a32a;"><strong>All core files are intact.</strong></p>';
+        }
+
+        $("#results-content").html(html);
+      }
+
+      $("#check-core-integrity").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#repair-status");
+
+        $btn.prop("disabled", true);
+        $status.text("Checking core integrity...").css("color", "#666");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_check_core_integrity",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (response && response.success && response.data) {
+              var data = response.data;
+              var hasIssues =
+                (data.modified_count || 0) > 0 || (data.missing_count || 0) > 0;
+              $("#core-status").text(hasIssues ? "Issues detected" : "Clean");
+              $status
+                .text(
+                  hasIssues
+                    ? "Modified or missing core files detected."
+                    : "Core integrity check passed.",
+                )
+                .css("color", hasIssues ? "#d63638" : "#00a32a");
+              renderCoreIntegrityResults(data);
+            } else {
+              $status.text("Integrity check failed.").css("color", "#d63638");
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            $status.text("Request failed.").css("color", "#d63638");
+          },
+        });
+      });
+
+      $("#repair-all-core").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#repair-status");
+
+        if (
+          !window.confirm(
+            "Repair all modified core files? This will overwrite affected WordPress core files.",
+          )
+        ) {
+          return;
+        }
+
+        $btn.prop("disabled", true);
+        $status.text("Repairing core files...").css("color", "#666");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_repair_all_core",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (response && response.success && response.data) {
+              var data = response.data;
+              if (data.success === false) {
+                $status
+                  .text(data.error || "Core repair failed.")
+                  .css("color", "#d63638");
+                return;
+              }
+
+              var repairedCount = data.repaired_count || data.repaired || 0;
+              var failedCount = data.failed_count || 0;
+              $status
+                .text(
+                  "Repair complete. Repaired: " +
+                    repairedCount +
+                    ", Failed: " +
+                    failedCount,
+                )
+                .css("color", failedCount > 0 ? "#d63638" : "#00a32a");
+
+              $("#check-core-integrity").trigger("click");
+            } else {
+              $status.text("Repair request failed.").css("color", "#d63638");
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            $status.text("Repair request failed.").css("color", "#d63638");
+          },
+        });
+      });
+
+      loadProtectionStatus();
+
+      // Activity log page controls
+      function renderLoginActivityResults(data) {
+        var $container = $("#login-activity-results");
+        if (!$container.length) {
+          return;
+        }
+
+        if (!data || !Array.isArray(data.entries) || data.entries.length === 0) {
+          $container.html(
+            '<p class="description">No login activity found for the selected filters.</p>',
+          );
+          return;
+        }
+
+        var html = "";
+        html += '<table class="widefat striped">';
+        html += "<thead><tr>";
+        html += "<th>Date/Time</th>";
+        html += "<th>Username</th>";
+        html += "<th>Status</th>";
+        html += "<th>IP Address</th>";
+        html += "<th>User Agent</th>";
+        html += "</tr></thead><tbody>";
+
+        data.entries.forEach(function (entry) {
+          var eventType = entry.event_type || "";
+          var label = "Login";
+          var badgeClass = "nms-badge-success";
+          if (eventType === "login_failed") {
+            label = "Failed";
+            badgeClass = "nms-badge-danger";
+          } else if (eventType === "logout") {
+            label = "Logout";
+            badgeClass = "nms-badge-secondary";
+          }
+
+          html += "<tr>";
+          html += "<td><small>" + (entry.created_at || "") + "</small></td>";
+          html += "<td><strong>" + (entry.username || "") + "</strong></td>";
+          html +=
+            '<td><span class="nms-badge ' +
+            badgeClass +
+            '">' +
+            label +
+            "</span></td>";
+          html += "<td><code>" + (entry.ip_address || "") + "</code></td>";
+          html +=
+            "<td><small>" +
+            ((entry.user_agent || "").substring(0, 120) || "-") +
+            "</small></td>";
+          html += "</tr>";
+        });
+
+        html += "</tbody></table>";
+        html +=
+          '<div class="nms-auto-s148"><span class="description">Showing ' +
+          data.entries.length +
+          " of " +
+          (data.total || data.entries.length) +
+          " entries</span></div>";
+
+        $container.html(html);
+      }
+
+      function fetchLoginActivity(page) {
+        var statusFilter = $("#login-filter-status").val() || "";
+        var username = $("#login-filter-username").val() || "";
+        var dateFrom = $("#login-filter-date-from").val() || "";
+        var dateTo = $("#login-filter-date-to").val() || "";
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_get_activity_log",
+            event_group: "authentication",
+            event_type: statusFilter,
+            username: username,
+            date_from: dateFrom,
+            date_to: dateTo,
+            page: page || 1,
+            per_page: 25,
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            if (response && response.success) {
+              renderLoginActivityResults(response.data || {});
+            }
+          },
+        });
+      }
+
+      $("#login-filter-apply").on("click", function () {
+        fetchLoginActivity(1);
+      });
+
+      $("#login-filter-reset").on("click", function () {
+        $("#login-filter-username").val("");
+        $("#login-filter-status").val("");
+        $("#login-filter-date-from").val("");
+        $("#login-filter-date-to").val("");
+        fetchLoginActivity(1);
+      });
+
+      $("#export-login-csv").on("click", function () {
+        var $btn = $(this);
+        var statusFilter = $("#login-filter-status").val() || "";
+        var username = $("#login-filter-username").val() || "";
+        var dateFrom = $("#login-filter-date-from").val() || "";
+        var dateTo = $("#login-filter-date-to").val() || "";
+
+        $btn.prop("disabled", true);
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_export_activity_log",
+            event_group: "authentication",
+            event_type: statusFilter,
+            username: username,
+            date_from: dateFrom,
+            date_to: dateTo,
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (!response || !response.success || !response.data) {
+              alert("Unable to export login activity.");
+              return;
+            }
+
+            var csv = csvTextFromRows(response.data.csv || []);
+            var date = new Date();
+            var filename =
+              "nexifymy-login-activity-" +
+              date.getFullYear() +
+              ("0" + (date.getMonth() + 1)).slice(-2) +
+              ("0" + date.getDate()).slice(-2) +
+              ".csv";
+            downloadTextFile(filename, "text/csv;charset=utf-8", csv);
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            alert("Unable to export login activity due to a connection error.");
+          },
+        });
+      });
+
+      // Activity log settings
+      $("#save-activity-log-settings").on("click", function () {
+        var excludedUsers = ($("#activity-log-excluded-users").val() || "")
+          .split(/\r?\n/)
+          .map(function (item) {
+            return $.trim(item);
+          })
+          .filter(function (item) {
+            return item.length > 0;
+          });
+
+        var settings = {
+          enabled: toBool($("#activity-log-enabled"), 1),
+          log_logins: toBool($("#activity-log-logins"), 1),
+          log_failed_logins: toBool($("#activity-log-failed-logins"), 1),
+          log_logouts: toBool($("#activity-log-logouts"), 1),
+          log_profile_changes: toBool($("#activity-log-profile"), 1),
+          log_role_changes: toBool($("#activity-log-roles"), 1),
+          log_user_creation: toBool($("#activity-log-users"), 1),
+          log_user_deletion: toBool($("#activity-log-users"), 1),
+          log_post_changes: toBool($("#activity-log-posts"), 1),
+          log_page_changes: toBool($("#activity-log-posts"), 1),
+          log_media_uploads: toBool($("#activity-log-media"), 1),
+          log_plugin_changes: toBool($("#activity-log-plugins"), 1),
+          log_theme_changes: toBool($("#activity-log-themes"), 1),
+          log_option_changes: toBool($("#activity-log-options"), 1),
+          retention_days: toInt($("#activity-log-retention"), 90),
+          excluded_users: excludedUsers,
+        };
+
+        saveModuleSettings(
+          "activity_log",
+          settings,
+          $(this),
+          $("#activity-log-status"),
+        );
+      });
+
+      $("#purge-activity-log").on("click", function () {
+        if (!window.confirm("Purge all activity logs? This cannot be undone.")) {
+          return;
+        }
+
+        var $btn = $(this);
+        var $status = $("#activity-log-status");
+        $btn.prop("disabled", true);
+        $status.html('<span style="color: #666;">Purging logs...</span>');
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_purge_activity_log",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false);
+            if (response && response.success) {
+              $status.html(
+                '<span style="color: var(--nms-success);">' +
+                  ((response.data && response.data.message) || "Activity log purged.") +
+                  "</span>",
+              );
+              fetchLoginActivity(1);
+            } else {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  ((response && response.data) || "Failed to purge activity log.") +
+                  "</span>",
+              );
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false);
+            $status.html(
+              '<span style="color: var(--nms-danger);">Connection error while purging logs.</span>',
+            );
+          },
+        });
+      });
+
       // 2FA Settings Save
       $("#save-2fa-settings").on("click", function () {
         var mandatoryRoles = [];
@@ -639,6 +1665,31 @@
         );
       });
 
+      $("#save-hardening-settings").on("click", function () {
+        var settings = {};
+        var $scope = $(this).closest(".nms-card, .nexifymy-card");
+        var $inputs = $scope.find('input[type="checkbox"][name]');
+
+        if (!$inputs.length) {
+          $inputs = $('#hardening-options input[type="checkbox"][name]');
+        }
+
+        $inputs.each(function () {
+          var key = $(this).attr("name");
+          if (!key) {
+            return;
+          }
+          settings[key] = $(this).is(":checked") ? 1 : 0;
+        });
+
+        saveModuleSettings(
+          "hardening",
+          settings,
+          $(this),
+          $("#hardening-status"),
+        );
+      });
+
       // Geo Blocking: dual-list country transfer.
       function escapeHtml(value) {
         return String(value)
@@ -655,7 +1706,9 @@
       }
 
       function getCountryMeta($checkbox) {
-        var code = String($checkbox.val() || "").trim().toUpperCase();
+        var code = String($checkbox.val() || "")
+          .trim()
+          .toUpperCase();
         var name =
           $checkbox.data("country-name") ||
           $checkbox.closest("label").data("country-name") ||
@@ -691,12 +1744,20 @@
       function sortGeoList($container) {
         var $rows = $container.find("label.nms-geo-checkbox-row").get();
         $rows.sort(function (a, b) {
-          var aName = ($(a).data("country-name") || "").toString().toLowerCase();
-          var bName = ($(b).data("country-name") || "").toString().toLowerCase();
+          var aName = ($(a).data("country-name") || "")
+            .toString()
+            .toLowerCase();
+          var bName = ($(b).data("country-name") || "")
+            .toString()
+            .toLowerCase();
           if (aName < bName) return -1;
           if (aName > bName) return 1;
-          var aCode = ($(a).data("country-code") || "").toString().toLowerCase();
-          var bCode = ($(b).data("country-code") || "").toString().toLowerCase();
+          var aCode = ($(a).data("country-code") || "")
+            .toString()
+            .toLowerCase();
+          var bCode = ($(b).data("country-code") || "")
+            .toString()
+            .toLowerCase();
           if (aCode < bCode) return -1;
           if (aCode > bCode) return 1;
           return 0;
@@ -708,7 +1769,8 @@
 
       function ensureGeoEmptyState() {
         var $selectedList = $("#geo-selected-list");
-        var hasRows = $selectedList.find("label.nms-geo-checkbox-row").length > 0;
+        var hasRows =
+          $selectedList.find("label.nms-geo-checkbox-row").length > 0;
         $selectedList.find(".nms-geo-empty-text").remove();
         if (!hasRows) {
           $selectedList.append(
@@ -734,7 +1796,9 @@
             $selectedList.find('.geo-selected-check[value="' + meta.code + '"]')
               .length === 0
           ) {
-            $selectedList.append(buildCountryRow("geo-selected-check", meta.code, meta.name));
+            $selectedList.append(
+              buildCountryRow("geo-selected-check", meta.code, meta.name),
+            );
           }
           $checkbox.closest("label.nms-geo-checkbox-row").remove();
         });
@@ -760,7 +1824,9 @@
             $availableList.find('.geo-country-check[value="' + meta.code + '"]')
               .length === 0
           ) {
-            $availableList.append(buildCountryRow("geo-country-check", meta.code, meta.name));
+            $availableList.append(
+              buildCountryRow("geo-country-check", meta.code, meta.name),
+            );
           }
           $checkbox.closest("label.nms-geo-checkbox-row").remove();
         });
@@ -806,9 +1872,11 @@
               : 0,
           },
           success: function (response) {
-            $btn.prop("disabled", false).html(
-              '<span class="dashicons dashicons-saved"></span> Save Changes',
-            );
+            $btn
+              .prop("disabled", false)
+              .html(
+                '<span class="dashicons dashicons-saved"></span> Save Changes',
+              );
 
             if (response && response.success) {
               NexifymySecurity.reloadAfterSettingsSave(
@@ -826,9 +1894,11 @@
             );
           },
           error: function () {
-            $btn.prop("disabled", false).html(
-              '<span class="dashicons dashicons-saved"></span> Save Changes',
-            );
+            $btn
+              .prop("disabled", false)
+              .html(
+                '<span class="dashicons dashicons-saved"></span> Save Changes',
+              );
             $status.html(
               '<span style="color: var(--nms-danger);">Connection error</span>',
             );
@@ -980,7 +2050,6 @@
                 }
               }
             });
-
           })
           .fail(function () {
             $status.html(
@@ -998,10 +2067,19 @@
 
       // Hide Login Settings Save
       $("#save-hide-login-settings").on("click", function () {
+        var loginSlug = $("#hide-login-url").length
+          ? $("#hide-login-url").val()
+          : $("#login-slug").val();
+        var redirectSlug = $("#hide-login-redirect").length
+          ? $("#hide-login-redirect").val()
+          : "404";
         var settings = {
           enabled: $("#hide-login-enabled").is(":checked") ? 1 : 0,
-          slug: $("#login-slug").val(),
-          redirect: $("#hide-login-redirect").val(),
+          login_slug: loginSlug,
+          slug: loginSlug,
+          redirect_slug: redirectSlug,
+          redirect: redirectSlug,
+          redirect_url: $("#hide-login-redirect-url").val() || "",
         };
         saveModuleSettings(
           "hide_login",
@@ -1031,42 +2109,61 @@
       });
 
       // Password Policy Settings Save
-      $("#save-password-settings").on("click", function () {
-        var settings = {
-          min_length: $("#pass-min-length").val(),
-          require_upper: $("#password-options input[name=require_upper]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
-          require_lower: $("#password-options input[name=require_lower]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
-          require_number: $("#password-options input[name=require_number]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
-          require_special: $(
-            "#password-options input[name=require_special]",
-          ).is(":checked")
-            ? 1
-            : 0,
-          block_common: $("#password-options input[name=block_common]").is(
-            ":checked",
-          )
-            ? 1
-            : 0,
-          expiry_days: $("#pass-expiry").val(),
+      function collectPasswordSettings() {
+        var enforceEnabled = $("#pass-enforce").is(":checked") ? 1 : 0;
+        var usingLegacyOptions = $("#password-options").length > 0;
+
+        return {
+          enforce: enforceEnabled,
+          min_length: $("#pass-min-length").val() || 12,
+          require_upper: usingLegacyOptions
+            ? $("#password-options input[name=require_upper]").is(":checked")
+              ? 1
+              : 0
+            : enforceEnabled,
+          require_lower: usingLegacyOptions
+            ? $("#password-options input[name=require_lower]").is(":checked")
+              ? 1
+              : 0
+            : enforceEnabled,
+          require_number: usingLegacyOptions
+            ? $("#password-options input[name=require_number]").is(":checked")
+              ? 1
+              : 0
+            : enforceEnabled,
+          require_special: usingLegacyOptions
+            ? $("#password-options input[name=require_special]").is(":checked")
+              ? 1
+              : 0
+            : enforceEnabled,
+          block_common: usingLegacyOptions
+            ? $("#password-options input[name=block_common]").is(":checked")
+              ? 1
+              : 0
+            : enforceEnabled,
+          expiry_days: $("#pass-expiry").length ? $("#pass-expiry").val() : 90,
         };
+      }
+
+      function savePasswordPolicy($btn) {
+        var settings = collectPasswordSettings();
+        var $status = $("#pass-status").length
+          ? $("#pass-status")
+          : $("#password-status");
         saveModuleSettings(
           "password",
           settings,
-          $(this),
-          $("#password-status"),
+          $btn,
+          $status,
         );
+      }
+
+      $("#save-password-settings").on("click", function () {
+        savePasswordPolicy($(this));
+      });
+
+      $("#save-pass-settings").on("click", function () {
+        savePasswordPolicy($(this));
       });
 
       // Firewall Settings Save
@@ -1157,8 +2254,7 @@
           page_requests_per_minute: $("#rate-page-requests").val() || 120,
           ajax_requests_per_minute: $("#rate-ajax-requests").val() || 200,
           search_requests_per_minute: $("#rate-search-requests").val() || 10,
-          comment_requests_per_minute:
-            $("#rate-comment-requests").val() || 5,
+          comment_requests_per_minute: $("#rate-comment-requests").val() || 5,
           trust_proxy: $("#rate-trust-proxy").is(":checked") ? 1 : 0,
           log_violations: $("#rate-log-violations").is(":checked") ? 1 : 0,
           response_code: $("#rate-response-code").val() || 429,
@@ -1174,10 +2270,33 @@
       // WAF Module Settings Save (from Modules page)
       $("#save-waf-module-settings").on("click", function () {
         var settings = {
+          enabled: $("#waf-module-enabled").is(":checked") ? 1 : 0,
           block_sqli: $("#waf-block-sqli").is(":checked") ? 1 : 0,
           block_xss: $("#waf-block-xss").is(":checked") ? 1 : 0,
           block_lfi: $("#waf-block-lfi").is(":checked") ? 1 : 0,
+          block_rfi: $("#waf-block-rfi").is(":checked") ? 1 : 0,
+          block_rce: $("#waf-block-rce").is(":checked") ? 1 : 0,
+          block_csrf: $("#waf-block-csrf").is(":checked") ? 1 : 0,
+          block_traversal: $("#waf-block-traversal").is(":checked") ? 1 : 0,
           block_bad_bots: $("#waf-block-bots").is(":checked") ? 1 : 0,
+          block_empty_ua: $("#waf-block-empty-ua").is(":checked") ? 1 : 0,
+          allowed_user_agents: $("#waf-allowed-ua").val() || "",
+          blocked_user_agents: $("#waf-blocked-ua").val() || "",
+          max_request_size: $("#waf-max-request-size").val() || 10,
+          max_query_length: $("#waf-max-query-length").val() || 2048,
+          block_suspicious_uploads: $("#waf-block-uploads").is(":checked")
+            ? 1
+            : 0,
+          blocked_extensions: $("#waf-blocked-extensions").val() || "",
+          whitelist_ips: $("#waf-whitelist-ips").val() || "",
+          blacklist_ips: $("#waf-blacklist-ips").val() || "",
+          auto_block_repeat: $("#waf-auto-block").is(":checked") ? 1 : 0,
+          block_threshold: $("#waf-block-threshold").val() || 5,
+          block_duration: $("#waf-block-duration").val() || 86400,
+          log_blocked: $("#waf-log-blocked").is(":checked") ? 1 : 0,
+          log_allowed: $("#waf-log-allowed").is(":checked") ? 1 : 0,
+          email_alerts: $("#waf-email-alerts").is(":checked") ? 1 : 0,
+          alert_threshold: $("#waf-alert-threshold").val() || 10,
           log_only_mode: $("#waf-log-only").is(":checked") ? 1 : 0,
         };
         saveModuleSettings("waf", settings, $(this), $("#waf-module-status"));
@@ -1189,8 +2308,25 @@
           enabled: $("#scanner-module-enabled").is(":checked") ? 1 : 0,
           default_mode: $("#scanner-default-mode").val(),
           max_file_size_kb: $("#scanner-max-size").val(),
+          timeout: $("#scanner-timeout").val(),
+          memory_limit: $("#scanner-memory").val(),
+          sensitivity: $("#scanner-sensitivity").val(),
+          scan_core: $("#scanner-scan-core").is(":checked") ? 1 : 0,
+          scan_themes: $("#scanner-scan-themes").is(":checked") ? 1 : 0,
+          scan_plugins: $("#scanner-scan-plugins").is(":checked") ? 1 : 0,
+          scan_uploads: $("#scanner-scan-uploads").is(":checked") ? 1 : 0,
+          custom_paths: $("#scanner-custom-paths").val() || "",
+          use_signatures: $("#scanner-use-signatures").is(":checked") ? 1 : 0,
+          use_heuristics: $("#scanner-use-heuristics").is(":checked") ? 1 : 0,
+          check_integrity: $("#scanner-check-integrity").is(":checked") ? 1 : 0,
+          check_backdoors: $("#scanner-check-backdoors").is(":checked") ? 1 : 0,
+          check_obfuscation: $("#scanner-check-obfuscation").is(":checked")
+            ? 1
+            : 0,
+          email_reports: $("#scanner-email-reports").is(":checked") ? 1 : 0,
           excluded_paths: $("#scanner-excluded-paths").val(),
           excluded_extensions: $("#scanner-excluded-ext").val(),
+          excluded_patterns: $("#scanner-excluded-patterns").val() || "",
           quarantine_mode:
             $("#scanner-quarantine-mode").val() ||
             ($("#scanner-auto-quarantine").is(":checked") ? "auto" : "manual"),
@@ -1218,6 +2354,228 @@
           $(this),
           $("#quarantine-policy-status"),
         );
+      });
+
+      // CI/CD API key regeneration
+      $("#regenerate-api-key").on("click", function () {
+        var $btn = $(this);
+        var $status = $("#cicd-status");
+        var originalText = $btn.text();
+
+        $btn.prop("disabled", true).text("Regenerating...");
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_regenerate_cicd_api_key",
+            nonce: nexifymySecurity.nonce,
+          },
+          success: function (response) {
+            $btn.prop("disabled", false).text(originalText);
+            if (response && response.success && response.data) {
+              if ($("#cicd-api-key").length && response.data.api_key) {
+                $("#cicd-api-key").val(response.data.api_key);
+              }
+              if ($status.length) {
+                $status.html(
+                  '<span style="color: var(--nms-success);">' +
+                    (response.data.message || "API key regenerated.") +
+                    "</span>",
+                );
+              }
+            } else if ($status.length) {
+              $status.html(
+                '<span style="color: var(--nms-danger);">' +
+                  ((response && response.data) || "Failed to regenerate API key.") +
+                  "</span>",
+              );
+            }
+          },
+          error: function () {
+            $btn.prop("disabled", false).text(originalText);
+            if ($status.length) {
+              $status.html(
+                '<span style="color: var(--nms-danger);">Connection error while regenerating API key.</span>',
+              );
+            }
+          },
+        });
+      });
+
+      // Sandbox console actions
+      function renderSandboxResults(result, staticOnly) {
+        var sandboxResult = result || {};
+        var staticFindings = sandboxResult.static || {};
+        var dynamic = sandboxResult.dynamic || null;
+        var risk = parseInt(sandboxResult.risk || 0, 10);
+        var riskClass = risk >= 70 ? "danger" : risk >= 30 ? "warning" : "success";
+        var iconClass =
+          risk >= 70
+            ? "dashicons-warning"
+            : risk >= 30
+              ? "dashicons-shield"
+              : "dashicons-yes-alt";
+
+        $("#sandbox-result-title").text(
+          staticOnly ? "Static Analysis Results" : "Execution Results",
+        );
+        $("#sandbox-result-icon")
+          .attr("class", "dashicons " + iconClass)
+          .removeClass("danger warning success")
+          .addClass(riskClass);
+
+        var metaHtml = "";
+        metaHtml +=
+          '<div class="nms-sandbox-meta-item"><span class="label">Risk Score</span><span class="value">' +
+          risk +
+          "</span></div>";
+        if (dynamic && typeof dynamic.execution_time !== "undefined") {
+          metaHtml +=
+            '<div class="nms-sandbox-meta-item"><span class="label">Execution Time</span><span class="value">' +
+            dynamic.execution_time +
+            "s</span></div>";
+        }
+        metaHtml +=
+          '<div class="nms-sandbox-meta-item"><span class="label">Mode</span><span class="value">' +
+          (staticOnly ? "Static Only" : "Static + Dynamic") +
+          "</span></div>";
+        $("#sandbox-meta").html(metaHtml);
+
+        var staticHtml = "";
+        var hasStatic = false;
+        Object.keys(staticFindings).forEach(function (category) {
+          var values = Array.isArray(staticFindings[category])
+            ? staticFindings[category]
+            : [];
+          if (!values.length) {
+            return;
+          }
+          hasStatic = true;
+          staticHtml += '<div class="nms-sandbox-static-group">';
+          staticHtml += "<strong>" + category.replace(/_/g, " ") + "</strong>";
+          staticHtml += "<ul>";
+          values.forEach(function (value) {
+            staticHtml += "<li><code>" + value + "</code></li>";
+          });
+          staticHtml += "</ul></div>";
+        });
+        if (!hasStatic) {
+          staticHtml =
+            '<p class="description">No suspicious static patterns detected.</p>';
+        }
+        $("#sandbox-static-content").html(staticHtml);
+
+        if (dynamic) {
+          $("#sandbox-output-section").show();
+          $("#sandbox-output").text(dynamic.output || "");
+          $("#sandbox-errors-section").show();
+          if (Array.isArray(dynamic.errors) && dynamic.errors.length) {
+            var errorsHtml = "<ul>";
+            dynamic.errors.forEach(function (err) {
+              if (typeof err === "string") {
+                errorsHtml += "<li>" + err + "</li>";
+                return;
+              }
+              errorsHtml +=
+                "<li>" +
+                (err.type ? "[" + err.type + "] " : "") +
+                (err.message || "Unknown error") +
+                "</li>";
+            });
+            errorsHtml += "</ul>";
+            $("#sandbox-errors").html(errorsHtml);
+          } else {
+            $("#sandbox-errors").html(
+              '<p class="description">No runtime errors captured.</p>',
+            );
+          }
+
+          $("#sandbox-queries-section").show();
+          if (Array.isArray(dynamic.queries) && dynamic.queries.length) {
+            var queriesHtml = "<ol>";
+            dynamic.queries.forEach(function (query) {
+              if (query && query.sql) {
+                queriesHtml += "<li><code>" + query.sql + "</code></li>";
+              } else if (typeof query === "string") {
+                queriesHtml += "<li><code>" + query + "</code></li>";
+              }
+            });
+            queriesHtml += "</ol>";
+            $("#sandbox-queries").html(queriesHtml);
+          } else {
+            $("#sandbox-queries").html(
+              '<p class="description">No database queries executed.</p>',
+            );
+          }
+        } else {
+          $("#sandbox-output-section").hide();
+          $("#sandbox-errors-section").hide();
+          $("#sandbox-queries-section").hide();
+        }
+      }
+
+      function executeSandbox(staticOnly) {
+        var $code = $("#sandbox-code");
+        if (!$code.length) {
+          return;
+        }
+
+        var code = $code.val() || "";
+        if (!$.trim(code)) {
+          alert("Please enter PHP code first.");
+          return;
+        }
+
+        var $runBtn = $("#sandbox-run");
+        var $analyzeBtn = $("#sandbox-analyze");
+        var timeout = parseInt($("#sandbox-timeout").val(), 10) || 5;
+        var nonce = $code.data("nonce") || nexifymySecurity.nonce;
+
+        $runBtn.prop("disabled", true);
+        $analyzeBtn.prop("disabled", true);
+        $("#sandbox-result-title").text(
+          staticOnly ? "Analyzing..." : "Executing...",
+        );
+
+        $.ajax({
+          url: nexifymySecurity.ajaxUrl,
+          type: "POST",
+          dataType: "json",
+          data: {
+            action: "nexifymy_sandbox_execute",
+            code: code,
+            timeout: timeout,
+            static_only: staticOnly ? 1 : 0,
+            nonce: nonce,
+          },
+          success: function (response) {
+            $runBtn.prop("disabled", false);
+            $analyzeBtn.prop("disabled", false);
+            if (response && response.success) {
+              renderSandboxResults(response.data || {}, staticOnly);
+            } else {
+              alert((response && response.data) || "Sandbox execution failed.");
+            }
+          },
+          error: function (jqXHR) {
+            $runBtn.prop("disabled", false);
+            $analyzeBtn.prop("disabled", false);
+            var raw =
+              jqXHR && typeof jqXHR.responseText === "string"
+                ? jqXHR.responseText.trim()
+                : "";
+            alert(raw || "Sandbox execution request failed.");
+          },
+        });
+      }
+
+      $("#sandbox-run").on("click", function () {
+        executeSandbox(false);
+      });
+      $("#sandbox-analyze").on("click", function () {
+        executeSandbox(true);
       });
 
       // =========================================================================
@@ -1937,12 +3295,6 @@
               // Verify we got results for the mode we requested
               // If mode mismatch or suspiciously low results, fetch saved results
               if (data && data.mode && data.mode !== requestedMode) {
-                console.warn(
-                  "Mode mismatch! Expected:",
-                  requestedMode,
-                  "Got:",
-                  data.mode,
-                );
                 fetchSavedResults();
                 return;
               }
@@ -1952,9 +3304,6 @@
                 lastProgress &&
                 lastProgress.files_scanned > (data.files_scanned || 0) * 2
               ) {
-                console.warn(
-                  "Response has fewer files than progress showed, fetching saved results",
-                );
                 fetchSavedResults();
                 return;
               }
@@ -1966,7 +3315,6 @@
               if (typeof errorMsg === "object" && errorMsg.message) {
                 errorMsg = errorMsg.message;
               }
-              console.error("Scanner error:", errorMsg);
               $("#results-content, #scan-results").html(
                 '<p class="error"><strong>Scan Error:</strong> ' +
                   errorMsg +
@@ -1979,13 +3327,6 @@
           scanComplete = true;
           $progress.hide();
           $results.show();
-
-          console.error(
-            "Scanner AJAX error:",
-            textStatus,
-            errorThrown,
-            jqXHR.responseText,
-          );
 
           // If we had progress, try to get saved results
           if (lastProgress && lastProgress.files_scanned > 0) {
@@ -2192,12 +3533,13 @@
               var category = t.category || "malware";
               var confidence = t.confidence || threat.confidence || 70;
               var classification = t.classification || "SUSPICIOUS_CODE";
-              var classificationLabel = {
-                CONFIRMED_MALWARE: "Confirmed Malware",
-                SUSPICIOUS_CODE: "Suspicious Code",
-                SECURITY_VULNERABILITY: "Security Vulnerability",
-                CODE_SMELL: "Code Smell",
-              }[classification] || classification;
+              var classificationLabel =
+                {
+                  CONFIRMED_MALWARE: "Confirmed Malware",
+                  SUSPICIOUS_CODE: "Suspicious Code",
+                  SECURITY_VULNERABILITY: "Security Vulnerability",
+                  CODE_SMELL: "Code Smell",
+                }[classification] || classification;
               html +=
                 '<tr data-severity="' +
                 (t.severity || "unknown") +
@@ -2444,7 +3786,6 @@
           $tbody.html(html);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-          console.error("Notifications AJAX error:", textStatus, errorThrown);
           $tbody.html(
             '<tr><td colspan="5">Error loading alerts. Please try refreshing the page.</td></tr>',
           );
@@ -2666,7 +4007,8 @@
           } else {
             response.data.files.forEach(function (file) {
               html += "<tr>";
-              html += "<td><code>" + (file.original_path || "-") + "</code></td>";
+              html +=
+                "<td><code>" + (file.original_path || "-") + "</code></td>";
               html += "<td>" + (file.size_formatted || "-") + "</td>";
               html += "<td>" + (file.deleted_at || "-") + "</td>";
               html += '<td class="quarantine-actions">';
@@ -2693,9 +4035,7 @@
           $(".permanent-delete-quarantined").on("click", function () {
             var deletedName = $(this).data("deleted-name");
             if (
-              confirm(
-                "Permanently delete this file? This cannot be undone.",
-              )
+              confirm("Permanently delete this file? This cannot be undone.")
             ) {
               NexifymySecurity.deleteQuarantinedPermanently(
                 deletedName,
@@ -2726,10 +4066,16 @@
                 $(this).remove();
               });
             }
-            NexifymySecurity.showNotice("success", "File restored successfully.");
+            NexifymySecurity.showNotice(
+              "success",
+              "File restored successfully.",
+            );
             NexifymySecurity.loadQuarantinedFiles();
           } else {
-            NexifymySecurity.showNotice("error", "Restore failed: " + response.data);
+            NexifymySecurity.showNotice(
+              "error",
+              "Restore failed: " + response.data,
+            );
             if (hasButton) $button.prop("disabled", false).text("Restore");
           }
         },
@@ -2762,7 +4108,10 @@
             NexifymySecurity.loadQuarantinedFiles();
             NexifymySecurity.loadDeletedQuarantineFiles();
           } else {
-            NexifymySecurity.showNotice("error", "Delete failed: " + response.data);
+            NexifymySecurity.showNotice(
+              "error",
+              "Delete failed: " + response.data,
+            );
             if (hasButton) $button.prop("disabled", false).text("Delete");
           }
         },
@@ -2818,10 +4167,7 @@
         },
         success: function (response) {
           if (response.success) {
-            NexifymySecurity.showNotice(
-              "success",
-              "File permanently deleted.",
-            );
+            NexifymySecurity.showNotice("success", "File permanently deleted.");
             NexifymySecurity.loadDeletedQuarantineFiles();
           } else {
             NexifymySecurity.showNotice(
@@ -2841,7 +4187,9 @@
       var $form = $("#nexifymy-settings-form");
       var $button = $("#save-settings");
 
-      $button.prop("disabled", true).text("Saving...");
+      $button
+        .prop("disabled", true)
+        .text(this.getString("saving", "Saving..."));
 
       // Serialize form data as nested object
       var formData = {};
@@ -2874,7 +4222,12 @@
       });
 
       function finalizeSettingsSave() {
-        alert("Settings saved successfully! Reloading...");
+        alert(
+          NexifymySecurity.getString(
+            "settingsSavedReloading",
+            "Settings saved successfully! Reloading...",
+          ),
+        );
         window.location.reload();
       }
 
@@ -2887,9 +4240,17 @@
           nonce: nexifymySecurity.nonce,
         },
         success: function (response) {
-          $button.prop("disabled", false).text("Save Settings");
+          $button
+            .prop("disabled", false)
+            .text(
+              NexifymySecurity.getString("saveSettingsBtn", "Save Settings"),
+            );
           if (!response.success) {
-            alert("Error: " + response.data);
+            alert(
+              NexifymySecurity.getString("error", "Error") +
+                ": " +
+                response.data,
+            );
             return;
           }
 
@@ -2917,15 +4278,26 @@
           finalizeSettingsSave();
         },
         error: function () {
-          $button.prop("disabled", false).text("Save Settings");
-          alert("Failed to save settings. Please try again.");
+          $button
+            .prop("disabled", false)
+            .text(
+              NexifymySecurity.getString("saveSettingsBtn", "Save Settings"),
+            );
+          alert(
+            NexifymySecurity.getString(
+              "failedToSaveSettings",
+              "Failed to save settings. Please try again.",
+            ),
+          );
         },
       });
     },
 
     resetSettings: function () {
       var $button = $("#reset-settings");
-      $button.prop("disabled", true).text("Resetting...");
+      $button
+        .prop("disabled", true)
+        .text(this.getString("resetting", "Resetting..."));
 
       $.ajax({
         url: nexifymySecurity.ajaxUrl,
@@ -2936,11 +4308,27 @@
         },
         success: function (response) {
           if (response.success) {
-            alert("Settings reset to defaults. Reloading page...");
+            alert(
+              NexifymySecurity.getString(
+                "settingsResetReloading",
+                "Settings reset to defaults. Reloading page...",
+              ),
+            );
             location.reload();
           } else {
-            alert("Error: " + response.data);
-            $button.prop("disabled", false).text("Reset to Defaults");
+            alert(
+              NexifymySecurity.getString("error", "Error") +
+                ": " +
+                response.data,
+            );
+            $button
+              .prop("disabled", false)
+              .text(
+                NexifymySecurity.getString(
+                  "resetToDefaultsBtn",
+                  "Reset to Defaults",
+                ),
+              );
           }
         },
       });
@@ -3873,7 +5261,11 @@
 
     // Password settings prefill (stored under `password` group in main settings option)
     loadPasswordSettings: function () {
-      if (!$("#save-password-settings").length) return;
+      if (
+        !$("#save-password-settings").length &&
+        !$("#save-pass-settings").length
+      )
+        return;
 
       $.ajax({
         url: nexifymySecurity.ajaxUrl,
@@ -3891,25 +5283,36 @@
           if ($("#pass-min-length").length && password.min_length) {
             $("#pass-min-length").val(password.min_length);
           }
-          $("#password-options input[type=checkbox][name=require_upper]").prop(
-            "checked",
-            !!password.require_upper,
-          );
-          $("#password-options input[type=checkbox][name=require_lower]").prop(
-            "checked",
-            !!password.require_lower,
-          );
-          $("#password-options input[type=checkbox][name=require_number]").prop(
-            "checked",
-            !!password.require_number,
-          );
-          $(
-            "#password-options input[type=checkbox][name=require_special]",
-          ).prop("checked", !!password.require_special);
-          $("#password-options input[type=checkbox][name=block_common]").prop(
-            "checked",
-            !!password.block_common,
-          );
+          if ($("#pass-enforce").length) {
+            var enforce =
+              "enforce" in password
+                ? !!password.enforce
+                : !!(
+                    password.require_upper &&
+                    password.require_lower &&
+                    password.require_number &&
+                    password.require_special
+                  );
+            $("#pass-enforce").prop("checked", enforce);
+          }
+
+          if ($("#password-options").length) {
+            $(
+              "#password-options input[type=checkbox][name=require_upper]",
+            ).prop("checked", !!password.require_upper);
+            $(
+              "#password-options input[type=checkbox][name=require_lower]",
+            ).prop("checked", !!password.require_lower);
+            $(
+              "#password-options input[type=checkbox][name=require_number]",
+            ).prop("checked", !!password.require_number);
+            $(
+              "#password-options input[type=checkbox][name=require_special]",
+            ).prop("checked", !!password.require_special);
+            $(
+              "#password-options input[type=checkbox][name=block_common]",
+            ).prop("checked", !!password.block_common);
+          }
           if ($("#pass-expiry").length && "expiry_days" in password) {
             $("#pass-expiry").val(password.expiry_days);
           }
@@ -3926,12 +5329,16 @@
       }
 
       var self = this;
+      function t(key, fallback) {
+        return self.getString(key, fallback);
+      }
       var $loading = $("#analytics-loading");
       var $rangeSelect = $("#analytics-range");
       var $refreshBtn = $("#refresh-analytics");
 
       // Charts instances
       var charts = {};
+      var chartLibraryPromise = null;
 
       // Load data function
       function fetchAnalytics(days) {
@@ -3967,7 +5374,9 @@
               .prop("disabled", false)
               .find(".dashicons")
               .removeClass("spin");
-            alert("Failed to load analytics data.");
+            alert(
+              t("failedLoadAnalytics", "Failed to load analytics data."),
+            );
           },
         });
       }
@@ -3983,7 +5392,9 @@
           ? data.geo_distribution
           : [];
 
-        chartData.labels = Array.isArray(chartData.labels) ? chartData.labels : [];
+        chartData.labels = Array.isArray(chartData.labels)
+          ? chartData.labels
+          : [];
         chartData.page_views = Array.isArray(chartData.page_views)
           ? chartData.page_views
           : [];
@@ -4015,7 +5426,7 @@
             labels: chartData.labels,
             datasets: [
               {
-                label: "Page Views",
+                label: t("pageViews", "Page Views"),
                 data: chartData.page_views,
                 borderColor: "#4f46e5",
                 backgroundColor: "rgba(79, 70, 229, 0.1)",
@@ -4024,7 +5435,7 @@
                 tension: 0.4,
               },
               {
-                label: "Unique Visitors",
+                label: t("uniqueVisitors", "Unique Visitors"),
                 data: chartData.unique_visitors,
                 borderColor: "#06b6d4",
                 backgroundColor: "rgba(6, 182, 212, 0.1)",
@@ -4108,7 +5519,7 @@
             labels: deviceLabels,
             datasets: [
               {
-                label: "Devices",
+                label: t("devices", "Devices"),
                 data: deviceData,
                 backgroundColor: ["#6366f1", "#10b981", "#f59e0b", "#ef4444"],
                 borderRadius: 4,
@@ -4175,9 +5586,16 @@
 
         var fallbackId = id + "-fallback";
         var fallbackEl = document.getElementById(fallbackId);
+        var chartConstructor = resolveChartConstructor();
 
-        if (typeof window.Chart !== "function") {
-          renderChartFallback(canvas, fallbackId, type, data);
+        if (!chartConstructor) {
+          ensureChartLibrary()
+            .done(function () {
+              renderChart(id, type, data, options);
+            })
+            .fail(function () {
+              renderChartFallback(canvas, fallbackId, type, data);
+            });
           return;
         }
 
@@ -4199,7 +5617,7 @@
         }
         $(canvas).show();
 
-        charts[id] = new Chart(canvas, {
+        charts[id] = new chartConstructor(canvas, {
           type: type,
           data: data,
           options: $.extend(
@@ -4216,96 +5634,393 @@
         });
       }
 
+      function resolveChartConstructor() {
+        if (typeof window.Chart === "function") {
+          return window.Chart;
+        }
+
+        if (window.Chart && typeof window.Chart.Chart === "function") {
+          return window.Chart.Chart;
+        }
+
+        if (window.Chart && typeof window.Chart.default === "function") {
+          return window.Chart.default;
+        }
+
+        return null;
+      }
+
+      function ensureChartLibrary() {
+        var existingConstructor = resolveChartConstructor();
+        if (existingConstructor) {
+          return $.Deferred().resolve(existingConstructor).promise();
+        }
+
+        if (chartLibraryPromise) {
+          return chartLibraryPromise;
+        }
+
+        var deferred = $.Deferred();
+        var chartJsUrl =
+          nexifymySecurity && typeof nexifymySecurity.chartJsUrl === "string"
+            ? nexifymySecurity.chartJsUrl
+            : "";
+
+        if (!chartJsUrl) {
+          deferred.reject();
+          chartLibraryPromise = deferred.promise();
+          return chartLibraryPromise;
+        }
+
+        // Re-use an existing script tag if one already targets the same source.
+        var existingScript = document.querySelector(
+          'script[src="' + chartJsUrl + '"]',
+        );
+        if (existingScript) {
+          var settled = false;
+          function resolveExisting(constructorValue) {
+            if (settled) {
+              return;
+            }
+            settled = true;
+            deferred.resolve(constructorValue);
+          }
+
+          function rejectExisting() {
+            if (settled) {
+              return;
+            }
+            settled = true;
+            deferred.reject();
+          }
+
+          existingScript.addEventListener("load", function () {
+            var constructorAfterExistingLoad = resolveChartConstructor();
+            if (constructorAfterExistingLoad) {
+              resolveExisting(constructorAfterExistingLoad);
+              return;
+            }
+            rejectExisting();
+          });
+          existingScript.addEventListener("error", function () {
+            rejectExisting();
+          });
+
+          // If the script already loaded before listeners were attached,
+          // confirm quickly and then fail fast.
+          setTimeout(function () {
+            var constructorAfterWait = resolveChartConstructor();
+            if (constructorAfterWait) {
+              resolveExisting(constructorAfterWait);
+              return;
+            }
+            rejectExisting();
+          }, 300);
+
+          chartLibraryPromise = deferred.promise();
+          return chartLibraryPromise;
+        }
+
+        var script = document.createElement("script");
+        script.src = chartJsUrl;
+        script.async = true;
+
+        script.onload = function () {
+          var constructorAfterLoad = resolveChartConstructor();
+          if (constructorAfterLoad) {
+            deferred.resolve(constructorAfterLoad);
+            return;
+          }
+
+          deferred.reject();
+        };
+
+        script.onerror = function () {
+          deferred.reject();
+        };
+
+        document.head.appendChild(script);
+        chartLibraryPromise = deferred.promise();
+        return chartLibraryPromise;
+      }
+
       function renderChartFallback(canvas, fallbackId, type, data) {
         var $canvas = $(canvas);
         var $parent = $canvas.parent();
         var $fallback = $("#" + fallbackId);
 
         if ($fallback.length === 0) {
-          $fallback = $('<div class="nms-chart-fallback" id="' + fallbackId + '"></div>');
+          $fallback = $(
+            '<div class="nms-chart-fallback" id="' + fallbackId + '"></div>',
+          );
           $parent.append($fallback);
         }
 
         $canvas.hide();
         $fallback.html(buildFallbackMarkup(type, data)).show();
+        bindFallbackInteractions($fallback);
+      }
+
+      function bindFallbackInteractions($fallback) {
+        var $tooltip = $fallback.find(".nms-fallback-tooltip");
+        if ($tooltip.length === 0) {
+          $tooltip = $('<div class="nms-fallback-tooltip"></div>');
+          $fallback.append($tooltip);
+        }
+
+        function hideTooltip() {
+          $tooltip.removeClass("is-visible").text("");
+        }
+
+        function placeTooltip(x, y) {
+          $tooltip.css({
+            left: Math.max(6, x + 12) + "px",
+            top: Math.max(6, y + 12) + "px",
+          });
+        }
+
+        function placeTooltipForElement($element) {
+          var fallbackEl = $fallback.get(0);
+          var elementEl = $element.get(0);
+          if (!fallbackEl || !elementEl) {
+            return;
+          }
+
+          var fallbackRect = fallbackEl.getBoundingClientRect();
+          var rect = elementEl.getBoundingClientRect();
+          placeTooltip(
+            rect.left - fallbackRect.left + rect.width / 2,
+            rect.top - fallbackRect.top + rect.height / 2,
+          );
+        }
+
+        $fallback.off(".nmsFallback");
+        $fallback.on(
+          "mouseenter.nmsFallback focusin.nmsFallback",
+          "[data-tooltip]",
+          function () {
+            var $target = $(this);
+            var text = String($target.attr("data-tooltip") || "").trim();
+            if (!text) {
+              hideTooltip();
+              return;
+            }
+
+            $tooltip.text(text).addClass("is-visible");
+            placeTooltipForElement($target);
+          },
+        );
+        $fallback.on("mousemove.nmsFallback", "[data-tooltip]", function (evt) {
+          var fallbackEl = $fallback.get(0);
+          if (!fallbackEl) {
+            return;
+          }
+          var rect = fallbackEl.getBoundingClientRect();
+          placeTooltip(evt.clientX - rect.left, evt.clientY - rect.top);
+        });
+        $fallback.on(
+          "mouseleave.nmsFallback blur.nmsFallback",
+          "[data-tooltip]",
+          function () {
+            hideTooltip();
+          },
+        );
       }
 
       function buildFallbackMarkup(type, data) {
         var labels = Array.isArray(data && data.labels) ? data.labels : [];
-        var datasets = Array.isArray(data && data.datasets) ? data.datasets : [];
+        var datasets = Array.isArray(data && data.datasets)
+          ? data.datasets
+          : [];
 
         if (!labels.length || !datasets.length) {
-          return '<p class="nms-chart-fallback-empty">No data available for this range.</p>';
+          return (
+            '<p class="nms-chart-fallback-empty">' +
+            escapeHtml(
+              t("noDataForRange", "No data available for this range."),
+            ) +
+            "</p>"
+          );
         }
 
         if (type === "line") {
-          return buildSeriesFallback(labels, datasets, 12);
+          return buildLineInfographic(labels, datasets, 14);
         }
 
-        return buildDistributionFallback(labels, datasets[0]);
+        if (type === "doughnut" || type === "pie") {
+          return buildRadialInfographic(labels, datasets[0], type === "doughnut");
+        }
+
+        if (type === "bar") {
+          return buildBarInfographic(labels, datasets[0]);
+        }
+
+        return buildBarInfographic(labels, datasets[0]);
       }
 
-      function buildSeriesFallback(labels, datasets, maxRows) {
-        var startIndex = Math.max(labels.length - maxRows, 0);
+      function buildLineInfographic(labels, datasets, maxPoints) {
+        var startIndex = Math.max(labels.length - maxPoints, 0);
         var activeLabels = labels.slice(startIndex);
+        var activeDatasets = datasets.map(function (dataset, datasetIndex) {
+          return {
+            label:
+              dataset && dataset.label
+                ? dataset.label
+                : t("series", "Series"),
+            color: getChartColor(dataset, datasetIndex),
+            values: Array.isArray(dataset && dataset.data)
+              ? dataset.data.slice(startIndex).map(toNumber)
+              : [],
+          };
+        });
         var maxValue = 0;
-        var html = '<div class="nms-chart-fallback-series">';
 
-        datasets.forEach(function (dataset) {
-          (dataset.data || []).forEach(function (value) {
-            maxValue = Math.max(maxValue, toNumber(value));
+        activeDatasets.forEach(function (dataset) {
+          dataset.values.forEach(function (value) {
+            maxValue = Math.max(maxValue, value);
           });
         });
 
-        if (maxValue <= 0) {
-          return '<p class="nms-chart-fallback-empty">No traffic data recorded for this range.</p>';
+        if (maxValue < 1) {
+          maxValue = 1;
         }
 
-        activeLabels.forEach(function (label, localIndex) {
-          var index = startIndex + localIndex;
-          html += '<div class="nms-chart-fallback-row">';
-          html += '<div class="nms-chart-fallback-label">' + escapeHtml(label) + "</div>";
-          html += '<div class="nms-chart-fallback-bars">';
+        var width = 760;
+        var height = 280;
+        var paddingTop = 20;
+        var paddingBottom = 36;
+        var paddingLeft = 42;
+        var paddingRight = 18;
+        var chartW = width - paddingLeft - paddingRight;
+        var chartH = height - paddingTop - paddingBottom;
+        var stepX =
+          activeLabels.length > 1 ? chartW / (activeLabels.length - 1) : chartW;
+        var html =
+          '<div class="nms-fallback-surface nms-fallback-line-surface">';
+        html +=
+          '<svg class="nms-fallback-line-svg" viewBox="0 0 ' +
+          width +
+          " " +
+          height +
+          '" role="img" aria-label="' +
+          escapeHtml(t("trafficTrendFallbackChart", "Traffic trend chart")) +
+          '">';
 
-          datasets.forEach(function (dataset, datasetIndex) {
-            var value = toNumber((dataset.data || [])[index]);
-            var width = value > 0 ? Math.max(2, Math.round((value / maxValue) * 100)) : 0;
-            var color =
-              dataset.borderColor ||
-              ["#4f46e5", "#06b6d4", "#10b981", "#f59e0b"][datasetIndex % 4];
+        for (var g = 0; g <= 4; g++) {
+          var y = paddingTop + (chartH / 4) * g;
+          var valueLabel = Math.round(maxValue - (maxValue / 4) * g);
+          html +=
+            '<line class="nms-fallback-grid-line" x1="' +
+            paddingLeft +
+            '" y1="' +
+            y.toFixed(2) +
+            '" x2="' +
+            (paddingLeft + chartW).toFixed(2) +
+            '" y2="' +
+            y.toFixed(2) +
+            '"></line>';
+          html +=
+            '<text class="nms-fallback-axis-text" x="' +
+            (paddingLeft - 8) +
+            '" y="' +
+            (y + 4).toFixed(2) +
+            '" text-anchor="end">' +
+            escapeHtml(formatNumber(valueLabel)) +
+            "</text>";
+        }
 
-            html += '<div class="nms-chart-fallback-bar-row">';
-            html +=
-              '<span class="nms-chart-fallback-series-name">' +
-              escapeHtml(dataset.label || "Series") +
-              "</span>";
-            html += '<div class="nms-chart-fallback-track">';
-            html +=
-              '<div class="nms-chart-fallback-fill" style="width:' +
-              width +
-              "%;background:" +
-              escapeHtml(color) +
-              ';"></div>';
-            html += "</div>";
-            html +=
-              '<span class="nms-chart-fallback-value">' +
-              formatNumber(value) +
-              "</span>";
-            html += "</div>";
+        activeDatasets.forEach(function (dataset) {
+          var points = [];
+          (dataset.values || []).forEach(function (value, index) {
+            var x = paddingLeft + stepX * index;
+            var y = paddingTop + chartH - (value / maxValue) * chartH;
+            points.push(x.toFixed(2) + "," + y.toFixed(2));
           });
 
-          html += "</div></div>";
+          if (!points.length) {
+            return;
+          }
+
+          html +=
+            '<polyline class="nms-fallback-line-path" points="' +
+            points.join(" ") +
+            '" style="stroke:' +
+            escapeHtml(dataset.color) +
+            ';"></polyline>';
+
+          (dataset.values || []).forEach(function (value, index) {
+            var px = paddingLeft + stepX * index;
+            var py = paddingTop + chartH - (value / maxValue) * chartH;
+            var tooltip =
+              dataset.label +
+              " - " +
+              activeLabels[index] +
+              ": " +
+              formatNumber(value);
+            html +=
+              '<circle class="nms-fallback-point" cx="' +
+              px.toFixed(2) +
+              '" cy="' +
+              py.toFixed(2) +
+              '" r="4" tabindex="0" data-tooltip="' +
+              escapeHtml(tooltip) +
+              '" style="fill:' +
+              escapeHtml(dataset.color) +
+              ';"></circle>';
+          });
         });
 
+        var labelStep = Math.max(1, Math.ceil(activeLabels.length / 6));
+        activeLabels.forEach(function (label, index) {
+          if (index % labelStep !== 0 && index !== activeLabels.length - 1) {
+            return;
+          }
+
+          var lx = paddingLeft + stepX * index;
+          html +=
+            '<text class="nms-fallback-axis-text" x="' +
+            lx.toFixed(2) +
+            '" y="' +
+            (paddingTop + chartH + 18).toFixed(2) +
+            '" text-anchor="middle">' +
+            escapeHtml(label) +
+            "</text>";
+        });
+
+        html += "</svg>";
+        html += '<div class="nms-fallback-legend">';
+        activeDatasets.forEach(function (dataset) {
+          var lastValue = dataset.values.length
+            ? dataset.values[dataset.values.length - 1]
+            : 0;
+          html +=
+            '<div class="nms-fallback-legend-item" data-tooltip="' +
+            escapeHtml(dataset.label + ": " + formatNumber(lastValue)) +
+            '">';
+          html +=
+            '<span class="nms-fallback-swatch" style="background:' +
+            escapeHtml(dataset.color) +
+            ';"></span>';
+          html +=
+            '<span class="nms-fallback-legend-label">' +
+            escapeHtml(dataset.label) +
+            "</span>";
+          html +=
+            '<span class="nms-fallback-legend-value">' +
+            escapeHtml(formatNumber(lastValue)) +
+            "</span>";
+          html += "</div>";
+        });
+        html += "</div>";
         html += "</div>";
         return html;
       }
 
-      function buildDistributionFallback(labels, dataset) {
+      function buildBarInfographic(labels, dataset) {
         var values = Array.isArray(dataset && dataset.data) ? dataset.data : [];
-        var maxValue = 0;
+        var maxValue = 1;
         var rows = [];
-        var html = '<div class="nms-chart-fallback-series">';
+        var html = '<div class="nms-fallback-surface nms-fallback-bars-grid">';
 
         labels.forEach(function (label, index) {
           var value = toNumber(values[index]);
@@ -4313,42 +6028,276 @@
           rows.push({ label: label, value: value });
         });
 
-        if (maxValue <= 0) {
-          return '<p class="nms-chart-fallback-empty">No data available for this range.</p>';
-        }
-
-        rows.forEach(function (row) {
-          var width = row.value > 0 ? Math.max(2, Math.round((row.value / maxValue) * 100)) : 0;
-          html += '<div class="nms-chart-fallback-row">';
-          html += '<div class="nms-chart-fallback-label">' + escapeHtml(row.label) + "</div>";
-          html += '<div class="nms-chart-fallback-bars">';
-          html += '<div class="nms-chart-fallback-bar-row">';
-          html += '<div class="nms-chart-fallback-track">';
+        rows.forEach(function (row, index) {
+          var width =
+            row.value > 0
+              ? Math.max(2, Math.round((row.value / maxValue) * 100))
+              : 0;
+          var color = getChartColor(dataset, index);
+          html += '<div class="nms-fallback-bar-item">';
           html +=
-            '<div class="nms-chart-fallback-fill" style="width:' +
+            '<div class="nms-fallback-bar-label">' +
+            escapeHtml(row.label) +
+            "</div>";
+          html += '<div class="nms-fallback-bar-track">';
+          html +=
+            '<div class="nms-fallback-bar" tabindex="0" data-tooltip="' +
+            escapeHtml(row.label + ": " + formatNumber(row.value)) +
+            '" style="width:' +
             width +
-            '%;"></div>';
+            "%;background:" +
+            escapeHtml(color) +
+            ';"></div>';
           html += "</div>";
           html +=
-            '<span class="nms-chart-fallback-value">' +
+            '<span class="nms-fallback-bar-value">' +
             formatNumber(row.value) +
             "</span>";
-          html += "</div></div></div>";
+          html += "</div>";
         });
 
         html += "</div>";
         return html;
       }
 
+      function buildRadialInfographic(labels, dataset, donutStyle) {
+        var values = Array.isArray(dataset && dataset.data) ? dataset.data : [];
+        var rows = [];
+        var total = 0;
+        var html = '<div class="nms-fallback-surface nms-fallback-radial">';
+
+        labels.forEach(function (label, index) {
+          var value = toNumber(values[index]);
+          if (value <= 0) {
+            return;
+          }
+          total += value;
+          rows.push({
+            label: label,
+            value: value,
+            color: getChartColor(dataset, index),
+          });
+        });
+
+        if (!rows.length || total <= 0) {
+          return (
+            '<p class="nms-chart-fallback-empty">' +
+            escapeHtml(
+              t("noDataForRange", "No data available for this range."),
+            ) +
+            "</p>"
+          );
+        }
+
+        var cx = 120;
+        var cy = 120;
+        var outerR = 90;
+        var innerR = donutStyle ? 52 : 0;
+        var start = -Math.PI / 2;
+
+        html += '<div class="nms-fallback-radial-chart">';
+        html +=
+          '<svg class="nms-fallback-radial-svg" viewBox="0 0 240 240" role="img" aria-label="' +
+          escapeHtml(
+            t("distributionFallbackChart", "Distribution breakdown chart"),
+          ) +
+          '">';
+
+        rows.forEach(function (row) {
+          var ratio = row.value / total;
+          var end = start + ratio * Math.PI * 2;
+          var path = describeArcPath(cx, cy, outerR, innerR, start, end);
+          var tooltip =
+            row.label +
+            ": " +
+            formatNumber(row.value) +
+            " (" +
+            formatPercent(row.value, total) +
+            ")";
+
+          html +=
+            '<path class="nms-fallback-segment" tabindex="0" d="' +
+            path +
+            '" fill="' +
+            escapeHtml(row.color) +
+            '" data-tooltip="' +
+            escapeHtml(tooltip) +
+            '"></path>';
+          start = end;
+        });
+
+        html += "</svg>";
+        html += '<div class="nms-fallback-center-label">';
+        html +=
+          '<span class="nms-fallback-center-value">' +
+          escapeHtml(formatNumber(total)) +
+          "</span>";
+        html +=
+          '<span class="nms-fallback-center-caption">' +
+          escapeHtml(t("total", "Total")) +
+          "</span>";
+        html += "</div>";
+        html += "</div>";
+
+        html += '<div class="nms-fallback-legend">';
+        rows.forEach(function (row) {
+          html +=
+            '<div class="nms-fallback-legend-item" data-tooltip="' +
+            escapeHtml(
+              row.label +
+                ": " +
+                formatNumber(row.value) +
+                " (" +
+                formatPercent(row.value, total) +
+                ")",
+            ) +
+            '">';
+          html +=
+            '<span class="nms-fallback-swatch" style="background:' +
+            escapeHtml(row.color) +
+            ';"></span>';
+          html +=
+            '<span class="nms-fallback-legend-label">' +
+            escapeHtml(row.label) +
+            "</span>";
+          html +=
+            '<span class="nms-fallback-legend-value">' +
+            escapeHtml(formatPercent(row.value, total)) +
+            "</span>";
+          html += "</div>";
+        });
+        html += "</div>";
+        html += "</div>";
+
+        return html;
+      }
+
+      function describeArcPath(cx, cy, outerR, innerR, startAngle, endAngle) {
+        var outerStart = polarToCartesian(cx, cy, outerR, startAngle);
+        var outerEnd = polarToCartesian(cx, cy, outerR, endAngle);
+        var largeArcFlag = endAngle - startAngle <= Math.PI ? "0" : "1";
+
+        if (innerR <= 0) {
+          return (
+            "M " +
+            cx.toFixed(2) +
+            " " +
+            cy.toFixed(2) +
+            " L " +
+            outerStart.x.toFixed(2) +
+            " " +
+            outerStart.y.toFixed(2) +
+            " A " +
+            outerR.toFixed(2) +
+            " " +
+            outerR.toFixed(2) +
+            " 0 " +
+            largeArcFlag +
+            " 1 " +
+            outerEnd.x.toFixed(2) +
+            " " +
+            outerEnd.y.toFixed(2) +
+            " Z"
+          );
+        }
+
+        var innerEnd = polarToCartesian(cx, cy, innerR, endAngle);
+        var innerStart = polarToCartesian(cx, cy, innerR, startAngle);
+        return (
+          "M " +
+          outerStart.x.toFixed(2) +
+          " " +
+          outerStart.y.toFixed(2) +
+          " A " +
+          outerR.toFixed(2) +
+          " " +
+          outerR.toFixed(2) +
+          " 0 " +
+          largeArcFlag +
+          " 1 " +
+          outerEnd.x.toFixed(2) +
+          " " +
+          outerEnd.y.toFixed(2) +
+          " L " +
+          innerEnd.x.toFixed(2) +
+          " " +
+          innerEnd.y.toFixed(2) +
+          " A " +
+          innerR.toFixed(2) +
+          " " +
+          innerR.toFixed(2) +
+          " 0 " +
+          largeArcFlag +
+          " 0 " +
+          innerStart.x.toFixed(2) +
+          " " +
+          innerStart.y.toFixed(2) +
+          " Z"
+        );
+      }
+
+      function polarToCartesian(cx, cy, radius, angle) {
+        return {
+          x: cx + Math.cos(angle) * radius,
+          y: cy + Math.sin(angle) * radius,
+        };
+      }
+
+      function formatPercent(value, total) {
+        if (!total) {
+          return "0%";
+        }
+        return ((toNumber(value) / toNumber(total)) * 100).toFixed(1) + "%";
+      }
+
+      function getChartColor(dataset, index) {
+        var palette = [
+          "#4f46e5",
+          "#06b6d4",
+          "#10b981",
+          "#f59e0b",
+          "#ef4444",
+          "#8b5cf6",
+          "#0ea5e9",
+          "#22c55e",
+        ];
+
+        var background = dataset && dataset.backgroundColor;
+        if (Array.isArray(background) && background.length > 0) {
+          return String(background[index % background.length]);
+        }
+
+        if (typeof background === "string" && background.trim() !== "") {
+          return background;
+        }
+
+        if (
+          dataset &&
+          typeof dataset.borderColor === "string" &&
+          dataset.borderColor.trim() !== ""
+        ) {
+          return dataset.borderColor;
+        }
+
+        return palette[index % palette.length];
+      }
+
       function hasRenderableData(data) {
-        var datasets = Array.isArray(data && data.datasets) ? data.datasets : [];
+        var labels = Array.isArray(data && data.labels) ? data.labels : [];
+        var datasets = Array.isArray(data && data.datasets)
+          ? data.datasets
+          : [];
+
+        if (!labels.length || !datasets.length) {
+          return false;
+        }
 
         return datasets.some(function (dataset) {
-          var values = Array.isArray(dataset && dataset.data) ? dataset.data : [];
+          var values = Array.isArray(dataset && dataset.data)
+            ? dataset.data
+            : [];
 
-          return values.some(function (value) {
-            return toNumber(value) > 0;
-          });
+          return values.length > 0;
         });
       }
 
@@ -4404,7 +6353,9 @@
           $body.append(
             '<tr><td colspan="' +
               columns.length +
-              '" style="text-align:center; color: #999;">No data available</td></tr>',
+              '" style="text-align:center; color: #999;">' +
+              escapeHtml(t("noDataAvailable", "No data available")) +
+              "</td></tr>",
           );
           return;
         }
@@ -4444,7 +6395,9 @@
 
         if (!data || data.length === 0) {
           $body.append(
-            '<tr><td colspan="3" style="text-align:center; color: #999;">No data available</td></tr>',
+            '<tr><td colspan="3" style="text-align:center; color: #999;">' +
+              escapeHtml(t("noDataAvailable", "No data available")) +
+              "</td></tr>",
           );
           return;
         }
@@ -4483,6 +6436,337 @@
 
       // Initial Load
       fetchAnalytics(30);
+    },
+
+    /**
+     * Load legacy Security Analytics tab charts.
+     */
+    loadSecurityAnalyticsTab: function () {
+      var $data = $("#nms-analytics-chart-data");
+      if ($data.length === 0) {
+        return;
+      }
+
+      function resolveChartConstructor() {
+        if (typeof window.Chart === "function") {
+          return window.Chart;
+        }
+        if (window.Chart && typeof window.Chart.Chart === "function") {
+          return window.Chart.Chart;
+        }
+        if (window.Chart && typeof window.Chart.default === "function") {
+          return window.Chart.default;
+        }
+        return null;
+      }
+
+      function ensureChartLibrary() {
+        var deferred = $.Deferred();
+        var chartConstructor = resolveChartConstructor();
+        if (chartConstructor) {
+          deferred.resolve(chartConstructor);
+          return deferred.promise();
+        }
+
+        var chartJsUrl =
+          nexifymySecurity && typeof nexifymySecurity.chartJsUrl === "string"
+            ? nexifymySecurity.chartJsUrl
+            : "";
+        if (!chartJsUrl) {
+          deferred.reject();
+          return deferred.promise();
+        }
+
+        var script = document.querySelector('script[src="' + chartJsUrl + '"]');
+        if (!script) {
+          script = document.createElement("script");
+          script.src = chartJsUrl;
+          script.async = true;
+          document.head.appendChild(script);
+        }
+
+        var settled = false;
+        function resolveIfAvailable() {
+          if (settled) {
+            return;
+          }
+          var ctor = resolveChartConstructor();
+          if (ctor) {
+            settled = true;
+            deferred.resolve(ctor);
+          }
+        }
+        function rejectOnce() {
+          if (settled) {
+            return;
+          }
+          settled = true;
+          deferred.reject();
+        }
+
+        script.addEventListener("load", resolveIfAvailable);
+        script.addEventListener("error", rejectOnce);
+        setTimeout(function () {
+          resolveIfAvailable();
+          if (!settled) {
+            rejectOnce();
+          }
+        }, 600);
+
+        return deferred.promise();
+      }
+
+      function parseDataAttr(name) {
+        var raw = $data.attr("data-" + name);
+        if (!raw) {
+          return [];
+        }
+        try {
+          var parsed = JSON.parse(raw);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function toNumberArray(values, size) {
+        var list = Array.isArray(values) ? values : [];
+        var output = [];
+        for (var i = 0; i < size; i += 1) {
+          var num = Number(list[i]);
+          output.push(Number.isFinite(num) ? num : 0);
+        }
+        return output;
+      }
+
+      var labels = parseDataAttr("labels");
+      if (!labels.length) {
+        return;
+      }
+
+      var threats = toNumberArray(parseDataAttr("threats"), labels.length);
+      var blocked = toNumberArray(parseDataAttr("blocked"), labels.length);
+      var logins = toNumberArray(parseDataAttr("logins"), labels.length);
+
+      var maxThreat = Math.max.apply(Math, threats.concat(blocked).concat(logins));
+      if (!Number.isFinite(maxThreat) || maxThreat < 0) {
+        maxThreat = 0;
+      }
+
+      function renderFallback($canvas, html) {
+        var canvas = $canvas.get(0);
+        if (!canvas) {
+          return;
+        }
+        $canvas.hide();
+
+        var fallbackId = canvas.id + "-legacy-fallback";
+        var $fallback = $("#" + fallbackId);
+        if ($fallback.length === 0) {
+          $fallback = $('<div class="nms-chart-fallback"></div>').attr(
+            "id",
+            fallbackId,
+          );
+          $canvas.after($fallback);
+        }
+        $fallback.html(html).show();
+      }
+
+      function buildTrendFallback() {
+        var width = 760;
+        var height = 230;
+        var left = 24;
+        var right = 12;
+        var top = 16;
+        var bottom = 22;
+        var usableW = width - left - right;
+        var usableH = height - top - bottom;
+        var stepX = labels.length > 1 ? usableW / (labels.length - 1) : usableW;
+        var maxValue = Math.max(1, maxThreat);
+
+        function pathFor(series) {
+          var points = [];
+          for (var i = 0; i < labels.length; i += 1) {
+            var x = left + i * stepX;
+            var y = top + usableH - (series[i] / maxValue) * usableH;
+            points.push(x.toFixed(2) + "," + y.toFixed(2));
+          }
+          return points.join(" ");
+        }
+
+        return (
+          '<div class="nms-fallback-surface">' +
+          '<svg class="nms-fallback-line-svg" viewBox="0 0 ' +
+          width +
+          " " +
+          height +
+          '">' +
+          '<polyline class="nms-fallback-line-path" points="' +
+          pathFor(blocked) +
+          '" stroke="#3b82f6"></polyline>' +
+          '<polyline class="nms-fallback-line-path" points="' +
+          pathFor(threats) +
+          '" stroke="#ef4444"></polyline>' +
+          '<polyline class="nms-fallback-line-path" points="' +
+          pathFor(logins) +
+          '" stroke="#10b981"></polyline>' +
+          "</svg>" +
+          '<div class="nms-fallback-legend">' +
+          '<div class="nms-fallback-legend-item"><span class="nms-fallback-swatch" style="background:#3b82f6"></span><span class="nms-fallback-legend-label">Blocked</span><span class="nms-fallback-legend-value">' +
+          blocked.reduce(function (sum, v) {
+            return sum + v;
+          }, 0) +
+          "</span></div>" +
+          '<div class="nms-fallback-legend-item"><span class="nms-fallback-swatch" style="background:#ef4444"></span><span class="nms-fallback-legend-label">Threats</span><span class="nms-fallback-legend-value">' +
+          threats.reduce(function (sum, v) {
+            return sum + v;
+          }, 0) +
+          "</span></div>" +
+          '<div class="nms-fallback-legend-item"><span class="nms-fallback-swatch" style="background:#10b981"></span><span class="nms-fallback-legend-label">Logins</span><span class="nms-fallback-legend-value">' +
+          logins.reduce(function (sum, v) {
+            return sum + v;
+          }, 0) +
+          "</span></div>" +
+          "</div>" +
+          "</div>"
+        );
+      }
+
+      function buildLoginFallback() {
+        var total = logins.reduce(function (sum, v) {
+          return sum + v;
+        }, 0);
+        var avg = labels.length ? Math.round((total / labels.length) * 10) / 10 : 0;
+        var peak = Math.max.apply(Math, logins.concat([0]));
+
+        return (
+          '<div class="nms-fallback-surface nms-fallback-radial">' +
+          '<div class="nms-fallback-radial-chart">' +
+          '<svg class="nms-fallback-radial-svg" viewBox="0 0 240 240">' +
+          '<circle cx="120" cy="120" r="78" fill="none" stroke="#e2e8f0" stroke-width="24"></circle>' +
+          '<circle cx="120" cy="120" r="78" fill="none" stroke="#10b981" stroke-width="24" stroke-linecap="round" stroke-dasharray="' +
+          Math.max(2, Math.min(490, (total / Math.max(1, maxThreat * labels.length)) * 490)) +
+          ' 490" transform="rotate(-90 120 120)"></circle>' +
+          "</svg>" +
+          '<div class="nms-fallback-center-label"><span class="nms-fallback-center-value">' +
+          total +
+          '</span><span class="nms-fallback-center-caption">Total logins</span></div>' +
+          "</div>" +
+          '<div class="nms-fallback-legend">' +
+          '<div class="nms-fallback-legend-item"><span class="nms-fallback-swatch" style="background:#10b981"></span><span class="nms-fallback-legend-label">Average / day</span><span class="nms-fallback-legend-value">' +
+          avg +
+          "</span></div>" +
+          '<div class="nms-fallback-legend-item"><span class="nms-fallback-swatch" style="background:#0ea5e9"></span><span class="nms-fallback-legend-label">Peak day</span><span class="nms-fallback-legend-value">' +
+          peak +
+          "</span></div>" +
+          "</div>" +
+          "</div>"
+        );
+      }
+
+      function renderWithChart(ChartCtor) {
+        var threatCanvas = document.getElementById("nms-threats-chart");
+        var loginsCanvas = document.getElementById("nms-logins-chart");
+        if (!threatCanvas || !loginsCanvas) {
+          return;
+        }
+
+        var chartStore = NexifymySecurity._legacyAnalyticsCharts || {};
+        if (chartStore.threats) {
+          chartStore.threats.destroy();
+        }
+        if (chartStore.logins) {
+          chartStore.logins.destroy();
+        }
+
+        chartStore.threats = new ChartCtor(threatCanvas, {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: "Blocked",
+                data: blocked,
+                borderColor: "#3b82f6",
+                backgroundColor: "rgba(59,130,246,.12)",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.35,
+              },
+              {
+                label: "Threats",
+                data: threats,
+                borderColor: "#ef4444",
+                backgroundColor: "rgba(239,68,68,.1)",
+                borderWidth: 2,
+                fill: true,
+                tension: 0.35,
+              },
+              {
+                label: "Logins",
+                data: logins,
+                borderColor: "#10b981",
+                backgroundColor: "rgba(16,185,129,.08)",
+                borderWidth: 2,
+                fill: false,
+                tension: 0.35,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            plugins: { legend: { position: "bottom" } },
+            scales: {
+              x: { grid: { display: false } },
+              y: { beginAtZero: true, grid: { color: "#e2e8f0" } },
+            },
+          },
+        });
+
+        chartStore.logins = new ChartCtor(loginsCanvas, {
+          type: "radar",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: "Login Attempts",
+                data: logins,
+                borderColor: "#10b981",
+                backgroundColor: "rgba(16,185,129,.2)",
+                borderWidth: 2,
+                pointBackgroundColor: "#10b981",
+                pointRadius: 3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: "bottom" } },
+            scales: {
+              r: {
+                beginAtZero: true,
+                angleLines: { color: "#e2e8f0" },
+                grid: { color: "#e2e8f0" },
+                pointLabels: { color: "#475569" },
+              },
+            },
+          },
+        });
+
+        NexifymySecurity._legacyAnalyticsCharts = chartStore;
+      }
+
+      ensureChartLibrary()
+        .done(function (chartCtor) {
+          renderWithChart(chartCtor);
+        })
+        .fail(function () {
+          renderFallback($("#nms-threats-chart"), buildTrendFallback());
+          renderFallback($("#nms-logins-chart"), buildLoginFallback());
+        });
     },
   };
 

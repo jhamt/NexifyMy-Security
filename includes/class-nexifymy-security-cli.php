@@ -319,7 +319,7 @@ class NexifyMy_Security_CLI {
 		} else {
 			$blocked = get_option( 'nexifymy_security_blocked_ips', array() );
 		}
-		$result  = array();
+		$result = array();
 
 		foreach ( $blocked as $ip => $data ) {
 			$result[] = array(

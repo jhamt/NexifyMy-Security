@@ -54,7 +54,7 @@ class NexifyMy_Security_Analytics {
 
 		// Keep only last 30 days
 		if ( count( $stats ) > 30 ) {
-			$stats = array_slice( $stats, -30, 1, true );
+			$stats = array_slice( $stats, -30, null, true );
 		}
 
 		update_option( 'nexifymy_security_analytics_daily', $stats );
@@ -94,7 +94,14 @@ class NexifyMy_Security_Analytics {
 	/**
 	 * Check if Chart.js needs to be enqueued.
 	 */
-	public function enqueue_scripts() {
-		wp_enqueue_script( 'chartjs', 'https://cdn.jsdelivr.net/npm/chart.js', array(), '4.4.0', true );
+	public function enqueue_scripts( $hook = '' ) {
+		if ( ! $hook || ( strpos( $hook, 'nexifymy' ) === false && strpos( $hook, 'nexify-security' ) === false ) ) {
+			return;
+		}
+
+		// Chart.js is registered centrally by the admin controller on plugin pages.
+		if ( wp_script_is( 'nexifymy-chartjs', 'registered' ) || wp_script_is( 'nexifymy-chartjs', 'enqueued' ) ) {
+			wp_enqueue_script( 'nexifymy-chartjs' );
+		}
 	}
 }

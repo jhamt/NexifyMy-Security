@@ -10,7 +10,7 @@
 // Prevent direct access without WordPress loaded.
 if ( ! defined( 'ABSPATH' ) ) {
 	// Bootstrap WordPress if accessed directly.
-	$wp_load = dirname( __FILE__ ) . '/../../../wp-load.php';
+	$wp_load = __DIR__ . '/../../../wp-load.php';
 	if ( file_exists( $wp_load ) ) {
 		require_once $wp_load;
 	} else {
@@ -88,7 +88,7 @@ if ( class_exists( 'NexifyMy_Security_Alerts' ) && method_exists( 'NexifyMy_Secu
 			"User Agent: %s\n" .
 			"Timestamp: %s\n" .
 			"Referer: %s\n\n" .
-			"This IP has been automatically blocked.",
+			'This IP has been automatically blocked.',
 			$ip,
 			$data['user_agent'],
 			$data['timestamp'],

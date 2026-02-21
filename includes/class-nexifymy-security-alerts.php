@@ -190,10 +190,9 @@ class NexifyMy_Security_Alerts {
 		}
 
 		if ( isset( $data['ip_address'] ) || isset( $_SERVER['REMOTE_ADDR'] ) ) {
-			$ip    = isset( $data['ip_address'] ) ? $data['ip_address'] : $_SERVER['REMOTE_ADDR'];
+			$ip    = isset( $data['ip_address'] ) ? $data['ip_address'] : sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
 			$body .= "IP Address: {$ip}\n";
 		}
-
 		$body .= "\n---\n";
 		$body .= "This alert was sent by NexifyMy Security plugin.\n";
 		$body .= 'Manage your alert settings: ' . admin_url( 'admin.php?page=nexifymy-security-settings' ) . "\n";
@@ -377,13 +376,12 @@ class NexifyMy_Security_Alerts {
 
 		$settings = array(
 			'enabled'            => ! empty( $_POST['enabled'] ),
-			'recipient_email'    => sanitize_email( $_POST['recipient_email'] ?? '' ),
-			'alert_types'        => isset( $_POST['alert_types'] ) ? array_map( 'sanitize_key', (array) $_POST['alert_types'] ) : array(),
+			'recipient_email'    => sanitize_email( wp_unslash( $_POST['recipient_email'] ?? '' ) ),
+			'alert_types'        => isset( $_POST['alert_types'] ) ? array_map( 'sanitize_key', (array) wp_unslash( $_POST['alert_types'] ) ) : array(),
 			'throttle_minutes'   => absint( $_POST['throttle_minutes'] ?? 60 ),
 			'daily_summary'      => ! empty( $_POST['daily_summary'] ),
-			'daily_summary_time' => sanitize_text_field( $_POST['daily_summary_time'] ?? '08:00' ),
+			'daily_summary_time' => sanitize_text_field( wp_unslash( $_POST['daily_summary_time'] ?? '08:00' ) ),
 		);
-
 		self::update_settings( $settings );
 
 		wp_send_json_success(

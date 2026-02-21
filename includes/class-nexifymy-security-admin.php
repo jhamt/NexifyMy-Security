@@ -26,6 +26,7 @@ class NexifyMy_Security_Admin {
 		add_action( 'wp_ajax_nexifymy_save_module_settings', array( $this, 'ajax_save_module_settings' ) );
 		add_action( 'wp_ajax_nexifymy_save_deception_settings', array( $this, 'ajax_save_deception_settings' ) );
 		add_action( 'wp_ajax_nexifymy_save_p2p_settings', array( $this, 'ajax_save_p2p_settings' ) );
+		add_action( 'wp_ajax_nexifymy_regenerate_cicd_api_key', array( $this, 'ajax_regenerate_cicd_api_key' ) );
 		add_action( 'wp_ajax_nexifymy_add_peer', array( $this, 'ajax_add_peer' ) );
 		add_action( 'wp_ajax_nexifymy_remove_peer', array( $this, 'ajax_remove_peer' ) );
 		add_action( 'wp_ajax_nexifymy_sandbox_execute', array( $this, 'ajax_sandbox_execute' ) );
@@ -259,36 +260,68 @@ class NexifyMy_Security_Admin {
 			);
 		}
 
-		$chartjs_local = NEXIFYMY_SECURITY_PATH . 'assets/vendor/chartjs/chart.umd.min.js';
+		$chartjs_handle = 'nexifymy-chartjs';
+		$chartjs_local  = NEXIFYMY_SECURITY_PATH . 'assets/vendor/chartjs/chart.umd.min.js';
 		if ( file_exists( $chartjs_local ) ) {
 			wp_enqueue_script(
-				'chartjs',
+				$chartjs_handle,
 				NEXIFYMY_SECURITY_URL . 'assets/vendor/chartjs/chart.umd.min.js',
 				array(),
 				NEXIFYMY_SECURITY_VERSION,
 				false
 			);
 		} elseif ( (bool) apply_filters( 'nexifymy_security_allow_remote_chartjs', true ) || $allow_remote_assets ) {
-			wp_enqueue_script( 'chartjs', 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js', array(), '4.4.0', false );
+			wp_enqueue_script( $chartjs_handle, 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js', array(), '4.4.0', false );
 		} else {
 			// Register a no-src handle so admin.js can still load safely when charts are disabled.
-			wp_register_script( 'chartjs', false, array(), NEXIFYMY_SECURITY_VERSION, false );
-			wp_enqueue_script( 'chartjs' );
+			wp_register_script( $chartjs_handle, false, array(), NEXIFYMY_SECURITY_VERSION, false );
+			wp_enqueue_script( $chartjs_handle );
 		}
 
-		wp_enqueue_script( 'nexifymy-security-admin', NEXIFYMY_SECURITY_URL . 'assets/js/admin.js', array( 'jquery', 'chartjs' ), NEXIFYMY_SECURITY_VERSION, true );
+		wp_enqueue_script( 'nexifymy-security-admin', NEXIFYMY_SECURITY_URL . 'assets/js/admin.js', array( 'jquery', $chartjs_handle ), NEXIFYMY_SECURITY_VERSION, true );
 		wp_enqueue_script( 'nexifymy-security-admin-pages', NEXIFYMY_SECURITY_URL . 'assets/js/admin-pages.js', array( 'nexifymy-security-admin' ), NEXIFYMY_SECURITY_VERSION, true );
+
+		$chartjs_src = '';
+		$wp_scripts  = wp_scripts();
+		if ( isset( $wp_scripts->registered[ $chartjs_handle ] ) && isset( $wp_scripts->registered[ $chartjs_handle ]->src ) ) {
+			$chartjs_src = (string) $wp_scripts->registered[ $chartjs_handle ]->src;
+		}
 
 		wp_localize_script(
 			'nexifymy-security-admin',
 			'nexifymySecurity',
 			array(
-				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-				'nonce'   => wp_create_nonce( 'nexifymy_security_nonce' ),
-				'strings' => array(
-					'scanning'     => __( 'Scanning...', 'nexifymy-security' ),
-					'scanComplete' => __( 'Scan Complete', 'nexifymy-security' ),
-					'error'        => __( 'Error', 'nexifymy-security' ),
+				'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
+				'nonce'      => wp_create_nonce( 'nexifymy_security_nonce' ),
+				'chartJsUrl' => $chartjs_src,
+				'strings'    => array(
+					'scanning'                  => __( 'Scanning...', 'nexifymy-security' ),
+					'scanComplete'              => __( 'Scan Complete', 'nexifymy-security' ),
+					'error'                     => __( 'Error', 'nexifymy-security' ),
+					'saving'                    => __( 'Saving...', 'nexifymy-security' ),
+					'savedReloading'            => __( 'Settings saved. Reloading...', 'nexifymy-security' ),
+					'settingsSavedReloading'    => __( 'Settings saved successfully! Reloading...', 'nexifymy-security' ),
+					'failed'                    => __( 'Failed', 'nexifymy-security' ),
+					'connectionError'           => __( 'Connection error', 'nexifymy-security' ),
+					'securityCheckFailed'       => __( 'Security check failed. Refresh and try again.', 'nexifymy-security' ),
+					'settingsHandlerMissing'    => __( 'Settings handler not available.', 'nexifymy-security' ),
+					'confirmResetSettings'      => __( 'Reset all settings to defaults? This cannot be undone.', 'nexifymy-security' ),
+					'confirmPurgeCdn'           => __( 'Purge CDN cache now?', 'nexifymy-security' ),
+					'saveSettingsBtn'           => __( 'Save Settings', 'nexifymy-security' ),
+					'failedToSaveSettings'      => __( 'Failed to save settings. Please try again.', 'nexifymy-security' ),
+					'resetting'                 => __( 'Resetting...', 'nexifymy-security' ),
+					'settingsResetReloading'    => __( 'Settings reset to defaults. Reloading page...', 'nexifymy-security' ),
+					'resetToDefaultsBtn'        => __( 'Reset to Defaults', 'nexifymy-security' ),
+					'failedLoadAnalytics'       => __( 'Failed to load analytics data.', 'nexifymy-security' ),
+					'pageViews'                 => __( 'Page Views', 'nexifymy-security' ),
+					'uniqueVisitors'            => __( 'Unique Visitors', 'nexifymy-security' ),
+					'devices'                   => __( 'Devices', 'nexifymy-security' ),
+					'noDataAvailable'           => __( 'No data available', 'nexifymy-security' ),
+					'noDataForRange'            => __( 'No data available for this range.', 'nexifymy-security' ),
+					'trafficTrendFallbackChart' => __( 'Traffic trend chart', 'nexifymy-security' ),
+					'distributionFallbackChart' => __( 'Distribution breakdown chart', 'nexifymy-security' ),
+					'total'                     => __( 'Total', 'nexifymy-security' ),
+					'series'                    => __( 'Series', 'nexifymy-security' ),
 				),
 			)
 		);
@@ -375,9 +408,8 @@ class NexifyMy_Security_Admin {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$module  = isset( $_POST['module'] ) ? sanitize_key( $_POST['module'] ) : '';
-		$enabled = isset( $_POST['enabled'] ) ? absint( $_POST['enabled'] ) : 0;
-
+		$module  = isset( $_POST['module'] ) ? sanitize_key( wp_unslash( $_POST['module'] ) ) : '';
+		$enabled = isset( $_POST['enabled'] ) ? absint( wp_unslash( $_POST['enabled'] ) ) : 0;
 		if ( empty( $module ) ) {
 			wp_send_json_error( 'Invalid module' );
 		}
@@ -468,7 +500,8 @@ class NexifyMy_Security_Admin {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$module          = isset( $_POST['module'] ) ? sanitize_key( $_POST['module'] ) : '';
+		$module = isset( $_POST['module'] ) ? sanitize_key( wp_unslash( $_POST['module'] ) ) : '';
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized per-module by module manager.
 		$module_settings = isset( $_POST['settings'] ) ? wp_unslash( $_POST['settings'] ) : array();
 		if ( ! is_array( $module_settings ) ) {
 			$module_settings = array();
@@ -500,17 +533,37 @@ class NexifyMy_Security_Admin {
 
 			$excluded_paths_raw      = (string) ( $module_settings['excluded_paths'] ?? ( is_array( $current_scanner['excluded_paths'] ?? null ) ? implode( "\n", $current_scanner['excluded_paths'] ) : ( $current_scanner['excluded_paths'] ?? '' ) ) );
 			$excluded_extensions_raw = (string) ( $module_settings['excluded_extensions'] ?? ( is_array( $current_scanner['excluded_extensions'] ?? null ) ? implode( ',', $current_scanner['excluded_extensions'] ) : ( $current_scanner['excluded_extensions'] ?? '' ) ) );
+			$custom_paths_raw        = (string) ( $module_settings['custom_paths'] ?? ( is_array( $current_scanner['custom_paths'] ?? null ) ? implode( "\n", $current_scanner['custom_paths'] ) : ( $current_scanner['custom_paths'] ?? '' ) ) );
+			$excluded_patterns_raw   = (string) ( $module_settings['excluded_patterns'] ?? ( $current_scanner['excluded_patterns'] ?? '' ) );
 			$excluded_paths          = preg_split( '/[\r\n,]+/', $excluded_paths_raw );
 			$excluded_extensions     = preg_split( '/[\r\n,]+/', $excluded_extensions_raw );
+			$custom_paths            = preg_split( '/[\r\n,]+/', $custom_paths_raw );
 			$excluded_paths          = array_values( array_filter( array_map( 'sanitize_text_field', array_map( 'trim', (array) $excluded_paths ) ) ) );
 			$excluded_extensions     = array_values( array_filter( array_map( 'sanitize_text_field', array_map( 'trim', (array) $excluded_extensions ) ) ) );
+			$custom_paths            = array_values( array_filter( array_map( 'sanitize_text_field', array_map( 'trim', (array) $custom_paths ) ) ) );
+			$custom_paths_value      = implode( "\n", $custom_paths );
 
 			$settings['scanner'] = wp_parse_args(
 				array(
 					'default_mode'            => $default_mode,
 					'max_file_size_kb'        => max( 100, absint( $module_settings['max_file_size_kb'] ?? ( $current_scanner['max_file_size_kb'] ?? 2048 ) ) ),
+					'timeout'                 => max( 60, absint( $module_settings['timeout'] ?? ( $current_scanner['timeout'] ?? 300 ) ) ),
+					'memory_limit'            => max( 64, absint( $module_settings['memory_limit'] ?? ( $current_scanner['memory_limit'] ?? 256 ) ) ),
+					'sensitivity'             => in_array( sanitize_key( $module_settings['sensitivity'] ?? ( $current_scanner['sensitivity'] ?? 'medium' ) ), array( 'low', 'medium', 'high' ), true ) ? sanitize_key( $module_settings['sensitivity'] ?? ( $current_scanner['sensitivity'] ?? 'medium' ) ) : 'medium',
+					'scan_core'               => array_key_exists( 'scan_core', $module_settings ) ? ! empty( $module_settings['scan_core'] ) : ! empty( $current_scanner['scan_core'] ),
+					'scan_themes'             => array_key_exists( 'scan_themes', $module_settings ) ? ! empty( $module_settings['scan_themes'] ) : ! empty( $current_scanner['scan_themes'] ),
+					'scan_plugins'            => array_key_exists( 'scan_plugins', $module_settings ) ? ! empty( $module_settings['scan_plugins'] ) : ! empty( $current_scanner['scan_plugins'] ),
+					'scan_uploads'            => array_key_exists( 'scan_uploads', $module_settings ) ? ! empty( $module_settings['scan_uploads'] ) : ! empty( $current_scanner['scan_uploads'] ),
+					'custom_paths'            => $custom_paths_value,
+					'use_signatures'          => array_key_exists( 'use_signatures', $module_settings ) ? ! empty( $module_settings['use_signatures'] ) : ! empty( $current_scanner['use_signatures'] ),
+					'use_heuristics'          => array_key_exists( 'use_heuristics', $module_settings ) ? ! empty( $module_settings['use_heuristics'] ) : ! empty( $current_scanner['use_heuristics'] ),
+					'check_integrity'         => array_key_exists( 'check_integrity', $module_settings ) ? ! empty( $module_settings['check_integrity'] ) : ! empty( $current_scanner['check_integrity'] ),
+					'check_backdoors'         => array_key_exists( 'check_backdoors', $module_settings ) ? ! empty( $module_settings['check_backdoors'] ) : ! empty( $current_scanner['check_backdoors'] ),
+					'check_obfuscation'       => array_key_exists( 'check_obfuscation', $module_settings ) ? ! empty( $module_settings['check_obfuscation'] ) : ! empty( $current_scanner['check_obfuscation'] ),
+					'email_reports'           => array_key_exists( 'email_reports', $module_settings ) ? ! empty( $module_settings['email_reports'] ) : ! empty( $current_scanner['email_reports'] ),
 					'excluded_paths'          => $excluded_paths,
 					'excluded_extensions'     => $excluded_extensions,
+					'excluded_patterns'       => sanitize_textarea_field( $excluded_patterns_raw ),
 					'quarantine_mode'         => $quarantine_mode,
 					'auto_quarantine_enabled' => $quarantine_mode === 'auto',
 				),
@@ -765,6 +818,29 @@ class NexifyMy_Security_Admin {
 	}
 
 	/**
+	 * Regenerate CI/CD API key.
+	 *
+	 * @return void
+	 */
+	public function ajax_regenerate_cicd_api_key() {
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( __( 'Unauthorized', 'nexifymy-security' ) );
+		}
+
+		$new_key = wp_generate_password( 32, false );
+		update_option( 'nexifymy_cicd_api_key', $new_key, false );
+
+		wp_send_json_success(
+			array(
+				'api_key' => $new_key,
+				'message' => __( 'API key regenerated successfully.', 'nexifymy-security' ),
+			)
+		);
+	}
+
+	/**
 	 * Keep module state synchronized across modules[] and module-specific settings.
 	 *
 	 * @param array  $settings Settings array (passed by reference).
@@ -898,14 +974,14 @@ class NexifyMy_Security_Admin {
 				'title'   => __( 'Malware & Scanning', 'nexifymy-security' ),
 				'icon'    => 'search',
 				'modules' => array(
-					'scanner'         => array(
+					'scanner'            => array(
 						'name'    => __( 'Malware Scanner', 'nexifymy-security' ),
 						'desc'    => __( 'Detect threats', 'nexifymy-security' ),
 						'icon'    => 'warning',
 						'enabled' => $module_enabled( 'scanner_enabled', true ),
 						'tooltip' => __( 'Scans files for malware and suspicious code. Safe - only scans, does not modify files.', 'nexifymy-security' ),
 					),
-					'ai_detection'    => array(
+					'ai_detection'       => array(
 						'name'    => __( 'AI Threat Detection', 'nexifymy-security' ),
 						'desc'    => __( 'Behavioral analysis', 'nexifymy-security' ),
 						'icon'    => 'superhero-alt',
@@ -919,21 +995,21 @@ class NexifyMy_Security_Admin {
 						'enabled' => $module_enabled( 'predictive_hunting_enabled', true ),
 						'tooltip' => __( 'Profiles your stack, predicts likely attack vectors, and provides proactive hardening guidance.', 'nexifymy-security' ),
 					),
-					'core_repair'     => array(
+					'core_repair'        => array(
 						'name'    => __( 'Core File Repair', 'nexifymy-security' ),
 						'desc'    => __( 'Fix modified files', 'nexifymy-security' ),
 						'icon'    => 'update',
 						'enabled' => $module_enabled( 'core_repair_enabled', true ),
 						'tooltip' => __( 'Repairs modified WordPress core files. Use carefully - backs up before repairing.', 'nexifymy-security' ),
 					),
-					'background_scan' => array(
+					'background_scan'    => array(
 						'name'    => __( 'Scheduled Scans', 'nexifymy-security' ),
 						'desc'    => __( 'Automated scanning', 'nexifymy-security' ),
 						'icon'    => 'calendar-alt',
 						'enabled' => $module_enabled( 'background_scan_enabled', true ),
 						'tooltip' => __( 'Runs automatic malware scans daily. Safe - only scanning, no file changes.', 'nexifymy-security' ),
 					),
-					'vulnerabilities' => array(
+					'vulnerabilities'    => array(
 						'name'    => __( 'Vulnerability Check', 'nexifymy-security' ),
 						'desc'    => __( 'Plugin/theme CVEs', 'nexifymy-security' ),
 						'icon'    => 'flag',
@@ -1312,37 +1388,37 @@ class NexifyMy_Security_Admin {
 									'api_security' => 'nexifymy-security-modules',
 								);
 								$dashboard_toggle_map = array(
-									'waf'              => 'waf',
-									'scanner'          => 'scanner',
-									'background_scan'  => 'background_scan',
-									'rate_limiter'     => 'rate_limiter',
-									'login_protection' => 'login_protection',
-									'geo_blocking'     => 'geo_blocking',
-									'ai_detection'     => 'ai_detection',
+									'waf'                => 'waf',
+									'scanner'            => 'scanner',
+									'background_scan'    => 'background_scan',
+									'rate_limiter'       => 'rate_limiter',
+									'login_protection'   => 'login_protection',
+									'geo_blocking'       => 'geo_blocking',
+									'ai_detection'       => 'ai_detection',
 									'predictive_hunting' => 'predictive_hunting',
-									'core_repair'      => 'core_repair',
-									'vulnerabilities'  => 'vulnerability_scanner',
-									'two_factor'       => 'two_factor',
-									'captcha'          => 'captcha',
-									'password'         => 'password',
-									'hardening'        => 'hardening',
-									'hide_login'       => 'hide_login',
-									'self_protection'  => 'self_protection',
-									'live_traffic'     => 'live_traffic',
-									'api_security'     => 'api_security',
-									'graphql_security' => 'graphql_security',
-									'supply_chain'     => 'supply_chain',
-									'proactive'        => 'proactive',
-									'passkey'          => 'passkey',
-									'compliance'       => 'compliance',
-									'developer_api'    => 'developer_api',
-									'integrations'     => 'integrations',
-									'deception'        => 'deception',
-									'p2p'              => 'p2p',
-									'sandbox'          => 'sandbox',
-									'audit_log'        => 'activity_log',
-									'database'         => 'database',
-									'cdn'              => 'cdn',
+									'core_repair'        => 'core_repair',
+									'vulnerabilities'    => 'vulnerability_scanner',
+									'two_factor'         => 'two_factor',
+									'captcha'            => 'captcha',
+									'password'           => 'password',
+									'hardening'          => 'hardening',
+									'hide_login'         => 'hide_login',
+									'self_protection'    => 'self_protection',
+									'live_traffic'       => 'live_traffic',
+									'api_security'       => 'api_security',
+									'graphql_security'   => 'graphql_security',
+									'supply_chain'       => 'supply_chain',
+									'proactive'          => 'proactive',
+									'passkey'            => 'passkey',
+									'compliance'         => 'compliance',
+									'developer_api'      => 'developer_api',
+									'integrations'       => 'integrations',
+									'deception'          => 'deception',
+									'p2p'                => 'p2p',
+									'sandbox'            => 'sandbox',
+									'audit_log'          => 'activity_log',
+									'database'           => 'database',
+									'cdn'                => 'cdn',
 								);
 
 								foreach ( $category['modules'] as $mod_key => $module ) :
@@ -3097,7 +3173,7 @@ class NexifyMy_Security_Admin {
 						<tr>
 							<th><?php _e( 'Block Message', 'nexifymy-security' ); ?></th>
 							<td>
-								<input type="text" id="geo-message" class="regular-text" value="Access denied from your region." />
+								<input type="text" id="geo-message" class="regular-text" value="<?php echo esc_attr__( 'Access denied from your region.', 'nexifymy-security' ); ?>" />
 							</td>
 						</tr>
 					</table>
@@ -4192,7 +4268,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Scanner page with tabs.
 	 */
 	public function render_scanner_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'scanner';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'scanner';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -4237,7 +4313,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Firewall page with tabs.
 	 */
 	public function render_firewall_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'firewall';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'firewall';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -4282,7 +4358,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Modules page with tabs.
 	 */
 	public function render_modules_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'overview';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'overview';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -4384,7 +4460,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Tools page with tabs.
 	 */
 	public function render_tools_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'overview';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'overview';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -4435,7 +4511,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Settings page with tabs.
 	 */
 	public function render_settings_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'general';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'general';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -5412,7 +5488,7 @@ class NexifyMy_Security_Admin {
 							</thead>
 							<tbody>
 								<?php foreach ( $results['composer']['vulnerable'] as $pkg ) : ?>
-								<?php $composer_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
+									<?php $composer_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
 								<tr>
 									<td><code><?php echo esc_html( $pkg['name'] ); ?></code></td>
 									<td><?php echo esc_html( $pkg['version'] ); ?></td>
@@ -5470,7 +5546,7 @@ class NexifyMy_Security_Admin {
 							</thead>
 							<tbody>
 								<?php foreach ( $results['npm']['vulnerable'] as $pkg ) : ?>
-								<?php $npm_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
+									<?php $npm_fix = $pkg['patch_suggestions'][0] ?? array(); ?>
 								<tr>
 									<td><code><?php echo esc_html( $pkg['name'] ); ?></code></td>
 									<td><?php echo esc_html( $pkg['version'] ); ?></td>
@@ -5623,7 +5699,7 @@ class NexifyMy_Security_Admin {
 					</tr>
 				</table>
 				<p class="submit">
-					<button type="button" class="button button-primary" id="save-supply-chain-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+					<button type="button" class="nms-btn nms-btn-primary" id="save-supply-chain-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
 				</p>
 			</div>
 		</div>
@@ -5962,7 +6038,7 @@ class NexifyMy_Security_Admin {
 					</tr>
 				</table>
 				<p class="submit">
-					<button type="button" class="button button-primary" id="save-compliance-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
+					<button type="button" class="nms-btn nms-btn-primary" id="save-compliance-settings"><?php _e( 'Save Settings', 'nexifymy-security' ); ?></button>
 				</p>
 			</div>
 		</div>
@@ -6244,9 +6320,21 @@ class NexifyMy_Security_Admin {
 	}
 
 	/**
+	 * Backward-compatible logs tab renderer.
+	 *
+	 * Older dashboard markup still calls render_logs_tab(), while
+	 * the current implementation lives in render_logs_content().
+	 */
+	private function render_logs_tab() {
+
+		$this->render_logs_content();
+	}
+
+	/**
 	 * Render logs content for tab panel.
 	 */
 	private function render_logs_content() {
+
 		?>
 		<div class="nms-card">
 			<div class="nms-card-header nms-flex-between">
@@ -6670,7 +6758,7 @@ class NexifyMy_Security_Admin {
 				$auto_update = isset( $settings['signatures']['auto_update'] ) ? $settings['signatures']['auto_update'] : true;
 				$next_update = wp_next_scheduled( 'nexifymy_update_signatures' );
 				?>
-				<table class="form-table nms-mb-20">
+				<table class="form-table nms-mb-20 nms-signature-updates-table">
 					<tr>
 						<th><?php _e( 'Auto-Update', 'nexifymy-security' ); ?></th>
 						<td>
@@ -6681,13 +6769,17 @@ class NexifyMy_Security_Admin {
 							<p class="description"><?php _e( 'Automatically update malware signatures daily.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
-					<tr>
+					<tr class="nms-inline-align-row">
 						<th class="nms-auto-s191"><?php _e( 'Next Update', 'nexifymy-security' ); ?></th>
 						<td class="nms-auto-s191">
-							<?php if ( $next_update ) : ?>
-								<span class="nms-auto-s032"><?php echo human_time_diff( $next_update ) . ' ' . __( 'from now', 'nexifymy-security' ); ?></span>
-							<?php else : ?>
-								<span class="nms-auto-s025"><?php _e( 'Not scheduled', 'nexifymy-security' ); ?></span>
+							<?php
+							if ( $next_update ) :
+								?>
+								<span class="nms-auto-s032 nms-next-update-value"><?php echo human_time_diff( $next_update ) . ' ' . __( 'from now', 'nexifymy-security' ); ?></span>
+								<?php
+							else :
+								?>
+								<span class="nms-auto-s025 nms-next-update-value"><?php _e( 'Not scheduled', 'nexifymy-security' ); ?></span>
 							<?php endif; ?>
 						</td>
 					</tr>
@@ -6718,7 +6810,7 @@ class NexifyMy_Security_Admin {
 			<div class="nms-stat-card">
 				<div class="nms-stat-icon blue"><span class="dashicons dashicons-superhero"></span></div>
 				<div class="nms-stat-content">
-					<h4><?php echo isset( $ai_status['learning_status'] ) ? ucfirst( esc_html( $ai_status['learning_status'] ) ) : 'Learning'; ?></h4>
+					<h4 id="ai-learning-status"><?php echo isset( $ai_status['learning_status'] ) ? ucfirst( esc_html( $ai_status['learning_status'] ) ) : 'Learning'; ?></h4>
 					<p><?php _e( 'AI Status', 'nexifymy-security' ); ?></p>
 				</div>
 			</div>
@@ -7172,6 +7264,8 @@ class NexifyMy_Security_Admin {
 		$bg_settings         = isset( $settings['background_scan'] ) ? $settings['background_scan'] : array();
 		$excluded_paths      = $scanner_settings['excluded_paths'] ?? array();
 		$excluded_paths_text = is_array( $excluded_paths ) ? implode( "\n", $excluded_paths ) : (string) $excluded_paths;
+		$custom_paths        = $scanner_settings['custom_paths'] ?? '';
+		$custom_paths_text   = is_array( $custom_paths ) ? implode( "\n", $custom_paths ) : (string) $custom_paths;
 		$quarantine_mode     = $scanner_settings['quarantine_mode'] ?? ( ! empty( $scanner_settings['auto_quarantine_enabled'] ) ? 'auto' : 'manual' );
 		?>
 		<div class="nms-card">
@@ -7283,7 +7377,7 @@ class NexifyMy_Security_Admin {
 					<tr>
 						<th><?php _e( 'Scan Custom Directories', 'nexifymy-security' ); ?></th>
 						<td>
-							<textarea id="scanner-custom-paths" rows="3" class="large-text code"><?php echo esc_textarea( $scanner_settings['custom_paths'] ?? '' ); ?></textarea>
+							<textarea id="scanner-custom-paths" rows="3" class="large-text code"><?php echo esc_textarea( $custom_paths_text ); ?></textarea>
 							<p class="description"><?php _e( 'One path per line. Absolute paths to additional directories to scan.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
@@ -8180,7 +8274,7 @@ class NexifyMy_Security_Admin {
 	 * Render the Integrations page.
 	 */
 	public function render_integrations_page() {
-		$active_tab   = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'overview';
+		$active_tab   = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'overview';
 		$settings     = get_option( 'nexifymy_security_settings', array() );
 		$integrations = isset( $settings['integrations'] ) ? $settings['integrations'] : array();
 		?>
@@ -9144,14 +9238,14 @@ jobs:
 								$rec_icon_class     = $rec_icon_class_map[ $rec_color_key ] ?? 'nms-rec-icon-default';
 								?>
 								<div class="nms-recommendation-item nms-auto-s173">
-									<div class="nms-auto-s042">
+									<div class="nms-recommendation-main nms-auto-s042">
 										<div class="nms-rec-icon <?php echo esc_attr( $rec_icon_class ); ?>">
 											<span class="dashicons dashicons-<?php echo esc_attr( $rec['icon'] ); ?>"></span>
 										</div>
-										<div class="nms-auto-s070">
-											<h4 class="nms-auto-s127"><?php echo esc_html( $rec['title'] ); ?></h4>
-											<p class="nms-auto-s124"><?php echo esc_html( $rec['description'] ); ?></p>
-											<div class="nms-auto-s044">
+										<div class="nms-recommendation-content nms-auto-s070">
+											<h4 class="nms-recommendation-title nms-auto-s127"><?php echo esc_html( $rec['title'] ); ?></h4>
+											<p class="nms-recommendation-description nms-auto-s124"><?php echo esc_html( $rec['description'] ); ?></p>
+											<div class="nms-recommendation-actions nms-auto-s044">
 												<span class="nms-badge nms-badge-<?php echo esc_attr( $rec['severity'] ?? 'info' ); ?>">
 													<?php echo esc_html( ucfirst( $rec['severity'] ?? 'info' ) ); ?>
 												</span>
@@ -9298,7 +9392,7 @@ jobs:
 	 * Render the Activity Log page with tabs.
 	 */
 	public function render_activity_log_page() {
-		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'overview';
+		$active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'overview';
 		?>
 		<div class="wrap nexifymy-security-wrap nms-tabbed-page">
 			<div class="nms-page-header">
@@ -9670,8 +9764,10 @@ jobs:
 								<?php foreach ( array_slice( $stats['active_users'], 0, 5 ) as $index => $user ) : ?>
 									<tr class="<?php echo $index % 2 === 0 ? 'nms-row-alt' : ''; ?>">
 										<td class="nms-auto-s166">
-											<strong><?php echo esc_html( $user->username ); ?></strong>
-											<br><small class="nms-auto-s025"><?php echo esc_html( ucfirst( $user->user_role ) ); ?></small>
+											<div class="nms-active-user-meta">
+												<strong class="nms-active-user-name"><?php echo esc_html( $user->username ); ?></strong>
+												<small class="nms-auto-s025 nms-active-user-role"><?php echo esc_html( ucfirst( $user->user_role ) ); ?></small>
+											</div>
 										</td>
 										<td class="nms-auto-s189">
 											<span class="nms-badge nms-badge-primary"><?php echo number_format( $user->count ); ?></span>
@@ -10549,10 +10645,11 @@ jobs:
 		}
 
 		$settings = get_option( 'nexifymy_security_settings', array() );
-		$payload  = isset( $_POST['settings'] ) && is_array( $_POST['settings'] )
+       // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized per-field below in this method.
+		$payload = isset( $_POST['settings'] ) && is_array( $_POST['settings'] )
 			? wp_unslash( $_POST['settings'] )
-			: wp_unslash( $_POST );
-		$to_bool  = static function ( $value ) {
+		: wp_unslash( $_POST );
+		$to_bool = static function ( $value ) {
 			if ( is_bool( $value ) ) {
 				return $value;
 			}
@@ -10607,10 +10704,10 @@ jobs:
 		$p2p_broadcast_enabled = isset( $settings['p2p_broadcast_enabled'] ) ? $settings['p2p_broadcast_enabled'] : ( $modules['p2p_broadcast_enabled'] ?? true );
 		$p2p_trust_threshold   = isset( $settings['p2p_trust_threshold'] ) ? intval( $settings['p2p_trust_threshold'] ) : intval( $modules['p2p_trust_threshold'] ?? 70 );
 
-		$peers       = NexifyMy_Security_P2P::get_peers();
-		$node_key    = NexifyMy_Security_P2P::get_node_key();
-		$daily_count = NexifyMy_Security_P2P::get_daily_threat_count();
-		$credit_summary = method_exists( 'NexifyMy_Security_P2P', 'get_my_credit_summary' )
+		$peers              = NexifyMy_Security_P2P::get_peers();
+		$node_key           = NexifyMy_Security_P2P::get_node_key();
+		$daily_count        = NexifyMy_Security_P2P::get_daily_threat_count();
+		$credit_summary     = method_exists( 'NexifyMy_Security_P2P', 'get_my_credit_summary' )
 			? NexifyMy_Security_P2P::get_my_credit_summary()
 			: array();
 		$credit_leaderboard = method_exists( 'NexifyMy_Security_P2P', 'get_credit_leaderboard' )
@@ -10935,7 +11032,7 @@ jobs:
 		$settings['p2p_enabled']           = ! empty( $_POST['p2p_enabled'] );
 		$settings['p2p_broadcast_enabled'] = ! empty( $_POST['p2p_broadcast_enabled'] );
 		$settings['p2p_trust_threshold']   = isset( $_POST['p2p_trust_threshold'] )
-			? max( 0, min( 100, intval( $_POST['p2p_trust_threshold'] ) ) )
+			? max( 0, min( 100, intval( wp_unslash( $_POST['p2p_trust_threshold'] ) ) ) )
 			: 70;
 		if ( ! isset( $settings['modules'] ) || ! is_array( $settings['modules'] ) ) {
 			$settings['modules'] = array();
@@ -11041,6 +11138,7 @@ jobs:
 			wp_send_json_error( __( 'Sandbox console is disabled.', 'nexifymy-security' ) );
 		}
 
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Raw PHP is required for sandbox analysis.
 		$code        = isset( $_POST['code'] ) ? wp_unslash( $_POST['code'] ) : '';
 		$timeout     = isset( $_POST['timeout'] ) ? absint( $_POST['timeout'] ) : 5;
 		$static_only = ! empty( $_POST['static_only'] );
@@ -11099,11 +11197,11 @@ jobs:
 							<p class="nms-sandbox-banner-note">
 								<?php esc_html_e( 'The Shadow Runtime Sandbox is currently disabled. Enable it in Settings to use the console.', 'nexifymy-security' ); ?>
 							</p>
-							<p class="nms-sandbox-banner-note">
-								<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings&tab=general#sandbox-controls' ) ); ?>" class="nms-btn nms-btn-primary nms-btn-sm">
+							<div class="nms-sandbox-banner-actions">
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings&tab=general#sandbox-controls' ) ); ?>" class="nms-btn nms-btn-primary nms-sandbox-banner-cta">
 									<?php esc_html_e( 'Go to Settings', 'nexifymy-security' ); ?>
 								</a>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -11116,11 +11214,11 @@ jobs:
 							<p class="nms-sandbox-banner-note">
 								<?php esc_html_e( 'The Sandbox module is enabled, but the admin console is disabled. Enable the console setting to run code from wp-admin.', 'nexifymy-security' ); ?>
 							</p>
-							<p class="nms-sandbox-banner-note">
-								<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings&tab=general#sandbox-controls' ) ); ?>" class="nms-btn nms-btn-primary nms-btn-sm">
+							<div class="nms-sandbox-banner-actions">
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=nexifymy-security-settings&tab=general#sandbox-controls' ) ); ?>" class="nms-btn nms-btn-primary nms-sandbox-banner-cta">
 									<?php esc_html_e( 'Go to Settings', 'nexifymy-security' ); ?>
 								</a>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -11219,7 +11317,7 @@ jobs:
 		if ( isset( $GLOBALS['nexifymy_temp_permissions'] )
 			&& $GLOBALS['nexifymy_temp_permissions'] instanceof NexifyMy_Security_Temp_Permissions
 		) {
-			$action = isset( $_REQUEST['action'] ) ? sanitize_key( $_REQUEST['action'] ) : '';
+			$action = isset( $_REQUEST['action'] ) ? sanitize_key( wp_unslash( $_REQUEST['action'] ) ) : '';
 			switch ( $action ) {
 				case 'nexifymy_request_temp_access':
 					$GLOBALS['nexifymy_temp_permissions']->ajax_request_access();

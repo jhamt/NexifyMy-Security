@@ -52,7 +52,8 @@ class NexifyMy_Security_Notifications {
 		add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_item' ), 100 );
 
 		if ( is_admin() ) {
-			add_action( 'admin_notices', array( $this, 'maybe_show_admin_notice' ) );
+			// Use the standard WP notice stack at the top of admin screens.
+			add_action( 'all_admin_notices', array( $this, 'maybe_show_admin_notice' ), 1 );
 
 			// AJAX endpoints for the Notifications page.
 			add_action( 'wp_ajax_nexifymy_get_notifications', array( $this, 'ajax_get_notifications' ) );
@@ -180,9 +181,11 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		$screen_id = ( $screen && isset( $screen->id ) ) ? (string) $screen->id : '';
 
-		// Don't show on notifications page itself.
-		if ( $screen && isset( $screen->id ) && strpos( $screen->id, 'nexifymy-security-notifications' ) !== false ) {
+		// Do not inject this global notice inside NexifyMy plugin admin pages.
+		// The plugin already has a dedicated Notifications page and admin-bar badge.
+		if ( '' !== $screen_id && strpos( $screen_id, 'nexifymy-security' ) !== false ) {
 			return;
 		}
 
@@ -193,21 +196,23 @@ class NexifyMy_Security_Notifications {
 
 		$url = admin_url( 'admin.php?page=nexifymy-security-notifications' );
 		?>
-		<div class="notice notice-warning nms-admin-notice is-dismissible">
-			<div class="nms-admin-notice-icon">
-				<span class="dashicons dashicons-shield-alt"></span>
-			</div>
-			<div class="nms-admin-notice-content">
-				<p>
-					<?php
-					printf(
-						__( 'NexifyMy Security: You have %d unread security alert(s).', 'nexifymy-security' ),
-						(int) $count
-					);
-					?>
-					<a href="<?php echo esc_url( $url ); ?>"><?php _e( 'Review Alerts &rsaquo;', 'nexifymy-security' ); ?></a>
-				</p>
-			</div>
+		<div class="notice notice-warning is-dismissible">
+			<p>
+				<strong><?php esc_html_e( 'NexifyMy Security:', 'nexifymy-security' ); ?></strong>
+				<?php
+				printf(
+					' %s ',
+					esc_html(
+						sprintf(
+							/* translators: %d: unread alerts count */
+							__( 'You have %d unread security alert(s).', 'nexifymy-security' ),
+							(int) $count
+						)
+					)
+				);
+				?>
+				<a href="<?php echo esc_url( $url ); ?>" class="button-link"><?php esc_html_e( 'Review Alerts', 'nexifymy-security' ); ?></a>
+			</p>
 		</div>
 		<?php
 	}
@@ -269,7 +274,7 @@ class NexifyMy_Security_Notifications {
 		}
 
 		$table = $wpdb->prefix . 'nexifymy_security_logs';
-		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) !== $table ) {
+		if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) !== $table ) {
 			return null;
 		}
 
@@ -300,7 +305,6 @@ class NexifyMy_Security_Notifications {
 			return 0;
 		}
 
-		return (int) $wpdb->get_var( "SELECT MAX(id) FROM {$table}" );
+		return (int) $wpdb->get_var( "SELECT MAX(id) FROM {$table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 }
-

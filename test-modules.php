@@ -5,7 +5,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	require_once( dirname( __FILE__ ) . '/../../../wp-load.php' );
+	require_once __DIR__ . '/../../../wp-load.php';
 }
 
 echo "=== NexifyMy Security Module Test ===\n\n";
@@ -16,7 +16,7 @@ $settings = get_option( 'nexifymy_security_settings', array() );
 echo "1. Testing Module Toggles:\n";
 $test_modules = array( 'captcha', 'two_factor', 'geo_blocking', 'waf', 'scanner' );
 foreach ( $test_modules as $module ) {
-	$key = $module . '_enabled';
+	$key    = $module . '_enabled';
 	$status = isset( $settings['modules'][ $key ] ) ? ( $settings['modules'][ $key ] ? 'ENABLED' : 'DISABLED' ) : 'NOT SET';
 	echo "   - {$module}: {$status}\n";
 }
@@ -24,9 +24,9 @@ foreach ( $test_modules as $module ) {
 // Test 2: Captcha Operations
 echo "\n2. Testing CAPTCHA Operations:\n";
 if ( class_exists( 'NexifyMy_Security_Login_Captcha' ) ) {
-	$captcha = new NexifyMy_Security_Login_Captcha();
+	$captcha    = new NexifyMy_Security_Login_Captcha();
 	$reflection = new ReflectionClass( $captcha );
-	$method = $reflection->getMethod( 'generate_captcha' );
+	$method     = $reflection->getMethod( 'generate_captcha' );
 	$method->setAccessible( true );
 
 	// Test all operations
@@ -38,8 +38,8 @@ if ( class_exists( 'NexifyMy_Security_Login_Captcha' ) ) {
 		}
 	}
 
-	echo "   Operations available: " . implode( ', ', array_keys( $ops_found ) ) . "\n";
-	echo "   Division (÷) present: " . ( isset( $ops_found['÷'] ) ? 'YES ✓' : 'NO ✗' ) . "\n";
+	echo '   Operations available: ' . implode( ', ', array_keys( $ops_found ) ) . "\n";
+	echo '   Division (÷) present: ' . ( isset( $ops_found['÷'] ) ? 'YES ✓' : 'NO ✗' ) . "\n";
 } else {
 	echo "   CAPTCHA class not found\n";
 }
@@ -48,9 +48,9 @@ if ( class_exists( 'NexifyMy_Security_Login_Captcha' ) ) {
 echo "\n3. Testing Geo Blocking:\n";
 if ( isset( $settings['geo_blocking'] ) ) {
 	$geo = $settings['geo_blocking'];
-	echo "   Enabled: " . ( ! empty( $geo['enabled'] ) ? 'YES' : 'NO' ) . "\n";
-	echo "   Mode: " . ( $geo['mode'] ?? 'NOT SET' ) . "\n";
-	echo "   Countries: " . ( ! empty( $geo['countries'] ) ? count( $geo['countries'] ) . ' selected' : 'NONE' ) . "\n";
+	echo '   Enabled: ' . ( ! empty( $geo['enabled'] ) ? 'YES' : 'NO' ) . "\n";
+	echo '   Mode: ' . ( $geo['mode'] ?? 'NOT SET' ) . "\n";
+	echo '   Countries: ' . ( ! empty( $geo['countries'] ) ? count( $geo['countries'] ) . ' selected' : 'NONE' ) . "\n";
 } else {
 	echo "   Settings not configured\n";
 }
