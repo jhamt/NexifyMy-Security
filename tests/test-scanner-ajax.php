@@ -10,7 +10,7 @@ class Test_Scanner_Ajax extends \PHPUnit\Framework\TestCase {
 
 	protected function setUp(): void {
 		global $nexifymy_test_options;
-		$nexifymy_test_options = array();
+		$nexifymy_test_options            = array();
 		$GLOBALS['nexifymy_test_actions'] = array();
 		$GLOBALS['nexifymy_test_filters'] = array();
 	}
@@ -52,4 +52,3 @@ class Test_Scanner_Ajax extends \PHPUnit\Framework\TestCase {
 		$scanner->ajax_scan();
 	}
 }
-

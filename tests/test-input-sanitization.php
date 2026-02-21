@@ -114,11 +114,11 @@ class Test_Input_Sanitization extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_strip_html() {
 		$inputs = array(
-			'<script>alert("xss")</script>'  => '',
-			'<p>Hello</p>'                   => 'Hello',
-			'Hello <b>World</b>'             => 'Hello World',
-			'<a href="link">Click</a>'       => 'Click',
-			'Normal text'                    => 'Normal text',
+			'<script>alert("xss")</script>' => '',
+			'<p>Hello</p>'                  => 'Hello',
+			'Hello <b>World</b>'            => 'Hello World',
+			'<a href="link">Click</a>'      => 'Click',
+			'Normal text'                   => 'Normal text',
 		);
 
 		foreach ( $inputs as $input => $expected ) {
@@ -135,17 +135,17 @@ class Test_Input_Sanitization extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_trim_whitespace() {
 		$inputs = array(
-			'  hello  '     => 'hello',
-			"\n\ttext\n"    => 'text',
-			'   '           => '',
-			'no trim'       => 'no trim',
+			'  hello  '  => 'hello',
+			"\n\ttext\n" => 'text',
+			'   '        => '',
+			'no trim'    => 'no trim',
 		);
 
 		foreach ( $inputs as $input => $expected ) {
 			$this->assertEquals(
 				$expected,
 				$this->sanitize_text( $input ),
-				"Failed to trim: " . json_encode( $input )
+				'Failed to trim: ' . json_encode( $input )
 			);
 		}
 	}
@@ -200,9 +200,9 @@ class Test_Input_Sanitization extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_sanitize_array() {
 		$input = array(
-			'name'    => '  <b>John</b>  ',
-			'email'   => 'john@example.com',
-			'nested'  => array(
+			'name'   => '  <b>John</b>  ',
+			'email'  => 'john@example.com',
+			'nested' => array(
 				'value' => '<b>Test</b>',
 			),
 		);

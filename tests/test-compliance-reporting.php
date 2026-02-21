@@ -11,7 +11,7 @@ class Test_Compliance_Reporting extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		global $wpdb, $nexifymy_test_options;
 
-		$nexifymy_test_options              = array();
+		$nexifymy_test_options               = array();
 		$GLOBALS['nexifymy_test_transients'] = array();
 		$GLOBALS['nexifymy_test_userdata']   = array(
 			42 => (object) array(
@@ -31,19 +31,28 @@ class Test_Compliance_Reporting extends \PHPUnit\Framework\TestCase {
 	public function test_scan_for_pii_discovers_email_columns() {
 		global $wpdb;
 
-		$wpdb->get_col_map = array(
+		$wpdb->get_col_map     = array(
 			'SHOW TABLES' => array( 'wp_users', 'wp_comments' ),
 		);
 		$wpdb->get_results_map = array(
-			'DESCRIBE `wp_users`' => array(
-				array( 'Field' => 'user_email', 'Type' => 'varchar(255)' ),
-				array( 'Field' => 'display_name', 'Type' => 'varchar(255)' ),
+			'DESCRIBE `wp_users`'    => array(
+				array(
+					'Field' => 'user_email',
+					'Type'  => 'varchar(255)',
+				),
+				array(
+					'Field' => 'display_name',
+					'Type'  => 'varchar(255)',
+				),
 			),
 			'DESCRIBE `wp_comments`' => array(
-				array( 'Field' => 'comment_author_email', 'Type' => 'varchar(255)' ),
+				array(
+					'Field' => 'comment_author_email',
+					'Type'  => 'varchar(255)',
+				),
 			),
 		);
-		$wpdb->get_var_map = array(
+		$wpdb->get_var_map     = array(
 			'FROM `wp_users` WHERE `user_email` IS NOT NULL'            => 4,
 			'FROM `wp_users` WHERE `display_name` IS NOT NULL'          => 4,
 			'FROM `wp_comments` WHERE `comment_author_email` IS NOT NULL' => 2,
@@ -61,21 +70,27 @@ class Test_Compliance_Reporting extends \PHPUnit\Framework\TestCase {
 	public function test_generate_data_map_report_includes_article_30_metadata() {
 		global $wpdb;
 
-		$wpdb->get_col_map = array(
+		$wpdb->get_col_map     = array(
 			'SHOW TABLES' => array( 'wp_users', 'wp_options' ),
 		);
 		$wpdb->get_results_map = array(
-			'DESCRIBE `wp_users`' => array(
-				array( 'Field' => 'user_email', 'Type' => 'varchar(255)' ),
+			'DESCRIBE `wp_users`'   => array(
+				array(
+					'Field' => 'user_email',
+					'Type'  => 'varchar(255)',
+				),
 			),
 			'DESCRIBE `wp_options`' => array(
-				array( 'Field' => 'option_name', 'Type' => 'varchar(191)' ),
+				array(
+					'Field' => 'option_name',
+					'Type'  => 'varchar(191)',
+				),
 			),
-			"FROM `wp_options`" => array(
+			'FROM `wp_options`'     => array(
 				array( 'option_name' => 'google_analytics_key' ),
 			),
 		);
-		$wpdb->get_var_map = array(
+		$wpdb->get_var_map     = array(
 			"SHOW TABLES LIKE 'wp_options'" => 'wp_options',
 			"SHOW TABLES LIKE 'wp_users'"   => 'wp_users',
 			'FROM `wp_users` WHERE `user_email` IS NOT NULL' => 5,

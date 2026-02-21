@@ -11,11 +11,11 @@ class Test_Consent_Management extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		global $wpdb;
 
-		$GLOBALS['nexifymy_testing_user_id']    = 0;
-		$GLOBALS['nexifymy_test_shortcodes']    = array();
-		$GLOBALS['nexifymy_test_transients']    = array();
-		$GLOBALS['nexifymy_test_options']       = array();
-		$_COOKIE                                = array();
+		$GLOBALS['nexifymy_testing_user_id'] = 0;
+		$GLOBALS['nexifymy_test_shortcodes'] = array();
+		$GLOBALS['nexifymy_test_transients'] = array();
+		$GLOBALS['nexifymy_test_options']    = array();
+		$_COOKIE                             = array();
 
 		$wpdb->queries         = array();
 		$wpdb->get_var_map     = array();

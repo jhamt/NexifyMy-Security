@@ -38,8 +38,8 @@ class Test_Supply_Chain_Security extends \PHPUnit\Framework\TestCase {
 
 		$vulnerabilities = array(
 			array(
-				'id'      => 'OSV-2026-2000',
-				'summary' => 'Raw OSV payload',
+				'id'       => 'OSV-2026-2000',
+				'summary'  => 'Raw OSV payload',
 				'affected' => array(
 					array(
 						'ranges' => array(

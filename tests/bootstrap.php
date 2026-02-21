@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * PHPUnit Bootstrap for NexifyMy Security Tests.
  *
@@ -35,7 +35,7 @@ if ( ! defined( 'YEAR_IN_SECONDS' ) ) {
 
 // Mock WordPress functions for standalone testing.
 if ( ! function_exists( '__' ) ) {
-	function __( $text ) {
+	function __( $text, $domain = 'default' ) {
 		return $text;
 	}
 }
@@ -59,7 +59,7 @@ if ( ! function_exists( 'esc_attr' ) ) {
 }
 
 if ( ! function_exists( 'esc_html__' ) ) {
-	function esc_html__( $text ) {
+	function esc_html__( $text, $domain = 'default' ) {
 		return $text;
 	}
 }
@@ -102,7 +102,7 @@ if ( ! function_exists( 'wp_rand' ) ) {
 
 if ( ! function_exists( 'wp_generate_uuid4' ) ) {
 	function wp_generate_uuid4() {
-		$data = random_bytes( 16 );
+		$data    = random_bytes( 16 );
 		$data[6] = chr( ( ord( $data[6] ) & 0x0f ) | 0x40 );
 		$data[8] = chr( ( ord( $data[8] ) & 0x3f ) | 0x80 );
 		return vsprintf( '%s%s-%s-%s-%s-%s%s%s', str_split( bin2hex( $data ), 4 ) );
@@ -150,9 +150,9 @@ if ( ! function_exists( 'wp_doing_cron' ) ) {
 if ( ! function_exists( 'add_action' ) ) {
 	function add_action( $hook, $callback, $priority = 10, $accepted_args = 1 ) {
 		$GLOBALS['nexifymy_test_actions'][ $hook ][] = array(
-			'callback'       => $callback,
-			'priority'       => $priority,
-			'accepted_args'  => $accepted_args,
+			'callback'      => $callback,
+			'priority'      => $priority,
+			'accepted_args' => $accepted_args,
 		);
 		return true;
 	}
@@ -161,9 +161,9 @@ if ( ! function_exists( 'add_action' ) ) {
 if ( ! function_exists( 'add_filter' ) ) {
 	function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) {
 		$GLOBALS['nexifymy_test_filters'][ $hook ][] = array(
-			'callback'       => $callback,
-			'priority'       => $priority,
-			'accepted_args'  => $accepted_args,
+			'callback'      => $callback,
+			'priority'      => $priority,
+			'accepted_args' => $accepted_args,
 		);
 		return true;
 	}
@@ -256,7 +256,11 @@ if ( ! function_exists( 'wp_send_json_error' ) ) {
 
 if ( ! function_exists( 'wp_send_json_success' ) ) {
 	function wp_send_json_success( $data = null, $status_code = null ) {
-		return array( 'success' => true, 'data' => $data, 'status_code' => $status_code );
+		return array(
+			'success'     => true,
+			'data'        => $data,
+			'status_code' => $status_code,
+		);
 	}
 }
 
@@ -311,7 +315,7 @@ if ( ! function_exists( 'wp_mkdir_p' ) ) {
 if ( ! function_exists( 'wp_generate_password' ) ) {
 	function wp_generate_password( $length = 12, $special_chars = true ) {
 		$chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-		$out = '';
+		$out   = '';
 		for ( $i = 0; $i < $length; $i++ ) {
 			$out .= $chars[ random_int( 0, strlen( $chars ) - 1 ) ];
 		}
@@ -669,27 +673,27 @@ global $nexifymy_test_options;
 $nexifymy_test_options = array();
 
 // Initialize hook/cron storage.
-$GLOBALS['nexifymy_test_actions'] = array();
-$GLOBALS['nexifymy_test_filters'] = array();
-$GLOBALS['nexifymy_test_cron']    = array();
-$GLOBALS['nexifymy_test_mail']    = array();
+$GLOBALS['nexifymy_test_actions']   = array();
+$GLOBALS['nexifymy_test_filters']   = array();
+$GLOBALS['nexifymy_test_cron']      = array();
+$GLOBALS['nexifymy_test_mail']      = array();
 $GLOBALS['nexifymy_test_user_meta'] = array();
 $GLOBALS['nexifymy_test_userdata']  = array();
 
 // Minimal $wpdb mock for module/unit tests.
 if ( empty( $GLOBALS['wpdb'] ) ) {
 	class NexifyMy_Test_WPDB {
-		public $prefix = 'wp_';
-		public $dbname = 'wordpress';
-		public $usermeta = 'wp_usermeta';
-		public $insert_calls = array();
-		public $update_calls = array();
-		public $queries = array();
-		public $get_var_map = array();
-		public $get_col_map = array();
-		public $get_row_map = array();
+		public $prefix          = 'wp_';
+		public $dbname          = 'WordPress';
+		public $usermeta        = 'wp_usermeta';
+		public $insert_calls    = array();
+		public $update_calls    = array();
+		public $queries         = array();
+		public $get_var_map     = array();
+		public $get_col_map     = array();
+		public $get_row_map     = array();
 		public $get_results_map = array();
-		public $insert_id = 1;
+		public $insert_id       = 1;
 
 		public function get_charset_collate() {
 			return 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci';
@@ -776,13 +780,13 @@ if ( ! function_exists( 'get_role' ) ) {
 					'manage_categories' => true,
 				),
 			),
-			'editor' => (object) array(
+			'editor'        => (object) array(
 				'capabilities' => array(
 					'edit_posts'   => true,
 					'delete_posts' => true,
 				),
 			),
-			'subscriber' => (object) array(
+			'subscriber'    => (object) array(
 				'capabilities' => array(
 					'read' => true,
 				),
@@ -881,5 +885,17 @@ if ( ! class_exists( 'NexifyMy_Security_Firewall', false ) ) {
 			$GLOBALS['nexifymy_test_firewall_blocks'][] = compact( 'ip', 'reason' );
 			return true;
 		}
+	}
+}
+
+if ( ! function_exists( 'sanitize_textarea_field' ) ) {
+	function sanitize_textarea_field( $str ) {
+		return strip_tags( (string) $str );
+	}
+}
+
+if ( ! function_exists( 'wp_script_is' ) ) {
+	function wp_script_is( $handle, $status = 'enqueued' ) {
+		return false;
 	}
 }

@@ -20,7 +20,7 @@ class Test_Deception_Files extends \PHPUnit\Framework\TestCase {
 		delete_option( 'nexifymy_honeypot_beacon_token' );
 		delete_option( 'nexifymy_deception_beacon_token' );
 
-		$GLOBALS['nexifymy_test_logger_calls']   = array();
+		$GLOBALS['nexifymy_test_logger_calls']    = array();
 		$GLOBALS['nexifymy_test_firewall_blocks'] = array();
 		$GLOBALS['nexifymy_test_transients']      = array();
 		$GLOBALS['nexifymy_testing_user_id']      = 0;

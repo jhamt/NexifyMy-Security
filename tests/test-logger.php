@@ -140,14 +140,14 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 		$retention_days = 30;
 
 		// Add old log (35 days ago).
-		$old_log = $this->create_log( 'info', 'Old event' );
+		$old_log              = $this->create_log( 'info', 'Old event' );
 		$old_log['timestamp'] = time() - ( 35 * 86400 );
-		$this->logs[] = $old_log;
+		$this->logs[]         = $old_log;
 
 		// Add recent log (5 days ago).
-		$recent_log = $this->create_log( 'info', 'Recent event' );
+		$recent_log              = $this->create_log( 'info', 'Recent event' );
 		$recent_log['timestamp'] = time() - ( 5 * 86400 );
-		$this->logs[] = $recent_log;
+		$this->logs[]            = $recent_log;
 
 		// Apply retention.
 		$this->apply_retention( $retention_days );
@@ -163,16 +163,16 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 	public function test_cleanup_reduces_log_count() {
 		// Add 100 old logs.
 		for ( $i = 0; $i < 100; $i++ ) {
-			$log = $this->create_log( 'info', "Old event $i" );
+			$log              = $this->create_log( 'info', "Old event $i" );
 			$log['timestamp'] = time() - ( 60 * 86400 ); // 60 days ago.
-			$this->logs[] = $log;
+			$this->logs[]     = $log;
 		}
 
 		// Add 10 recent logs.
 		for ( $i = 0; $i < 10; $i++ ) {
-			$log = $this->create_log( 'info', "Recent event $i" );
+			$log              = $this->create_log( 'info', "Recent event $i" );
 			$log['timestamp'] = time() - 86400; // 1 day ago.
-			$this->logs[] = $log;
+			$this->logs[]     = $log;
 		}
 
 		$this->assertCount( 110, $this->logs );
@@ -247,9 +247,9 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_timestamp_formatting() {
 		$log = $this->create_log( 'info', 'Test' );
-		
+
 		$formatted = $this->format_timestamp( $log['timestamp'] );
-		
+
 		// Should be a valid date string.
 		$this->assertMatchesRegularExpression( '/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/', $formatted );
 	}
@@ -302,9 +302,12 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 			return $this->logs;
 		}
 
-		return array_filter( $this->logs, function( $log ) use ( $severity ) {
-			return $log['severity'] === $severity;
-		} );
+		return array_filter(
+			$this->logs,
+			function ( $log ) use ( $severity ) {
+				return $log['severity'] === $severity;
+			}
+		);
 	}
 
 	/**
@@ -319,10 +322,15 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 	 * Apply retention policy.
 	 */
 	private function apply_retention( $days ) {
-		$cutoff = time() - ( $days * 86400 );
-		$this->logs = array_values( array_filter( $this->logs, function( $log ) use ( $cutoff ) {
-			return $log['timestamp'] > $cutoff;
-		} ) );
+		$cutoff     = time() - ( $days * 86400 );
+		$this->logs = array_values(
+			array_filter(
+				$this->logs,
+				function ( $log ) use ( $cutoff ) {
+					return $log['timestamp'] > $cutoff;
+				}
+			)
+		);
 	}
 
 	/**
@@ -346,17 +354,20 @@ class Test_Logger extends \PHPUnit\Framework\TestCase {
 	 */
 	private function search_logs( $query ) {
 		$query = strtolower( $query );
-		return array_filter( $this->logs, function( $log ) use ( $query ) {
-			if ( strpos( strtolower( $log['message'] ), $query ) !== false ) {
-				return true;
-			}
-			foreach ( $log['context'] as $value ) {
-				if ( is_string( $value ) && strpos( strtolower( $value ), $query ) !== false ) {
+		return array_filter(
+			$this->logs,
+			function ( $log ) use ( $query ) {
+				if ( strpos( strtolower( $log['message'] ), $query ) !== false ) {
 					return true;
 				}
+				foreach ( $log['context'] as $value ) {
+					if ( is_string( $value ) && strpos( strtolower( $value ), $query ) !== false ) {
+						return true;
+					}
+				}
+				return false;
 			}
-			return false;
-		} );
+		);
 	}
 
 	/**

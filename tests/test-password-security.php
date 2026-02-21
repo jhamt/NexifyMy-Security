@@ -327,9 +327,12 @@ class Test_Password_Security extends \PHPUnit\Framework\TestCase {
 	 * @return array Error types.
 	 */
 	private function get_error_types( $errors ) {
-		return array_map( function( $e ) {
-			return $e['type'];
-		}, $errors );
+		return array_map(
+			function ( $e ) {
+				return $e['type'];
+			},
+			$errors
+		);
 	}
 
 	/**
@@ -339,7 +342,7 @@ class Test_Password_Security extends \PHPUnit\Framework\TestCase {
 	 * @return bool
 	 */
 	private function is_common_password( $password ) {
-		$lower = strtolower( (string) $password );
+		$lower      = strtolower( (string) $password );
 		$normalized = str_replace( array( '@', '0', '3' ), array( 'a', 'o', 'e' ), $lower );
 
 		foreach ( $this->common_passwords as $common ) {
@@ -364,7 +367,7 @@ class Test_Password_Security extends \PHPUnit\Framework\TestCase {
 	 * @return array Score and feedback.
 	 */
 	private function get_strength_score( $password ) {
-		$score = 0;
+		$score    = 0;
 		$feedback = array();
 
 		// Length points (max 30).
@@ -391,7 +394,7 @@ class Test_Password_Security extends \PHPUnit\Framework\TestCase {
 
 		// Penalty for common patterns.
 		if ( $this->is_common_password( $password ) ) {
-			$score = min( 20, $score );
+			$score      = min( 20, $score );
 			$feedback[] = 'Common password';
 		}
 

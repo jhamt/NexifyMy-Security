@@ -110,8 +110,8 @@ class Test_Hardening extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_version_query_removal() {
 		$urls_with_version = array(
-			'https://example.com/style.css?ver=5.0' => 'https://example.com/style.css',
-			'https://example.com/script.js?ver=1.2.3' => 'https://example.com/script.js',
+			'https://example.com/style.css?ver=5.0'        => 'https://example.com/style.css',
+			'https://example.com/script.js?ver=1.2.3'      => 'https://example.com/script.js',
 			'https://example.com/file.css?ver=5.8&other=1' => 'https://example.com/file.css?other=1',
 		);
 

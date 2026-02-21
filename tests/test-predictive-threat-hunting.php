@@ -44,8 +44,8 @@ class Test_Predictive_Threat_Hunting extends \PHPUnit\Framework\TestCase {
 		$nexifymy_test_options['blogdescription'] = 'Medical patient intake form and HIPAA onboarding.';
 		$nexifymy_test_options['active_plugins']  = array( 'contact-form-7/wp-contact-form-7.php' );
 		$wpdb->get_var_map                        = array(
-			"SHOW TABLES LIKE 'wp_nexifymy_behavior_log'"   => 'wp_nexifymy_behavior_log',
-			'AND is_login_attempt = 1'                     => 12,
+			"SHOW TABLES LIKE 'wp_nexifymy_behavior_log'" => 'wp_nexifymy_behavior_log',
+			'AND is_login_attempt = 1'                    => 12,
 			'SELECT COUNT(*) FROM wp_nexifymy_threat_predictions' => 0,
 		);
 

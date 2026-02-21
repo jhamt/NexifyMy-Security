@@ -212,12 +212,12 @@ class Test_RateLimiter extends \PHPUnit\Framework\TestCase {
 	 * Test ban after multiple lockouts.
 	 */
 	public function test_ban_after_multiple_lockouts() {
-		$ip           = '192.168.1.100';
+		$ip            = '192.168.1.100';
 		$lockout_count = 0;
 
 		// Simulate multiple lockouts.
 		for ( $i = 0; $i < $this->settings['ban_threshold']; $i++ ) {
-			$lockout_count++;
+			++$lockout_count;
 		}
 
 		// Should be permanently banned.
@@ -238,7 +238,7 @@ class Test_RateLimiter extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_request_rate_limiting() {
 		$max_requests_per_minute = 60;
-		$requests = array();
+		$requests                = array();
 
 		// Simulate requests.
 		for ( $i = 0; $i < $max_requests_per_minute; $i++ ) {
@@ -270,7 +270,7 @@ class Test_RateLimiter extends \PHPUnit\Framework\TestCase {
 		if ( ! isset( $this->attempts[ $ip ] ) ) {
 			$this->attempts[ $ip ] = 0;
 		}
-		$this->attempts[ $ip ]++;
+		++$this->attempts[ $ip ];
 	}
 
 	/**

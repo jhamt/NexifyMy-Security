@@ -11,8 +11,8 @@ class Test_P2P_Intelligence_Credits extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		global $nexifymy_test_options, $wpdb;
 		$nexifymy_test_options = array();
-		$wpdb->insert_calls = array();
-		$wpdb->update_calls = array();
+		$wpdb->insert_calls    = array();
+		$wpdb->update_calls    = array();
 		NexifyMy_Security_P2P::_reset();
 	}
 

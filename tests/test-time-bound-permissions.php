@@ -21,7 +21,7 @@ class Test_Time_Bound_Permissions extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		global $nexifymy_test_options, $wpdb;
 
-		$nexifymy_test_options                 = array();
+		$nexifymy_test_options                   = array();
 		$GLOBALS['nexifymy_test_wp_update_user'] = array();
 		$GLOBALS['nexifymy_test_mail']           = array();
 		$GLOBALS['nexifymy_testing_user_id']     = 1;

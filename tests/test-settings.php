@@ -40,7 +40,6 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		$this->assertTrue( $settings['modules']['rate_limiter_enabled'] );
 		$this->assertTrue( $settings['modules']['temp_permissions_enabled'] );
 		$this->assertTrue( $settings['modules']['predictive_hunting_enabled'] );
-
 		// Check rate limiter defaults.
 		$this->assertEquals( 5, $settings['rate_limiter']['max_attempts'] );
 		$this->assertEquals( 900, $settings['rate_limiter']['lockout_duration'] );
@@ -82,11 +81,13 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 	 * Test update merges settings correctly.
 	 */
 	public function test_update_merges_settings() {
-		NexifyMy_Security_Settings::update( array(
-			'modules' => array(
-				'waf_enabled' => false,
-			),
-		) );
+		NexifyMy_Security_Settings::update(
+			array(
+				'modules' => array(
+					'waf_enabled' => false,
+				),
+			)
+		);
 
 		$settings = NexifyMy_Security_Settings::get_all();
 		$this->assertFalse( $settings['modules']['waf_enabled'] );
@@ -100,10 +101,10 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 	public function test_reset_restores_defaults() {
 		// Change a value.
 		NexifyMy_Security_Settings::set( 'rate_limiter', 'max_attempts', 999 );
-		
+
 		// Reset.
 		NexifyMy_Security_Settings::reset();
-		
+
 		// Check it's back to default.
 		$max_attempts = NexifyMy_Security_Settings::get( 'rate_limiter', 'max_attempts', 0 );
 		$this->assertEquals( 5, $max_attempts );
@@ -117,7 +118,7 @@ class Test_Settings extends \PHPUnit\Framework\TestCase {
 		$output   = $settings->sanitize_settings(
 			array(
 				'modules'      => array(
-					'temp_permissions_enabled' => '',
+					'temp_permissions_enabled'   => '',
 					'predictive_hunting_enabled' => 0,
 				),
 				'ai_detection' => array(

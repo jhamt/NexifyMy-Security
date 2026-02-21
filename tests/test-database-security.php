@@ -19,7 +19,7 @@ class Test_Database_Security extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		global $nexifymy_test_options;
 		$nexifymy_test_options = array();
-		$this->database = new NexifyMy_Security_Database();
+		$this->database        = new NexifyMy_Security_Database();
 	}
 
 	/**

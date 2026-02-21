@@ -12,6 +12,7 @@ class Test_WAF_Patterns extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * SQL Injection patterns.
+	 *
 	 * @var array
 	 */
 	private $sqli_patterns = array(
@@ -27,6 +28,7 @@ class Test_WAF_Patterns extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * XSS patterns.
+	 *
 	 * @var array
 	 */
 	private $xss_patterns = array(
@@ -67,8 +69,8 @@ class Test_WAF_Patterns extends \PHPUnit\Framework\TestCase {
 	public function test_sqli_union_select_detected() {
 		$attacks = array(
 			"' UNION SELECT * FROM users",
-			"1 UNION ALL SELECT password FROM wp_users",
-			") UNION SELECT username,password FROM users",
+			'1 UNION ALL SELECT password FROM wp_users',
+			') UNION SELECT username,password FROM users',
 		);
 
 		foreach ( $attacks as $attack ) {
@@ -101,12 +103,12 @@ class Test_WAF_Patterns extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_sqli_false_positives_avoided() {
 		$legitimate = array(
-			"I want to select a color",
-			"Please select from the dropdown",
-			"This is a union of ideas",
-			"The reunion was great",
-			"SELECT query syntax tutorial", // Documentation content.
-			"contact@information.com", // Email with "information".
+			'I want to select a color',
+			'Please select from the dropdown',
+			'This is a union of ideas',
+			'The reunion was great',
+			'SELECT query syntax tutorial', // Documentation content.
+			'contact@information.com', // Email with "information".
 		);
 
 		foreach ( $legitimate as $text ) {
@@ -181,12 +183,12 @@ class Test_WAF_Patterns extends \PHPUnit\Framework\TestCase {
 	 */
 	public function test_xss_false_positives_avoided() {
 		$legitimate = array(
-			"The script of the play was excellent",
-			"Loading the page takes 3 seconds",
-			"Click here for more information",
+			'The script of the play was excellent',
+			'Loading the page takes 3 seconds',
+			'Click here for more information',
 			"I'm focused on my work",
-			"<p>Normal HTML paragraph</p>",
-			"<strong>Bold text</strong>",
+			'<p>Normal HTML paragraph</p>',
+			'<strong>Bold text</strong>',
 		);
 
 		foreach ( $legitimate as $text ) {
