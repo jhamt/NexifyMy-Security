@@ -29,29 +29,36 @@ class NexifyMy_Security_Activity_Log {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'                => true,
-		'log_logins'             => true,
-		'log_failed_logins'      => true,
-		'log_logouts'            => true,
-		'log_profile_changes'    => true,
-		'log_role_changes'       => true,
-		'log_user_creation'      => true,
-		'log_user_deletion'      => true,
-		'log_password_changes'   => true,
-		'log_post_changes'       => true,
-		'log_page_changes'       => true,
-		'log_media_uploads'      => true,
-		'log_plugin_changes'     => true,
-		'log_theme_changes'      => true,
-		'log_option_changes'     => true,
-		'log_widget_changes'     => true,
-		'log_menu_changes'       => true,
-		'log_export'             => true,
-		'retention_days'         => 90,
-		'excluded_users'         => array(),
-		'excluded_post_types'    => array( 'revision', 'nav_menu_item' ),
-		'excluded_options'       => array( '_transient_', '_site_transient_', 'cron', 'session_tokens' ),
+		'enabled'              => true,
+		'log_logins'           => true,
+		'log_failed_logins'    => true,
+		'log_logouts'          => true,
+		'log_profile_changes'  => true,
+		'log_role_changes'     => true,
+		'log_user_creation'    => true,
+		'log_user_deletion'    => true,
+		'log_password_changes' => true,
+		'log_post_changes'     => true,
+		'log_page_changes'     => true,
+		'log_media_uploads'    => true,
+		'log_plugin_changes'   => true,
+		'log_theme_changes'    => true,
+		'log_option_changes'   => true,
+		'log_widget_changes'   => true,
+		'log_menu_changes'     => true,
+		'log_export'           => true,
+		'retention_days'       => 90,
+		'excluded_users'       => array(),
+		'excluded_post_types'  => array( 'revision', 'nav_menu_item' ),
+		'excluded_options'     => array( '_transient_', '_site_transient_', 'cron', 'session_tokens' ),
 	);
+
+	/**
+	 * Guard to prevent duplicate login events within the same request.
+	 *
+	 * @var bool
+	 */
+	private $login_event_recorded = false;
 
 	/**
 	 * Initialize the module.
@@ -73,6 +80,8 @@ class NexifyMy_Security_Activity_Log {
 		// Authentication hooks.
 		if ( ! empty( $settings['log_logins'] ) ) {
 			add_action( 'wp_login', array( $this, 'on_login' ), 10, 2 );
+			// Fallback for auth flows that set auth cookies but may not trigger wp_login.
+			add_action( 'set_logged_in_cookie', array( $this, 'on_login_cookie_set' ), 10, 6 );
 		}
 		if ( ! empty( $settings['log_failed_logins'] ) ) {
 			add_action( 'wp_login_failed', array( $this, 'on_login_failed' ), 10, 2 );
@@ -142,13 +151,53 @@ class NexifyMy_Security_Activity_Log {
 	 * Get module settings.
 	 */
 	public function get_settings() {
+		$settings = self::$defaults;
+
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 			$all_settings = NexifyMy_Security_Settings::get_all();
 			if ( isset( $all_settings['activity_log'] ) ) {
-				return wp_parse_args( $all_settings['activity_log'], self::$defaults );
+				$settings = wp_parse_args( $all_settings['activity_log'], self::$defaults );
 			}
 		}
-		return self::$defaults;
+
+		$settings['excluded_users']      = $this->normalize_list_setting( $settings['excluded_users'] ?? array(), 'sanitize_user' );
+		$settings['excluded_post_types'] = $this->normalize_list_setting( $settings['excluded_post_types'] ?? array(), 'sanitize_key' );
+		$settings['excluded_options']    = $this->normalize_list_setting( $settings['excluded_options'] ?? array(), 'sanitize_text_field' );
+
+		return $settings;
+	}
+
+	/**
+	 * Normalize CSV/newline string or array settings into a sanitized list.
+	 *
+	 * @param mixed    $value     Raw setting value.
+	 * @param callable $sanitizer Sanitization callback.
+	 * @return array<int, string>
+	 */
+	private function normalize_list_setting( $value, $sanitizer ) {
+		if ( is_string( $value ) ) {
+			$value = preg_split( '/[\r\n,]+/', $value );
+		}
+
+		if ( ! is_array( $value ) ) {
+			return array();
+		}
+
+		$normalized = array();
+		foreach ( $value as $item ) {
+			$item = is_scalar( $item ) ? (string) $item : '';
+			$item = trim( $item );
+			if ( '' === $item ) {
+				continue;
+			}
+
+			$clean = is_callable( $sanitizer ) ? call_user_func( $sanitizer, $item ) : sanitize_text_field( $item );
+			if ( '' !== $clean ) {
+				$normalized[] = $clean;
+			}
+		}
+
+		return array_values( array_unique( $normalized ) );
 	}
 
 	/**
@@ -212,7 +261,7 @@ class NexifyMy_Security_Activity_Log {
 	public function log( $event_type, $event_group, $description, $args = array() ) {
 		global $wpdb;
 
-		$settings = $this->get_settings();
+		$settings     = $this->get_settings();
 		$current_user = wp_get_current_user();
 
 		// Check excluded users.
@@ -249,7 +298,23 @@ class NexifyMy_Security_Activity_Log {
 	 * User logged in.
 	 */
 	public function on_login( $user_login, $user ) {
-		$this->log( 'login_success', self::GROUP_AUTH,
+		if ( $this->login_event_recorded ) {
+			return;
+		}
+
+		if ( ! ( $user instanceof WP_User ) ) {
+			$user = get_user_by( 'login', $user_login );
+		}
+
+		if ( ! $user ) {
+			return;
+		}
+
+		$this->login_event_recorded = true;
+
+		$this->log(
+			'login_success',
+			self::GROUP_AUTH,
 			sprintf( 'User "%s" logged in successfully', $user_login ),
 			array(
 				'user_id'     => $user->ID,
@@ -264,16 +329,41 @@ class NexifyMy_Security_Activity_Log {
 	}
 
 	/**
+	 * Fallback login tracking when auth cookie is set.
+	 *
+	 * @param string $logged_in_cookie Cookie value.
+	 * @param int    $expire           Cookie expire.
+	 * @param int    $expiration       Cookie expiration.
+	 * @param int    $user_id          User ID.
+	 * @param string $scheme           Cookie scheme.
+	 * @param string $token            Session token.
+	 */
+	public function on_login_cookie_set( $logged_in_cookie, $expire, $expiration, $user_id, $scheme, $token ) {
+		if ( $this->login_event_recorded || empty( $user_id ) ) {
+			return;
+		}
+
+		$user = get_userdata( $user_id );
+		if ( ! $user ) {
+			return;
+		}
+
+		$this->on_login( $user->user_login, $user );
+	}
+
+	/**
 	 * Failed login attempt.
 	 */
 	public function on_login_failed( $username, $error = null ) {
 		$error_msg = '';
 		if ( $error instanceof WP_Error ) {
-			$codes = $error->get_error_codes();
+			$codes     = $error->get_error_codes();
 			$error_msg = ! empty( $codes ) ? implode( ', ', $codes ) : '';
 		}
 
-		$this->log( 'login_failed', self::GROUP_AUTH,
+		$this->log(
+			'login_failed',
+			self::GROUP_AUTH,
 			sprintf( 'Failed login attempt for username "%s"', $username ),
 			array(
 				'user_id'     => 0,
@@ -296,7 +386,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'logout', self::GROUP_AUTH,
+		$this->log(
+			'logout',
+			self::GROUP_AUTH,
 			sprintf( 'User "%s" logged out', $user->user_login ),
 			array(
 				'user_id'     => $user->ID,
@@ -335,15 +427,20 @@ class NexifyMy_Security_Activity_Log {
 			? sprintf( 'Profile updated for "%s": %s', $user->user_login, implode( '; ', $changes ) )
 			: sprintf( 'Profile updated for "%s"', $user->user_login );
 
-		$this->log( 'profile_update', self::GROUP_USER, $desc, array(
-			'user_id'     => $user->ID,
-			'username'    => $user->user_login,
-			'user_role'   => implode( ', ', $user->roles ),
-			'object_type' => 'user',
-			'object_id'   => $user->ID,
-			'object_name' => $user->display_name,
-			'metadata'    => array( 'changes' => $changes ),
-		) );
+		$this->log(
+			'profile_update',
+			self::GROUP_USER,
+			$desc,
+			array(
+				'user_id'     => $user->ID,
+				'username'    => $user->user_login,
+				'user_role'   => implode( ', ', $user->roles ),
+				'object_type' => 'user',
+				'object_id'   => $user->ID,
+				'object_name' => $user->display_name,
+				'metadata'    => array( 'changes' => $changes ),
+			)
+		);
 	}
 
 	/**
@@ -357,7 +454,9 @@ class NexifyMy_Security_Activity_Log {
 
 		$old = ! empty( $old_roles ) ? implode( ', ', $old_roles ) : 'none';
 
-		$this->log( 'role_change', self::GROUP_USER,
+		$this->log(
+			'role_change',
+			self::GROUP_USER,
 			sprintf( 'Role changed for "%s": %s → %s', $user->user_login, $old, $role ),
 			array(
 				'user_id'     => $user->ID,
@@ -367,7 +466,10 @@ class NexifyMy_Security_Activity_Log {
 				'object_id'   => $user->ID,
 				'object_name' => $user->display_name,
 				'severity'    => 'warning',
-				'metadata'    => array( 'old_roles' => $old_roles, 'new_role' => $role ),
+				'metadata'    => array(
+					'old_roles' => $old_roles,
+					'new_role'  => $role,
+				),
 			)
 		);
 	}
@@ -381,14 +483,19 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'user_created', self::GROUP_USER,
+		$this->log(
+			'user_created',
+			self::GROUP_USER,
 			sprintf( 'New user registered: "%s" (%s)', $user->user_login, $user->user_email ),
 			array(
 				'object_type' => 'user',
 				'object_id'   => $user->ID,
 				'object_name' => $user->user_login,
 				'severity'    => 'notice',
-				'metadata'    => array( 'email' => $user->user_email, 'role' => implode( ', ', $user->roles ) ),
+				'metadata'    => array(
+					'email' => $user->user_email,
+					'role'  => implode( ', ', $user->roles ),
+				),
 			)
 		);
 	}
@@ -402,7 +509,9 @@ class NexifyMy_Security_Activity_Log {
 		}
 		$name = $user ? $user->user_login : "ID:{$user_id}";
 
-		$this->log( 'user_deleted', self::GROUP_USER,
+		$this->log(
+			'user_deleted',
+			self::GROUP_USER,
 			sprintf( 'User deleted: "%s"', $name ),
 			array(
 				'object_type' => 'user',
@@ -422,7 +531,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'password_reset', self::GROUP_USER,
+		$this->log(
+			'password_reset',
+			self::GROUP_USER,
 			sprintf( 'Password reset for "%s"', $user->user_login ),
 			array(
 				'user_id'     => $user->ID,
@@ -463,27 +574,35 @@ class NexifyMy_Security_Activity_Log {
 		// Determine event type.
 		if ( $old_status === 'new' || $old_status === 'auto-draft' ) {
 			$event = 'content_created';
-			$desc = sprintf( '%s created: "%s"', ucfirst( $post->post_type ), $post->post_title );
+			$desc  = sprintf( '%s created: "%s"', ucfirst( $post->post_type ), $post->post_title );
 		} elseif ( $new_status === 'trash' ) {
 			$event = 'content_trashed';
-			$desc = sprintf( '%s trashed: "%s"', ucfirst( $post->post_type ), $post->post_title );
+			$desc  = sprintf( '%s trashed: "%s"', ucfirst( $post->post_type ), $post->post_title );
 		} elseif ( $new_status === 'publish' && $old_status !== 'publish' ) {
 			$event = 'content_published';
-			$desc = sprintf( '%s published: "%s"', ucfirst( $post->post_type ), $post->post_title );
+			$desc  = sprintf( '%s published: "%s"', ucfirst( $post->post_type ), $post->post_title );
 		} elseif ( $old_status === $new_status ) {
 			$event = 'content_updated';
-			$desc = sprintf( '%s updated: "%s"', ucfirst( $post->post_type ), $post->post_title );
+			$desc  = sprintf( '%s updated: "%s"', ucfirst( $post->post_type ), $post->post_title );
 		} else {
 			$event = 'content_status_changed';
-			$desc = sprintf( '%s "%s" status: %s → %s', ucfirst( $post->post_type ), $post->post_title, $old_status, $new_status );
+			$desc  = sprintf( '%s "%s" status: %s → %s', ucfirst( $post->post_type ), $post->post_title, $old_status, $new_status );
 		}
 
-		$this->log( $event, self::GROUP_CONTENT, $desc, array(
-			'object_type' => $post->post_type,
-			'object_id'   => $post->ID,
-			'object_name' => $post->post_title,
-			'metadata'    => array( 'old_status' => $old_status, 'new_status' => $new_status ),
-		) );
+		$this->log(
+			$event,
+			self::GROUP_CONTENT,
+			$desc,
+			array(
+				'object_type' => $post->post_type,
+				'object_id'   => $post->ID,
+				'object_name' => $post->post_title,
+				'metadata'    => array(
+					'old_status' => $old_status,
+					'new_status' => $new_status,
+				),
+			)
+		);
 	}
 
 	/**
@@ -500,7 +619,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'content_deleted', self::GROUP_CONTENT,
+		$this->log(
+			'content_deleted',
+			self::GROUP_CONTENT,
 			sprintf( '%s permanently deleted: "%s"', ucfirst( $post->post_type ), $post->post_title ),
 			array(
 				'object_type' => $post->post_type,
@@ -520,7 +641,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'media_uploaded', self::GROUP_CONTENT,
+		$this->log(
+			'media_uploaded',
+			self::GROUP_CONTENT,
 			sprintf( 'Media uploaded: "%s"', $attachment->post_title ),
 			array(
 				'object_type' => 'attachment',
@@ -539,9 +662,11 @@ class NexifyMy_Security_Activity_Log {
 	 */
 	public function on_media_delete( $attachment_id ) {
 		$attachment = get_post( $attachment_id );
-		$name = $attachment ? $attachment->post_title : "ID:{$attachment_id}";
+		$name       = $attachment ? $attachment->post_title : "ID:{$attachment_id}";
 
-		$this->log( 'media_deleted', self::GROUP_CONTENT,
+		$this->log(
+			'media_deleted',
+			self::GROUP_CONTENT,
 			sprintf( 'Media deleted: "%s"', $name ),
 			array(
 				'object_type' => 'attachment',
@@ -559,15 +684,20 @@ class NexifyMy_Security_Activity_Log {
 	 */
 	public function on_plugin_activate( $plugin, $network_wide ) {
 		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin, false, false );
-		$name = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
+		$name        = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
 
-		$this->log( 'plugin_activated', self::GROUP_SYSTEM,
+		$this->log(
+			'plugin_activated',
+			self::GROUP_SYSTEM,
 			sprintf( 'Plugin activated: "%s"', $name ),
 			array(
 				'object_type' => 'plugin',
 				'object_name' => $name,
 				'severity'    => 'notice',
-				'metadata'    => array( 'plugin_file' => $plugin, 'network_wide' => $network_wide ),
+				'metadata'    => array(
+					'plugin_file'  => $plugin,
+					'network_wide' => $network_wide,
+				),
 			)
 		);
 	}
@@ -577,15 +707,20 @@ class NexifyMy_Security_Activity_Log {
 	 */
 	public function on_plugin_deactivate( $plugin, $network_wide ) {
 		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin, false, false );
-		$name = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
+		$name        = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
 
-		$this->log( 'plugin_deactivated', self::GROUP_SYSTEM,
+		$this->log(
+			'plugin_deactivated',
+			self::GROUP_SYSTEM,
 			sprintf( 'Plugin deactivated: "%s"', $name ),
 			array(
 				'object_type' => 'plugin',
 				'object_name' => $name,
 				'severity'    => 'notice',
-				'metadata'    => array( 'plugin_file' => $plugin, 'network_wide' => $network_wide ),
+				'metadata'    => array(
+					'plugin_file'  => $plugin,
+					'network_wide' => $network_wide,
+				),
 			)
 		);
 	}
@@ -610,15 +745,20 @@ class NexifyMy_Security_Activity_Log {
 
 		foreach ( $plugins as $plugin ) {
 			$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin, false, false );
-			$name = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
+			$name        = ! empty( $plugin_data['Name'] ) ? $plugin_data['Name'] : $plugin;
 
-			$this->log( 'plugin_updated', self::GROUP_SYSTEM,
+			$this->log(
+				'plugin_updated',
+				self::GROUP_SYSTEM,
 				sprintf( 'Plugin updated: "%s" to version %s', $name, ! empty( $plugin_data['Version'] ) ? $plugin_data['Version'] : 'unknown' ),
 				array(
 					'object_type' => 'plugin',
 					'object_name' => $name,
 					'severity'    => 'notice',
-					'metadata'    => array( 'plugin_file' => $plugin, 'version' => $plugin_data['Version'] ?? '' ),
+					'metadata'    => array(
+						'plugin_file' => $plugin,
+						'version'     => $plugin_data['Version'] ?? '',
+					),
 				)
 			);
 		}
@@ -632,7 +772,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'plugin_deleted', self::GROUP_SYSTEM,
+		$this->log(
+			'plugin_deleted',
+			self::GROUP_SYSTEM,
 			sprintf( 'Plugin deleted: "%s"', $plugin_file ),
 			array(
 				'object_type' => 'plugin',
@@ -648,13 +790,18 @@ class NexifyMy_Security_Activity_Log {
 	public function on_theme_switch( $new_name, $new_theme, $old_theme ) {
 		$old_name = is_object( $old_theme ) ? $old_theme->get( 'Name' ) : 'Unknown';
 
-		$this->log( 'theme_switched', self::GROUP_SYSTEM,
+		$this->log(
+			'theme_switched',
+			self::GROUP_SYSTEM,
 			sprintf( 'Theme switched from "%s" to "%s"', $old_name, $new_name ),
 			array(
 				'object_type' => 'theme',
 				'object_name' => $new_name,
 				'severity'    => 'notice',
-				'metadata'    => array( 'old_theme' => $old_name, 'new_theme' => $new_name ),
+				'metadata'    => array(
+					'old_theme' => $old_name,
+					'new_theme' => $new_name,
+				),
 			)
 		);
 	}
@@ -675,9 +822,17 @@ class NexifyMy_Security_Activity_Log {
 
 		// Only track important options.
 		$tracked_options = array(
-			'blogname', 'blogdescription', 'siteurl', 'home', 'admin_email',
-			'users_can_register', 'default_role', 'permalink_structure',
-			'active_plugins', 'template', 'stylesheet',
+			'blogname',
+			'blogdescription',
+			'siteurl',
+			'home',
+			'admin_email',
+			'users_can_register',
+			'default_role',
+			'permalink_structure',
+			'active_plugins',
+			'template',
+			'stylesheet',
 			'nexifymy_security_settings',
 		);
 
@@ -686,7 +841,9 @@ class NexifyMy_Security_Activity_Log {
 			return;
 		}
 
-		$this->log( 'option_updated', self::GROUP_SYSTEM,
+		$this->log(
+			'option_updated',
+			self::GROUP_SYSTEM,
 			sprintf( 'Option updated: "%s"', $option ),
 			array(
 				'object_type' => 'option',
@@ -700,7 +857,9 @@ class NexifyMy_Security_Activity_Log {
 	 * WordPress export.
 	 */
 	public function on_export( $args ) {
-		$this->log( 'data_exported', self::GROUP_SYSTEM,
+		$this->log(
+			'data_exported',
+			self::GROUP_SYSTEM,
 			'WordPress data exported',
 			array(
 				'object_type' => 'export',
@@ -766,48 +925,48 @@ class NexifyMy_Security_Activity_Log {
 			'orderby'     => 'created_at',
 			'order'       => 'DESC',
 		);
-		$args = wp_parse_args( $args, $defaults );
+		$args     = wp_parse_args( $args, $defaults );
 
-		$where = array( '1=1' );
+		$where  = array( '1=1' );
 		$values = array();
 
 		if ( ! empty( $args['event_group'] ) ) {
-			$where[] = 'event_group = %s';
+			$where[]  = 'event_group = %s';
 			$values[] = $args['event_group'];
 		}
 		if ( ! empty( $args['event_type'] ) ) {
-			$where[] = 'event_type = %s';
+			$where[]  = 'event_type = %s';
 			$values[] = $args['event_type'];
 		}
 		if ( ! empty( $args['severity'] ) ) {
-			$where[] = 'severity = %s';
+			$where[]  = 'severity = %s';
 			$values[] = $args['severity'];
 		}
 		if ( ! empty( $args['user_id'] ) ) {
-			$where[] = 'user_id = %d';
+			$where[]  = 'user_id = %d';
 			$values[] = absint( $args['user_id'] );
 		}
 		if ( ! empty( $args['username'] ) ) {
-			$where[] = 'username LIKE %s';
+			$where[]  = 'username LIKE %s';
 			$values[] = '%' . $wpdb->esc_like( $args['username'] ) . '%';
 		}
 		if ( ! empty( $args['ip_address'] ) ) {
-			$where[] = 'ip_address = %s';
+			$where[]  = 'ip_address = %s';
 			$values[] = $args['ip_address'];
 		}
 		if ( ! empty( $args['search'] ) ) {
-			$where[] = '(description LIKE %s OR username LIKE %s OR object_name LIKE %s)';
-			$like = '%' . $wpdb->esc_like( $args['search'] ) . '%';
+			$where[]  = '(description LIKE %s OR username LIKE %s OR object_name LIKE %s)';
+			$like     = '%' . $wpdb->esc_like( $args['search'] ) . '%';
 			$values[] = $like;
 			$values[] = $like;
 			$values[] = $like;
 		}
 		if ( ! empty( $args['date_from'] ) ) {
-			$where[] = 'created_at >= %s';
+			$where[]  = 'created_at >= %s';
 			$values[] = sanitize_text_field( $args['date_from'] ) . ' 00:00:00';
 		}
 		if ( ! empty( $args['date_to'] ) ) {
-			$where[] = 'created_at <= %s';
+			$where[]  = 'created_at <= %s';
 			$values[] = sanitize_text_field( $args['date_to'] ) . ' 23:59:59';
 		}
 
@@ -815,12 +974,21 @@ class NexifyMy_Security_Activity_Log {
 
 		// Sanitize order params.
 		$allowed_orderby = array( 'id', 'created_at', 'event_type', 'severity', 'username' );
-		$orderby = in_array( $args['orderby'], $allowed_orderby, true ) ? $args['orderby'] : 'created_at';
-		$order = strtoupper( $args['order'] ) === 'ASC' ? 'ASC' : 'DESC';
+		$orderby         = in_array( $args['orderby'], $allowed_orderby, true ) ? $args['orderby'] : 'created_at';
+		$order           = strtoupper( $args['order'] ) === 'ASC' ? 'ASC' : 'DESC';
 
 		$per_page = absint( $args['per_page'] );
-		$offset = ( absint( $args['page'] ) - 1 ) * $per_page;
+		if ( $per_page < 1 ) {
+			$per_page = 25;
+		}
+		$per_page = min( $per_page, 10000 );
 
+		$page = absint( $args['page'] );
+		if ( $page < 1 ) {
+			$page = 1;
+		}
+
+		$offset = ( $page - 1 ) * $per_page;
 		// Get total count.
 		$count_sql = "SELECT COUNT(*) FROM {$table} WHERE {$where_sql}";
 		if ( ! empty( $values ) ) {
@@ -829,28 +997,27 @@ class NexifyMy_Security_Activity_Log {
 		$total = (int) $wpdb->get_var( $count_sql );
 
 		// Get entries.
-		$sql = "SELECT * FROM {$table} WHERE {$where_sql} ORDER BY {$orderby} {$order} LIMIT %d OFFSET %d";
+		$sql      = "SELECT * FROM {$table} WHERE {$where_sql} ORDER BY {$orderby} {$order} LIMIT %d OFFSET %d";
 		$values[] = $per_page;
 		$values[] = $offset;
 
 		$entries = $wpdb->get_results( $wpdb->prepare( $sql, $values ) );
 
 		return array(
-			'entries'    => $entries ? $entries : array(),
-			'total'      => $total,
-			'pages'      => ceil( $total / $per_page ),
-			'page'       => absint( $args['page'] ),
-			'per_page'   => $per_page,
+			'entries'  => $entries ? $entries : array(),
+			'total'    => $total,
+			'pages'    => ceil( $total / $per_page ),
+			'page'     => $page,
+			'per_page' => $per_page,
 		);
 	}
-
 	/**
 	 * Get activity statistics.
 	 */
 	public function get_stats( $days = 30 ) {
 		global $wpdb;
-		$table = $wpdb->prefix . self::TABLE_NAME;
-		$since = gmdate( 'Y-m-d H:i:s', strtotime( "-{$days} days" ) );
+		$table     = $wpdb->prefix . self::TABLE_NAME;
+		$since     = gmdate( 'Y-m-d H:i:s', strtotime( "-{$days} days" ) );
 		$yesterday = gmdate( 'Y-m-d H:i:s', strtotime( '-1 day' ) );
 		$last_hour = gmdate( 'Y-m-d H:i:s', strtotime( '-1 hour' ) );
 
@@ -862,7 +1029,7 @@ class NexifyMy_Security_Activity_Log {
 		);
 
 		// Events today.
-		$today_start = gmdate( 'Y-m-d 00:00:00' );
+		$today_start    = gmdate( 'Y-m-d 00:00:00' );
 		$stats['today'] = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE created_at >= %s", $today_start )
 		);
@@ -883,7 +1050,7 @@ class NexifyMy_Security_Activity_Log {
 		);
 
 		// Events by group.
-		$groups = $wpdb->get_results(
+		$groups            = $wpdb->get_results(
 			$wpdb->prepare( "SELECT event_group, COUNT(*) as count FROM {$table} WHERE created_at >= %s GROUP BY event_group ORDER BY count DESC", $since )
 		);
 		$stats['by_group'] = array();
@@ -892,7 +1059,7 @@ class NexifyMy_Security_Activity_Log {
 		}
 
 		// Events by severity.
-		$severities = $wpdb->get_results(
+		$severities           = $wpdb->get_results(
 			$wpdb->prepare( "SELECT severity, COUNT(*) as count FROM {$table} WHERE created_at >= %s GROUP BY severity ORDER BY count DESC", $since )
 		);
 		$stats['by_severity'] = array();
@@ -901,18 +1068,18 @@ class NexifyMy_Security_Activity_Log {
 		}
 
 		// Login stats.
-		$stats['logins'] = (int) $wpdb->get_var(
+		$stats['logins']        = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'login_success' AND created_at >= %s", $since )
 		);
 		$stats['failed_logins'] = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'login_failed' AND created_at >= %s", $since )
 		);
-		$stats['logouts'] = (int) $wpdb->get_var(
+		$stats['logouts']       = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'logout' AND created_at >= %s", $since )
 		);
 
 		// Login success rate.
-		$total_login_attempts = $stats['logins'] + $stats['failed_logins'];
+		$total_login_attempts        = $stats['logins'] + $stats['failed_logins'];
 		$stats['login_success_rate'] = $total_login_attempts > 0 ? round( ( $stats['logins'] / $total_login_attempts ) * 100, 1 ) : 100;
 
 		// Password resets.
@@ -921,13 +1088,13 @@ class NexifyMy_Security_Activity_Log {
 		);
 
 		// User management events.
-		$stats['users_created'] = (int) $wpdb->get_var(
+		$stats['users_created']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'user_created' AND created_at >= %s", $since )
 		);
-		$stats['users_deleted'] = (int) $wpdb->get_var(
+		$stats['users_deleted']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'user_deleted' AND created_at >= %s", $since )
 		);
-		$stats['role_changes'] = (int) $wpdb->get_var(
+		$stats['role_changes']    = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'role_change' AND created_at >= %s", $since )
 		);
 		$stats['profile_updates'] = (int) $wpdb->get_var(
@@ -935,36 +1102,36 @@ class NexifyMy_Security_Activity_Log {
 		);
 
 		// Content stats.
-		$stats['posts_created'] = (int) $wpdb->get_var(
+		$stats['posts_created']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'content_created' AND created_at >= %s", $since )
 		);
-		$stats['posts_updated'] = (int) $wpdb->get_var(
+		$stats['posts_updated']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'content_updated' AND created_at >= %s", $since )
 		);
 		$stats['posts_published'] = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'content_published' AND created_at >= %s", $since )
 		);
-		$stats['posts_deleted'] = (int) $wpdb->get_var(
+		$stats['posts_deleted']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type IN ('content_deleted', 'content_trashed') AND created_at >= %s", $since )
 		);
-		$stats['media_uploads'] = (int) $wpdb->get_var(
+		$stats['media_uploads']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'media_uploaded' AND created_at >= %s", $since )
 		);
 
 		// System stats.
-		$stats['plugins_activated'] = (int) $wpdb->get_var(
+		$stats['plugins_activated']   = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'plugin_activated' AND created_at >= %s", $since )
 		);
 		$stats['plugins_deactivated'] = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'plugin_deactivated' AND created_at >= %s", $since )
 		);
-		$stats['plugins_updated'] = (int) $wpdb->get_var(
+		$stats['plugins_updated']     = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'plugin_updated' AND created_at >= %s", $since )
 		);
-		$stats['theme_switches'] = (int) $wpdb->get_var(
+		$stats['theme_switches']      = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'theme_switched' AND created_at >= %s", $since )
 		);
-		$stats['option_updates'] = (int) $wpdb->get_var(
+		$stats['option_updates']      = (int) $wpdb->get_var(
 			$wpdb->prepare( "SELECT COUNT(*) FROM {$table} WHERE event_type = 'option_updated' AND created_at >= %s", $since )
 		);
 
@@ -989,17 +1156,17 @@ class NexifyMy_Security_Activity_Log {
 		);
 
 		// Peak hour.
-		$peak_hour = $wpdb->get_row(
+		$peak_hour                = $wpdb->get_row(
 			$wpdb->prepare( "SELECT HOUR(created_at) as hour, COUNT(*) as count FROM {$table} WHERE created_at >= %s GROUP BY HOUR(created_at) ORDER BY count DESC LIMIT 1", $since )
 		);
-		$stats['peak_hour'] = $peak_hour ? (int) $peak_hour->hour : 0;
+		$stats['peak_hour']       = $peak_hour ? (int) $peak_hour->hour : 0;
 		$stats['peak_hour_count'] = $peak_hour ? (int) $peak_hour->count : 0;
 
 		// Most active day.
-		$peak_day = $wpdb->get_row(
+		$peak_day                = $wpdb->get_row(
 			$wpdb->prepare( "SELECT DATE(created_at) as date, COUNT(*) as count FROM {$table} WHERE created_at >= %s GROUP BY DATE(created_at) ORDER BY count DESC LIMIT 1", $since )
 		);
-		$stats['peak_day'] = $peak_day ? $peak_day->date : '';
+		$stats['peak_day']       = $peak_day ? $peak_day->date : '';
 		$stats['peak_day_count'] = $peak_day ? (int) $peak_day->count : 0;
 
 		// Average events per day.
@@ -1035,7 +1202,7 @@ class NexifyMy_Security_Activity_Log {
 		$stats['critical'] = isset( $stats['by_severity']['critical'] ) ? $stats['by_severity']['critical'] : 0;
 
 		// Database size.
-		$stats['db_rows'] = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table}" );
+		$stats['db_rows'] = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		return $stats;
 	}
@@ -1047,7 +1214,7 @@ class NexifyMy_Security_Activity_Log {
 		global $wpdb;
 		$table = $wpdb->prefix . self::TABLE_NAME;
 
-		$settings = $this->get_settings();
+		$settings       = $this->get_settings();
 		$retention_days = absint( $settings['retention_days'] );
 		if ( $retention_days < 1 ) {
 			$retention_days = 90;
@@ -1069,14 +1236,14 @@ class NexifyMy_Security_Activity_Log {
 		}
 
 		$args = array(
-			'event_group' => isset( $_POST['event_group'] ) ? sanitize_key( $_POST['event_group'] ) : '',
-			'event_type'  => isset( $_POST['event_type'] ) ? sanitize_key( $_POST['event_type'] ) : '',
-			'severity'    => isset( $_POST['severity'] ) ? sanitize_key( $_POST['severity'] ) : '',
-			'username'    => isset( $_POST['username'] ) ? sanitize_text_field( $_POST['username'] ) : '',
-			'ip_address'  => isset( $_POST['ip_address'] ) ? sanitize_text_field( $_POST['ip_address'] ) : '',
-			'search'      => isset( $_POST['search'] ) ? sanitize_text_field( $_POST['search'] ) : '',
-			'date_from'   => isset( $_POST['date_from'] ) ? sanitize_text_field( $_POST['date_from'] ) : '',
-			'date_to'     => isset( $_POST['date_to'] ) ? sanitize_text_field( $_POST['date_to'] ) : '',
+			'event_group' => isset( $_POST['event_group'] ) ? sanitize_key( wp_unslash( $_POST['event_group'] ) ) : '',
+			'event_type'  => isset( $_POST['event_type'] ) ? sanitize_key( wp_unslash( $_POST['event_type'] ) ) : '',
+			'severity'    => isset( $_POST['severity'] ) ? sanitize_key( wp_unslash( $_POST['severity'] ) ) : '',
+			'username'    => isset( $_POST['username'] ) ? sanitize_text_field( wp_unslash( $_POST['username'] ) ) : '',
+			'ip_address'  => isset( $_POST['ip_address'] ) ? sanitize_text_field( wp_unslash( $_POST['ip_address'] ) ) : '',
+			'search'      => isset( $_POST['search'] ) ? sanitize_text_field( wp_unslash( $_POST['search'] ) ) : '',
+			'date_from'   => isset( $_POST['date_from'] ) ? sanitize_text_field( wp_unslash( $_POST['date_from'] ) ) : '',
+			'date_to'     => isset( $_POST['date_to'] ) ? sanitize_text_field( wp_unslash( $_POST['date_to'] ) ) : '',
 			'per_page'    => isset( $_POST['per_page'] ) ? absint( $_POST['per_page'] ) : 25,
 			'page'        => isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1,
 		);
@@ -1095,16 +1262,20 @@ class NexifyMy_Security_Activity_Log {
 		}
 
 		$args = array(
-			'event_group' => isset( $_POST['event_group'] ) ? sanitize_key( $_POST['event_group'] ) : '',
-			'date_from'   => isset( $_POST['date_from'] ) ? sanitize_text_field( $_POST['date_from'] ) : '',
-			'date_to'     => isset( $_POST['date_to'] ) ? sanitize_text_field( $_POST['date_to'] ) : '',
+			'event_group' => isset( $_POST['event_group'] ) ? sanitize_key( wp_unslash( $_POST['event_group'] ) ) : '',
+			'event_type'  => isset( $_POST['event_type'] ) ? sanitize_key( wp_unslash( $_POST['event_type'] ) ) : '',
+			'username'    => isset( $_POST['username'] ) ? sanitize_text_field( wp_unslash( $_POST['username'] ) ) : '',
+			'ip_address'  => isset( $_POST['ip_address'] ) ? sanitize_text_field( wp_unslash( $_POST['ip_address'] ) ) : '',
+			'search'      => isset( $_POST['search'] ) ? sanitize_text_field( wp_unslash( $_POST['search'] ) ) : '',
+			'date_from'   => isset( $_POST['date_from'] ) ? sanitize_text_field( wp_unslash( $_POST['date_from'] ) ) : '',
+			'date_to'     => isset( $_POST['date_to'] ) ? sanitize_text_field( wp_unslash( $_POST['date_to'] ) ) : '',
 			'per_page'    => 10000,
 			'page'        => 1,
 		);
 
 		$results = $this->get_entries( $args );
 
-		$csv_rows = array();
+		$csv_rows   = array();
 		$csv_rows[] = array( 'Date', 'User', 'Role', 'Event Type', 'Group', 'Severity', 'Description', 'Object', 'IP Address' );
 
 		foreach ( $results['entries'] as $entry ) {
@@ -1121,7 +1292,12 @@ class NexifyMy_Security_Activity_Log {
 			);
 		}
 
-		wp_send_json_success( array( 'csv' => $csv_rows, 'total' => $results['total'] ) );
+		wp_send_json_success(
+			array(
+				'csv'   => $csv_rows,
+				'total' => $results['total'],
+			)
+		);
 	}
 
 	/**
@@ -1135,7 +1311,7 @@ class NexifyMy_Security_Activity_Log {
 
 		global $wpdb;
 		$table = $wpdb->prefix . self::TABLE_NAME;
-		$wpdb->query( "TRUNCATE TABLE {$table}" );
+		$wpdb->query( "TRUNCATE TABLE {$table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		wp_send_json_success( array( 'message' => 'Activity log purged successfully' ) );
 	}
@@ -1149,7 +1325,7 @@ class NexifyMy_Security_Activity_Log {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$days = isset( $_POST['days'] ) ? absint( $_POST['days'] ) : 30;
+		$days  = isset( $_POST['days'] ) ? absint( $_POST['days'] ) : 30;
 		$stats = $this->get_stats( $days );
 		wp_send_json_success( $stats );
 	}

@@ -14,17 +14,17 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 * Health status thresholds.
 	 */
 	const HEALTH_EXCELLENT = 90;
-	const HEALTH_GOOD = 70;
-	const HEALTH_AT_RISK = 50;
-	const HEALTH_CRITICAL = 0;
+	const HEALTH_GOOD      = 70;
+	const HEALTH_AT_RISK   = 50;
+	const HEALTH_CRITICAL  = 0;
 
 	/**
 	 * Impact weights for each classification tier.
 	 */
-	const IMPACT_CONFIRMED_MALWARE = 30;
-	const IMPACT_SUSPICIOUS_CODE = 10;
+	const IMPACT_CONFIRMED_MALWARE      = 30;
+	const IMPACT_SUSPICIOUS_CODE        = 10;
 	const IMPACT_SECURITY_VULNERABILITY = 15;
-	const IMPACT_CODE_SMELL = 2;
+	const IMPACT_CODE_SMELL             = 2;
 
 	/**
 	 * Calculate site health metrics from scan results.
@@ -34,17 +34,17 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 */
 	public function calculate_health_metrics( $scan_results ) {
 		$files_scanned = isset( $scan_results['files_scanned'] ) ? (int) $scan_results['files_scanned'] : 0;
-		$threats = isset( $scan_results['threats'] ) ? $scan_results['threats'] : array();
+		$threats       = isset( $scan_results['threats'] ) ? $scan_results['threats'] : array();
 
 		// Count threats by classification
 		$threat_counts = $this->count_threats_by_classification( $threats );
 
 		// Calculate total affected files
 		$files_with_threats = count( $threats );
-		$clean_files = max( 0, $files_scanned - $files_with_threats );
+		$clean_files        = max( 0, $files_scanned - $files_with_threats );
 
 		// Calculate percentages
-		$clean_percentage = $files_scanned > 0 ? ( $clean_files / $files_scanned ) * 100 : 100;
+		$clean_percentage    = $files_scanned > 0 ? ( $clean_files / $files_scanned ) * 100 : 100;
 		$affected_percentage = $files_scanned > 0 ? ( $files_with_threats / $files_scanned ) * 100 : 0;
 
 		// Calculate health score
@@ -60,17 +60,17 @@ class NexifyMy_Security_Site_Health_Calculator {
 		$recommendation = $this->generate_recommendation( $health_score, $threat_counts );
 
 		return array(
-			'health_score'         => $health_score,
-			'health_status'        => $health_status,
-			'files_scanned'        => $files_scanned,
-			'clean_files'          => $clean_files,
-			'clean_percentage'     => round( $clean_percentage, 2 ),
-			'affected_files'       => $files_with_threats,
-			'affected_percentage'  => round( $affected_percentage, 2 ),
-			'threat_counts'        => $threat_counts,
-			'threat_percentages'   => $threat_percentages,
-			'recommendation'       => $recommendation,
-			'calculated_at'        => current_time( 'mysql' ),
+			'health_score'        => $health_score,
+			'health_status'       => $health_status,
+			'files_scanned'       => $files_scanned,
+			'clean_files'         => $clean_files,
+			'clean_percentage'    => round( $clean_percentage, 2 ),
+			'affected_files'      => $files_with_threats,
+			'affected_percentage' => round( $affected_percentage, 2 ),
+			'threat_counts'       => $threat_counts,
+			'threat_percentages'  => $threat_percentages,
+			'recommendation'      => $recommendation,
+			'calculated_at'       => current_time( 'mysql' ),
 		);
 	}
 
@@ -82,16 +82,16 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 */
 	private function count_threats_by_classification( $threats ) {
 		$counts = array(
-			'CONFIRMED_MALWARE'        => 0,
-			'SUSPICIOUS_CODE'          => 0,
-			'SECURITY_VULNERABILITY'   => 0,
-			'CODE_SMELL'               => 0,
-			'UNCLASSIFIED'             => 0,
+			'CONFIRMED_MALWARE'      => 0,
+			'SUSPICIOUS_CODE'        => 0,
+			'SECURITY_VULNERABILITY' => 0,
+			'CODE_SMELL'             => 0,
+			'UNCLASSIFIED'           => 0,
 		);
 
 		foreach ( $threats as $threat_file ) {
 			// Each file may have multiple threats, use highest classification
-			$file_classification = 'UNCLASSIFIED';
+			$file_classification     = 'UNCLASSIFIED';
 			$classification_priority = array(
 				'CONFIRMED_MALWARE'      => 4,
 				'SUSPICIOUS_CODE'        => 3,
@@ -104,10 +104,10 @@ class NexifyMy_Security_Site_Health_Calculator {
 			if ( isset( $threat_file['threats'] ) && is_array( $threat_file['threats'] ) ) {
 				foreach ( $threat_file['threats'] as $threat ) {
 					$classification = isset( $threat['classification'] ) ? $threat['classification'] : 'UNCLASSIFIED';
-					$priority = isset( $classification_priority[ $classification ] ) ? $classification_priority[ $classification ] : 0;
+					$priority       = isset( $classification_priority[ $classification ] ) ? $classification_priority[ $classification ] : 0;
 
 					if ( $priority > $highest_priority ) {
-						$highest_priority = $priority;
+						$highest_priority    = $priority;
 						$file_classification = $classification;
 					}
 				}
@@ -115,7 +115,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 
 			// Increment count for this file's highest classification
 			if ( isset( $counts[ $file_classification ] ) ) {
-				$counts[ $file_classification ]++;
+				++$counts[ $file_classification ];
 			}
 		}
 
@@ -233,11 +233,11 @@ class NexifyMy_Security_Site_Health_Calculator {
 		}
 
 		// Health status recommendations
-		if ( $health_score >= self::HEALTH_EXCELLENT && empty($threat_counts['CONFIRMED_MALWARE']) ) {
+		if ( $health_score >= self::HEALTH_EXCELLENT && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
 			$recommendations[] = '<i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Excellent security health!</strong> Your site is clean and secure.';
-		} elseif ( $health_score >= self::HEALTH_GOOD && empty($threat_counts['CONFIRMED_MALWARE']) ) {
+		} elseif ( $health_score >= self::HEALTH_GOOD && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
 			$recommendations[] = '<i class="fas fa-thumbs-up" style="color: #ffc107;"></i> <strong>Good security health.</strong> Address findings to maintain security.';
-		} elseif ( $health_score >= self::HEALTH_AT_RISK && empty($threat_counts['CONFIRMED_MALWARE']) ) {
+		} elseif ( $health_score >= self::HEALTH_AT_RISK && empty( $threat_counts['CONFIRMED_MALWARE'] ) ) {
 			$recommendations[] = '<i class="fas fa-exclamation-triangle" style="color: #ff9800;"></i> <strong>Site security at risk.</strong> Address threats as soon as possible.';
 		} else {
 			$recommendations[] = '<i class="fas fa-radiation" style="color: #dc3545;"></i> <strong>CRITICAL SECURITY RISK!</strong> Immediate action required.';
@@ -260,19 +260,19 @@ class NexifyMy_Security_Site_Health_Calculator {
 				'label' => 'Excellent',
 				'class' => 'status-excellent',
 			),
-			'good' => array(
+			'good'      => array(
 				'icon'  => 'fas fa-check',
 				'color' => '#ffc107', // Yellow
 				'label' => 'Good',
 				'class' => 'status-good',
 			),
-			'at_risk' => array(
+			'at_risk'   => array(
 				'icon'  => 'fas fa-exclamation-triangle',
 				'color' => '#ff9800', // Orange
 				'label' => 'At Risk',
 				'class' => 'status-at-risk',
 			),
-			'critical' => array(
+			'critical'  => array(
 				'icon'  => 'fas fa-times',
 				'color' => '#dc3545', // Red
 				'label' => 'Critical',
@@ -291,13 +291,13 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 */
 	public function get_classification_display( $classification ) {
 		$display_map = array(
-			'CONFIRMED_MALWARE' => array(
+			'CONFIRMED_MALWARE'      => array(
 				'icon'  => 'fas fa-circle',
 				'color' => '#dc3545', // Red
 				'label' => 'Confirmed Malware',
 				'class' => 'badge-danger',
 			),
-			'SUSPICIOUS_CODE' => array(
+			'SUSPICIOUS_CODE'        => array(
 				'icon'  => 'fas fa-circle',
 				'color' => '#ff9800', // Orange
 				'label' => 'Suspicious Code',
@@ -309,13 +309,13 @@ class NexifyMy_Security_Site_Health_Calculator {
 				'label' => 'Security Vulnerability',
 				'class' => 'badge-warning',
 			),
-			'CODE_SMELL' => array(
+			'CODE_SMELL'             => array(
 				'icon'  => 'fas fa-circle',
 				'color' => '#007bff', // Blue
 				'label' => 'Code Quality Issue',
 				'class' => 'badge-info',
 			),
-			'CLEAN' => array(
+			'CLEAN'                  => array(
 				'icon'  => 'fas fa-check',
 				'color' => '#28a745', // Green
 				'label' => 'Clean',
@@ -338,9 +338,9 @@ class NexifyMy_Security_Site_Health_Calculator {
 	 * @return string HTML summary card.
 	 */
 	public function format_health_summary_html( $health_metrics ) {
-		$health_score = $health_metrics['health_score'];
+		$health_score  = $health_metrics['health_score'];
 		$health_status = $health_metrics['health_status'];
-		$display = $this->get_health_status_display( $health_status );
+		$display       = $this->get_health_status_display( $health_status );
 
 		$progress_width = $health_score;
 		$progress_color = $display['color'];
@@ -383,7 +383,7 @@ class NexifyMy_Security_Site_Health_Calculator {
 		if ( $health_metrics['affected_files'] > 0 ) {
 			$html .= '<h4>Threat Breakdown:</h4><ul>';
 
-			$counts = $health_metrics['threat_counts'];
+			$counts      = $health_metrics['threat_counts'];
 			$percentages = $health_metrics['threat_percentages'];
 
 			if ( $counts['CONFIRMED_MALWARE'] > 0 ) {

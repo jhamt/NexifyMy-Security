@@ -24,17 +24,17 @@ class NexifyMy_Security_Login_Captcha {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'              => true,
-		'provider'             => 'nexifymy',  // nexifymy, recaptcha, recaptcha_v3, turnstile
-		'nexifymy_type'        => 'math',      // math, text_match, image, audio
-		'enable_login'         => true,
-		'enable_registration'  => true,
-		'enable_reset'         => true,
-		'enable_comment'       => false,
-		'difficulty'           => 'easy',      // easy, medium, hard
-		'site_key'             => '',          // For reCAPTCHA/Turnstile
-		'secret_key'           => '',          // For reCAPTCHA/Turnstile
-		'failed_threshold'     => 3,           // Show captcha after X failed attempts
+		'enabled'             => true,
+		'provider'            => 'nexifymy',  // nexifymy, recaptcha, recaptcha_v3, turnstile
+		'nexifymy_type'       => 'math',      // math, text_match, image, audio
+		'enable_login'        => true,
+		'enable_registration' => true,
+		'enable_reset'        => true,
+		'enable_comment'      => false,
+		'difficulty'          => 'easy',      // easy, medium, hard
+		'site_key'            => '',          // For reCAPTCHA/Turnstile
+		'secret_key'          => '',          // For reCAPTCHA/Turnstile
+		'failed_threshold'    => 3,           // Show captcha after X failed attempts
 	);
 
 	/**
@@ -115,11 +115,10 @@ class NexifyMy_Security_Login_Captcha {
 	 * @return string
 	 */
 	private function get_client_id() {
-		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( $_SERVER['REMOTE_ADDR'] ) : 'unknown';
-		$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( $_SERVER['HTTP_USER_AGENT'] ) : '';
+		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : 'unknown';
+		$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '';
 		return md5( $ip . $ua );
 	}
-
 	/**
 	 * Get module settings.
 	 *
@@ -141,24 +140,24 @@ class NexifyMy_Security_Login_Captcha {
 	 * @return array Question and answer.
 	 */
 	private function generate_captcha() {
-		$settings = $this->get_settings();
+		$settings   = $this->get_settings();
 		$difficulty = $settings['difficulty'];
 
 		switch ( $difficulty ) {
 			case 'hard':
-				$num1 = wp_rand( 10, 50 );
-				$num2 = wp_rand( 10, 50 );
+				$num1       = wp_rand( 10, 50 );
+				$num2       = wp_rand( 10, 50 );
 				$operations = array( '+', '-', '*', '/' );
 				break;
 			case 'medium':
-				$num1 = wp_rand( 5, 20 );
-				$num2 = wp_rand( 1, 10 );
+				$num1       = wp_rand( 5, 20 );
+				$num2       = wp_rand( 1, 10 );
 				$operations = array( '+', '-' );
 				break;
 			case 'easy':
 			default:
-				$num1 = wp_rand( 1, 10 );
-				$num2 = wp_rand( 1, 10 );
+				$num1       = wp_rand( 1, 10 );
+				$num2       = wp_rand( 1, 10 );
 				$operations = array( '+' );
 				break;
 		}
@@ -243,7 +242,7 @@ class NexifyMy_Security_Login_Captcha {
 	 */
 	private function render_nexifymy_captcha() {
 		$settings = $this->get_settings();
-		$type = $settings['nexifymy_type'] ?? 'math';
+		$type     = $settings['nexifymy_type'] ?? 'math';
 
 		switch ( $type ) {
 			case 'text_match':
@@ -285,7 +284,7 @@ class NexifyMy_Security_Login_Captcha {
 	 */
 	private function render_text_match_captcha() {
 		$words = array( 'apple', 'banana', 'orange', 'grape', 'watermelon', 'security', 'protect', 'password' );
-		$word = $words[ array_rand( $words ) ];
+		$word  = $words[ array_rand( $words ) ];
 
 		// Store answer
 		if ( isset( $_SESSION ) ) {
@@ -436,18 +435,18 @@ class NexifyMy_Security_Login_Captcha {
 	 */
 	private function validate_captcha( $submitted ) {
 		$settings = $this->get_settings();
-		$type = $settings['nexifymy_type'] ?? 'math';
+		$type     = $settings['nexifymy_type'] ?? 'math';
 		$expected = null;
 
 		// Try session first (primary).
 		if ( isset( $_SESSION[ self::SESSION_KEY ] ) ) {
+           // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Session value is generated server-side by this module.
 			$expected = $_SESSION[ self::SESSION_KEY ];
 			unset( $_SESSION[ self::SESSION_KEY ] );
 		}
-
 		// Try transient (fallback) if session failed.
 		if ( null === $expected ) {
-			$client_id = $this->get_client_id();
+			$client_id        = $this->get_client_id();
 			$transient_answer = get_transient( self::TRANSIENT_PREFIX . $client_id );
 			if ( false !== $transient_answer ) {
 				$expected = $transient_answer;
@@ -565,7 +564,10 @@ class NexifyMy_Security_Login_Captcha {
 			wp_die(
 				__( 'Incorrect captcha answer. Please go back and try again.', 'nexifymy-security' ),
 				__( 'Comment Blocked', 'nexifymy-security' ),
-				array( 'response' => 403, 'back_link' => true )
+				array(
+					'response'  => 403,
+					'back_link' => true,
+				)
 			);
 		}
 
@@ -576,7 +578,9 @@ class NexifyMy_Security_Login_Captcha {
 	 * Enqueue login page styles.
 	 */
 	public function enqueue_styles() {
-		wp_add_inline_style( 'login', '
+		wp_add_inline_style(
+			'login',
+			'
 			.nexifymy-captcha-field {
 				margin-bottom: 20px;
 			}
@@ -585,7 +589,8 @@ class NexifyMy_Security_Login_Captcha {
 				font-size: 14px;
 				font-weight: 600;
 			}
-		' );
+		'
+		);
 	}
 
 	/*
@@ -625,18 +630,19 @@ class NexifyMy_Security_Login_Captcha {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$settings = array(
-			'enabled'              => ! empty( $_POST['enabled'] ),
-			'enable_login'         => ! empty( $_POST['enable_login'] ),
-			'enable_registration'  => ! empty( $_POST['enable_registration'] ),
-			'enable_reset'         => ! empty( $_POST['enable_reset'] ),
-			'enable_comment'       => ! empty( $_POST['enable_comment'] ),
-			'difficulty'           => isset( $_POST['difficulty'] ) && in_array( $_POST['difficulty'], array( 'easy', 'medium', 'hard' ), true ) ? $_POST['difficulty'] : 'easy',
-			'failed_threshold'     => isset( $_POST['failed_threshold'] ) ? absint( $_POST['failed_threshold'] ) : 3,
-		);
+		$difficulty = isset( $_POST['difficulty'] ) ? sanitize_key( wp_unslash( $_POST['difficulty'] ) ) : 'easy';
 
+		$settings = array(
+			'enabled'             => ! empty( $_POST['enabled'] ),
+			'enable_login'        => ! empty( $_POST['enable_login'] ),
+			'enable_registration' => ! empty( $_POST['enable_registration'] ),
+			'enable_reset'        => ! empty( $_POST['enable_reset'] ),
+			'enable_comment'      => ! empty( $_POST['enable_comment'] ),
+			'difficulty'          => in_array( $difficulty, array( 'easy', 'medium', 'hard' ), true ) ? $difficulty : 'easy',
+			'failed_threshold'    => isset( $_POST['failed_threshold'] ) ? absint( $_POST['failed_threshold'] ) : 3,
+		);
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings            = NexifyMy_Security_Settings::get_all();
 			$all_settings['captcha'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}

@@ -28,15 +28,69 @@ class NexifyMy_Security_Password {
 	 * Common weak passwords list (top 100).
 	 */
 	private static $common_passwords = array(
-		'123456', '123456789', 'qwerty', 'password', '12345678', '111111', '123123',
-		'1234567890', '1234567', 'qwerty123', '000000', '1q2w3e', 'aa12345678',
-		'abc123', 'password1', '1234', 'qwertyuiop', '123321', 'password123',
-		'1q2w3e4r5t', 'iloveyou', '654321', '666666', '987654321', '123', '123456a',
-		'qwe123', '1q2w3e4r', '7777777', '1qaz2wsx', '123qwe', 'zxcvbnm', '121212',
-		'asdasd', 'a]123456', 'dragon', 'sunshine', 'princess', 'letmein', 'monkey',
-		'shadow', 'master', 'qazwsx', 'trustno1', 'superman', 'hello', 'charlie',
-		'donald', 'admin', 'welcome', 'login', 'baseball', 'football', 'pass',
-		'test', 'guest', '1111', '2222', 'love', 'god', 'secret', 'asdfgh', 'zxcv',
+		'123456',
+		'123456789',
+		'qwerty',
+		'password',
+		'12345678',
+		'111111',
+		'123123',
+		'1234567890',
+		'1234567',
+		'qwerty123',
+		'000000',
+		'1q2w3e',
+		'aa12345678',
+		'abc123',
+		'password1',
+		'1234',
+		'qwertyuiop',
+		'123321',
+		'password123',
+		'1q2w3e4r5t',
+		'iloveyou',
+		'654321',
+		'666666',
+		'987654321',
+		'123',
+		'123456a',
+		'qwe123',
+		'1q2w3e4r',
+		'7777777',
+		'1qaz2wsx',
+		'123qwe',
+		'zxcvbnm',
+		'121212',
+		'asdasd',
+		'a]123456',
+		'dragon',
+		'sunshine',
+		'princess',
+		'letmein',
+		'monkey',
+		'shadow',
+		'master',
+		'qazwsx',
+		'trustno1',
+		'superman',
+		'hello',
+		'charlie',
+		'donald',
+		'admin',
+		'welcome',
+		'login',
+		'baseball',
+		'football',
+		'pass',
+		'test',
+		'guest',
+		'1111',
+		'2222',
+		'love',
+		'god',
+		'secret',
+		'asdfgh',
+		'zxcv',
 	);
 
 	/**
@@ -100,7 +154,7 @@ class NexifyMy_Security_Password {
 	 */
 	public function validate_password( $password ) {
 		$settings = $this->get_settings();
-		$errors = array();
+		$errors   = array();
 
 		// Minimum length.
 		$min_length = absint( $settings['min_length'] ) ?: 12;
@@ -159,7 +213,8 @@ class NexifyMy_Security_Password {
 	 */
 	public function validate_password_change( $errors, $update, $user ) {
 		if ( isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ) ) {
-			$password = wp_unslash( $_POST['pass1'] );
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Password must remain raw for accurate strength validation.
+			$password          = wp_unslash( $_POST['pass1'] );
 			$validation_errors = $this->validate_password( $password );
 
 			foreach ( $validation_errors as $error ) {
@@ -183,7 +238,8 @@ class NexifyMy_Security_Password {
 	 */
 	public function validate_registration_password( $errors, $sanitized_user_login, $user_email ) {
 		if ( isset( $_POST['user_pass'] ) && ! empty( $_POST['user_pass'] ) ) {
-			$password = wp_unslash( $_POST['user_pass'] );
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Password must remain raw for accurate strength validation.
+			$password          = wp_unslash( $_POST['user_pass'] );
 			$validation_errors = $this->validate_password( $password );
 
 			foreach ( $validation_errors as $error ) {
@@ -201,7 +257,8 @@ class NexifyMy_Security_Password {
 	 */
 	public function validate_password_reset( $errors, $user ) {
 		if ( isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ) ) {
-			$password = wp_unslash( $_POST['pass1'] );
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Password must remain raw for accurate strength validation.
+			$password          = wp_unslash( $_POST['pass1'] );
 			$validation_errors = $this->validate_password( $password );
 
 			foreach ( $validation_errors as $error ) {
@@ -222,7 +279,7 @@ class NexifyMy_Security_Password {
 		$settings = $this->get_settings();
 		echo '<p class="description" style="margin-bottom: 15px;">';
 		echo '<strong>' . esc_html__( 'Password Requirements:', 'nexifymy-security' ) . '</strong><br>';
-		echo sprintf( esc_html__( 'Minimum %d characters', 'nexifymy-security' ), absint( $settings['min_length'] ) );
+		printf( esc_html__( 'Minimum %d characters', 'nexifymy-security' ), absint( $settings['min_length'] ) );
 
 		$requirements = array();
 		if ( ! empty( $settings['require_upper'] ) ) {
@@ -251,7 +308,7 @@ class NexifyMy_Security_Password {
 	 * @param WP_User $user User object.
 	 */
 	public function check_password_expiry( $user_login, $user ) {
-		$settings = $this->get_settings();
+		$settings    = $this->get_settings();
 		$expiry_days = absint( $settings['expiry_days'] );
 
 		if ( empty( $expiry_days ) ) {
@@ -273,12 +330,15 @@ class NexifyMy_Security_Password {
 			update_user_meta( $user->ID, '_nexifymy_password_expired', true );
 
 			// Redirect to password change.
-			add_action( 'admin_init', function() {
-				if ( ! isset( $_GET['action'] ) || 'profile' !== $_GET['action'] ) {
-					wp_safe_redirect( admin_url( 'profile.php?nexifymy_expired=1' ) );
-					exit;
+			add_action(
+				'admin_init',
+				function () {
+					if ( ! isset( $_GET['action'] ) || 'profile' !== $_GET['action'] ) {
+						wp_safe_redirect( admin_url( 'profile.php?nexifymy_expired=1' ) );
+						exit;
+					}
 				}
-			} );
+			);
 		}
 	}
 
@@ -301,7 +361,7 @@ class NexifyMy_Security_Password {
 	 * @return array Score and feedback.
 	 */
 	public function get_strength_score( $password ) {
-		$score = 0;
+		$score    = 0;
 		$feedback = array();
 		$settings = $this->get_settings();
 
@@ -340,7 +400,7 @@ class NexifyMy_Security_Password {
 
 		// Penalty for common passwords.
 		if ( $this->is_common_password( $password ) ) {
-			$score = max( 0, $score - 50 );
+			$score      = max( 0, $score - 50 );
 			$feedback[] = __( 'This is a common password.', 'nexifymy-security' );
 		}
 
@@ -372,14 +432,10 @@ class NexifyMy_Security_Password {
 	 * Check password strength via AJAX.
 	 */
 	public function ajax_check_strength() {
-		// Note: This endpoint intentionally allows nopriv access for password strength checking on login/registration forms.
-		// We still verify a nonce if one is provided for logged-in users.
-		if ( isset( $_POST['nonce'] ) ) {
-			check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
-		}
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Password must remain raw for accurate strength validation.
 		$password = isset( $_POST['password'] ) ? wp_unslash( $_POST['password'] ) : '';
-
 		if ( empty( $password ) ) {
 			wp_send_json_error( 'Password required.' );
 		}
@@ -387,11 +443,13 @@ class NexifyMy_Security_Password {
 		$result = $this->get_strength_score( $password );
 		$errors = $this->validate_password( $password );
 
-		wp_send_json_success( array(
-			'strength' => $result,
-			'valid'    => empty( $errors ),
-			'errors'   => $errors,
-		) );
+		wp_send_json_success(
+			array(
+				'strength' => $result,
+				'valid'    => empty( $errors ),
+				'errors'   => $errors,
+			)
+		);
 	}
 
 	/**

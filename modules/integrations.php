@@ -14,59 +14,59 @@ class NexifyMy_Security_Integrations {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'           => true,
+		'enabled'                      => true,
 
 		// Slack.
-		'slack_enabled'     => false,
-		'slack_webhook_url' => '',
-		'slack_channel'     => '#security',
-		'slack_events'      => array( 'threat_detected', 'malware_found', 'login_failed' ),
+		'slack_enabled'                => false,
+		'slack_webhook_url'            => '',
+		'slack_channel'                => '#security',
+		'slack_events'                 => array( 'threat_detected', 'malware_found', 'login_failed' ),
 
 		// Discord.
-		'discord_enabled'     => false,
-		'discord_webhook_url' => '',
-		'discord_events'      => array( 'threat_detected', 'malware_found' ),
+		'discord_enabled'              => false,
+		'discord_webhook_url'          => '',
+		'discord_events'               => array( 'threat_detected', 'malware_found' ),
 
 		// Microsoft Teams.
-		'teams_enabled'     => false,
-		'teams_webhook_url' => '',
-		'teams_events'      => array( 'threat_detected', 'scan_completed' ),
+		'teams_enabled'                => false,
+		'teams_webhook_url'            => '',
+		'teams_events'                 => array( 'threat_detected', 'scan_completed' ),
 
 		// SIEM (Splunk).
-		'siem_enabled'      => false,
-		'siem_type'         => 'splunk',  // splunk, elasticsearch, generic.
-		'siem_endpoint'     => '',
-		'siem_token'        => '',
-		'siem_index'        => 'wordpress_security',
-		'siem_events'       => array( 'all' ),
+		'siem_enabled'                 => false,
+		'siem_type'                    => 'splunk',  // splunk, elasticsearch, generic.
+		'siem_endpoint'                => '',
+		'siem_token'                   => '',
+		'siem_index'                   => 'wordpress_security',
+		'siem_events'                  => array( 'all' ),
 
 		// Jira.
-		'jira_enabled'      => false,
-		'jira_url'          => '',
-		'jira_email'        => '',
-		'jira_api_token'    => '',
-		'jira_project_key'  => '',
-		'jira_issue_type'   => 'Bug',
-		'jira_priority'     => 'High',
-		'jira_events'       => array( 'malware_found', 'plugin_vulnerability' ),
+		'jira_enabled'                 => false,
+		'jira_url'                     => '',
+		'jira_email'                   => '',
+		'jira_api_token'               => '',
+		'jira_project_key'             => '',
+		'jira_issue_type'              => 'Bug',
+		'jira_priority'                => 'High',
+		'jira_events'                  => array( 'malware_found', 'plugin_vulnerability' ),
 
 		// ServiceNow.
-		'servicenow_enabled'  => false,
-		'servicenow_instance' => '',
-		'servicenow_username' => '',
-		'servicenow_password' => '',
-		'servicenow_table'    => 'incident',
+		'servicenow_enabled'           => false,
+		'servicenow_instance'          => '',
+		'servicenow_username'          => '',
+		'servicenow_password'          => '',
+		'servicenow_table'             => 'incident',
 
 		// Custom Webhooks.
-		'custom_webhooks_enabled' => false,
-		'custom_webhooks' => array(),  // Array of webhook configs.
+		'custom_webhooks_enabled'      => false,
+		'custom_webhooks'              => array(),  // Array of webhook configs.
 
 		// CI/CD Pipeline Integration.
-		'cicd_enabled'                => false,
-		'cicd_webhook_url'            => '',
-		'cicd_fail_on_malware'        => true,
+		'cicd_enabled'                 => false,
+		'cicd_webhook_url'             => '',
+		'cicd_fail_on_malware'         => true,
 		'cicd_fail_on_vulnerabilities' => true,
-		'cicd_min_severity'           => 'high',  // critical, high, medium, low.
+		'cicd_min_severity'            => 'high',  // critical, high, medium, low.
 	);
 
 	/**
@@ -124,7 +124,7 @@ class NexifyMy_Security_Integrations {
 	 */
 	public function save_settings( $settings ) {
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings                 = NexifyMy_Security_Settings::get_all();
 			$all_settings['integrations'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}
@@ -168,57 +168,78 @@ class NexifyMy_Security_Integrations {
 			);
 		}
 
-		$this->dispatch_to_all( 'threat_detected', array(
-			'title'       => '[URGENT] Threat Detected',
-			'description' => sprintf( 'AI detected threat from IP: %s (Score: %d)', $data['ip'] ?? 'Unknown', $data['score'] ?? 0 ),
-			'severity'    => 'critical',
-			'data'        => $data,
-		) );
+		$this->dispatch_to_all(
+			'threat_detected',
+			array(
+				'title'       => '[URGENT] Threat Detected',
+				'description' => sprintf( 'AI detected threat from IP: %s (Score: %d)', $data['ip'] ?? 'Unknown', $data['score'] ?? 0 ),
+				'severity'    => 'critical',
+				'data'        => $data,
+			)
+		);
 	}
 
 	public function handle_login_failed( $username ) {
-		$this->dispatch_to_all( 'login_failed', array(
-			'title'       => '[WARN] Failed Login Attempt',
-			'description' => sprintf( 'Failed login for user: %s from IP: %s', $username, $this->get_client_ip() ),
-			'severity'    => 'warning',
-			'data'        => array( 'username' => $username, 'ip' => $this->get_client_ip() ),
-		) );
+		$this->dispatch_to_all(
+			'login_failed',
+			array(
+				'title'       => '[WARN] Failed Login Attempt',
+				'description' => sprintf( 'Failed login for user: %s from IP: %s', $username, $this->get_client_ip() ),
+				'severity'    => 'warning',
+				'data'        => array(
+					'username' => $username,
+					'ip'       => $this->get_client_ip(),
+				),
+			)
+		);
 	}
 
 	public function handle_user_locked( $data ) {
-		$this->dispatch_to_all( 'user_locked', array(
-			'title'       => '[LOCKED] User/IP Locked',
-			'description' => sprintf( 'IP %s has been locked: %s', $data['ip'] ?? 'Unknown', $data['reason'] ?? '' ),
-			'severity'    => 'high',
-			'data'        => $data,
-		) );
+		$this->dispatch_to_all(
+			'user_locked',
+			array(
+				'title'       => '[LOCKED] User/IP Locked',
+				'description' => sprintf( 'IP %s has been locked: %s', $data['ip'] ?? 'Unknown', $data['reason'] ?? '' ),
+				'severity'    => 'high',
+				'data'        => $data,
+			)
+		);
 	}
 
 	public function handle_malware_found( $data ) {
-		$this->dispatch_to_all( 'malware_found', array(
-			'title'       => '[MALWARE] Malware Detected',
-			'description' => sprintf( 'Malware found in %d file(s)', count( $data['files'] ?? array() ) ),
-			'severity'    => 'critical',
-			'data'        => $data,
-		) );
+		$this->dispatch_to_all(
+			'malware_found',
+			array(
+				'title'       => '[MALWARE] Malware Detected',
+				'description' => sprintf( 'Malware found in %d file(s)', count( $data['files'] ?? array() ) ),
+				'severity'    => 'critical',
+				'data'        => $data,
+			)
+		);
 	}
 
 	public function handle_scan_completed( $data ) {
-		$this->dispatch_to_all( 'scan_completed', array(
-			'title'       => '[COMPLETED] Scan Completed',
-			'description' => sprintf( 'Security scan finished. Issues: %d', $data['issues'] ?? 0 ),
-			'severity'    => ( $data['issues'] ?? 0 ) > 0 ? 'warning' : 'info',
-			'data'        => $data,
-		) );
+		$this->dispatch_to_all(
+			'scan_completed',
+			array(
+				'title'       => '[COMPLETED] Scan Completed',
+				'description' => sprintf( 'Security scan finished. Issues: %d', $data['issues'] ?? 0 ),
+				'severity'    => ( $data['issues'] ?? 0 ) > 0 ? 'warning' : 'info',
+				'data'        => $data,
+			)
+		);
 	}
 
 	public function handle_vulnerability_found( $data ) {
-		$this->dispatch_to_all( 'plugin_vulnerability', array(
-			'title'       => '[VULNERABILITY] Vulnerability Found',
-			'description' => sprintf( 'Vulnerable plugin: %s', $data['plugin'] ?? 'Unknown' ),
-			'severity'    => 'high',
-			'data'        => $data,
-		) );
+		$this->dispatch_to_all(
+			'plugin_vulnerability',
+			array(
+				'title'       => '[VULNERABILITY] Vulnerability Found',
+				'description' => sprintf( 'Vulnerable plugin: %s', $data['plugin'] ?? 'Unknown' ),
+				'severity'    => 'high',
+				'data'        => $data,
+			)
+		);
 	}
 
 	/**
@@ -294,6 +315,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool
 	 */
 	public function send_slack( $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -310,13 +332,13 @@ class NexifyMy_Security_Integrations {
 			'icon_emoji'  => ':shield:',
 			'attachments' => array(
 				array(
-					'color'      => $color,
-					'title'      => $payload['title'],
-					'text'       => $payload['description'],
-					'footer'     => get_bloginfo( 'name' ) . ' | ' . home_url(),
-					'footer_icon'=> 'https://wordpress.org/favicon.ico',
-					'ts'         => time(),
-					'fields'     => array(
+					'color'       => $color,
+					'title'       => $payload['title'],
+					'text'        => $payload['description'],
+					'footer'      => get_bloginfo( 'name' ) . ' | ' . home_url(),
+					'footer_icon' => 'https://wordpress.org/favicon.ico',
+					'ts'          => time(),
+					'fields'      => array(
 						array(
 							'title' => 'Severity',
 							'value' => ucfirst( $payload['severity'] ),
@@ -332,15 +354,17 @@ class NexifyMy_Security_Integrations {
 			),
 		);
 
-		$response = wp_remote_post( $settings['slack_webhook_url'], array(
-			'body'    => wp_json_encode( $slack_payload ),
-			'headers' => array( 'Content-Type' => 'application/json' ),
-			'timeout' => 10,
-		) );
+		$response = wp_remote_post(
+			$settings['slack_webhook_url'],
+			array(
+				'body'    => wp_json_encode( $slack_payload ),
+				'headers' => array( 'Content-Type' => 'application/json' ),
+				'timeout' => 10,
+			)
+		);
 
-		return ! is_wp_error( $response );
+		return $this->is_success_response( $response );
 	}
-
 	/*
 	 * =========================================================================
 	 * DISCORD
@@ -355,6 +379,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool
 	 */
 	public function send_discord( $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -393,15 +418,17 @@ class NexifyMy_Security_Integrations {
 			),
 		);
 
-		$response = wp_remote_post( $settings['discord_webhook_url'], array(
-			'body'    => wp_json_encode( $discord_payload ),
-			'headers' => array( 'Content-Type' => 'application/json' ),
-			'timeout' => 10,
-		) );
+		$response = wp_remote_post(
+			$settings['discord_webhook_url'],
+			array(
+				'body'    => wp_json_encode( $discord_payload ),
+				'headers' => array( 'Content-Type' => 'application/json' ),
+				'timeout' => 10,
+			)
+		);
 
-		return ! is_wp_error( $response );
+		return $this->is_success_response( $response );
 	}
-
 	/*
 	 * =========================================================================
 	 * MICROSOFT TEAMS
@@ -416,6 +443,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool
 	 */
 	public function send_teams( $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -428,11 +456,11 @@ class NexifyMy_Security_Integrations {
 
 		// Adaptive Card format.
 		$teams_payload = array(
-			'@type'      => 'MessageCard',
-			'@context'   => 'http://schema.org/extensions',
-			'themeColor' => str_replace( '#', '', $color ),
-			'summary'    => $payload['title'],
-			'sections'   => array(
+			'@type'           => 'MessageCard',
+			'@context'        => 'http://schema.org/extensions',
+			'themeColor'      => str_replace( '#', '', $color ),
+			'summary'         => $payload['title'],
+			'sections'        => array(
 				array(
 					'activityTitle'    => $payload['title'],
 					'activitySubtitle' => get_bloginfo( 'name' ),
@@ -455,7 +483,7 @@ class NexifyMy_Security_Integrations {
 							'value' => current_time( 'Y-m-d H:i:s' ),
 						),
 					),
-					'markdown' => true,
+					'markdown'         => true,
 				),
 			),
 			'potentialAction' => array(
@@ -472,15 +500,17 @@ class NexifyMy_Security_Integrations {
 			),
 		);
 
-		$response = wp_remote_post( $settings['teams_webhook_url'], array(
-			'body'    => wp_json_encode( $teams_payload ),
-			'headers' => array( 'Content-Type' => 'application/json' ),
-			'timeout' => 10,
-		) );
+		$response = wp_remote_post(
+			$settings['teams_webhook_url'],
+			array(
+				'body'    => wp_json_encode( $teams_payload ),
+				'headers' => array( 'Content-Type' => 'application/json' ),
+				'timeout' => 10,
+			)
+		);
 
-		return ! is_wp_error( $response );
+		return $this->is_success_response( $response );
 	}
-
 	/*
 	 * =========================================================================
 	 * SIEM (Splunk/Elasticsearch)
@@ -496,6 +526,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool
 	 */
 	public function send_siem( $event, $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -526,7 +557,7 @@ class NexifyMy_Security_Integrations {
 		switch ( $settings['siem_type'] ) {
 			case 'splunk':
 				$headers['Authorization'] = 'Splunk ' . $settings['siem_token'];
-				$body = array(
+				$body                     = array(
 					'event'      => $log_entry,
 					'index'      => $settings['siem_index'],
 					'sourcetype' => 'wordpress_security',
@@ -545,15 +576,17 @@ class NexifyMy_Security_Integrations {
 				break;
 		}
 
-		$response = wp_remote_post( $settings['siem_endpoint'], array(
-			'body'    => wp_json_encode( $body ),
-			'headers' => $headers,
-			'timeout' => 15,
-		) );
+		$response = wp_remote_post(
+			$settings['siem_endpoint'],
+			array(
+				'body'    => wp_json_encode( $body ),
+				'headers' => $headers,
+				'timeout' => 15,
+			)
+		);
 
-		return ! is_wp_error( $response );
+		return $this->is_success_response( $response );
 	}
-
 	/*
 	 * =========================================================================
 	 * JIRA
@@ -568,6 +601,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool|string Ticket key or false.
 	 */
 	public function create_jira_ticket( $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -597,19 +631,21 @@ class NexifyMy_Security_Integrations {
 
 		$auth = base64_encode( $settings['jira_email'] . ':' . $settings['jira_api_token'] );
 
-		$response = wp_remote_post( $api_url, array(
-			'body'    => wp_json_encode( $issue_data ),
-			'headers' => array(
-				'Content-Type'  => 'application/json',
-				'Authorization' => 'Basic ' . $auth,
-			),
-			'timeout' => 15,
-		) );
+		$response = wp_remote_post(
+			$api_url,
+			array(
+				'body'    => wp_json_encode( $issue_data ),
+				'headers' => array(
+					'Content-Type'  => 'application/json',
+					'Authorization' => 'Basic ' . $auth,
+				),
+				'timeout' => 15,
+			)
+		);
 
-		if ( is_wp_error( $response ) ) {
+		if ( ! $this->is_success_response( $response ) ) {
 			return false;
 		}
-
 		$body = json_decode( wp_remote_retrieve_body( $response ), true );
 
 		if ( ! empty( $body['key'] ) ) {
@@ -635,10 +671,10 @@ class NexifyMy_Security_Integrations {
 	 * @return string
 	 */
 	private function format_jira_description( $payload ) {
-		$description = "*Description:*\n" . $payload['description'] . "\n\n";
-		$description .= "*Severity:* " . ucfirst( $payload['severity'] ) . "\n";
-		$description .= "*Site:* " . home_url() . "\n";
-		$description .= "*Time:* " . current_time( 'Y-m-d H:i:s' ) . "\n\n";
+		$description  = "*Description:*\n" . $payload['description'] . "\n\n";
+		$description .= '*Severity:* ' . ucfirst( $payload['severity'] ) . "\n";
+		$description .= '*Site:* ' . home_url() . "\n";
+		$description .= '*Time:* ' . current_time( 'Y-m-d H:i:s' ) . "\n\n";
 
 		if ( ! empty( $payload['data'] ) ) {
 			$description .= "*Additional Data:*\n{code:json}\n" . wp_json_encode( $payload['data'], JSON_PRETTY_PRINT ) . "\n{code}";
@@ -679,6 +715,7 @@ class NexifyMy_Security_Integrations {
 	 * @return bool|string Incident number or false.
 	 */
 	public function create_servicenow_incident( $payload, $settings = null ) {
+
 		if ( ! $settings ) {
 			$settings = $this->get_settings();
 		}
@@ -708,25 +745,42 @@ class NexifyMy_Security_Integrations {
 
 		$auth = base64_encode( $settings['servicenow_username'] . ':' . $settings['servicenow_password'] );
 
-		$response = wp_remote_post( $api_url, array(
-			'body'    => wp_json_encode( $incident_data ),
-			'headers' => array(
-				'Content-Type'  => 'application/json',
-				'Accept'        => 'application/json',
-				'Authorization' => 'Basic ' . $auth,
-			),
-			'timeout' => 15,
-		) );
+		$response = wp_remote_post(
+			$api_url,
+			array(
+				'body'    => wp_json_encode( $incident_data ),
+				'headers' => array(
+					'Content-Type'  => 'application/json',
+					'Accept'        => 'application/json',
+					'Authorization' => 'Basic ' . $auth,
+				),
+				'timeout' => 15,
+			)
+		);
 
-		if ( is_wp_error( $response ) ) {
+		if ( ! $this->is_success_response( $response ) ) {
 			return false;
 		}
-
 		$body = json_decode( wp_remote_retrieve_body( $response ), true );
 
 		return $body['result']['number'] ?? false;
 	}
 
+	/**
+	 * Check whether a remote request completed with a 2xx status code.
+	 *
+	 * @param array|WP_Error $response Response from wp_remote_*().
+	 * @return bool
+	 */
+	private function is_success_response( $response ) {
+
+		if ( is_wp_error( $response ) || ! is_array( $response ) ) {
+			return false;
+		}
+
+		$status_code = (int) wp_remote_retrieve_response_code( $response );
+		return $status_code >= 200 && $status_code < 300;
+	}
 	/**
 	 * Map severity to ServiceNow urgency.
 	 *
@@ -855,7 +909,7 @@ class NexifyMy_Security_Integrations {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$type = isset( $_POST['type'] ) ? sanitize_key( $_POST['type'] ) : '';
+		$type     = isset( $_POST['type'] ) ? sanitize_key( wp_unslash( $_POST['type'] ) ) : '';
 		$settings = $this->get_settings();
 
 		$test_payload = array(
@@ -896,31 +950,73 @@ class NexifyMy_Security_Integrations {
 	}
 
 	public function ajax_save_integration() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
 		}
-
 		$settings = $this->get_settings();
 
 		// Update from POST data.
 		$fields = array(
-			'slack_enabled', 'slack_webhook_url', 'slack_channel', 'slack_events',
-			'discord_enabled', 'discord_webhook_url', 'discord_events',
-			'teams_enabled', 'teams_webhook_url', 'teams_events',
-			'siem_enabled', 'siem_type', 'siem_endpoint', 'siem_token', 'siem_index', 'siem_events',
-			'jira_enabled', 'jira_url', 'jira_email', 'jira_api_token', 'jira_project_key', 'jira_issue_type', 'jira_priority', 'jira_events',
-			'servicenow_enabled', 'servicenow_instance', 'servicenow_username', 'servicenow_password', 'servicenow_table',
+			'slack_enabled',
+			'slack_webhook_url',
+			'slack_channel',
+			'slack_events',
+			'discord_enabled',
+			'discord_webhook_url',
+			'discord_events',
+			'teams_enabled',
+			'teams_webhook_url',
+			'teams_events',
+			'siem_enabled',
+			'siem_type',
+			'siem_endpoint',
+			'siem_token',
+			'siem_index',
+			'siem_events',
+			'jira_enabled',
+			'jira_url',
+			'jira_email',
+			'jira_api_token',
+			'jira_project_key',
+			'jira_issue_type',
+			'jira_priority',
+			'jira_events',
+			'servicenow_enabled',
+			'servicenow_instance',
+			'servicenow_username',
+			'servicenow_password',
+			'servicenow_table',
+			'cicd_enabled',
+			'cicd_webhook_url',
+			'cicd_fail_on_malware',
+			'cicd_fail_on_vulnerabilities',
+			'cicd_min_severity',
+			'custom_webhooks_enabled',
+			'custom_webhooks',
 		);
+
+		$allowed_events = array_merge( array( 'all' ), array_keys( $this->available_events ) );
 
 		foreach ( $fields as $field ) {
 			if ( isset( $_POST[ $field ] ) ) {
+             // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Dynamic key sanitized below by field type.
 				$value = wp_unslash( $_POST[ $field ] );
 
 				if ( is_array( $value ) ) {
-					$settings[ $field ] = array_map( 'sanitize_text_field', $value );
+					$sanitized_values = array_map( 'sanitize_text_field', $value );
+
+					if ( false !== strpos( $field, '_events' ) ) {
+						$sanitized_values   = array_filter( array_map( 'sanitize_key', $sanitized_values ) );
+						$settings[ $field ] = array_values( array_intersect( $sanitized_values, $allowed_events ) );
+					} else {
+						$settings[ $field ] = $sanitized_values;
+					}
 				} elseif ( strpos( $field, '_enabled' ) !== false ) {
-					$settings[ $field ] = ! empty( $value );
+									$settings[ $field ] = ! empty( $value );
+				} elseif ( 'servicenow_instance' === $field ) {
+					$settings[ $field ] = $this->sanitize_servicenow_instance( $value );
 				} elseif ( strpos( $field, '_url' ) !== false ) {
 					$settings[ $field ] = esc_url_raw( $value );
 				} else {
@@ -934,6 +1030,20 @@ class NexifyMy_Security_Integrations {
 		wp_send_json_success( array( 'message' => 'Integration settings saved.' ) );
 	}
 
+	/**
+	 * Sanitize a ServiceNow instance name.
+	 *
+	 * @param string $instance Raw instance value.
+	 * @return string
+	 */
+	private function sanitize_servicenow_instance( $instance ) {
+
+		$instance = sanitize_text_field( (string) $instance );
+		$instance = preg_replace( '#^https?://#i', '', $instance );
+		$instance = preg_replace( '#/.*$#', '', $instance );
+
+		return (string) preg_replace( '/[^a-z0-9-]/i', '', $instance );
+	}
 	public function ajax_get_integrations() {
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
@@ -951,10 +1061,11 @@ class NexifyMy_Security_Integrations {
 			}
 		}
 
-		wp_send_json_success( array(
-			'settings' => $settings,
-			'events'   => $this->available_events,
-		) );
+		wp_send_json_success(
+			array(
+				'settings' => $settings,
+				'events'   => $this->available_events,
+			)
+		);
 	}
 }
-

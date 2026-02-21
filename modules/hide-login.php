@@ -78,7 +78,7 @@ class NexifyMy_Security_Hide_Login {
 	 */
 	public function add_rewrite_rules() {
 		$settings = $this->get_settings();
-		$slug = sanitize_title( $settings['login_slug'] );
+		$slug     = sanitize_title( $settings['login_slug'] );
 
 		add_rewrite_rule(
 			'^' . $slug . '/?$',
@@ -97,8 +97,8 @@ class NexifyMy_Security_Hide_Login {
 			return;
 		}
 
-		$settings = $this->get_settings();
-		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
+		$settings     = $this->get_settings();
+		$request_uri  = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 		$request_path = wp_parse_url( $request_uri, PHP_URL_PATH );
 
 		// Check if accessing default login/admin URLs.
@@ -146,7 +146,10 @@ class NexifyMy_Security_Hide_Login {
 				'login_url_blocked',
 				sprintf( 'Blocked access to default login URL from IP: %s', $ip ),
 				'warning',
-				array( 'ip' => $ip, 'path' => $request_path )
+				array(
+					'ip'   => $ip,
+					'path' => $request_path,
+				)
 			);
 		}
 
@@ -199,7 +202,7 @@ class NexifyMy_Security_Hide_Login {
 	 */
 	public function filter_login_url( $login_url, $redirect = '', $force_reauth = false ) {
 		$settings = $this->get_settings();
-		$slug = sanitize_title( $settings['login_slug'] );
+		$slug     = sanitize_title( $settings['login_slug'] );
 
 		$new_url = home_url( '/' . $slug . '/' );
 
@@ -223,7 +226,7 @@ class NexifyMy_Security_Hide_Login {
 	 */
 	public function filter_logout_url( $logout_url, $redirect = '' ) {
 		$settings = $this->get_settings();
-		$slug = sanitize_title( $settings['login_slug'] );
+		$slug     = sanitize_title( $settings['login_slug'] );
 
 		$new_url = home_url( '/' . $slug . '/' );
 		$new_url = add_query_arg( 'action', 'logout', $new_url );
@@ -245,7 +248,7 @@ class NexifyMy_Security_Hide_Login {
 	 */
 	public function filter_lostpassword_url( $lostpassword_url, $redirect = '' ) {
 		$settings = $this->get_settings();
-		$slug = sanitize_title( $settings['login_slug'] );
+		$slug     = sanitize_title( $settings['login_slug'] );
 
 		$new_url = home_url( '/' . $slug . '/' );
 		$new_url = add_query_arg( 'action', 'lostpassword', $new_url );
@@ -265,7 +268,7 @@ class NexifyMy_Security_Hide_Login {
 	 */
 	public function filter_register_url( $register_url ) {
 		$settings = $this->get_settings();
-		$slug = sanitize_title( $settings['login_slug'] );
+		$slug     = sanitize_title( $settings['login_slug'] );
 
 		return add_query_arg( 'action', 'register', home_url( '/' . $slug . '/' ) );
 	}
@@ -300,7 +303,7 @@ class NexifyMy_Security_Hide_Login {
 	 * @return string
 	 */
 	private function get_client_ip() {
-		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		$remote_addr     = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 		$trusted_proxies = get_option( 'nexifymy_security_trusted_proxies', array() );
 
 		// Only trust forwarded headers if request comes from a trusted proxy.
@@ -316,7 +319,7 @@ class NexifyMy_Security_Hide_Login {
 			$headers = array( 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'HTTP_CLIENT_IP' );
 			foreach ( $headers as $header ) {
 				if ( ! empty( $_SERVER[ $header ] ) ) {
-					$ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) ) );
+					$ips       = explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) ) );
 					$client_ip = trim( $ips[0] );
 					if ( filter_var( $client_ip, FILTER_VALIDATE_IP ) ) {
 						return $client_ip;
@@ -351,7 +354,7 @@ class NexifyMy_Security_Hide_Login {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$settings = $this->get_settings();
+		$settings                      = $this->get_settings();
 		$settings['current_login_url'] = home_url( '/' . sanitize_title( $settings['login_slug'] ) . '/' );
 
 		wp_send_json_success( array( 'settings' => $settings ) );
@@ -383,7 +386,7 @@ class NexifyMy_Security_Hide_Login {
 		);
 
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings               = NexifyMy_Security_Settings::get_all();
 			$all_settings['hide_login'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}
@@ -391,9 +394,11 @@ class NexifyMy_Security_Hide_Login {
 		// Flush rewrite rules.
 		self::flush_rules();
 
-		wp_send_json_success( array(
-			'message'   => 'Settings saved.',
-			'login_url' => home_url( '/' . $login_slug . '/' ),
-		) );
+		wp_send_json_success(
+			array(
+				'message'   => 'Settings saved.',
+				'login_url' => home_url( '/' . $login_slug . '/' ),
+			)
+		);
 	}
 }

@@ -95,9 +95,9 @@ class NexifyMy_Security_Database {
 	 */
 	private function generate_backup_filename() {
 		global $wpdb;
-		$date = gmdate( 'Y-m-d_H-i-s' );
+		$date    = gmdate( 'Y-m-d_H-i-s' );
 		$db_name = $wpdb->dbname;
-		$random = wp_generate_password( 8, false );
+		$random  = wp_generate_password( 8, false );
 		return sanitize_file_name( "{$db_name}_{$date}_{$random}.sql" );
 	}
 
@@ -116,15 +116,15 @@ class NexifyMy_Security_Database {
 		}
 
 		$backup_path = $this->get_backup_path();
-		$filename = $this->generate_backup_filename();
-		$filepath = $backup_path . '/' . $filename;
+		$filename    = $this->generate_backup_filename();
+		$filepath    = $backup_path . '/' . $filename;
 
 		// Get settings.
-		$settings = $this->get_settings();
+		$settings           = $this->get_settings();
 		$include_transients = ! empty( $settings['include_transients'] );
 
 		// Start output buffer.
-		$sql = '';
+		$sql  = '';
 		$sql .= "-- NexifyMy Security Database Backup\n";
 		$sql .= '-- Generated: ' . gmdate( 'Y-m-d H:i:s' ) . " UTC\n";
 		$sql .= '-- WordPress Version: ' . get_bloginfo( 'version' ) . "\n";
@@ -141,7 +141,7 @@ class NexifyMy_Security_Database {
 		}
 
 		$tables_exported = 0;
-		$rows_exported = 0;
+		$rows_exported   = 0;
 
 		foreach ( $tables as $table ) {
 			$table_name = $table[0];
@@ -229,7 +229,10 @@ class NexifyMy_Security_Database {
 				'database_backup',
 				sprintf( 'Database backup created: %s (%s)', $filename, size_format( $bytes_written ) ),
 				'info',
-				array( 'tables' => $tables_exported, 'rows' => $rows_exported )
+				array(
+					'tables' => $tables_exported,
+					'rows'   => $rows_exported,
+				)
 			);
 		}
 
@@ -248,15 +251,18 @@ class NexifyMy_Security_Database {
 		$valid_backups = array();
 		foreach ( $backup_log as $backup ) {
 			if ( isset( $backup['filepath'] ) && file_exists( $backup['filepath'] ) ) {
-				$backup['size'] = filesize( $backup['filepath'] );
+				$backup['size']  = filesize( $backup['filepath'] );
 				$valid_backups[] = $backup;
 			}
 		}
 
 		// Sort by created_at descending.
-		usort( $valid_backups, function( $a, $b ) {
-			return ( $b['created_at'] ?? 0 ) - ( $a['created_at'] ?? 0 );
-		} );
+		usort(
+			$valid_backups,
+			function ( $a, $b ) {
+				return ( $b['created_at'] ?? 0 ) - ( $a['created_at'] ?? 0 );
+			}
+		);
 
 		return $valid_backups;
 	}
@@ -269,7 +275,7 @@ class NexifyMy_Security_Database {
 	 */
 	public function delete_backup( $filename ) {
 		$backup_path = $this->get_backup_path();
-		$filepath = $backup_path . '/' . sanitize_file_name( $filename );
+		$filepath    = $backup_path . '/' . sanitize_file_name( $filename );
 
 		// Validate file is within backup directory.
 		if ( strpos( realpath( $filepath ), realpath( $backup_path ) ) !== 0 ) {
@@ -306,7 +312,7 @@ class NexifyMy_Security_Database {
 	 * @param array $backup_info Backup info.
 	 */
 	private function add_to_backup_log( $backup_info ) {
-		$log = get_option( self::BACKUP_LOG_KEY, array() );
+		$log   = get_option( self::BACKUP_LOG_KEY, array() );
 		$log[] = $backup_info;
 		update_option( self::BACKUP_LOG_KEY, $log );
 	}
@@ -318,9 +324,12 @@ class NexifyMy_Security_Database {
 	 */
 	private function remove_from_backup_log( $filename ) {
 		$log = get_option( self::BACKUP_LOG_KEY, array() );
-		$log = array_filter( $log, function( $entry ) use ( $filename ) {
-			return $entry['filename'] !== $filename;
-		} );
+		$log = array_filter(
+			$log,
+			function ( $entry ) use ( $filename ) {
+				return $entry['filename'] !== $filename;
+			}
+		);
 		update_option( self::BACKUP_LOG_KEY, array_values( $log ) );
 	}
 
@@ -328,7 +337,7 @@ class NexifyMy_Security_Database {
 	 * Cleanup old backups beyond max_backups limit.
 	 */
 	private function cleanup_old_backups() {
-		$settings = $this->get_settings();
+		$settings    = $this->get_settings();
 		$max_backups = absint( $settings['max_backups'] ) ?: 5;
 
 		$backups = $this->get_backups();
@@ -490,30 +499,30 @@ class NexifyMy_Security_Database {
 		global $wpdb;
 
 		$info = array(
-			'prefix'          => $wpdb->prefix,
+			'prefix'            => $wpdb->prefix,
 			'is_default_prefix' => ( $wpdb->prefix === 'wp_' ),
-			'database_name'   => $wpdb->dbname,
-			'database_size'   => 0,
-			'table_count'     => 0,
+			'database_name'     => $wpdb->dbname,
+			'database_size'     => 0,
+			'table_count'       => 0,
 		);
 
 		// Get database size.
 		$size_query = $wpdb->get_row(
 			$wpdb->prepare(
-				"SELECT SUM(data_length + index_length) as size FROM information_schema.TABLES WHERE table_schema = %s",
+				'SELECT SUM(data_length + index_length) as size FROM information_schema.TABLES WHERE table_schema = %s',
 				$wpdb->dbname
 			)
 		);
 
 		if ( $size_query ) {
-			$info['database_size'] = (int) $size_query->size;
+			$info['database_size']           = (int) $size_query->size;
 			$info['database_size_formatted'] = size_format( $info['database_size'] );
 		}
 
 		// Get table count.
-		$tables = $wpdb->get_var(
+		$tables              = $wpdb->get_var(
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema = %s AND table_name LIKE %s",
+				'SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema = %s AND table_name LIKE %s',
 				$wpdb->dbname,
 				$wpdb->prefix . '%'
 			)
@@ -610,10 +619,12 @@ class NexifyMy_Security_Database {
 			wp_send_json_error( $result->get_error_message() );
 		}
 
-		wp_send_json_success( array(
-			'message' => 'Backup created successfully.',
-			'backup'  => $result,
-		) );
+		wp_send_json_success(
+			array(
+				'message' => 'Backup created successfully.',
+				'backup'  => $result,
+			)
+		);
 	}
 
 	/**
@@ -626,8 +637,7 @@ class NexifyMy_Security_Database {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$filename = isset( $_POST['filename'] ) ? sanitize_file_name( $_POST['filename'] ) : '';
-
+		$filename = isset( $_POST['filename'] ) ? sanitize_file_name( wp_unslash( $_POST['filename'] ) ) : '';
 		if ( empty( $filename ) ) {
 			wp_send_json_error( 'Filename required.' );
 		}
@@ -651,14 +661,13 @@ class NexifyMy_Security_Database {
 			wp_die( 'Unauthorized' );
 		}
 
-		$filename = isset( $_GET['filename'] ) ? sanitize_file_name( $_GET['filename'] ) : '';
-
+		$filename = isset( $_GET['filename'] ) ? sanitize_file_name( wp_unslash( $_GET['filename'] ) ) : '';
 		if ( empty( $filename ) ) {
 			wp_die( 'Filename required.' );
 		}
 
 		$backup_path = $this->get_backup_path();
-		$filepath = $backup_path . '/' . $filename;
+		$filepath    = $backup_path . '/' . $filename;
 
 		// Validate file is within backup directory.
 		if ( ! file_exists( $filepath ) || strpos( realpath( $filepath ), realpath( $backup_path ) ) !== 0 ) {
@@ -691,7 +700,7 @@ class NexifyMy_Security_Database {
 
 		// Format for display.
 		foreach ( $backups as &$backup ) {
-			$backup['size_formatted'] = size_format( $backup['size'] );
+			$backup['size_formatted']       = size_format( $backup['size'] );
 			$backup['created_at_formatted'] = date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $backup['created_at'] );
 		}
 
@@ -708,13 +717,16 @@ class NexifyMy_Security_Database {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$options = isset( $_POST['options'] ) ? $_POST['options'] : array();
-		$result = $this->optimize_database( $options );
-
-		wp_send_json_success( array(
-			'message' => sprintf( 'Optimization complete. %d items cleaned.', $result['total'] ),
-			'cleaned' => $result,
-		) );
+		$options = isset( $_POST['options'] ) && is_array( $_POST['options'] )
+		? array_map( 'sanitize_text_field', wp_unslash( $_POST['options'] ) )
+			: array();
+		$result  = $this->optimize_database( $options );
+		wp_send_json_success(
+			array(
+				'message' => sprintf( 'Optimization complete. %d items cleaned.', $result['total'] ),
+				'cleaned' => $result,
+			)
+		);
 	}
 
 	/**

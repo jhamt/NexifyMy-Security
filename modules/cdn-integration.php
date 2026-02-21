@@ -180,7 +180,7 @@ class NexifyMy_Security_CDN {
 			'enabled'               => ! empty( $settings['enabled'] ),
 			'detected_provider'     => $provider,
 			'provider_name'         => $this->get_provider_name( $provider ),
-			'real_ip'               => isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '',
+			'real_ip'               => isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
 			'is_cloudflare'         => 'cloudflare' === $provider,
 			'cloudflare_configured' => ! empty( $settings['cloudflare_api_key'] ) && ! empty( $settings['cloudflare_zone_id'] ),
 		);
@@ -386,7 +386,7 @@ class NexifyMy_Security_CDN {
 
 		$settings = array(
 			'enabled'             => ! empty( $_POST['enabled'] ),
-			'provider'            => isset( $_POST['provider'] ) ? sanitize_key( $_POST['provider'] ) : 'auto',
+			'provider'            => isset( $_POST['provider'] ) ? sanitize_key( wp_unslash( $_POST['provider'] ) ) : 'auto',
 			'cloudflare_email'    => isset( $_POST['cloudflare_email'] ) ? sanitize_email( wp_unslash( $_POST['cloudflare_email'] ) ) : '',
 			'cloudflare_api_key'  => isset( $_POST['cloudflare_api_key'] ) ? sanitize_text_field( wp_unslash( $_POST['cloudflare_api_key'] ) ) : '',
 			'cloudflare_zone_id'  => isset( $_POST['cloudflare_zone_id'] ) ? sanitize_text_field( wp_unslash( $_POST['cloudflare_zone_id'] ) ) : '',

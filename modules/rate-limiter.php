@@ -13,12 +13,13 @@ class NexifyMy_Security_RateLimiter {
 	/**
 	 * Default settings.
 	 */
-	const DEFAULT_MAX_ATTEMPTS = 5;
+	const DEFAULT_MAX_ATTEMPTS     = 5;
 	const DEFAULT_LOCKOUT_DURATION = 900; // 15 minutes in seconds
-	const DEFAULT_ATTEMPT_WINDOW = 300;   // 5 minutes in seconds
+	const DEFAULT_ATTEMPT_WINDOW   = 300;   // 5 minutes in seconds
 
 	/**
 	 * Effective settings (from plugin settings with safe defaults).
+	 *
 	 * @var bool
 	 */
 	private $enabled = true;
@@ -78,17 +79,17 @@ class NexifyMy_Security_RateLimiter {
 			return;
 		}
 
-		$rate_limiter = isset( $settings['rate_limiter'] ) && is_array( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array();
+		$rate_limiter     = isset( $settings['rate_limiter'] ) && is_array( $settings['rate_limiter'] ) ? $settings['rate_limiter'] : array();
 		$login_protection = isset( $settings['login_protection'] ) && is_array( $settings['login_protection'] ) ? $settings['login_protection'] : array();
 
-		$max_attempts = absint( $rate_limiter['max_attempts'] ?? $login_protection['max_attempts'] ?? self::DEFAULT_MAX_ATTEMPTS );
+		$max_attempts     = absint( $rate_limiter['max_attempts'] ?? $login_protection['max_attempts'] ?? self::DEFAULT_MAX_ATTEMPTS );
 		$lockout_duration = absint( $rate_limiter['lockout_duration'] ?? ( isset( $login_protection['lockout_duration'] ) ? ( absint( $login_protection['lockout_duration'] ) * MINUTE_IN_SECONDS ) : self::DEFAULT_LOCKOUT_DURATION ) );
-		$attempt_window = absint( $rate_limiter['attempt_window'] ?? self::DEFAULT_ATTEMPT_WINDOW );
+		$attempt_window   = absint( $rate_limiter['attempt_window'] ?? self::DEFAULT_ATTEMPT_WINDOW );
 
 		// Clamp to sane ranges.
-		$this->max_attempts = max( 1, min( 50, $max_attempts ?: self::DEFAULT_MAX_ATTEMPTS ) );
+		$this->max_attempts     = max( 1, min( 50, $max_attempts ?: self::DEFAULT_MAX_ATTEMPTS ) );
 		$this->lockout_duration = max( 60, min( DAY_IN_SECONDS, $lockout_duration ?: self::DEFAULT_LOCKOUT_DURATION ) );
-		$this->attempt_window = max( 60, min( DAY_IN_SECONDS, $attempt_window ?: self::DEFAULT_ATTEMPT_WINDOW ) );
+		$this->attempt_window   = max( 60, min( DAY_IN_SECONDS, $attempt_window ?: self::DEFAULT_ATTEMPT_WINDOW ) );
 	}
 
 	/**
@@ -164,7 +165,7 @@ class NexifyMy_Security_RateLimiter {
 	 */
 	private function get_lockout_remaining( $ip ) {
 		$lockout_key = $this->get_transient_key( $ip, 'lockout' );
-		$timeout = get_option( '_transient_timeout_' . $lockout_key );
+		$timeout     = get_option( '_transient_timeout_' . $lockout_key );
 
 		if ( $timeout ) {
 			return max( 0, $timeout - time() );
@@ -187,7 +188,7 @@ class NexifyMy_Security_RateLimiter {
 		$attempts_key = $this->get_transient_key( $ip, 'attempts' );
 
 		$attempts = (int) get_transient( $attempts_key );
-		$attempts++;
+		++$attempts;
 
 		set_transient( $attempts_key, $attempts, $this->attempt_window );
 
@@ -197,7 +198,10 @@ class NexifyMy_Security_RateLimiter {
 				'login_failed',
 				sprintf( 'Failed login attempt for user: %s (Attempt #%d)', $username, $attempts ),
 				'warning',
-				array( 'username' => $username, 'attempt_count' => $attempts )
+				array(
+					'username'      => $username,
+					'attempt_count' => $attempts,
+				)
 			);
 		}
 
@@ -223,8 +227,8 @@ class NexifyMy_Security_RateLimiter {
 				sprintf( 'IP locked out due to excessive failed login attempts: %s', $ip ),
 				'critical',
 				array(
-					'duration'      => $this->lockout_duration,
-					'max_attempts'  => $this->max_attempts,
+					'duration'       => $this->lockout_duration,
+					'max_attempts'   => $this->max_attempts,
 					'attempt_window' => $this->attempt_window,
 				)
 			);
@@ -245,8 +249,8 @@ class NexifyMy_Security_RateLimiter {
 	 * Check rate limit before authentication.
 	 *
 	 * @param WP_User|WP_Error|null $user WP_User if auth succeeded, WP_Error on fail.
-	 * @param string $username Username.
-	 * @param string $password Password.
+	 * @param string                $username Username.
+	 * @param string                $password Password.
 	 * @return WP_User|WP_Error
 	 */
 	public function check_rate_limit( $user, $username, $password ) {
@@ -262,7 +266,7 @@ class NexifyMy_Security_RateLimiter {
 
 		if ( $this->is_locked_out( $ip ) ) {
 			$remaining = $this->get_lockout_remaining( $ip );
-			$minutes = ceil( $remaining / 60 );
+			$minutes   = ceil( $remaining / 60 );
 
 			return new WP_Error(
 				'nexifymy_lockout',
@@ -279,11 +283,11 @@ class NexifyMy_Security_RateLimiter {
 	/**
 	 * Clear attempts on successful login.
 	 *
-	 * @param string $user_login Username.
+	 * @param string  $user_login Username.
 	 * @param WP_User $user User object.
 	 */
 	public function clear_attempts_on_success( $user_login, $user ) {
-		$ip = $this->get_client_ip();
+		$ip           = $this->get_client_ip();
 		$attempts_key = $this->get_transient_key( $ip, 'attempts' );
 		delete_transient( $attempts_key );
 	}
@@ -305,7 +309,7 @@ class NexifyMy_Security_RateLimiter {
 		// Check if IP is locked out.
 		if ( $this->is_locked_out( $ip ) ) {
 			$remaining = $this->get_lockout_remaining( $ip );
-			$minutes = ceil( $remaining / 60 );
+			$minutes   = ceil( $remaining / 60 );
 
 			status_header( 403 );
 			nocache_headers();
@@ -345,22 +349,24 @@ class NexifyMy_Security_RateLimiter {
 		$blocked_ips = array();
 		foreach ( $results as $row ) {
 			$timeout_key = str_replace( '_transient_', '_transient_timeout_', $row['option_name'] );
-			$timeout = get_option( $timeout_key );
+			$timeout     = get_option( $timeout_key );
 
 			if ( $timeout && $timeout > time() ) {
 				$blocked_ips[] = array(
-					'transient' => $row['option_name'],
-					'locked_at' => date( 'Y-m-d H:i:s', (int) $row['option_value'] ),
+					'transient'  => $row['option_name'],
+					'locked_at'  => date( 'Y-m-d H:i:s', (int) $row['option_value'] ),
 					'expires_at' => date( 'Y-m-d H:i:s', (int) $timeout ),
-					'remaining' => $timeout - time(),
+					'remaining'  => $timeout - time(),
 				);
 			}
 		}
 
-		wp_send_json_success( array(
-			'blocked_count' => count( $blocked_ips ),
-			'blocked_ips' => $blocked_ips,
-		) );
+		wp_send_json_success(
+			array(
+				'blocked_count' => count( $blocked_ips ),
+				'blocked_ips'   => $blocked_ips,
+			)
+		);
 	}
 
 	/**
@@ -373,8 +379,7 @@ class NexifyMy_Security_RateLimiter {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$transient_name = isset( $_POST['transient'] ) ? sanitize_text_field( $_POST['transient'] ) : '';
-
+		$transient_name = isset( $_POST['transient'] ) ? sanitize_text_field( wp_unslash( $_POST['transient'] ) ) : '';
 		if ( empty( $transient_name ) ) {
 			wp_send_json_error( 'Invalid transient' );
 		}

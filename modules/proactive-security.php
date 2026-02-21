@@ -29,15 +29,15 @@ class NexifyMy_Security_Proactive {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'                => true,
-		'auto_recommendations'   => true,
-		'auto_patch_plugins'     => false,
-		'auto_patch_themes'      => false,
-		'auto_patch_core'        => false,
-		'patch_schedule'         => 'daily',
-		'notify_before_patch'    => true,
-		'keep_backups'           => 5,
-		'benchmark_schedule'     => 'weekly',
+		'enabled'              => true,
+		'auto_recommendations' => true,
+		'auto_patch_plugins'   => false,
+		'auto_patch_themes'    => false,
+		'auto_patch_core'      => false,
+		'patch_schedule'       => 'daily',
+		'notify_before_patch'  => true,
+		'keep_backups'         => 5,
+		'benchmark_schedule'   => 'weekly',
 	);
 
 	/**
@@ -103,7 +103,7 @@ class NexifyMy_Security_Proactive {
 	private function define_security_checks() {
 		$this->security_checks = array(
 			// WordPress Core.
-			'core_updated' => array(
+			'core_updated'          => array(
 				'name'        => 'WordPress Core Updated',
 				'description' => 'WordPress is running the latest version',
 				'weight'      => 15,
@@ -121,7 +121,7 @@ class NexifyMy_Security_Proactive {
 				'check'       => array( $this, 'check_admin_passwords' ),
 				'fix'         => null,
 			),
-			'2fa_enabled' => array(
+			'2fa_enabled'           => array(
 				'name'        => 'Two-Factor Authentication',
 				'description' => '2FA is enabled for admin users',
 				'weight'      => 10,
@@ -129,7 +129,7 @@ class NexifyMy_Security_Proactive {
 				'check'       => array( $this, 'check_2fa_enabled' ),
 				'fix'         => 'enable_2fa',
 			),
-			'no_admin_username' => array(
+			'no_admin_username'     => array(
 				'name'        => 'No "admin" Username',
 				'description' => 'Default "admin" username is not in use',
 				'weight'      => 5,
@@ -139,7 +139,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// File Security.
-			'wp_config_secure' => array(
+			'wp_config_secure'      => array(
 				'name'        => 'wp-config.php Protected',
 				'description' => 'wp-config.php is not accessible publicly',
 				'weight'      => 10,
@@ -155,7 +155,7 @@ class NexifyMy_Security_Proactive {
 				'check'       => array( $this, 'check_file_editing_disabled' ),
 				'fix'         => 'disable_file_editing',
 			),
-			'debug_disabled' => array(
+			'debug_disabled'        => array(
 				'name'        => 'Debug Mode Disabled',
 				'description' => 'WP_DEBUG is disabled in production',
 				'weight'      => 5,
@@ -165,7 +165,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// SSL/HTTPS.
-			'ssl_enabled' => array(
+			'ssl_enabled'           => array(
 				'name'        => 'SSL/HTTPS Enabled',
 				'description' => 'Site is using HTTPS',
 				'weight'      => 10,
@@ -175,7 +175,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// Plugins.
-			'no_outdated_plugins' => array(
+			'no_outdated_plugins'   => array(
 				'name'        => 'Plugins Updated',
 				'description' => 'All plugins are up to date',
 				'weight'      => 10,
@@ -183,7 +183,7 @@ class NexifyMy_Security_Proactive {
 				'check'       => array( $this, 'check_plugins_updated' ),
 				'fix'         => 'update_plugins',
 			),
-			'no_inactive_plugins' => array(
+			'no_inactive_plugins'   => array(
 				'name'        => 'No Inactive Plugins',
 				'description' => 'No unused plugins installed',
 				'weight'      => 5,
@@ -193,7 +193,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// Database.
-			'db_prefix_changed' => array(
+			'db_prefix_changed'     => array(
 				'name'        => 'Database Prefix Changed',
 				'description' => 'Not using default wp_ prefix',
 				'weight'      => 5,
@@ -203,7 +203,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// XML-RPC.
-			'xmlrpc_disabled' => array(
+			'xmlrpc_disabled'       => array(
 				'name'        => 'XML-RPC Disabled',
 				'description' => 'XML-RPC is disabled to prevent attacks',
 				'weight'      => 5,
@@ -213,7 +213,7 @@ class NexifyMy_Security_Proactive {
 			),
 
 			// Security Headers.
-			'security_headers' => array(
+			'security_headers'      => array(
 				'name'        => 'Security Headers',
 				'description' => 'Important security headers are set',
 				'weight'      => 5,
@@ -261,7 +261,7 @@ class NexifyMy_Security_Proactive {
 
 	private function check_wp_config_secure() {
 		$config_url = site_url( '/wp-config.php' );
-		$response = wp_remote_head( $config_url, array( 'timeout' => 5 ) );
+		$response   = wp_remote_head( $config_url, array( 'timeout' => 5 ) );
 		if ( is_wp_error( $response ) ) {
 			return true; // Can't access = good.
 		}
@@ -293,8 +293,8 @@ class NexifyMy_Security_Proactive {
 		if ( ! function_exists( 'get_plugins' ) ) {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
-		$plugins = get_plugins();
-		$active = get_option( 'active_plugins', array() );
+		$plugins  = get_plugins();
+		$active   = get_option( 'active_plugins', array() );
 		$inactive = count( $plugins ) - count( $active );
 		return $inactive <= 2; // Allow up to 2 inactive.
 	}
@@ -317,7 +317,7 @@ class NexifyMy_Security_Proactive {
 		if ( is_wp_error( $response ) ) {
 			return false;
 		}
-		$headers = wp_remote_retrieve_headers( $response );
+		$headers  = wp_remote_retrieve_headers( $response );
 		$required = array( 'x-frame-options', 'x-content-type-options' );
 		foreach ( $required as $header ) {
 			if ( empty( $headers[ $header ] ) ) {
@@ -340,14 +340,14 @@ class NexifyMy_Security_Proactive {
 	 */
 	public function run_benchmark() {
 		$results = array(
-			'scanned_at'     => current_time( 'mysql' ),
-			'total_weight'   => 0,
-			'earned_weight'  => 0,
-			'score'          => 0,
-			'grade'          => 'F',
-			'passed'         => array(),
-			'failed'         => array(),
-			'recommendations'=> array(),
+			'scanned_at'      => current_time( 'mysql' ),
+			'total_weight'    => 0,
+			'earned_weight'   => 0,
+			'score'           => 0,
+			'grade'           => 'F',
+			'passed'          => array(),
+			'failed'          => array(),
+			'recommendations' => array(),
 		);
 
 		foreach ( $this->security_checks as $key => $check ) {
@@ -366,7 +366,7 @@ class NexifyMy_Security_Proactive {
 
 			if ( $passed ) {
 				$results['earned_weight'] += $check['weight'];
-				$results['passed'][] = $check_result;
+				$results['passed'][]       = $check_result;
 			} else {
 				$results['failed'][] = $check_result;
 
@@ -402,10 +402,18 @@ class NexifyMy_Security_Proactive {
 	 * @return string Letter grade.
 	 */
 	private function score_to_grade( $score ) {
-		if ( $score >= 90 ) return 'A';
-		if ( $score >= 80 ) return 'B';
-		if ( $score >= 70 ) return 'C';
-		if ( $score >= 60 ) return 'D';
+		if ( $score >= 90 ) {
+			return 'A';
+		}
+		if ( $score >= 80 ) {
+			return 'B';
+		}
+		if ( $score >= 70 ) {
+			return 'C';
+		}
+		if ( $score >= 60 ) {
+			return 'D';
+		}
 		return 'F';
 	}
 
@@ -431,7 +439,7 @@ class NexifyMy_Security_Proactive {
 	 */
 	public function run_auto_patch() {
 		$settings = $this->get_settings();
-		$results = array(
+		$results  = array(
 			'patched_at' => current_time( 'mysql' ),
 			'plugins'    => array(),
 			'themes'     => array(),
@@ -471,7 +479,7 @@ class NexifyMy_Security_Proactive {
 		require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 
 		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin );
-		$slug = dirname( $plugin );
+		$slug        = dirname( $plugin );
 
 		// Create backup before patching.
 		$backup_path = $this->backup_plugin( $plugin );
@@ -484,9 +492,9 @@ class NexifyMy_Security_Proactive {
 		}
 
 		// Run upgrade.
-		$skin = new WP_Ajax_Upgrader_Skin();
+		$skin     = new WP_Ajax_Upgrader_Skin();
 		$upgrader = new Plugin_Upgrader( $skin );
-		$result = $upgrader->upgrade( $plugin );
+		$result   = $upgrader->upgrade( $plugin );
 
 		if ( is_wp_error( $result ) ) {
 			return array(
@@ -497,14 +505,16 @@ class NexifyMy_Security_Proactive {
 		}
 
 		// Log the patch.
-		$this->add_patch_record( array(
-			'type'        => 'plugin',
-			'slug'        => $slug,
-			'name'        => $plugin_data['Name'],
-			'old_version' => $plugin_data['Version'],
-			'backup_path' => $backup_path,
-			'patched_at'  => current_time( 'mysql' ),
-		) );
+		$this->add_patch_record(
+			array(
+				'type'        => 'plugin',
+				'slug'        => $slug,
+				'name'        => $plugin_data['Name'],
+				'old_version' => $plugin_data['Version'],
+				'backup_path' => $backup_path,
+				'patched_at'  => current_time( 'mysql' ),
+			)
+		);
 
 		return array(
 			'success'     => true,
@@ -565,7 +575,7 @@ class NexifyMy_Security_Proactive {
 	 * @return string|WP_Error Backup path or error.
 	 */
 	private function backup_plugin( $plugin ) {
-		$slug = dirname( $plugin );
+		$slug       = dirname( $plugin );
 		$source_dir = WP_PLUGIN_DIR . '/' . $slug;
 
 		if ( ! is_dir( $source_dir ) ) {
@@ -573,7 +583,7 @@ class NexifyMy_Security_Proactive {
 		}
 
 		$backup_base = WP_CONTENT_DIR . '/' . self::BACKUP_DIR;
-		$backup_dir = $backup_base . '/' . $slug . '-' . date( 'Y-m-d-His' );
+		$backup_dir  = $backup_base . '/' . $slug . '-' . date( 'Y-m-d-His' );
 
 		wp_mkdir_p( $backup_dir );
 
@@ -602,7 +612,7 @@ class NexifyMy_Security_Proactive {
 
 		// Extract slug from backup path.
 		$backup_name = basename( $backup_path );
-		$slug = preg_replace( '/-\d{4}-\d{2}-\d{2}-\d{6}$/', '', $backup_name );
+		$slug        = preg_replace( '/-\d{4}-\d{2}-\d{2}-\d{6}$/', '', $backup_name );
 
 		$plugin_dir = WP_PLUGIN_DIR . '/' . $slug;
 
@@ -679,7 +689,7 @@ class NexifyMy_Security_Proactive {
 	 */
 	private function clean_old_backups( $slug ) {
 		$settings = $this->get_settings();
-		$keep = $settings['keep_backups'];
+		$keep     = $settings['keep_backups'];
 
 		$backup_base = WP_CONTENT_DIR . '/' . self::BACKUP_DIR;
 		if ( ! is_dir( $backup_base ) ) {
@@ -693,9 +703,12 @@ class NexifyMy_Security_Proactive {
 		}
 
 		// Sort by date (oldest first).
-		usort( $backups, function( $a, $b ) {
-			return filemtime( $a ) - filemtime( $b );
-		} );
+		usort(
+			$backups,
+			function ( $a, $b ) {
+				return filemtime( $a ) - filemtime( $b );
+			}
+		);
 
 		// Delete oldest.
 		$to_delete = count( $backups ) - $keep;
@@ -782,7 +795,7 @@ class NexifyMy_Security_Proactive {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$fix = isset( $_POST['fix'] ) ? sanitize_key( $_POST['fix'] ) : '';
+		$fix = isset( $_POST['fix'] ) ? sanitize_key( wp_unslash( $_POST['fix'] ) ) : '';
 		// Implement fixes based on $fix key.
 		wp_send_json_success( array( 'message' => 'Recommendation applied.' ) );
 	}

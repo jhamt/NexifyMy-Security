@@ -24,11 +24,11 @@ class NexifyMy_Security_Two_Factor {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'          => true,
-		'force_admin'      => false,  // Force 2FA for admins.
-		'force_all'        => false,  // Force 2FA for all users.
-		'email_backup'     => true,   // Allow email code as backup.
-		'remember_days'    => 30,     // Days to remember device.
+		'enabled'       => true,
+		'force_admin'   => false,  // Force 2FA for admins.
+		'force_all'     => false,  // Force 2FA for all users.
+		'email_backup'  => true,   // Allow email code as backup.
+		'remember_days' => 30,     // Days to remember device.
 	);
 
 	/**
@@ -90,7 +90,7 @@ class NexifyMy_Security_Two_Factor {
 	 * @return string Base32 encoded secret.
 	 */
 	public function generate_secret() {
-		$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+		$chars  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 		$secret = '';
 		for ( $i = 0; $i < 16; $i++ ) {
 			$secret .= $chars[ wp_rand( 0, 31 ) ];
@@ -158,34 +158,44 @@ class NexifyMy_Security_Two_Factor {
 	 * @return string Binary data.
 	 */
 	private function base32_decode( $input ) {
-		$map = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
-		$input = strtoupper( $input );
-		$input = str_replace( '=', '', $input );
 
-		$buffer = 0;
+		$map       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+		$input     = strtoupper( $input );
+		$input     = str_replace( '=', '', $input );
+		$buffer    = 0;
 		$bits_left = 0;
-		$output = '';
+		$output    = '';
 
 		for ( $i = 0; $i < strlen( $input ); $i++ ) {
-			$char = $input[ $i ];
+			$char  = $input[ $i ];
 			$value = strpos( $map, $char );
 
 			if ( false === $value ) {
 				continue;
 			}
 
-			$buffer = ( $buffer << 5 ) | $value;
+			$buffer     = ( $buffer << 5 ) | $value;
 			$bits_left += 5;
 
 			if ( $bits_left >= 8 ) {
 				$bits_left -= 8;
-				$output .= chr( ( $buffer >> $bits_left ) & 0xFF );
+				$output    .= chr( ( $buffer >> $bits_left ) & 0xFF );
 			}
 		}
 
 		return $output;
 	}
 
+	/**
+	 * Validate 2FA session token format.
+	 *
+	 * @param string $token Session token.
+	 * @return bool
+	 */
+	private function is_valid_session_token( $token ) {
+
+		return is_string( $token ) && 1 === preg_match( '/^[A-Za-z0-9]{20,64}$/', $token );
+	}
 	/**
 	 * Check if user has 2FA enabled.
 	 *
@@ -214,8 +224,8 @@ class NexifyMy_Security_Two_Factor {
 	 * @return string QR code URL.
 	 */
 	public function get_qr_url( $secret, $email ) {
-		$issuer = rawurlencode( get_bloginfo( 'name' ) );
-		$email = rawurlencode( $email );
+		$issuer  = rawurlencode( get_bloginfo( 'name' ) );
+		$email   = rawurlencode( $email );
 		$otpauth = "otpauth://totp/{$issuer}:{$email}?secret={$secret}&issuer={$issuer}";
 		return 'https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=' . rawurlencode( $otpauth );
 	}
@@ -242,10 +252,15 @@ class NexifyMy_Security_Two_Factor {
 		$token = wp_generate_password( 32, false );
 		set_transient( 'nexifymy_2fa_' . $token, $user->ID, 5 * MINUTE_IN_SECONDS );
 
-		wp_safe_redirect( add_query_arg( array(
-			'action' => '2fa_verify',
-			'token'  => $token,
-		), wp_login_url() ) );
+		wp_safe_redirect(
+			add_query_arg(
+				array(
+					'action' => '2fa_verify',
+					'token'  => $token,
+				),
+				wp_login_url()
+			)
+		);
 		exit;
 	}
 
@@ -258,13 +273,30 @@ class NexifyMy_Security_Two_Factor {
 	 * @return WP_User|WP_Error
 	 */
 	public function validate_2fa_code( $user, $username, $password ) {
+
 		// Only process during 2FA verification.
+       // phpcs:disable WordPress.Security.NonceVerification.Missing
+		// Login flow is pre-auth and uses the 2FA session token.
 		if ( ! isset( $_POST['nexifymy_2fa_token'] ) ) {
 			return $user;
 		}
 
 		$token = sanitize_text_field( wp_unslash( $_POST['nexifymy_2fa_token'] ) );
-		$code = isset( $_POST['nexifymy_2fa_code'] ) ? sanitize_text_field( wp_unslash( $_POST['nexifymy_2fa_code'] ) ) : '';
+		$code  = isset( $_POST['nexifymy_2fa_code'] ) ? sanitize_text_field( wp_unslash( $_POST['nexifymy_2fa_code'] ) ) : '';
+		$nonce = isset( $_POST['nexifymy_2fa_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nexifymy_2fa_nonce'] ) ) : '';
+
+		if ( ! $this->is_valid_session_token( $token ) ) {
+			return new WP_Error( '2fa_invalid_session', __( 'Invalid verification session. Please log in again.', 'nexifymy-security' ) );
+		}
+
+		if ( ! wp_verify_nonce( $nonce, 'nexifymy_2fa_verify_' . $token ) ) {
+			return new WP_Error( '2fa_invalid_request', __( 'Invalid verification request. Please try again.', 'nexifymy-security' ) );
+		}
+
+		$code = preg_replace( '/\D+/', '', $code );
+		if ( strlen( $code ) !== 6 ) {
+			return new WP_Error( '2fa_invalid', __( 'Invalid verification code.', 'nexifymy-security' ) );
+		}
 
 		$user_id = get_transient( 'nexifymy_2fa_' . $token );
 
@@ -273,11 +305,13 @@ class NexifyMy_Security_Two_Factor {
 		}
 
 		$secret = $this->get_user_secret( $user_id );
+		if ( ! is_string( $secret ) || '' === trim( $secret ) ) {
+			return new WP_Error( '2fa_not_configured', __( 'Two-factor authentication is not configured for this account.', 'nexifymy-security' ) );
+		}
 
 		if ( ! $this->verify_totp( $secret, $code ) ) {
 			return new WP_Error( '2fa_invalid', __( 'Invalid verification code.', 'nexifymy-security' ) );
 		}
-
 		// Clear token.
 		delete_transient( 'nexifymy_2fa_' . $token );
 
@@ -285,11 +319,11 @@ class NexifyMy_Security_Two_Factor {
 		if ( ! empty( $_POST['nexifymy_remember_device'] ) ) {
 			$this->remember_device( $user_id );
 		}
+      // phpcs:enable WordPress.Security.NonceVerification.Missing
 
 		// Return user object.
 		return get_user_by( 'ID', $user_id );
 	}
-
 	/**
 	 * Check if device is remembered.
 	 *
@@ -302,7 +336,7 @@ class NexifyMy_Security_Two_Factor {
 			return false;
 		}
 
-		$token = sanitize_text_field( wp_unslash( $_COOKIE[ $cookie_name ] ) );
+		$token  = sanitize_text_field( wp_unslash( $_COOKIE[ $cookie_name ] ) );
 		$stored = get_user_meta( $user_id, '_nexifymy_2fa_remember', true );
 
 		return $token === $stored;
@@ -315,7 +349,7 @@ class NexifyMy_Security_Two_Factor {
 	 */
 	private function remember_device( $user_id ) {
 		$settings = $this->get_settings();
-		$days = absint( $settings['remember_days'] ) ?: 30;
+		$days     = absint( $settings['remember_days'] ) ?: 30;
 
 		$token = wp_generate_password( 32, false );
 		update_user_meta( $user_id, '_nexifymy_2fa_remember', $token );
@@ -335,23 +369,24 @@ class NexifyMy_Security_Two_Factor {
 	 * Render 2FA verification form.
 	 */
 	public function render_2fa_form() {
+
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only session token from login URL.
 		$token = isset( $_GET['token'] ) ? sanitize_text_field( wp_unslash( $_GET['token'] ) ) : '';
 
-		if ( ! get_transient( 'nexifymy_2fa_' . $token ) ) {
+		if ( ! $this->is_valid_session_token( $token ) || ! get_transient( 'nexifymy_2fa_' . $token ) ) {
 			wp_safe_redirect( wp_login_url() );
 			exit;
 		}
-
 		login_header( __( 'Two-Factor Authentication', 'nexifymy-security' ) );
 		?>
 		<form name="2fa_form" id="2fa_form" action="<?php echo esc_url( wp_login_url() ); ?>" method="post">
 			<input type="hidden" name="nexifymy_2fa_token" value="<?php echo esc_attr( $token ); ?>" />
+			<?php wp_nonce_field( 'nexifymy_2fa_verify_' . $token, 'nexifymy_2fa_nonce' ); ?>
 
 			<p>
 				<label for="nexifymy_2fa_code"><?php _e( 'Authentication Code', 'nexifymy-security' ); ?></label>
 				<input type="text" name="nexifymy_2fa_code" id="nexifymy_2fa_code" class="input" size="20" autocomplete="off" autofocus />
 			</p>
-
 			<p>
 				<label>
 					<input type="checkbox" name="nexifymy_remember_device" value="1" />
@@ -373,8 +408,13 @@ class NexifyMy_Security_Two_Factor {
 	 *
 	 * @param WP_User $user User object.
 	 */
+    // phpcs:disable WordPress.Security.NonceVerification.Missing
+	// Renders profile UI only; does not process submitted data.
 	public function render_user_settings( $user ) {
+
 		$is_enabled = $this->is_2fa_enabled( $user->ID );
+		$ajax_url   = admin_url( 'admin-ajax.php' );
+		$nonce      = wp_create_nonce( 'nexifymy_security_nonce' );
 		?>
 		<h2><?php _e( 'Two-Factor Authentication', 'nexifymy-security' ); ?></h2>
 		<table class="form-table">
@@ -392,17 +432,185 @@ class NexifyMy_Security_Two_Factor {
 			</tr>
 		</table>
 		<div id="2fa-setup-modal" style="display: none;"></div>
+		<script type="text/javascript">
+		(function() {
+			const setupBtn = document.getElementById('setup-2fa');
+			const disableBtn = document.getElementById('disable-2fa');
+			const modal = document.getElementById('2fa-setup-modal');
+			const ajaxUrl = <?php echo wp_json_encode( $ajax_url ); ?>;
+			const nonce = <?php echo wp_json_encode( $nonce ); ?>;
+			const userId = <?php echo (int) $user->ID; ?>;
+			const successColor = '#008a20';
+			const errorColor = '#b32d2e';
+
+			function extractMessage(response, fallback) {
+				if (!response || typeof response !== 'object') {
+					return fallback;
+				}
+				if (typeof response.data === 'string' && response.data.trim() !== '') {
+					return response.data;
+				}
+				if (response.data && typeof response.data.message === 'string' && response.data.message.trim() !== '') {
+					return response.data.message;
+				}
+				return fallback;
+			}
+
+			function postAction(action, payload) {
+				const body = new URLSearchParams({
+					action: action,
+					nonce: nonce,
+					user_id: String(userId)
+				});
+				if (payload && typeof payload === 'object') {
+					Object.keys(payload).forEach(function(key) {
+						body.append(key, payload[key]);
+					});
+				}
+
+				return fetch(ajaxUrl, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+					credentials: 'same-origin',
+					body: body.toString()
+				}).then(function(res) {
+					return res.json();
+				});
+			}
+
+			function closeModal() {
+				if (!modal) {
+					return;
+				}
+				modal.style.display = 'none';
+				modal.innerHTML = '';
+			}
+
+			function showMessage(element, message, isError) {
+				if (!element) {
+					return;
+				}
+				element.textContent = message;
+				element.style.color = isError ? errorColor : successColor;
+			}
+
+			function showSetupModal(payload) {
+				if (!modal) {
+					return;
+				}
+
+				modal.style.display = 'block';
+				modal.style.padding = '16px';
+				modal.style.background = '#fff';
+				modal.style.border = '1px solid #ccd0d4';
+				modal.style.maxWidth = '420px';
+				modal.style.marginTop = '12px';
+				modal.innerHTML =
+					'<h3 style="margin-top:0;">' + <?php echo wp_json_encode( __( 'Set up Two-Factor Authentication', 'nexifymy-security' ) ); ?> + '</h3>' +
+					'<p>' + <?php echo wp_json_encode( __( 'Scan this QR code in your authenticator app, then enter the 6-digit code to finish setup.', 'nexifymy-security' ) ); ?> + '</p>' +
+					'<p><img src=\"' + payload.qr_url + '\" alt=\"QR Code\" style=\"max-width:200px;height:auto;\" /></p>' +
+					'<p><strong>' + <?php echo wp_json_encode( __( 'Manual key:', 'nexifymy-security' ) ); ?> + '</strong> <code>' + payload.secret + '</code></p>' +
+					'<p><input type=\"text\" id=\"nexifymy-2fa-verify-code\" class=\"regular-text\" maxlength=\"6\" placeholder=\"123456\" /></p>' +
+					'<p>' +
+					'<button type=\"button\" class=\"button button-primary\" id=\"nexifymy-2fa-verify-btn\">' + <?php echo wp_json_encode( __( 'Verify & Enable', 'nexifymy-security' ) ); ?> + '</button> ' +
+					'<button type=\"button\" class=\"button\" id=\"nexifymy-2fa-cancel-btn\">' + <?php echo wp_json_encode( __( 'Cancel', 'nexifymy-security' ) ); ?> + '</button>' +
+					'</p>' +
+					'<p id=\"nexifymy-2fa-modal-message\"></p>';
+
+				const verifyBtn = document.getElementById('nexifymy-2fa-verify-btn');
+				const cancelBtn = document.getElementById('nexifymy-2fa-cancel-btn');
+				const codeInput = document.getElementById('nexifymy-2fa-verify-code');
+				const messageEl = document.getElementById('nexifymy-2fa-modal-message');
+
+				if (cancelBtn) {
+					cancelBtn.addEventListener('click', closeModal);
+				}
+
+				if (verifyBtn && codeInput) {
+					verifyBtn.addEventListener('click', function() {
+						const code = (codeInput.value || '').replace(/\D+/g, '').trim();
+						if (code.length !== 6) {
+							showMessage(messageEl, <?php echo wp_json_encode( __( 'Please enter a valid 6-digit code.', 'nexifymy-security' ) ); ?>, true);
+							return;
+						}
+
+						verifyBtn.disabled = true;
+						postAction('nexifymy_verify_2fa_setup', { code: code })
+							.then(function(response) {
+								if (!response || !response.success) {
+									throw new Error(extractMessage(response, <?php echo wp_json_encode( __( 'Failed to verify 2FA code.', 'nexifymy-security' ) ); ?>));
+								}
+								showMessage(messageEl, extractMessage(response, <?php echo wp_json_encode( __( 'Two-factor authentication enabled.', 'nexifymy-security' ) ); ?>), false);
+								window.setTimeout(function() {
+									window.location.reload();
+								}, 600);
+							})
+							.catch(function(err) {
+								showMessage(messageEl, err && err.message ? err.message : <?php echo wp_json_encode( __( 'Unable to verify setup right now.', 'nexifymy-security' ) ); ?>, true);
+								verifyBtn.disabled = false;
+							});
+					});
+				}
+			}
+
+			if (setupBtn) {
+				setupBtn.addEventListener('click', function() {
+					setupBtn.disabled = true;
+					postAction('nexifymy_generate_2fa_secret')
+						.then(function(response) {
+							if (!response || !response.success || !response.data || !response.data.qr_url || !response.data.secret) {
+								throw new Error(extractMessage(response, <?php echo wp_json_encode( __( 'Unable to start 2FA setup.', 'nexifymy-security' ) ); ?>));
+							}
+							showSetupModal(response.data);
+						})
+						.catch(function(err) {
+							window.alert(err && err.message ? err.message : <?php echo wp_json_encode( __( 'Unable to start 2FA setup.', 'nexifymy-security' ) ); ?>);
+						})
+						.finally(function() {
+							setupBtn.disabled = false;
+						});
+				});
+			}
+
+			if (disableBtn) {
+				disableBtn.addEventListener('click', function() {
+					if (!window.confirm(<?php echo wp_json_encode( __( 'Are you sure you want to disable two-factor authentication?', 'nexifymy-security' ) ); ?>)) {
+						return;
+					}
+
+					disableBtn.disabled = true;
+					postAction('nexifymy_disable_2fa')
+						.then(function(response) {
+							if (!response || !response.success) {
+								throw new Error(extractMessage(response, <?php echo wp_json_encode( __( 'Failed to disable 2FA.', 'nexifymy-security' ) ); ?>));
+							}
+							window.alert(extractMessage(response, <?php echo wp_json_encode( __( 'Two-factor authentication disabled.', 'nexifymy-security' ) ); ?>));
+							window.location.reload();
+						})
+						.catch(function(err) {
+							window.alert(err && err.message ? err.message : <?php echo wp_json_encode( __( 'Unable to disable 2FA right now.', 'nexifymy-security' ) ); ?>);
+							disableBtn.disabled = false;
+						});
+				});
+			}
+		})();
+		</script>
 		<?php
 	}
+  // phpcs:enable WordPress.Security.NonceVerification.Missing
 
 	/**
 	 * Save user 2FA settings.
 	 *
 	 * @param int $user_id User ID.
 	 */
+    // phpcs:disable WordPress.Security.NonceVerification.Missing
+	// No-op compatibility hook; 2FA profile changes are saved via AJAX.
 	public function save_user_settings( $user_id ) {
-		// Handled via AJAX.
+
+		unset( $user_id );
 	}
+  // phpcs:enable WordPress.Security.NonceVerification.Missing
 
 	/*
 	 * =========================================================================
@@ -413,24 +621,43 @@ class NexifyMy_Security_Two_Factor {
 	/**
 	 * Generate new 2FA secret via AJAX.
 	 */
+    // phpcs:disable WordPress.Security.NonceVerification.Missing
+	// Nonce is verified via check_ajax_referer() at method start.
 	public function ajax_generate_secret() {
-		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 
+		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! is_user_logged_in() ) {
 			wp_send_json_error( 'Not logged in' );
 		}
 
-		$user = wp_get_current_user();
+		$current_user = wp_get_current_user();
+		$user_id      = isset( $_POST['user_id'] ) ? absint( $_POST['user_id'] ) : (int) $current_user->ID;
+		if ( $user_id <= 0 ) {
+			wp_send_json_error( 'Invalid user.' );
+		}
+
+		if ( (int) $current_user->ID !== $user_id && ! current_user_can( 'edit_user', $user_id ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$user = get_user_by( 'ID', $user_id );
+		if ( ! $user || empty( $user->user_email ) ) {
+			wp_send_json_error( 'Invalid user.' );
+		}
+
 		$secret = $this->generate_secret();
 
 		// Store temporarily.
-		set_transient( 'nexifymy_2fa_setup_' . $user->ID, $secret, 10 * MINUTE_IN_SECONDS );
+		set_transient( 'nexifymy_2fa_setup_' . $user_id, $secret, 10 * MINUTE_IN_SECONDS );
 
-		wp_send_json_success( array(
-			'secret' => $secret,
-			'qr_url' => $this->get_qr_url( $secret, $user->user_email ),
-		) );
+		wp_send_json_success(
+			array(
+				'secret' => $secret,
+				'qr_url' => $this->get_qr_url( $secret, $user->user_email ),
+			)
+		);
 	}
+  // phpcs:enable WordPress.Security.NonceVerification.Missing
 
 	/**
 	 * Verify 2FA setup via AJAX.
@@ -442,9 +669,18 @@ class NexifyMy_Security_Two_Factor {
 			wp_send_json_error( 'Not logged in' );
 		}
 
-		$user = wp_get_current_user();
-		$code = isset( $_POST['code'] ) ? sanitize_text_field( wp_unslash( $_POST['code'] ) ) : '';
-		$secret = get_transient( 'nexifymy_2fa_setup_' . $user->ID );
+		$current_user = wp_get_current_user();
+		$user_id      = isset( $_POST['user_id'] ) ? absint( $_POST['user_id'] ) : (int) $current_user->ID;
+		$code         = isset( $_POST['code'] ) ? sanitize_text_field( wp_unslash( $_POST['code'] ) ) : '';
+		if ( $user_id <= 0 ) {
+			wp_send_json_error( 'Invalid user.' );
+		}
+
+		if ( (int) $current_user->ID !== $user_id && ! current_user_can( 'edit_user', $user_id ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		$secret = get_transient( 'nexifymy_2fa_setup_' . $user_id );
 
 		if ( ! $secret ) {
 			wp_send_json_error( 'Setup session expired.' );
@@ -455,9 +691,9 @@ class NexifyMy_Security_Two_Factor {
 		}
 
 		// Save secret and enable 2FA.
-		update_user_meta( $user->ID, self::SECRET_META_KEY, $secret );
-		update_user_meta( $user->ID, self::ENABLED_META_KEY, true );
-		delete_transient( 'nexifymy_2fa_setup_' . $user->ID );
+		update_user_meta( $user_id, self::SECRET_META_KEY, $secret );
+		update_user_meta( $user_id, self::ENABLED_META_KEY, true );
+		delete_transient( 'nexifymy_2fa_setup_' . $user_id );
 
 		wp_send_json_success( array( 'message' => '2FA enabled successfully.' ) );
 	}
@@ -472,11 +708,19 @@ class NexifyMy_Security_Two_Factor {
 			wp_send_json_error( 'Not logged in' );
 		}
 
-		$user = wp_get_current_user();
+		$current_user = wp_get_current_user();
+		$user_id      = isset( $_POST['user_id'] ) ? absint( $_POST['user_id'] ) : (int) $current_user->ID;
+		if ( $user_id <= 0 ) {
+			wp_send_json_error( 'Invalid user.' );
+		}
 
-		delete_user_meta( $user->ID, self::SECRET_META_KEY );
-		delete_user_meta( $user->ID, self::ENABLED_META_KEY );
-		delete_user_meta( $user->ID, '_nexifymy_2fa_remember' );
+		if ( (int) $current_user->ID !== $user_id && ! current_user_can( 'edit_user', $user_id ) ) {
+			wp_send_json_error( 'Unauthorized' );
+		}
+
+		delete_user_meta( $user_id, self::SECRET_META_KEY );
+		delete_user_meta( $user_id, self::ENABLED_META_KEY );
+		delete_user_meta( $user_id, '_nexifymy_2fa_remember' );
 
 		wp_send_json_success( array( 'message' => '2FA disabled.' ) );
 	}
@@ -486,10 +730,18 @@ class NexifyMy_Security_Two_Factor {
 	 * Rate limited to one email per 60 seconds per token.
 	 */
 	public function ajax_send_email_code() {
+
+       // phpcs:disable WordPress.Security.NonceVerification.Missing
+		// Public login endpoint validated via session token.
 		$token = isset( $_POST['token'] ) ? sanitize_text_field( wp_unslash( $_POST['token'] ) ) : '';
 
-		if ( empty( $token ) ) {
+		if ( ! $this->is_valid_session_token( $token ) ) {
 			wp_send_json_error( 'Missing token.' );
+		}
+
+		$settings = $this->get_settings();
+		if ( empty( $settings['email_backup'] ) ) {
+			wp_send_json_error( 'Email backup codes are disabled.' );
 		}
 
 		// Rate limit check - only allow one email per 60 seconds per token.
@@ -498,26 +750,41 @@ class NexifyMy_Security_Two_Factor {
 			wp_send_json_error( 'Please wait before requesting another code.' );
 		}
 
-		$user_id = get_transient( 'nexifymy_2fa_' . $token );
+		$remote_addr = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : 'unknown';
+		$ip_rate_key = 'nexifymy_2fa_email_ip_rate_' . md5( $remote_addr );
+		if ( get_transient( $ip_rate_key ) ) {
+			wp_send_json_error( 'Please wait before requesting another code.' );
+		}
 
-		if ( ! $user_id ) {
+		$user_id = absint( get_transient( 'nexifymy_2fa_' . $token ) );
+
+		if ( $user_id <= 0 ) {
 			wp_send_json_error( 'Invalid session.' );
 		}
 
 		$user = get_user_by( 'ID', $user_id );
+		if ( ! $user || empty( $user->user_email ) ) {
+			wp_send_json_error( 'Invalid session.' );
+		}
+
 		$code = wp_rand( 100000, 999999 );
 
 		set_transient( 'nexifymy_2fa_email_' . $user_id, $code, 10 * MINUTE_IN_SECONDS );
-		set_transient( $rate_key, true, 60 ); // Rate limit for 60 seconds.
+		set_transient( $rate_key, true, 60 );
+		// Rate limit for 60 seconds.
+		set_transient( $ip_rate_key, true, 20 );
+		// Additional short IP rate limit.
 
 		$subject = sprintf( '[%s] Your login verification code', get_bloginfo( 'name' ) );
 		$message = sprintf( __( 'Your verification code is: %s', 'nexifymy-security' ), $code );
 
-		wp_mail( $user->user_email, $subject, $message );
+		if ( ! wp_mail( $user->user_email, $subject, $message ) ) {
+			wp_send_json_error( 'Unable to send verification code at this time.' );
+		}
+      // phpcs:enable WordPress.Security.NonceVerification.Missing
 
 		wp_send_json_success( array( 'message' => 'Code sent to your email.' ) );
 	}
-
 	/**
 	 * Get settings via AJAX.
 	 */
@@ -550,7 +817,7 @@ class NexifyMy_Security_Two_Factor {
 		);
 
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings               = NexifyMy_Security_Settings::get_all();
 			$all_settings['two_factor'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}

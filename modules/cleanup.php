@@ -42,8 +42,7 @@ class NexifyMy_Security_Cleanup {
 		}
 
 		// 3. Get the file path.
-		$file_path = isset( $_POST['file_path'] ) ? sanitize_text_field( $_POST['file_path'] ) : '';
-
+		$file_path = isset( $_POST['file_path'] ) ? sanitize_text_field( wp_unslash( $_POST['file_path'] ) ) : '';
 		if ( empty( $file_path ) ) {
 			wp_send_json_error( 'No file path provided.' );
 		}

@@ -90,7 +90,7 @@ class NexifyMy_Security_Geo_Blocking {
 			return;
 		}
 
-		$ip = $this->get_client_ip();
+		$ip      = $this->get_client_ip();
 		$country = $this->get_country( $ip );
 
 		if ( empty( $country ) ) {
@@ -98,8 +98,8 @@ class NexifyMy_Security_Geo_Blocking {
 		}
 
 		$should_block = false;
-		$mode = $settings['mode'];
-		$countries = (array) $settings['countries'];
+		$mode         = $settings['mode'];
+		$countries    = (array) $settings['countries'];
 
 		if ( 'blacklist' === $mode ) {
 			// Block if country is in the list.
@@ -128,7 +128,10 @@ class NexifyMy_Security_Geo_Blocking {
 				'geo_blocked',
 				sprintf( 'Request blocked from %s (%s)', $country, $ip ),
 				'warning',
-				array( 'ip' => $ip, 'country' => $country )
+				array(
+					'ip'      => $ip,
+					'country' => $country,
+				)
 			);
 		}
 
@@ -159,7 +162,7 @@ class NexifyMy_Security_Geo_Blocking {
 	public function get_country( $ip ) {
 		// Check cache first.
 		$cache_key = self::CACHE_PREFIX . md5( $ip );
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
 			return $cached;
@@ -188,9 +191,12 @@ class NexifyMy_Security_Geo_Blocking {
 
 		$url = 'https://ipwho.is/' . rawurlencode( $ip ) . '?fields=success,country_code';
 
-		$response = wp_remote_get( $url, array(
-			'timeout' => 5,
-		) );
+		$response = wp_remote_get(
+			$url,
+			array(
+				'timeout' => 5,
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return '';
@@ -264,22 +270,68 @@ class NexifyMy_Security_Geo_Blocking {
 		}
 
 		self::$country_list = array(
-			'AF' => 'Afghanistan', 'AL' => 'Albania', 'DZ' => 'Algeria', 'AR' => 'Argentina',
-			'AU' => 'Australia', 'AT' => 'Austria', 'BD' => 'Bangladesh', 'BE' => 'Belgium',
-			'BR' => 'Brazil', 'CA' => 'Canada', 'CL' => 'Chile', 'CN' => 'China',
-			'CO' => 'Colombia', 'HR' => 'Croatia', 'CZ' => 'Czech Republic', 'DK' => 'Denmark',
-			'EG' => 'Egypt', 'FI' => 'Finland', 'FR' => 'France', 'DE' => 'Germany',
-			'GR' => 'Greece', 'HK' => 'Hong Kong', 'HU' => 'Hungary', 'IN' => 'India',
-			'ID' => 'Indonesia', 'IR' => 'Iran', 'IQ' => 'Iraq', 'IE' => 'Ireland',
-			'IL' => 'Israel', 'IT' => 'Italy', 'JP' => 'Japan', 'KE' => 'Kenya',
-			'KR' => 'South Korea', 'KW' => 'Kuwait', 'MY' => 'Malaysia', 'MX' => 'Mexico',
-			'MA' => 'Morocco', 'NL' => 'Netherlands', 'NZ' => 'New Zealand', 'NG' => 'Nigeria',
-			'NO' => 'Norway', 'PK' => 'Pakistan', 'PH' => 'Philippines', 'PL' => 'Poland',
-			'PT' => 'Portugal', 'QA' => 'Qatar', 'RO' => 'Romania', 'RU' => 'Russia',
-			'SA' => 'Saudi Arabia', 'SG' => 'Singapore', 'ZA' => 'South Africa', 'ES' => 'Spain',
-			'SE' => 'Sweden', 'CH' => 'Switzerland', 'TW' => 'Taiwan', 'TH' => 'Thailand',
-			'TR' => 'Turkey', 'UA' => 'Ukraine', 'AE' => 'United Arab Emirates', 'GB' => 'United Kingdom',
-			'US' => 'United States', 'VN' => 'Vietnam',
+			'AF' => 'Afghanistan',
+			'AL' => 'Albania',
+			'DZ' => 'Algeria',
+			'AR' => 'Argentina',
+			'AU' => 'Australia',
+			'AT' => 'Austria',
+			'BD' => 'Bangladesh',
+			'BE' => 'Belgium',
+			'BR' => 'Brazil',
+			'CA' => 'Canada',
+			'CL' => 'Chile',
+			'CN' => 'China',
+			'CO' => 'Colombia',
+			'HR' => 'Croatia',
+			'CZ' => 'Czech Republic',
+			'DK' => 'Denmark',
+			'EG' => 'Egypt',
+			'FI' => 'Finland',
+			'FR' => 'France',
+			'DE' => 'Germany',
+			'GR' => 'Greece',
+			'HK' => 'Hong Kong',
+			'HU' => 'Hungary',
+			'IN' => 'India',
+			'ID' => 'Indonesia',
+			'IR' => 'Iran',
+			'IQ' => 'Iraq',
+			'IE' => 'Ireland',
+			'IL' => 'Israel',
+			'IT' => 'Italy',
+			'JP' => 'Japan',
+			'KE' => 'Kenya',
+			'KR' => 'South Korea',
+			'KW' => 'Kuwait',
+			'MY' => 'Malaysia',
+			'MX' => 'Mexico',
+			'MA' => 'Morocco',
+			'NL' => 'Netherlands',
+			'NZ' => 'New Zealand',
+			'NG' => 'Nigeria',
+			'NO' => 'Norway',
+			'PK' => 'Pakistan',
+			'PH' => 'Philippines',
+			'PL' => 'Poland',
+			'PT' => 'Portugal',
+			'QA' => 'Qatar',
+			'RO' => 'Romania',
+			'RU' => 'Russia',
+			'SA' => 'Saudi Arabia',
+			'SG' => 'Singapore',
+			'ZA' => 'South Africa',
+			'ES' => 'Spain',
+			'SE' => 'Sweden',
+			'CH' => 'Switzerland',
+			'TW' => 'Taiwan',
+			'TH' => 'Thailand',
+			'TR' => 'Turkey',
+			'UA' => 'Ukraine',
+			'AE' => 'United Arab Emirates',
+			'GB' => 'United Kingdom',
+			'US' => 'United States',
+			'VN' => 'Vietnam',
 		);
 
 		return self::$country_list;
@@ -314,17 +366,18 @@ class NexifyMy_Security_Geo_Blocking {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
+		$mode = isset( $_POST['mode'] ) ? sanitize_key( wp_unslash( $_POST['mode'] ) ) : 'blacklist';
+
 		$settings = array(
 			'enabled'       => ! empty( $_POST['enabled'] ),
-			'mode'          => isset( $_POST['mode'] ) && in_array( $_POST['mode'], array( 'blacklist', 'whitelist' ), true ) ? $_POST['mode'] : 'blacklist',
-			'countries'     => isset( $_POST['countries'] ) ? array_map( 'sanitize_text_field', (array) $_POST['countries'] ) : array(),
+			'mode'          => in_array( $mode, array( 'blacklist', 'whitelist' ), true ) ? $mode : 'blacklist',
+			'countries'     => isset( $_POST['countries'] ) ? array_map( 'sanitize_text_field', (array) wp_unslash( $_POST['countries'] ) ) : array(),
 			'block_message' => isset( $_POST['block_message'] ) ? sanitize_text_field( wp_unslash( $_POST['block_message'] ) ) : '',
 			'log_blocked'   => ! empty( $_POST['log_blocked'] ),
 		);
-
 		// Save to main settings.
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings                 = NexifyMy_Security_Settings::get_all();
 			$all_settings['geo_blocking'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}
@@ -342,20 +395,22 @@ class NexifyMy_Security_Geo_Blocking {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$ip = isset( $_POST['ip'] ) ? sanitize_text_field( wp_unslash( $_POST['ip'] ) ) : $this->get_client_ip();
-		$country = $this->get_country( $ip );
+		$ip           = isset( $_POST['ip'] ) ? sanitize_text_field( wp_unslash( $_POST['ip'] ) ) : $this->get_client_ip();
+		$country      = $this->get_country( $ip );
 		$country_name = '';
 
 		if ( $country ) {
-			$list = self::get_country_list();
+			$list         = self::get_country_list();
 			$country_name = isset( $list[ $country ] ) ? $list[ $country ] : $country;
 		}
 
-		wp_send_json_success( array(
-			'ip'           => $ip,
-			'country_code' => $country,
-			'country_name' => $country_name,
-		) );
+		wp_send_json_success(
+			array(
+				'ip'           => $ip,
+				'country_code' => $country,
+				'country_name' => $country_name,
+			)
+		);
 	}
 
 	/**

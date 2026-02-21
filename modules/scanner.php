@@ -18,44 +18,50 @@ class NexifyMy_Security_Scanner {
 	/**
 	 * Threat classification constants - 5-tier system.
 	 */
-	const CLASSIFICATION_CONFIRMED_MALWARE = 'CONFIRMED_MALWARE';
-	const CLASSIFICATION_SUSPICIOUS_CODE = 'SUSPICIOUS_CODE';
+	const CLASSIFICATION_CONFIRMED_MALWARE      = 'CONFIRMED_MALWARE';
+	const CLASSIFICATION_SUSPICIOUS_CODE        = 'SUSPICIOUS_CODE';
 	const CLASSIFICATION_SECURITY_VULNERABILITY = 'SECURITY_VULNERABILITY';
-	const CLASSIFICATION_CODE_SMELL = 'CODE_SMELL';
-	const CLASSIFICATION_CLEAN = 'CLEAN';
+	const CLASSIFICATION_CODE_SMELL             = 'CODE_SMELL';
+	const CLASSIFICATION_CLEAN                  = 'CLEAN';
 
 	/**
 	 * Heuristic rules for malware detection.
+	 *
 	 * @var array
 	 */
 	private $heuristics = array();
 
 	/**
 	 * Cached scanner settings.
+	 *
 	 * @var array
 	 */
 	private $scanner_settings = array();
 
 	/**
 	 * Cached excluded path prefixes (absolute, normalized).
+	 *
 	 * @var string[]
 	 */
 	private $excluded_path_prefixes = array();
 
 	/**
 	 * Cached excluded extensions (lowercase, no dots).
+	 *
 	 * @var string[]
 	 */
 	private $excluded_extensions = array();
 
 	/**
 	 * Context analyzer instance.
+	 *
 	 * @var NexifyMy_Security_Context_Analyzer
 	 */
 	private $context_analyzer = null;
 
 	/**
 	 * Reputation checker instance.
+	 *
 	 * @var NexifyMy_Security_Reputation_Checker
 	 */
 	private $reputation_checker = null;
@@ -63,6 +69,7 @@ class NexifyMy_Security_Scanner {
 	/**
 	 * Known safe plugin/theme slugs (from WordPress.org).
 	 * These will have reduced confidence scoring.
+	 *
 	 * @var array
 	 */
 	private $known_safe_plugins = array(
@@ -91,6 +98,7 @@ class NexifyMy_Security_Scanner {
 
 	/**
 	 * Safe context patterns - these are legitimate uses of potentially dangerous functions.
+	 *
 	 * @var array
 	 */
 	private $safe_contexts = array(
@@ -109,35 +117,36 @@ class NexifyMy_Security_Scanner {
 
 	/**
 	 * Scan mode configurations.
+	 *
 	 * @var array
 	 */
 	private $scan_modes = array(
-		'quick' => array(
-			'name'        => 'Quick Scan',
-			'description' => 'Fast scan of high-risk areas only (uploads folder). Checks for critical threats.',
-			'directories' => array( 'uploads' ),
+		'quick'    => array(
+			'name'            => 'Quick Scan',
+			'description'     => 'Fast scan of high-risk areas only (uploads folder). Checks for critical threats.',
+			'directories'     => array( 'uploads' ),
 			'severity_levels' => array( 'critical' ),
-			'max_file_size' => 512000, // 500KB
-			'check_core' => false,
-			'incremental' => false,
+			'max_file_size'   => 512000, // 500KB
+			'check_core'      => false,
+			'incremental'     => false,
 		),
 		'standard' => array(
-			'name'        => 'Standard Scan',
-			'description' => 'Balanced scan of plugins, themes, and uploads. Checks critical and high threats.',
-			'directories' => array( 'uploads', 'plugins', 'themes' ),
+			'name'            => 'Standard Scan',
+			'description'     => 'Balanced scan of plugins, themes, and uploads. Checks critical and high threats.',
+			'directories'     => array( 'uploads', 'plugins', 'themes' ),
 			'severity_levels' => array( 'critical', 'high' ),
-			'max_file_size' => 2097152, // 2MB
-			'check_core' => false,
-			'incremental' => false, // Full scan by default for reliable results
+			'max_file_size'   => 2097152, // 2MB
+			'check_core'      => false,
+			'incremental'     => false, // Full scan by default for reliable results
 		),
-		'deep' => array(
-			'name'        => 'Deep Scan',
-			'description' => 'Comprehensive scan of entire WordPress installation including core files integrity check.',
-			'directories' => array( 'uploads', 'plugins', 'themes', 'root' ),
+		'deep'     => array(
+			'name'            => 'Deep Scan',
+			'description'     => 'Comprehensive scan of entire WordPress installation including core files integrity check.',
+			'directories'     => array( 'uploads', 'plugins', 'themes', 'root' ),
 			'severity_levels' => array( 'critical', 'high', 'medium', 'low' ),
-			'max_file_size' => 10485760, // 10MB
-			'check_core' => true,
-			'incremental' => false, // Deep scan always scans everything
+			'max_file_size'   => 10485760, // 10MB
+			'check_core'      => true,
+			'incremental'     => false, // Deep scan always scans everything
 		),
 	);
 
@@ -175,17 +184,17 @@ class NexifyMy_Security_Scanner {
 	 */
 	public function get_progress() {
 		return get_transient( self::SCAN_PROGRESS_KEY ) ?: array(
-			'phase'          => 'idle',
-			'status'         => 'Not scanning',
-			'current_file'   => '',
-			'files_scanned'  => 0,
-			'total_files'    => 0,
-			'percent'        => 0,
-			'threats_found'  => 0,
-			'critical'       => 0,
-			'high'           => 0,
-			'medium'         => 0,
-			'low'            => 0,
+			'phase'         => 'idle',
+			'status'        => 'Not scanning',
+			'current_file'  => '',
+			'files_scanned' => 0,
+			'total_files'   => 0,
+			'percent'       => 0,
+			'threats_found' => 0,
+			'critical'      => 0,
+			'high'          => 0,
+			'medium'        => 0,
+			'low'           => 0,
 		);
 	}
 
@@ -250,7 +259,7 @@ class NexifyMy_Security_Scanner {
 	 */
 	private function load_scanner_settings() {
 		$settings = get_option( 'nexifymy_security_settings', array() );
-		$scanner = isset( $settings['scanner'] ) && is_array( $settings['scanner'] ) ? $settings['scanner'] : array();
+		$scanner  = isset( $settings['scanner'] ) && is_array( $settings['scanner'] ) ? $settings['scanner'] : array();
 
 		$default_mode = sanitize_key( $scanner['default_mode'] ?? 'standard' );
 		if ( ! isset( $this->scan_modes[ $default_mode ] ) ) {
@@ -280,13 +289,13 @@ class NexifyMy_Security_Scanner {
 		$excluded_extensions = array_values( array_filter( array_unique( $excluded_extensions ) ) );
 
 		$this->scanner_settings = array(
-			'default_mode'     => $default_mode,
-			'max_file_size'    => $max_file_size_kb * 1024,
-			'excluded_paths'   => (array) $excluded_paths,
+			'default_mode'        => $default_mode,
+			'max_file_size'       => $max_file_size_kb * 1024,
+			'excluded_paths'      => (array) $excluded_paths,
 			'excluded_extensions' => $excluded_extensions,
 		);
 
-		$this->excluded_extensions = $excluded_extensions;
+		$this->excluded_extensions    = $excluded_extensions;
 		$this->excluded_path_prefixes = $this->build_excluded_prefixes( (array) $excluded_paths );
 
 		return $this->scanner_settings;
@@ -309,9 +318,9 @@ class NexifyMy_Security_Scanner {
 
 			// Convert to absolute path.
 			$is_windows_abs = preg_match( '/^[a-zA-Z]:\\\\/', $path ) === 1;
-			$is_unix_abs = strpos( $path, '/' ) === 0;
+			$is_unix_abs    = strpos( $path, '/' ) === 0;
 			if ( ! $is_windows_abs && ! $is_unix_abs && strpos( $path, ABSPATH ) !== 0 ) {
-				$path = ABSPATH . ltrim( $path, "/\\" );
+				$path = ABSPATH . ltrim( $path, '/\\' );
 			}
 
 			$real = realpath( $path );
@@ -319,7 +328,7 @@ class NexifyMy_Security_Scanner {
 				continue;
 			}
 
-			$real = rtrim( $real, "/\\" ) . DIRECTORY_SEPARATOR;
+			$real       = rtrim( $real, '/\\' ) . DIRECTORY_SEPARATOR;
 			$prefixes[] = $real;
 		}
 
@@ -338,17 +347,15 @@ class NexifyMy_Security_Scanner {
 		}
 
 		// Avoid calling realpath() on every file for performance; iterator paths are already absolute.
-		$real = rtrim( (string) $path, "/\\" ) . DIRECTORY_SEPARATOR;
+		$real = rtrim( (string) $path, '/\\' ) . DIRECTORY_SEPARATOR;
 
 		foreach ( $this->excluded_path_prefixes as $prefix ) {
 			if ( DIRECTORY_SEPARATOR === '\\' ) {
 				if ( stripos( $real, $prefix ) === 0 ) {
 					return true;
 				}
-			} else {
-				if ( strpos( $real, $prefix ) === 0 ) {
+			} elseif ( strpos( $real, $prefix ) === 0 ) {
 					return true;
-				}
 			}
 		}
 
@@ -378,7 +385,7 @@ class NexifyMy_Security_Scanner {
 	private function define_heuristics() {
 		$this->heuristics = array(
 			// Category: Obfuscation
-			'eval_base64' => array(
+			'eval_base64'          => array(
 				'severity'        => 'critical',
 				'description'     => 'eval(base64_decode()) - Common obfuscation',
 				'pattern'         => '/eval\s*\(\s*base64_decode\s*\(/i',
@@ -388,11 +395,11 @@ class NexifyMy_Security_Scanner {
 				'context_rules'   => array(
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 15,
-						'/uploads\//' => 10,
+						'/uploads\//'             => 10,
 					),
 				),
 			),
-			'gzinflate_base64' => array(
+			'gzinflate_base64'     => array(
 				'severity'        => 'critical',
 				'description'     => 'gzinflate(base64_decode()) - Compressed obfuscation',
 				'pattern'         => '/gzinflate\s*\(\s*base64_decode\s*\(/i',
@@ -405,7 +412,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'str_rot13' => array(
+			'str_rot13'            => array(
 				'severity'        => 'high',
 				'description'     => 'str_rot13() obfuscation',
 				'pattern'         => '/str_rot13\s*\(/i',
@@ -413,7 +420,7 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 60,
 				'category'        => 'obfuscation',
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/vendor/' => -30,
 					),
 					'dangerous_contexts' => array(
@@ -421,7 +428,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'hex_encoding' => array(
+			'hex_encoding'         => array(
 				'severity'        => 'medium',
 				'description'     => 'Heavy hex encoding (\\x usage)',
 				'pattern'         => '/(\\\\x[0-9a-f]{2}){10,}/i', // 10+ consecutive hex chars
@@ -434,7 +441,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'long_base64' => array(
+			'long_base64'          => array(
 				'severity'        => 'medium',
 				'description'     => 'Long base64 string (possible encoded payload)',
 				'pattern'         => '/[a-zA-Z0-9+\/=]{500,}/',
@@ -449,7 +456,7 @@ class NexifyMy_Security_Scanner {
 			),
 
 			// Category: Dangerous Functions (context-aware classification)
-			'shell_exec' => array(
+			'shell_exec'           => array(
 				'severity'        => 'critical',
 				'description'     => 'shell_exec() - Command execution',
 				'pattern'         => '/shell_exec\s*\(/i',
@@ -457,19 +464,19 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/WP_CLI::/' => -100,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/WP_CLI::/'                      => -100,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
-			'exec' => array(
+			'exec'                 => array(
 				'severity'        => 'critical',
 				'description'     => 'exec() - Command execution',
 				'pattern'         => '/\bexec\s*\(/i',
@@ -477,19 +484,19 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/WP_CLI::/' => -100,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/WP_CLI::/'                      => -100,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
-			'passthru' => array(
+			'passthru'             => array(
 				'severity'        => 'critical',
 				'description'     => 'passthru() - Command execution',
 				'pattern'         => '/passthru\s*\(/i',
@@ -497,18 +504,18 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
-			'system' => array(
+			'system'               => array(
 				'severity'        => 'critical',
 				'description'     => 'system() - Command execution',
 				'pattern'         => '/\bsystem\s*\(/i',
@@ -516,18 +523,18 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
-			'proc_open' => array(
+			'proc_open'            => array(
 				'severity'        => 'critical',
 				'description'     => 'proc_open() - Process control',
 				'pattern'         => '/proc_open\s*\(/i',
@@ -535,17 +542,17 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/wp-cli/' => -40,
 						'/vendor/' => -30,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
-			'popen' => array(
+			'popen'                => array(
 				'severity'        => 'high',
 				'description'     => 'popen() - Process control',
 				'pattern'         => '/\bpopen\s*\(/i',
@@ -553,16 +560,16 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 50,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/vendor/' => -30,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 30,
-						'/uploads\//' => 35,
+						'/uploads\//'             => 35,
 					),
 				),
 			),
-			'assert' => array(
+			'assert'               => array(
 				'severity'        => 'high',
 				'description'     => 'assert() - Possible code execution',
 				'pattern'         => '/\bassert\s*\(/i',
@@ -570,8 +577,8 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 45,
 				'category'        => 'command_execution',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/vendor/'   => -30,
 						'/tests?\//' => -40,
 					),
 					'dangerous_contexts' => array(
@@ -579,7 +586,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'create_function' => array(
+			'create_function'      => array(
 				'severity'        => 'high',
 				'description'     => 'create_function() - Dynamic code creation',
 				'pattern'         => '/create_function\s*\(/i',
@@ -589,13 +596,13 @@ class NexifyMy_Security_Scanner {
 				'context_rules'   => array(
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 30,
-						'/uploads\//' => 25,
+						'/uploads\//'             => 25,
 					),
 				),
 			),
 
 			// Category: Webshell Indicators
-			'globals_obfuscation' => array(
+			'globals_obfuscation'  => array(
 				'severity'        => 'high',
 				'description'     => '$GLOBALS obfuscation pattern',
 				'pattern'         => '/\$GLOBALS\s*\[\s*[\'"][a-z0-9_]+[\'"]\s*\]\s*\(/i',
@@ -608,7 +615,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'php_uname' => array(
+			'php_uname'            => array(
 				'severity'        => 'medium',
 				'description'     => 'php_uname() - System info gathering',
 				'pattern'         => '/php_uname\s*\(/i',
@@ -621,7 +628,7 @@ class NexifyMy_Security_Scanner {
 					),
 				),
 			),
-			'getcwd' => array(
+			'getcwd'               => array(
 				'severity'        => 'low',
 				'description'     => 'getcwd() - Path discovery',
 				'pattern'         => '/getcwd\s*\(/i',
@@ -629,7 +636,7 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 25,
 				'category'        => 'reconnaissance',
 			),
-			'file_put_contents' => array(
+			'file_put_contents'    => array(
 				'severity'        => 'medium',
 				'description'     => 'file_put_contents() - File write capability',
 				'pattern'         => '/file_put_contents\s*\(/i',
@@ -637,20 +644,20 @@ class NexifyMy_Security_Scanner {
 				'base_confidence' => 40,
 				'category'        => 'file_operation',
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/vendor/' => -25,
+					'safe_contexts'      => array(
+						'/vendor/'        => -25,
 						'/WP_Filesystem/' => -35,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/\.php[\'"]/' => 30, // Writing PHP files
-						'/uploads\//' => 25,
+						'/\.php[\'"]/'            => 30, // Writing PHP files
+						'/uploads\//'             => 25,
 					),
 				),
 			),
 
 			// Category: Suspicious Patterns
-			'hidden_input' => array(
+			'hidden_input'         => array(
 				'severity'        => 'medium',
 				'description'     => 'Hidden input with suspicious name',
 				'pattern'         => '/<input[^>]+type\s*=\s*["\']hidden["\'][^>]+name\s*=\s*["\'](?:cmd|c|pass|password)["\'][^>]*>/i',
@@ -693,7 +700,7 @@ class NexifyMy_Security_Scanner {
 		$this->load_signatures();
 		$this->load_scanner_settings();
 
-		$mode = isset( $_POST['mode'] ) ? sanitize_key( $_POST['mode'] ) : '';
+		$mode = isset( $_POST['mode'] ) ? sanitize_key( wp_unslash( $_POST['mode'] ) ) : '';
 		if ( $mode === '' ) {
 			$mode = $this->scanner_settings['default_mode'] ?? 'standard';
 		}
@@ -767,13 +774,18 @@ class NexifyMy_Security_Scanner {
 
 		$this->load_scanner_settings();
 
-		$suspicious_files = array();
-		$upload_dir = wp_upload_dir();
-		$last_scan = get_option( self::SCAN_STATE_OPTION, 0 );
-		$files_scanned = 0;
+		$suspicious_files  = array();
+		$upload_dir        = wp_upload_dir();
+		$last_scan         = get_option( self::SCAN_STATE_OPTION, 0 );
+		$files_scanned     = 0;
 		$quarantined_count = 0;
-		$core_results = null;
-		$threat_counts = array( 'critical' => 0, 'high' => 0, 'medium' => 0, 'low' => 0 );
+		$core_results      = null;
+		$threat_counts     = array(
+			'critical' => 0,
+			'high'     => 0,
+			'medium'   => 0,
+			'low'      => 0,
+		);
 
 		// Validate mode.
 		if ( ! isset( $this->scan_modes[ $mode ] ) ) {
@@ -788,21 +800,23 @@ class NexifyMy_Security_Scanner {
 		}
 
 		// Initialize progress - Phase 1: Initialization
-		$this->update_progress( array(
-			'phase'          => 'initializing',
-			'status'         => 'Initializing ' . $mode_config['name'] . '...',
-			'current_file'   => '',
-			'files_scanned'  => 0,
-			'total_files'    => 0,
-			'percent'        => 5,
-			'threats_found'  => 0,
-			'critical'       => 0,
-			'high'           => 0,
-			'medium'         => 0,
-			'low'            => 0,
-			'mode'           => $mode,
-			'start_time'     => time(),
-		) );
+		$this->update_progress(
+			array(
+				'phase'         => 'initializing',
+				'status'        => 'Initializing ' . $mode_config['name'] . '...',
+				'current_file'  => '',
+				'files_scanned' => 0,
+				'total_files'   => 0,
+				'percent'       => 5,
+				'threats_found' => 0,
+				'critical'      => 0,
+				'high'          => 0,
+				'medium'        => 0,
+				'low'           => 0,
+				'mode'          => $mode,
+				'start_time'    => time(),
+			)
+		);
 
 		// Build directories list based on mode.
 		$directories_to_scan = array();
@@ -824,21 +838,23 @@ class NexifyMy_Security_Scanner {
 		}
 
 		// Phase 2: Discovery - Count total files first
-		$this->update_progress( array(
-			'phase'          => 'discovery',
-			'status'         => 'Discovering files to scan...',
-			'current_file'   => '',
-			'files_scanned'  => 0,
-			'total_files'    => 0,
-			'percent'        => 10,
-			'threats_found'  => 0,
-			'critical'       => 0,
-			'high'           => 0,
-			'medium'         => 0,
-			'low'            => 0,
-			'mode'           => $mode,
-			'start_time'     => time(),
-		) );
+		$this->update_progress(
+			array(
+				'phase'         => 'discovery',
+				'status'        => 'Discovering files to scan...',
+				'current_file'  => '',
+				'files_scanned' => 0,
+				'total_files'   => 0,
+				'percent'       => 10,
+				'threats_found' => 0,
+				'critical'      => 0,
+				'high'          => 0,
+				'medium'        => 0,
+				'low'           => 0,
+				'mode'          => $mode,
+				'start_time'    => time(),
+			)
+		);
 
 		// Count total files for progress calculation
 		$total_files = 0;
@@ -849,21 +865,23 @@ class NexifyMy_Security_Scanner {
 		}
 
 		// Phase 3: Scanning
-		$this->update_progress( array(
-			'phase'          => 'scanning',
-			'status'         => 'Scanning files for threats...',
-			'current_file'   => '',
-			'files_scanned'  => 0,
-			'total_files'    => $total_files,
-			'percent'        => 15,
-			'threats_found'  => 0,
-			'critical'       => 0,
-			'high'           => 0,
-			'medium'         => 0,
-			'low'            => 0,
-			'mode'           => $mode,
-			'start_time'     => time(),
-		) );
+		$this->update_progress(
+			array(
+				'phase'         => 'scanning',
+				'status'        => 'Scanning files for threats...',
+				'current_file'  => '',
+				'files_scanned' => 0,
+				'total_files'   => $total_files,
+				'percent'       => 15,
+				'threats_found' => 0,
+				'critical'      => 0,
+				'high'          => 0,
+				'medium'        => 0,
+				'low'           => 0,
+				'mode'          => $mode,
+				'start_time'    => time(),
+			)
+		);
 
 		// Perform file scan with progress updates.
 		foreach ( $directories_to_scan as $dir ) {
@@ -873,48 +891,52 @@ class NexifyMy_Security_Scanner {
 			if ( $this->is_path_excluded( $dir ) ) {
 				continue;
 			}
-			$scan_result = $this->scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $suspicious_files, $threat_counts, $quarantined_count );
-			$suspicious_files = $scan_result['threats'];
-			$files_scanned = $scan_result['files_scanned'];
-			$threat_counts = $scan_result['threat_counts'];
+			$scan_result       = $this->scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $suspicious_files, $threat_counts, $quarantined_count );
+			$suspicious_files  = $scan_result['threats'];
+			$files_scanned     = $scan_result['files_scanned'];
+			$threat_counts     = $scan_result['threat_counts'];
 			$quarantined_count = $scan_result['quarantined_count'];
 		}
 
 		// Phase 4: Core Integrity (if deep scan)
 		if ( $mode_config['check_core'] ) {
-			$this->update_progress( array(
-				'phase'          => 'core_check',
-				'status'         => 'Verifying WordPress core integrity...',
-				'current_file'   => 'wp-includes/',
-				'files_scanned'  => $files_scanned,
-				'total_files'    => $total_files,
-				'percent'        => 90,
-				'threats_found'  => array_sum( $threat_counts ),
-				'critical'       => $threat_counts['critical'],
-				'high'           => $threat_counts['high'],
-				'medium'         => $threat_counts['medium'],
-				'low'            => $threat_counts['low'],
-				'mode'           => $mode,
-			) );
+			$this->update_progress(
+				array(
+					'phase'         => 'core_check',
+					'status'        => 'Verifying WordPress core integrity...',
+					'current_file'  => 'wp-includes/',
+					'files_scanned' => $files_scanned,
+					'total_files'   => $total_files,
+					'percent'       => 90,
+					'threats_found' => array_sum( $threat_counts ),
+					'critical'      => $threat_counts['critical'],
+					'high'          => $threat_counts['high'],
+					'medium'        => $threat_counts['medium'],
+					'low'           => $threat_counts['low'],
+					'mode'          => $mode,
+				)
+			);
 			$core_results = $this->check_core_integrity();
 		}
 
 		// Phase 5: Complete
-		$this->update_progress( array(
-			'phase'          => 'complete',
-			'status'         => 'Scan complete!',
-			'current_file'   => '',
-			'files_scanned'  => $files_scanned,
-			'total_files'    => $total_files,
-			'percent'        => 100,
-			'threats_found'  => array_sum( $threat_counts ),
-			'critical'       => $threat_counts['critical'],
-			'high'           => $threat_counts['high'],
-			'medium'         => $threat_counts['medium'],
-			'low'            => $threat_counts['low'],
-			'mode'           => $mode,
-			'end_time'       => time(),
-		) );
+		$this->update_progress(
+			array(
+				'phase'         => 'complete',
+				'status'        => 'Scan complete!',
+				'current_file'  => '',
+				'files_scanned' => $files_scanned,
+				'total_files'   => $total_files,
+				'percent'       => 100,
+				'threats_found' => array_sum( $threat_counts ),
+				'critical'      => $threat_counts['critical'],
+				'high'          => $threat_counts['high'],
+				'medium'        => $threat_counts['medium'],
+				'low'           => $threat_counts['low'],
+				'mode'          => $mode,
+				'end_time'      => time(),
+			)
+		);
 
 		// Update last scan time.
 		update_option( self::SCAN_STATE_OPTION, time() );
@@ -923,29 +945,31 @@ class NexifyMy_Security_Scanner {
 		require_once NEXIFYMY_SECURITY_PATH . 'modules/site-health-calculator.php';
 		$health_calculator = new NexifyMy_Security_Site_Health_Calculator();
 
-		$health_metrics = $health_calculator->calculate_health_metrics( array(
-			'files_scanned' => $files_scanned,
-			'threats'       => $suspicious_files,
-		) );
+		$health_metrics = $health_calculator->calculate_health_metrics(
+			array(
+				'files_scanned' => $files_scanned,
+				'threats'       => $suspicious_files,
+			)
+		);
 
 		// Count threats by classification for enhanced results
 		$classification_counts = array(
-			'CONFIRMED_MALWARE'        => 0,
-			'SUSPICIOUS_CODE'          => 0,
-			'SECURITY_VULNERABILITY'   => 0,
-			'CODE_SMELL'               => 0,
+			'CONFIRMED_MALWARE'      => 0,
+			'SUSPICIOUS_CODE'        => 0,
+			'SECURITY_VULNERABILITY' => 0,
+			'CODE_SMELL'             => 0,
 		);
 
 		$classification_percentages = array(
-			'CONFIRMED_MALWARE'        => 0,
-			'SUSPICIOUS_CODE'          => 0,
-			'SECURITY_VULNERABILITY'   => 0,
-			'CODE_SMELL'               => 0,
+			'CONFIRMED_MALWARE'      => 0,
+			'SUSPICIOUS_CODE'        => 0,
+			'SECURITY_VULNERABILITY' => 0,
+			'CODE_SMELL'             => 0,
 		);
 
 		foreach ( $suspicious_files as $threat_file ) {
 			// Each file may have multiple threats, count by highest classification
-			$file_classification = 'CODE_SMELL';
+			$file_classification     = 'CODE_SMELL';
 			$classification_priority = array(
 				'CONFIRMED_MALWARE'      => 4,
 				'SUSPICIOUS_CODE'        => 3,
@@ -958,17 +982,17 @@ class NexifyMy_Security_Scanner {
 			if ( isset( $threat_file['threats'] ) && is_array( $threat_file['threats'] ) ) {
 				foreach ( $threat_file['threats'] as $threat ) {
 					$classification = isset( $threat['classification'] ) ? $threat['classification'] : 'CODE_SMELL';
-					$priority = isset( $classification_priority[ $classification ] ) ? $classification_priority[ $classification ] : 0;
+					$priority       = isset( $classification_priority[ $classification ] ) ? $classification_priority[ $classification ] : 0;
 
 					if ( $priority > $highest_priority ) {
-						$highest_priority = $priority;
+						$highest_priority    = $priority;
 						$file_classification = $classification;
 					}
 				}
 			}
 
 			if ( isset( $classification_counts[ $file_classification ] ) ) {
-				$classification_counts[ $file_classification ]++;
+				++$classification_counts[ $file_classification ];
 			}
 		}
 
@@ -981,48 +1005,54 @@ class NexifyMy_Security_Scanner {
 
 		// Store results for later retrieval (enhanced structure)
 		$results = array(
-			'scanned_at'     => current_time( 'mysql' ),
-			'mode'           => $mode,
-			'mode_name'      => $mode_config['name'],
-			'files_scanned'  => $files_scanned,
-			'threats_found'  => array_sum( $threat_counts ),
-			'threats'        => $suspicious_files,
-			'threat_counts'  => $threat_counts,
-			'core_integrity' => $core_results,
-			'scan_summary'   => array(
-				'total_files_scanned'       => $files_scanned,
-				'files_with_threats'        => $health_metrics['affected_files'],
-				'clean_files'               => $health_metrics['clean_files'],
-				'clean_percentage'          => $health_metrics['clean_percentage'],
-				'affected_percentage'       => $health_metrics['affected_percentage'],
-				'health_score'              => $health_metrics['health_score'],
-				'health_status'             => $health_metrics['health_status'],
-				'recommendation'            => $health_metrics['recommendation'],
+			'scanned_at'                 => current_time( 'mysql' ),
+			'mode'                       => $mode,
+			'mode_name'                  => $mode_config['name'],
+			'files_scanned'              => $files_scanned,
+			'threats_found'              => array_sum( $threat_counts ),
+			'threats'                    => $suspicious_files,
+			'threat_counts'              => $threat_counts,
+			'core_integrity'             => $core_results,
+			'scan_summary'               => array(
+				'total_files_scanned' => $files_scanned,
+				'files_with_threats'  => $health_metrics['affected_files'],
+				'clean_files'         => $health_metrics['clean_files'],
+				'clean_percentage'    => $health_metrics['clean_percentage'],
+				'affected_percentage' => $health_metrics['affected_percentage'],
+				'health_score'        => $health_metrics['health_score'],
+				'health_status'       => $health_metrics['health_status'],
+				'recommendation'      => $health_metrics['recommendation'],
 			),
-			'classification_counts' => $classification_counts,
+			'classification_counts'      => $classification_counts,
 			'classification_percentages' => $classification_percentages,
-			'quarantined'   => $quarantined_count,
+			'quarantined'                => $quarantined_count,
 		);
 
 		// Save for API access
 		update_option( 'nexifymy_last_scan_results', $results );
 
 		// Save for dashboard display (with structure admin.php expects)
-		update_option( 'nexifymy_last_scan', array(
-			'files_scanned' => $files_scanned,
-			'time'          => current_time( 'mysql' ),
-			'mode'          => $mode,
-			'mode_name'     => $mode_config['name'],
-		) );
+		update_option(
+			'nexifymy_last_scan',
+			array(
+				'files_scanned' => $files_scanned,
+				'time'          => current_time( 'mysql' ),
+				'mode'          => $mode,
+				'mode_name'     => $mode_config['name'],
+			)
+		);
 
-		update_option( 'nexifymy_scan_results', array(
-			'threats' => array_sum( $threat_counts ),
-			'items'   => $suspicious_files,
-			'counts'  => $threat_counts,
-			'classification_counts' => $classification_counts,
-			'scan_summary' => $results['scan_summary'],
-			'quarantined' => $quarantined_count,
-		) );
+		update_option(
+			'nexifymy_scan_results',
+			array(
+				'threats'               => array_sum( $threat_counts ),
+				'items'                 => $suspicious_files,
+				'counts'                => $threat_counts,
+				'classification_counts' => $classification_counts,
+				'scan_summary'          => $results['scan_summary'],
+				'quarantined'           => $quarantined_count,
+			)
+		);
 
 		$threat_total = array_sum( $threat_counts );
 
@@ -1058,11 +1088,11 @@ class NexifyMy_Security_Scanner {
 	 * Count files in a directory for progress tracking.
 	 *
 	 * @param string $dir Directory path.
-	 * @param array $mode_config Mode configuration.
+	 * @param array  $mode_config Mode configuration.
 	 * @return int File count.
 	 */
 	private function count_files_in_directory( $dir, $mode_config ) {
-		$count = 0;
+		$count         = 0;
 		$max_file_size = $mode_config['max_file_size'] ?? 2097152;
 
 		try {
@@ -1076,7 +1106,7 @@ class NexifyMy_Security_Scanner {
 					$ext = strtolower( pathinfo( $file->getFilename(), PATHINFO_EXTENSION ) );
 					if ( in_array( $ext, array( 'php', 'js', 'html', 'htm' ), true ) ) {
 						if ( $file->getSize() <= $max_file_size ) {
-							$count++;
+							++$count;
 						}
 					}
 				}
@@ -1092,16 +1122,16 @@ class NexifyMy_Security_Scanner {
 	 * Scan a directory with progress updates.
 	 *
 	 * @param string $dir Directory path.
-	 * @param array $mode_config Mode configuration.
-	 * @param int $last_scan Timestamp of last scan.
-	 * @param int $files_scanned Current files scanned count.
-	 * @param int $total_files Total files to scan.
-	 * @param array $existing_threats Already found threats.
-	 * @param array $threat_counts Threat counts by severity.
+	 * @param array  $mode_config Mode configuration.
+	 * @param int    $last_scan Timestamp of last scan.
+	 * @param int    $files_scanned Current files scanned count.
+	 * @param int    $total_files Total files to scan.
+	 * @param array  $existing_threats Already found threats.
+	 * @param array  $threat_counts Threat counts by severity.
 	 * @return array Results with threats, files_scanned, threat_counts.
 	 */
 	private function scan_directory_with_progress( $dir, $mode_config, $last_scan, $files_scanned, $total_files, $existing_threats, $threat_counts, $quarantined_count = 0 ) {
-		$results = $existing_threats;
+		$results         = $existing_threats;
 		$update_interval = 10; // Update progress every 10 files
 
 		try {
@@ -1148,27 +1178,29 @@ class NexifyMy_Security_Scanner {
 					continue;
 				}
 
-				$files_scanned++;
+				++$files_scanned;
 
 				// Update progress periodically
 				if ( $files_scanned % $update_interval === 0 ) {
-					$percent = min( 85, 15 + ( ( $files_scanned / max( 1, $total_files ) ) * 70 ) );
+					$percent       = min( 85, 15 + ( ( $files_scanned / max( 1, $total_files ) ) * 70 ) );
 					$relative_path = str_replace( ABSPATH, '', $filepath );
 
-					$this->update_progress( array(
-						'phase'          => 'scanning',
-						'status'         => 'Scanning: ' . basename( $filepath ),
-						'current_file'   => $relative_path,
-						'files_scanned'  => $files_scanned,
-						'total_files'    => $total_files,
-						'percent'        => round( $percent ),
-						'threats_found'  => array_sum( $threat_counts ),
-						'critical'       => $threat_counts['critical'],
-						'high'           => $threat_counts['high'],
-						'medium'         => $threat_counts['medium'],
-						'low'            => $threat_counts['low'],
-						'mode'           => $mode_config['name'] ?? 'standard',
-					) );
+					$this->update_progress(
+						array(
+							'phase'         => 'scanning',
+							'status'        => 'Scanning: ' . basename( $filepath ),
+							'current_file'  => $relative_path,
+							'files_scanned' => $files_scanned,
+							'total_files'   => $total_files,
+							'percent'       => round( $percent ),
+							'threats_found' => array_sum( $threat_counts ),
+							'critical'      => $threat_counts['critical'],
+							'high'          => $threat_counts['high'],
+							'medium'        => $threat_counts['medium'],
+							'low'           => $threat_counts['low'],
+							'mode'          => $mode_config['name'] ?? 'standard',
+						)
+					);
 				}
 
 				// Scan the file
@@ -1180,20 +1212,20 @@ class NexifyMy_Security_Scanner {
 						$quarantine_result = $GLOBALS['nexifymy_quarantine']->quarantine_file( $filepath, 'Auto quarantine from scanner', false );
 						if ( ! is_wp_error( $quarantine_result ) ) {
 							$auto_quarantined = true;
-							$quarantined_count++;
+							++$quarantined_count;
 						}
 					}
 
 					$results[] = array(
-						'file'    => str_replace( ABSPATH, '', $filepath ),
-						'threats' => $threats,
+						'file'             => str_replace( ABSPATH, '', $filepath ),
+						'threats'          => $threats,
 						'auto_quarantined' => $auto_quarantined,
 					);
 
 					foreach ( $threats as $threat ) {
 						$severity = strtolower( $threat['severity'] ?? 'medium' );
 						if ( isset( $threat_counts[ $severity ] ) ) {
-							$threat_counts[ $severity ]++;
+							++$threat_counts[ $severity ];
 						}
 					}
 				}
@@ -1203,9 +1235,9 @@ class NexifyMy_Security_Scanner {
 		}
 
 		return array(
-			'threats'       => $results,
-			'files_scanned' => $files_scanned,
-			'threat_counts' => $threat_counts,
+			'threats'           => $results,
+			'files_scanned'     => $files_scanned,
+			'threat_counts'     => $threat_counts,
 			'quarantined_count' => $quarantined_count,
 		);
 	}
@@ -1227,7 +1259,7 @@ class NexifyMy_Security_Scanner {
 
 		foreach ( (array) $threats as $threat ) {
 			$classification = $threat['classification'] ?? '';
-			$confidence = (int) ( $threat['confidence'] ?? 0 );
+			$confidence     = (int) ( $threat['confidence'] ?? 0 );
 			if ( $classification === self::CLASSIFICATION_CONFIRMED_MALWARE && $confidence >= 85 ) {
 				return true;
 			}
@@ -1240,16 +1272,16 @@ class NexifyMy_Security_Scanner {
 	 * Scan a directory recursively.
 	 *
 	 * @param string $dir Directory path.
-	 * @param array $mode_config Mode configuration.
-	 * @param int $last_scan Timestamp of last scan.
+	 * @param array  $mode_config Mode configuration.
+	 * @param int    $last_scan Timestamp of last scan.
 	 * @return array Array with 'threats' and 'files_scanned'.
 	 */
 	private function scan_directory( $dir, $mode_config, $last_scan ) {
-		$results = array();
-		$files_scanned = 0;
-		$files_skipped = 0;
+		$results              = array();
+		$files_scanned        = 0;
+		$files_skipped        = 0;
 		$scannable_extensions = array( 'php', 'phtml', 'php5', 'php7', 'phar', 'inc', 'ico' );
-		$use_incremental = isset( $mode_config['incremental'] ) && $mode_config['incremental'] && $last_scan > 0;
+		$use_incremental      = isset( $mode_config['incremental'] ) && $mode_config['incremental'] && $last_scan > 0;
 
 		try {
 			$iterator = new RecursiveIteratorIterator(
@@ -1264,7 +1296,7 @@ class NexifyMy_Security_Scanner {
 
 				// Excluded paths.
 				if ( $this->is_path_excluded( $file->getPathname() ) ) {
-					$files_skipped++;
+					++$files_skipped;
 					continue;
 				}
 
@@ -1290,11 +1322,11 @@ class NexifyMy_Security_Scanner {
 
 				// Incremental: Skip files not modified since last scan.
 				if ( $use_incremental && $file->getMTime() < $last_scan ) {
-					$files_skipped++;
+					++$files_skipped;
 					continue;
 				}
 
-				$files_scanned++;
+				++$files_scanned;
 				$threats = $this->analyze_file( $file, $mode_config['severity_levels'] );
 				if ( ! empty( $threats ) ) {
 					$results[] = array(
@@ -1320,7 +1352,7 @@ class NexifyMy_Security_Scanner {
 	 * Analyze a single file for threats.
 	 *
 	 * @param SplFileInfo $file File object.
-	 * @param array $severity_levels Severity levels to check.
+	 * @param array       $severity_levels Severity levels to check.
 	 * @return array Found threats.
 	 */
 	private function analyze_file( $file, $severity_levels = array( 'critical', 'high', 'medium', 'low' ) ) {
@@ -1375,7 +1407,7 @@ class NexifyMy_Security_Scanner {
 	 * Scan a single file with context-aware classification and smart confidence scoring.
 	 *
 	 * @param string $filepath Full path to the file.
-	 * @param array $mode_config Mode configuration.
+	 * @param array  $mode_config Mode configuration.
 	 * @return array Found threats with confidence scores and classifications.
 	 */
 	private function scan_file( $filepath, $mode_config ) {
@@ -1386,7 +1418,7 @@ class NexifyMy_Security_Scanner {
 			return $threats;
 		}
 
-		$relative_path = str_replace( ABSPATH, '', $filepath );
+		$relative_path   = str_replace( ABSPATH, '', $filepath );
 		$severity_levels = $mode_config['severity_levels'] ?? array( 'critical', 'high', 'medium', 'low' );
 
 		// Initialize modules (lazy loading)
@@ -1465,7 +1497,7 @@ class NexifyMy_Security_Scanner {
 		}
 
 		// Legacy compatibility
-		$is_known_safe = $this->is_known_safe_plugin( $relative_path );
+		$is_known_safe   = $this->is_known_safe_plugin( $relative_path );
 		$is_safe_context = $this->is_safe_context( $relative_path );
 
 		// Scan for patterns
@@ -1506,7 +1538,7 @@ class NexifyMy_Security_Scanner {
 
 		// Process each detected pattern with context analysis
 		foreach ( $detected_patterns as $pattern ) {
-			$rule = $pattern['rule_data'];
+			$rule            = $pattern['rule_data'];
 			$matched_content = $pattern['matched_content'];
 
 			// Analyze code context
@@ -1572,7 +1604,7 @@ class NexifyMy_Security_Scanner {
 			// Multiple patterns detected - increase confidence for all
 			foreach ( $threats as &$threat ) {
 				$threat['confidence'] = min( 100, $threat['confidence'] + 15 );
-				$threat['context'] .= ' [Multiple threat patterns detected]';
+				$threat['context']   .= ' [Multiple threat patterns detected]';
 			}
 		}
 
@@ -1650,7 +1682,7 @@ class NexifyMy_Security_Scanner {
 
 			// If context suggests CLEAN, force low confidence
 			if ( isset( $context_data['suggested_classification'] ) &&
-			     $context_data['suggested_classification'] === self::CLASSIFICATION_CLEAN ) {
+				$context_data['suggested_classification'] === self::CLASSIFICATION_CLEAN ) {
 				$confidence = min( $confidence, 20 ); // Cap at 20 for clean files
 			}
 		} else {
@@ -1716,8 +1748,8 @@ class NexifyMy_Security_Scanner {
 	 * Get human-readable context for a threat.
 	 *
 	 * @param array $rule Detection rule.
-	 * @param bool $is_known_safe Is in known safe plugin.
-	 * @param bool $is_safe_context Is in safe context.
+	 * @param bool  $is_known_safe Is in known safe plugin.
+	 * @param bool  $is_safe_context Is in safe context.
 	 * @return string Context description.
 	 */
 	private function get_threat_context( $rule, $is_known_safe, $is_safe_context ) {
@@ -1733,7 +1765,7 @@ class NexifyMy_Security_Scanner {
 	/**
 	 * Get recommendation based on confidence and severity.
 	 *
-	 * @param int $confidence Confidence score.
+	 * @param int    $confidence Confidence score.
 	 * @param string $severity Threat severity.
 	 * @return string Recommendation.
 	 */
@@ -1753,9 +1785,9 @@ class NexifyMy_Security_Scanner {
 	/**
 	 * Determine classification tier based on confidence and context.
 	 *
-	 * @param int    $confidence   Confidence score (0-100).
-	 * @param array  $rule         Detection rule.
-	 * @param array  $context_data Context analysis data.
+	 * @param int   $confidence   Confidence score (0-100).
+	 * @param array $rule         Detection rule.
+	 * @param array $context_data Context analysis data.
 	 * @return string Classification tier constant.
 	 */
 	private function determine_classification( $confidence, $rule, $context_data ) {
@@ -1803,11 +1835,11 @@ class NexifyMy_Security_Scanner {
 	 */
 	private function get_threshold_for_classification( $classification ) {
 		$thresholds = array(
-			self::CLASSIFICATION_CONFIRMED_MALWARE        => 75,
-			self::CLASSIFICATION_SUSPICIOUS_CODE          => 60,
-			self::CLASSIFICATION_SECURITY_VULNERABILITY   => 70,
-			self::CLASSIFICATION_CODE_SMELL               => 40,
-			self::CLASSIFICATION_CLEAN                    => 0,
+			self::CLASSIFICATION_CONFIRMED_MALWARE      => 75,
+			self::CLASSIFICATION_SUSPICIOUS_CODE        => 60,
+			self::CLASSIFICATION_SECURITY_VULNERABILITY => 70,
+			self::CLASSIFICATION_CODE_SMELL             => 40,
+			self::CLASSIFICATION_CLEAN                  => 0,
 		);
 
 		return isset( $thresholds[ $classification ] ) ? $thresholds[ $classification ] : 40;
@@ -1860,7 +1892,7 @@ class NexifyMy_Security_Scanner {
 		}
 
 		$modified_files = array();
-		$missing_files = array();
+		$missing_files  = array();
 
 		foreach ( $body['checksums'] as $file => $expected_md5 ) {
 			$file_path = ABSPATH . $file;

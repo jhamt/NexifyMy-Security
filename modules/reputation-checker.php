@@ -19,47 +19,82 @@ class NexifyMy_Security_Reputation_Checker {
 	 * WordPress.org API endpoints.
 	 */
 	const WP_ORG_PLUGIN_API = 'https://api.wordpress.org/plugins/info/1.0/';
-	const WP_ORG_THEME_API = 'https://api.wordpress.org/themes/info/1.0/';
+	const WP_ORG_THEME_API  = 'https://api.wordpress.org/themes/info/1.0/';
 
 	/**
 	 * Known safe plugins (top WordPress.org plugins with >1M installs).
+	 *
 	 * @var array
 	 */
 	private $known_safe_plugins = array(
 		// Security & Performance
-		'wordfence', 'sucuri-scanner', 'jetpack', 'akismet', 'ithemes-security',
-		'wp-super-cache', 'w3-total-cache', 'autoptimize', 'wp-optimize',
+		'wordfence',
+		'sucuri-scanner',
+		'jetpack',
+		'akismet',
+		'ithemes-security',
+		'wp-super-cache',
+		'w3-total-cache',
+		'autoptimize',
+		'wp-optimize',
 
 		// SEO
-		'wordpress-seo', 'all-in-one-seo-pack', 'google-sitemap-generator',
+		'wordpress-seo',
+		'all-in-one-seo-pack',
+		'google-sitemap-generator',
 
 		// E-commerce
-		'woocommerce', 'woocommerce-gateway-stripe', 'woocommerce-paypal-payments',
+		'woocommerce',
+		'woocommerce-gateway-stripe',
+		'woocommerce-paypal-payments',
 
 		// Forms & Contact
-		'contact-form-7', 'wpforms-lite', 'ninja-forms', 'formidable', 'mailchimp-for-wp',
+		'contact-form-7',
+		'wpforms-lite',
+		'ninja-forms',
+		'formidable',
+		'mailchimp-for-wp',
 
 		// Backup
-		'updraftplus', 'backwpup', 'duplicator', 'all-in-one-wp-migration',
+		'updraftplus',
+		'backwpup',
+		'duplicator',
+		'all-in-one-wp-migration',
 
 		// Page Builders
-		'elementor', 'beaver-builder-lite-version', 'siteorigin-panels', 'wp-page-builder',
+		'elementor',
+		'beaver-builder-lite-version',
+		'siteorigin-panels',
+		'wp-page-builder',
 
 		// Media & Gallery
-		'smush', 'envira-gallery-lite', 'nextgen-gallery',
+		'smush',
+		'envira-gallery-lite',
+		'nextgen-gallery',
 
 		// Utilities
-		'classic-editor', 'gutenberg', 'advanced-custom-fields', 'duplicate-post',
-		'really-simple-ssl', 'redirection', 'query-monitor', 'wp-migrate-db',
-		'loco-translate', 'wp-mail-smtp', 'user-role-editor',
+		'classic-editor',
+		'gutenberg',
+		'advanced-custom-fields',
+		'duplicate-post',
+		'really-simple-ssl',
+		'redirection',
+		'query-monitor',
+		'wp-migrate-db',
+		'loco-translate',
+		'wp-mail-smtp',
+		'user-role-editor',
 
 		// Social & Analytics
-		'google-analytics-for-wordpress', 'simple-share-buttons-adder', 'addtoany',
+		'google-analytics-for-wordpress',
+		'simple-share-buttons-adder',
+		'addtoany',
 	);
 
 	/**
 	 * Known malware hashes (MD5).
 	 * TODO: Integrate with abuse.ch/VirusTotal APIs for live updates.
+	 *
 	 * @var array
 	 */
 	private $known_malware_hashes = array(
@@ -98,7 +133,7 @@ class NexifyMy_Security_Reputation_Checker {
 
 		// Check cache
 		$cache_key = 'nexifymy_plugin_rep_' . md5( $plugin_slug );
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 		if ( $cached !== false ) {
 			return $cached;
 		}
@@ -165,8 +200,8 @@ class NexifyMy_Security_Reputation_Checker {
 		}
 
 		// Calculate reputation score
-		$installs = isset( $data['active_installs'] ) ? (int) $data['active_installs'] : 0;
-		$rating = isset( $data['rating'] ) ? (float) $data['rating'] : 0;
+		$installs          = isset( $data['active_installs'] ) ? (int) $data['active_installs'] : 0;
+		$rating            = isset( $data['rating'] ) ? (float) $data['rating'] : 0;
 		$rating_normalized = $rating / 20; // Convert to 0-5 scale
 
 		// Scoring algorithm
@@ -268,7 +303,7 @@ class NexifyMy_Security_Reputation_Checker {
 	 * @return bool
 	 */
 	public function is_allowlisted( $filepath ) {
-		$allowlist = $this->get_allowlist();
+		$allowlist     = $this->get_allowlist();
 		$relative_path = str_replace( ABSPATH, '', $filepath );
 
 		foreach ( $allowlist as $pattern ) {
@@ -298,7 +333,7 @@ class NexifyMy_Security_Reputation_Checker {
 	 * @return bool
 	 */
 	public function is_blocklisted( $filepath ) {
-		$blocklist = $this->get_blocklist();
+		$blocklist     = $this->get_blocklist();
 		$relative_path = str_replace( ABSPATH, '', $filepath );
 
 		foreach ( $blocklist as $pattern ) {
@@ -322,7 +357,7 @@ class NexifyMy_Security_Reputation_Checker {
 	 * @return array
 	 */
 	public function get_allowlist() {
-		$settings = get_option( 'nexifymy_security_settings', array() );
+		$settings  = get_option( 'nexifymy_security_settings', array() );
 		$allowlist = isset( $settings['scanner']['allowlist'] ) ? $settings['scanner']['allowlist'] : array();
 
 		// Ensure it's an array
@@ -339,7 +374,7 @@ class NexifyMy_Security_Reputation_Checker {
 	 * @return array
 	 */
 	public function get_blocklist() {
-		$settings = get_option( 'nexifymy_security_settings', array() );
+		$settings  = get_option( 'nexifymy_security_settings', array() );
 		$blocklist = isset( $settings['scanner']['blocklist'] ) ? $settings['scanner']['blocklist'] : array();
 
 		// Ensure it's an array
@@ -357,11 +392,11 @@ class NexifyMy_Security_Reputation_Checker {
 	 * @param string $malware_name Malware name/description.
 	 */
 	public function add_malware_hash( $hash, $malware_name ) {
-		$custom_hashes = get_option( 'nexifymy_malware_hashes', array() );
+		$custom_hashes          = get_option( 'nexifymy_malware_hashes', array() );
 		$custom_hashes[ $hash ] = array(
-			'name'      => $malware_name,
-			'added_at'  => current_time( 'mysql' ),
-			'added_by'  => get_current_user_id(),
+			'name'     => $malware_name,
+			'added_at' => current_time( 'mysql' ),
+			'added_by' => get_current_user_id(),
 		);
 		update_option( 'nexifymy_malware_hashes', $custom_hashes );
 	}
@@ -403,41 +438,41 @@ class NexifyMy_Security_Reputation_Checker {
 
 		if ( is_wp_error( $checksums ) ) {
 			return array(
-				'is_core_file'  => true,
-				'verified'      => false,
-				'reason'        => 'Could not fetch checksums: ' . $checksums->get_error_message(),
+				'is_core_file' => true,
+				'verified'     => false,
+				'reason'       => 'Could not fetch checksums: ' . $checksums->get_error_message(),
 			);
 		}
 
 		// Check if file is in checksums
 		if ( ! isset( $checksums[ $relative_path ] ) ) {
 			return array(
-				'is_core_file'  => true,
-				'verified'      => false,
-				'reason'        => 'File not in official WordPress checksums',
+				'is_core_file' => true,
+				'verified'     => false,
+				'reason'       => 'File not in official WordPress checksums',
 			);
 		}
 
 		// Verify hash
-		$actual_md5 = md5_file( $filepath );
+		$actual_md5   = md5_file( $filepath );
 		$expected_md5 = $checksums[ $relative_path ];
 
 		if ( $actual_md5 === $expected_md5 ) {
 			return array(
-				'is_core_file'  => true,
-				'verified'      => true,
-				'modifier'      => -100, // Force CLEAN classification
+				'is_core_file'   => true,
+				'verified'       => true,
+				'modifier'       => -100, // Force CLEAN classification
 				'classification' => NexifyMy_Security_Scanner::CLASSIFICATION_CLEAN,
-				'reason'        => 'WordPress core file verified',
+				'reason'         => 'WordPress core file verified',
 			);
 		}
 
 		return array(
-			'is_core_file'  => true,
-			'verified'      => false,
-			'modifier'      => 30, // Increase suspicion significantly
+			'is_core_file'   => true,
+			'verified'       => false,
+			'modifier'       => 30, // Increase suspicion significantly
 			'classification' => NexifyMy_Security_Scanner::CLASSIFICATION_SUSPICIOUS_CODE,
-			'reason'        => 'WordPress core file MODIFIED - checksum mismatch!',
+			'reason'         => 'WordPress core file MODIFIED - checksum mismatch!',
 		);
 	}
 
@@ -470,14 +505,14 @@ class NexifyMy_Security_Reputation_Checker {
 	 */
 	private function get_core_checksums( $version ) {
 		$cache_key = 'nexifymy_core_checksums_' . $version;
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 
 		if ( $cached !== false ) {
 			return $cached;
 		}
 
 		$locale = get_locale();
-		$url = sprintf(
+		$url    = sprintf(
 			'https://api.wordpress.org/core/checksums/1.0/?version=%s&locale=%s',
 			$version,
 			$locale

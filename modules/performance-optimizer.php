@@ -19,17 +19,17 @@ class NexifyMy_Security_Performance {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'              => true,
-		'smart_caching'        => true,
-		'cache_ttl'            => 3600,        // 1 hour default.
-		'throttle_scans'       => true,
-		'max_scan_time'        => 30,          // Max seconds per scan batch.
-		'max_memory_percent'   => 50,          // Max % of available memory to use.
-		'defer_heavy_tasks'    => true,        // Defer to off-peak hours.
-		'off_peak_start'       => 2,           // 2 AM.
-		'off_peak_end'         => 6,           // 6 AM.
-		'lazy_load_modules'    => true,
-		'optimize_db_queries'  => true,
+		'enabled'             => true,
+		'smart_caching'       => true,
+		'cache_ttl'           => 3600,        // 1 hour default.
+		'throttle_scans'      => true,
+		'max_scan_time'       => 30,          // Max seconds per scan batch.
+		'max_memory_percent'  => 50,          // Max % of available memory to use.
+		'defer_heavy_tasks'   => true,        // Defer to off-peak hours.
+		'off_peak_start'      => 2,           // 2 AM.
+		'off_peak_end'        => 6,           // 6 AM.
+		'lazy_load_modules'   => true,
+		'optimize_db_queries' => true,
 	);
 
 	/**
@@ -51,7 +51,7 @@ class NexifyMy_Security_Performance {
 	 * Initialize the module.
 	 */
 	public function init() {
-		$this->start_time = microtime( true );
+		$this->start_time   = microtime( true );
 		$this->start_memory = memory_get_usage();
 
 		$settings = $this->get_settings();
@@ -109,7 +109,7 @@ class NexifyMy_Security_Performance {
 		}
 
 		$cache_key = self::CACHE_PREFIX . md5( $key );
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
 			return $cached;
@@ -134,7 +134,7 @@ class NexifyMy_Security_Performance {
 		}
 
 		// Check memory usage.
-		$memory_limit = $this->get_memory_limit();
+		$memory_limit   = $this->get_memory_limit();
 		$current_memory = memory_get_usage( true );
 		$memory_percent = ( $current_memory / $memory_limit ) * 100;
 
@@ -156,7 +156,7 @@ class NexifyMy_Security_Performance {
 	 * @return bool
 	 */
 	public function is_off_peak() {
-		$settings = $this->get_settings();
+		$settings     = $this->get_settings();
 		$current_hour = (int) current_time( 'G' );
 
 		return $current_hour >= $settings['off_peak_start'] && $current_hour < $settings['off_peak_end'];
@@ -170,7 +170,7 @@ class NexifyMy_Security_Performance {
 	private function is_high_traffic_period() {
 		// Business hours heuristic (9 AM - 6 PM weekdays).
 		$current_hour = (int) current_time( 'G' );
-		$day_of_week = (int) current_time( 'w' );
+		$day_of_week  = (int) current_time( 'w' );
 
 		// Weekdays 9-18.
 		if ( $day_of_week >= 1 && $day_of_week <= 5 ) {
@@ -218,11 +218,11 @@ class NexifyMy_Security_Performance {
 	 * @return array Results.
 	 */
 	public function process_in_batches( $items, $processor, $batch_size = 50 ) {
-		$settings = $this->get_settings();
-		$results = array();
+		$settings   = $this->get_settings();
+		$results    = array();
 		$start_time = microtime( true );
-		$max_time = $settings['max_scan_time'];
-		$processed = 0;
+		$max_time   = $settings['max_scan_time'];
+		$processed  = 0;
 
 		foreach ( $items as $item ) {
 			// Check time limit.
@@ -246,7 +246,7 @@ class NexifyMy_Security_Performance {
 				$results[] = $result;
 			}
 
-			$processed++;
+			++$processed;
 
 			// Yield CPU every batch.
 			if ( $processed % $batch_size === 0 ) {
@@ -267,10 +267,18 @@ class NexifyMy_Security_Performance {
 	public function cached_ip_check( $ip, $check_type ) {
 		$key = "ip_{$check_type}_{$ip}";
 
-		return $this->cache_get_or_set( $key, function() use ( $ip, $check_type ) {
-			// Placeholder for actual check.
-			return array( 'ip' => $ip, 'type' => $check_type, 'checked' => time() );
-		}, 3600 );
+		return $this->cache_get_or_set(
+			$key,
+			function () use ( $ip, $check_type ) {
+				// Placeholder for actual check.
+				return array(
+					'ip'      => $ip,
+					'type'    => $check_type,
+					'checked' => time(),
+				);
+			},
+			3600
+		);
 	}
 
 	/**
@@ -365,21 +373,24 @@ class NexifyMy_Security_Performance {
 		}
 
 		$execution_time = microtime( true ) - $this->start_time;
-		$memory_used = memory_get_peak_usage() - $this->start_memory;
+		$memory_used    = memory_get_peak_usage() - $this->start_memory;
 
 		// Store rolling average.
-		$stats = get_option( self::STATS_OPTION, array(
-			'requests_tracked' => 0,
-			'avg_time_ms'      => 0,
-			'avg_memory_kb'    => 0,
-			'last_updated'     => '',
-		) );
+		$stats = get_option(
+			self::STATS_OPTION,
+			array(
+				'requests_tracked' => 0,
+				'avg_time_ms'      => 0,
+				'avg_memory_kb'    => 0,
+				'last_updated'     => '',
+			)
+		);
 
-		$count = $stats['requests_tracked'] + 1;
-		$stats['avg_time_ms'] = ( ( $stats['avg_time_ms'] * $stats['requests_tracked'] ) + ( $execution_time * 1000 ) ) / $count;
-		$stats['avg_memory_kb'] = ( ( $stats['avg_memory_kb'] * $stats['requests_tracked'] ) + ( $memory_used / 1024 ) ) / $count;
+		$count                     = $stats['requests_tracked'] + 1;
+		$stats['avg_time_ms']      = ( ( $stats['avg_time_ms'] * $stats['requests_tracked'] ) + ( $execution_time * 1000 ) ) / $count;
+		$stats['avg_memory_kb']    = ( ( $stats['avg_memory_kb'] * $stats['requests_tracked'] ) + ( $memory_used / 1024 ) ) / $count;
 		$stats['requests_tracked'] = min( $count, 1000 ); // Cap at 1000 for accuracy.
-		$stats['last_updated'] = current_time( 'mysql' );
+		$stats['last_updated']     = current_time( 'mysql' );
 
 		update_option( self::STATS_OPTION, $stats, false );
 	}
@@ -393,14 +404,14 @@ class NexifyMy_Security_Performance {
 		$results = array();
 
 		// 1. Clear old caches.
-		$cleared = $this->clear_all_caches();
+		$cleared                   = $this->clear_all_caches();
 		$results['caches_cleared'] = $cleared;
 
 		// 2. Clean up old logs (keep last 7 days).
 		global $wpdb;
 		$table = $wpdb->prefix . 'nexifymy_security_logs';
 		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) === $table ) {
-			$deleted = $wpdb->query(
+			$deleted                     = $wpdb->query(
 				"DELETE FROM {$table} WHERE created_at < DATE_SUB(NOW(), INTERVAL 7 DAY)"
 			);
 			$results['old_logs_deleted'] = $deleted;
@@ -409,7 +420,7 @@ class NexifyMy_Security_Performance {
 		// 3. Clean up old traffic data.
 		$traffic_table = $wpdb->prefix . 'nexifymy_traffic_log';
 		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$traffic_table}'" ) === $traffic_table ) {
-			$deleted = $wpdb->query(
+			$deleted                        = $wpdb->query(
 				"DELETE FROM {$traffic_table} WHERE timestamp < DATE_SUB(NOW(), INTERVAL 3 DAY)"
 			);
 			$results['old_traffic_deleted'] = $deleted;
@@ -463,10 +474,12 @@ class NexifyMy_Security_Performance {
 		}
 
 		$count = $this->clear_all_caches();
-		wp_send_json_success( array(
-			'message' => sprintf( 'Cleared %d cache entries.', $count ),
-			'cleared' => $count,
-		) );
+		wp_send_json_success(
+			array(
+				'message' => sprintf( 'Cleared %d cache entries.', $count ),
+				'cleared' => $count,
+			)
+		);
 	}
 
 	/**

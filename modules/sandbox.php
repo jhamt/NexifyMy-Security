@@ -882,7 +882,7 @@ class NexifyMy_Security_Sandbox {
 		);
 
 		// Also allow the server's public IP hitting itself.
-		$additional_server_ip = isset( $_SERVER['SERVER_ADDR'] ) ? $_SERVER['SERVER_ADDR'] : '';
+		$additional_server_ip = isset( $_SERVER['SERVER_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['SERVER_ADDR'] ) ) : '';
 		if ( ! empty( $additional_server_ip ) ) {
 			$allowed_ips[] = $additional_server_ip;
 		}
@@ -1830,7 +1830,7 @@ class NexifyMy_Security_Sandbox {
 		$server_key = 'HTTP_' . strtoupper( str_replace( '-', '_', $name ) );
 
 		if ( ! empty( $_SERVER[ $server_key ] ) ) {
-			return sanitize_text_field( $_SERVER[ $server_key ] );
+			return sanitize_text_field( wp_unslash( $_SERVER[ $server_key ] ) );
 		}
 
 		// Try getallheaders() for Nginx with FastCGI.
@@ -1888,7 +1888,7 @@ class NexifyMy_Security_Sandbox {
 	private static function get_server_ip(): string {
 
 		if ( ! empty( $_SERVER['SERVER_ADDR'] ) ) {
-			return $_SERVER['SERVER_ADDR'];
+			return sanitize_text_field( wp_unslash( $_SERVER['SERVER_ADDR'] ) );
 		}
 
 		$host = wp_parse_url( home_url(), PHP_URL_HOST );

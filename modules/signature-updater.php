@@ -72,7 +72,7 @@ class NexifyMy_Security_Signature_Updater {
 		add_action( 'nexifymy_update_signatures', array( $this, 'update_signatures' ) );
 
 		// Auto-update scheduling
-		$settings = $this->get_settings();
+		$settings    = $this->get_settings();
 		$auto_update = isset( $settings['auto_update'] ) ? $settings['auto_update'] : true;
 
 		if ( $auto_update ) {
@@ -172,7 +172,7 @@ class NexifyMy_Security_Signature_Updater {
 				'context_rules'   => array(
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 15,
-						'/uploads\//' => 10,
+						'/uploads\//'             => 10,
 					),
 				),
 			),
@@ -186,15 +186,15 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 50,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/WP_CLI::/' => -100,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/WP_CLI::/'                      => -100,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
@@ -208,15 +208,15 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 50,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/WP_CLI::/' => -100,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/WP_CLI::/'                      => -100,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
@@ -230,14 +230,14 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 50,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
@@ -251,14 +251,14 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 50,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/wp-cli/' => -40,
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/wp-cli/'                        => -40,
+						'/vendor/'                        => -30,
 						'/escapeshellarg|escapeshellcmd/' => -25,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
@@ -272,13 +272,13 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 50,
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/wp-cli/' => -40,
 						'/vendor/' => -30,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/uploads\//' => 40,
+						'/uploads\//'             => 40,
 					),
 				),
 			),
@@ -309,7 +309,7 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'SUSPICIOUS_CODE',
 				'base_confidence' => 60,
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/vendor/' => -30,
 					),
 					'dangerous_contexts' => array(
@@ -329,7 +329,7 @@ class NexifyMy_Security_Signature_Updater {
 				'context_rules'   => array(
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 30,
-						'/uploads\//' => 25,
+						'/uploads\//'             => 25,
 					),
 				),
 			),
@@ -343,8 +343,8 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 45,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/vendor/' => -30,
+					'safe_contexts'      => array(
+						'/vendor/'   => -30,
 						'/tests?\//' => -40,
 					),
 					'dangerous_contexts' => array(
@@ -372,14 +372,14 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'dynamic',
 				'base_confidence' => 40,
 				'context_rules'   => array(
-					'safe_contexts' => array(
-						'/vendor/' => -25,
+					'safe_contexts'      => array(
+						'/vendor/'        => -25,
 						'/WP_Filesystem/' => -35,
 					),
 					'dangerous_contexts' => array(
 						'/\$_(GET|POST|REQUEST)/' => 35,
-						'/\.php[\'"]/' => 30,
-						'/uploads\//' => 25,
+						'/\.php[\'"]/'            => 30,
+						'/uploads\//'             => 25,
 					),
 				),
 			),
@@ -438,7 +438,7 @@ class NexifyMy_Security_Signature_Updater {
 				'classification'  => 'CODE_SMELL',
 				'base_confidence' => 35,
 				'context_rules'   => array(
-					'safe_contexts' => array(
+					'safe_contexts'      => array(
 						'/vendor/' => -25,
 					),
 					'dangerous_contexts' => array(
@@ -811,15 +811,18 @@ class NexifyMy_Security_Signature_Updater {
 	 * @return array|WP_Error Vulnerability data or error.
 	 */
 	public function fetch_wordfence_vulnerabilities() {
-		$response = wp_remote_get( self::WORDFENCE_SCANNER_API, array(
-			'timeout'   => 60, // Large response needs more time
-			'sslverify' => true,
-			'headers'   => array(
-				'Accept'          => 'application/json',
-				'Accept-Encoding' => 'gzip, deflate',
-				'User-Agent'      => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION . ' (WordPress Security Plugin)',
-			),
-		) );
+		$response = wp_remote_get(
+			self::WORDFENCE_SCANNER_API,
+			array(
+				'timeout'   => 60, // Large response needs more time
+				'sslverify' => true,
+				'headers'   => array(
+					'Accept'          => 'application/json',
+					'Accept-Encoding' => 'gzip, deflate',
+					'User-Agent'      => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION . ' (WordPress Security Plugin)',
+				),
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -854,14 +857,17 @@ class NexifyMy_Security_Signature_Updater {
 	 * @return array|WP_Error Pattern array or error.
 	 */
 	public function fetch_malware_patterns() {
-		$response = wp_remote_get( self::MALWARE_PATTERNS_URL, array(
-			'timeout'   => 30,
-			'sslverify' => true,
-			'headers'   => array(
-				'Accept'     => 'text/plain',
-				'User-Agent' => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION,
-			),
-		) );
+		$response = wp_remote_get(
+			self::MALWARE_PATTERNS_URL,
+			array(
+				'timeout'   => 30,
+				'sslverify' => true,
+				'headers'   => array(
+					'Accept'     => 'text/plain',
+					'User-Agent' => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION,
+				),
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -878,9 +884,9 @@ class NexifyMy_Security_Signature_Updater {
 		}
 
 		// Parse the patterns file (one regex per line)
-		$lines = explode( "\n", $body );
+		$lines    = explode( "\n", $body );
 		$patterns = array();
-		$count = 0;
+		$count    = 0;
 
 		foreach ( $lines as $line ) {
 			$line = trim( $line );
@@ -912,7 +918,7 @@ class NexifyMy_Security_Signature_Updater {
 				'category'    => 'community_malware',
 				'source'      => 'php-malware-scanner',
 			);
-			$count++;
+			++$count;
 		}
 
 		return $patterns;
@@ -926,7 +932,7 @@ class NexifyMy_Security_Signature_Updater {
 	 */
 	private function guess_pattern_severity( $pattern ) {
 		$critical_indicators = array( 'eval', 'exec', 'shell', 'passthru', 'system', 'base64_decode', 'proc_open' );
-		$high_indicators = array( 'file_put_contents', 'fwrite', 'curl', 'fsockopen', 'popen' );
+		$high_indicators     = array( 'file_put_contents', 'fwrite', 'curl', 'fsockopen', 'popen' );
 
 		$pattern_lower = strtolower( $pattern );
 
@@ -955,14 +961,14 @@ class NexifyMy_Security_Signature_Updater {
 		$this->define_builtin_patterns();
 
 		$result = array(
-			'updated_at'           => current_time( 'mysql' ),
-			'sources'              => array(),
-			'builtin_count'        => count( $this->builtin_patterns ),
-			'vulnerability_count'  => 0,
+			'updated_at'            => current_time( 'mysql' ),
+			'sources'               => array(),
+			'builtin_count'         => count( $this->builtin_patterns ),
+			'vulnerability_count'   => 0,
 			'malware_pattern_count' => 0,
-			'total_signatures'     => count( $this->builtin_patterns ),
-			'success'              => false,
-			'errors'               => array(),
+			'total_signatures'      => count( $this->builtin_patterns ),
+			'success'               => false,
+			'errors'                => array(),
 		);
 
 		$all_patterns = $this->builtin_patterns;
@@ -973,17 +979,21 @@ class NexifyMy_Security_Signature_Updater {
 			$result['errors']['wordfence'] = $wordfence_data->get_error_message();
 		} else {
 			// Process Wordfence data - root is object with UUID keys
-			$vuln_data = $this->process_wordfence_data( $wordfence_data );
+			$vuln_data                     = $this->process_wordfence_data( $wordfence_data );
 			$result['vulnerability_count'] = count( $vuln_data['vulnerabilities'] );
-			$result['sources'][] = 'wordfence_intelligence';
+			$result['sources'][]           = 'wordfence_intelligence';
 
 			// Store vulnerability data separately (for version checking)
-			update_option( self::VULN_OPTION, array(
-				'count'      => count( $vuln_data['vulnerabilities'] ),
-				'updated_at' => current_time( 'mysql' ),
-				'plugins'    => $vuln_data['affected_plugins'],
-				'themes'     => $vuln_data['affected_themes'],
-			), false );
+			update_option(
+				self::VULN_OPTION,
+				array(
+					'count'      => count( $vuln_data['vulnerabilities'] ),
+					'updated_at' => current_time( 'mysql' ),
+					'plugins'    => $vuln_data['affected_plugins'],
+					'themes'     => $vuln_data['affected_themes'],
+				),
+				false
+			);
 
 			// Add vulnerability-based patterns
 			$all_patterns = array_merge( $all_patterns, $vuln_data['patterns'] );
@@ -995,13 +1005,13 @@ class NexifyMy_Security_Signature_Updater {
 			$result['errors']['malware_patterns'] = $malware_patterns->get_error_message();
 		} else {
 			$result['malware_pattern_count'] = count( $malware_patterns );
-			$result['sources'][] = 'php_malware_finder';
-			$all_patterns = array_merge( $all_patterns, $malware_patterns );
+			$result['sources'][]             = 'php_malware_finder';
+			$all_patterns                    = array_merge( $all_patterns, $malware_patterns );
 		}
 
 		// ── Store Combined Results ──
 		$result['total_signatures'] = count( $all_patterns );
-		$result['success'] = ! empty( $result['sources'] ) || count( $this->builtin_patterns ) > 0;
+		$result['success']          = ! empty( $result['sources'] ) || count( $this->builtin_patterns ) > 0;
 
 		// Store signatures
 		$this->store_signatures( $all_patterns );
@@ -1095,21 +1105,21 @@ class NexifyMy_Security_Signature_Updater {
 				// Create detection pattern for version checking
 				// This helps scanner identify vulnerable versions
 				$result['patterns'][] = array(
-					'id'          => 'vuln_' . $slug . '_' . substr( $uuid, 0, 8 ),
-					'severity'    => $severity,
-					'title'       => $vuln['title'] ?? 'Vulnerable Software',
-					'description' => sprintf(
+					'id'            => 'vuln_' . $slug . '_' . substr( $uuid, 0, 8 ),
+					'severity'      => $severity,
+					'title'         => $vuln['title'] ?? 'Vulnerable Software',
+					'description'   => sprintf(
 						'%s %s - Affected versions: %s',
 						ucfirst( $type ),
 						$slug,
 						$software['affected_versions'] ?? 'unknown'
 					),
-					'type'        => 'vulnerability',
-					'software'    => $slug,
+					'type'          => 'vulnerability',
+					'software'      => $slug,
 					'software_type' => $type,
-					'affected'    => $software['affected_versions'] ?? '*',
-					'patched'     => $software['patched_versions'] ?? null,
-					'cve'         => isset( $vuln['cve'] ) ? $vuln['cve'] : null,
+					'affected'      => $software['affected_versions'] ?? '*',
+					'patched'       => $software['patched_versions'] ?? null,
+					'cve'           => isset( $vuln['cve'] ) ? $vuln['cve'] : null,
 				);
 			}
 		}
@@ -1205,7 +1215,7 @@ class NexifyMy_Security_Signature_Updater {
 	 */
 	public function get_scan_patterns( $severity_filter = array( 'critical', 'high', 'medium', 'low' ) ) {
 		$signatures = $this->get_signatures();
-		$patterns = array();
+		$patterns   = array();
 
 		foreach ( $signatures as $sig ) {
 			// Skip if no pattern (vulnerability-type entries).
@@ -1235,8 +1245,8 @@ class NexifyMy_Security_Signature_Updater {
 	 */
 	public function get_status() {
 		$last_update = get_option( self::LAST_UPDATE_OPTION, array() );
-		$vuln_data = get_option( self::VULN_OPTION, array() );
-		$signatures = $this->get_signatures();
+		$vuln_data   = get_option( self::VULN_OPTION, array() );
+		$signatures  = $this->get_signatures();
 
 		// Count by severity
 		$by_severity = array(
@@ -1248,24 +1258,24 @@ class NexifyMy_Security_Signature_Updater {
 
 		// Count by category
 		$by_category = array(
-			'malware'        => 0,
-			'vulnerability'  => 0,
-			'community'      => 0,
+			'malware'       => 0,
+			'vulnerability' => 0,
+			'community'     => 0,
 		);
 
 		foreach ( $signatures as $sig ) {
 			$sev = isset( $sig['severity'] ) ? $sig['severity'] : 'low';
 			if ( isset( $by_severity[ $sev ] ) ) {
-				$by_severity[ $sev ]++;
+				++$by_severity[ $sev ];
 			}
 
 			// Categorize
 			if ( isset( $sig['type'] ) && $sig['type'] === 'vulnerability' ) {
-				$by_category['vulnerability']++;
+				++$by_category['vulnerability'];
 			} elseif ( isset( $sig['source'] ) && $sig['source'] === 'php-malware-finder' ) {
-				$by_category['community']++;
+				++$by_category['community'];
 			} else {
-				$by_category['malware']++;
+				++$by_category['malware'];
 			}
 		}
 
@@ -1308,16 +1318,16 @@ class NexifyMy_Security_Signature_Updater {
 
 		// Format response for UI
 		$response = array(
-			'success'              => $result['success'],
-			'total_count'          => $result['total_signatures'],
-			'builtin_count'        => $result['builtin_count'],
-			'vulnerability_count'  => $result['vulnerability_count'],
+			'success'               => $result['success'],
+			'total_count'           => $result['total_signatures'],
+			'builtin_count'         => $result['builtin_count'],
+			'vulnerability_count'   => $result['vulnerability_count'],
 			'malware_pattern_count' => $result['malware_pattern_count'],
-			'sources'              => $result['sources'],
-			'updated_at'           => $result['updated_at'],
-			'version'              => get_option( 'nexifymy_signature_version', '1.0.0' ),
-			'errors'               => $result['errors'],
-			'message'              => $this->format_update_message( $result ),
+			'sources'               => $result['sources'],
+			'updated_at'            => $result['updated_at'],
+			'version'               => get_option( 'nexifymy_signature_version', '1.0.0' ),
+			'errors'                => $result['errors'],
+			'message'               => $this->format_update_message( $result ),
 		);
 
 		wp_send_json_success( $response );

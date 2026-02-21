@@ -189,7 +189,7 @@ class NexifyMy_Security_Consent_Management {
 			)
 		);
 
-		$cookie_name            = 'nexifymy_consent_' . $consent_type;
+		$cookie_name             = 'nexifymy_consent_' . $consent_type;
 		$_COOKIE[ $cookie_name ] = '1';
 		if ( ! headers_sent() ) {
 			$cookie_path = defined( 'COOKIEPATH' ) && COOKIEPATH ? COOKIEPATH : '/';
@@ -259,7 +259,7 @@ class NexifyMy_Security_Consent_Management {
 				AND withdrawn_at IS NULL"
 		);
 
-		$cookie_name            = 'nexifymy_consent_' . $consent_type;
+		$cookie_name             = 'nexifymy_consent_' . $consent_type;
 		$_COOKIE[ $cookie_name ] = '0';
 		if ( ! headers_sent() ) {
 			$cookie_path = defined( 'COOKIEPATH' ) && COOKIEPATH ? COOKIEPATH : '/';
@@ -629,9 +629,9 @@ class NexifyMy_Security_Consent_Management {
 	 */
 	private function get_client_ip() {
 		$candidates = array(
-			$_SERVER['HTTP_CF_CONNECTING_IP'] ?? '',
-			$_SERVER['HTTP_X_FORWARDED_FOR'] ?? '',
-			$_SERVER['REMOTE_ADDR'] ?? '',
+			isset( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) : '',
+			isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) : '',
+			isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
 		);
 
 		foreach ( $candidates as $value ) {
@@ -659,7 +659,7 @@ class NexifyMy_Security_Consent_Management {
 		$key    = 'nexifymy_consent_rl_' . md5( $ip_address );
 		$bucket = get_transient( $key );
 		$count  = is_array( $bucket ) ? absint( $bucket['count'] ?? 0 ) : 0;
-		$count++;
+		++$count;
 
 		if ( $count > self::RATE_LIMIT_MAX_REQUESTS ) {
 			return false;
@@ -682,6 +682,6 @@ class NexifyMy_Security_Consent_Management {
 	 * @return string
 	 */
 	private function get_user_agent() {
-		return sanitize_text_field( $_SERVER['HTTP_USER_AGENT'] ?? '' );
+		return isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '';
 	}
 }

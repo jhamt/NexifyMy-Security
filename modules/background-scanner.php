@@ -224,7 +224,7 @@ class NexifyMy_Security_Background_Scanner {
 			wp_send_json_error( 'Background scanning is disabled in settings.' );
 		}
 
-		$frequency = isset( $_POST['frequency'] ) ? sanitize_key( $_POST['frequency'] ) : 'daily';
+		$frequency = isset( $_POST['frequency'] ) ? sanitize_key( wp_unslash( $_POST['frequency'] ) ) : 'daily';
 		$available = array_keys( self::get_available_schedules() );
 
 		if ( ! in_array( $frequency, $available, true ) ) {

@@ -736,7 +736,7 @@ class NexifyMy_Security_AI_Threat_Detection {
 	private function record_behavior( $request_data, $analysis ) {
 		global $wpdb;
 
-		$wpdb->insert(
+		$result = $wpdb->insert(
 			$this->behavior_table,
 			array(
 				'ip_address'     => $request_data['ip'],
@@ -753,6 +753,20 @@ class NexifyMy_Security_AI_Threat_Detection {
 			),
 			array( '%s', '%d', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%s' )
 		);
+
+		if ( false === $result && class_exists( 'NexifyMy_Security_Logger' ) ) {
+			$db_error = isset( $wpdb->last_error ) ? (string) $wpdb->last_error : '';
+			$message  = 'Failed to record AI behavior.';
+			if ( '' !== $db_error ) {
+				$message .= ' Database error: ' . $db_error;
+			}
+
+			NexifyMy_Security_Logger::log(
+				'ai_record_error',
+				$message,
+				'warning'
+			);
+		}
 	}
 
 	/**
@@ -860,38 +874,130 @@ class NexifyMy_Security_AI_Threat_Detection {
 	public function learn_patterns() {
 		global $wpdb;
 
-		$patterns = array();
+		$settings      = $this->get_settings();
+		$learning_days = max( 1, absint( $settings['learning_period_days'] ?? 7 ) );
+
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$total_records = (int) $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT COUNT(*) FROM {$this->behavior_table}
+			WHERE created_at > DATE_SUB(NOW(), INTERVAL %d DAY)",
+				$learning_days
+			)
+		);
+
+		$minimum_samples = 1;
+		if ( $total_records >= 30 ) {
+			$minimum_samples = 3;
+		} elseif ( $total_records >= 10 ) {
+			$minimum_samples = 2;
+		}
+
+		$patterns = array(
+			'sample_size'    => $total_records,
+			'learning_days'  => $learning_days,
+		);
 
 		// Learn peak hours.
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 		$peak_hours             = $wpdb->get_col(
-			"SELECT hour_of_day FROM {$this->behavior_table}
-			WHERE threat_score < 30 AND created_at > DATE_SUB(NOW(), INTERVAL 7 DAY)
+			$wpdb->prepare(
+				"SELECT hour_of_day FROM {$this->behavior_table}
+			WHERE threat_score < %d AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
 			GROUP BY hour_of_day
-			HAVING COUNT(*) > 10
+			HAVING COUNT(*) >= %d
 			ORDER BY COUNT(*) DESC
-			LIMIT 12"
+			LIMIT %d",
+				30,
+				$learning_days,
+				$minimum_samples,
+				12
+			)
 		);
+
+		if ( empty( $peak_hours ) && $total_records > 0 ) {
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$peak_hours = $wpdb->get_col(
+				$wpdb->prepare(
+					"SELECT hour_of_day FROM {$this->behavior_table}
+				WHERE threat_score < %d AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
+				GROUP BY hour_of_day
+				ORDER BY COUNT(*) DESC
+				LIMIT %d",
+					30,
+					$learning_days,
+					6
+				)
+			);
+		}
 		$patterns['peak_hours'] = array_map( 'intval', $peak_hours );
 
 		// Learn known countries.
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 		$countries                   = $wpdb->get_col(
-			"SELECT country_code FROM {$this->behavior_table}
-			WHERE threat_score < 30 AND country_code != ''
-			AND created_at > DATE_SUB(NOW(), INTERVAL 7 DAY)
+			$wpdb->prepare(
+				"SELECT country_code FROM {$this->behavior_table}
+			WHERE threat_score < %d AND country_code != ''
+			AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
 			GROUP BY country_code
-			HAVING COUNT(*) > 5"
+			HAVING COUNT(*) >= %d",
+				30,
+				$learning_days,
+				$minimum_samples
+			)
 		);
+
+		if ( empty( $countries ) && $total_records > 0 ) {
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$countries = $wpdb->get_col(
+				$wpdb->prepare(
+					"SELECT country_code FROM {$this->behavior_table}
+				WHERE threat_score < %d AND country_code != ''
+				AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
+				GROUP BY country_code
+				ORDER BY COUNT(*) DESC
+				LIMIT %d",
+					30,
+					$learning_days,
+					10
+				)
+			);
+		}
 		$patterns['known_countries'] = $countries;
 
 		// Learn common user agents.
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 		$user_agents                   = $wpdb->get_col(
-			"SELECT SUBSTRING(user_agent, 1, 50) as ua_prefix FROM {$this->behavior_table}
-			WHERE threat_score < 30 AND user_agent != ''
-			AND created_at > DATE_SUB(NOW(), INTERVAL 7 DAY)
+			$wpdb->prepare(
+				"SELECT SUBSTRING(user_agent, 1, 50) as ua_prefix FROM {$this->behavior_table}
+			WHERE threat_score < %d AND user_agent != ''
+			AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
 			GROUP BY ua_prefix
-			HAVING COUNT(*) > 5
-			LIMIT 50"
+			HAVING COUNT(*) >= %d
+			LIMIT %d",
+				30,
+				$learning_days,
+				max( 1, $minimum_samples - 1 ),
+				50
+			)
 		);
+
+		if ( empty( $user_agents ) && $total_records > 0 ) {
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$user_agents = $wpdb->get_col(
+				$wpdb->prepare(
+					"SELECT SUBSTRING(user_agent, 1, 50) as ua_prefix FROM {$this->behavior_table}
+				WHERE threat_score < %d AND user_agent != ''
+				AND created_at > DATE_SUB(NOW(), INTERVAL %d DAY)
+				GROUP BY ua_prefix
+				ORDER BY COUNT(*) DESC
+				LIMIT %d",
+					30,
+					$learning_days,
+					20
+				)
+			);
+		}
 		$patterns['known_user_agents'] = $user_agents;
 
 		// Store patterns.
@@ -1091,23 +1197,55 @@ class NexifyMy_Security_AI_Threat_Detection {
 	public function get_status() {
 		global $wpdb;
 
-		$patterns = $this->get_learned_patterns();
-		$threats  = get_option( self::THREATS_OPTION, array() );
-
 		// Count behavior records.
-		$total_records = $wpdb->get_var( "SELECT COUNT(*) FROM {$this->behavior_table}" );
-		$threats_today = $wpdb->get_var(
-			"SELECT COUNT(*) FROM {$this->behavior_table}
-			WHERE threat_score >= 75 AND created_at > DATE_SUB(NOW(), INTERVAL 24 HOUR)"
+		$total_records = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$this->behavior_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$patterns      = $this->get_learned_patterns();
+
+		$last_learned_timestamp = ! empty( $patterns['last_learned'] ) ? strtotime( (string) $patterns['last_learned'] ) : false;
+		$pattern_is_stale       = ! $last_learned_timestamp || $last_learned_timestamp < ( time() - 3600 );
+		$has_core_patterns      = ! empty( $patterns['peak_hours'] ) || ! empty( $patterns['known_countries'] ) || ! empty( $patterns['known_user_agents'] );
+
+		// Re-learn patterns on demand so status is not blocked on WP-Cron timing.
+		if ( $total_records > 0 && ( $pattern_is_stale || ! $has_core_patterns ) ) {
+			$this->learn_patterns();
+			$patterns          = $this->get_learned_patterns();
+			$has_core_patterns = ! empty( $patterns['peak_hours'] ) || ! empty( $patterns['known_countries'] ) || ! empty( $patterns['known_user_agents'] );
+		}
+
+		$settings          = $this->get_settings();
+		$anomaly_threshold = max( 0, min( 100, absint( $settings['anomaly_threshold'] ?? 75 ) ) );
+		$threats_today_db = (int) $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT COUNT(*) FROM {$this->behavior_table}
+			WHERE threat_score >= %d AND created_at > DATE_SUB(NOW(), INTERVAL 24 HOUR)",
+				$anomaly_threshold
+			)
 		);
+		$threats          = get_option( self::THREATS_OPTION, array() );
+		$threats          = is_array( $threats ) ? $threats : array();
+		$threats_today_ui = 0;
+		$cutoff_timestamp = time() - 86400;
+		foreach ( $threats as $threat ) {
+			$raw_time = $threat['blocked_at'] ?? ( $threat['flagged_at'] ?? '' );
+			if ( empty( $raw_time ) ) {
+				continue;
+			}
+
+			$threat_timestamp = strtotime( (string) $raw_time );
+			if ( false !== $threat_timestamp && $threat_timestamp >= $cutoff_timestamp ) {
+				++$threats_today_ui;
+			}
+		}
+
+		$threats_today = max( $threats_today_db, $threats_today_ui );
 
 		return array(
-			'learning_status' => empty( $patterns ) ? 'learning' : 'trained',
+			'learning_status' => ( $has_core_patterns || ( ! empty( $patterns['last_learned'] ) && $total_records >= 10 ) ) ? 'trained' : 'learning',
 			'last_learned'    => $patterns['last_learned'] ?? null,
-			'total_records'   => (int) $total_records,
+			'total_records'   => $total_records,
 			'known_countries' => count( $patterns['known_countries'] ?? array() ),
 			'peak_hours'      => $patterns['peak_hours'] ?? array(),
-			'threats_today'   => (int) $threats_today,
+			'threats_today'   => $threats_today,
 			'recent_threats'  => array_slice( array_reverse( $threats ), 0, 10 ),
 		);
 	}
@@ -1144,7 +1282,7 @@ class NexifyMy_Security_AI_Threat_Detection {
 
 		delete_option( self::PATTERNS_OPTION );
 		global $wpdb;
-		$wpdb->query( "TRUNCATE TABLE {$this->behavior_table}" );
+		$wpdb->query( "TRUNCATE TABLE {$this->behavior_table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		wp_send_json_success( array( 'message' => 'AI learning reset successfully.' ) );
 	}
@@ -1688,9 +1826,8 @@ class NexifyMy_Security_AI_Threat_Detection {
 
 			// Request passkey/2FA challenge via passkey module if available.
 			$passkey_module = isset( $GLOBALS['nexifymy_passkey'] ) ? $GLOBALS['nexifymy_passkey'] : null;
-			if ( $passkey_module && method_exists( $passkey_module, 'get_user_credentials' ) ) {
-				$credentials = $passkey_module->get_user_credentials( $user_id );
-				if ( ! empty( $credentials ) ) {
+			if ( $passkey_module && method_exists( $passkey_module, 'user_has_credentials' ) ) {
+				if ( $passkey_module->user_has_credentials( $user_id ) ) {
 					// User has passkeys registered — force re-auth will present passkey challenge.
 					update_user_meta( $user_id, '_nexifymy_require_passkey_challenge', 1 );
 				}

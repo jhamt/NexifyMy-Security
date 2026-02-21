@@ -14,14 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class NexifyMy_Security_Predictive_Threat_Hunting {
 
-	const SCHEMA_OPTION = 'nexifymy_predictive_schema_version';
-	const SCHEMA_VERSION = '1.0.0';
-	const TABLE_SUFFIX = 'nexifymy_threat_predictions';
-	const PROFILE_OPTION = 'nexifymy_threat_site_profile';
-	const FORECAST_OPTION = 'nexifymy_threat_forecast';
+	const SCHEMA_OPTION             = 'nexifymy_predictive_schema_version';
+	const SCHEMA_VERSION            = '1.0.0';
+	const TABLE_SUFFIX              = 'nexifymy_threat_predictions';
+	const PROFILE_OPTION            = 'nexifymy_threat_site_profile';
+	const FORECAST_OPTION           = 'nexifymy_threat_forecast';
 	const SIMULATION_REPORTS_OPTION = 'nexifymy_attack_simulation_reports';
-	const FORECAST_CRON_HOOK = 'nexifymy_update_threat_forecast';
-	const SIMULATION_CRON_HOOK = 'nexifymy_monthly_attack_simulation';
+	const FORECAST_CRON_HOOK        = 'nexifymy_update_threat_forecast';
+	const SIMULATION_CRON_HOOK      = 'nexifymy_monthly_attack_simulation';
 
 	/**
 	 * Predictions table.
@@ -464,9 +464,9 @@ class NexifyMy_Security_Predictive_Threat_Hunting {
 		$weight_sum = 0;
 
 		foreach ( $predictions as $index => $item ) {
-			$weight     = max( 1, 5 - $index );
+			$weight      = max( 1, 5 - $index );
 			$weight_sum += $weight;
-			$score     += (int) ( $item['probability'] ?? 0 ) * $weight;
+			$score      += (int) ( $item['probability'] ?? 0 ) * $weight;
 		}
 
 		$final_score = $weight_sum > 0 ? (int) round( $score / $weight_sum ) : 0;
@@ -594,7 +594,7 @@ class NexifyMy_Security_Predictive_Threat_Hunting {
 			$scores['education'] += 4;
 		}
 		if ( $this->has_plugin( 'buddypress' ) ) {
-			$scores['education'] += 1;
+			$scores['education']  += 1;
 			$scores['healthcare'] += 1;
 		}
 
@@ -675,13 +675,13 @@ class NexifyMy_Security_Predictive_Threat_Hunting {
 		$plugins = $this->get_active_plugins();
 		$stack   = array( 'wordpress-core' );
 		$map     = array(
-			'woocommerce'   => 'e-commerce',
-			'buddypress'    => 'social-network',
-			'contact-form-7'=> 'form-plugin',
-			'elementor'     => 'page-builder',
-			'wpforms'       => 'form-plugin',
-			'learndash'     => 'education-lms',
-			'lifterlms'     => 'education-lms',
+			'woocommerce'    => 'e-commerce',
+			'buddypress'     => 'social-network',
+			'contact-form-7' => 'form-plugin',
+			'elementor'      => 'page-builder',
+			'wpforms'        => 'form-plugin',
+			'learndash'      => 'education-lms',
+			'lifterlms'      => 'education-lms',
 		);
 
 		foreach ( $plugins as $plugin ) {

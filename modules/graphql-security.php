@@ -17,18 +17,18 @@ class NexifyMy_Security_GraphQL_Security {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'                => true,
-		'max_query_depth'        => 10,
-		'max_query_complexity'   => 1000,
-		'disable_introspection'  => false,
-		'rate_limit'             => 100,      // queries per minute
-		'require_auth'           => false,
-		'log_queries'            => true,
-		'block_dangerous_queries'=> true,
-		'whitelist_queries'      => array(),
+		'enabled'                 => true,
+		'max_query_depth'         => 10,
+		'max_query_complexity'    => 1000,
+		'disable_introspection'   => false,
+		'rate_limit'              => 100,      // queries per minute
+		'require_auth'            => false,
+		'log_queries'             => true,
+		'block_dangerous_queries' => true,
+		'whitelist_queries'       => array(),
 	);
 
-	private $query_depth = 0;
+	private $query_depth      = 0;
 	private $query_complexity = 0;
 
 	/**
@@ -100,7 +100,7 @@ class NexifyMy_Security_GraphQL_Security {
 	 * Validate query depth.
 	 */
 	public function validate_query_depth( $result, $schema, $operation, $query, $variables ) {
-		$settings = $this->get_settings();
+		$settings  = $this->get_settings();
 		$max_depth = $settings['max_query_depth'];
 
 		$depth = $this->calculate_query_depth( $query );
@@ -120,9 +120,9 @@ class NexifyMy_Security_GraphQL_Security {
 	 * Calculate query depth.
 	 */
 	private function calculate_query_depth( $query ) {
-		$depth = 0;
+		$depth         = 0;
 		$current_depth = 0;
-		$in_string = false;
+		$in_string     = false;
 
 		for ( $i = 0; $i < strlen( $query ); $i++ ) {
 			$char = $query[ $i ];
@@ -133,10 +133,10 @@ class NexifyMy_Security_GraphQL_Security {
 
 			if ( ! $in_string ) {
 				if ( $char === '{' ) {
-					$current_depth++;
+					++$current_depth;
 					$depth = max( $depth, $current_depth );
 				} elseif ( $char === '}' ) {
-					$current_depth--;
+					--$current_depth;
 				}
 			}
 		}
@@ -148,9 +148,9 @@ class NexifyMy_Security_GraphQL_Security {
 	 * Track query complexity.
 	 */
 	public function track_query_complexity() {
-		$this->query_complexity++;
+		++$this->query_complexity;
 
-		$settings = $this->get_settings();
+		$settings       = $this->get_settings();
 		$max_complexity = $settings['max_query_complexity'];
 
 		if ( $this->query_complexity > $max_complexity ) {
@@ -194,16 +194,16 @@ class NexifyMy_Security_GraphQL_Security {
 	 */
 	public function check_rate_limit() {
 		$settings = $this->get_settings();
-		$limit = $settings['rate_limit'];
+		$limit    = $settings['rate_limit'];
 
-		$ip = $this->get_client_ip();
-		$key = 'graphql_rate_' . md5( $ip );
+		$ip    = $this->get_client_ip();
+		$key   = 'graphql_rate_' . md5( $ip );
 		$count = get_transient( $key );
 
 		if ( false === $count ) {
 			set_transient( $key, 1, 60 );
 		} else {
-			$count++;
+			++$count;
 			set_transient( $key, $count, 60 );
 
 			if ( $count > $limit ) {
@@ -223,21 +223,21 @@ class NexifyMy_Security_GraphQL_Security {
 		}
 
 		$log_data = array(
-			'ip' => $this->get_client_ip(),
-			'query' => substr( $query, 0, 500 ),
+			'ip'        => $this->get_client_ip(),
+			'query'     => substr( $query, 0, 500 ),
 			'operation' => $operation_name,
-			'user_id' => get_current_user_id(),
-			'depth' => $this->calculate_query_depth( $query ),
+			'user_id'   => get_current_user_id(),
+			'depth'     => $this->calculate_query_depth( $query ),
 		);
 
 		do_action( 'nexifymy_graphql_query_logged', $log_data );
 
 		// Store in option for stats
-		$logs = get_option( 'nexifymy_graphql_logs', array() );
+		$logs   = get_option( 'nexifymy_graphql_logs', array() );
 		$logs[] = array(
-			'time' => current_time( 'mysql' ),
+			'time'      => current_time( 'mysql' ),
 			'operation' => $operation_name,
-			'user_id' => get_current_user_id(),
+			'user_id'   => get_current_user_id(),
 		);
 
 		// Keep last 100 logs
@@ -314,13 +314,13 @@ class NexifyMy_Security_GraphQL_Security {
 		$stats = array(
 			'total_queries' => count( $logs ),
 			'queries_today' => 0,
-			'active' => class_exists( 'WPGraphQL' ),
+			'active'        => class_exists( 'WPGraphQL' ),
 		);
 
 		$today = gmdate( 'Y-m-d' );
 		foreach ( $logs as $log ) {
 			if ( isset( $log['time'] ) && strpos( $log['time'], $today ) === 0 ) {
-				$stats['queries_today']++;
+				++$stats['queries_today'];
 			}
 		}
 

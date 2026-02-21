@@ -14,17 +14,17 @@ class NexifyMy_Security_Hardening {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'disable_xmlrpc'       => true,
-		'hide_wp_version'      => true,
-		'disable_file_editor'  => true,
-		'security_headers'     => true,
-		'disable_rest_api'     => false,
-		'disable_rss'          => false,
-		'remove_rsd_link'      => true,
-		'remove_wlwmanifest'   => true,
-		'remove_shortlink'     => true,
-		'disable_embeds'       => false,
-		'disable_pingback'     => true,
+		'disable_xmlrpc'      => true,
+		'hide_wp_version'     => true,
+		'disable_file_editor' => true,
+		'security_headers'    => true,
+		'disable_rest_api'    => false,
+		'disable_rss'         => false,
+		'remove_rsd_link'     => true,
+		'remove_wlwmanifest'  => true,
+		'remove_shortlink'    => true,
+		'disable_embeds'      => false,
+		'disable_pingback'    => true,
 	);
 
 	/**
@@ -143,12 +143,12 @@ class NexifyMy_Security_Hardening {
 	 * @return string
 	 */
 	public function remove_version_query( $src, $handle ) {
-		if ( strpos( $src, 'ver=' ) ) {
+
+		if ( false !== strpos( $src, 'ver=' ) ) {
 			$src = remove_query_arg( 'ver', $src );
 		}
 		return $src;
 	}
-
 	/**
 	 * Add security headers.
 	 */
@@ -206,10 +206,14 @@ class NexifyMy_Security_Hardening {
 	 */
 	private function disable_embeds() {
 		// Remove embed rewrite rules.
-		add_action( 'init', function() {
-			global $wp;
-			$wp->public_query_vars = array_diff( $wp->public_query_vars, array( 'embed' ) );
-		}, 9999 );
+		add_action(
+			'init',
+			function () {
+				global $wp;
+				$wp->public_query_vars = array_diff( $wp->public_query_vars, array( 'embed' ) );
+			},
+			9999
+		);
 
 		// Remove embed-related JavaScript.
 		remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
@@ -222,9 +226,12 @@ class NexifyMy_Security_Hardening {
 		remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
 
 		// Remove TinyMCE embed plugin.
-		add_filter( 'tiny_mce_plugins', function( $plugins ) {
-			return array_diff( $plugins, array( 'wpembed' ) );
-		} );
+		add_filter(
+			'tiny_mce_plugins',
+			function ( $plugins ) {
+				return array_diff( $plugins, array( 'wpembed' ) );
+			}
+		);
 	}
 
 	/**
@@ -236,17 +243,17 @@ class NexifyMy_Security_Hardening {
 		$settings = $this->get_settings();
 
 		$status = array(
-			'xmlrpc' => array(
+			'xmlrpc'           => array(
 				'label'   => 'XML-RPC',
 				'enabled' => ! empty( $settings['disable_xmlrpc'] ),
 				'status'  => ! empty( $settings['disable_xmlrpc'] ) ? 'disabled' : 'enabled',
 			),
-			'wp_version' => array(
+			'wp_version'       => array(
 				'label'   => 'WordPress Version',
 				'enabled' => ! empty( $settings['hide_wp_version'] ),
 				'status'  => ! empty( $settings['hide_wp_version'] ) ? 'hidden' : 'visible',
 			),
-			'file_editor' => array(
+			'file_editor'      => array(
 				'label'   => 'File Editor',
 				'enabled' => ! empty( $settings['disable_file_editor'] ),
 				'status'  => defined( 'DISALLOW_FILE_EDIT' ) && DISALLOW_FILE_EDIT ? 'disabled' : 'enabled',
@@ -256,12 +263,12 @@ class NexifyMy_Security_Hardening {
 				'enabled' => ! empty( $settings['security_headers'] ),
 				'status'  => ! empty( $settings['security_headers'] ) ? 'active' : 'inactive',
 			),
-			'rest_api' => array(
+			'rest_api'         => array(
 				'label'   => 'REST API (Public)',
 				'enabled' => ! empty( $settings['disable_rest_api'] ),
 				'status'  => ! empty( $settings['disable_rest_api'] ) ? 'restricted' : 'public',
 			),
-			'pingback' => array(
+			'pingback'         => array(
 				'label'   => 'Pingback',
 				'enabled' => ! empty( $settings['disable_pingback'] ),
 				'status'  => ! empty( $settings['disable_pingback'] ) ? 'disabled' : 'enabled',
@@ -287,10 +294,12 @@ class NexifyMy_Security_Hardening {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		wp_send_json_success( array(
-			'settings' => $this->get_settings(),
-			'status'   => $this->get_status(),
-		) );
+		wp_send_json_success(
+			array(
+				'settings' => $this->get_settings(),
+				'status'   => $this->get_status(),
+			)
+		);
 	}
 
 	/**
@@ -311,7 +320,7 @@ class NexifyMy_Security_Hardening {
 
 		// Save to main settings.
 		if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
-			$all_settings = NexifyMy_Security_Settings::get_all();
+			$all_settings              = NexifyMy_Security_Settings::get_all();
 			$all_settings['hardening'] = $settings;
 			update_option( 'nexifymy_security_settings', $all_settings );
 		}

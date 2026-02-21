@@ -128,7 +128,7 @@ class NexifyMy_Security_Self_Protection {
 
 		foreach ( $this->get_all_plugin_files() as $file ) {
 			$full_path = NEXIFYMY_SECURITY_PATH . $file;
-			$hash = $this->generate_file_hash( $full_path );
+			$hash      = $this->generate_file_hash( $full_path );
 			if ( $hash ) {
 				$hashes[ $file ] = $hash;
 			}
@@ -143,7 +143,7 @@ class NexifyMy_Security_Self_Protection {
 	 * @return array List of relative file paths.
 	 */
 	private function get_all_plugin_files() {
-		$files = array();
+		$files    = array();
 		$iterator = new RecursiveIteratorIterator(
 			new RecursiveDirectoryIterator( NEXIFYMY_SECURITY_PATH, RecursiveDirectoryIterator::SKIP_DOTS )
 		);
@@ -152,7 +152,7 @@ class NexifyMy_Security_Self_Protection {
 			if ( $file->isFile() && $file->getExtension() === 'php' ) {
 				$relative_path = str_replace( NEXIFYMY_SECURITY_PATH, '', $file->getPathname() );
 				$relative_path = ltrim( str_replace( '\\', '/', $relative_path ), '/' );
-				$files[] = $relative_path;
+				$files[]       = $relative_path;
 			}
 		}
 
@@ -202,11 +202,11 @@ class NexifyMy_Security_Self_Protection {
 		}
 
 		$current_hashes = $this->generate_all_hashes();
-		$stored_hashes = $stored['hashes'];
+		$stored_hashes  = $stored['hashes'];
 
 		$modified = array();
-		$added = array();
-		$deleted = array();
+		$added    = array();
+		$deleted  = array();
 
 		// Check for modified and deleted files.
 		foreach ( $stored_hashes as $file => $hash ) {
@@ -282,10 +282,10 @@ class NexifyMy_Security_Self_Protection {
 	 * @param array $deleted Deleted files.
 	 */
 	private function send_tampering_alert( $modified, $added, $deleted ) {
-		$to = get_option( 'admin_email' );
+		$to      = get_option( 'admin_email' );
 		$subject = sprintf( '[%s] CRITICAL: Security Plugin Tampering Detected', get_bloginfo( 'name' ) );
 
-		$message = "CRITICAL SECURITY ALERT\n\n";
+		$message  = "CRITICAL SECURITY ALERT\n\n";
 		$message .= "NexifyMy Security has detected unauthorized modifications to its own files.\n\n";
 
 		if ( ! empty( $modified ) ) {
@@ -318,8 +318,8 @@ class NexifyMy_Security_Self_Protection {
 		$message .= "3. If not, reinstall the plugin from a trusted source\n";
 		$message .= "4. Run a full malware scan\n";
 		$message .= "5. Change all admin passwords\n\n";
-		$message .= "Site: " . home_url() . "\n";
-		$message .= "Time: " . current_time( 'mysql' ) . "\n";
+		$message .= 'Site: ' . home_url() . "\n";
+		$message .= 'Time: ' . current_time( 'mysql' ) . "\n";
 
 		wp_mail( $to, $subject, $message );
 	}
@@ -343,7 +343,7 @@ class NexifyMy_Security_Self_Protection {
 		}
 
 		foreach ( $this->protected_files as $file ) {
-			$full_path = NEXIFYMY_SECURITY_PATH . $file;
+			$full_path    = NEXIFYMY_SECURITY_PATH . $file;
 			$current_hash = $this->generate_file_hash( $full_path );
 
 			if ( isset( $stored['hashes'][ $file ] ) && $current_hash !== $stored['hashes'][ $file ] ) {
@@ -390,14 +390,17 @@ class NexifyMy_Security_Self_Protection {
 			return;
 		}
 
-		$file = isset( $_REQUEST['file'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['file'] ) ) : '';
+		$file   = isset( $_REQUEST['file'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['file'] ) ) : '';
 		$plugin = isset( $_REQUEST['plugin'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['plugin'] ) ) : '';
 
 		if ( strpos( $file, 'nexifymy-security' ) !== false || strpos( $plugin, 'nexifymy-security' ) !== false ) {
 			wp_die(
 				__( 'Editing NexifyMy Security plugin files is disabled for security reasons.', 'nexifymy-security' ),
 				__( 'Access Denied', 'nexifymy-security' ),
-				array( 'response' => 403, 'back_link' => true )
+				array(
+					'response'  => 403,
+					'back_link' => true,
+				)
 			);
 		}
 	}
@@ -423,7 +426,10 @@ class NexifyMy_Security_Self_Protection {
 					'direct_access_attempt',
 					'Direct access attempt to plugin file blocked',
 					'warning',
-					array( 'uri' => $request_uri, 'ip' => $this->get_client_ip() )
+					array(
+						'uri' => $request_uri,
+						'ip'  => $this->get_client_ip(),
+					)
 				);
 			}
 		}
@@ -461,15 +467,18 @@ class NexifyMy_Security_Self_Protection {
 				'plugin_deactivated',
 				sprintf( 'NexifyMy Security was deactivated by user: %s', $user->user_login ),
 				'warning',
-				array( 'user_id' => $user->ID, 'user_login' => $user->user_login )
+				array(
+					'user_id'    => $user->ID,
+					'user_login' => $user->user_login,
+				)
 			);
 		}
 
 		// Send alert email.
 		$settings = $this->get_settings();
 		if ( ! empty( $settings['email_alerts'] ) ) {
-			$user = wp_get_current_user();
-			$to = get_option( 'admin_email' );
+			$user    = wp_get_current_user();
+			$to      = get_option( 'admin_email' );
 			$subject = sprintf( '[%s] Security Plugin Deactivated', get_bloginfo( 'name' ) );
 			$message = sprintf(
 				"NexifyMy Security was deactivated.\n\nUser: %s\nTime: %s\nIP: %s",
@@ -545,11 +554,13 @@ class NexifyMy_Security_Self_Protection {
 		$hashes = $this->generate_all_hashes();
 		$this->store_hashes( $hashes );
 
-		wp_send_json_success( array(
-			'message' => 'Baseline hashes regenerated.',
-			'files'   => count( $hashes ),
-			'time'    => current_time( 'mysql' ),
-		) );
+		wp_send_json_success(
+			array(
+				'message' => 'Baseline hashes regenerated.',
+				'files'   => count( $hashes ),
+				'time'    => current_time( 'mysql' ),
+			)
+		);
 	}
 
 	/**
@@ -565,11 +576,13 @@ class NexifyMy_Security_Self_Protection {
 		$status = get_option( self::STATUS_OPTION, array() );
 		$stored = $this->get_stored_hashes();
 
-		wp_send_json_success( array(
-			'status'         => $status,
-			'baseline_date'  => isset( $stored['generated'] ) ? $stored['generated'] : null,
-			'baseline_files' => isset( $stored['hashes'] ) ? count( $stored['hashes'] ) : 0,
-			'version'        => isset( $stored['version'] ) ? $stored['version'] : null,
-		) );
+		wp_send_json_success(
+			array(
+				'status'         => $status,
+				'baseline_date'  => isset( $stored['generated'] ) ? $stored['generated'] : null,
+				'baseline_files' => isset( $stored['hashes'] ) ? count( $stored['hashes'] ) : 0,
+				'version'        => isset( $stored['version'] ) ? $stored['version'] : null,
+			)
+		);
 	}
 }

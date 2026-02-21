@@ -34,13 +34,13 @@ class NexifyMy_Security_Live_Traffic {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'        => true,
-		'log_admin'      => true,
-		'log_ajax'       => true,
-		'log_cron'       => false,
+		'enabled'         => true,
+		'log_admin'       => true,
+		'log_ajax'        => true,
+		'log_cron'        => false,
 		'retention_hours' => 24,
-		'exclude_ips'    => array(),
-		'exclude_urls'   => array(),
+		'exclude_ips'     => array(),
+		'exclude_urls'    => array(),
 	);
 
 	/**
@@ -84,7 +84,7 @@ class NexifyMy_Security_Live_Traffic {
 	public static function create_table() {
 		global $wpdb;
 
-		$table_name = $wpdb->prefix . self::TABLE_NAME;
+		$table_name      = $wpdb->prefix . self::TABLE_NAME;
 		$charset_collate = $wpdb->get_charset_collate();
 
 		$sql = "CREATE TABLE IF NOT EXISTS {$table_name} (
@@ -157,11 +157,11 @@ class NexifyMy_Security_Live_Traffic {
 		}
 
 		// Get request data.
-		$ip = $this->get_client_ip();
-		$uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
-		$method = isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : 'GET';
+		$ip         = $this->get_client_ip();
+		$uri        = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
+		$method     = isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : 'GET';
 		$user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '';
-		$referrer = isset( $_SERVER['HTTP_REFERER'] ) ? esc_url_raw( wp_unslash( $_SERVER['HTTP_REFERER'] ) ) : '';
+		$referrer   = isset( $_SERVER['HTTP_REFERER'] ) ? esc_url_raw( wp_unslash( $_SERVER['HTTP_REFERER'] ) ) : '';
 
 		// Check exclusions.
 		if ( $this->is_excluded( $ip, $uri, $settings ) ) {
@@ -169,16 +169,18 @@ class NexifyMy_Security_Live_Traffic {
 		}
 
 		// Insert into database.
-		$this->insert_log( array(
-			'ip_address'     => $ip,
-			'request_uri'    => $uri,
-			'request_method' => $method,
-			'user_agent'     => substr( $user_agent, 0, 512 ),
-			'referrer'       => substr( $referrer, 0, 512 ),
-			'user_id'        => get_current_user_id(),
-			'country_code'   => $this->resolve_country_code( $ip ),
-			'request_time'   => current_time( 'mysql' ),
-		) );
+		$this->insert_log(
+			array(
+				'ip_address'     => $ip,
+				'request_uri'    => $uri,
+				'request_method' => $method,
+				'user_agent'     => substr( $user_agent, 0, 512 ),
+				'referrer'       => substr( $referrer, 0, 512 ),
+				'user_id'        => get_current_user_id(),
+				'country_code'   => $this->resolve_country_code( $ip ),
+				'request_time'   => current_time( 'mysql' ),
+			)
+		);
 	}
 
 	/**
@@ -214,7 +216,7 @@ class NexifyMy_Security_Live_Traffic {
 		// Reuse cached geo-blocking lookups when available (no network).
 		if ( class_exists( 'NexifyMy_Security_Geo_Blocking' ) ) {
 			$cache_key = NexifyMy_Security_Geo_Blocking::CACHE_PREFIX . md5( $ip );
-			$cached = get_transient( $cache_key );
+			$cached    = get_transient( $cache_key );
 			if ( false !== $cached ) {
 				return $this->sanitize_country_code( $cached );
 			}
@@ -255,8 +257,8 @@ class NexifyMy_Security_Live_Traffic {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
 
-		$days = max( 1, absint( $days ) );
-		$batch = max( 1, absint( $batch ) );
+		$days       = max( 1, absint( $days ) );
+		$batch      = max( 1, absint( $batch ) );
 		$date_limit = gmdate( 'Y-m-d H:i:s', strtotime( "-$days days" ) );
 
 		$ips = $wpdb->get_col(
@@ -373,36 +375,36 @@ class NexifyMy_Security_Live_Traffic {
 			'is_blocked' => null,
 			'since'      => '',
 		);
-		$args = wp_parse_args( $args, $defaults );
+		$args     = wp_parse_args( $args, $defaults );
 
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
 
-		$where = array( '1=1' );
+		$where  = array( '1=1' );
 		$params = array();
 
 		if ( ! empty( $args['ip'] ) ) {
-			$where[] = 'ip_address = %s';
+			$where[]  = 'ip_address = %s';
 			$params[] = $args['ip'];
 		}
 
 		if ( ! empty( $args['method'] ) ) {
-			$where[] = 'request_method = %s';
+			$where[]  = 'request_method = %s';
 			$params[] = strtoupper( $args['method'] );
 		}
 
 		if ( null !== $args['is_blocked'] ) {
-			$where[] = 'is_blocked = %d';
+			$where[]  = 'is_blocked = %d';
 			$params[] = $args['is_blocked'] ? 1 : 0;
 		}
 
 		if ( ! empty( $args['since'] ) ) {
-			$where[] = 'request_time >= %s';
+			$where[]  = 'request_time >= %s';
 			$params[] = $args['since'];
 		}
 
 		$where_sql = implode( ' AND ', $where );
-		$limit = absint( $args['limit'] );
-		$offset = absint( $args['offset'] );
+		$limit     = absint( $args['limit'] );
+		$offset    = absint( $args['offset'] );
 
 		if ( ! empty( $params ) ) {
 			$query = $wpdb->prepare(
@@ -430,15 +432,15 @@ class NexifyMy_Security_Live_Traffic {
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$since = gmdate( 'Y-m-d H:i:s', time() - ( $hours * HOUR_IN_SECONDS ) );
+		$since      = gmdate( 'Y-m-d H:i:s', time() - ( $hours * HOUR_IN_SECONDS ) );
 
 		$stats = array(
-			'total_requests'  => 0,
-			'unique_ips'      => 0,
-			'blocked_count'   => 0,
-			'by_method'       => array(),
-			'top_ips'         => array(),
-			'top_uris'        => array(),
+			'total_requests' => 0,
+			'unique_ips'     => 0,
+			'blocked_count'  => 0,
+			'by_method'      => array(),
+			'top_ips'        => array(),
+			'top_uris'       => array(),
 		);
 
 		// Total requests.
@@ -487,15 +489,15 @@ class NexifyMy_Security_Live_Traffic {
 		global $wpdb;
 
 		$settings = $this->get_settings();
-		$hours = absint( $settings['retention_hours'] ) ?: 24;
+		$hours    = absint( $settings['retention_hours'] ) ?: 24;
 
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$cutoff = gmdate( 'Y-m-d H:i:s', time() - ( $hours * HOUR_IN_SECONDS ) );
+		$cutoff     = gmdate( 'Y-m-d H:i:s', time() - ( $hours * HOUR_IN_SECONDS ) );
 
 		$wpdb->query( $wpdb->prepare( "DELETE FROM {$table_name} WHERE request_time < %s", $cutoff ) );
 
 		// Also enforce max entries.
-		$count = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table_name}" );
+		$count = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table_name}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 		if ( $count > self::MAX_ENTRIES ) {
 			$delete_count = $count - self::MAX_ENTRIES;
 			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is safe, limit is integer.
@@ -549,7 +551,7 @@ class NexifyMy_Security_Live_Traffic {
 		// Format for display.
 		foreach ( $traffic as &$entry ) {
 			$entry['request_time_formatted'] = date_i18n( 'M j, H:i:s', strtotime( $entry['request_time'] ) );
-			$entry['user_agent_short'] = substr( $entry['user_agent'], 0, 50 );
+			$entry['user_agent_short']       = substr( $entry['user_agent'], 0, 50 );
 		}
 
 		wp_send_json_success( array( 'traffic' => $traffic ) );
@@ -583,7 +585,7 @@ class NexifyMy_Security_Live_Traffic {
 
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$wpdb->query( "TRUNCATE TABLE {$table_name}" );
+		$wpdb->query( "TRUNCATE TABLE {$table_name}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		wp_send_json_success( array( 'message' => 'Traffic log cleared.' ) );
 	}
@@ -597,27 +599,35 @@ class NexifyMy_Security_Live_Traffic {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
 
-		$today = gmdate( 'Y-m-d' );
-		$week_ago = gmdate( 'Y-m-d', strtotime( '-7 days' ) );
+		$today     = gmdate( 'Y-m-d' );
+		$week_ago  = gmdate( 'Y-m-d', strtotime( '-7 days' ) );
 		$month_ago = gmdate( 'Y-m-d', strtotime( '-30 days' ) );
 
 		$stats = array(
-			'today' => $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
-				$today
-			) ),
-			'week' => $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
-				$week_ago
-			) ),
-			'month' => $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
-				$month_ago
-			) ),
-			'unique_ips' => $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE request_time >= %s",
-				$month_ago
-			) ),
+			'today'      => $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
+					$today
+				)
+			),
+			'week'       => $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
+					$week_ago
+				)
+			),
+			'month'      => $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s",
+					$month_ago
+				)
+			),
+			'unique_ips' => $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE request_time >= %s",
+					$month_ago
+				)
+			),
 		);
 
 		return $stats;
@@ -637,14 +647,14 @@ class NexifyMy_Security_Live_Traffic {
 		$this->backfill_country_codes( $days, 25 );
 
 		$data = array(
-			'chart_data' => $this->get_chart_data( $days ),
-			'top_pages' => $this->get_top_pages( 10, $days ),
-			'top_referrers' => $this->get_top_referrers( 10, $days ),
-			'geo_distribution' => $this->get_geo_distribution( 10, $days ),
+			'chart_data'           => $this->get_chart_data( $days ),
+			'top_pages'            => $this->get_top_pages( 10, $days ),
+			'top_referrers'        => $this->get_top_referrers( 10, $days ),
+			'geo_distribution'     => $this->get_geo_distribution( 10, $days ),
 			'browser_distribution' => $this->get_browser_distribution( $days ),
-			'os_distribution' => $this->get_os_distribution( $days ),
-			'device_distribution' => $this->get_device_distribution( $days ),
-			'totals' => $this->get_totals( $days ),
+			'os_distribution'      => $this->get_os_distribution( $days ),
+			'device_distribution'  => $this->get_device_distribution( $days ),
+			'totals'               => $this->get_totals( $days ),
 		);
 
 		wp_send_json_success( $data );
@@ -662,9 +672,9 @@ class NexifyMy_Security_Live_Traffic {
 		$date_limit = gmdate( 'Y-m-d H:i:s', strtotime( "-$days days" ) );
 
 		return array(
-			'total_views' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s", $date_limit ) ),
+			'total_views'     => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s", $date_limit ) ),
 			'unique_visitors' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE request_time >= %s", $date_limit ) ),
-			'blocked' => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s AND is_blocked = 1", $date_limit ) ),
+			'blocked'         => (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$table_name} WHERE request_time >= %s AND is_blocked = 1", $date_limit ) ),
 		);
 	}
 
@@ -677,26 +687,28 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_browser_distribution( $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		
+
 		// Get all user agents for processing
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
 			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
 			GROUP BY user_agent",
-			$days
-		) );
+				$days
+			)
+		);
 
 		$browsers = array(
-			'Chrome' => 0,
+			'Chrome'  => 0,
 			'Firefox' => 0,
-			'Safari' => 0,
-			'Edge' => 0,
-			'Opera' => 0,
-			'Other' => 0,
+			'Safari'  => 0,
+			'Edge'    => 0,
+			'Opera'   => 0,
+			'Other'   => 0,
 		);
 
 		foreach ( $results as $row ) {
-			$ua = $row->user_agent;
+			$ua    = $row->user_agent;
 			$count = (int) $row->count;
 
 			if ( stripos( $ua, 'Edg' ) !== false ) {
@@ -727,25 +739,27 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_os_distribution( $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
 			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
 			GROUP BY user_agent",
-			$days
-		) );
+				$days
+			)
+		);
 
 		$os = array(
 			'Windows' => 0,
-			'Mac OS' => 0,
-			'Linux' => 0,
-			'iOS' => 0,
+			'Mac OS'  => 0,
+			'Linux'   => 0,
+			'iOS'     => 0,
 			'Android' => 0,
-			'Other' => 0,
+			'Other'   => 0,
 		);
 
 		foreach ( $results as $row ) {
-			$ua = $row->user_agent;
+			$ua    = $row->user_agent;
 			$count = (int) $row->count;
 
 			if ( stripos( $ua, 'Windows' ) !== false ) {
@@ -776,23 +790,25 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_device_distribution( $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
+
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT user_agent, COUNT(*) as count FROM {$table_name} 
 			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY) 
 			GROUP BY user_agent",
-			$days
-		) );
+				$days
+			)
+		);
 
 		$devices = array(
 			'Desktop' => 0,
-			'Mobile' => 0,
-			'Tablet' => 0,
-			'Bot' => 0,
+			'Mobile'  => 0,
+			'Tablet'  => 0,
+			'Bot'     => 0,
 		);
 
 		foreach ( $results as $row ) {
-			$ua = $row->user_agent;
+			$ua    = $row->user_agent;
 			$count = (int) $row->count;
 
 			if ( stripos( $ua, 'bot' ) !== false || stripos( $ua, 'crawl' ) !== false || stripos( $ua, 'slurp' ) !== false || stripos( $ua, 'spider' ) !== false ) {
@@ -819,28 +835,32 @@ class NexifyMy_Security_Live_Traffic {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
 
-		$labels = array();
-		$page_views = array();
+		$labels          = array();
+		$page_views      = array();
 		$unique_visitors = array();
 
 		for ( $i = $days - 1; $i >= 0; $i-- ) {
-			$date = gmdate( 'Y-m-d', strtotime( "-$i days" ) );
+			$date     = gmdate( 'Y-m-d', strtotime( "-$i days" ) );
 			$labels[] = gmdate( 'M j', strtotime( $date ) );
 
-			$page_views[] = (int) $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
-				$date
-			) );
+			$page_views[] = (int) $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(*) FROM {$table_name} WHERE DATE(request_time) = %s",
+					$date
+				)
+			);
 
-			$unique_visitors[] = (int) $wpdb->get_var( $wpdb->prepare(
-				"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE DATE(request_time) = %s",
-				$date
-			) );
+			$unique_visitors[] = (int) $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT COUNT(DISTINCT ip_address) FROM {$table_name} WHERE DATE(request_time) = %s",
+					$date
+				)
+			);
 		}
 
 		return array(
-			'labels' => $labels,
-			'page_views' => $page_views,
+			'labels'          => $labels,
+			'page_views'      => $page_views,
 			'unique_visitors' => $unique_visitors,
 		);
 	}
@@ -854,10 +874,11 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_top_pages( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$days = max( 1, absint( $days ) );
+		$days       = max( 1, absint( $days ) );
 
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT request_uri as url, COUNT(*) as count
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT request_uri as url, COUNT(*) as count
 			FROM {$table_name}
 			WHERE request_time >= DATE_SUB(NOW(), INTERVAL %d DAY)
 			AND request_uri NOT LIKE '%%/wp-admin%%'
@@ -865,9 +886,11 @@ class NexifyMy_Security_Live_Traffic {
 			GROUP BY request_uri
 			ORDER BY count DESC
 			LIMIT %d",
-			$days,
-			$limit
-		), ARRAY_A );
+				$days,
+				$limit
+			),
+			ARRAY_A
+		);
 
 		return $results ? $results : array();
 	}
@@ -881,10 +904,11 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_top_referrers( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$days = max( 1, absint( $days ) );
+		$days       = max( 1, absint( $days ) );
 
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT
 				CASE
 					WHEN referrer = '' THEN 'Direct'
 					ELSE referrer
@@ -895,9 +919,11 @@ class NexifyMy_Security_Live_Traffic {
 			GROUP BY referrer
 			ORDER BY count DESC
 			LIMIT %d",
-			$days,
-			$limit
-		), ARRAY_A );
+				$days,
+				$limit
+			),
+			ARRAY_A
+		);
 
 		return $results ? $results : array();
 	}
@@ -911,10 +937,11 @@ class NexifyMy_Security_Live_Traffic {
 	private function get_geo_distribution( $limit = 10, $days = 30 ) {
 		global $wpdb;
 		$table_name = $wpdb->prefix . self::TABLE_NAME;
-		$days = max( 1, absint( $days ) );
+		$days       = max( 1, absint( $days ) );
 
-		$results = $wpdb->get_results( $wpdb->prepare(
-			"SELECT
+		$results = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT
 				CASE
 					WHEN country_code = '' THEN 'Unknown'
 					ELSE country_code
@@ -925,9 +952,11 @@ class NexifyMy_Security_Live_Traffic {
 			GROUP BY country_code
 			ORDER BY count DESC
 			LIMIT %d",
-			$days,
-			$limit
-		), ARRAY_A );
+				$days,
+				$limit
+			),
+			ARRAY_A
+		);
 
 		if ( empty( $results ) || ! is_array( $results ) ) {
 			return array();
@@ -949,27 +978,27 @@ class NexifyMy_Security_Live_Traffic {
 	 */
 	private function get_country_names() {
 		if ( class_exists( 'NexifyMy_Security_Geo_Blocking' ) && method_exists( 'NexifyMy_Security_Geo_Blocking', 'get_country_list' ) ) {
-			$full_list = NexifyMy_Security_Geo_Blocking::get_country_list();
+			$full_list            = NexifyMy_Security_Geo_Blocking::get_country_list();
 			$full_list['Unknown'] = 'Unknown';
 			return $full_list;
 		}
 
 		return array(
-			'US' => 'United States',
-			'GB' => 'United Kingdom',
-			'CA' => 'Canada',
-			'AU' => 'Australia',
-			'DE' => 'Germany',
-			'FR' => 'France',
-			'IT' => 'Italy',
-			'ES' => 'Spain',
-			'NL' => 'Netherlands',
-			'IN' => 'India',
-			'CN' => 'China',
-			'JP' => 'Japan',
-			'BR' => 'Brazil',
-			'MX' => 'Mexico',
-			'RU' => 'Russia',
+			'US'      => 'United States',
+			'GB'      => 'United Kingdom',
+			'CA'      => 'Canada',
+			'AU'      => 'Australia',
+			'DE'      => 'Germany',
+			'FR'      => 'France',
+			'IT'      => 'Italy',
+			'ES'      => 'Spain',
+			'NL'      => 'Netherlands',
+			'IN'      => 'India',
+			'CN'      => 'China',
+			'JP'      => 'Japan',
+			'BR'      => 'Brazil',
+			'MX'      => 'Mexico',
+			'RU'      => 'Russia',
 			'Unknown' => 'Unknown',
 		);
 	}
