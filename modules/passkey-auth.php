@@ -51,8 +51,8 @@ class NexifyMy_Security_Passkey {
 		}
 
 		// Set Relying Party info.
-		$this->rp_id = wp_parse_url( home_url(), PHP_URL_HOST );
-		$this->rp_name = get_bloginfo( 'name' );
+		$this->rp_id     = wp_parse_url( home_url(), PHP_URL_HOST );
+		$this->rp_name   = get_bloginfo( 'name' );
 		$this->rp_origin = home_url();
 
 		// Enqueue scripts.
@@ -104,18 +104,22 @@ class NexifyMy_Security_Passkey {
 			true
 		);
 
-		wp_localize_script( 'nexifymy-passkey-login', 'nexifymyPasskey', array(
-			'ajaxUrl'      => admin_url( 'admin-ajax.php' ),
-			'nonce'        => wp_create_nonce( 'nexifymy_passkey_nonce' ),
-			'rpId'         => $this->rp_id,
-			'rpName'       => $this->rp_name,
-			'isSupported'  => true,
-			'strings'      => array(
-				'authenticating' => __( 'Authenticating...', 'nexifymy-security' ),
-				'error'          => __( 'Authentication failed. Please try again.', 'nexifymy-security' ),
-				'notSupported'   => __( 'Passkeys are not supported in this browser.', 'nexifymy-security' ),
-			),
-		) );
+		wp_localize_script(
+			'nexifymy-passkey-login',
+			'nexifymyPasskey',
+			array(
+				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
+				'nonce'       => wp_create_nonce( 'nexifymy_passkey_nonce' ),
+				'rpId'        => $this->rp_id,
+				'rpName'      => $this->rp_name,
+				'isSupported' => true,
+				'strings'     => array(
+					'authenticating' => __( 'Authenticating...', 'nexifymy-security' ),
+					'error'          => __( 'Authentication failed. Please try again.', 'nexifymy-security' ),
+					'notSupported'   => __( 'Passkeys are not supported in this browser.', 'nexifymy-security' ),
+				),
+			)
+		);
 
 		wp_enqueue_style(
 			'nexifymy-passkey-login',
@@ -141,19 +145,23 @@ class NexifyMy_Security_Passkey {
 			true
 		);
 
-		wp_localize_script( 'nexifymy-passkey-admin', 'nexifymyPasskey', array(
-			'ajaxUrl'      => admin_url( 'admin-ajax.php' ),
-			'nonce'        => wp_create_nonce( 'nexifymy_passkey_nonce' ),
-			'rpId'         => $this->rp_id,
-			'rpName'       => $this->rp_name,
-			'isSupported'  => true,
-			'strings'      => array(
-				'registering'    => __( 'Registering passkey...', 'nexifymy-security' ),
-				'registered'     => __( 'Passkey registered successfully!', 'nexifymy-security' ),
-				'error'          => __( 'Failed to register passkey.', 'nexifymy-security' ),
-				'confirmDelete'  => __( 'Are you sure you want to delete this passkey?', 'nexifymy-security' ),
-			),
-		) );
+		wp_localize_script(
+			'nexifymy-passkey-admin',
+			'nexifymyPasskey',
+			array(
+				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
+				'nonce'       => wp_create_nonce( 'nexifymy_passkey_nonce' ),
+				'rpId'        => $this->rp_id,
+				'rpName'      => $this->rp_name,
+				'isSupported' => true,
+				'strings'     => array(
+					'registering'   => __( 'Registering passkey...', 'nexifymy-security' ),
+					'registered'    => __( 'Passkey registered successfully!', 'nexifymy-security' ),
+					'error'         => __( 'Failed to register passkey.', 'nexifymy-security' ),
+					'confirmDelete' => __( 'Are you sure you want to delete this passkey?', 'nexifymy-security' ),
+				),
+			)
+		);
 	}
 
 	/**
@@ -248,7 +256,7 @@ class NexifyMy_Security_Passkey {
 			wp_send_json_error( 'Not logged in.' );
 		}
 
-		$user = wp_get_current_user();
+		$user     = wp_get_current_user();
 		$settings = $this->get_settings();
 
 		// Generate challenge.
@@ -257,7 +265,7 @@ class NexifyMy_Security_Passkey {
 
 		// Get existing credential IDs to exclude.
 		$exclude_credentials = array();
-		$existing = $this->get_user_credentials( $user->ID );
+		$existing            = $this->get_user_credentials( $user->ID );
 		foreach ( $existing as $id => $cred ) {
 			$exclude_credentials[] = array(
 				'type' => 'public-key',
@@ -266,28 +274,34 @@ class NexifyMy_Security_Passkey {
 		}
 
 		$options = array(
-			'challenge' => $this->base64url_encode( $challenge ),
-			'rp' => array(
+			'challenge'              => $this->base64url_encode( $challenge ),
+			'rp'                     => array(
 				'name' => $this->rp_name,
 				'id'   => $this->rp_id,
 			),
-			'user' => array(
+			'user'                   => array(
 				'id'          => $this->base64url_encode( hash( 'sha256', $user->ID . $user->user_login, true ) ),
 				'name'        => $user->user_login,
 				'displayName' => $user->display_name,
 			),
-			'pubKeyCredParams' => array(
-				array( 'type' => 'public-key', 'alg' => -7 ),   // ES256.
-				array( 'type' => 'public-key', 'alg' => -257 ), // RS256.
+			'pubKeyCredParams'       => array(
+				array(
+					'type' => 'public-key',
+					'alg'  => -7,
+				),   // ES256.
+				array(
+					'type' => 'public-key',
+					'alg'  => -257,
+				), // RS256.
 			),
-			'timeout' => $settings['credential_timeout'],
-			'attestation' => 'none',
+			'timeout'                => $settings['credential_timeout'],
+			'attestation'            => 'none',
 			'authenticatorSelection' => array(
 				'authenticatorAttachment' => $settings['authenticator_type'] === 'any' ? null : $settings['authenticator_type'],
 				'residentKey'             => 'preferred',
 				'userVerification'        => $settings['user_verification'],
 			),
-			'excludeCredentials' => $exclude_credentials,
+			'excludeCredentials'     => $exclude_credentials,
 		);
 
 		// Remove null values.
@@ -308,10 +322,10 @@ class NexifyMy_Security_Passkey {
 			wp_send_json_error( 'Not logged in.' );
 		}
 
-		$user = wp_get_current_user();
+		$user            = wp_get_current_user();
 		$credential_name = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : 'Passkey';
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- JSON is parsed and schema-validated in verification flow.
 		$response = isset( $_POST['response'] ) ? json_decode( wp_unslash( $_POST['response'] ), true ) : null;
-
 		if ( ! $response ) {
 			wp_send_json_error( 'Invalid response.' );
 		}
@@ -324,7 +338,7 @@ class NexifyMy_Security_Passkey {
 
 		// Decode attestation object.
 		$attestation_object = $this->base64url_decode( $response['attestationObject'] );
-		$client_data_json = $this->base64url_decode( $response['clientDataJSON'] );
+		$client_data_json   = $this->base64url_decode( $response['clientDataJSON'] );
 
 		// Parse client data.
 		$client_data = json_decode( $client_data_json, true );
@@ -356,9 +370,9 @@ class NexifyMy_Security_Passkey {
 
 		// Store credential.
 		$credential_id = $this->base64url_encode( $auth_data['credentialId'] );
-		$public_key = $auth_data['credentialPublicKey'];
+		$public_key    = $auth_data['credentialPublicKey'];
 
-		$credentials = $this->get_user_credentials( $user->ID );
+		$credentials                   = $this->get_user_credentials( $user->ID );
 		$credentials[ $credential_id ] = array(
 			'name'       => $credential_name,
 			'public_key' => $this->base64url_encode( $public_key ),
@@ -379,10 +393,12 @@ class NexifyMy_Security_Passkey {
 			);
 		}
 
-		wp_send_json_success( array(
-			'message'      => 'Passkey registered successfully.',
-			'credentialId' => $credential_id,
-		) );
+		wp_send_json_success(
+			array(
+				'message'      => 'Passkey registered successfully.',
+				'credentialId' => $credential_id,
+			)
+		);
 	}
 
 	/*
@@ -397,39 +413,21 @@ class NexifyMy_Security_Passkey {
 	public function ajax_auth_options() {
 		check_ajax_referer( 'nexifymy_passkey_nonce', 'nonce' );
 
-		$username = isset( $_POST['username'] ) ? sanitize_user( wp_unslash( $_POST['username'] ) ) : '';
-
 		// Generate challenge.
-		$challenge = $this->generate_challenge();
+		$challenge  = $this->generate_challenge();
 		$session_id = wp_generate_password( 32, false );
 
 		// Store challenge with session ID.
-		set_transient( self::CHALLENGE_PREFIX . $session_id, array(
-			'challenge' => $challenge,
-			'username'  => $username,
-			'type'      => 'authentication',
-		), 300 );
+		set_transient(
+			self::CHALLENGE_PREFIX . $session_id,
+			array(
+				'challenge' => $challenge,
+				'type'      => 'authentication',
+			),
+			300
+		);
 
 		$settings = $this->get_settings();
-
-		// Get allowed credentials if username provided.
-		$allow_credentials = array();
-		if ( $username ) {
-			$user = get_user_by( 'login', $username );
-			if ( ! $user ) {
-				$user = get_user_by( 'email', $username );
-			}
-
-			if ( $user ) {
-				$credentials = $this->get_user_credentials( $user->ID );
-				foreach ( $credentials as $id => $cred ) {
-					$allow_credentials[] = array(
-						'type' => 'public-key',
-						'id'   => $id,
-					);
-				}
-			}
-		}
 
 		$options = array(
 			'challenge'        => $this->base64url_encode( $challenge ),
@@ -438,10 +436,6 @@ class NexifyMy_Security_Passkey {
 			'userVerification' => $settings['user_verification'],
 			'sessionId'        => $session_id,
 		);
-
-		if ( ! empty( $allow_credentials ) ) {
-			$options['allowCredentials'] = $allow_credentials;
-		}
 
 		wp_send_json_success( $options );
 	}
@@ -453,8 +447,8 @@ class NexifyMy_Security_Passkey {
 		check_ajax_referer( 'nexifymy_passkey_nonce', 'nonce' );
 
 		$session_id = isset( $_POST['sessionId'] ) ? sanitize_text_field( wp_unslash( $_POST['sessionId'] ) ) : '';
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- JSON is parsed and schema-validated in verification flow.
 		$response = isset( $_POST['response'] ) ? json_decode( wp_unslash( $_POST['response'] ), true ) : null;
-
 		if ( ! $response || ! $session_id ) {
 			wp_send_json_error( 'Invalid response.' );
 		}
@@ -468,10 +462,10 @@ class NexifyMy_Security_Passkey {
 		delete_transient( self::CHALLENGE_PREFIX . $session_id );
 
 		// Decode response.
-		$credential_id = $response['id'];
+		$credential_id      = $response['id'];
 		$authenticator_data = $this->base64url_decode( $response['authenticatorData'] );
-		$client_data_json = $this->base64url_decode( $response['clientDataJSON'] );
-		$signature = $this->base64url_decode( $response['signature'] );
+		$client_data_json   = $this->base64url_decode( $response['clientDataJSON'] );
+		$signature          = $this->base64url_decode( $response['signature'] );
 
 		// Parse client data.
 		$client_data = json_decode( $client_data_json, true );
@@ -494,16 +488,16 @@ class NexifyMy_Security_Passkey {
 		}
 
 		$credentials = $this->get_user_credentials( $user->ID );
-		$credential = $credentials[ $credential_id ] ?? null;
+		$credential  = $credentials[ $credential_id ] ?? null;
 
 		if ( ! $credential ) {
 			wp_send_json_error( 'Credential not found.' );
 		}
 
 		// Verify signature.
-		$public_key = $this->base64url_decode( $credential['public_key'] );
+		$public_key       = $this->base64url_decode( $credential['public_key'] );
 		$client_data_hash = hash( 'sha256', $client_data_json, true );
-		$signed_data = $authenticator_data . $client_data_hash;
+		$signed_data      = $authenticator_data . $client_data_hash;
 
 		$verified = $this->verify_signature( $signed_data, $signature, $public_key );
 
@@ -523,7 +517,7 @@ class NexifyMy_Security_Passkey {
 			wp_send_json_error( 'Counter mismatch - possible cloned authenticator.' );
 		}
 
-		$credentials[ $credential_id ]['counter'] = $auth_data['signCount'];
+		$credentials[ $credential_id ]['counter']   = $auth_data['signCount'];
 		$credentials[ $credential_id ]['last_used'] = current_time( 'mysql' );
 		$this->save_user_credentials( $user->ID, $credentials );
 
@@ -552,10 +546,12 @@ class NexifyMy_Security_Passkey {
 			$ai_module->mark_session_verified( $user->ID );
 		}
 
-		wp_send_json_success( array(
-			'message'     => 'Authentication successful.',
-			'redirectUrl' => admin_url(),
-		) );
+		wp_send_json_success(
+			array(
+				'message'     => 'Authentication successful.',
+				'redirectUrl' => admin_url(),
+			)
+		);
 	}
 
 	/*
@@ -580,7 +576,7 @@ class NexifyMy_Security_Passkey {
 			wp_send_json_error( 'Invalid credential ID.' );
 		}
 
-		$user = wp_get_current_user();
+		$user        = wp_get_current_user();
 		$credentials = $this->get_user_credentials( $user->ID );
 
 		if ( ! isset( $credentials[ $credential_id ] ) ) {
@@ -603,7 +599,7 @@ class NexifyMy_Security_Passkey {
 			wp_send_json_error( 'Not logged in.' );
 		}
 
-		$user = wp_get_current_user();
+		$user        = wp_get_current_user();
 		$credentials = $this->get_user_credentials( $user->ID );
 
 		// Remove sensitive data.
@@ -624,6 +620,16 @@ class NexifyMy_Security_Passkey {
 	 * HELPER METHODS
 	 * =========================================================================
 	 */
+
+	/**
+	 * Check whether a user has at least one passkey credential.
+	 *
+	 * @param int $user_id User ID.
+	 * @return bool
+	 */
+	public function user_has_credentials( $user_id ) {
+		return ! empty( $this->get_user_credentials( $user_id ) );
+	}
 
 	private function get_user_credentials( $user_id ) {
 		return get_user_meta( $user_id, self::CREDENTIALS_META_KEY, true ) ?: array();
@@ -689,32 +695,32 @@ class NexifyMy_Security_Passkey {
 		while ( $pos < $len ) {
 			// Read key (text string).
 			$key_info = ord( $data[ $pos ] );
-			$pos++;
+			++$pos;
 
 			if ( ( $key_info & 0xe0 ) === 0x60 ) {
 				$key_len = $key_info & 0x1f;
-				$key = substr( $data, $pos, $key_len );
-				$pos += $key_len;
+				$key     = substr( $data, $pos, $key_len );
+				$pos    += $key_len;
 
 				// Read value based on key.
 				if ( $key === 'authData' ) {
 					$val_info = ord( $data[ $pos ] );
-					$pos++;
+					++$pos;
 
 					if ( ( $val_info & 0xe0 ) === 0x40 ) {
 						// Byte string.
 						if ( ( $val_info & 0x1f ) === 24 ) {
 							$val_len = ord( $data[ $pos ] );
-							$pos++;
+							++$pos;
 						} elseif ( ( $val_info & 0x1f ) === 25 ) {
 							$val_len = unpack( 'n', substr( $data, $pos, 2 ) )[1];
-							$pos += 2;
+							$pos    += 2;
 						} else {
 							$val_len = $val_info & 0x1f;
 						}
 
 						$result['authData'] = substr( $data, $pos, $val_len );
-						$pos += $val_len;
+						$pos               += $val_len;
 					}
 				} else {
 					// Skip other values.
@@ -730,37 +736,37 @@ class NexifyMy_Security_Passkey {
 
 	private function parse_authenticator_data( $data ) {
 		$result = array();
-		$pos = 0;
+		$pos    = 0;
 
 		// RP ID hash (32 bytes).
 		$result['rpIdHash'] = substr( $data, $pos, 32 );
-		$pos += 32;
+		$pos               += 32;
 
 		// Flags (1 byte).
 		$flags = ord( $data[ $pos ] );
-		$pos++;
-		$result['flags'] = $flags;
-		$result['userPresent'] = ( $flags & 0x01 ) !== 0;
-		$result['userVerified'] = ( $flags & 0x04 ) !== 0;
+		++$pos;
+		$result['flags']                  = $flags;
+		$result['userPresent']            = ( $flags & 0x01 ) !== 0;
+		$result['userVerified']           = ( $flags & 0x04 ) !== 0;
 		$result['attestedCredentialData'] = ( $flags & 0x40 ) !== 0;
 
 		// Sign count (4 bytes, big-endian).
 		$result['signCount'] = unpack( 'N', substr( $data, $pos, 4 ) )[1];
-		$pos += 4;
+		$pos                += 4;
 
 		// Attested credential data (if present).
 		if ( $result['attestedCredentialData'] && strlen( $data ) > $pos ) {
 			// AAGUID (16 bytes).
 			$result['aaguid'] = substr( $data, $pos, 16 );
-			$pos += 16;
+			$pos             += 16;
 
 			// Credential ID length (2 bytes, big-endian).
 			$cred_id_len = unpack( 'n', substr( $data, $pos, 2 ) )[1];
-			$pos += 2;
+			$pos        += 2;
 
 			// Credential ID.
 			$result['credentialId'] = substr( $data, $pos, $cred_id_len );
-			$pos += $cred_id_len;
+			$pos                   += $cred_id_len;
 
 			// Credential public key (COSE format, rest of data).
 			$result['credentialPublicKey'] = substr( $data, $pos );
@@ -806,13 +812,13 @@ class NexifyMy_Security_Passkey {
 	private function parse_cose_key( $data ) {
 		// Simple CBOR map parser for COSE key.
 		$result = array();
-		$pos = 1; // Skip map header.
-		$len = strlen( $data );
+		$pos    = 1; // Skip map header.
+		$len    = strlen( $data );
 
 		while ( $pos < $len - 1 ) {
 			// Read key (usually negative integer for COSE).
 			$key_byte = ord( $data[ $pos ] );
-			$pos++;
+			++$pos;
 
 			$key = null;
 			if ( ( $key_byte & 0xe0 ) === 0x20 ) {
@@ -825,7 +831,7 @@ class NexifyMy_Security_Passkey {
 
 			// Read value.
 			$val_byte = ord( $data[ $pos ] );
-			$pos++;
+			++$pos;
 
 			if ( ( $val_byte & 0xe0 ) === 0x20 ) {
 				// Negative integer.
@@ -835,9 +841,9 @@ class NexifyMy_Security_Passkey {
 				$result[ $key ] = $val_byte & 0x1f;
 			} elseif ( ( $val_byte & 0xe0 ) === 0x40 ) {
 				// Byte string.
-				$val_len = $val_byte & 0x1f;
+				$val_len        = $val_byte & 0x1f;
 				$result[ $key ] = substr( $data, $pos, $val_len );
-				$pos += $val_len;
+				$pos           += $val_len;
 			}
 		}
 
@@ -869,7 +875,7 @@ class NexifyMy_Security_Passkey {
 			// Build DER structure.
 			$der = "\x30\x59\x30\x13\x06\x07\x2a\x86\x48\xce\x3d\x02\x01\x06\x08\x2a\x86\x48\xce\x3d\x03\x01\x07\x03\x42\x00" . $ec_point;
 
-			return "-----BEGIN PUBLIC KEY-----\n" . chunk_split( base64_encode( $der ), 64 ) . "-----END PUBLIC KEY-----";
+			return "-----BEGIN PUBLIC KEY-----\n" . chunk_split( base64_encode( $der ), 64 ) . '-----END PUBLIC KEY-----';
 		}
 
 		return null;
@@ -887,19 +893,19 @@ class NexifyMy_Security_Passkey {
 		if ( ord( $der_signature[ $pos ] ) !== 0x02 ) {
 			return $der_signature;
 		}
-		$pos++;
+		++$pos;
 		$r_len = ord( $der_signature[ $pos ] );
-		$pos++;
-		$r = substr( $der_signature, $pos, $r_len );
+		++$pos;
+		$r    = substr( $der_signature, $pos, $r_len );
 		$pos += $r_len;
 
 		// Read S.
 		if ( ord( $der_signature[ $pos ] ) !== 0x02 ) {
 			return $der_signature;
 		}
-		$pos++;
+		++$pos;
 		$s_len = ord( $der_signature[ $pos ] );
-		$pos++;
+		++$pos;
 		$s = substr( $der_signature, $pos, $s_len );
 
 		// Pad/trim to 32 bytes each.

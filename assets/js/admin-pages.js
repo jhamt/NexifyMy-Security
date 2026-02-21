@@ -942,6 +942,10 @@
           success: function (response) {
             if (response && response.success && response.data) {
               var status = response.data;
+              var learningStatus = String(status.learning_status || "learning");
+              $("#ai-learning-status").text(
+                learningStatus.charAt(0).toUpperCase() + learningStatus.slice(1),
+              );
               $("#ai-total-records").text((status.total_records || 0).toLocaleString());
               $("#ai-threats-today").text((status.threats_today || 0).toLocaleString());
               $("#ai-countries").text((status.known_countries || 0).toLocaleString());
@@ -959,6 +963,10 @@
                 hoursHtml = "Learning...";
               }
               $("#ai-peak-hours").html(hoursHtml);
+
+              if (Array.isArray(status.recent_threats) && status.recent_threats.length > 0) {
+                displayThreats(status.recent_threats);
+              }
             }
             $btn.prop("disabled", false);
           },

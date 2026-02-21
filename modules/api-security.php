@@ -43,13 +43,13 @@ class NexifyMy_Security_API_Security {
 			return;
 		}
 
-		// REST API security
-		add_filter( 'rest_authentication_errors', array( $this, 'check_rest_authentication' ), 10 );
+		// REST API security.
+		add_filter( 'rest_authentication_errors', array( $this, 'check_rest_authentication' ), 20 );
 		add_filter( 'rest_pre_dispatch', array( $this, 'check_api_rate_limit' ), 10, 3 );
 
 		// JWT Authentication
 		if ( ! empty( $settings['jwt_auth_enabled'] ) ) {
-			add_filter( 'rest_authentication_errors', array( $this, 'jwt_authenticate' ), 20 );
+			add_filter( 'rest_authentication_errors', array( $this, 'jwt_authenticate' ), 10 );
 			add_action( 'rest_api_init', array( $this, 'register_jwt_endpoints' ) );
 		}
 
@@ -100,8 +100,19 @@ class NexifyMy_Security_API_Security {
 
 		$settings = $this->get_settings();
 
-		// Require authentication for all REST requests
+		// Require authentication for all REST requests.
 		if ( ! empty( $settings['require_auth_rest'] ) && ! is_user_logged_in() ) {
+			if ( ! empty( $settings['jwt_auth_enabled'] ) ) {
+				if ( $this->is_jwt_public_route() ) {
+					return $result;
+				}
+
+				if ( $this->has_bearer_authorization_header() ) {
+					// Let jwt_authenticate() validate the token.
+					return $result;
+				}
+			}
+
 			return new WP_Error(
 				'rest_authentication_required',
 				__( 'Authentication required for API access.', 'nexifymy-security' ),
@@ -123,12 +134,8 @@ class NexifyMy_Security_API_Security {
 			return $result;
 		}
 
-		// Check for JWT token in Authorization header
-		$auth_header = isset( $_SERVER['HTTP_AUTHORIZATION'] ) ? $_SERVER['HTTP_AUTHORIZATION'] : '';
-		if ( empty( $auth_header ) ) {
-			$auth_header = isset( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ) ? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] : '';
-		}
-
+		// Check for JWT token in Authorization header.
+		$auth_header = $this->get_authorization_header();
 		if ( empty( $auth_header ) ) {
 			return $result;
 		}
@@ -153,6 +160,76 @@ class NexifyMy_Security_API_Security {
 		wp_set_current_user( $user_id );
 
 		return true;
+	}
+
+	/**
+	 * Determine if current request targets JWT public routes.
+	 *
+	 * @return bool
+	 */
+	private function is_jwt_public_route() {
+		$route = $this->get_current_rest_route();
+		if ( '' === $route ) {
+			return false;
+		}
+
+		$route = untrailingslashit( $route );
+		return in_array(
+			$route,
+			array(
+				'/nexifymy-security/v1/token',
+				'/nexifymy-security/v1/token/validate',
+			),
+			true
+		);
+	}
+
+	/**
+	 * Get normalized REST route for current request.
+	 *
+	 * @return string
+	 */
+	private function get_current_rest_route() {
+		$route = isset( $_GET['rest_route'] ) ? sanitize_text_field( wp_unslash( $_GET['rest_route'] ) ) : '';
+		if ( '' === $route && isset( $_SERVER['REQUEST_URI'] ) ) {
+			$request_path = wp_parse_url( wp_unslash( $_SERVER['REQUEST_URI'] ), PHP_URL_PATH );
+			$prefix       = '/' . trim( rest_get_url_prefix(), '/' ) . '/';
+			if ( is_string( $request_path ) ) {
+				$position = strpos( $request_path, $prefix );
+				if ( false !== $position ) {
+					$route = substr( $request_path, $position + strlen( $prefix ) - 1 );
+				}
+			}
+		}
+
+		if ( '' === $route ) {
+			return '';
+		}
+
+		return '/' . ltrim( (string) $route, '/' );
+	}
+
+	/**
+	 * Determine if request carries a Bearer token.
+	 *
+	 * @return bool
+	 */
+	private function has_bearer_authorization_header() {
+		$auth_header = $this->get_authorization_header();
+		return 0 === stripos( $auth_header, 'Bearer ' );
+	}
+
+	/**
+	 * Get Authorization header value.
+	 *
+	 * @return string
+	 */
+	private function get_authorization_header() {
+		$auth_header = isset( $_SERVER['HTTP_AUTHORIZATION'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_AUTHORIZATION'] ) ) : '';
+		if ( empty( $auth_header ) ) {
+			$auth_header = isset( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ) ) : '';
+		}
+		return $auth_header;
 	}
 
 	/**
@@ -406,8 +483,7 @@ class NexifyMy_Security_API_Security {
 			return;
 		}
 
-		$origin = isset( $_SERVER['HTTP_ORIGIN'] ) ? $_SERVER['HTTP_ORIGIN'] : '';
-
+		$origin = isset( $_SERVER['HTTP_ORIGIN'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_ORIGIN'] ) ) : '';
 		if ( in_array( $origin, $allowed_origins, true ) || in_array( '*', $allowed_origins, true ) ) {
 			header( 'Access-Control-Allow-Origin: ' . $origin );
 			header( 'Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS' );
@@ -429,7 +505,7 @@ class NexifyMy_Security_API_Security {
 		$log_data = array(
 			'ip'      => $this->get_client_ip(),
 			'route'   => $route,
-			'method'  => isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET',
+			'method'  => isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : 'GET',
 			'user_id' => get_current_user_id(),
 		);
 
@@ -492,8 +568,8 @@ class NexifyMy_Security_API_Security {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$settings = isset( $_POST['settings'] ) ? $_POST['settings'] : array();
-
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Array values are sanitized below.
+		$settings = isset( $_POST['settings'] ) && is_array( $_POST['settings'] ) ? wp_unslash( $_POST['settings'] ) : array();
 		// Sanitize
 		$sanitized = array(
 			'enabled'                => ! empty( $settings['enabled'] ),

@@ -122,7 +122,7 @@
   /**
    * Authenticate with a passkey.
    */
-  async function authenticatePasskey(username) {
+  async function authenticatePasskey() {
     try {
       // Get authentication options from server.
       const optionsResponse = await $.ajax({
@@ -131,7 +131,6 @@
         data: {
           action: "nexifymy_passkey_auth_options",
           nonce: nexifymyPasskey.nonce,
-          username: username || "",
         },
       });
 
@@ -249,8 +248,7 @@
             nexifymyPasskey.strings.authenticating
         );
 
-      const username = $("#user_login").val() || "";
-      const result = await authenticatePasskey(username);
+      const result = await authenticatePasskey();
 
       if (result.success && result.redirectUrl) {
         window.location.href = result.redirectUrl;

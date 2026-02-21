@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class NexifyMy_Security_Compliance {
-
 	/**
 	 * Option key for report history.
 	 */
@@ -22,14 +21,13 @@ class NexifyMy_Security_Compliance {
 
 	/**
 	 * Compliance report table suffix.
-	 */
+	*/
 	const COMPLIANCE_REPORTS_TABLE = 'nexifymy_compliance_reports';
 
 	/**
 	 * GDPR request table suffix.
-	 */
+	*/
 	const GDPR_REQUESTS_TABLE = 'nexifymy_gdpr_requests';
-
 	/**
 	 * Default settings.
 	 */
@@ -55,11 +53,11 @@ class NexifyMy_Security_Compliance {
 	 * Initialize the module.
 	 */
 	public function init() {
+
 		$this->define_compliance_checks();
 		$this->maybe_create_tables();
 
 		$settings = $this->get_settings();
-
 		if ( empty( $settings['enabled'] ) ) {
 			return;
 		}
@@ -106,6 +104,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function maybe_create_tables() {
+
 		global $wpdb;
 
 		if ( empty( $wpdb ) || ! function_exists( 'dbDelta' ) ) {
@@ -157,7 +156,6 @@ class NexifyMy_Security_Compliance {
 		dbDelta( $reports_sql );
 		dbDelta( $requests_sql );
 	}
-
 	/**
 	 * Get module settings.
 	 *
@@ -449,6 +447,7 @@ class NexifyMy_Security_Compliance {
 	}
 
 	private function check_db_prefix() {
+
 		global $wpdb;
 		return $wpdb->prefix !== 'wp_';
 	}
@@ -460,6 +459,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function escape_identifier( $identifier ) {
+
 		return '`' . str_replace( '`', '``', (string) $identifier ) . '`';
 	}
 
@@ -470,6 +470,7 @@ class NexifyMy_Security_Compliance {
 	 * @return bool
 	 */
 	private function table_exists( $table_name ) {
+
 		global $wpdb;
 
 		$table_name = esc_sql( (string) $table_name );
@@ -484,6 +485,7 @@ class NexifyMy_Security_Compliance {
 	 * @return bool
 	 */
 	private function is_textual_column_type( $column_type ) {
+
 		$type = strtolower( (string) $column_type );
 
 		return false !== strpos( $type, 'char' )
@@ -501,6 +503,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function get_pii_patterns() {
+
 		return array(
 			'email'       => '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}',
 			'phone'       => '[+]?[0-9][0-9\\-\\(\\)\\s\\.]{7,}',
@@ -517,6 +520,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string[]
 	 */
 	private function detect_pii_types_from_column( $column_name ) {
+
 		$name = strtolower( (string) $column_name );
 
 		$type_map = array(
@@ -553,6 +557,7 @@ class NexifyMy_Security_Compliance {
 	 * @return int
 	 */
 	private function count_pii_matches( $table, $column, $pii_type ) {
+
 		global $wpdb;
 
 		$table_sql  = $this->escape_identifier( $table );
@@ -561,7 +566,7 @@ class NexifyMy_Security_Compliance {
 		$where_sql  = "{$column_sql} IS NOT NULL AND {$column_sql} <> ''";
 
 		if ( isset( $patterns[ $pii_type ] ) ) {
-			$pattern  = esc_sql( $patterns[ $pii_type ] );
+			$pattern    = esc_sql( $patterns[ $pii_type ] );
 			$where_sql .= " AND {$column_sql} REGEXP '{$pattern}'";
 		}
 
@@ -575,6 +580,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function scan_for_pii() {
+
 		global $wpdb;
 
 		$tables  = $wpdb->get_col( 'SHOW TABLES' );
@@ -616,7 +622,7 @@ class NexifyMy_Security_Compliance {
 				}
 
 				if ( ! empty( $column_hits ) ) {
-					$table_results[ $column_name ] = $column_hits;
+						$table_results[ $column_name ] = $column_hits;
 				}
 			}
 
@@ -634,6 +640,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function discover_third_party_services() {
+
 		global $wpdb;
 
 		$services = array();
@@ -681,6 +688,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function collect_external_script_domains() {
+
 		$domains = array();
 
 		if ( isset( $GLOBALS['nexifymy_supply_chain'] ) && method_exists( $GLOBALS['nexifymy_supply_chain'], 'get_cached_external_scripts' ) ) {
@@ -713,12 +721,13 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function discover_rest_endpoints() {
+
 		$endpoints = array();
 
 		if ( function_exists( 'rest_get_server' ) ) {
 			$server = rest_get_server();
 			if ( $server && method_exists( $server, 'get_routes' ) ) {
-				$routes = array_keys( (array) $server->get_routes() );
+				$routes    = array_keys( (array) $server->get_routes() );
 				$endpoints = array_slice( $routes, 0, 300 );
 			}
 		}
@@ -734,10 +743,11 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function map_location_purpose( $table, $column ) {
+
 		$location = strtolower( $table . '.' . $column );
 
 		if ( false !== strpos( $location, 'users' ) || false !== strpos( $location, 'usermeta' ) ) {
-			return 'User authentication and account management';
+				return 'User authentication and account management';
 		}
 		if ( false !== strpos( $location, 'comment' ) ) {
 			return 'Comment moderation and anti-spam analysis';
@@ -763,6 +773,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function map_retention_policy( $table, $column ) {
+
 		$location = strtolower( $table . '.' . $column );
 
 		if ( false !== strpos( $location, 'log' ) || false !== strpos( $location, 'traffic' ) ) {
@@ -785,6 +796,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function map_legal_basis( $pii_type ) {
+
 		switch ( $pii_type ) {
 			case 'email':
 			case 'name':
@@ -807,6 +819,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function map_data_flows() {
+
 		global $wpdb;
 
 		$pii_storage          = $this->scan_for_pii();
@@ -821,19 +834,19 @@ class NexifyMy_Security_Compliance {
 		);
 
 		return array(
-			'generated_at' => current_time( 'mysql' ),
-			'stored'       => $pii_storage,
-			'transmitted'  => array(
+			'generated_at'          => current_time( 'mysql' ),
+			'stored'                => $pii_storage,
+			'transmitted'           => array(
 				'rest_endpoints'          => $rest_endpoints,
 				'email_transmissions'     => array( 'wp_mail', 'admin alerts', 'scheduled reports' ),
 				'third_party_services'    => $third_party_services,
 				'external_script_domains' => $external_domains,
 			),
-			'logged'       => array_filter( $logged_locations ),
+			'logged'                => array_filter( $logged_locations ),
 			'cross_border_transfer' => array(
 				'detected' => ! empty( $third_party_services ) || ! empty( $external_domains ),
 				'note'     => ( ! empty( $third_party_services ) || ! empty( $external_domains ) )
-					? 'Review SCC/DPA terms for third-party processors and CDNs.'
+				? 'Review SCC/DPA terms for third-party processors and CDNs.'
 					: 'No obvious cross-border processors detected from plugin telemetry.',
 			),
 		);
@@ -846,6 +859,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array|string
 	 */
 	public function generate_data_map_report( $format = 'array' ) {
+
 		$data_flows = $this->map_data_flows();
 		$stored     = $data_flows['stored'] ?? array();
 		$sharing    = $data_flows['transmitted']['third_party_services'] ?? array();
@@ -857,21 +871,21 @@ class NexifyMy_Security_Compliance {
 				foreach ( $types as $pii_type => $count ) {
 					if ( ! isset( $records_by_type[ $pii_type ] ) ) {
 						$records_by_type[ $pii_type ] = array(
-							'data_element'         => ucwords( str_replace( '_', ' ', $pii_type ) ),
-							'location'             => array(),
-							'purpose'              => array(),
-							'retention'            => array(),
-							'third_party_sharing'  => array(),
-							'legal_basis'          => $this->map_legal_basis( $pii_type ),
-							'rows_detected'        => 0,
+							'data_element'        => ucwords( str_replace( '_', ' ', $pii_type ) ),
+							'location'            => array(),
+							'purpose'             => array(),
+							'retention'           => array(),
+							'third_party_sharing' => array(),
+							'legal_basis'         => $this->map_legal_basis( $pii_type ),
+							'rows_detected'       => 0,
 						);
 					}
 
-					$records_by_type[ $pii_type ]['location'][]           = $table . '.' . $column;
-					$records_by_type[ $pii_type ]['purpose'][]            = $this->map_location_purpose( $table, $column );
-					$records_by_type[ $pii_type ]['retention'][]          = $this->map_retention_policy( $table, $column );
-					$records_by_type[ $pii_type ]['rows_detected']       += (int) $count;
-					$records_by_type[ $pii_type ]['third_party_sharing']  = array_values( array_unique( $sharing ) );
+					$records_by_type[ $pii_type ]['location'][]          = $table . '.' . $column;
+					$records_by_type[ $pii_type ]['purpose'][]           = $this->map_location_purpose( $table, $column );
+					$records_by_type[ $pii_type ]['retention'][]         = $this->map_retention_policy( $table, $column );
+					$records_by_type[ $pii_type ]['rows_detected']      += (int) $count;
+					$records_by_type[ $pii_type ]['third_party_sharing'] = array_values( array_unique( $sharing ) );
 				}
 			}
 		}
@@ -916,6 +930,7 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function render_data_map_html( $data_map ) {
+
 		ob_start();
 		?>
 		<!DOCTYPE html>
@@ -951,8 +966,12 @@ class NexifyMy_Security_Compliance {
 					</tr>
 				</thead>
 				<tbody>
-				<?php if ( ! empty( $data_map['records'] ) ) : ?>
-					<?php foreach ( $data_map['records'] as $record ) : ?>
+				<?php
+				if ( ! empty( $data_map['records'] ) ) :
+					?>
+					<?php
+					foreach ( $data_map['records'] as $record ) :
+						?>
 						<tr>
 							<td><?php echo esc_html( $record['data_element'] ?? '' ); ?></td>
 							<td><?php echo esc_html( $record['location'] ?? '' ); ?></td>
@@ -962,7 +981,9 @@ class NexifyMy_Security_Compliance {
 							<td><?php echo esc_html( $record['legal_basis'] ?? '' ); ?></td>
 						</tr>
 					<?php endforeach; ?>
-				<?php else : ?>
+					<?php
+				else :
+					?>
 					<tr>
 						<td colspan="6">No PII records detected.</td>
 					</tr>
@@ -983,9 +1004,9 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function export_data_map_report( $format = 'pdf' ) {
+
 		$data_map    = $this->generate_data_map_report( 'array' );
-		$upload_dir  = wp_upload_dir();
-		$reports_dir = trailingslashit( $upload_dir['basedir'] ) . self::REPORTS_DIR;
+		$reports_dir = $this->get_reports_directory();
 
 		if ( ! $this->ensure_reports_directory_security( $reports_dir ) ) {
 			return array(
@@ -998,7 +1019,6 @@ class NexifyMy_Security_Compliance {
 			);
 		}
 
-		$timestamp = date( 'Y-m-d-His' );
 		$result    = array(
 			'format'   => $format,
 			'file'     => '',
@@ -1008,20 +1028,20 @@ class NexifyMy_Security_Compliance {
 		);
 
 		if ( 'json' === $format ) {
-			$filename = "gdpr-data-map-{$timestamp}.json";
+			$filename = $this->generate_secure_report_filename( 'gdpr-data-map', 'json' );
 			$filepath = trailingslashit( $reports_dir ) . $filename;
 			file_put_contents( $filepath, wp_json_encode( $data_map, JSON_PRETTY_PRINT ) );
 			$result['file'] = $filepath;
-			$result['url']  = trailingslashit( $upload_dir['baseurl'] ) . self::REPORTS_DIR . '/' . $filename;
+			$result['url']  = $this->build_authenticated_report_url( array( 'filename' => $filename ) );
 			$result['mime'] = 'application/json';
 		} else {
 			$html     = $this->render_data_map_html( $data_map );
-			$filename = "gdpr-data-map-{$timestamp}.html";
+			$filename = $this->generate_secure_report_filename( 'gdpr-data-map', 'html' );
 			$filepath = trailingslashit( $reports_dir ) . $filename;
 			file_put_contents( $filepath, $html );
 
 			$result['file'] = $filepath;
-			$result['url']  = trailingslashit( $upload_dir['baseurl'] ) . self::REPORTS_DIR . '/' . $filename;
+			$result['url']  = $this->build_authenticated_report_url( array( 'filename' => $filename ) );
 			$result['mime'] = 'text/html';
 
 			if ( 'pdf' === $format ) {
@@ -1046,6 +1066,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	private function save_structured_report( $report_id, $report_type, $data, $score = 0, $file_path = '' ) {
+
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . self::COMPLIANCE_REPORTS_TABLE;
@@ -1073,6 +1094,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function generate_scheduled_data_map_report() {
+
 		$data_map = $this->generate_data_map_report( 'array' );
 		$this->save_structured_report( $data_map['report_id'], 'data_map', $data_map );
 	}
@@ -1084,6 +1106,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function register_privacy_erasers( $erasers ) {
+
 		$erasers['nexifymy_security_logs_eraser'] = array(
 			'eraser_friendly_name' => __( 'NexifyMy Security Logs', 'nexifymy-security' ),
 			'callback'             => array( $this, 'nexifymy_security_logs_eraser' ),
@@ -1100,6 +1123,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function nexifymy_security_logs_eraser( $email_address, $page = 1 ) {
+
 		$user_id = $this->resolve_user_by_email( $email_address );
 		if ( $user_id <= 0 ) {
 			return array(
@@ -1127,6 +1151,7 @@ class NexifyMy_Security_Compliance {
 	 * @return int
 	 */
 	private function resolve_user_by_email( $email_address ) {
+
 		$user = function_exists( 'get_user_by' ) ? get_user_by( 'email', $email_address ) : null;
 		if ( $user && ! empty( $user->ID ) ) {
 			return (int) $user->ID;
@@ -1151,6 +1176,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function erase_user_data( $user_id, $include_comments = false ) {
+
 		global $wpdb;
 
 		$user_id = absint( $user_id );
@@ -1161,11 +1187,11 @@ class NexifyMy_Security_Compliance {
 			);
 		}
 
-		$users_table       = $wpdb->prefix . 'users';
-		$usermeta_table    = $wpdb->prefix . 'usermeta';
-		$comments_table    = $wpdb->prefix . 'comments';
-		$activity_table    = $wpdb->prefix . 'nexifymy_activity_log';
-		$threat_table      = $wpdb->prefix . 'nexifymy_threat_log';
+		$users_table    = $wpdb->prefix . 'users';
+		$usermeta_table = $wpdb->prefix . 'usermeta';
+		$comments_table = $wpdb->prefix . 'comments';
+		$activity_table = $wpdb->prefix . 'nexifymy_activity_log';
+		$threat_table   = $wpdb->prefix . 'nexifymy_threat_log';
 
 		$placeholder_email = 'user' . $user_id . '@deleted.local';
 		$placeholder_name  = 'Deleted User #' . $user_id;
@@ -1179,15 +1205,15 @@ class NexifyMy_Security_Compliance {
 		}
 
 		if ( $this->table_exists( $users_table ) ) {
-			$wpdb->query(
-				"UPDATE {$this->escape_identifier( $users_table )}
+				$wpdb->query(
+					"UPDATE {$this->escape_identifier( $users_table )}
 				SET user_email = '" . esc_sql( $placeholder_email ) . "',
 					user_login = '" . esc_sql( 'deleted_user_' . $user_id ) . "',
 					display_name = '" . esc_sql( $placeholder_name ) . "',
 					user_nicename = '" . esc_sql( 'deleted-user-' . $user_id ) . "',
 					user_url = ''
 				WHERE ID = {$user_id}"
-			);
+				);
 		}
 
 		if ( $this->table_exists( $usermeta_table ) ) {
@@ -1205,14 +1231,14 @@ class NexifyMy_Security_Compliance {
 					"DELETE FROM {$this->escape_identifier( $comments_table )} WHERE user_id = {$user_id}"
 				);
 			} else {
-				$wpdb->query(
-					"UPDATE {$this->escape_identifier( $comments_table )}
+					$wpdb->query(
+						"UPDATE {$this->escape_identifier( $comments_table )}
 					SET comment_author = '" . esc_sql( $placeholder_name ) . "',
 						comment_author_email = '" . esc_sql( $placeholder_email ) . "',
 						comment_author_IP = '" . esc_sql( $deleted_ip ) . "',
 						comment_author_url = ''
 					WHERE user_id = {$user_id}"
-				);
+					);
 			}
 		}
 
@@ -1282,6 +1308,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	private function anonymize_woocommerce_data( $user_id, $placeholder_email, $placeholder_name ) {
+
 		global $wpdb;
 
 		$user_id        = absint( $user_id );
@@ -1326,6 +1353,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function request_third_party_erasure( $user_email, $service ) {
+
 		$service  = sanitize_key( $service );
 		$email    = sanitize_email( $user_email );
 		$settings = $this->get_integrations_settings();
@@ -1346,30 +1374,30 @@ class NexifyMy_Security_Compliance {
 
 			if ( ! empty( $dc ) ) {
 				$subscriber_hash = md5( strtolower( $email ) );
-				$url = sprintf(
+				$url             = sprintf(
 					'https://%s.api.mailchimp.com/3.0/lists/%s/members/%s/actions/delete-permanent',
 					rawurlencode( $dc ),
 					rawurlencode( $settings['mailchimp_audience_id'] ),
 					rawurlencode( $subscriber_hash )
 				);
 
-				wp_remote_post(
-					$url,
-					array(
-						'timeout' => 15,
-						'headers' => array(
-							'Authorization' => 'apikey ' . $settings['mailchimp_api_key'],
-						),
-					)
-				);
+					wp_remote_post(
+						$url,
+						array(
+							'timeout' => 15,
+							'headers' => array(
+								'Authorization' => 'apikey ' . $settings['mailchimp_api_key'],
+							),
+						)
+					);
 
-				$result['status']  = 'requested';
-				$result['message'] = __( 'Mailchimp deletion request sent.', 'nexifymy-security' );
+					$result['status'] = 'requested';
+				$result['message']    = __( 'Mailchimp deletion request sent.', 'nexifymy-security' );
 			}
 		} elseif ( 'stripe' === $service && ! empty( $settings['stripe_secret_key'] ) ) {
-			// Stripe does not support hard customer deletion for all records; this request is logged for manual follow-up.
-			$result['status']  = 'manual_review';
-			$result['message'] = __( 'Stripe erasure requires manual API follow-up for compliance records.', 'nexifymy-security' );
+					// Stripe does not support hard customer deletion for all records; this request is logged for manual follow-up.
+			$result['status']          = 'manual_review';
+					$result['message'] = __( 'Stripe erasure requires manual API follow-up for compliance records.', 'nexifymy-security' );
 		} elseif ( 'google_analytics' === $service ) {
 			$result['status']  = 'manual_review';
 			$result['message'] = __( 'Google Analytics user deletion API request must be configured externally.', 'nexifymy-security' );
@@ -1386,9 +1414,10 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function get_integrations_settings() {
+
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		return isset( $settings['integrations'] ) && is_array( $settings['integrations'] )
-			? $settings['integrations']
+		? $settings['integrations']
 			: array();
 	}
 
@@ -1399,6 +1428,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function verify_erasure( $user_id ) {
+
 		global $wpdb;
 
 		$user_id    = absint( $user_id );
@@ -1459,14 +1489,13 @@ class NexifyMy_Security_Compliance {
 	 * @return string
 	 */
 	private function generate_erasure_certificate( $user_id, $verification ) {
-		$upload_dir  = wp_upload_dir();
-		$reports_dir = trailingslashit( $upload_dir['basedir'] ) . self::REPORTS_DIR;
 
-		if ( ! is_dir( $reports_dir ) ) {
-			wp_mkdir_p( $reports_dir );
+		$reports_dir = $this->get_reports_directory();
+		if ( ! $this->ensure_reports_directory_security( $reports_dir ) ) {
+			return '';
 		}
 
-		$filename = 'gdpr-erasure-certificate-' . absint( $user_id ) . '-' . date( 'Y-m-d-His' ) . '.html';
+		$filename = $this->generate_secure_report_filename( 'gdpr-erasure-certificate-' . absint( $user_id ), 'html' );
 		$filepath = trailingslashit( $reports_dir ) . $filename;
 
 		ob_start();
@@ -1482,6 +1511,7 @@ class NexifyMy_Security_Compliance {
 			<pre><?php echo esc_html( wp_json_encode( $verification['checks'] ?? array(), JSON_PRETTY_PRINT ) ); ?></pre>
 		</body>
 		</html>
+		
 		<?php
 		file_put_contents( $filepath, (string) ob_get_clean() );
 
@@ -1496,8 +1526,9 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	private function notify_erasure_completion( $to_email, $certificate_path = '' ) {
-		$subject = sprintf( '[%s] Data Erasure Completed', get_bloginfo( 'name' ) );
-		$message = "Your personal data erasure request has been completed.\n\n";
+
+		$subject  = sprintf( '[%s] Data Erasure Completed', get_bloginfo( 'name' ) );
+		$message  = "Your personal data erasure request has been completed.\n\n";
 		$message .= 'If you need additional verification, reply to this message.';
 
 		$attachments = array();
@@ -1520,6 +1551,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	private function log_gdpr_request( $user_id, $request_type, $status = 'pending', $details = array(), $completed_by = 0, $requested_at = '' ) {
+
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . self::GDPR_REQUESTS_TABLE;
@@ -1549,6 +1581,7 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	public function get_recent_gdpr_requests( $limit = 50 ) {
+
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . self::GDPR_REQUESTS_TABLE;
@@ -1564,7 +1597,6 @@ class NexifyMy_Security_Compliance {
 			ARRAY_A
 		);
 	}
-
 	/*
 	 * =========================================================================
 	 * REPORT GENERATION
@@ -1652,7 +1684,7 @@ class NexifyMy_Security_Compliance {
 
 		// Add performance metrics if enabled.
 		if ( ! empty( $settings['include_performance'] ) ) {
-			$report['performance'] = $this->get_performance_metrics();
+				$report['performance'] = $this->get_performance_metrics();
 		}
 
 		// Add GDPR data map section when enabled.
@@ -1666,7 +1698,6 @@ class NexifyMy_Security_Compliance {
 
 		return $report;
 	}
-
 	/**
 	 * Get weight value for scoring.
 	 *
@@ -1714,8 +1745,8 @@ class NexifyMy_Security_Compliance {
 	 * @return array
 	 */
 	private function get_threat_summary() {
-		global $wpdb;
 
+		global $wpdb;
 		$table        = $wpdb->prefix . 'nexifymy_behavior_log';
 		$table_exists = $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) === $table;
 
@@ -1757,7 +1788,6 @@ class NexifyMy_Security_Compliance {
 
 		return $summary;
 	}
-
 	/**
 	 * Get performance metrics.
 	 *
@@ -1774,21 +1804,137 @@ class NexifyMy_Security_Compliance {
 	}
 
 	/**
+	 * Get absolute reports directory path.
+	 *
+	 * @return string
+	 */
+	private function get_reports_directory() {
+		$upload_dir = wp_upload_dir();
+		return trailingslashit( $upload_dir['basedir'] ) . self::REPORTS_DIR;
+	}
+
+	/**
+	 * Generate unguessable report filename.
+	 *
+	 * @param string $prefix Filename prefix.
+	 * @param string $extension File extension.
+	 * @return string
+	 */
+	private function generate_secure_report_filename( $prefix, $extension ) {
+		$prefix    = sanitize_file_name( (string) $prefix );
+		$extension = ltrim( sanitize_key( (string) $extension ), '.' );
+		$token     = strtolower( wp_generate_password( 16, false, false ) );
+		return sprintf( '%1$s-%2$s-%3$s.%4$s', $prefix, gmdate( 'YmdHis' ), $token, $extension );
+	}
+
+	/**
+	 * Build authenticated admin-ajax download URL.
+	 *
+	 * @param array $args URL arguments.
+	 * @return string
+	 */
+	private function build_authenticated_report_url( $args = array() ) {
+		$args = wp_parse_args(
+			(array) $args,
+			array(
+				'action'   => 'nexifymy_download_report',
+				'nonce'    => wp_create_nonce( 'nexifymy_security_nonce' ),
+				'download' => 1,
+			)
+		);
+
+		return add_query_arg( $args, admin_url( 'admin-ajax.php' ) );
+	}
+
+	/**
+	 * Resolve a report filename to a safe absolute path.
+	 *
+	 * @param string $filename Filename to resolve.
+	 * @return string
+	 */
+	private function get_report_filepath( $filename ) {
+		$filename = sanitize_file_name( (string) $filename );
+		if ( '' === $filename ) {
+			return '';
+		}
+		$extension = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ) );
+		if ( ! in_array( $extension, array( 'html', 'json', 'pdf' ), true ) ) {
+			return '';
+		}
+
+		$reports_dir = $this->get_reports_directory();
+		$filepath    = trailingslashit( $reports_dir ) . $filename;
+		if ( ! file_exists( $filepath ) ) {
+			return '';
+		}
+
+		$real_dir  = realpath( $reports_dir );
+		$real_file = realpath( $filepath );
+		if ( false === $real_dir || false === $real_file ) {
+			return '';
+		}
+
+		$real_dir  = trailingslashit( wp_normalize_path( $real_dir ) );
+		$real_file = wp_normalize_path( $real_file );
+		if ( 0 !== strpos( $real_file, $real_dir ) ) {
+			return '';
+		}
+
+		return $real_file;
+	}
+
+	/**
+	 * Stream report file to browser.
+	 *
+	 * @param string $filepath Absolute file path.
+	 * @return void
+	 */
+	private function stream_report_file( $filepath ) {
+		$filepath = (string) $filepath;
+		if ( '' === $filepath || ! file_exists( $filepath ) ) {
+			wp_die( esc_html__( 'Report file not found.', 'nexifymy-security' ), 404 );
+		}
+
+		$filename = basename( $filepath );
+		$mime     = 'text/html';
+		if ( function_exists( 'mime_content_type' ) ) {
+			$detected = mime_content_type( $filepath );
+			if ( is_string( $detected ) && '' !== $detected ) {
+				$mime = $detected;
+			}
+		} elseif ( function_exists( 'wp_check_filetype' ) ) {
+			$type = wp_check_filetype( $filename );
+			if ( ! empty( $type['type'] ) ) {
+				$mime = $type['type'];
+			}
+		}
+
+		if ( function_exists( 'nocache_headers' ) ) {
+			nocache_headers();
+		}
+		header( 'X-Content-Type-Options: nosniff' );
+		header( 'Content-Description: File Transfer' );
+		header( 'Content-Type: ' . $mime );
+		header( 'Content-Disposition: attachment; filename="' . $filename . '"' );
+		header( 'Content-Length: ' . filesize( $filepath ) );
+		readfile( $filepath );
+		exit;
+	}
+
+	/**
 	 * Save report to file and database.
 	 *
 	 * @param array $report Report data.
 	 */
 	private function save_report( $report ) {
-		// Save to uploads directory.
-		$upload_dir  = wp_upload_dir();
-		$reports_dir = $upload_dir['basedir'] . '/' . self::REPORTS_DIR;
+
+		$reports_dir = $this->get_reports_directory();
 
 		if ( ! $this->ensure_reports_directory_security( $reports_dir ) ) {
 			return;
 		}
-
-		$filename = 'security-audit-' . date( 'Y-m-d-His' ) . '.html';
-		$filepath = $reports_dir . '/' . $filename;
+		$filename = $this->generate_secure_report_filename( 'security-audit', 'html' );
+		$filepath = trailingslashit( $reports_dir ) . $filename;
 
 		// Generate HTML report.
 		$html = $this->generate_html_report( $report );
@@ -1810,7 +1956,6 @@ class NexifyMy_Security_Compliance {
 		}
 
 		update_option( self::REPORTS_OPTION, $reports, false );
-
 		// Email if enabled.
 		$settings = $this->get_settings();
 		if ( ! empty( $settings['email_reports'] ) ) {
@@ -1825,6 +1970,7 @@ class NexifyMy_Security_Compliance {
 	 * @return bool
 	 */
 	private function ensure_reports_directory_security( $reports_dir ) {
+
 		$reports_dir = (string) $reports_dir;
 		if ( '' === $reports_dir ) {
 			return false;
@@ -1834,11 +1980,16 @@ class NexifyMy_Security_Compliance {
 			return false;
 		}
 
-		$htaccess_path = trailingslashit( $reports_dir ) . '.htaccess';
-		$index_path    = trailingslashit( $reports_dir ) . 'index.php';
+		$htaccess_path   = trailingslashit( $reports_dir ) . '.htaccess';
+		$web_config_path = trailingslashit( $reports_dir ) . 'web.config';
+		$index_path      = trailingslashit( $reports_dir ) . 'index.php';
 
 		if ( ! file_exists( $htaccess_path ) ) {
 			file_put_contents( $htaccess_path, "Deny from all\n" );
+		}
+		if ( ! file_exists( $web_config_path ) ) {
+			$web_config = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<configuration>\n\t<system.webServer>\n\t\t<authorization>\n\t\t\t<deny users=\"*\" />\n\t\t</authorization>\n\t</system.webServer>\n</configuration>\n";
+			file_put_contents( $web_config_path, $web_config );
 		}
 		if ( ! file_exists( $index_path ) ) {
 			file_put_contents( $index_path, "<?php // Silence is golden\n" );
@@ -1846,7 +1997,6 @@ class NexifyMy_Security_Compliance {
 
 		return true;
 	}
-
 	/**
 	 * Generate HTML report.
 	 *
@@ -1919,7 +2069,9 @@ class NexifyMy_Security_Compliance {
 			</div>
 			<?php endforeach; ?>
 
-			<?php if ( ! empty( $report['threats']['available'] ) ) : ?>
+			<?php
+			if ( ! empty( $report['threats']['available'] ) ) :
+				?>
 			<div class="section">
 				<h3>Threat Summary (Last 30 Days)</h3>
 				<div class="metrics">
@@ -1939,7 +2091,9 @@ class NexifyMy_Security_Compliance {
 			</div>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $report['threats']['forecast']['predictions'] ) ) : ?>
+			<?php
+			if ( ! empty( $report['threats']['forecast']['predictions'] ) ) :
+				?>
 			<div class="section">
 				<h3>Threat Forecast (Predictive Hunting)</h3>
 				<?php
@@ -1959,7 +2113,9 @@ class NexifyMy_Security_Compliance {
 						?>
 					</strong>
 				</p>
-				<?php if ( ! empty( $forecast_risk['risk_score'] ) ) : ?>
+				<?php
+				if ( ! empty( $forecast_risk['risk_score'] ) ) :
+					?>
 					<p>
 						Risk Score:
 						<strong><?php echo esc_html( (int) $forecast_risk['risk_score'] ); ?>/100</strong>
@@ -1967,7 +2123,9 @@ class NexifyMy_Security_Compliance {
 					</p>
 				<?php endif; ?>
 				<ol>
-					<?php foreach ( array_slice( $forecast_predictions, 0, 3 ) as $prediction ) : ?>
+					<?php
+					foreach ( array_slice( $forecast_predictions, 0, 3 ) as $prediction ) :
+						?>
 						<li>
 							<?php
 							echo esc_html(
@@ -1981,7 +2139,9 @@ class NexifyMy_Security_Compliance {
 			</div>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $report['threats']['latest_simulation']['analysis'] ) ) : ?>
+			<?php
+			if ( ! empty( $report['threats']['latest_simulation']['analysis'] ) ) :
+				?>
 			<div class="section">
 				<h3>Latest Simulated Attack Report</h3>
 				<?php
@@ -1996,7 +2156,9 @@ class NexifyMy_Security_Compliance {
 			</div>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $report['performance'] ) ) : ?>
+			<?php
+			if ( ! empty( $report['performance'] ) ) :
+				?>
 			<div class="section">
 				<h3>Performance Metrics</h3>
 				<div class="metrics">
@@ -2016,7 +2178,9 @@ class NexifyMy_Security_Compliance {
 			</div>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $report['data_map']['records'] ) ) : ?>
+			<?php
+			if ( ! empty( $report['data_map']['records'] ) ) :
+				?>
 			<div class="section">
 				<h3>Data Map Snapshot (GDPR Article 30)</h3>
 				<table class="system-table">
@@ -2025,7 +2189,9 @@ class NexifyMy_Security_Compliance {
 						<th class="system-cell system-cell-border">Location</th>
 						<th class="system-cell system-cell-border">Legal Basis</th>
 					</tr>
-					<?php foreach ( array_slice( $report['data_map']['records'], 0, 8 ) as $data_row ) : ?>
+					<?php
+					foreach ( array_slice( $report['data_map']['records'], 0, 8 ) as $data_row ) :
+						?>
 					<tr>
 						<td class="system-cell system-cell-border"><?php echo esc_html( $data_row['data_element'] ?? '' ); ?></td>
 						<td class="system-cell system-cell-border"><?php echo esc_html( $data_row['location'] ?? '' ); ?></td>
@@ -2101,8 +2267,7 @@ class NexifyMy_Security_Compliance {
 		$settings       = $this->get_settings();
 		$retention_days = $settings['retention_days'];
 
-		$upload_dir  = wp_upload_dir();
-		$reports_dir = $upload_dir['basedir'] . '/' . self::REPORTS_DIR;
+		$reports_dir = $this->get_reports_directory();
 
 		if ( ! is_dir( $reports_dir ) ) {
 			return;
@@ -2110,9 +2275,11 @@ class NexifyMy_Security_Compliance {
 
 		$cutoff = time() - ( $retention_days * DAY_IN_SECONDS );
 
-		foreach ( glob( $reports_dir . '/*.html' ) as $file ) {
-			if ( filemtime( $file ) < $cutoff ) {
-				unlink( $file );
+		foreach ( array( '*.html', '*.json', '*.pdf' ) as $pattern ) {
+			foreach ( glob( $reports_dir . '/' . $pattern ) as $file ) {
+				if ( filemtime( $file ) < $cutoff ) {
+					unlink( $file );
+				}
 			}
 		}
 	}
@@ -2157,28 +2324,44 @@ class NexifyMy_Security_Compliance {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$report_id = isset( $_POST['report_id'] ) ? sanitize_text_field( wp_unslash( $_POST['report_id'] ) ) : '';
-		$reports   = $this->get_reports();
+		$is_download = isset( $_REQUEST['download'] ) && '1' === (string) sanitize_text_field( wp_unslash( $_REQUEST['download'] ) );
+		$report_id   = isset( $_REQUEST['report_id'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['report_id'] ) ) : '';
+		$filename    = isset( $_REQUEST['filename'] ) ? sanitize_file_name( wp_unslash( $_REQUEST['filename'] ) ) : '';
 
-		if ( ! isset( $reports[ $report_id ] ) ) {
-			wp_send_json_error( 'Report not found.' );
+		if ( '' !== $report_id ) {
+			$reports = $this->get_reports();
+			if ( ! isset( $reports[ $report_id ]['filename'] ) ) {
+				if ( $is_download ) {
+					wp_die( esc_html__( 'Report not found.', 'nexifymy-security' ), 404 );
+				}
+				wp_send_json_error( 'Report not found.' );
+			}
+			$filename = sanitize_file_name( $reports[ $report_id ]['filename'] );
 		}
 
-		$upload_dir = wp_upload_dir();
-		$filepath   = $upload_dir['basedir'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'];
+		$filepath = $this->get_report_filepath( $filename );
 
-		if ( ! file_exists( $filepath ) ) {
+		if ( '' === $filepath ) {
+			if ( $is_download ) {
+				wp_die( esc_html__( 'Report file not found.', 'nexifymy-security' ), 404 );
+			}
 			wp_send_json_error( 'Report file not found.' );
 		}
 
+		if ( $is_download ) {
+			$this->stream_report_file( $filepath );
+		}
+
+		$url_args = '' !== $report_id ? array( 'report_id' => $report_id ) : array( 'filename' => $filename );
 		wp_send_json_success(
 			array(
-				'url' => $upload_dir['baseurl'] . '/' . self::REPORTS_DIR . '/' . $reports[ $report_id ]['filename'],
+				'url' => $this->build_authenticated_report_url( $url_args ),
 			)
 		);
 	}
 
 	public function ajax_run_compliance_check() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
@@ -2211,6 +2394,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function ajax_get_data_map() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
@@ -2225,6 +2409,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function ajax_export_data_map() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
@@ -2245,6 +2430,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function ajax_erase_user_data() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );
@@ -2273,6 +2459,7 @@ class NexifyMy_Security_Compliance {
 	 * @return void
 	 */
 	public function ajax_verify_erasure() {
+
 		check_ajax_referer( 'nexifymy_security_nonce', 'nonce' );
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( 'Unauthorized' );

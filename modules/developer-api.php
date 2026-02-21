@@ -29,14 +29,14 @@ class NexifyMy_Security_Developer_API {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'                => true,
-		'rest_api_enabled'       => true,
-		'graphql_protection'     => true,
-		'webhooks_enabled'       => true,
-		'require_api_key'        => true,
-		'rate_limit_api'         => 100,  // Requests per minute.
-		'log_api_requests'       => true,
-		'graphql_depth_limit'    => 10,
+		'enabled'                  => true,
+		'rest_api_enabled'         => true,
+		'graphql_protection'       => true,
+		'webhooks_enabled'         => true,
+		'require_api_key'          => true,
+		'rate_limit_api'           => 100,  // Requests per minute.
+		'log_api_requests'         => true,
+		'graphql_depth_limit'      => 10,
 		'graphql_complexity_limit' => 500,
 	);
 
@@ -115,119 +115,167 @@ class NexifyMy_Security_Developer_API {
 	 */
 	public function register_rest_routes() {
 		// Security Status.
-		register_rest_route( self::REST_NAMESPACE, '/status', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_status' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/status',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_status' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Security Score.
-		register_rest_route( self::REST_NAMESPACE, '/score', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_score' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/score',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_score' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Recent Threats.
-		register_rest_route( self::REST_NAMESPACE, '/threats', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_threats' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/threats',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_threats' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Blocked IPs.
-		register_rest_route( self::REST_NAMESPACE, '/blocked', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_blocked' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/blocked',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_blocked' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Block IP.
-		register_rest_route( self::REST_NAMESPACE, '/block', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'api_block_ip' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-			'args'                => array(
-				'ip' => array(
-					'required'          => true,
-					'validate_callback' => function( $param ) {
-						return filter_var( $param, FILTER_VALIDATE_IP );
-					},
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/block',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'api_block_ip' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+				'args'                => array(
+					'ip'     => array(
+						'required'          => true,
+						'validate_callback' => function ( $param ) {
+							return filter_var( $param, FILTER_VALIDATE_IP );
+						},
+					),
+					'reason' => array(
+						'required' => false,
+						'default'  => 'API request',
+					),
 				),
-				'reason' => array(
-					'required' => false,
-					'default'  => 'API request',
-				),
-			),
-		) );
+			)
+		);
 
 		// Unblock IP.
-		register_rest_route( self::REST_NAMESPACE, '/unblock', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'api_unblock_ip' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-			'args'                => array(
-				'ip' => array(
-					'required'          => true,
-					'validate_callback' => function( $param ) {
-						return filter_var( $param, FILTER_VALIDATE_IP );
-					},
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/unblock',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'api_unblock_ip' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+				'args'                => array(
+					'ip' => array(
+						'required'          => true,
+						'validate_callback' => function ( $param ) {
+							return filter_var( $param, FILTER_VALIDATE_IP );
+						},
+					),
 				),
-			),
-		) );
+			)
+		);
 
 		// Trigger Scan.
-		register_rest_route( self::REST_NAMESPACE, '/scan', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'api_trigger_scan' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/scan',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'api_trigger_scan' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Get Scan Results.
-		register_rest_route( self::REST_NAMESPACE, '/scan/results', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_scan_results' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/scan/results',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_scan_results' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Generate Report.
-		register_rest_route( self::REST_NAMESPACE, '/report', array(
-			'methods'             => 'POST',
-			'callback'            => array( $this, 'api_generate_report' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/report',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'api_generate_report' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Get Settings.
-		register_rest_route( self::REST_NAMESPACE, '/settings', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_settings' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/settings',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_settings' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Update Settings.
-		register_rest_route( self::REST_NAMESPACE, '/settings', array(
-			'methods'             => 'PUT',
-			'callback'            => array( $this, 'api_update_settings' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-		) );
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/settings',
+			array(
+				'methods'             => 'PUT',
+				'callback'            => array( $this, 'api_update_settings' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+			)
+		);
 
 		// Audit Log.
-		register_rest_route( self::REST_NAMESPACE, '/logs', array(
-			'methods'             => 'GET',
-			'callback'            => array( $this, 'api_get_logs' ),
-			'permission_callback' => array( $this, 'api_permission_check' ),
-			'args'                => array(
-				'limit' => array(
-					'default' => 50,
+		register_rest_route(
+			self::REST_NAMESPACE,
+			'/logs',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this, 'api_get_logs' ),
+				'permission_callback' => array( $this, 'api_permission_check' ),
+				'args'                => array(
+					'limit'  => array(
+						'default' => 50,
+					),
+					'offset' => array(
+						'default' => 0,
+					),
+					'type'   => array(
+						'default' => '',
+					),
 				),
-				'offset' => array(
-					'default' => 0,
-				),
-				'type' => array(
-					'default' => '',
-				),
-			),
-		) );
+			)
+		);
 	}
 
 	/**
@@ -247,9 +295,14 @@ class NexifyMy_Security_Developer_API {
 		// If API key required, validate it.
 		if ( ! empty( $settings['require_api_key'] ) ) {
 			$api_key = $request->get_header( 'X-NexifyMy-API-Key' );
+			$api_key = is_string( $api_key ) ? trim( $api_key ) : '';
 
 			if ( empty( $api_key ) ) {
-				$api_key = $request->get_param( 'api_key' );
+				return new WP_Error(
+					'missing_api_key_header',
+					'Missing API key. Send the key using the X-NexifyMy-API-Key header.',
+					array( 'status' => 401 )
+				);
 			}
 
 			if ( ! $this->validate_api_key( $api_key ) ) {
@@ -270,9 +323,9 @@ class NexifyMy_Security_Developer_API {
 	 */
 	private function check_rate_limit() {
 		$settings = $this->get_settings();
-		$limit = $settings['rate_limit_api'];
-		$ip = $this->get_client_ip();
-		$key = 'nexifymy_api_rate_' . md5( $ip );
+		$limit    = $settings['rate_limit_api'];
+		$ip       = $this->get_client_ip();
+		$key      = 'nexifymy_api_rate_' . md5( $ip );
 
 		$count = get_transient( $key );
 
@@ -326,10 +379,10 @@ class NexifyMy_Security_Developer_API {
 	 * @return array Key data.
 	 */
 	public function generate_api_key( $name ) {
-		$key = 'nxs_' . bin2hex( random_bytes( 32 ) );
+		$key      = 'nxs_' . bin2hex( random_bytes( 32 ) );
 		$key_hash = hash( 'sha256', $key );
 
-		$keys = get_option( self::API_KEYS_OPTION, array() );
+		$keys   = get_option( self::API_KEYS_OPTION, array() );
 		$key_id = uniqid( 'key_' );
 
 		$keys[ $key_id ] = array(
@@ -344,9 +397,9 @@ class NexifyMy_Security_Developer_API {
 		update_option( self::API_KEYS_OPTION, $keys, false );
 
 		return array(
-			'id'  => $key_id,
-			'key' => $key,  // Only shown once!
-			'name'=> $name,
+			'id'   => $key_id,
+			'key'  => $key,  // Only shown once!
+			'name' => $name,
 		);
 	}
 
@@ -396,7 +449,7 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	public function api_get_threats( $request ) {
-		$limit = $request->get_param( 'limit' ) ?: 50;
+		$limit   = $request->get_param( 'limit' ) ?: 50;
 		$threats = get_option( 'nexifymy_ai_detected_threats', array() );
 		$threats = array_slice( array_reverse( $threats ), 0, $limit );
 		return rest_ensure_response( $threats );
@@ -412,7 +465,7 @@ class NexifyMy_Security_Developer_API {
 	}
 
 	public function api_block_ip( $request ) {
-		$ip = $request->get_param( 'ip' );
+		$ip     = $request->get_param( 'ip' );
 		$reason = $request->get_param( 'reason' );
 
 		if ( class_exists( 'NexifyMy_Security_Firewall' ) && method_exists( 'NexifyMy_Security_Firewall', 'block_ip' ) ) {
@@ -420,13 +473,21 @@ class NexifyMy_Security_Developer_API {
 		}
 
 		// Trigger webhook.
-		$this->dispatch_webhook( 'user_locked', array(
-			'ip'     => $ip,
-			'reason' => $reason,
-			'source' => 'api',
-		) );
+		$this->dispatch_webhook(
+			'user_locked',
+			array(
+				'ip'     => $ip,
+				'reason' => $reason,
+				'source' => 'api',
+			)
+		);
 
-		return rest_ensure_response( array( 'success' => true, 'message' => "IP {$ip} blocked." ) );
+		return rest_ensure_response(
+			array(
+				'success' => true,
+				'message' => "IP {$ip} blocked.",
+			)
+		);
 	}
 
 	public function api_unblock_ip( $request ) {
@@ -436,16 +497,31 @@ class NexifyMy_Security_Developer_API {
 			NexifyMy_Security_Firewall::unblock_ip( $ip );
 		}
 
-		return rest_ensure_response( array( 'success' => true, 'message' => "IP {$ip} unblocked." ) );
+		return rest_ensure_response(
+			array(
+				'success' => true,
+				'message' => "IP {$ip} unblocked.",
+			)
+		);
 	}
 
 	public function api_trigger_scan( $request ) {
 		if ( isset( $GLOBALS['nexifymy_bg_scanner'] ) && method_exists( $GLOBALS['nexifymy_bg_scanner'], 'start_scan' ) ) {
 			$GLOBALS['nexifymy_bg_scanner']->start_scan();
-			return rest_ensure_response( array( 'success' => true, 'message' => 'Scan started.' ) );
+			return rest_ensure_response(
+				array(
+					'success' => true,
+					'message' => 'Scan started.',
+				)
+			);
 		}
 
-		return rest_ensure_response( array( 'success' => false, 'message' => 'Scanner not available.' ) );
+		return rest_ensure_response(
+			array(
+				'success' => false,
+				'message' => 'Scanner not available.',
+			)
+		);
 	}
 
 	public function api_get_scan_results( $request ) {
@@ -459,7 +535,12 @@ class NexifyMy_Security_Developer_API {
 			return rest_ensure_response( $report );
 		}
 
-		return rest_ensure_response( array( 'success' => false, 'message' => 'Compliance module not available.' ) );
+		return rest_ensure_response(
+			array(
+				'success' => false,
+				'message' => 'Compliance module not available.',
+			)
+		);
 	}
 
 	public function api_get_settings( $request ) {
@@ -532,11 +613,11 @@ class NexifyMy_Security_Developer_API {
 	public function api_get_logs( $request ) {
 		global $wpdb;
 
-		$limit = (int) $request->get_param( 'limit' );
+		$limit  = (int) $request->get_param( 'limit' );
 		$offset = (int) $request->get_param( 'offset' );
-		$type = sanitize_text_field( $request->get_param( 'type' ) );
+		$type   = sanitize_text_field( $request->get_param( 'type' ) );
 
-		$table = $wpdb->prefix . 'nexifymy_logs';
+		$table        = $wpdb->prefix . 'nexifymy_logs';
 		$table_exists = $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) === $table;
 
 		if ( ! $table_exists ) {
@@ -545,7 +626,7 @@ class NexifyMy_Security_Developer_API {
 
 		$where = '';
 		if ( $type ) {
-			$where = $wpdb->prepare( " WHERE event_type = %s", $type );
+			$where = $wpdb->prepare( ' WHERE event_type = %s', $type );
 		}
 
 		$logs = $wpdb->get_results(
@@ -582,7 +663,7 @@ class NexifyMy_Security_Developer_API {
 	/**
 	 * Validate GraphQL request for security.
 	 *
-	 * @param array $data Request data.
+	 * @param array  $data Request data.
 	 * @param object $request Request object.
 	 * @return array
 	 */
@@ -655,7 +736,7 @@ class NexifyMy_Security_Developer_API {
 		// Threat detected.
 		add_action(
 			'nexifymy_threat_detected',
-			function( $threat_data, $reason = '', $score = 0 ) {
+			function ( $threat_data, $reason = '', $score = 0 ) {
 				if ( ! is_array( $threat_data ) ) {
 					$threat_data = array(
 						'ip'     => sanitize_text_field( (string) $threat_data ),
@@ -671,38 +752,61 @@ class NexifyMy_Security_Developer_API {
 		);
 
 		// Login failed.
-		add_action( 'wp_login_failed', function( $username ) {
-			$this->dispatch_webhook( 'login_failed', array(
-				'username' => $username,
-				'ip'       => $this->get_client_ip(),
-			) );
-		} );
+		add_action(
+			'wp_login_failed',
+			function ( $username ) {
+				$this->dispatch_webhook(
+					'login_failed',
+					array(
+						'username' => $username,
+						'ip'       => $this->get_client_ip(),
+					)
+				);
+			}
+		);
 
 		// User locked.
-		add_action( 'nexifymy_user_locked', function( $data ) {
-			$this->dispatch_webhook( 'user_locked', $data );
-		} );
+		add_action(
+			'nexifymy_user_locked',
+			function ( $data ) {
+				$this->dispatch_webhook( 'user_locked', $data );
+			}
+		);
 
 		// Malware found.
-		add_action( 'nexifymy_malware_found', function( $findings ) {
-			$this->dispatch_webhook( 'malware_found', $findings );
-		} );
+		add_action(
+			'nexifymy_malware_found',
+			function ( $findings ) {
+				$this->dispatch_webhook( 'malware_found', $findings );
+			}
+		);
 
 		// Scan completed.
-		add_action( 'nexifymy_scan_completed', function( $results ) {
-			$this->dispatch_webhook( 'scan_completed', $results );
-		} );
+		add_action(
+			'nexifymy_scan_completed',
+			function ( $results ) {
+				$this->dispatch_webhook( 'scan_completed', $results );
+			}
+		);
 
 		// Settings changed.
-		add_action( 'update_option_nexifymy_security_settings', function( $old, $new ) {
-			$old = is_array( $old ) ? $old : array();
-			$new = is_array( $new ) ? $new : array();
+		add_action(
+			'update_option_nexifymy_security_settings',
+			function ( $old, $new ) {
+				$old = is_array( $old ) ? $old : array();
+				$new = is_array( $new ) ? $new : array();
 
-			$this->dispatch_webhook( 'settings_changed', array(
-				'changed' => array_keys( array_diff_assoc( $new, $old ) ),
-				'source'  => ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ? 'api' : 'runtime',
-			) );
-		}, 10, 2 );
+				$this->dispatch_webhook(
+					'settings_changed',
+					array(
+						'changed' => array_keys( array_diff_assoc( $new, $old ) ),
+						'source'  => ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ? 'api' : 'runtime',
+					)
+				);
+			},
+			10,
+			2
+		);
 	}
 
 	/**
@@ -724,10 +828,10 @@ class NexifyMy_Security_Developer_API {
 			}
 
 			$payload = array(
-				'event'      => $event,
-				'timestamp'  => current_time( 'c' ),
-				'site_url'   => home_url(),
-				'data'       => $data,
+				'event'     => $event,
+				'timestamp' => current_time( 'c' ),
+				'site_url'  => home_url(),
+				'data'      => $data,
 			);
 
 			// Sign payload if secret is set.
@@ -736,17 +840,20 @@ class NexifyMy_Security_Developer_API {
 			);
 
 			if ( ! empty( $webhook['secret'] ) ) {
-				$signature = hash_hmac( 'sha256', wp_json_encode( $payload ), $webhook['secret'] );
+				$signature                       = hash_hmac( 'sha256', wp_json_encode( $payload ), $webhook['secret'] );
 				$headers['X-NexifyMy-Signature'] = $signature;
 			}
 
 			// Send async using wp_remote_post.
-			wp_remote_post( $webhook['url'], array(
-				'body'     => wp_json_encode( $payload ),
-				'headers'  => $headers,
-				'timeout'  => 5,
-				'blocking' => false,
-			) );
+			wp_remote_post(
+				$webhook['url'],
+				array(
+					'body'     => wp_json_encode( $payload ),
+					'headers'  => $headers,
+					'timeout'  => 5,
+					'blocking' => false,
+				)
+			);
 
 			// Log webhook dispatch.
 			if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
@@ -836,12 +943,12 @@ class NexifyMy_Security_Developer_API {
 	 */
 
 	private function count_active_modules() {
-		$count = 0;
+		$count   = 0;
 		$modules = array( 'waf', 'scanner', 'rate_limiter', 'two_factor', 'ai_detection', 'passkey' );
 
 		foreach ( $modules as $module ) {
 			if ( $this->is_module_enabled( $module ) ) {
-				$count++;
+				++$count;
 			}
 		}
 
@@ -854,10 +961,10 @@ class NexifyMy_Security_Developer_API {
 		}
 
 		$settings = NexifyMy_Security_Settings::get_all();
-		$aliases = array(
+		$aliases  = array(
 			'2fa' => 'two_factor',
 		);
-		$module = $aliases[ $module ] ?? $module;
+		$module   = $aliases[ $module ] ?? $module;
 
 		$module_flag_map = array(
 			'waf'          => 'waf_enabled',
@@ -888,7 +995,7 @@ class NexifyMy_Security_Developer_API {
 
 	private function count_threats_today() {
 		global $wpdb;
-		$table = $wpdb->prefix . 'nexifymy_behavior_log';
+		$table        = $wpdb->prefix . 'nexifymy_behavior_log';
 		$table_exists = $wpdb->get_var( "SHOW TABLES LIKE '{$table}'" ) === $table;
 
 		if ( ! $table_exists ) {
@@ -940,7 +1047,7 @@ class NexifyMy_Security_Developer_API {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$name = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : 'API Key';
+		$name     = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : 'API Key';
 		$key_data = $this->generate_api_key( $name );
 
 		wp_send_json_success( $key_data );
@@ -952,7 +1059,7 @@ class NexifyMy_Security_Developer_API {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$key_id = isset( $_POST['key_id'] ) ? sanitize_text_field( wp_unslash( $_POST['key_id'] ) ) : '';
+		$key_id  = isset( $_POST['key_id'] ) ? sanitize_text_field( wp_unslash( $_POST['key_id'] ) ) : '';
 		$revoked = $this->revoke_api_key( $key_id );
 
 		wp_send_json_success( array( 'revoked' => $revoked ) );
@@ -999,7 +1106,7 @@ class NexifyMy_Security_Developer_API {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$id = isset( $_POST['id'] ) ? sanitize_text_field( wp_unslash( $_POST['id'] ) ) : '';
+		$id      = isset( $_POST['id'] ) ? sanitize_text_field( wp_unslash( $_POST['id'] ) ) : '';
 		$deleted = $this->delete_webhook( $id );
 
 		wp_send_json_success( array( 'deleted' => $deleted ) );
@@ -1024,20 +1131,25 @@ class NexifyMy_Security_Developer_API {
 			'data'      => array( 'message' => 'This is a test webhook from NexifyMy Security.' ),
 		);
 
-		$response = wp_remote_post( $url, array(
-			'body'    => wp_json_encode( $payload ),
-			'headers' => array( 'Content-Type' => 'application/json' ),
-			'timeout' => 10,
-		) );
+		$response = wp_remote_post(
+			$url,
+			array(
+				'body'    => wp_json_encode( $payload ),
+				'headers' => array( 'Content-Type' => 'application/json' ),
+				'timeout' => 10,
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			wp_send_json_error( $response->get_error_message() );
 		}
 
-		wp_send_json_success( array(
-			'status_code' => wp_remote_retrieve_response_code( $response ),
-			'body'        => wp_remote_retrieve_body( $response ),
-		) );
+		wp_send_json_success(
+			array(
+				'status_code' => wp_remote_retrieve_response_code( $response ),
+				'body'        => wp_remote_retrieve_body( $response ),
+			)
+		);
 	}
 
 	public function ajax_get_webhooks() {
@@ -1053,10 +1165,12 @@ class NexifyMy_Security_Developer_API {
 			$webhook['secret'] = ! empty( $webhook['secret'] ) ? '********' : '';
 		}
 
-		wp_send_json_success( array(
-			'webhooks' => $webhooks,
-			'events'   => $this->webhook_events,
-		) );
+		wp_send_json_success(
+			array(
+				'webhooks' => $webhooks,
+				'events'   => $this->webhook_events,
+			)
+		);
 	}
 }
 
@@ -1080,12 +1194,12 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		 */
 		public function status( $args, $assoc_args ) {
 			$status = array(
-				'Version' => defined( 'NEXIFYMY_SECURITY_VERSION' ) ? NEXIFYMY_SECURITY_VERSION : 'N/A',
-				'WordPress' => get_bloginfo( 'version' ),
-				'PHP' => PHP_VERSION,
-				'Firewall' => $this->check_enabled( 'waf' ) ? 'Enabled' : 'Disabled',
-				'Scanner' => $this->check_enabled( 'scanner' ) ? 'Enabled' : 'Disabled',
-				'2FA' => $this->check_enabled( 'two_factor' ) ? 'Enabled' : 'Disabled',
+				'Version'      => defined( 'NEXIFYMY_SECURITY_VERSION' ) ? NEXIFYMY_SECURITY_VERSION : 'N/A',
+				'WordPress'    => get_bloginfo( 'version' ),
+				'PHP'          => PHP_VERSION,
+				'Firewall'     => $this->check_enabled( 'waf' ) ? 'Enabled' : 'Disabled',
+				'Scanner'      => $this->check_enabled( 'scanner' ) ? 'Enabled' : 'Disabled',
+				'2FA'          => $this->check_enabled( 'two_factor' ) ? 'Enabled' : 'Disabled',
 				'AI Detection' => $this->check_enabled( 'ai_detection' ) ? 'Enabled' : 'Disabled',
 			);
 
@@ -1131,7 +1245,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		 * @when after_wp_load
 		 */
 		public function block( $args, $assoc_args ) {
-			$ip = $args[0];
+			$ip     = $args[0];
 			$reason = $assoc_args['reason'] ?? 'CLI block';
 
 			if ( ! filter_var( $ip, FILTER_VALIDATE_IP ) ) {
@@ -1183,11 +1297,13 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 
 			if ( isset( $GLOBALS['nexifymy_compliance'] ) && method_exists( $GLOBALS['nexifymy_compliance'], 'generate_report' ) ) {
 				$report = $GLOBALS['nexifymy_compliance']->generate_report();
-				WP_CLI::success( sprintf(
-					'Report generated! Grade: %s, Score: %d%%',
-					$report['summary']['grade'],
-					$report['summary']['score']
-				) );
+				WP_CLI::success(
+					sprintf(
+						'Report generated! Grade: %s, Score: %d%%',
+						$report['summary']['grade'],
+						$report['summary']['score']
+					)
+				);
 			} else {
 				WP_CLI::error( 'Compliance module not available.' );
 			}
@@ -1209,11 +1325,13 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				return;
 			}
 
-			WP_CLI::success( sprintf(
-				'Security Grade: %s (%d%%)',
-				$score['grade'] ?? 'N/A',
-				$score['score'] ?? 0
-			) );
+			WP_CLI::success(
+				sprintf(
+					'Security Grade: %s (%d%%)',
+					$score['grade'] ?? 'N/A',
+					$score['score'] ?? 0
+				)
+			);
 		}
 
 		/**
@@ -1249,10 +1367,10 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			}
 
 			$settings = NexifyMy_Security_Settings::get_all();
-			$aliases = array(
+			$aliases  = array(
 				'2fa' => 'two_factor',
 			);
-			$module = $aliases[ $module ] ?? $module;
+			$module   = $aliases[ $module ] ?? $module;
 
 			$module_flag_map = array(
 				'waf'          => 'waf_enabled',

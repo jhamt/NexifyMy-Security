@@ -59,15 +59,15 @@ class NexifyMy_Security_Supply_Chain {
 	 * Default settings.
 	 */
 	private static $defaults = array(
-		'enabled'                => true,
-		'scan_plugins'           => true,
-		'scan_themes'            => true,
-		'scan_composer'          => true,
-		'scan_npm'               => true,
+		'enabled'                  => true,
+		'scan_plugins'             => true,
+		'scan_themes'              => true,
+		'scan_composer'            => true,
+		'scan_npm'                 => true,
 		'monitor_external_scripts' => true,
-		'verify_cdn_integrity'   => true,
-		'auto_scan_schedule'     => 'weekly',
-		'notify_on_issues'       => true,
+		'verify_cdn_integrity'     => true,
+		'auto_scan_schedule'       => 'weekly',
+		'notify_on_issues'         => true,
 	);
 
 	/**
@@ -246,7 +246,7 @@ class NexifyMy_Security_Supply_Chain {
 
 			if ( $api_info ) {
 				$plugin_info['latest_version'] = $api_info['version'] ?? null;
-				$plugin_info['last_updated'] = $api_info['last_updated'] ?? null;
+				$plugin_info['last_updated']   = $api_info['last_updated'] ?? null;
 
 				// Check if outdated.
 				if ( ! empty( $api_info['version'] ) && version_compare( $data['Version'], $api_info['version'], '<' ) ) {
@@ -256,10 +256,10 @@ class NexifyMy_Security_Supply_Chain {
 
 				// Check if abandoned (not updated in 2 years).
 				if ( ! empty( $api_info['last_updated'] ) ) {
-					$last_update = strtotime( $api_info['last_updated'] );
+					$last_update   = strtotime( $api_info['last_updated'] );
 					$two_years_ago = strtotime( '-2 years' );
 					if ( $last_update < $two_years_ago ) {
-						$plugin_info['status'] = 'abandoned';
+						$plugin_info['status']  = 'abandoned';
 						$results['abandoned'][] = $plugin_info;
 					}
 				}
@@ -279,13 +279,13 @@ class NexifyMy_Security_Supply_Chain {
 	 */
 	private function get_plugin_api_info( $slug ) {
 		$cache_key = 'nexifymy_plugin_info_' . $slug;
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
 			return $cached;
 		}
 
-		$url = 'https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&slug=' . urlencode( $slug );
+		$url      = 'https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&slug=' . urlencode( $slug );
 		$response = wp_remote_get( $url, array( 'timeout' => 10 ) );
 
 		if ( is_wp_error( $response ) ) {
@@ -316,7 +316,7 @@ class NexifyMy_Security_Supply_Chain {
 	 * @return array Theme scan results.
 	 */
 	public function scan_themes() {
-		$themes = wp_get_themes();
+		$themes  = wp_get_themes();
 		$results = array(
 			'total'      => count( $themes ),
 			'scanned'    => array(),
@@ -363,13 +363,13 @@ class NexifyMy_Security_Supply_Chain {
 			return $results;
 		}
 
-		$results['found'] = true;
+		$results['found']         = true;
 		$results['files_scanned'] = count( $lock_files );
-		$all_packages = array();
+		$all_packages             = array();
 
 		foreach ( $lock_files as $lock_file ) {
 			$content = file_get_contents( $lock_file );
-			$data = json_decode( $content, true );
+			$data    = json_decode( $content, true );
 			if ( ! is_array( $data ) ) {
 				continue;
 			}
@@ -405,8 +405,8 @@ class NexifyMy_Security_Supply_Chain {
 
 		foreach ( $all_packages as $key => $pkg ) {
 			if ( isset( $vuln_data[ $key ] ) ) {
-				$pkg['vulnerable'] = true;
-				$pkg['vulnerabilities'] = $vuln_data[ $key ];
+				$pkg['vulnerable']       = true;
+				$pkg['vulnerabilities']  = $vuln_data[ $key ];
 				$results['vulnerable'][] = $pkg;
 			}
 			$results['packages'][] = $pkg;
@@ -436,26 +436,31 @@ class NexifyMy_Security_Supply_Chain {
 	 */
 	public function query_osv_vulnerabilities( $ecosystem, $name, $version ) {
 		$cache_key = $this->get_osv_cache_key( $ecosystem, $name, $version );
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached ) {
 			return ! empty( $cached ) ? $cached : false;
 		}
 
-		$url = self::OSV_API_URL . '/query';
-		$body = wp_json_encode( array(
-			'package' => array(
-				'name'      => $name,
-				'ecosystem' => $ecosystem,
-			),
-			'version' => $version,
-		) );
+		$url  = self::OSV_API_URL . '/query';
+		$body = wp_json_encode(
+			array(
+				'package' => array(
+					'name'      => $name,
+					'ecosystem' => $ecosystem,
+				),
+				'version' => $version,
+			)
+		);
 
-		$response = wp_remote_post( $url, array(
-			'timeout' => 15,
-			'headers' => array( 'Content-Type' => 'application/json' ),
-			'body'    => $body,
-		) );
+		$response = wp_remote_post(
+			$url,
+			array(
+				'timeout' => 15,
+				'headers' => array( 'Content-Type' => 'application/json' ),
+				'body'    => $body,
+			)
+		);
 
 		if ( is_wp_error( $response ) ) {
 			return false;
@@ -487,7 +492,7 @@ class NexifyMy_Security_Supply_Chain {
 	 * @return array Results keyed by package name.
 	 */
 	public function batch_query_osv( $packages, $ecosystem ) {
-		$results = array();
+		$results           = array();
 		$uncached_packages = array();
 
 		foreach ( $packages as $pkg ) {
@@ -495,9 +500,9 @@ class NexifyMy_Security_Supply_Chain {
 				continue;
 			}
 
-			$key = $pkg['name'] . '@' . $pkg['version'];
+			$key       = $pkg['name'] . '@' . $pkg['version'];
 			$cache_key = $this->get_osv_cache_key( $ecosystem, $pkg['name'], $pkg['version'] );
-			$cached = get_transient( $cache_key );
+			$cached    = get_transient( $cache_key );
 
 			if ( false !== $cached ) {
 				if ( ! empty( $cached ) ) {
@@ -506,8 +511,8 @@ class NexifyMy_Security_Supply_Chain {
 				continue;
 			}
 
-			$pkg['cache_key'] = $cache_key;
-			$pkg['result_key'] = $key;
+			$pkg['cache_key']    = $cache_key;
+			$pkg['result_key']   = $key;
 			$uncached_packages[] = $pkg;
 		}
 
@@ -530,12 +535,15 @@ class NexifyMy_Security_Supply_Chain {
 				);
 			}
 
-			$url = self::OSV_API_URL . '/querybatch';
-			$response = wp_remote_post( $url, array(
-				'timeout' => 30,
-				'headers' => array( 'Content-Type' => 'application/json' ),
-				'body'    => wp_json_encode( array( 'queries' => $queries ) ),
-			) );
+			$url      = self::OSV_API_URL . '/querybatch';
+			$response = wp_remote_post(
+				$url,
+				array(
+					'timeout' => 30,
+					'headers' => array( 'Content-Type' => 'application/json' ),
+					'body'    => wp_json_encode( array( 'queries' => $queries ) ),
+				)
+			);
 
 			if ( is_wp_error( $response ) ) {
 				continue;
@@ -545,14 +553,14 @@ class NexifyMy_Security_Supply_Chain {
 				continue;
 			}
 
-			$data = json_decode( wp_remote_retrieve_body( $response ), true );
+			$data          = json_decode( wp_remote_retrieve_body( $response ), true );
 			$batch_results = $data['results'] ?? array();
 
 			foreach ( $batch as $index => $pkg ) {
 				$parsed_vulns = array();
-				$result = $batch_results[ $index ] ?? array();
+				$result       = $batch_results[ $index ] ?? array();
 				if ( ! empty( $result['vulns'] ) ) {
-					$parsed_vulns = $this->parse_osv_vulns( $result['vulns'] );
+					$parsed_vulns                  = $this->parse_osv_vulns( $result['vulns'] );
 					$results[ $pkg['result_key'] ] = $parsed_vulns;
 				}
 
@@ -572,11 +580,11 @@ class NexifyMy_Security_Supply_Chain {
 	private function parse_osv_vulns( $vulns ) {
 		$parsed = array();
 		foreach ( $vulns as $vuln ) {
-			$severity = 'UNKNOWN';
-			$cvss_score = null;
+			$severity      = 'UNKNOWN';
+			$cvss_score    = null;
 			$fixed_version = null;
-			$aliases = $vuln['aliases'] ?? array();
-			$cve = null;
+			$aliases       = $vuln['aliases'] ?? array();
+			$cve           = null;
 
 			if ( ! empty( $vuln['database_specific']['severity'] ) ) {
 				$severity = strtoupper( sanitize_text_field( $vuln['database_specific']['severity'] ) );
@@ -686,13 +694,13 @@ class NexifyMy_Security_Supply_Chain {
 			return $results;
 		}
 
-		$results['found'] = true;
+		$results['found']         = true;
 		$results['files_scanned'] = count( $lock_files );
-		$all_packages = array();
+		$all_packages             = array();
 
 		foreach ( $lock_files as $file ) {
 			$content = file_get_contents( $file );
-			$data = json_decode( $content, true );
+			$data    = json_decode( $content, true );
 			if ( ! is_array( $data ) ) {
 				continue;
 			}
@@ -728,8 +736,8 @@ class NexifyMy_Security_Supply_Chain {
 
 		foreach ( $all_packages as $key => $pkg ) {
 			if ( isset( $vuln_data[ $key ] ) ) {
-				$pkg['vulnerable'] = true;
-				$pkg['vulnerabilities'] = $vuln_data[ $key ];
+				$pkg['vulnerable']       = true;
+				$pkg['vulnerabilities']  = $vuln_data[ $key ];
 				$results['vulnerable'][] = $pkg;
 			}
 			$results['packages'][] = $pkg;
@@ -752,7 +760,7 @@ class NexifyMy_Security_Supply_Chain {
 		}
 
 		$version = $info['version'];
-		$key = $name . '@' . $version;
+		$key     = $name . '@' . $version;
 
 		if ( ! isset( $all_packages[ $key ] ) ) {
 			$all_packages[ $key ] = array(
@@ -847,7 +855,7 @@ class NexifyMy_Security_Supply_Chain {
 			return;
 		}
 
-		$external = array();
+		$external  = array();
 		$site_host = wp_parse_url( home_url(), PHP_URL_HOST );
 
 		foreach ( $wp_scripts->registered as $handle => $script ) {
@@ -865,14 +873,14 @@ class NexifyMy_Security_Supply_Chain {
 			}
 
 			$parsed = wp_parse_url( $src );
-			$host = $parsed['host'] ?? '';
+			$host   = $parsed['host'] ?? '';
 
 			// Skip local scripts.
 			if ( $host === $site_host || empty( $host ) ) {
 				continue;
 			}
 
-			$is_cdn = in_array( $host, $this->known_cdns, true );
+			$is_cdn        = in_array( $host, $this->known_cdns, true );
 			$has_integrity = ! empty( $script->extra['integrity'] );
 
 			$external[] = array(
@@ -888,7 +896,7 @@ class NexifyMy_Security_Supply_Chain {
 		// Store for later retrieval.
 		if ( ! empty( $external ) ) {
 			$existing = get_transient( 'nexifymy_external_scripts' ) ?: array();
-			$merged = array_merge( $existing, $external );
+			$merged   = array_merge( $existing, $external );
 
 			// Deduplicate by handle.
 			$unique = array();
@@ -908,7 +916,7 @@ class NexifyMy_Security_Supply_Chain {
 	public function get_cached_external_scripts() {
 		$scripts = get_transient( 'nexifymy_external_scripts' ) ?: array();
 
-		$verified = array();
+		$verified   = array();
 		$unverified = array();
 
 		foreach ( $scripts as $script ) {
@@ -954,10 +962,10 @@ class NexifyMy_Security_Supply_Chain {
 	 * @param array $results Scan results.
 	 */
 	private function send_notification( $results ) {
-		$to = get_option( 'admin_email' );
+		$to      = get_option( 'admin_email' );
 		$subject = sprintf( '[%s] Supply Chain Security Alert', get_bloginfo( 'name' ) );
 
-		$message = "Supply Chain Security Scan Results\n\n";
+		$message  = "Supply Chain Security Scan Results\n\n";
 		$message .= sprintf( "Site: %s\n", home_url() );
 		$message .= sprintf( "Scanned: %s\n\n", $results['scanned_at'] );
 		$message .= sprintf( "Total Issues Found: %d\n\n", $results['total_issues'] );
@@ -1096,9 +1104,9 @@ class NexifyMy_Security_Supply_Chain {
 
 				if ( ! empty( $pkg_suggestions ) ) {
 					$results['composer']['vulnerable'][ $index ]['patch_suggestions'] = $pkg_suggestions;
-					$key = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
+					$key                             = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
 					$suggestions['composer'][ $key ] = $pkg_suggestions;
-					$suggestions['total'] += count( $pkg_suggestions );
+					$suggestions['total']           += count( $pkg_suggestions );
 				}
 			}
 		}
@@ -1114,9 +1122,9 @@ class NexifyMy_Security_Supply_Chain {
 
 				if ( ! empty( $pkg_suggestions ) ) {
 					$results['npm']['vulnerable'][ $index ]['patch_suggestions'] = $pkg_suggestions;
-					$key = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
+					$key                        = ( $pkg['name'] ?? 'unknown' ) . '@' . ( $pkg['version'] ?? 'unknown' );
 					$suggestions['npm'][ $key ] = $pkg_suggestions;
-					$suggestions['total'] += count( $pkg_suggestions );
+					$suggestions['total']      += count( $pkg_suggestions );
 				}
 			}
 		}
@@ -1232,7 +1240,7 @@ class NexifyMy_Security_Supply_Chain {
 			}
 
 			if ( class_exists( 'NexifyMy_Security_Sandbox' ) ) {
-				$patch_code = '$report = ' . var_export( $compatibility_report, true ) . '; return $report;';
+				$patch_code     = '$report = ' . var_export( $compatibility_report, true ) . '; return $report;';
 				$sandbox_result = NexifyMy_Security_Sandbox::execute(
 					$patch_code,
 					array(
@@ -1241,7 +1249,7 @@ class NexifyMy_Security_Supply_Chain {
 						'label'   => 'Supply chain patch preview',
 					)
 				);
-				$sandbox_used = true;
+				$sandbox_used   = true;
 			}
 
 			foreach ( $items as $patch ) {
@@ -1257,12 +1265,12 @@ class NexifyMy_Security_Supply_Chain {
 			}
 
 			return array(
-				'success'             => true,
-				'mode'                => 'preview',
-				'sandbox_used'        => $sandbox_used,
-				'sandbox_result'      => $sandbox_result,
-				'compatibility_report'=> $compatibility_report,
-				'patches'             => $items,
+				'success'              => true,
+				'mode'                 => 'preview',
+				'sandbox_used'         => $sandbox_used,
+				'sandbox_result'       => $sandbox_result,
+				'compatibility_report' => $compatibility_report,
+				'patches'              => $items,
 			);
 		}
 
@@ -1271,7 +1279,7 @@ class NexifyMy_Security_Supply_Chain {
 		$overall_success = true;
 
 		foreach ( $items as $patch ) {
-			$result = $this->execute_patch_command( $patch['command'], self::PATCH_COMMAND_TIMEOUT );
+			$result      = $this->execute_patch_command( $patch['command'], self::PATCH_COMMAND_TIMEOUT );
 			$execution[] = array_merge( $patch, $result );
 
 			$this->log_patch_attempt(
@@ -1396,9 +1404,9 @@ class NexifyMy_Security_Supply_Chain {
 	 * @return string
 	 */
 	private function build_patch_command( $ecosystem, $package_name, $fixed_version ) {
-		$package_name = trim( (string) $package_name );
+		$package_name  = trim( (string) $package_name );
 		$fixed_version = $this->normalize_version_value( $fixed_version );
-		$constraint = $this->build_patch_constraint( $fixed_version );
+		$constraint    = $this->build_patch_constraint( $fixed_version );
 
 		if ( empty( $package_name ) || empty( $constraint ) ) {
 			return '';
@@ -1453,7 +1461,7 @@ class NexifyMy_Security_Supply_Chain {
 		}
 
 		$is_wp_scoped_package = (bool) preg_match(
-			'/^(wordpress|roots\/wordpress|@wordpress\/|wpackagist-plugin\/|wpackagist-theme\/)/i',
+			'/^(WordPress|roots\/wordpress|@wordpress\/|wpackagist-plugin\/|wpackagist-theme\/)/i',
 			(string) $package_name
 		);
 
@@ -1505,17 +1513,17 @@ class NexifyMy_Security_Supply_Chain {
 			$is_high_risk = ! empty( $patch['major_upgrade'] ) || empty( $patch['wp_compatible'] );
 			if ( $is_high_risk ) {
 				$report['safe_to_apply'] = false;
-				$report['high_risk_count']++;
+				++$report['high_risk_count'];
 			}
 
 			$report['items'][] = array(
-				'package_name'    => $patch['package_name'] ?? '',
-				'command'         => $patch['command'] ?? '',
-				'wp_compatible'   => ! empty( $patch['wp_compatible'] ),
-				'major_upgrade'   => ! empty( $patch['major_upgrade'] ),
-				'risk'            => $is_high_risk ? 'high' : 'medium',
-				'fixed_version'   => $patch['fixed_version'] ?? '',
-				'vulnerability_id'=> $patch['vulnerability_id'] ?? '',
+				'package_name'     => $patch['package_name'] ?? '',
+				'command'          => $patch['command'] ?? '',
+				'wp_compatible'    => ! empty( $patch['wp_compatible'] ),
+				'major_upgrade'    => ! empty( $patch['major_upgrade'] ),
+				'risk'             => $is_high_risk ? 'high' : 'medium',
+				'fixed_version'    => $patch['fixed_version'] ?? '',
+				'vulnerability_id' => $patch['vulnerability_id'] ?? '',
 			);
 		}
 
@@ -1604,7 +1612,7 @@ class NexifyMy_Security_Supply_Chain {
 			);
 		}
 
-		$raw_output      = shell_exec( $timeout_wrapper );
+		$raw_output = shell_exec( $timeout_wrapper );
 
 		if ( ! is_string( $raw_output ) ) {
 			return array(
@@ -1618,7 +1626,7 @@ class NexifyMy_Security_Supply_Chain {
 
 		$exit_code = 1;
 		if ( preg_match( '/__NEXI_EXIT_CODE:(\d+)/', $raw_output, $matches ) ) {
-			$exit_code = (int) $matches[1];
+			$exit_code  = (int) $matches[1];
 			$raw_output = str_replace( $matches[0], '', $raw_output );
 		}
 
@@ -1632,24 +1640,98 @@ class NexifyMy_Security_Supply_Chain {
 	}
 
 	/**
+	 * Ensure a directory exists and includes deny markers where relevant.
+	 *
+	 * @param string $directory Directory path.
+	 * @return bool
+	 */
+	private function ensure_private_storage_directory( $directory ) {
+		$directory = (string) $directory;
+		if ( '' === $directory || ! function_exists( 'wp_mkdir_p' ) ) {
+			return false;
+		}
+
+		if ( ! is_dir( $directory ) && ! wp_mkdir_p( $directory ) ) {
+			return false;
+		}
+
+		if ( ! is_writable( $directory ) ) {
+			return false;
+		}
+
+		$htaccess_path   = trailingslashit( $directory ) . '.htaccess';
+		$web_config_path = trailingslashit( $directory ) . 'web.config';
+		$index_path      = trailingslashit( $directory ) . 'index.php';
+
+		if ( ! file_exists( $htaccess_path ) ) {
+			@file_put_contents( $htaccess_path, "Deny from all\n" );
+		}
+
+		if ( ! file_exists( $web_config_path ) ) {
+			$web_config = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<configuration>\n\t<system.webServer>\n\t\t<authorization>\n\t\t\t<deny users=\"*\" />\n\t\t</authorization>\n\t</system.webServer>\n</configuration>\n";
+			@file_put_contents( $web_config_path, $web_config );
+		}
+
+		if ( ! file_exists( $index_path ) ) {
+			@file_put_contents( $index_path, "<?php // Silence is golden\n" );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Resolve secure backup root directory with writable fallback order.
+	 *
+	 * @return string
+	 */
+	private function get_patch_backup_root_dir() {
+		$candidates = array();
+
+		if ( defined( 'ABSPATH' ) ) {
+			$candidates[] = trailingslashit( dirname( ABSPATH ) ) . 'nexifymy-security-data/patch-backups';
+		}
+
+		$content_dir   = defined( 'WP_CONTENT_DIR' ) ? WP_CONTENT_DIR : trailingslashit( ABSPATH ) . 'wp-content';
+		$candidates[]  = trailingslashit( $content_dir ) . 'nexifymy-security-data/patch-backups';
+		$upload_dir    = function_exists( 'wp_upload_dir' ) ? wp_upload_dir() : array();
+		$upload_basedir = isset( $upload_dir['basedir'] ) ? (string) $upload_dir['basedir'] : '';
+		if ( '' !== $upload_basedir ) {
+			$candidates[] = trailingslashit( $upload_basedir ) . 'nexifymy-patch-backups';
+		}
+
+		foreach ( $candidates as $candidate ) {
+			if ( $this->ensure_private_storage_directory( $candidate ) ) {
+				return untrailingslashit( $candidate );
+			}
+		}
+
+		return '';
+	}
+
+	/**
 	 * Create backup of package manifests/lock files before patching.
 	 *
 	 * @param array $patches Patch payloads.
 	 * @return array Backup manifest.
 	 */
 	private function create_patch_backup( $patches ) {
-		$backup_id = gmdate( 'YmdHis' ) . '-' . substr( md5( wp_json_encode( $patches ) . microtime( true ) ), 0, 10 );
-		$content_dir = defined( 'WP_CONTENT_DIR' ) ? WP_CONTENT_DIR : trailingslashit( ABSPATH ) . 'wp-content';
-		$base_dir    = $content_dir . '/uploads/nexifymy-patch-backups/' . $backup_id;
+		$backup_id = gmdate( 'YmdHis' ) . '-' . strtolower( wp_generate_password( 16, false, false ) );
 
-		if ( ! function_exists( 'wp_mkdir_p' ) ) {
+		$backup_root = $this->get_patch_backup_root_dir();
+		if ( '' === $backup_root ) {
 			return array(
 				'id'    => $backup_id,
 				'files' => array(),
 			);
 		}
 
-		wp_mkdir_p( $base_dir );
+		$base_dir = trailingslashit( $backup_root ) . $backup_id;
+		if ( ! $this->ensure_private_storage_directory( $base_dir ) ) {
+			return array(
+				'id'    => $backup_id,
+				'files' => array(),
+			);
+		}
 
 		$files = array_merge(
 			$this->find_lock_files( 'composer.lock' ),
@@ -1672,10 +1754,10 @@ class NexifyMy_Security_Supply_Chain {
 
 		$files    = array_unique( $files );
 		$manifest = array(
-			'id'        => $backup_id,
-			'dir'       => $base_dir,
-			'files'     => array(),
-			'created_at'=> current_time( 'mysql' ),
+			'id'         => $backup_id,
+			'dir'        => $base_dir,
+			'files'      => array(),
+			'created_at' => current_time( 'mysql' ),
 		);
 
 		foreach ( $files as $file ) {
@@ -1691,8 +1773,6 @@ class NexifyMy_Security_Supply_Chain {
 				);
 			}
 		}
-
-		@file_put_contents( trailingslashit( $base_dir ) . 'manifest.json', wp_json_encode( $manifest ) );
 
 		return $manifest;
 	}
@@ -1715,7 +1795,7 @@ class NexifyMy_Security_Supply_Chain {
 			}
 
 			if ( file_exists( $file_map['backup'] ) && @copy( $file_map['backup'], $file_map['original'] ) ) {
-				$restored++;
+				++$restored;
 			}
 		}
 
@@ -1809,9 +1889,9 @@ class NexifyMy_Security_Supply_Chain {
 	 * @param array $health_check Health check payload.
 	 */
 	private function send_patch_success_notification( $execution, $health_check ) {
-		$to      = get_option( 'admin_email' );
-		$subject = sprintf( '[%s] Supply Chain Patch Applied', get_bloginfo( 'name' ) );
-		$message = "Supply Chain patch operation completed successfully.\n\n";
+		$to       = get_option( 'admin_email' );
+		$subject  = sprintf( '[%s] Supply Chain Patch Applied', get_bloginfo( 'name' ) );
+		$message  = "Supply Chain patch operation completed successfully.\n\n";
 		$message .= sprintf( "Site: %s\n", home_url() );
 		$message .= sprintf( "Time: %s\n", current_time( 'mysql' ) );
 		$message .= sprintf( "Health Check: HTTP %d\n\n", (int) ( $health_check['code'] ?? 0 ) );
@@ -1838,11 +1918,11 @@ class NexifyMy_Security_Supply_Chain {
 	 * @return array
 	 */
 	private function get_patch_payload_from_request() {
-		$patch = $_POST['patch'] ?? array();
-
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized in sanitize_patch_payload().
+		$patch = isset( $_POST['patch'] ) ? wp_unslash( $_POST['patch'] ) : array();
 		if ( is_string( $patch ) ) {
 			$decoded = json_decode( wp_unslash( $patch ), true );
-			$patch = is_array( $decoded ) ? $decoded : array();
+			$patch   = is_array( $decoded ) ? $decoded : array();
 		}
 
 		if ( ! is_array( $patch ) ) {
@@ -1915,10 +1995,9 @@ class NexifyMy_Security_Supply_Chain {
 			wp_send_json_error( 'Unauthorized' );
 		}
 
-		$ecosystem = sanitize_text_field( $_POST['ecosystem'] ?? '' );
-		$name      = sanitize_text_field( $_POST['name'] ?? '' );
-		$version   = sanitize_text_field( $_POST['version'] ?? '' );
-
+		$ecosystem = sanitize_text_field( wp_unslash( $_POST['ecosystem'] ?? '' ) );
+		$name      = sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) );
+		$version   = sanitize_text_field( wp_unslash( $_POST['version'] ?? '' ) );
 		if ( empty( $ecosystem ) || empty( $name ) || empty( $version ) ) {
 			wp_send_json_error( 'Missing parameters.' );
 		}
@@ -1926,7 +2005,12 @@ class NexifyMy_Security_Supply_Chain {
 		$vulns = $this->query_osv_vulnerabilities( $ecosystem, $name, $version );
 
 		if ( $vulns ) {
-			wp_send_json_success( array( 'vulnerable' => true, 'vulns' => $vulns ) );
+			wp_send_json_success(
+				array(
+					'vulnerable' => true,
+					'vulns'      => $vulns,
+				)
+			);
 		} else {
 			wp_send_json_success( array( 'vulnerable' => false ) );
 		}
@@ -2048,7 +2132,7 @@ class NexifyMy_Security_Supply_Chain {
 		}
 
 		$parts = explode( '-', $expected_hash, 2 );
-		$algo = ! empty( $parts[0] ) ? strtolower( $parts[0] ) : 'sha384';
+		$algo  = ! empty( $parts[0] ) ? strtolower( $parts[0] ) : 'sha384';
 
 		$actual_info = $this->fetch_and_calculate_hash( $url, $algo );
 		if ( empty( $actual_info['success'] ) ) {
@@ -2143,7 +2227,7 @@ class NexifyMy_Security_Supply_Chain {
 	 */
 	private function get_registry_sri( $info ) {
 		$cache_key = 'nexifymy_sri_' . md5( wp_json_encode( $info ) );
-		$cached = get_transient( $cache_key );
+		$cached    = get_transient( $cache_key );
 		if ( false !== $cached ) {
 			return ! empty( $cached ) ? $cached : false;
 		}
@@ -2294,9 +2378,9 @@ class NexifyMy_Security_Supply_Chain {
 				'error'   => $response->get_error_message(),
 			);
 		}
-		$body = wp_remote_retrieve_body( $response );
+		$body        = wp_remote_retrieve_body( $response );
 		$binary_hash = hash( $algo, $body, true );
-		$integrity = $algo . '-' . base64_encode( $binary_hash );
+		$integrity   = $algo . '-' . base64_encode( $binary_hash );
 
 		return array(
 			'success'   => true,

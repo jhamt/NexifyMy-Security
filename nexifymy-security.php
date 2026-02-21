@@ -40,17 +40,16 @@ define( 'NEXIFYMY_SECURITY_FILE', __FILE__ );
 // WordPress may not be fully loaded yet when uploading/activating via ZIP.
 // Also check if core WordPress functions are available.
 // Skip in admin area entirely - WAF/Rate Limiter are for frontend protection.
+$nexifymy_request_uri  = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
+$nexifymy_request_path = is_string( $nexifymy_request_uri ) ? (string) parse_url( $nexifymy_request_uri, PHP_URL_PATH ) : '';
 $nexifymy_skip_early_waf = (
 	defined( 'WP_INSTALLING' ) ||
 	! function_exists( 'get_option' ) ||
-	! function_exists( 'is_admin' ) ||  // WordPress not loaded yet
-	is_admin() ||  // Skip all admin requests
-	( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], '/wp-admin' ) !== false ) ||  // Fallback admin check
-	( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) !== false ) ||  // Skip login page
-	( isset( $_REQUEST['action'] ) && in_array( $_REQUEST['action'], array( 'activate', 'deactivate', 'upload-plugin', 'install-plugin' ), true ) ) ||
-	( isset( $_REQUEST['plugin'] ) && strpos( $_REQUEST['plugin'], 'nexifymy-security' ) !== false && isset( $_REQUEST['action'] ) )
+	! function_exists( 'is_admin' ) || // WordPress not loaded yet
+	is_admin() || // Skip all admin requests
+	( '' !== $nexifymy_request_path && strpos( $nexifymy_request_path, '/wp-admin' ) !== false ) || // Fallback admin check
+	( '' !== $nexifymy_request_path && strpos( $nexifymy_request_path, 'wp-login.php' ) !== false ) // Skip login page
 );
-
 if ( ! $nexifymy_skip_early_waf ) {
 	// Verify all required files exist before loading
 	$required_files = array(
@@ -75,8 +74,8 @@ if ( ! $nexifymy_skip_early_waf ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-analytics.php';
 
 		// Initialize Modules
-		$GLOBALS['nexifymy_logger']     = new NexifyMy_Security_Logger();
-		$GLOBALS['nexifymy_analytics']  = new NexifyMy_Security_Analytics();
+		$GLOBALS['nexifymy_logger']    = new NexifyMy_Security_Logger();
+		$GLOBALS['nexifymy_analytics'] = new NexifyMy_Security_Analytics();
 
 		// Load Email Alerts early so WAF events can trigger alerts.
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-alerts.php';
@@ -112,59 +111,59 @@ function nexifymy_security_activate() {
 	$existing = get_option( 'nexifymy_security_settings' );
 	if ( false === $existing ) {
 		$defaults = array(
-			'modules' => array(
-				'waf_enabled'             => 1,
-				'scanner_enabled'         => 1,
-				'rate_limiter_enabled'    => 1,
-				'login_protection_enabled'=> 0,
-				'background_scan_enabled' => 1,
-				'signatures_enabled'      => 1,
-				'quarantine_enabled'      => 1,
-				'database_enabled'        => 1,
-				'cdn_enabled'             => 1,
-				'core_repair_enabled'     => 1,
+			'modules'                               => array(
+				'waf_enabled'                   => 1,
+				'scanner_enabled'               => 1,
+				'rate_limiter_enabled'          => 1,
+				'login_protection_enabled'      => 0,
+				'background_scan_enabled'       => 1,
+				'signatures_enabled'            => 1,
+				'quarantine_enabled'            => 1,
+				'database_enabled'              => 1,
+				'cdn_enabled'                   => 1,
+				'core_repair_enabled'           => 1,
 				'vulnerability_scanner_enabled' => 1,
-				'live_traffic_enabled'    => 1,
-				'activity_log_enabled'    => 1,
-				'hardening_enabled'       => 1,
-				'geo_blocking_enabled'    => 0,
-				'hide_login_enabled'      => 0,
-				'captcha_enabled'         => 1,
-				'two_factor_enabled'      => 1,
-				'password_enabled'        => 1,
-				'self_protection_enabled' => 1,
-				'performance_enabled'     => 1,
-				'supply_chain_enabled'    => 1,
-				'proactive_enabled'       => 1,
-				'predictive_hunting_enabled' => 1,
-				'ai_detection_enabled'    => 1,
-				'api_security_enabled'    => 1,
-				'graphql_security_enabled' => 1,
-				'passkey_enabled'         => 1,
-				'compliance_enabled'      => 1,
-				'consent_enabled'         => 1,
-				'developer_api_enabled'   => 1,
-				'integrations_enabled'    => 1,
-				'deception_enabled'       => true,
-				'p2p_enabled'             => false,
-				'sandbox_enabled'         => false,
-				'sandbox_console_enabled' => false,
-				'temp_permissions_enabled' => 1,
+				'live_traffic_enabled'          => 1,
+				'activity_log_enabled'          => 1,
+				'hardening_enabled'             => 1,
+				'geo_blocking_enabled'          => 0,
+				'hide_login_enabled'            => 0,
+				'captcha_enabled'               => 1,
+				'two_factor_enabled'            => 1,
+				'password_enabled'              => 1,
+				'self_protection_enabled'       => 1,
+				'performance_enabled'           => 1,
+				'supply_chain_enabled'          => 1,
+				'proactive_enabled'             => 1,
+				'predictive_hunting_enabled'    => 1,
+				'ai_detection_enabled'          => 1,
+				'api_security_enabled'          => 1,
+				'graphql_security_enabled'      => 1,
+				'passkey_enabled'               => 1,
+				'compliance_enabled'            => 1,
+				'consent_enabled'               => 1,
+				'developer_api_enabled'         => 1,
+				'integrations_enabled'          => 1,
+				'deception_enabled'             => true,
+				'p2p_enabled'                   => false,
+				'sandbox_enabled'               => false,
+				'sandbox_console_enabled'       => false,
+				'temp_permissions_enabled'      => 1,
 			),
-			'deception_enabled'       => true,
-			'deception_honeytrap_paths' => "/secret-backup.zip\n/old-admin/",
+			'deception_enabled'                     => true,
+			'deception_honeytrap_paths'             => "/secret-backup.zip\n/old-admin/",
 			'deception_honeytrap_override_defaults' => false,
-			'deception_enum_trap'     => true,
-			'deception_enum_block'    => false,
-			'deception_block_all_enum'=> false,
-			'p2p_enabled'             => false,
-			'p2p_broadcast_enabled'   => true,
-			'p2p_trust_threshold'     => 70,
-			'sandbox_enabled'         => false,
-			'sandbox_timeout'         => 5,
-			'sandbox_dynamic_analysis'=> false,
-			'sandbox_console_enabled' => false,
-			'predictive_threat_hunting' => array(
+			'deception_enum_trap'                   => true,
+			'deception_enum_block'                  => false,
+			'deception_block_all_enum'              => false,
+			'p2p_enabled'                           => false,
+			'p2p_broadcast_enabled'                 => true,
+			'p2p_trust_threshold'                   => 70,
+			'sandbox_enabled'                       => false,
+			'sandbox_timeout'                       => 5,
+			'sandbox_dynamic_analysis'              => false,
+			'sandbox_console_enabled'               => false,
+			'predictive_threat_hunting'             => array(
 				'enabled'               => true,
 				'forecast_update'       => 'weekly',
 				'simulation_enabled'    => true,
@@ -172,18 +171,18 @@ function nexifymy_security_activate() {
 				'simulation_run_hour'   => 3,
 				'probability_threshold' => 25,
 			),
-			'firewall' => array(
-				'enabled'        => true,
-				'block_bad_bots' => true,
+			'firewall'                              => array(
+				'enabled'         => true,
+				'block_bad_bots'  => true,
 				'block_fake_bots' => true,
 			),
-			'rate_limiter' => array(
-				'enabled'            => true,
-				'max_attempts'       => 5,
-				'attempt_window'     => 300,
-				'lockout_duration'   => 1800,
+			'rate_limiter'                          => array(
+				'enabled'          => true,
+				'max_attempts'     => 5,
+				'attempt_window'   => 300,
+				'lockout_duration' => 1800,
 			),
-			'notifications' => array(
+			'notifications'                         => array(
 				'enabled' => true,
 				'email'   => get_option( 'admin_email' ),
 			),
@@ -236,6 +235,12 @@ function nexifymy_security_activate() {
 	$consent = new NexifyMy_Security_Consent_Management();
 	$consent->maybe_create_table();
 
+	// Create AI Threat Detection tables.
+	require_once NEXIFYMY_SECURITY_PATH . 'modules/ai-threat-detection.php';
+	$ai_detection = new NexifyMy_Security_AI_Threat_Detection();
+	$ai_detection->init();
+	$ai_detection->create_tables();
+
 	// Schedule background scans (default: daily).
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/background-scanner.php';
 	$bg_scanner = new NexifyMy_Security_Background_Scanner();
@@ -281,9 +286,11 @@ function nexifymy_security_deactivate() {
 	global $wpdb;
 	// phpcs:ignore WordPress.DB.DirectDatabaseQuery
 	$wpdb->query(
-		"DELETE FROM {$wpdb->options}
-		 WHERE option_name LIKE '_transient_nexifymy_sbx_%'
-		    OR option_name LIKE '_transient_timeout_nexifymy_sbx_%'"
+		$wpdb->prepare(
+			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
+			'_transient_nexifymy_sbx_%',
+			'_transient_timeout_nexifymy_sbx_%'
+		)
 	);
 }
 
@@ -302,11 +309,11 @@ add_filter( 'cron_schedules', 'nexifymy_security_add_cron_schedules' );
  * Add custom cron schedules.
  */
 function nexifymy_security_add_cron_schedules( $schedules ) {
-	$schedules['weekly'] = array(
+	$schedules['weekly']             = array(
 		'interval' => WEEK_IN_SECONDS,
 		'display'  => __( 'Once Weekly', 'nexifymy-security' ),
 	);
-	$schedules['monthly'] = array(
+	$schedules['monthly']            = array(
 		'interval' => MONTH_IN_SECONDS,
 		'display'  => __( 'Once Monthly', 'nexifymy-security' ),
 	);
@@ -329,14 +336,148 @@ add_action( 'plugins_loaded', 'nexifymy_security_load_textdomain', 1 );
  * Load plugin text domain for translations.
  */
 function nexifymy_security_load_textdomain() {
-	// Allow user to override plugin language via settings.
+	// Always register the filter as a safety net for JIT loading.
 	add_filter( 'plugin_locale', 'nexifymy_security_plugin_locale', 10, 2 );
 
+	// Check if the user set a custom plugin language.
+	$settings    = get_option( 'nexifymy_security_settings', array() );
+	$plugin_lang = ! empty( $settings['general']['language'] ) ? $settings['general']['language'] : 'site_default';
+
+	if ( 'site_default' !== $plugin_lang ) {
+		// Apply legacy locale mapping.
+		$legacy_map = array(
+			'tr_TR' => 'tr',
+			'uk'    => 'uk_UA',
+			'vi'    => 'vi_VN',
+			'zh_CN' => 'zh_Hans',
+		);
+		if ( isset( $legacy_map[ $plugin_lang ] ) ) {
+			$plugin_lang = $legacy_map[ $plugin_lang ];
+		}
+
+		$resolved = nexifymy_security_resolve_translation_locale( $plugin_lang );
+		if ( '' !== $resolved ) {
+			// Unload any previously (JIT) loaded textdomain with wrong locale.
+			unload_textdomain( 'nexifymy-security' );
+
+			// Load the MO file directly with explicit path.
+			$mofile = NEXIFYMY_SECURITY_PATH . 'languages/nexifymy-security-' . $resolved . '.mo';
+			if ( file_exists( $mofile ) ) {
+				load_textdomain( 'nexifymy-security', $mofile );
+				return;
+			}
+		}
+	}
+
+	// Site-default: use standard loading.
 	load_plugin_textdomain(
 		'nexifymy-security',
 		false,
-		dirname( plugin_basename( __FILE__ ) ) . '/languages'
+		dirname( plugin_basename( NEXIFYMY_SECURITY_FILE ) ) . '/languages'
 	);
+}
+
+/**
+ * Get available plugin translation locales based on bundled MO files.
+ *
+ * @return array<string>
+ */
+function nexifymy_security_get_available_translation_locales() {
+	static $locales = null;
+
+	if ( null !== $locales ) {
+		return $locales;
+	}
+
+	$locales = array();
+	$pattern = NEXIFYMY_SECURITY_PATH . 'languages/nexifymy-security-*.mo';
+	$files   = glob( $pattern );
+
+	if ( is_array( $files ) ) {
+		foreach ( $files as $file ) {
+			$base = basename( $file, '.mo' );
+			if ( strpos( $base, 'nexifymy-security-' ) === 0 ) {
+				$locales[] = substr( $base, strlen( 'nexifymy-security-' ) );
+			}
+		}
+	}
+
+	$locales = array_values( array_unique( array_filter( $locales ) ) );
+	return $locales;
+}
+
+/**
+ * Resolve a locale to the closest bundled translation locale.
+ *
+ * @param string $locale Requested locale.
+ * @return string Resolved locale or empty string when not available.
+ */
+function nexifymy_security_resolve_translation_locale( $locale ) {
+	$locale = sanitize_text_field( (string) $locale );
+	if ( '' === $locale ) {
+		return '';
+	}
+
+	$available = nexifymy_security_get_available_translation_locales();
+	if ( empty( $available ) ) {
+		return '';
+	}
+
+	$available_lc = array();
+	foreach ( $available as $item ) {
+		$available_lc[ strtolower( $item ) ] = $item;
+	}
+
+	$candidates   = array();
+	$normalized   = str_replace( '-', '_', $locale );
+	$candidates[] = $locale;
+	$candidates[] = $normalized;
+
+	$locale_aliases = array(
+		'tr_TR'   => 'tr',
+		'tr'      => 'tr_TR',
+		'uk'      => 'uk_UA',
+		'uk_UA'   => 'uk',
+		'vi'      => 'vi_VN',
+		'vi_VN'   => 'vi',
+		'zh_CN'   => 'zh_Hans',
+		'zh_Hans' => 'zh_CN',
+	);
+
+	if ( isset( $locale_aliases[ $locale ] ) ) {
+		$candidates[] = $locale_aliases[ $locale ];
+	}
+	if ( isset( $locale_aliases[ $normalized ] ) ) {
+		$candidates[] = $locale_aliases[ $normalized ];
+	}
+
+	$parts = explode( '_', $normalized );
+	$lang  = strtolower( $parts[0] ?? '' );
+	if ( '' !== $lang ) {
+		$candidates[] = $lang;
+	}
+	if ( count( $parts ) > 1 ) {
+		$candidates[] = $lang . '_' . strtoupper( $parts[1] );
+	}
+
+	$candidates = array_values( array_unique( array_filter( $candidates ) ) );
+	foreach ( $candidates as $candidate ) {
+		$key = strtolower( $candidate );
+		if ( isset( $available_lc[ $key ] ) ) {
+			return $available_lc[ $key ];
+		}
+	}
+
+	if ( '' !== $lang ) {
+		foreach ( $available as $item ) {
+			$item_lc = strtolower( $item );
+			if ( 0 === strpos( $item_lc, $lang . '_' ) ) {
+				return $item;
+			}
+		}
+	}
+
+	return '';
 }
 
 /**
@@ -350,26 +491,35 @@ function nexifymy_security_plugin_locale( $locale, $domain ) {
 	if ( 'nexifymy-security' === $domain ) {
 		$settings = get_option( 'nexifymy_security_settings', array() );
 		if ( ! empty( $settings['general']['language'] ) && 'site_default' !== $settings['general']['language'] ) {
-			$selected = sanitize_text_field( $settings['general']['language'] );
-			$legacy_locale_map = array(
+			$selected           = sanitize_text_field( $settings['general']['language'] );
+			$legacy_setting_map = array(
 				'tr_TR' => 'tr',
 				'uk'    => 'uk_UA',
 				'vi'    => 'vi_VN',
 				'zh_CN' => 'zh_Hans',
 			);
-			if ( isset( $legacy_locale_map[ $selected ] ) ) {
-				$selected = $legacy_locale_map[ $selected ];
+			if ( isset( $legacy_setting_map[ $selected ] ) ) {
+				$selected = $legacy_setting_map[ $selected ];
 			}
-			$mo_file  = NEXIFYMY_SECURITY_PATH . 'languages/nexifymy-security-' . $selected . '.mo';
 
 			if ( class_exists( 'NexifyMy_Security_Settings' ) ) {
 				$allowed = array_keys( NexifyMy_Security_Settings::get_available_languages() );
-				if ( in_array( $selected, $allowed, true ) && file_exists( $mo_file ) ) {
-					return $selected;
+				if ( ! in_array( $selected, $allowed, true ) ) {
+					return $locale;
 				}
-			} elseif ( file_exists( $mo_file ) ) {
-				return $selected;
 			}
+
+			$resolved_selected = nexifymy_security_resolve_translation_locale( $selected );
+			if ( '' !== $resolved_selected ) {
+				return $resolved_selected;
+			}
+		}
+
+		// Site-default locale can also be resolved to a closest bundled variant
+		// (for example `th_TH` -> `th` when only a short locale file exists).
+		$resolved_default = nexifymy_security_resolve_translation_locale( $locale );
+		if ( '' !== $resolved_default ) {
+			return $resolved_default;
 		}
 	}
 	return $locale;
@@ -480,7 +630,6 @@ function nexifymy_security_init() {
 		$GLOBALS['nexifymy_activity_log'] = new NexifyMy_Security_Activity_Log();
 		$GLOBALS['nexifymy_activity_log']->init();
 	}
-
 
 	// Load Geo Blocking.
 	require_once NEXIFYMY_SECURITY_PATH . 'modules/geo-blocking.php';
@@ -674,7 +823,7 @@ function nexifymy_security_init() {
 	if ( is_admin() ) {
 		require_once NEXIFYMY_SECURITY_PATH . 'includes/class-nexifymy-security-admin.php';
 		$GLOBALS['nexifymy_admin'] = new NexifyMy_Security_Admin();
-		
+
 		// Register AJAX hooks for admin functionality
 		$GLOBALS['nexifymy_admin']->register_ajax_hooks();
 		$GLOBALS['nexifymy_admin']->init();
