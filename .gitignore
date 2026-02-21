@@ -15,6 +15,9 @@ node_modules/
 
 # Composer
 vendor/
+!assets/vendor/
+!assets/vendor/chartjs/
+!assets/vendor/chartjs/chart.umd.min.js
 composer.lock
 
 # Tests & Binaries
@@ -37,6 +40,7 @@ error_log
 
 #Files
 CLAUDE.md
+.claude/
 
 # Local Runtime/Sensitive Artifacts
 .env

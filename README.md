@@ -1,66 +1,73 @@
-# NexifyMy Security 🛡️
+# NexifyMy Security
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-GPLv2-orange)
-![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-blue)
-![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)
+A modern, lightweight, and powerful security plugin for WordPress.
 
-**NexifyMy Security** is a modern, lightweight, and powerful security plugin for WordPress. It provides a comprehensive defense suite including a Web Application Firewall (WAF), heuristic malware scanner, and intelligent brute force protection—all designed to protect your website without slowing it down.
+NexifyMy Security transcends standard static defenses by combining traditional rule-based protection (OWASP Top 10 WAF, rate limiting, and malware scanning) with advanced artificial intelligence, behavioral analysis, and peer-to-peer threat intelligence.
 
-## 🚀 Key Features
+With over 35 distinct, highly-optimized security modules, it provides enterprise-grade protection while maintaining a zero-trust architecture and a minimal performance footprint.
 
-- **🔥 Advanced WAF**: Real-time protection against SQL injection, XSS, LFI, and malicious bots.
-- **🔍 Malware Scanner**: Three scanning modes (Quick, Standard, Deep) with heuristic threat detection.
-- **🛡️ Brute Force Protection**: Smart rate limiting to block repeated login failures and aggressive crawlers.
-- **📦 Quarantine System**: Safely isolate threats in a hardened directory instead of immediate deletion.
-- **🕐 Background Scanning**: Automated, rigorous security checks scheduled via WP-Cron.
-- **📝 Audit Logging**: Detailed security event logs with retention policies and daily auto-purge.
-- **⚙️ Granular Control**: IP whitelisting, trusted proxies support, and customizable exclusion rules.
+---
 
-## ⚙️ How It Works
+## 📚 Complete Documentation
 
-1.  **WAF Protocol**: Intercepts every incoming request (GET, POST, Headers, JSON) to block malicious payloads before they reach WordPress.
-2.  **Heuristic Analysis**: The scanner doesn't just look for filenames; it analyzes code patterns for base64 encoding, shell exec functions, and known malware signatures.
-3.  **Intelligent Locking**: The rate limiter tracks IP behavior, temporarily blocking offenders while allowing legitimate users to pass.
+Given the extensive feature set, the comprehensive documentation has been organized into dedicated modules instead of one massive file.
 
-## 📥 Installation
+**Start exploring the documentation here:**
 
-1.  Download the repository.
-2.  Upload the `nexifymy-security` folder to your `/wp-content/plugins/` directory.
-3.  Activate the plugin through the **Plugins** menu in WordPress.
-4.  Navigate to **NexifyMy Security** in the admin sidebar to configure your protection level.
+- **[1. Overview & Architecture](docs/01-Overview.md)** - Learn about the early-execution flow and database design.
+- **[2. Installation & Configuration](docs/02-Installation-and-Configuration.md)** - System requirements and global settings.
+- **[3. Core Modules](docs/03-Core-Modules.md)** - WAF, Rate Limiter, Malware Scanner, Quarantine, and User Activity Logs.
+- **[4. Advanced Modules](docs/04-Advanced-Modules.md)** - AI Threat Detection, Predictive Hunting, P2P Intelligence, Supply Chain Security, and Sandbox.
+- **[5. Authentication & Access Controls](docs/05-Authentication-and-Access.md)** - WebAuthn (Passkeys), 2FA, Geo Blocking, and Time-Bound Permissions.
+- **[6. APIs & Integrations](docs/06-APIs-and-Integrations.md)** - Webhooks (Slack/Discord), REST API Security, GraphQL protection, and CDN integration.
+- **[7. Compliance & Performance](docs/07-Compliance-and-Performance.md)** - GDPR/CCPA reporting, Database integrity, and performance optimization.
+- **[8. Developer Guide](docs/08-Developer-Guide.md)** - Hooks (Actions/Filters), WP-CLI commands, and instructions for building custom modules.
 
-## 🛑 Troubleshooting
+---
 
-### WAF False Positives
+## ⚡ Quick Start
 
-If legitimate requests are being blocked:
+### Installation
 
-- Check **Logs** to identify the specific rule.
-- Enable **"Log-only mode"** in Settings > Email Alerts temporarily.
-- Add your IP to the **Whitelist**.
+1. Upload the `nexifymy-security` folder to your `/wp-content/plugins/` directory.
+2. Activate the plugin through the **Plugins** menu in WordPress.
 
-### Scanner Timeouts
+_Alternatively, upload the ZIP file directly through **Plugins -> Add New -> Upload Plugin**._
 
-For large sites:
+### Initial Configuration
 
-- Use **Quick** or **Standard** scan modes.
-- Exclude heavy directories (e.g., `node_modules`, `vendor`).
-- The scanner uses **incremental** logic to skip unchanged files in Standard mode.
+Upon activation, the plugin automatically enables critical defenses:
 
-## 🔒 Privacy & Data
+- **Web Application Firewall (WAF)** immediately blocks SQLi, XSS, and LFI payloads.
+- **Rate Limiter** protects against brute-force login attempts.
+- **Background Scanner** schedules daily integrity checks.
 
-NexifyMy Security stores data locally in your WordPress database:
+Navigate to the **NexifyMy Security** menu in your WordPress dashboard to access the Live Traffic metrics, review your Security Score, and toggle the 30+ other specialized modules on or off according to your technical needs.
 
-- **Logged Data**: Offending IPs, timestamps, and event types.
-- **Retention**: Configurable (defaults to 30 days).
-- **Privacy**: No sensitive data is sent to external servers.
+---
 
-## 🤝 Contributing
+## 🛠️ Testing & Development
 
-Contributions are welcome! Please submit a Pull Request or open an Issue to help us improve NexifyMy Security.
+NexifyMy Security includes a standalone PHPUnit test suite running decoupled from a live WordPress database.
 
-## 📜 License
+```bash
+# Install development dependencies
+composer install
 
-This project is licensed under the GNU General Public License v2 or later.
+# Check coding standards (WordPress ruleset)
+composer phpcs
+
+# Run the full test suite
+composer test
+
+# Run a specific module test
+./vendor/bin/phpunit tests/test-firewall.php
+```
+
+See the [Developer Guide](docs/08-Developer-Guide.md) for more details on the testing infrastructure and extending the plugin via hooks.
+
+---
+
+### License
+
+This plugin is licensed under the GPLv2 (or later).
