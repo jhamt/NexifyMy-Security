@@ -169,7 +169,7 @@ class NexifyMy_Security_Alerts {
 
 		$subject = sprintf( '[%s] Security Alert: %s', $site_name, $type_label );
 
-		$body  = "Security Alert from NexifyMy Security\n";
+		$body  = "Security Alert from SecureWP360\n";
 		$body .= "=====================================\n\n";
 		$body .= "Site: {$site_name}\n";
 		$body .= "URL: {$site_url}\n";
@@ -194,7 +194,7 @@ class NexifyMy_Security_Alerts {
 			$body .= "IP Address: {$ip}\n";
 		}
 		$body .= "\n---\n";
-		$body .= "This alert was sent by NexifyMy Security plugin.\n";
+		$body .= "This alert was sent by SecureWP360 plugin.\n";
 		$body .= 'Manage your alert settings: ' . admin_url( 'admin.php?page=nexifymy-security-settings' ) . "\n";
 
 		$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
@@ -252,7 +252,7 @@ class NexifyMy_Security_Alerts {
 		$site_name = get_bloginfo( 'name' );
 		$subject   = sprintf( '[%s] Daily Security Summary', $site_name );
 
-		$body  = "Daily Security Summary from NexifyMy Security\n";
+		$body  = "Daily Security Summary from SecureWP360\n";
 		$body .= "=============================================\n\n";
 		$body .= "Site: {$site_name}\n";
 		$body .= "Period: Last 24 hours\n";
@@ -282,7 +282,7 @@ class NexifyMy_Security_Alerts {
 
 		$body .= 'View full logs: ' . admin_url( 'admin.php?page=nexifymy-security-logs' ) . "\n";
 		$body .= "\n---\n";
-		$body .= "This summary was sent by NexifyMy Security plugin.\n";
+		$body .= "This summary was sent by SecureWP360 plugin.\n";
 
 		$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
 
@@ -424,10 +424,11 @@ class NexifyMy_Security_Alerts {
 		$this->send_alert_email(
 			$recipient,
 			'test_alert',
-			'This is a test alert from NexifyMy Security. If you received this email, alerts are working correctly.',
+			'This is a test alert from SecureWP360. If you received this email, alerts are working correctly.',
 			array( 'test' => true )
 		);
 
 		wp_send_json_success( 'Test alert sent to ' . $recipient );
 	}
 }
+

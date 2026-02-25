@@ -286,7 +286,7 @@ class NexifyMy_Security_Self_Protection {
 		$subject = sprintf( '[%s] CRITICAL: Security Plugin Tampering Detected', get_bloginfo( 'name' ) );
 
 		$message  = "CRITICAL SECURITY ALERT\n\n";
-		$message .= "NexifyMy Security has detected unauthorized modifications to its own files.\n\n";
+		$message .= "SecureWP360 has detected unauthorized modifications to its own files.\n\n";
 
 		if ( ! empty( $modified ) ) {
 			$message .= "MODIFIED FILES:\n";
@@ -360,7 +360,7 @@ class NexifyMy_Security_Self_Protection {
 	public function show_tampering_notice() {
 		echo '<div class="notice notice-error">';
 		echo '<p><strong>' . esc_html__( 'SECURITY ALERT:', 'nexifymy-security' ) . '</strong> ';
-		echo esc_html__( 'NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation.', 'nexifymy-security' );
+		echo esc_html__( 'SecureWP360 has detected unauthorized modifications to its files. Please verify your installation.', 'nexifymy-security' );
 		echo '</p></div>';
 	}
 
@@ -395,7 +395,7 @@ class NexifyMy_Security_Self_Protection {
 
 		if ( strpos( $file, 'nexifymy-security' ) !== false || strpos( $plugin, 'nexifymy-security' ) !== false ) {
 			wp_die(
-				__( 'Editing NexifyMy Security plugin files is disabled for security reasons.', 'nexifymy-security' ),
+				__( 'Editing SecureWP360 plugin files is disabled for security reasons.', 'nexifymy-security' ),
 				__( 'Access Denied', 'nexifymy-security' ),
 				array(
 					'response'  => 403,
@@ -465,7 +465,7 @@ class NexifyMy_Security_Self_Protection {
 			$user = wp_get_current_user();
 			NexifyMy_Security_Logger::log(
 				'plugin_deactivated',
-				sprintf( 'NexifyMy Security was deactivated by user: %s', $user->user_login ),
+				sprintf( 'SecureWP360 was deactivated by user: %s', $user->user_login ),
 				'warning',
 				array(
 					'user_id'    => $user->ID,
@@ -481,7 +481,7 @@ class NexifyMy_Security_Self_Protection {
 			$to      = get_option( 'admin_email' );
 			$subject = sprintf( '[%s] Security Plugin Deactivated', get_bloginfo( 'name' ) );
 			$message = sprintf(
-				"NexifyMy Security was deactivated.\n\nUser: %s\nTime: %s\nIP: %s",
+				"SecureWP360 was deactivated.\n\nUser: %s\nTime: %s\nIP: %s",
 				$user->user_login,
 				current_time( 'mysql' ),
 				$this->get_client_ip()
@@ -586,3 +586,4 @@ class NexifyMy_Security_Self_Protection {
 		);
 	}
 }
+

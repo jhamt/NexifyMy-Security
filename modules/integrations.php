@@ -328,7 +328,7 @@ class NexifyMy_Security_Integrations {
 
 		$slack_payload = array(
 			'channel'     => $settings['slack_channel'],
-			'username'    => 'NexifyMy Security',
+			'username'    => 'SecureWP360',
 			'icon_emoji'  => ':shield:',
 			'attachments' => array(
 				array(
@@ -391,7 +391,7 @@ class NexifyMy_Security_Integrations {
 		$color = $this->severity_to_decimal_color( $payload['severity'] );
 
 		$discord_payload = array(
-			'username'   => 'NexifyMy Security',
+			'username'   => 'SecureWP360',
 			'avatar_url' => 'https://ps.w.org/wordfence/assets/icon-256x256.png',
 			'embeds'     => array(
 				array(
@@ -914,7 +914,7 @@ class NexifyMy_Security_Integrations {
 
 		$test_payload = array(
 			'title'       => 'Test Notification',
-			'description' => 'This is a test notification from NexifyMy Security.',
+			'description' => 'This is a test notification from SecureWP360.',
 			'severity'    => 'info',
 			'data'        => array( 'test' => true ),
 		);
@@ -1069,3 +1069,4 @@ class NexifyMy_Security_Integrations {
 		);
 	}
 }
+

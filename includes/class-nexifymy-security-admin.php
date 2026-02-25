@@ -44,8 +44,8 @@ class NexifyMy_Security_Admin {
 	public function add_menu_pages() {
 		// Main menu
 		add_menu_page(
-			__( 'NexifyMy Security', 'nexifymy-security' ),
-			__( 'Nexify Security', 'nexifymy-security' ),
+			__( 'SecureWP360', 'nexifymy-security' ),
+			__( 'SecureWP360', 'nexifymy-security' ),
 			'manage_options',
 			'nexifymy-security',
 			array( $this, 'render_dashboard' ),
@@ -1207,7 +1207,7 @@ class NexifyMy_Security_Admin {
 					</div>
 					<div class="nms-header-title">
 						<h2>
-							<?php _e( 'NexifyMy Security', 'nexifymy-security' ); ?>
+							<?php _e( 'SecureWP360', 'nexifymy-security' ); ?>
 							<span class="nms-version">v<?php echo esc_html( NEXIFYMY_SECURITY_VERSION ); ?></span>
 						</h2>
 						<p><?php _e( 'Enterprise-Grade WordPress Security', 'nexifymy-security' ); ?></p>
@@ -2022,7 +2022,7 @@ class NexifyMy_Security_Admin {
 							<li><?php _e( 'Review security logs regularly', 'nexifymy-security' ); ?></li>
 						</ul>
 						<h4><?php _e( 'Need Support?', 'nexifymy-security' ); ?></h4>
-						<p><?php _e( 'Contact our support team for assistance with NexifyMy Security.', 'nexifymy-security' ); ?></p>
+						<p><?php _e( 'Contact our support team for assistance with SecureWP360.', 'nexifymy-security' ); ?></p>
 					</div>
 				</div>
 			</div>
@@ -8033,7 +8033,7 @@ class NexifyMy_Security_Admin {
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><?php _e( 'Export Settings', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
-				<p><?php _e( 'Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings.', 'nexifymy-security' ); ?></p>
+				<p><?php _e( 'Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings.', 'nexifymy-security' ); ?></p>
 				<p>
 					<label><input type="checkbox" id="export-logs" checked> <?php _e( 'Include security logs (last 30 days)', 'nexifymy-security' ); ?></label><br>
 					<label><input type="checkbox" id="export-ip-lists" checked> <?php _e( 'Include IP whitelist/blacklist', 'nexifymy-security' ); ?></label><br>
@@ -8064,7 +8064,7 @@ class NexifyMy_Security_Admin {
 		<div class="nms-card">
 			<div class="nms-card-header"><h3><?php _e( 'Reset to Defaults', 'nexifymy-security' ); ?></h3></div>
 			<div class="nms-card-body">
-				<p><?php _e( 'Reset all NexifyMy Security settings to their default values. This action cannot be undone.', 'nexifymy-security' ); ?></p>
+				<p><?php _e( 'Reset all SecureWP360 settings to their default values. This action cannot be undone.', 'nexifymy-security' ); ?></p>
 				<p class="submit">
 					<button type="button" id="reset-settings" class="nms-btn nms-auto-s001"><span class="dashicons dashicons-trash"></span> <?php _e( 'Reset All Settings', 'nexifymy-security' ); ?></button>
 				</p>
@@ -11537,3 +11537,4 @@ jobs:
 		<?php
 	}
 }
+

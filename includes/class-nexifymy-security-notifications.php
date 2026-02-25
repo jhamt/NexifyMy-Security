@@ -198,7 +198,7 @@ class NexifyMy_Security_Notifications {
 		?>
 		<div class="notice notice-warning is-dismissible">
 			<p>
-				<strong><?php esc_html_e( 'NexifyMy Security:', 'nexifymy-security' ); ?></strong>
+				<strong><?php esc_html_e( 'SecureWP360:', 'nexifymy-security' ); ?></strong>
 				<?php
 				printf(
 					' %s ',
@@ -308,3 +308,4 @@ class NexifyMy_Security_Notifications {
 		return (int) $wpdb->get_var( "SELECT MAX(id) FROM {$table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 }
+

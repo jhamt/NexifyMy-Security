@@ -706,13 +706,13 @@ if ( ! class_exists( 'NexifyMy_Security_Firewall' ) ) {
 <body>
 	<div class="block-container">
 		<h1>Security Check</h1>
-		<p>Your request was blocked by <strong>NexifyMy Security</strong> firewall because it triggered a security rule.</p>
+		<p>Your request was blocked by <strong>SecureWP360</strong> firewall because it triggered a security rule.</p>
 		<p>If you believe this is a mistake, please contact the site administrator.</p>
 		<div class="meta">
 			Reason: $reason_safe<br>
 			Your IP: $ip
 		</div>
-		<div class="footer">Protected by NexifyMy Security</div>
+		<div class="footer">Protected by SecureWP360</div>
 	</div>
 </body>
 </html>
@@ -721,3 +721,4 @@ HTML;
 		}
 	}
 }
+

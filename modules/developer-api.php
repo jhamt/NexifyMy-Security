@@ -1128,7 +1128,7 @@ class NexifyMy_Security_Developer_API {
 			'event'     => 'test',
 			'timestamp' => current_time( 'c' ),
 			'site_url'  => home_url(),
-			'data'      => array( 'message' => 'This is a test webhook from NexifyMy Security.' ),
+			'data'      => array( 'message' => 'This is a test webhook from SecureWP360.' ),
 		);
 
 		$response = wp_remote_post(
@@ -1203,7 +1203,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				'AI Detection' => $this->check_enabled( 'ai_detection' ) ? 'Enabled' : 'Disabled',
 			);
 
-			WP_CLI::success( 'NexifyMy Security Status:' );
+			WP_CLI::success( 'SecureWP360 Status:' );
 			foreach ( $status as $key => $value ) {
 				WP_CLI::log( sprintf( '  %s: %s', $key, $value ) );
 			}
@@ -1399,3 +1399,4 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 
 // Register CLI commands on load.
 add_action( 'cli_init', array( 'NexifyMy_Security_Developer_API', 'register_cli_commands' ) );
+

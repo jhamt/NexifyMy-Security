@@ -318,7 +318,7 @@ class NexifyMy_Security_RateLimiter {
 			echo '<h1>Access Temporarily Blocked</h1>';
 			echo '<p>Your IP has been temporarily blocked due to suspicious activity.</p>';
 			echo '<p>Please try again in <strong>' . esc_html( $minutes ) . '</strong> minute(s).</p>';
-			echo '<p><small>Protected by NexifyMy Security</small></p>';
+			echo '<p><small>Protected by SecureWP360</small></p>';
 			echo '</body></html>';
 			exit;
 		}
@@ -391,3 +391,4 @@ class NexifyMy_Security_RateLimiter {
 		wp_send_json_success( 'IP unblocked successfully' );
 	}
 }
+
