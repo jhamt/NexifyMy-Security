@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	} else {
 		// Fallback: log to error_log.
 		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-		error_log( '[NexifyMy Security] Beacon triggered but WordPress not loaded' );
+		error_log( '[SecureWP360] Beacon triggered but WordPress not loaded' );
 		http_response_code( 404 );
 		exit( 'Not found' );
 	}
@@ -63,7 +63,7 @@ $data = array(
 	'timestamp'    => current_time( 'mysql' ),
 );
 
-// Log via NexifyMy Security logger.
+// Log via SecureWP360 logger.
 if ( class_exists( 'NexifyMy_Security_Logger' ) ) {
 	NexifyMy_Security_Logger::log(
 		'beacon_triggered',

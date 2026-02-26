@@ -1677,7 +1677,7 @@ class NexifyMy_Security_Sandbox {
 		$escaped_code    = var_export( $code, true );
 
 		$h  = "<?php\n";
-		$h .= "// NexifyMy Security - Docker Sandbox Harness\n";
+		$h .= "// SecureWP360 - Docker Sandbox Harness\n";
 		$h .= "// Auto-generated ephemeral file\n\n";
 
 		// Error handler.

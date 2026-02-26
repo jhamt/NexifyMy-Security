@@ -1338,7 +1338,7 @@ class NexifyMy_Security_Scanner {
 				}
 			}
 		} catch ( Exception $e ) {
-			error_log( '[NexifyMy Scanner] Error: ' . $e->getMessage() );
+			error_log( '[SecureWP360 Scanner] Error: ' . $e->getMessage() );
 		}
 
 		return array(

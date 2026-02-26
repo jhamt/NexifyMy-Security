@@ -819,7 +819,7 @@ class NexifyMy_Security_Signature_Updater {
 				'headers'   => array(
 					'Accept'          => 'application/json',
 					'Accept-Encoding' => 'gzip, deflate',
-					'User-Agent'      => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION . ' (WordPress Security Plugin)',
+					'User-Agent'      => 'SecureWP360/' . NEXIFYMY_SECURITY_VERSION . ' (WordPress Security Plugin)',
 				),
 			)
 		);
@@ -864,7 +864,7 @@ class NexifyMy_Security_Signature_Updater {
 				'sslverify' => true,
 				'headers'   => array(
 					'Accept'     => 'text/plain',
-					'User-Agent' => 'NexifyMy-Security/' . NEXIFYMY_SECURITY_VERSION,
+					'User-Agent' => 'SecureWP360/' . NEXIFYMY_SECURITY_VERSION,
 				),
 			)
 		);

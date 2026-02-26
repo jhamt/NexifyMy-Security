@@ -183,7 +183,7 @@ class NexifyMy_Security_Notifications {
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 		$screen_id = ( $screen && isset( $screen->id ) ) ? (string) $screen->id : '';
 
-		// Do not inject this global notice inside NexifyMy plugin admin pages.
+		// Do not inject this global notice inside SecureWP360 plugin admin pages.
 		// The plugin already has a dedicated Notifications page and admin-bar badge.
 		if ( '' !== $screen_id && strpos( $screen_id, 'nexifymy-security' ) !== false ) {
 			return;

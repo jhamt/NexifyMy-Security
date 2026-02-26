@@ -238,7 +238,7 @@ class NexifyMy_Security_Login_Captcha {
 	}
 
 	/**
-	 * Render NexifyMy custom captcha.
+	 * Render SecureWP360 custom captcha.
 	 */
 	private function render_nexifymy_captcha() {
 		$settings = $this->get_settings();

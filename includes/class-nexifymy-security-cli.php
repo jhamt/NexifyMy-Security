@@ -1,6 +1,6 @@
 <?php
 /**
- * WP-CLI Commands for NexifyMy Security
+ * WP-CLI Commands for SecureWP360
  * Enables DevOps integration and automation.
  *
  * @package    NexifyMy_Security

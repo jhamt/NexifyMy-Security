@@ -125,7 +125,7 @@ class NexifyMy_Security_Database {
 
 		// Start output buffer.
 		$sql  = '';
-		$sql .= "-- NexifyMy Security Database Backup\n";
+		$sql .= "-- SecureWP360 Database Backup\n";
 		$sql .= '-- Generated: ' . gmdate( 'Y-m-d H:i:s' ) . " UTC\n";
 		$sql .= '-- WordPress Version: ' . get_bloginfo( 'version' ) . "\n";
 		$sql .= '-- Site URL: ' . get_site_url() . "\n";

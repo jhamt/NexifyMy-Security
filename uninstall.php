@@ -1,6 +1,6 @@
 <?php
 /**
- * NexifyMy Security Uninstall Script.
+ * SecureWP360 Uninstall Script.
  *
  * Fired when the plugin is uninstalled. Cleans up all data created by the plugin.
  *
