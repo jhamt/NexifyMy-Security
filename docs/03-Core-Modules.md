@@ -1,6 +1,6 @@
-# NexifyMy Security - Core Modules
+# SecureWP360 - Core Modules
 
-NexifyMy Security features a robust, modular architecture with 35+ specialized security components. This document covers the essential foundational modules that provide the first line of defense.
+SecureWP360 features a robust, modular architecture with 35+ specialized security components. This document covers the essential foundational modules that provide the first line of defense.
 
 ---
 
@@ -115,5 +115,5 @@ Secures the WordPress environment and protects the security plugin itself from b
 
 **Self-Protection (`self-protection.php`):**
 
-- Prevents unauthorized deactivation of the NexifyMy Security plugin.
+- Prevents unauthorized deactivation of the SecureWP360 plugin.
 - Locks down crucial security settings against tampering by compromised administrator accounts.

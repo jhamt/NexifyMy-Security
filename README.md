@@ -1,8 +1,8 @@
-# NexifyMy Security
+# SecureWP360
 
 A modern, lightweight, and powerful security plugin for WordPress.
 
-NexifyMy Security transcends standard static defenses by combining traditional rule-based protection (OWASP Top 10 WAF, rate limiting, and malware scanning) with advanced artificial intelligence, behavioral analysis, and peer-to-peer threat intelligence.
+SecureWP360 transcends standard static defenses by combining traditional rule-based protection (OWASP Top 10 WAF, rate limiting, and malware scanning) with advanced artificial intelligence, behavioral analysis, and peer-to-peer threat intelligence.
 
 With over 35 distinct, highly-optimized security modules, it provides enterprise-grade protection while maintaining a zero-trust architecture and a minimal performance footprint.
 
@@ -42,13 +42,13 @@ Upon activation, the plugin automatically enables critical defenses:
 - **Rate Limiter** protects against brute-force login attempts.
 - **Background Scanner** schedules daily integrity checks.
 
-Navigate to the **NexifyMy Security** menu in your WordPress dashboard to access the Live Traffic metrics, review your Security Score, and toggle the 30+ other specialized modules on or off according to your technical needs.
+Navigate to the **SecureWP360** menu in your WordPress dashboard to access the Live Traffic metrics, review your Security Score, and toggle the 30+ other specialized modules on or off according to your technical needs.
 
 ---
 
 ## 🛠️ Testing & Development
 
-NexifyMy Security includes a standalone PHPUnit test suite running decoupled from a live WordPress database.
+SecureWP360 includes a standalone PHPUnit test suite running decoupled from a live WordPress database.
 
 ```bash
 # Install development dependencies

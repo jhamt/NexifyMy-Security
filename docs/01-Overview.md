@@ -1,19 +1,19 @@
-# NexifyMy Security - Overview & Architecture
+# SecureWP360 - Overview & Architecture
 
 ## Introduction
 
-Welcome to the documentation for **NexifyMy Security**, a modern, lightweight, and powerful security plugin for WordPress.
+Welcome to the documentation for **SecureWP360**, a modern, lightweight, and powerful security plugin for WordPress.
 
 Version: **2.1.0**
 Requires: WordPress 5.0+, PHP 7.4+
 
-NexifyMy Security provides a unified defense system, combining traditional rule-based protection (WAF, malware scanning) with advanced artificial intelligence, behavioral analysis, and peer-to-peer threat intelligence.
+SecureWP360 provides a unified defense system, combining traditional rule-based protection (WAF, malware scanning) with advanced artificial intelligence, behavioral analysis, and peer-to-peer threat intelligence.
 
 With over 35 distinct security modules, it offers enterprise-grade protection while maintaining a minimal performance footprint.
 
 ## Core Philosophy
 
-NexifyMy Security is built on three core principles:
+SecureWP360 is built on three core principles:
 
 1.  **Early Execution:** Security checks must happen before malicious code can run.
 2.  **Zero-Trust:** Never trust input, regardless of the source or authentication status.
@@ -25,7 +25,7 @@ To provide maximum protection, the plugin employs a specialized execution pipeli
 
 ### 1. Early Execution (Pre-Hook Phase)
 
-Unlike standard WordPress plugins that wait for the `plugins_loaded` or `init` hooks, NexifyMy Security's most critical defenses fire immediately upon PHP execution.
+Unlike standard WordPress plugins that wait for the `plugins_loaded` or `init` hooks, SecureWP360's most critical defenses fire immediately upon PHP execution.
 
 - **When it runs:** Before WordPress has fully initialized its core logic.
 - **What runs:**
@@ -45,7 +45,7 @@ After the early defenses have secured the perimeter, the rest of the plugin init
 
 ### 3. Module System
 
-Every major feature in NexifyMy Security is built as an independent, standalone PHP class inside the `modules/` directory.
+Every major feature in SecureWP360 is built as an independent, standalone PHP class inside the `modules/` directory.
 
 Modules are designed to be explicitly toggled on or off via the `nexifymy_security_settings` database option. The global instance of each active module is stored in the `$GLOBALS` array (e.g., `$GLOBALS['nexifymy_waf']`).
 

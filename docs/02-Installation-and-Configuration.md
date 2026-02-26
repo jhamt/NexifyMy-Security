@@ -1,4 +1,4 @@
-# NexifyMy Security - Installation & Configuration
+# SecureWP360 - Installation & Configuration
 
 ## System Requirements
 
@@ -26,17 +26,17 @@ To ensure optimal performance and compatibility, your server should meet the fol
 2.  Connect to your server using an FTP client (like FileZilla or Cyberduck).
 3.  Navigate to the `/wp-content/plugins/` directory.
 4.  Upload the extracted `nexifymy-security` folder.
-5.  Log in to your WordPress dashboard, go to **Plugins**, and click **Activate** next to NexifyMy Security.
+5.  Log in to your WordPress dashboard, go to **Plugins**, and click **Activate** next to SecureWP360.
 
 ---
 
 ## Global Configuration Overview
 
-All configuration for NexifyMy Security is managed through the centralized **NexifyMy Security** menu in your WordPress dashboard sidebar.
+All configuration for SecureWP360 is managed through the centralized **SecureWP360** menu in your WordPress dashboard sidebar.
 
 ### Centralized Settings Storage
 
-Under the hood, NexifyMy Security is designed for performance. It stores _all_ of its configuration data in a single, serialized WordPress option named `nexifymy_security_settings`.
+Under the hood, SecureWP360 is designed for performance. It stores _all_ of its configuration data in a single, serialized WordPress option named `nexifymy_security_settings`.
 
 This prevents unnecessary database queries on every page load, as WordPress retrieves this single option and caches it in memory.
 
@@ -58,7 +58,7 @@ If a module is turned off globally (via the main toggle), its specific settings 
 
 ### Default Configurations on Activation
 
-When activated for the first time, NexifyMy Security establishes the following critical defaults:
+When activated for the first time, SecureWP360 establishes the following critical defaults:
 
 - **Firewall:** Enabled (Blocks bad bots and fake scrapers immediately).
 - **Rate Limiter:** Enabled (Limits to 5 attempts per 5 minutes, 30-minute lockout).

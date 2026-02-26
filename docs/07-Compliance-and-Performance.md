@@ -1,4 +1,4 @@
-# NexifyMy Security - Compliance & Performance
+# SecureWP360 - Compliance & Performance
 
 ## Compliance Reporting (GDPR, CCPA)
 

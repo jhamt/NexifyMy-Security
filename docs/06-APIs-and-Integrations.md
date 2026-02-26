@@ -1,4 +1,4 @@
-# NexifyMy Security - APIs & Integrations
+# SecureWP360 - APIs & Integrations
 
 ## Advanced API Security
 
@@ -26,7 +26,7 @@ Protects systems using WPGraphQL, preventing resource exhaustion and overly comp
 
 ## Integrations (Webhooks)
 
-Connects NexifyMy Security to your existing enterprise communication and monitoring tools.
+Connects SecureWP360 to your existing enterprise communication and monitoring tools.
 
 **Supported Platforms:**
 
@@ -46,7 +46,7 @@ Connects NexifyMy Security to your existing enterprise communication and monitor
 
 ## Content Delivery Network (CDN) Integration
 
-Ensures NexifyMy Security correctly identifies the originating IP address when the site is placed behind a proxy.
+Ensures SecureWP360 correctly identifies the originating IP address when the site is placed behind a proxy.
 
 **Key Features:**
 

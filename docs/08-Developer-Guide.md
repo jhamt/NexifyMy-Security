@@ -1,6 +1,6 @@
-# NexifyMy Security - Developer Guide
+# SecureWP360 - Developer Guide
 
-NexifyMy Security is designed with extensibility in mind. This guide details how developers can hook into the plugin, run CLI commands, and build brand new modules.
+SecureWP360 is designed with extensibility in mind. This guide details how developers can hook into the plugin, run CLI commands, and build brand new modules.
 
 ## WP-CLI Integration
 
@@ -43,7 +43,7 @@ Developers can hook into the plugin's lifecycle to intercept data or trigger cus
 
 ## Creating a Custom Module
 
-The architecture allows you to easily plug your own discrete security features into the NexifyMy dashboard.
+The architecture allows you to easily plug your own discrete security features into the SecureWP360 dashboard.
 
 **Step 1: Create the Class File**
 Create a new PHP file in `/modules/your-custom-module.php`:

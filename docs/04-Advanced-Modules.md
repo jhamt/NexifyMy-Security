@@ -1,4 +1,4 @@
-# NexifyMy Security - Advanced Modules
+# SecureWP360 - Advanced Modules
 
 This document details the enterprise-grade, advanced security modules that leverage artificial intelligence, predictive modeling, and zero-trust concepts.
 
@@ -43,7 +43,7 @@ Turns the website into an active defense mechanism by deploying traps for attack
 
 ## P2P Intelligence Network
 
-A collaborative defense mechanism that shares threat data across multiple WordPress sites running NexifyMy Security.
+A collaborative defense mechanism that shares threat data across multiple WordPress sites running SecureWP360.
 
 **Key Features:**
 

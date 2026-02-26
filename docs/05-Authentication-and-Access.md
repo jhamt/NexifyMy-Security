@@ -1,4 +1,4 @@
-# NexifyMy Security - Authentication & Access Controls
+# SecureWP360 - Authentication & Access Controls
 
 This document details the modules responsible for securing the WordPress login experience, managing user access, and preventing unauthorized entry.
 
