@@ -1,5 +1,5 @@
 /**
- * NexifyMy Security Admin JavaScript
+ * SecureWP360 Admin JavaScript
  */
 
 (function ($) {

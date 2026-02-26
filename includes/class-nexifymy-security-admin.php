@@ -1210,7 +1210,7 @@ class NexifyMy_Security_Admin {
 							<?php _e( 'SecureWP360', 'nexifymy-security' ); ?>
 							<span class="nms-version">v<?php echo esc_html( NEXIFYMY_SECURITY_VERSION ); ?></span>
 						</h2>
-						<p><?php _e( 'Enterprise-Grade WordPress Security', 'nexifymy-security' ); ?></p>
+						<p><?php _e( 'All-in-one WordPress Security Plugin', 'nexifymy-security' ); ?></p>
 					</div>
 				</div>
 				<div class="nms-header-actions">
@@ -5165,7 +5165,7 @@ class NexifyMy_Security_Admin {
 						<th><?php _e( 'Captcha Provider', 'nexifymy-security' ); ?></th>
 						<td>
 							<select id="captcha-provider" class="regular-text">
-								<option value="nexifymy" <?php selected( $captcha['provider'] ?? 'nexifymy', 'nexifymy' ); ?>><?php _e( 'NexifyMy Captcha (Built-in)', 'nexifymy-security' ); ?></option>
+								<option value="nexifymy" <?php selected( $captcha['provider'] ?? 'nexifymy', 'nexifymy' ); ?>><?php _e( 'SecureWP360 Captcha (Built-in)', 'nexifymy-security' ); ?></option>
 								<option value="recaptcha" <?php selected( $captcha['provider'] ?? 'nexifymy', 'recaptcha' ); ?>><?php _e( 'Google reCAPTCHA v2', 'nexifymy-security' ); ?></option>
 								<option value="recaptcha_v3" <?php selected( $captcha['provider'] ?? 'nexifymy', 'recaptcha_v3' ); ?>><?php _e( 'Google reCAPTCHA v3', 'nexifymy-security' ); ?></option>
 								<option value="turnstile" <?php selected( $captcha['provider'] ?? 'nexifymy', 'turnstile' ); ?>><?php _e( 'Cloudflare Turnstile', 'nexifymy-security' ); ?></option>
@@ -5174,9 +5174,9 @@ class NexifyMy_Security_Admin {
 						</td>
 					</tr>
 
-					<!-- NexifyMy Captcha Settings -->
+					<!-- SecureWP360 Captcha Settings -->
 					<tr class="nexifymy-captcha-row <?php echo esc_attr( $nexifymy_row_class ); ?>">
-						<th><?php _e( 'NexifyMy Captcha Type', 'nexifymy-security' ); ?></th>
+						<th><?php _e( 'SecureWP360 Captcha Type', 'nexifymy-security' ); ?></th>
 						<td>
 							<select id="captcha-nexifymy-type" class="regular-text">
 								<option value="math" <?php selected( $captcha['nexifymy_type'] ?? 'math', 'math' ); ?>><?php _e( 'Math Question', 'nexifymy-security' ); ?></option>
@@ -5184,7 +5184,7 @@ class NexifyMy_Security_Admin {
 								<option value="image" <?php selected( $captcha['nexifymy_type'] ?? 'math', 'image' ); ?>><?php _e( 'Image Selection', 'nexifymy-security' ); ?></option>
 								<option value="audio" <?php selected( $captcha['nexifymy_type'] ?? 'math', 'audio' ); ?>><?php _e( 'Audio (Speaking)', 'nexifymy-security' ); ?></option>
 							</select>
-							<p class="description"><?php _e( 'Choose the type of challenge for NexifyMy captcha.', 'nexifymy-security' ); ?></p>
+							<p class="description"><?php _e( 'Choose the type of challenge for SecureWP360 captcha.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
 					<tr class="nexifymy-captcha-row <?php echo esc_attr( $nexifymy_row_class ); ?>">
@@ -5195,7 +5195,7 @@ class NexifyMy_Security_Admin {
 								<option value="medium" <?php selected( $captcha['difficulty'] ?? 'easy', 'medium' ); ?>><?php _e( 'Medium', 'nexifymy-security' ); ?></option>
 								<option value="hard" <?php selected( $captcha['difficulty'] ?? 'easy', 'hard' ); ?>><?php _e( 'Hard', 'nexifymy-security' ); ?></option>
 							</select>
-							<p class="description"><?php _e( 'Difficulty level for NexifyMy captcha challenges.', 'nexifymy-security' ); ?></p>
+							<p class="description"><?php _e( 'Difficulty level for SecureWP360 captcha challenges.', 'nexifymy-security' ); ?></p>
 						</td>
 					</tr>
 
@@ -6513,68 +6513,91 @@ class NexifyMy_Security_Admin {
 		require_once NEXIFYMY_SECURITY_PATH . 'modules/site-health-calculator.php';
 		$health_calculator = new NexifyMy_Security_Site_Health_Calculator();
 
-		$health_score  = $health_summary['health_score'] ?? 0;
+		$health_score  = max( 0, min( 100, intval( $health_summary['health_score'] ?? 0 ) ) );
 		$health_status = $health_summary['health_status'] ?? 'at_risk';
 		$display       = $health_calculator->get_health_status_display( $health_status );
 
-		$progress_width      = $health_score;
-		$progress_color      = $display['color'];
+		$progress_color      = $display['color'] ?? '#ff9800';
 		$health_status_class = 'nms-health-status-' . sanitize_html_class( $health_status );
+		$status_label        = $display['label'] ?? ucfirst( str_replace( '_', ' ', (string) $health_status ) );
+		$status_icon_map     = array(
+			'excellent' => 'dashicons-yes-alt',
+			'good'      => 'dashicons-shield-alt',
+			'at_risk'   => 'dashicons-warning',
+			'critical'  => 'dashicons-dismiss',
+		);
+		$status_icon         = $status_icon_map[ $health_status ] ?? 'dashicons-shield';
+
+		$total_files_scanned = intval( $health_summary['total_files_scanned'] ?? 0 );
+		$clean_files         = intval( $health_summary['clean_files'] ?? 0 );
+		$files_with_threats  = intval( $health_summary['files_with_threats'] ?? 0 );
+		$clean_percentage    = floatval( $health_summary['clean_percentage'] ?? 0 );
+		$affected_percentage = floatval( $health_summary['affected_percentage'] ?? 0 );
+		$recommendation      = $health_summary['recommendation'] ?? '';
 		?>
 		<div class="nms-card nms-health-dashboard nms-mb-20 <?php echo esc_attr( $health_status_class ); ?>">
 			<div class="nms-card-header">
 				<h3>
-					<span class="dashicons dashicons-heart nms-health-icon"></span>
+					<span class="dashicons dashicons-shield-alt nms-health-icon"></span>
 					<?php _e( 'Site Security Health', 'nexifymy-security' ); ?>
 				</h3>
 			</div>
 			<div class="nms-card-body">
 				<div class="nms-health-overview">
 					<div class="nms-health-gauge-column">
-						<div class="nms-health-gauge">
-							<svg viewBox="0 0 100 100" class="nms-health-gauge-svg">
-								<circle cx="50" cy="50" r="42" fill="none" stroke="#e0e0e0" stroke-width="8"></circle>
-								<circle
-									cx="50"
-									cy="50"
-									r="42"
-									fill="none"
-									stroke="<?php echo esc_attr( $progress_color ); ?>"
-									stroke-width="8"
-									stroke-dasharray="<?php echo esc_attr( ( $health_score / 100 ) * 264 ); ?> 264"
-									stroke-linecap="round"
-								></circle>
-							</svg>
-							<div class="nms-health-gauge-value">
-								<strong class="nms-health-score"><?php echo esc_html( $health_score ); ?></strong>
-								<span>/100</span>
+						<div class="nms-health-gauge-shell">
+							<div class="nms-health-gauge">
+								<svg viewBox="0 0 100 100" class="nms-health-gauge-svg">
+									<circle cx="50" cy="50" r="42" fill="none" stroke="#e0e0e0" stroke-width="8"></circle>
+									<circle
+										cx="50"
+										cy="50"
+										r="42"
+										fill="none"
+										stroke="<?php echo esc_attr( $progress_color ); ?>"
+										stroke-width="8"
+										stroke-dasharray="<?php echo esc_attr( ( $health_score / 100 ) * 264 ); ?> 264"
+										stroke-linecap="round"
+									></circle>
+								</svg>
+								<div class="nms-health-gauge-value">
+									<strong class="nms-health-score"><?php echo esc_html( $health_score ); ?></strong>
+									<span>/100</span>
+								</div>
 							</div>
+							<span class="nms-health-gauge-caption"><?php esc_html_e( 'Security Score', 'nexifymy-security' ); ?></span>
 						</div>
 					</div>
 					<div class="nms-health-summary-column">
 						<div class="nms-health-pill-row">
+							<span class="nms-health-pill-caption"><?php esc_html_e( 'Security Status', 'nexifymy-security' ); ?></span>
 							<span class="nms-health-pill">
-								<?php echo esc_html( $display['label'] ?? ucfirst( str_replace( '_', ' ', (string) $health_status ) ) ); ?>
+								<span class="dashicons <?php echo esc_attr( $status_icon ); ?>"></span>
+								<?php echo esc_html( $status_label ); ?>
 							</span>
 						</div>
 						<div class="nms-health-metric">
-							<strong><?php _e( 'Files Scanned:', 'nexifymy-security' ); ?></strong>
-							<?php echo number_format( $health_summary['total_files_scanned'] ); ?>
+							<span class="nms-health-metric-label"><?php esc_html_e( 'Files Scanned', 'nexifymy-security' ); ?></span>
+							<span class="nms-health-metric-value"><?php echo esc_html( number_format_i18n( $total_files_scanned ) ); ?></span>
 						</div>
 						<div class="nms-health-metric">
-							<strong><?php _e( 'Clean Files:', 'nexifymy-security' ); ?></strong>
-							<?php echo number_format( $health_summary['clean_files'] ); ?>
-							(<?php echo esc_html( $health_summary['clean_percentage'] ); ?>%)
+							<span class="nms-health-metric-label"><?php esc_html_e( 'Clean Files', 'nexifymy-security' ); ?></span>
+							<span class="nms-health-metric-value">
+								<?php echo esc_html( number_format_i18n( $clean_files ) ); ?>
+								<span class="nms-health-metric-meta">(<?php echo esc_html( number_format_i18n( $clean_percentage, 2 ) ); ?>%)</span>
+							</span>
 						</div>
 						<div class="nms-health-metric">
-							<strong><?php _e( 'Affected Files:', 'nexifymy-security' ); ?></strong>
-							<?php echo number_format( $health_summary['files_with_threats'] ); ?>
-							(<?php echo esc_html( $health_summary['affected_percentage'] ); ?>%)
+							<span class="nms-health-metric-label"><?php esc_html_e( 'Affected Files:', 'nexifymy-security' ); ?></span>
+							<span class="nms-health-metric-value">
+								<?php echo esc_html( number_format_i18n( $files_with_threats ) ); ?>
+								<span class="nms-health-metric-meta">(<?php echo esc_html( number_format_i18n( $affected_percentage, 2 ) ); ?>%)</span>
+							</span>
 						</div>
 					</div>
 				</div>
 
-				<?php if ( $health_summary['files_with_threats'] > 0 ) : ?>
+				<?php if ( $files_with_threats > 0 ) : ?>
 					<?php
 					$scan_results          = get_option( 'nexifymy_scan_results', array() );
 					$classification_counts = $scan_results['classification_counts'] ?? array();
@@ -6639,7 +6662,7 @@ class NexifyMy_Security_Admin {
 				<div class="nms-health-recommendation">
 					<div class="nms-health-recommendation-box">
 						<div class="nms-health-recommendation-text">
-							<?php echo wp_kses_post( $health_summary['recommendation'] ); ?>
+							<?php echo wp_kses_post( $recommendation ); ?>
 						</div>
 					</div>
 				</div>
@@ -11537,4 +11560,3 @@ jobs:
 		<?php
 	}
 }
-

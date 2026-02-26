@@ -1,5 +1,5 @@
 /**
- * NexifyMy Security - Admin Page Specific JavaScript
+ * SecureWP360 - Admin Page Specific JavaScript
  * Moves page-level handlers out of PHP templates.
  */
 

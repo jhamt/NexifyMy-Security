@@ -1,5 +1,5 @@
 /**
- * NexifyMy Security - Passkey/WebAuthn JavaScript
+ * SecureWP360 - Passkey/WebAuthn JavaScript
  * Handles registration and authentication using the Web Authentication API.
  */
 
