@@ -1,7 +1,7 @@
-﻿# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "プラグイン/テーマに既知の脆弱性がないかチェック�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "ユニークで推測が難しいナメクジを選択してください。"
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "NexifyMy キャプチャのチャレンジの種類を選択します。"
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "SecureWP360 キャプチャのチャレンジの種類を選択します。"
 
 msgid "Clean Files"
 msgstr "クリーンなファイル"
@@ -907,8 +907,8 @@ msgstr "確認されたマルウェア"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "セキュリティ監視を SIEM、チケット発行、通信、CI/CD プラットフォームに接続します。"
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "NexifyMy Security に関するサポートについては、サポート チームにお問い合わせください。"
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "SecureWP360 に関するサポートについては、サポート チームにお問い合わせください。"
 
 msgid "Content"
 msgstr "内容"
@@ -1129,8 +1129,8 @@ msgstr "難易度"
 msgid "Difficulty Level"
 msgstr "難易度"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "NexifyMy キャプチャ チャレンジの難易度。"
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "SecureWP360 キャプチャ チャレンジの難易度。"
 
 msgid "Direct"
 msgstr "直接"
@@ -1264,8 +1264,8 @@ msgstr "簡単"
 msgid "Easy (addition only)"
 msgstr "簡単（加算のみ）"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "NexifyMy Security プラグイン ファイルの編集は、セキュリティ上の理由から無効になっています。"
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "SecureWP360 プラグイン ファイルの編集は、セキュリティ上の理由から無効になっています。"
 
 msgid "Editor & File Access"
 msgstr "エディターとファイル アクセス"
@@ -1486,7 +1486,7 @@ msgstr "答えを入力してください"
 msgid "Enter the code:"
 msgstr "コードを入力してください:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "エンタープライズ級WordPressセキュリティ"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "CSVのエクスポート"
 msgid "Export Settings"
 msgstr "設定のエクスポート"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "NexifyMy Security 設定を JSON ファイルにエクスポートします。これには、すべてのモジュール構成、ファイアウォール ルール、IP リスト、スキャン設定が含まれます。"
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "SecureWP360 設定を JSON ファイルにエクスポートします。これには、すべてのモジュール構成、ファイアウォール ルール、IP リスト、スキャン設定が含まれます。"
 
 msgid "External Scripts & CDN Resources"
 msgstr "外部スクリプトと CDN リソース"
@@ -2578,20 +2578,20 @@ msgstr "有効期限はありません"
 msgid "Nexify Security"
 msgstr "ネクシファイセキュリティ"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (組み込み)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (組み込み)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy キャプチャのタイプ"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 キャプチャのタイプ"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy セキュリティ"
+msgid "SecureWP360"
+msgstr "SecureWP360 セキュリティ"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security は、ファイルに対する不正な変更を検出しました。インストールを確認してください。"
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 は、ファイルに対する不正な変更を検出しました。インストールを確認してください。"
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: 未読のセキュリティ アラートが %d 件あります。"
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: 未読のセキュリティ アラートが %d 件あります。"
 
 msgid "Next Update"
 msgstr "次回の更新"
@@ -3313,8 +3313,8 @@ msgstr "すべての設定をリセット"
 msgid "Reset Learning"
 msgstr "学習をリセットする"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "すべての NexifyMy Security 設定をデフォルト値にリセットします。この操作は元に戻すことができません。"
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "すべての SecureWP360 設定をデフォルト値にリセットします。この操作は元に戻すことができません。"
 
 msgid "Reset to Defaults"
 msgstr "デフォルトにリセット"
@@ -5121,8 +5121,8 @@ msgstr "設定が正常に保存されました。"
 msgid "Settings reset to defaults."
 msgstr "設定がデフォルトにリセットされます。"
 
-msgid "NexifyMy Security Logs"
-msgstr "NexifyMy セキュリティ ログ"
+msgid "SecureWP360 Logs"
+msgstr "SecureWP360 セキュリティ ログ"
 
 msgid "No matching user found."
 msgstr "一致するユーザーが見つかりませんでした。"

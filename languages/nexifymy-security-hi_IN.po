@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "ज्ञात कमजोरियों के लिए प्ल�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "एक अनोखा, अनुमान लगाने में कठिन स्लग चुनें।"
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "NexifyMy कैप्चा के लिए चुनौती का प्रकार चुनें।"
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "SecureWP360 कैप्चा के लिए चुनौती का प्रकार चुनें।"
 
 msgid "Clean Files"
 msgstr "फ़ाइलें साफ़ करें"
@@ -907,8 +907,8 @@ msgstr "मैलवेयर की पुष्टि की गई"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "अपनी सुरक्षा निगरानी को एसआईईएम, टिकटिंग, संचार और सीआई/सीडी प्लेटफॉर्म से कनेक्ट करें।"
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "NexifyMy Security में सहायता के लिए हमारी सहायता टीम से संपर्क करें।"
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "SecureWP360 में सहायता के लिए हमारी सहायता टीम से संपर्क करें।"
 
 msgid "Content"
 msgstr "सामग्री"
@@ -1129,8 +1129,8 @@ msgstr "कठिनाई"
 msgid "Difficulty Level"
 msgstr "कठिनाई स्तर"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "NexifyMy कैप्चा चुनौतियों के लिए कठिनाई स्तर।"
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "SecureWP360 कैप्चा चुनौतियों के लिए कठिनाई स्तर।"
 
 msgid "Direct"
 msgstr "प्रत्यक्ष"
@@ -1264,8 +1264,8 @@ msgstr "आसान"
 msgid "Easy (addition only)"
 msgstr "आसान (केवल अतिरिक्त)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "सुरक्षा कारणों से NexifyMy Security प्लगइन फ़ाइलों का संपादन अक्षम है।"
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "सुरक्षा कारणों से SecureWP360 प्लगइन फ़ाइलों का संपादन अक्षम है।"
 
 msgid "Editor & File Access"
 msgstr "संपादक एवं फ़ाइल पहुंच"
@@ -1486,7 +1486,7 @@ msgstr "उत्तर दर्ज करें"
 msgid "Enter the code:"
 msgstr "कोड दर्ज करें:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "एंटरप्राइज़-ग्रेड वर्डप्रेस सुरक्षा"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "सीएसवी निर्यात करें"
 msgid "Export Settings"
 msgstr "निर्यात सेटिंग्स"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "अपनी NexifyMy सुरक्षा सेटिंग्स को JSON फ़ाइल में निर्यात करें। इसमें सभी मॉड्यूल कॉन्फ़िगरेशन, फ़ायरवॉल नियम, आईपी सूचियाँ और स्कैन सेटिंग्स शामिल हैं।"
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "अपनी SecureWP360 सुरक्षा सेटिंग्स को JSON फ़ाइल में निर्यात करें। इसमें सभी मॉड्यूल कॉन्फ़िगरेशन, फ़ायरवॉल नियम, आईपी सूचियाँ और स्कैन सेटिंग्स शामिल हैं।"
 
 msgid "External Scripts & CDN Resources"
 msgstr "बाहरी स्क्रिप्ट और सीडीएन संसाधन"
@@ -2578,20 +2578,20 @@ msgstr "कभी समाप्त नहीं होता"
 msgid "Nexify Security"
 msgstr "नेक्सिफाई सुरक्षा"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy कैप्चा (अंतर्निहित)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 कैप्चा (अंतर्निहित)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy कैप्चा प्रकार"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 कैप्चा प्रकार"
 
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr "नेक्सिफाइमाय सिक्योरिटी"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security ने अपनी फ़ाइलों में अनधिकृत संशोधनों का पता लगाया है। कृपया अपनी स्थापना सत्यापित करें."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 ने अपनी फ़ाइलों में अनधिकृत संशोधनों का पता लगाया है। कृपया अपनी स्थापना सत्यापित करें."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy सुरक्षा: आपके पास %d अपठित सुरक्षा चेतावनी है।"
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360 सुरक्षा: आपके पास %d अपठित सुरक्षा चेतावनी है।"
 
 msgid "Next Update"
 msgstr "अगला अपडेट"
@@ -3313,8 +3313,8 @@ msgstr "सभी सेटिंग्स रीसेट करें"
 msgid "Reset Learning"
 msgstr "सीखना रीसेट करें"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "सभी NexifyMy सुरक्षा सेटिंग्स को उनके डिफ़ॉल्ट मानों पर रीसेट करें। इस एक्शन को वापस नहीं किया जा सकता।"
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "सभी SecureWP360 सुरक्षा सेटिंग्स को उनके डिफ़ॉल्ट मानों पर रीसेट करें। इस एक्शन को वापस नहीं किया जा सकता।"
 
 msgid "Reset to Defaults"
 msgstr "डिफ़ॉल्ट पर रीसेट करें"
@@ -5121,8 +5121,8 @@ msgstr "सेटिंग्स सफलतापूर्वक सहेज�
 msgid "Settings reset to defaults."
 msgstr "सेटिंग्स डिफ़ॉल्ट पर रीसेट हो गईं।"
 
-msgid "NexifyMy Security Logs"
-msgstr "NexifyMy सुरक्षा लॉग"
+msgid "SecureWP360 Logs"
+msgstr "SecureWP360 सुरक्षा लॉग"
 
 msgid "No matching user found."
 msgstr "कोई मेल खाता उपयोगकर्ता नहीं मिला."

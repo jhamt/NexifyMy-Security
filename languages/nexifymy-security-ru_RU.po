@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Проверяет плагины/темы на наличие изве�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Выберите уникальную, трудно угадываемую пулю."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Выберите тип проверки капчи NexifyMy."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Выберите тип проверки капчи SecureWP360."
 
 msgid "Clean Files"
 msgstr "Очистить файлы"
@@ -907,8 +907,8 @@ msgstr "Подтвержденное вредоносное ПО"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Подключите свой мониторинг безопасности к платформам SIEM, билетов, связи и CI/CD."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Свяжитесь с нашей службой поддержки для помощи с NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Свяжитесь с нашей службой поддержки для помощи с SecureWP360."
 
 msgid "Content"
 msgstr "Содержание"
@@ -1129,8 +1129,8 @@ msgstr "Сложность"
 msgid "Difficulty Level"
 msgstr "Уровень сложности"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Уровень сложности для задач NexifyMy по капче."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "Уровень сложности для задач SecureWP360 по капче."
 
 msgid "Direct"
 msgstr "Прямой"
@@ -1264,8 +1264,8 @@ msgstr "Легко"
 msgid "Easy (addition only)"
 msgstr "Легко (только дополнение)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Редактирование файлов плагина NexifyMy Security отключено по соображениям безопасности."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Редактирование файлов плагина SecureWP360 отключено по соображениям безопасности."
 
 msgid "Editor & File Access"
 msgstr "Редактор и доступ к файлам"
@@ -1486,7 +1486,7 @@ msgstr "Введите ответ"
 msgid "Enter the code:"
 msgstr "Введите код:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "Безопасность WordPress корпоративного уровня"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "Экспортировать CSV"
 msgid "Export Settings"
 msgstr "Экспорт настроек"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Экспортируйте настройки NexifyMy Security в файл JSON. Сюда входят все конфигурации модулей, правила брандмауэра, списки IP-адресов и настройки сканирования."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Экспортируйте настройки SecureWP360 в файл JSON. Сюда входят все конфигурации модулей, правила брандмауэра, списки IP-адресов и настройки сканирования."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Внешние скрипты и ресурсы CDN"
@@ -2578,20 +2578,20 @@ msgstr "Никогда не истекает"
 msgid "Nexify Security"
 msgstr "Nexify Безопасность"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (встроенная)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (встроенная)"
 
-msgid "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
 msgstr "NexifyМой тип капчи"
 
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr "NexifyМоя безопасность"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security обнаружил несанкционированные изменения в своих файлах. Пожалуйста, проверьте установку."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 обнаружил несанкционированные изменения в своих файлах. Пожалуйста, проверьте установку."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: у вас есть %d непрочитанных предупреждений безопасности."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: у вас есть %d непрочитанных предупреждений безопасности."
 
 msgid "Next Update"
 msgstr "Следующее обновление"
@@ -3313,8 +3313,8 @@ msgstr "Сбросить все настройки"
 msgid "Reset Learning"
 msgstr "Сбросить обучение"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Сбросьте все настройки NexifyMy Security к значениям по умолчанию. Это действие невозможно отменить."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Сбросьте все настройки SecureWP360 к значениям по умолчанию. Это действие невозможно отменить."
 
 msgid "Reset to Defaults"
 msgstr "Сброс к настройкам по умолчанию"
@@ -5121,7 +5121,7 @@ msgstr "Настройки успешно сохранены."
 msgid "Settings reset to defaults."
 msgstr "Настройки сброшены на значения по умолчанию."
 
-msgid "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
 msgstr "NexifyМои журналы безопасности"
 
 msgid "No matching user found."

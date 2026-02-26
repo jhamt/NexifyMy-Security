@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Ελέγχει προσθήκες/θέματα για γνωστά τρ�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Επιλέξτε ένα μοναδικό, δύσκολο να μαντέψεις γυμνοσάλιαγκα."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Επιλέξτε τον τύπο πρόκλησης για το NexifyMy captcha."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Επιλέξτε τον τύπο πρόκλησης για το SecureWP360 captcha."
 
 msgid "Clean Files"
 msgstr "Καθαρισμός αρχείων"
@@ -907,8 +907,8 @@ msgstr "Επιβεβαιωμένο κακόβουλο λογισμικό"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Συνδέστε την παρακολούθηση ασφαλείας με πλατφόρμες SIEM, έκδοσης εισιτηρίων, επικοινωνίας και CI/CD."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Επικοινωνήστε με την ομάδα υποστήριξής μας για βοήθεια με το NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Επικοινωνήστε με την ομάδα υποστήριξής μας για βοήθεια με το SecureWP360."
 
 msgid "Content"
 msgstr "περιεχόμενο"
@@ -1129,8 +1129,8 @@ msgstr "Δυσκολία"
 msgid "Difficulty Level"
 msgstr "Επίπεδο Δυσκολίας"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Επίπεδο δυσκολίας για τις προκλήσεις NexifyMy captcha."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "Επίπεδο δυσκολίας για τις προκλήσεις SecureWP360 captcha."
 
 msgid "Direct"
 msgstr "Άμεση"
@@ -1264,8 +1264,8 @@ msgstr "Εύκολο"
 msgid "Easy (addition only)"
 msgstr "Εύκολο (μόνο προσθήκη)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Η επεξεργασία των αρχείων της προσθήκης NexifyMy Security είναι απενεργοποιημένη για λόγους ασφαλείας."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Η επεξεργασία των αρχείων της προσθήκης SecureWP360 είναι απενεργοποιημένη για λόγους ασφαλείας."
 
 msgid "Editor & File Access"
 msgstr "Editor & Access File"
@@ -1486,8 +1486,8 @@ msgstr "Εισαγάγετε την απάντηση"
 msgid "Enter the code:"
 msgstr "Εισαγάγετε τον κωδικό:"
 
-msgid "Enterprise-Grade WordPress Security"
-msgstr "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
+msgstr "All-in-one WordPress Security Plugin"
 
 msgid "Error"
 msgstr "Σφάλμα"
@@ -1558,8 +1558,8 @@ msgstr "Εξαγωγή CSV"
 msgid "Export Settings"
 msgstr "Εξαγωγή ρυθμίσεων"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Εξάγετε τις ρυθμίσεις σας NexifyMy Security σε αρχείο JSON. Αυτό περιλαμβάνει όλες τις διαμορφώσεις μονάδων, κανόνες τείχους προστασίας, λίστες IP και ρυθμίσεις σάρωσης."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Εξάγετε τις ρυθμίσεις σας SecureWP360 σε αρχείο JSON. Αυτό περιλαμβάνει όλες τις διαμορφώσεις μονάδων, κανόνες τείχους προστασίας, λίστες IP και ρυθμίσεις σάρωσης."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Εξωτερικά σενάρια & πόροι CDN"
@@ -2578,20 +2578,20 @@ msgstr "Δεν λήγει ποτέ"
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Ενσωματωμένο)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (Ενσωματωμένο)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 Captcha Type"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgid "SecureWP360"
+msgstr "SecureWP360"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "Το NexifyMy Security εντόπισε μη εξουσιοδοτημένες τροποποιήσεις στα αρχεία του. Επαληθεύστε την εγκατάστασή σας."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "Το SecureWP360 εντόπισε μη εξουσιοδοτημένες τροποποιήσεις στα αρχεία του. Επαληθεύστε την εγκατάστασή σας."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: Έχετε %d μη αναγνωσμένες ειδοποιήσεις ασφαλείας."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: Έχετε %d μη αναγνωσμένες ειδοποιήσεις ασφαλείας."
 
 msgid "Next Update"
 msgstr "Επόμενη Ενημέρωση"
@@ -3313,8 +3313,8 @@ msgstr "Επαναφορά όλων των ρυθμίσεων"
 msgid "Reset Learning"
 msgstr "Επαναφορά εκμάθησης"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Επαναφέρετε όλες τις ρυθμίσεις NexifyMy Security στις προεπιλεγμένες τιμές τους. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Επαναφέρετε όλες τις ρυθμίσεις SecureWP360 στις προεπιλεγμένες τιμές τους. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί."
 
 msgid "Reset to Defaults"
 msgstr "Επαναφορά στις προεπιλογές"
@@ -5121,8 +5121,8 @@ msgstr "Οι ρυθμίσεις αποθηκεύτηκαν με επιτυχία
 msgid "Settings reset to defaults."
 msgstr "Οι ρυθμίσεις επαναφέρονται στις προεπιλογές."
 
-msgid "NexifyMy Security Logs"
-msgstr "Μητρώα ασφαλείας NexifyMy"
+msgid "SecureWP360 Logs"
+msgstr "Μητρώα ασφαλείας SecureWP360"
 
 msgid "No matching user found."
 msgstr "Δεν βρέθηκε αντίστοιχος χρήστης."

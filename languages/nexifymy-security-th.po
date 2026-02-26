@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "ตรวจสอบปลั๊กอิน/ธีมเพื่อ�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "เลือกทากที่ไม่ซ้ำใครและเดาได้ยาก"
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "เลือกประเภทความท้าทายสำหรับ NexifyMy captcha"
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "เลือกประเภทความท้าทายสำหรับ SecureWP360 captcha"
 
 msgid "Clean Files"
 msgstr "ล้างไฟล์"
@@ -907,8 +907,8 @@ msgstr "มัลแวร์ที่ยืนยันแล้ว"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "เชื่อมต่อการตรวจสอบความปลอดภัยของคุณกับ SIEM การจองตั๋ว การสื่อสาร และแพลตฟอร์ม CI/CD"
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "ติดต่อทีมสนับสนุนของเราเพื่อขอความช่วยเหลือเกี่ยวกับ NexifyMy Security"
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "ติดต่อทีมสนับสนุนของเราเพื่อขอความช่วยเหลือเกี่ยวกับ SecureWP360"
 
 msgid "Content"
 msgstr "เนื้อหา"
@@ -1129,8 +1129,8 @@ msgstr "ความยาก"
 msgid "Difficulty Level"
 msgstr "ระดับความยาก"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "ระดับความยากสำหรับความท้าทาย NexifyMy captcha"
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "ระดับความยากสำหรับความท้าทาย SecureWP360 captcha"
 
 msgid "Direct"
 msgstr "โดยตรง"
@@ -1264,8 +1264,8 @@ msgstr "ง่าย"
 msgid "Easy (addition only)"
 msgstr "ง่าย (เพิ่มเติม เท่านั้น)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "การแก้ไขไฟล์ปลั๊กอิน NexifyMy Security ถูกปิดใช้งานด้วยเหตุผลด้านความปลอดภัย"
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "การแก้ไขไฟล์ปลั๊กอิน SecureWP360 ถูกปิดใช้งานด้วยเหตุผลด้านความปลอดภัย"
 
 msgid "Editor & File Access"
 msgstr "ตัวแก้ไขและการเข้าถึงไฟล์"
@@ -1486,7 +1486,7 @@ msgstr "ป้อนคำตอบ"
 msgid "Enter the code:"
 msgstr "ป้อนรหัส:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "WordPress ระดับองค์กร ความปลอดภัย"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "ส่งออก CSV"
 msgid "Export Settings"
 msgstr "ส่งออกการตั้งค่า"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "ส่งออกการตั้งค่า NexifyMy Security ของคุณเป็นไฟล์ JSON ซึ่งรวมถึงการกำหนดค่าโมดูล กฎไฟร์วอลล์ รายการ IP และการตั้งค่าการสแกนทั้งหมด"
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "ส่งออกการตั้งค่า SecureWP360 ของคุณเป็นไฟล์ JSON ซึ่งรวมถึงการกำหนดค่าโมดูล กฎไฟร์วอลล์ รายการ IP และการตั้งค่าการสแกนทั้งหมด"
 
 msgid "External Scripts & CDN Resources"
 msgstr "สคริปต์ภายนอกและทรัพยากร CDN"
@@ -2578,20 +2578,20 @@ msgstr "ไม่มีวันหมดอายุ"
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (ในตัว)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (ในตัว)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha ประเภท"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 Captcha ประเภท"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy ความปลอดภัย"
+msgid "SecureWP360"
+msgstr "SecureWP360 ความปลอดภัย"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security ตรวจพบการแก้ไขไฟล์โดยไม่ได้รับอนุญาต โปรดตรวจสอบการติดตั้งของคุณ"
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 ตรวจพบการแก้ไขไฟล์โดยไม่ได้รับอนุญาต โปรดตรวจสอบการติดตั้งของคุณ"
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: คุณมี %d การแจ้งเตือนความปลอดภัยที่ยังไม่ได้อ่าน"
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: คุณมี %d การแจ้งเตือนความปลอดภัยที่ยังไม่ได้อ่าน"
 
 msgid "Next Update"
 msgstr "อัปเดตถัดไป"
@@ -3313,8 +3313,8 @@ msgstr "รีเซ็ตการตั้งค่าทั้งหมด"
 msgid "Reset Learning"
 msgstr "รีเซ็ตการเรียนรู้"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "รีเซ็ตการตั้งค่า NexifyMy Security ทั้งหมดเป็นค่าเริ่มต้น การดำเนินการนี้ไม่สามารถยกเลิกได้"
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "รีเซ็ตการตั้งค่า SecureWP360 ทั้งหมดเป็นค่าเริ่มต้น การดำเนินการนี้ไม่สามารถยกเลิกได้"
 
 msgid "Reset to Defaults"
 msgstr "รีเซ็ตเป็นค่าเริ่มต้น"
@@ -5121,8 +5121,8 @@ msgstr "บันทึกการตั้งค่าสำเร็จแล
 msgid "Settings reset to defaults."
 msgstr "รีเซ็ตการตั้งค่าเป็น ค่าเริ่มต้น"
 
-msgid "NexifyMy Security Logs"
-msgstr "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
+msgstr "SecureWP360 Logs"
 
 msgid "No matching user found."
 msgstr "ไม่พบผู้ใช้ที่ตรงกัน"

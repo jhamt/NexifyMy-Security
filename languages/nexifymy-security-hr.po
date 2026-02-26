@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Provjerava dodatke/teme za poznate ranjivosti. Sigurno - provjerava samo
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Odaberite jedinstvenog puža kojeg je teško pogoditi."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Odaberite vrstu izazova za NexifyMy captcha."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Odaberite vrstu izazova za SecureWP360 captcha."
 
 msgid "Clean Files"
 msgstr "Očistite datoteke"
@@ -907,8 +907,8 @@ msgstr "Potvrđen zlonamjerni softver"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Povežite svoj sigurnosni nadzor sa SIEM, prodajom ulaznica, komunikacijom i CI/CD platformama."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Kontaktirajte naš tim za podršku za pomoć s NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Kontaktirajte naš tim za podršku za pomoć s SecureWP360."
 
 msgid "Content"
 msgstr "Sadržaj"
@@ -1129,8 +1129,8 @@ msgstr "Poteškoće"
 msgid "Difficulty Level"
 msgstr "Razina težine"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Razina težine za NexifyMy captcha izazove."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "Razina težine za SecureWP360 captcha izazove."
 
 msgid "Direct"
 msgstr "Izravno"
@@ -1264,8 +1264,8 @@ msgstr "lako"
 msgid "Easy (addition only)"
 msgstr "Jednostavno (samo dodatak)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Uređivanje datoteka sigurnosnog dodatka NexifyMy onemogućeno je iz sigurnosnih razloga."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Uređivanje datoteka sigurnosnog dodatka SecureWP360 onemogućeno je iz sigurnosnih razloga."
 
 msgid "Editor & File Access"
 msgstr "Uređivač i pristup datotekama"
@@ -1486,7 +1486,7 @@ msgstr "Unesite odgovor"
 msgid "Enter the code:"
 msgstr "Unesite kod:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "Sigurnost WordPressa na razini poduzeća"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "Izvezi CSV"
 msgid "Export Settings"
 msgstr "Postavke izvoza"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Izvezite svoje NexifyMy sigurnosne postavke u JSON datoteku. To uključuje sve konfiguracije modula, pravila vatrozida, IP liste i postavke skeniranja."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Izvezite svoje SecureWP360 sigurnosne postavke u JSON datoteku. To uključuje sve konfiguracije modula, pravila vatrozida, IP liste i postavke skeniranja."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Vanjske skripte i CDN resursi"
@@ -2578,20 +2578,20 @@ msgstr "Nikada ne ističe"
 msgid "Nexify Security"
 msgstr "Nexify Sigurnost"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (ugrađeno)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (ugrađeno)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "Vrsta NexifyMy Captcha"
+msgid "SecureWP360 Captcha Type"
+msgstr "Vrsta SecureWP360 Captcha"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy Sigurnost"
+msgid "SecureWP360"
+msgstr "SecureWP360 Sigurnost"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security otkrio je neovlaštene izmjene svojih datoteka. Provjerite svoju instalaciju."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 otkrio je neovlaštene izmjene svojih datoteka. Provjerite svoju instalaciju."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: Imate %d nepročitana sigurnosna upozorenja."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: Imate %d nepročitana sigurnosna upozorenja."
 
 msgid "Next Update"
 msgstr "Sljedeće ažuriranje"
@@ -3313,8 +3313,8 @@ msgstr "Resetiraj sve postavke"
 msgid "Reset Learning"
 msgstr "Ponovno postavljanje učenja"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Vratite sve NexifyMy sigurnosne postavke na zadane vrijednosti. Ova se radnja ne može poništiti."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Vratite sve SecureWP360 sigurnosne postavke na zadane vrijednosti. Ova se radnja ne može poništiti."
 
 msgid "Reset to Defaults"
 msgstr "Vrati na zadane postavke"
@@ -5121,8 +5121,8 @@ msgstr "Postavke su uspješno spremljene."
 msgid "Settings reset to defaults."
 msgstr "Postavke se vraćaju na zadane."
 
-msgid "NexifyMy Security Logs"
-msgstr "Sigurnosni zapisnici NexifyMy"
+msgid "SecureWP360 Logs"
+msgstr "Sigurnosni zapisnici SecureWP360"
 
 msgid "No matching user found."
 msgstr "Nije pronađen odgovarajući korisnik."

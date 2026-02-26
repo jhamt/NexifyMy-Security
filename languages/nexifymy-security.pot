@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy Security
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/nexifymy-security\n"
 "POT-Creation-Date: 2026-02-14 08:26+0100\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: includes/class-nexifymy-security-admin.php
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -580,7 +580,7 @@ msgid "Integrates with CDN services. Configure CDN credentials before enabling."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -949,7 +949,7 @@ msgid "Need Support?"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Contact our support team for assistance with NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -3029,7 +3029,7 @@ msgid "Captcha Provider"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "NexifyMy Captcha (Built-in)"
+msgid "SecureWP360 Captcha (Built-in)"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -3049,7 +3049,7 @@ msgid "Select which captcha service to use."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -3069,7 +3069,7 @@ msgid "Audio (Speaking)"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Choose the type of challenge for NexifyMy captcha."
+msgid "Choose the type of challenge for SecureWP360 captcha."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -3089,7 +3089,7 @@ msgid "Hard"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Difficulty level for NexifyMy captcha challenges."
+msgid "Difficulty level for SecureWP360 captcha challenges."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -4570,7 +4570,7 @@ msgid "Export Settings"
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -4598,7 +4598,7 @@ msgid "Warning: Importing will replace all current settings. Make sure to export
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
 msgstr ""
 
 #: includes/class-nexifymy-security-admin.php
@@ -6276,7 +6276,7 @@ msgid "Loading..."
 msgstr ""
 
 #: includes/class-nexifymy-security-notifications.php
-msgid "NexifyMy Security: You have %d unread security alert(s)."
+msgid "SecureWP360: You have %d unread security alert(s)."
 msgstr ""
 
 #: includes/class-nexifymy-security-notifications.php
@@ -6457,7 +6457,7 @@ msgid "Once Weekly"
 msgstr ""
 
 #: modules/compliance-reporting.php
-msgid "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
 msgstr ""
 
 #: modules/compliance-reporting.php
@@ -6870,11 +6870,11 @@ msgid "SECURITY ALERT:"
 msgstr ""
 
 #: modules/self-protection.php
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
 msgstr ""
 
 #: modules/self-protection.php
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
 msgstr ""
 
 #: modules/time-bound-permissions.php

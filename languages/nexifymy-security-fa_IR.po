@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "افزونه ها/موضوع ها را برای آسیب پذیری ها
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "یک حلزون منحصر به فرد و غیر قابل حدس زدن را انتخاب کنید."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "نوع چالش را برای کپچای NexifyMy انتخاب کنید."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "نوع چالش را برای کپچای SecureWP360 انتخاب کنید."
 
 msgid "Clean Files"
 msgstr "پاک کردن فایل ها"
@@ -907,8 +907,8 @@ msgstr "بدافزار تایید شده"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "مانیتورینگ امنیتی خود را به پلتفرم های SIEM، بلیط، ارتباطات و CI/CD متصل کنید."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "برای راهنمایی در مورد NexifyMy Security با تیم پشتیبانی ما تماس بگیرید."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "برای راهنمایی در مورد SecureWP360 با تیم پشتیبانی ما تماس بگیرید."
 
 msgid "Content"
 msgstr "محتوا"
@@ -1129,8 +1129,8 @@ msgstr "دشواری"
 msgid "Difficulty Level"
 msgstr "سطح دشواری"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "سطح دشواری چالش‌های کپچای NexifyMy."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "سطح دشواری چالش‌های کپچای SecureWP360."
 
 msgid "Direct"
 msgstr "مستقیم"
@@ -1264,8 +1264,8 @@ msgstr "آسان"
 msgid "Easy (addition only)"
 msgstr "آسان (فقط اضافی)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "ویرایش فایل های افزونه NexifyMy Security به دلایل امنیتی غیرفعال است."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "ویرایش فایل های افزونه SecureWP360 به دلایل امنیتی غیرفعال است."
 
 msgid "Editor & File Access"
 msgstr "ویرایشگر و دسترسی به فایل"
@@ -1486,7 +1486,7 @@ msgstr "پاسخ را وارد کنید"
 msgid "Enter the code:"
 msgstr "کد را وارد کنید:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "امنیت وردپرس درجه سازمانی"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "صادرات CSV"
 msgid "Export Settings"
 msgstr "تنظیمات صادرات"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "تنظیمات NexifyMy Security خود را به یک فایل JSON صادر کنید. این شامل تمام تنظیمات ماژول، قوانین فایروال، لیست های IP و تنظیمات اسکن می شود."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "تنظیمات SecureWP360 خود را به یک فایل JSON صادر کنید. این شامل تمام تنظیمات ماژول، قوانین فایروال، لیست های IP و تنظیمات اسکن می شود."
 
 msgid "External Scripts & CDN Resources"
 msgstr "اسکریپت های خارجی و منابع CDN"
@@ -2578,20 +2578,20 @@ msgstr "هرگز منقضی نمی شود"
 msgid "Nexify Security"
 msgstr "Nexify Security"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (توکار)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (توکار)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 Captcha Type"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy Security"
+msgid "SecureWP360"
+msgstr "SecureWP360"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security تغییرات غیرمجاز را در فایل‌های خود شناسایی کرده است. لطفاً نصب خود را تأیید کنید."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 تغییرات غیرمجاز را در فایل‌های خود شناسایی کرده است. لطفاً نصب خود را تأیید کنید."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: %d هشدار امنیتی خوانده نشده دارید."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: %d هشدار امنیتی خوانده نشده دارید."
 
 msgid "Next Update"
 msgstr "به روز رسانی بعدی"
@@ -3313,8 +3313,8 @@ msgstr "بازنشانی همه تنظیمات"
 msgid "Reset Learning"
 msgstr "بازنشانی یادگیری"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "تمام تنظیمات NexifyMy Security را به مقادیر پیش فرض خود بازنشانی کنید. این عمل قابل لغو نیست."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "تمام تنظیمات SecureWP360 را به مقادیر پیش فرض خود بازنشانی کنید. این عمل قابل لغو نیست."
 
 msgid "Reset to Defaults"
 msgstr "به حالت پیش فرض بازنشانی کنید"
@@ -5121,8 +5121,8 @@ msgstr "تنظیمات با موفقیت ذخیره شد."
 msgid "Settings reset to defaults."
 msgstr "تنظیمات به حالت پیش فرض بازنشانی می شود."
 
-msgid "NexifyMy Security Logs"
-msgstr "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
+msgstr "SecureWP360 Logs"
 
 msgid "No matching user found."
 msgstr "کاربر منطبقی پیدا نشد"

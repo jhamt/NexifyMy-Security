@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Kiểm tra các plugin/chủ đề để tìm các lỗ hổng đã bi�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Chọn một slug độc đáo, khó đoán."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Chọn loại thử thách cho NexifyMy captcha."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Chọn loại thử thách cho SecureWP360 captcha."
 
 msgid "Clean Files"
 msgstr "Làm sạch tập tin"
@@ -907,8 +907,8 @@ msgstr "Phần mềm độc hại đã được xác nhận"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Kết nối tính năng giám sát bảo mật của bạn với SIEM, bán vé, liên lạc và CI/CD nền tảng."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Liên hệ với nhóm hỗ trợ của chúng tôi để được hỗ trợ về NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Liên hệ với nhóm hỗ trợ của chúng tôi để được hỗ trợ về SecureWP360."
 
 msgid "Content"
 msgstr "Nội dung"
@@ -1129,7 +1129,7 @@ msgstr "Độ khó"
 msgid "Difficulty Level"
 msgstr "Độ khó Cấp độ"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
+msgid "Difficulty level for SecureWP360 captcha challenges."
 msgstr "Mức độ khó cho các thử thách hình ảnh xác thực của Nexify."
 
 msgid "Direct"
@@ -1264,8 +1264,8 @@ msgstr "Dễ dàng"
 msgid "Easy (addition only)"
 msgstr "Dễ dàng (bổ sung) only)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Việc chỉnh sửa tệp plugin NexifyMy Security bị vô hiệu hóa vì lý do bảo mật."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Việc chỉnh sửa tệp plugin SecureWP360 bị vô hiệu hóa vì lý do bảo mật."
 
 msgid "Editor & File Access"
 msgstr "Trình chỉnh sửa & quyền truy cập tệp"
@@ -1486,7 +1486,7 @@ msgstr "Nhập câu trả lời"
 msgid "Enter the code:"
 msgstr "Nhập mã:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "WordPress cấp doanh nghiệp Bảo mật"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "Xuất CSV"
 msgid "Export Settings"
 msgstr "Xuất cài đặt"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Xuất cài đặt NexifyMy Security của bạn sang tệp JSON. Điều này bao gồm tất cả các cấu hình mô-đun, quy tắc tường lửa, danh sách IP và cài đặt quét."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Xuất cài đặt SecureWP360 của bạn sang tệp JSON. Điều này bao gồm tất cả các cấu hình mô-đun, quy tắc tường lửa, danh sách IP và cài đặt quét."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Tập lệnh bên ngoài & Tài nguyên CDN"
@@ -2578,20 +2578,20 @@ msgstr "Không bao giờ hết hạn"
 msgid "Nexify Security"
 msgstr "Bảo mật Nexify"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Tích hợp)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (Tích hợp)"
 
-msgid "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
 msgstr "NexifyLoại hình ảnh xác thực của tôi"
 
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr "NexifyBảo mật của tôi"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security đã phát hiện các sửa đổi trái phép đối với các tệp của nó. Vui lòng xác minh cài đặt của bạn."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 đã phát hiện các sửa đổi trái phép đối với các tệp của nó. Vui lòng xác minh cài đặt của bạn."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: Bạn có %d cảnh báo bảo mật chưa đọc."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: Bạn có %d cảnh báo bảo mật chưa đọc."
 
 msgid "Next Update"
 msgstr "Cập nhật tiếp theo"
@@ -3313,8 +3313,8 @@ msgstr "Đặt lại tất cả cài đặt"
 msgid "Reset Learning"
 msgstr "Đặt lại học tập"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Đặt lại tất cả cài đặt NexifyMy Security về giá trị mặc định của chúng. Không thể hoàn tác hành động này."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Đặt lại tất cả cài đặt SecureWP360 về giá trị mặc định của chúng. Không thể hoàn tác hành động này."
 
 msgid "Reset to Defaults"
 msgstr "Đặt lại về mặc định"
@@ -5121,7 +5121,7 @@ msgstr "Đã lưu cài đặt thành công."
 msgid "Settings reset to defaults."
 msgstr "Đặt lại cài đặt về mặc định."
 
-msgid "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
 msgstr "NexifyNhật ký bảo mật của tôi"
 
 msgid "No matching user found."

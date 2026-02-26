@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Kontroluje pluginy/témata na známé chyby zabezpečení. Bezpečný �
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Vyberte si jedinečného, ​​těžko uhodnutelného slimáka."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Vyberte typ výzvy pro NexifyMy captcha."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Vyberte typ výzvy pro SecureWP360 captcha."
 
 msgid "Clean Files"
 msgstr "Vyčistit soubory"
@@ -907,8 +907,8 @@ msgstr "Potvrzený malware"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Připojte svůj bezpečnostní monitoring k platformám SIEM, ticketing, komunikace a CI/CD."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Obraťte se na náš tým podpory pro pomoc s NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Obraťte se na náš tým podpory pro pomoc s SecureWP360."
 
 msgid "Content"
 msgstr "Obsah"
@@ -1129,8 +1129,8 @@ msgstr "Obtížnost"
 msgid "Difficulty Level"
 msgstr "Úroveň obtížnosti"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Úroveň obtížnosti pro výzvy NexifyMy captcha."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "Úroveň obtížnosti pro výzvy SecureWP360 captcha."
 
 msgid "Direct"
 msgstr "Přímý"
@@ -1264,8 +1264,8 @@ msgstr "Snadno"
 msgid "Easy (addition only)"
 msgstr "Snadné (pouze doplněk)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Úprava souborů pluginu NexifyMy Security je z bezpečnostních důvodů zakázána."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Úprava souborů pluginu SecureWP360 je z bezpečnostních důvodů zakázána."
 
 msgid "Editor & File Access"
 msgstr "Editor a přístup k souborům"
@@ -1486,7 +1486,7 @@ msgstr "Zadejte odpověď"
 msgid "Enter the code:"
 msgstr "Zadejte kód:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "Zabezpečení WordPress na podnikové úrovni"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "Export CSV"
 msgid "Export Settings"
 msgstr "Nastavení exportu"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Exportujte svá nastavení zabezpečení NexifyMy do souboru JSON. To zahrnuje všechny konfigurace modulů, pravidla brány firewall, seznamy IP adres a nastavení skenování."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Exportujte svá nastavení zabezpečení SecureWP360 do souboru JSON. To zahrnuje všechny konfigurace modulů, pravidla brány firewall, seznamy IP adres a nastavení skenování."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Externí skripty a zdroje CDN"
@@ -2578,20 +2578,20 @@ msgstr "Nikdy nevyprší"
 msgid "Nexify Security"
 msgstr "Zabezpečení Nexify"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (vestavěný)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (vestavěný)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "Typ NexifyMy Captcha"
+msgid "SecureWP360 Captcha Type"
+msgstr "Typ SecureWP360 Captcha"
 
-msgid "NexifyMy Security"
-msgstr "Zabezpečení NexifyMy"
+msgid "SecureWP360"
+msgstr "Zabezpečení SecureWP360"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security zjistil neoprávněné úpravy svých souborů. Prosím ověřte svou instalaci."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 zjistil neoprávněné úpravy svých souborů. Prosím ověřte svou instalaci."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: Máte %d nepřečtených bezpečnostních upozornění."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: Máte %d nepřečtených bezpečnostních upozornění."
 
 msgid "Next Update"
 msgstr "Další aktualizace"
@@ -3313,8 +3313,8 @@ msgstr "Obnovit všechna nastavení"
 msgid "Reset Learning"
 msgstr "Resetovat učení"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Obnovte všechna nastavení zabezpečení NexifyMy na výchozí hodnoty. Tuto akci nelze vrátit zpět."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Obnovte všechna nastavení zabezpečení SecureWP360 na výchozí hodnoty. Tuto akci nelze vrátit zpět."
 
 msgid "Reset to Defaults"
 msgstr "Obnovit výchozí"
@@ -5121,8 +5121,8 @@ msgstr "Nastavení byla úspěšně uložena."
 msgid "Settings reset to defaults."
 msgstr "Nastavení se resetuje na výchozí."
 
-msgid "NexifyMy Security Logs"
-msgstr "Bezpečnostní protokoly NexifyMy"
+msgid "SecureWP360 Logs"
+msgstr "Bezpečnostní protokoly SecureWP360"
 
 msgid "No matching user found."
 msgstr "Nebyl nalezen žádný odpovídající uživatel."

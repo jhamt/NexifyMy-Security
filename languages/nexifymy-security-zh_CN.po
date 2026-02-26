@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "检查插件/主题是否存在已知漏洞。安全 - 仅检查版本�
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "选择一个独特的、难以猜测的蛞蝓。"
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "选择 NexifyMy 验证码的挑战类型。"
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "选择 SecureWP360 验证码的挑战类型。"
 
 msgid "Clean Files"
 msgstr "清理文件"
@@ -907,8 +907,8 @@ msgstr "已确认的恶意软件"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "将您的安全监控连接到 SIEM、票务、通信和 CI/CD 平台。"
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "请联系我们的支持团队获取有关 NexifyMy Security 的帮助。"
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "请联系我们的支持团队获取有关 SecureWP360 的帮助。"
 
 msgid "Content"
 msgstr "内容"
@@ -1129,8 +1129,8 @@ msgstr "难度"
 msgid "Difficulty Level"
 msgstr "难度等级"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "NexifyMy 验证码挑战的难度级别。"
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "SecureWP360 验证码挑战的难度级别。"
 
 msgid "Direct"
 msgstr "直接"
@@ -1264,8 +1264,8 @@ msgstr "简单"
 msgid "Easy (addition only)"
 msgstr "简单（仅添加）"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "出于安全原因，编辑 NexifyMy Security 插件文件被禁用。"
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "出于安全原因，编辑 SecureWP360 插件文件被禁用。"
 
 msgid "Editor & File Access"
 msgstr "编辑器和文件访问"
@@ -1486,7 +1486,7 @@ msgstr "输入答案"
 msgid "Enter the code:"
 msgstr "输入代码："
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "企业级 WordPress 安全"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "导出 CSV"
 msgid "Export Settings"
 msgstr "导出设置"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "将您的 NexifyMy Security 设置导出到 JSON 文件。这包括所有模块配置、防火墙规则、IP 列表和扫描设置。"
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "将您的 SecureWP360 设置导出到 JSON 文件。这包括所有模块配置、防火墙规则、IP 列表和扫描设置。"
 
 msgid "External Scripts & CDN Resources"
 msgstr "外部脚本和 CDN 资源"
@@ -2578,20 +2578,20 @@ msgstr "永不过期"
 msgid "Nexify Security"
 msgstr "Nexify 安全"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy 验证码（内置）"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 验证码（内置）"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy 验证码类型"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 验证码类型"
 
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr "Nexify我的安全"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security 检测到对其文件进行未经授权的修改。请验证您的安装。"
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 检测到对其文件进行未经授权的修改。请验证您的安装。"
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security：您有 %d 个未读安全警报。"
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360：您有 %d 个未读安全警报。"
 
 msgid "Next Update"
 msgstr "下次更新"
@@ -3313,8 +3313,8 @@ msgstr "重置所有设置"
 msgid "Reset Learning"
 msgstr "重置学习"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "将所有 NexifyMy Security 设置重置为其默认值。此操作无法撤消。"
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "将所有 SecureWP360 设置重置为其默认值。此操作无法撤消。"
 
 msgid "Reset to Defaults"
 msgstr "重置为默认值"
@@ -5121,8 +5121,8 @@ msgstr "设置保存成功。"
 msgid "Settings reset to defaults."
 msgstr "设置重置为默认值。"
 
-msgid "NexifyMy Security Logs"
-msgstr "NexifyMy 安全日志"
+msgid "SecureWP360 Logs"
+msgstr "SecureWP360 安全日志"
 
 msgid "No matching user found."
 msgstr "未找到匹配的用户。"

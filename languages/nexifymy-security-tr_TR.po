@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Bilinen güvenlik açıkları için eklentileri/temaları kontrol eder. 
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Benzersiz, tahmin edilmesi zor bir bilgi seçin."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "NexifyMy captcha için meydan okuma türünü seçin."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "SecureWP360 captcha için meydan okuma türünü seçin."
 
 msgid "Clean Files"
 msgstr "Dosyaları Temizleyin"
@@ -907,8 +907,8 @@ msgstr "Onaylanmış Kötü Amaçlı Yazılım"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Güvenlik izlemenizi SIEM, biletleme, iletişim ve CI/CD platformlarına bağlayın."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "NexifyMy Security ile ilgili yardım için destek ekibimizle iletişime geçin."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "SecureWP360 ile ilgili yardım için destek ekibimizle iletişime geçin."
 
 msgid "Content"
 msgstr "İçerik"
@@ -1129,8 +1129,8 @@ msgstr "Zorluk"
 msgid "Difficulty Level"
 msgstr "Zorluk Seviyesi"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "NexifyMy captcha zorlukları için zorluk seviyesi."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "SecureWP360 captcha zorlukları için zorluk seviyesi."
 
 msgid "Direct"
 msgstr "Doğrudan"
@@ -1264,8 +1264,8 @@ msgstr "Kolay"
 msgid "Easy (addition only)"
 msgstr "Kolay (yalnızca ekleme)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "NexifyMy Security eklenti dosyalarını düzenleme, güvenlik nedeniyle devre dışı bırakıldı."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "SecureWP360 eklenti dosyalarını düzenleme, güvenlik nedeniyle devre dışı bırakıldı."
 
 msgid "Editor & File Access"
 msgstr "Düzenleyici ve Dosya Erişimi"
@@ -1486,7 +1486,7 @@ msgstr "Cevabı girin"
 msgid "Enter the code:"
 msgstr "Cevabı girin code:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "Kurumsal Düzeyde WordPress Güvenliği"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "CSV'yi Dışa Aktar"
 msgid "Export Settings"
 msgstr "Ayarları Dışa Aktar"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "NexifyMy Security ayarlarınızı bir JSON dosyasına aktarın. Buna tüm modül yapılandırmaları, güvenlik duvarı kuralları, IP listeleri ve tarama ayarları dahildir."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "SecureWP360 ayarlarınızı bir JSON dosyasına aktarın. Buna tüm modül yapılandırmaları, güvenlik duvarı kuralları, IP listeleri ve tarama ayarları dahildir."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Harici Komut Dosyaları ve CDN Kaynakları"
@@ -2578,20 +2578,20 @@ msgstr "Hiçbir zaman sona ermez"
 msgid "Nexify Security"
 msgstr "Nexify Güvenliği"
 
-msgid "NexifyMy Captcha (Built-in)"
-msgstr "NexifyMy Captcha (Yerleşik)"
+msgid "SecureWP360 Captcha (Built-in)"
+msgstr "SecureWP360 Captcha (Yerleşik)"
 
-msgid "NexifyMy Captcha Type"
-msgstr "NexifyMy Captcha Türü"
+msgid "SecureWP360 Captcha Type"
+msgstr "SecureWP360 Captcha Türü"
 
-msgid "NexifyMy Security"
-msgstr "NexifyMy Güvenlik"
+msgid "SecureWP360"
+msgstr "SecureWP360 Güvenlik"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security, dosyalarında yetkisiz değişiklikler tespit etti. Lütfen kurulumunuzu doğrulayın."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360, dosyalarında yetkisiz değişiklikler tespit etti. Lütfen kurulumunuzu doğrulayın."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: %d okunmamış güvenlik uyarınız var."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: %d okunmamış güvenlik uyarınız var."
 
 msgid "Next Update"
 msgstr "Sonraki Güncelleme"
@@ -3313,8 +3313,8 @@ msgstr "Tüm Ayarları Sıfırla"
 msgid "Reset Learning"
 msgstr "Öğrenmeyi Sıfırla"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Tüm NexifyMy Security ayarlarını varsayılan değerlerine sıfırlayın. Bu eylem geri alınamaz."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Tüm SecureWP360 ayarlarını varsayılan değerlerine sıfırlayın. Bu eylem geri alınamaz."
 
 msgid "Reset to Defaults"
 msgstr "Varsayılanlara Sıfırla"
@@ -5121,7 +5121,7 @@ msgstr "Ayarlar başarıyla kaydedildi."
 msgid "Settings reset to defaults."
 msgstr "Ayarlar varsayılanlara sıfırlandı."
 
-msgid "NexifyMy Security Logs"
+msgid "SecureWP360 Logs"
 msgstr "NexifyGüvenlik Günlüklerim"
 
 msgid "No matching user found."

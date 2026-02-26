@@ -1,7 +1,7 @@
-# Copyright (C) 2026 NexifyMy
+# Copyright (C) 2026 SecureWP360
 msgid ""
 msgstr ""
-"Project-Id-Version: NexifyMy Security 2.1.0\n"
+"Project-Id-Version: SecureWP360 2.1.0\n"
 "POT-Creation-Date: 2026-02-06 13:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -760,8 +760,8 @@ msgstr "Memeriksa plugin/tema untuk mengetahui kerentanan yang diketahui. Aman -
 msgid "Choose a unique, hard-to-guess slug."
 msgstr "Pilih siput yang unik dan sulit ditebak."
 
-msgid "Choose the type of challenge for NexifyMy captcha."
-msgstr "Pilih jenis tantangan untuk captcha NexifyMy."
+msgid "Choose the type of challenge for SecureWP360 captcha."
+msgstr "Pilih jenis tantangan untuk captcha SecureWP360."
 
 msgid "Clean Files"
 msgstr "Bersihkan File"
@@ -907,8 +907,8 @@ msgstr "Perangkat Lunak Jahat yang Dikonfirmasi"
 msgid "Connect your security monitoring to SIEM, ticketing, communication, and CI/CD platforms."
 msgstr "Hubungkan pemantauan keamanan Anda ke platform SIEM, tiket, komunikasi, dan CI/CD."
 
-msgid "Contact our support team for assistance with NexifyMy Security."
-msgstr "Hubungi tim dukungan kami untuk bantuan dengan NexifyMy Security."
+msgid "Contact our support team for assistance with SecureWP360."
+msgstr "Hubungi tim dukungan kami untuk bantuan dengan SecureWP360."
 
 msgid "Content"
 msgstr "Konten"
@@ -1129,8 +1129,8 @@ msgstr "Kesulitan"
 msgid "Difficulty Level"
 msgstr "Tingkat Kesulitan"
 
-msgid "Difficulty level for NexifyMy captcha challenges."
-msgstr "Tingkat kesulitan untuk tantangan captcha NexifyMy."
+msgid "Difficulty level for SecureWP360 captcha challenges."
+msgstr "Tingkat kesulitan untuk tantangan captcha SecureWP360."
 
 msgid "Direct"
 msgstr "Langsung"
@@ -1264,8 +1264,8 @@ msgstr "Mudah"
 msgid "Easy (addition only)"
 msgstr "Mudah (hanya tambahan)"
 
-msgid "Editing NexifyMy Security plugin files is disabled for security reasons."
-msgstr "Pengeditan file plugin NexifyMy Security dinonaktifkan karena alasan keamanan."
+msgid "Editing SecureWP360 plugin files is disabled for security reasons."
+msgstr "Pengeditan file plugin SecureWP360 dinonaktifkan karena alasan keamanan."
 
 msgid "Editor & File Access"
 msgstr "Editor & Akses File"
@@ -1486,7 +1486,7 @@ msgstr "Masukkan jawaban"
 msgid "Enter the code:"
 msgstr "Masukkan kode:"
 
-msgid "Enterprise-Grade WordPress Security"
+msgid "All-in-one WordPress Security Plugin"
 msgstr "Keamanan WordPress Tingkat Perusahaan"
 
 msgid "Error"
@@ -1558,8 +1558,8 @@ msgstr "Ekspor CSV"
 msgid "Export Settings"
 msgstr "Pengaturan Ekspor"
 
-msgid "Export your NexifyMy Security settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
-msgstr "Ekspor pengaturan Keamanan NexifyMy Anda ke file JSON. Ini mencakup semua konfigurasi modul, aturan firewall, daftar IP, dan pengaturan pemindaian."
+msgid "Export your SecureWP360 settings to a JSON file. This includes all module configurations, firewall rules, IP lists, and scan settings."
+msgstr "Ekspor pengaturan Keamanan SecureWP360 Anda ke file JSON. Ini mencakup semua konfigurasi modul, aturan firewall, daftar IP, dan pengaturan pemindaian."
 
 msgid "External Scripts & CDN Resources"
 msgstr "Skrip Eksternal & Sumber Daya CDN"
@@ -2578,20 +2578,20 @@ msgstr "Tidak pernah kadaluarsa"
 msgid "Nexify Security"
 msgstr "Keamanan Nexify"
 
-msgid "NexifyMy Captcha (Built-in)"
+msgid "SecureWP360 Captcha (Built-in)"
 msgstr "Nexify Captcha Saya (Bawaan)"
 
-msgid "NexifyMy Captcha Type"
+msgid "SecureWP360 Captcha Type"
 msgstr "NexifyJenis Captcha Saya"
 
-msgid "NexifyMy Security"
+msgid "SecureWP360"
 msgstr "Nexify Keamanan Saya"
 
-msgid "NexifyMy Security has detected unauthorized modifications to its files. Please verify your installation."
-msgstr "NexifyMy Security telah mendeteksi modifikasi tidak sah pada filenya. Harap verifikasi instalasi Anda."
+msgid "SecureWP360 has detected unauthorized modifications to its files. Please verify your installation."
+msgstr "SecureWP360 telah mendeteksi modifikasi tidak sah pada filenya. Harap verifikasi instalasi Anda."
 
-msgid "NexifyMy Security: You have %d unread security alert(s)."
-msgstr "NexifyMy Security: Anda memiliki %d peringatan keamanan yang belum dibaca."
+msgid "SecureWP360: You have %d unread security alert(s)."
+msgstr "SecureWP360: Anda memiliki %d peringatan keamanan yang belum dibaca."
 
 msgid "Next Update"
 msgstr "Pembaruan Berikutnya"
@@ -3313,8 +3313,8 @@ msgstr "Atur Ulang Semua Pengaturan"
 msgid "Reset Learning"
 msgstr "Atur Ulang Pembelajaran"
 
-msgid "Reset all NexifyMy Security settings to their default values. This action cannot be undone."
-msgstr "Reset semua pengaturan NexifyMy Security ke nilai defaultnya. Tindakan ini tidak dapat dibatalkan."
+msgid "Reset all SecureWP360 settings to their default values. This action cannot be undone."
+msgstr "Reset semua pengaturan SecureWP360 ke nilai defaultnya. Tindakan ini tidak dapat dibatalkan."
 
 msgid "Reset to Defaults"
 msgstr "Atur Ulang ke Default"
@@ -5121,8 +5121,8 @@ msgstr "Pengaturan berhasil disimpan."
 msgid "Settings reset to defaults."
 msgstr "Pengaturan diatur ulang ke default."
 
-msgid "NexifyMy Security Logs"
-msgstr "Log Keamanan NexifyMy"
+msgid "SecureWP360 Logs"
+msgstr "Log Keamanan SecureWP360"
 
 msgid "No matching user found."
 msgstr "Tidak ditemukan pengguna yang cocok."
