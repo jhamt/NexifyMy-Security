@@ -1,6 +1,6 @@
-﻿<?php
+<?php
 /**
- * PHPUnit Bootstrap for NexifyMy Security Tests.
+ * PHPUnit Bootstrap for SecureWP360 Tests.
  *
  * Sets up the WordPress test environment.
  */

@@ -131,10 +131,10 @@ foreach ( $php_files as $file_path ) {
 }
 
 // Build POT file content.
-$output  = '# Copyright (C) ' . date( 'Y' ) . " NexifyMy Security\n";
+$output  = '# Copyright (C) ' . date( 'Y' ) . " SecureWP360\n";
 $output .= "msgid \"\"\n";
 $output .= "msgstr \"\"\n";
-$output .= "\"Project-Id-Version: NexifyMy Security 2.1.0\\n\"\n";
+$output .= "\"Project-Id-Version: SecureWP360 2.1.0\\n\"\n";
 $output .= "\"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/nexifymy-security\\n\"\n";
 $output .= '"POT-Creation-Date: ' . date( 'Y-m-d H:iO' ) . "\\n\"\n";
 $output .= "\"MIME-Version: 1.0\\n\"\n";

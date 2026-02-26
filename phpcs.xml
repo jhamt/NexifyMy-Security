@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="NexifyMy Security Coding Standards">
-	<description>WordPress Coding Standards for NexifyMy Security plugin.</description>
+<ruleset name="SecureWP360 Coding Standards">
+	<description>WordPress Coding Standards for SecureWP360 plugin.</description>
 
 	<!-- What to scan -->
 	<file>.</file>

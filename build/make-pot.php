@@ -32,10 +32,10 @@ foreach ( $iterator as $file ) {
 
 ksort( $strings );
 
-$pot_content  = '# Copyright (C) ' . date( 'Y' ) . " NexifyMy\n";
+$pot_content  = '# Copyright (C) ' . date( 'Y' ) . " SecureWP360\n";
 $pot_content .= "msgid \"\"\n";
 $pot_content .= "msgstr \"\"\n";
-$pot_content .= "\"Project-Id-Version: NexifyMy Security 2.1.0\\n\"\n";
+$pot_content .= "\"Project-Id-Version: SecureWP360 2.1.0\\n\"\n";
 $pot_content .= '"POT-Creation-Date: ' . date( 'Y-m-d H:iO' ) . "\\n\"\n";
 $pot_content .= "\"MIME-Version: 1.0\\n\"\n";
 $pot_content .= "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";

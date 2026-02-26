@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	require_once __DIR__ . '/../../../wp-load.php';
 }
 
-echo "=== NexifyMy Security Module Test ===\n\n";
+echo "=== SecureWP360 Module Test ===\n\n";
 
 $settings = get_option( 'nexifymy_security_settings', array() );
 

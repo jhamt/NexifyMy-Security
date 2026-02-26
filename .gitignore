@@ -22,7 +22,6 @@ composer.lock
 
 # Tests & Binaries
 phpunit.phar
-.phpunit.result.cache
 tests/_output/
 tests/_support/_generated/
 
@@ -37,6 +36,9 @@ error_log
 .phpunit.result.cache
 .php-cs-fixer.cache
 .phpcs-cache
+
+# Packaging output
+dist/
 
 #Files
 CLAUDE.md
